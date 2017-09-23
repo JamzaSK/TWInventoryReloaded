@@ -29,7 +29,7 @@
     Inventory.sizeSearch = 55;
     Inventory.sizeCustom = 55;
     Inventory.width = 608;
-    Inventory.availableCategories = ['new', 'belt', 'body', 'foot', 'head', 'neck', 'pants', 'animal', 'right_arm', 'left_arm', 'yield', 'upgradeable'];
+    Inventory.availableCategories = ['new', 'right_arm', 'left_arm', 'head', 'neck', 'body', 'belt', 'pants', 'foot', 'animal', 'yield', 'upgradeable'];
     Inventory.defaultCategory = 'new';
     Inventory.latestSize = 66;
     Inventory.context = null;
@@ -37,7 +37,7 @@
     var langs;
     langs = {
         cs_CZ: {
-            lang_select: 'Vybraný jazyk',
+            lang_select: 'Aktuální jazyk',
             language: 'Čeština',
             ApiGui: 'Tenhle script vylepšuje inventář.',
             contact: 'Kontakt',
@@ -83,10 +83,10 @@
             }
         },
     };
-    var MPlang = langs.hasOwnProperty(Game.locale) ? langs[Game.locale] : langs.it_IT;
+    var MPlang = langs.hasOwnProperty(Game.locale) ? langs[Game.locale] : langs.cs_CZ;
     var bigInventorApi = TheWestApi.register('bigInventor', MPlang.title, bigInventor.minGame, bigInventor.maxGame, bigInventor.author, bigInventor.website);
     bigInventorApi.setGui('<br><i>' + MPlang.lang_select + ': </i>' + MPlang.language + '<br><br>' + MPlang.ApiGui + '<br><br><i>' + MPlang.name + ' v' + bigInventor.version +
-        '</i><br><br>' + MPlang.contact + ':</b><ul style="margin-left:15px;"><li>' + MPlang.msgme + '<a  style="margin-left:15px;" href="javascript:void(PlayerProfileWindow.open(542314));">Jamza</a>' + '</li><li>' + MPlang.mailme + '<a  style="margin-left:15px;" href="mailto:97jamza@gmail.com">97jamza@gmail.com</a>' + '</li></ul>');
+        '</i><br><br>' + MPlang.contact + ':</b><ul style="margin-left:15px;"><li>' + MPlang.msgme + '<a  style="margin-left:15px;" href="javascript:void(PlayerProfileWindow.open(746376));">Jamza</a>' + '</li><li>' + MPlang.mailme + '<a  style="margin-left:15px;" href="mailto:97jamza@gmail.com">97jamza@gmail.com</a>' + '</li></ul>');
     bigInventor.gui = {};
     var ICONE = {
         init: function() {
@@ -316,7 +316,7 @@
                     var spanD = $('<div id="bagFilterIsCollect"  ' + 'style="display: flex; position: inherit; float: right;"/>');
                     var duplicat = $("<span title='" + MPlang.Doppioni.tip + "' id='inventory_doublons'" +
                         '" class="filter_inventory filter_dopp hasMousePopup"' +
-                        '" style="cursor: pointer; position: relative; background: url(https://www.liberstudio.top/wp-content/uploads/1/small.png) no-repeat; background-position: -2px 0;" />' +
+                        '" style="cursor: pointer; position: relative; background: url(https://jamzask.github.io/TWInventoryReloaded/small.png) no-repeat; background-position: -2px 0;" />' +
                         "</span>");
                     duplicat.click(function(e) {
                         $('#sumsearch').remove();
@@ -327,7 +327,7 @@
                         MPlang.Doppioni.tipuse +
                         '" id="inventory_useables"' +
                         '" class="filter_inventory filter_utiliz hasMousePopup"' +
-                        '" style="cursor: pointer; position: relative; background: url(https://www.liberstudio.top/wp-content/uploads/1/small.png) no-repeat; background-position: -45px 0;">' +
+                        '" style="cursor: pointer; position: relative; background: url(https://jamzask.github.io/TWInventoryReloaded/small.png) no-repeat; background-position: -45px 0;">' +
                         "</span>");
                     utilizz.click(function() {
                         $('#sumsearch').remove();
@@ -338,7 +338,7 @@
                         MPlang.Doppioni.tiprecipe +
                         '" id="inventory_recipe"' +
                         '" class="filter_inventory filter_ricet hasMousePopup"' +
-                        '" style="position: relative; background: url(https://www.liberstudio.top/wp-content/uploads/1/small.png) no-repeat; cursor: pointer; background-position: -88px 0;" >' +
+                        '" style="position: relative; background: url(https://jamzask.github.io/TWInventoryReloaded/small.png) no-repeat; cursor: pointer; background-position: -88px 0;" >' +
                         '</span>');
                     ricetta.click(function() {
                         $('#sumsearch').remove();
@@ -349,7 +349,7 @@
                         MPlang.Doppioni.tipsets +
                         '" id="inventory_sets"' +
                         '" class="filter_inventory filter_nabor hasMousePopup"' +
-                        '" style="cursor: pointer; position: relative; background: url(https://www.liberstudio.top/wp-content/uploads/1/small.png) no-repeat; background-position: -131px 0;" >' +
+                        '" style="cursor: pointer; position: relative; background: url(https://jamzask.github.io/TWInventoryReloaded/small.png) no-repeat; background-position: -131px 0;" >' +
                         "</span>");
                     naboru.click(function(e) {
                         $('#sumsearch').remove();
