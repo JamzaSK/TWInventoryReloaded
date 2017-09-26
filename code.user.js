@@ -1,9 +1,9 @@
 // ==UserScript==
-// @name TW Inventory Reloaded
+// @name TW-Inventory Reloaded
 // @namespace WINGS
 // @authoraAPI Jackson
 // @author Jamza
-// @description Větší a lepší inventář pro TW!
+// @description Tento script zvětšuje inventář a zjednodušuje jeho třídění. Pracuji na dalších funkcích. Pokud máš nápady na vylepšení, kontaktuj mě :)
 // @include https://*.the-west.*/game.php*
 // @version 1.3
 // @icon https://jamzask.github.io/TWInventoryReloaded/TWinventoryreloaded.ico
