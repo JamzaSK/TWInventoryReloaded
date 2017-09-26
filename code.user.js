@@ -16,12 +16,14 @@
     document.body.appendChild(script);
     document.body.removeChild(script);
 })(function() {
-    var bigInventor = {
+    var bigInventor= {
+        name: 'TW-InventoryReloaded',
         version: '1.3',
         author: 'Jamza',
         minGame: '2.63',
         maxGame: Game.version.toString(),
         website: 'https://jamzask.github.io/TWInventoryReloaded',
+        updateUrl: 'https://jamzask.github.io/TWInventoryReloaded/code.user.js',
         images: {}
     };
     Inventory.uid = "inventory";
@@ -1423,20 +1425,17 @@ var TW_Sets = [
         bigInventor.gui.makeButton = function(caption, callback) {
             return new west.gui.Button(caption, callback);
         };
-    };
-    bigInventor.Updater = function() {
-        $.getScript(bigInventor.updateUrl, function() {
-            if (aggiornaScript.bigInventor != bigInventor.version) {
-                var updateMessage = new west.gui.Dialog(MPlang.update + ': ' + MPlang.name, '<span>' +
-                    MPlang.updateAvailable + '<br><br><b>v' +
-                    aggiornaScript.bigInventor + ':</b><br>' +
-                    aggiornaScript.bigInventorNew + '</span>', west.gui.Dialog.SYS_WARNING).addButton(MPlang.update, function() {
-                    updateMessage.hide();
-                    location.href = bigInventor.website + '/code.user.js';
-                }).addButton('cancel').show();
-            }
-        });
-    };
+        };
+    bigInventor.Updater = function () {
+    $.getScript(bigInventor.updateUrl, function () {
+      if (scriptUpdate.bigInventor > bigInventor.version) {
+        var updateMessage = new west.gui.Dialog(IBlang.update + ': ' + bigInventor.name, '<span>' + MPlang.updateAvailable + '<br><br><b>v' + scriptUpdate.bigInventor + ':</b><br>' + scriptUpdate.bigInventorNew + '</span>', west.gui.Dialog.SYS_WARNING).addButton(MPlang.update, function () {
+          updateMessage.hide();
+          location.href = bigInventor.website + '/code.user.js';
+        }).addButton('cancel').show();
+      }
+    });
+  };
 
     function Storage(type, namespace) {
         var object = this;
@@ -1577,7 +1576,7 @@ var TW_Sets = [
   };
 
   TW_QuickSearch.init();
-  var msg = new west.gui.Dialog('Beta verze', '<span>Používáš beta verzi scriptu TW-InventoryReloaded vytvořenou hráčem <a target=\'_blanck\' href="javascript:void(PlayerProfileWindow.open(746376));">Jamza (CZ14)</a><br><br>Pokud najdeš nějaký bug / problém, neváhej mi napsat a popiš ho.</span>', west.gui.Dialog.SYS_USERERROR).addButton('ok', function () {
+  var msg = new west.gui.Dialog('TW Inventory Reloaded', '<span>Používáš beta verzi scriptu TW-InventoryReloaded vytvořenou hráčem <a target=\'_blanck\' href="javascript:void(PlayerProfileWindow.open(746376));">Jamza (CZ14)</a><br><br>Pokud najdeš nějaký bug / problém, neváhej mi napsat a popiš ho.</span>', west.gui.Dialog.SYS_USERERROR).addButton('ok', function () {
     msg.hide();
-  }).addButton('cancel').show();
+  }).show();
 });
