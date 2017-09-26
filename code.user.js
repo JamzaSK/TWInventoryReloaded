@@ -5,7 +5,7 @@
 // @author Jamza
 // @description Větší a lepší inventář pro TW!
 // @include https://*.the-west.*/game.php*
-// @version 1.2
+// @version 1.3
 // @icon https://jamzask.github.io/TWInventoryReloaded/TWinventoryreloaded.ico
 // @grant none
 // ==/UserScript==
@@ -17,9 +17,9 @@
     document.body.removeChild(script);
 })(function() {
     var bigInventor = {
-        version: '1.2',
+        version: '1.3',
         author: 'Jamza',
-        minGame: '2.62',
+        minGame: '2.63',
         maxGame: Game.version.toString(),
         website: 'https://jamzask.github.io/TWInventoryReloaded',
         images: {}
@@ -1577,4 +1577,7 @@ var TW_Sets = [
   };
 
   TW_QuickSearch.init();
+  var msg = new west.gui.Dialog('Beta verze', '<span>Používáš beta verzi scriptu TW-InventoryReloaded vytvořenou hráčem <a target=\'_blanck\' href="javascript:void(PlayerProfileWindow.open(746376));">Jamza (CZ14)</a><br><br>Pokud najdeš nějaký bug / problém, neváhej mi napsat a popiš ho.</span>', west.gui.Dialog.SYS_USERERROR).addButton('ok', function () {
+    msg.hide();
+  }).addButton('cancel').show();
 });
