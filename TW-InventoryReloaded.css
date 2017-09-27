@@ -9,7 +9,7 @@
     height: 348px!important;
 }
 div.tw2gui_window.inventory div.tw2gui_inner_window_bg {
-    background: url(https://westits.innogamescdn.com/images/tw2gui/window/window2_bg.jpg) center bottom no-repeat!important;
+    background: url(https://jamzask.github.io/TWInventoryReloaded/window2_bg.jpg) center bottom no-repeat!important;
     margin-top: 2px!important;
 }
 .inventory .bag_navigation {
@@ -18,7 +18,7 @@ div.tw2gui_window.inventory div.tw2gui_inner_window_bg {
 .inventory .bag_control {
     width: 15px;
     top: 25px;
-    background: url(https://westits.innogamescdn.com/images/tw2gui/pagebar/arrows.png);
+    background: url(https://jamzask.github.io/TWInventoryReloaded/arrows.png);
 }
 .inventory .bag_next {
     background-position: -68px 0px;
