@@ -1,1 +1,4 @@
-bigInventorUpdateVersion = 1.4;
+var scriptUpdate={
+    bigInventor: '1.50',
+	bigInventor: 'Bugfix, přidané kategorie v externím menu',
+};
