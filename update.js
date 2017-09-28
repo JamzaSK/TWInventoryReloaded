@@ -1,4 +1,4 @@
 var scriptUpdate={
-    TWIR: '1.52',
-	TWIRNew: '+ Přidáno interní třídění použitelných předmětů, Bugfix, Upravená ikona skriptu, - Odstraněný B button, - Odstraněna BetaCall zpráva',
+    TWIR: '1.53',
+	TWIRNew: '+Upravené menu třídění použitelných předmětů, +Přidaný jazyk:Slovenčina,',
 };
