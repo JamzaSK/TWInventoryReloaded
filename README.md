@@ -12,4 +12,6 @@ Tento script zvětšuje a zjednodušuje třídění inventáře v hře The-West.
 
 . Zjednodušení kódu pro rychlejší načítaní
 
+. Hromadní otevíraní beden a jiných předmětů
+
 . Vaše nápady
