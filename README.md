@@ -8,8 +8,8 @@ Tento script zvětšuje a zjednodušuje třídění inventáře v hře The-West.
 # Plánované funkce:
 
 
-. Přidání externí TW-Calc import button funnkce do inventáře
-
-. Předělání ikonek v inventáři
+. Přidání TW-Calc import funkce do inventáře
 
 . Zjednodušení kódu pro rychlejší načítaní
+
+. Vaše nápady
