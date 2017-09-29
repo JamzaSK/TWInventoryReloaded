@@ -121,7 +121,8 @@ div.tw2gui_window.inventory div.tw2gui_inner_window_bg {
     background-position: -217px -136px;
 }
 .inventory .filters .filter_ricet {
-    background-position: -174px -44px;
+    background: url(https://jamzask.github.io/TWInventoryReloaded/small.png) no-repeat;
+    background-position: -88px 0;
 }
 .inventory .filters .filter_ricet.active {
     background-position: -174px -136px;
