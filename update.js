@@ -1,4 +1,4 @@
 var scriptUpdate={
-    TWIR: '1.57',
-    TWIRNew: '+ Přidána ikonka pro import na TW-Calc, + API, které bude využito v dalších updatech.',
+    TWIR: '1.60',
+    TWIRNew: '+ Přidáné ikonky pro sbírky, + Úprava kódu pro nadcházející využití.',
 };
