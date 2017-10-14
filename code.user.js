@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name TW-Inventory Reloaded B2
+// @name TW-Inventory Reloaded
 // @namespace WINGS
 // @author Jamza
 // @description Tento script zvětšuje inventář a zjednodušuje jeho třídění. Pracuji na dalších funkcích. Pokud máš nápady na vylepšení, kontaktuj mě :)
