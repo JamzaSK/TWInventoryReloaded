@@ -7,7 +7,7 @@
 #bag {
     width: 672px!important;
     height: 348px!important;
-    text-align: center;
+    text-align: center!important;
 }
 div.tw2gui_window.inventory div.tw2gui_inner_window_bg {
     background: url(https://jamzask.github.io/TWInventoryReloaded/bg/window2_bg_top.png) center bottom no-repeat!important;
