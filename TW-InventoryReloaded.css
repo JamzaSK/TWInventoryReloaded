@@ -1,3 +1,9 @@
+#inventory_lamp1 {
+    cursor: pointer
+}
+#inventory_lamp2 {
+    cursor: pointer
+}
 #windows .inventory {
     width: 740px!important;
 }
