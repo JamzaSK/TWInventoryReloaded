@@ -1,5 +1,6 @@
 #inventory_overlay {
      position: absolute;
+     display: none;
 }
 #inventory_lamp1 {
     cursor: pointer;
