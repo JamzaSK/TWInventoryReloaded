@@ -1,9 +1,11 @@
-
+#inventory_overlay {
+     position: absolute;
+}
 #inventory_lamp1 {
-    cursor: pointer
+    cursor: pointer;
 }
 #inventory_lamp2 {
-    cursor: pointer
+    cursor: pointer;
 }
 #windows .inventory {
     width: 740px!important;
