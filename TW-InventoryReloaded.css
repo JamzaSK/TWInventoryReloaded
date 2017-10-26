@@ -4,9 +4,11 @@
 }
 #inventory_lamp1 {
     cursor: pointer;
+     filter: drop-shadow(18px 11px 15px #F5DEB3);
 }
 #inventory_lamp2 {
     cursor: pointer;
+    filter: drop-shadow(-18px 11px 15px #F5DEB3);
 }
 #windows .inventory {
     width: 740px!important;
