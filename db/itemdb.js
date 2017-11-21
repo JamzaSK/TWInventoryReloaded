@@ -1,4 +1,4 @@
-var DATA_Bonus = [{
+    var DATA_Bonus = [{
         name: TWIRlang.lang40, //výstavba
         img: 'https://jamzask.github.io/TWInventoryReloaded/ikony/schopnosti/skillicon_build.png',
         itemsk: [2737, 1999, ]
