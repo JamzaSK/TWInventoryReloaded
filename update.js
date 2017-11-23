@@ -1,4 +1,4 @@
 var scriptUpdate={
-    TWIR: '1.70',
-    TWIRNew: '+ Día de Muertos evento gráfico - Happy Halloween :-), + Lampy s novým overlayerem, Opraven bug u zobrazování duplikátů y mucho más.',
+    TWIR: '1.80',
+    TWIRNew: 'Faster, Better, Clearer, + Třídění podle schopností (pušky WIP), + Třídění nyní podporuje vylepšené předměty, + Přidána možnost finanční podpory vývoje scriptu a mnoho dalšího!',
 };
