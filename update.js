@@ -1,4 +1,4 @@
 var scriptUpdate={
-    TWIR: '1.80',
-    TWIRNew: 'Faster, Better, Clearer > + Třídění podle schopností (pušky WIP), + Třídění nyní podporuje vylepšené předměty, + Přidána možnost finanční podpory vývoje scriptu a mnoho dalšího!',
+    TWIR: '1.81',
+    TWIRNew: 'Script byl updatován na 2.67, třídění podle bonusu bylo změněno > nyní využívá defaultní Filtr inventáře, který byl ve verzi 2.67 přidán, bugfix.',
 };
