@@ -1,5 +1,5 @@
 .tw2gui_window_buttons {
-     width: auto!important;
+     width: 100%!important;
 }	
 #inventory_overlay  {
      position: absolute;
