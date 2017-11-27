@@ -1,4 +1,7 @@
-#inventory_overlay {
+.tw2gui_window_buttons {
+     width: 60px!important;
+}	
+#inventory_overlay  {
      position: absolute;
      display: none;
 }
