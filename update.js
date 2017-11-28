@@ -1,4 +1,4 @@
 var scriptUpdate={
-    TWIR: '1.82',
-    TWIRNew: 'Performance update. + Do třídění podle bonusu byly přidány vlastnosti.',
+    TWIR: '1.83',
+    TWIRNew: 'Performance update. + Funkce byly přemístěny do nového menu, - Změna defaultní pozice oken byla odstraněna.',
 };
