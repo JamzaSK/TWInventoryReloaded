@@ -1,5 +1,5 @@
-#inventory_menust:hover  {
-     background: url(https://jamzask.github.io/TWInventoryReloaded/ikony/iconmenu-hover.png) no-repeat;
+#inventory_menust:hover {
+     background: url(https://jamzask.github.io/TWInventoryReloaded/ikony/iconmenu-hover.png)!important;
 }
 .tw2gui_window_buttons {
      width: auto!important;
