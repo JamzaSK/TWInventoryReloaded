@@ -1,4 +1,4 @@
 var scriptUpdate={
-    TWIR: '1.85',
-    TWIRNew: 'Up databázy.',
+    TWIR: '1.86',
+    TWIRNew: 'Upatované na verziu hry 2.75.',
 };
