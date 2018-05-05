@@ -7,6 +7,8 @@
 #inventory_overlay  {
      position: absolute;
      display: none;
+     height: 500px;
+     width: 721px;
 }
 #inventory_lamp1 {
     cursor: pointer;
