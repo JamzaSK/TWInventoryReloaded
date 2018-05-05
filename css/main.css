@@ -46,9 +46,11 @@ div.tw2gui_selectbox ul.tw2gui_selectbox_content {
 }
 .inventory .bag_next {
     background-position: -68px 0px;
+    right: 150px;
 }
 .inventory .bag_previous {
     background-position: 0px 0px;
+    left: 390px;
 }
 .inventory .filters .filter_inventory {
     display: inline-block;
