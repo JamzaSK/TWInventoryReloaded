@@ -52,6 +52,9 @@ div.tw2gui_selectbox ul.tw2gui_selectbox_content {
     background-position: 0px 0px;
     left: 390px!important;
 }
+.inventory .bag_pages {
+    display: none!important;
+}
 .inventory .filters .filter_inventory {
     display: inline-block;
     height: 46px;
