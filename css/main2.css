@@ -23,7 +23,7 @@
 }
 #windows .inventory .filters {
     width: 690px!important;
-	white-space: nowrap!important;
+    white-space: nowrap!important;
     overflow-x: scroll!important;
     overflow-y: hidden!important;
     display: inline-block!important;
