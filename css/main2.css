@@ -28,6 +28,7 @@
     overflow-y: hidden!important;
     display: inline-block!important;
     height: 46px!important;
+    overflow: hidden!important;
 }
 #bag {
     width: 672px!important;
