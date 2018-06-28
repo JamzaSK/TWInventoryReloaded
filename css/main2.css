@@ -50,16 +50,16 @@ div.tw2gui_selectbox ul.tw2gui_selectbox_content {
 }
 .inventory .bag_control {
     width: 9px!important;
-    top: -10px!important;
+    top: 24px!important;
     background: url(https://jamzask.github.io/TWInventoryReloaded/bg/arrows.png);
 }
 .inventory .bag_next {
     background-position: -50px 0px!important;
-    right: -50px!important;
+    right: 195px!important;
 }
 .inventory .bag_previous {
     background-position: -31px 0px!important;
-    left: -50px!important;
+    left: 195px!important;
 }
 .inventory .bag_pages {
     display: none!important;
