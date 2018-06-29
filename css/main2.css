@@ -1,3 +1,6 @@
+.inventory .open_search {
+     right: 200px!important;
+}		
 div.item.item_inventory {
      margin-bottom: 0px!important;
 }
