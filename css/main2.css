@@ -104,10 +104,10 @@ div.tw2gui_selectbox ul.tw2gui_selectbox_content {
     background-position: -86px -136px;
 }
 .inventory .filters .filter_left_arm {
-    background-position: -130px -44px;
+    background-position: -131px -44px;
 }
 .inventory .filters .filter_left_arm.active {
-    background-position: -131px -136px;
+    background-position: -130px -136px;
 }
 .inventory .filters .filter_body {
     background-position: -88px 0;
@@ -134,16 +134,16 @@ div.tw2gui_selectbox ul.tw2gui_selectbox_content {
     background-position: -131px -92px;
 }
 .inventory .filters .filter_neck {
-    background-position: -215px 0;
+    background-position: -217px 0;
 }
 .inventory .filters .filter_neck.active {
-    background-position: -217px -92px;
+    background-position: -215px -92px;
 }
 .inventory .filters .filter_yield {
     background-position: -174px -44px;
 }
 .inventory .filters .filter_yield.active {
-    background-position: -174px -136px;
+    background-position: -173px -136px;
 }
 .inventory .filters .filter_new {
     background-position: -2px 0;
@@ -155,12 +155,5 @@ div.tw2gui_selectbox ul.tw2gui_selectbox_content {
     background-position: -217px -44px;
 }
 .inventory .filters .filter_upgradeable.active {
-    background-position: -217px -136px;
-}
-
-.inventory .filters .filter_upgradeable {
-    background-position: -217px -44px;
-}
-.inventory .filters .filter_upgradeable.active {
-    background-position: -217px -136px;
+    background-position: -216px -136px;
 }
