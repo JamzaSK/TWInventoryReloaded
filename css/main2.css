@@ -1,5 +1,9 @@
 .inventory .actions .upgrade_items {
      left: 260px!important;
+     background: url(https://jamzask.github.io/TWInventoryReloaded/menu/iconv3.png) no-repeat!important;
+     background-position: -217px -44px!important;
+     width: 36px!important;
+     height: 36px!important;
 }	
 .inventory .open_search {
      right: 165px!important;
