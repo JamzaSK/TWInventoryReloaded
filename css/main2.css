@@ -95,16 +95,16 @@ div.tw2gui_selectbox ul.tw2gui_selectbox_content {
     background-position: -174px 0;
 }
 .inventory .filters .filter_head.active {
-    background-position: -174px -92px;
+    background-position: -172px -92px;
 }
 .inventory .filters .filter_right_arm {
     background-position: -88px -44px;
 }
 .inventory .filters .filter_right_arm.active {
-    background-position: -88px -136px;
+    background-position: -86px -136px;
 }
 .inventory .filters .filter_left_arm {
-    background-position: -131px -44px;
+    background-position: -130px -44px;
 }
 .inventory .filters .filter_left_arm.active {
     background-position: -131px -136px;
@@ -134,7 +134,7 @@ div.tw2gui_selectbox ul.tw2gui_selectbox_content {
     background-position: -131px -92px;
 }
 .inventory .filters .filter_neck {
-    background-position: -217px 0;
+    background-position: -215px 0;
 }
 .inventory .filters .filter_neck.active {
     background-position: -217px -92px;
