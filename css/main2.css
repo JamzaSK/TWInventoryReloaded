@@ -1,8 +1,8 @@
-#CC_pin_items {
-     left: 600px!important;
+.inventory .actions .upgrade_items {
+     left: 260px!important;
 }	
 .inventory .open_search {
-     right: 20px!important;
+     right: 165px!important;
 }		
 div.item.item_inventory {
      margin-bottom: 0px!important;
@@ -54,11 +54,11 @@ div.tw2gui_selectbox ul.tw2gui_selectbox_content {
 }
 .inventory .bag_next {
     background-position: -50px 0px!important;
-    right: 195px!important;
+    right: 170px!important;
 }
 .inventory .bag_previous {
     background-position: -31px 0px!important;
-    left: 195px!important;
+    left: 170px!important;
 }
 .inventory .bag_pages {
     display: none!important;
