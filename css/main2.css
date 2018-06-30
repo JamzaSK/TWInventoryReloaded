@@ -4,7 +4,10 @@ f {
     white-space: nowrap;
     font: bold 10pt Arial;
     bottom: 5px;
-    float: left;	
+    float: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 210px;	
 }
 #CC_pin_items {
      left: 656px!important;
