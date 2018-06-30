@@ -5,8 +5,7 @@
      color: #ffe7b100!important;
      margin-left: 0px!important;
      margin-right: 0px!important;
-     background: url(https://jamzask.github.io/TWInventoryReloaded/menu/iconv3.png) no-repeat;
-     background-position: -173px -136px;
+     background: url(https://jamzask.github.io/TWInventoryReloaded/menu/item_level.png) no-repeat!important;
 }
 .inventory .actions .upgrade_items {
      left: 295px!important;
