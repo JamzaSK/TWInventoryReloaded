@@ -1,13 +1,16 @@
+#CC_pin_items
+     left: 656px!important;
+}
 .tw2gui_button .textart_title {
      color: #ffe7b100!important;
 }
 .inventory .actions .upgrade_items {
-     left: 260px!important;
+     left: 295px!important;
      min-width: 16px!important;
      width: 16px!important;
 }	
 .inventory .open_search {
-     right: 165px!important;
+     right: 65px!important;
 }		
 div.item.item_inventory {
      margin-bottom: 0px!important;
