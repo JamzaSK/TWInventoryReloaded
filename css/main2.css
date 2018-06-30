@@ -1,3 +1,11 @@
+f {
+    position: relative;
+    color: white;
+    white-space: nowrap;
+    font: bold 10pt Arial;
+    bottom: 5px;
+    float: left;	
+}
 #CC_pin_items {
      left: 656px!important;
 }
