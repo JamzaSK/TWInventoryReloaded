@@ -1,5 +1,6 @@
 .inventory .actions .upgrade_items {
      left: 260px!important;
+     min-width: 140px!important;
 }	
 .inventory .open_search {
      right: 165px!important;
