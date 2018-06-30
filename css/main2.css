@@ -1,6 +1,10 @@
+.tw2gui_button .textart_title {
+     color: #ffe7b100!important;
+}
 .inventory .actions .upgrade_items {
      left: 260px!important;
-     min-width: 140px!important;
+     min-width: 16px!important;
+     width: 16px!important;
 }	
 .inventory .open_search {
      right: 165px!important;
