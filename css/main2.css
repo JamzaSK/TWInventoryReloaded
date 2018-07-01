@@ -7,16 +7,16 @@ f {
     float: left;
     overflow: hidden;
     max-width: 205px;
-    animation: floatText 5s infinite alternate ease-in-out;
 }
-@-webkit-keyframes floatText{
-  from {
-    right: 00%;
-  }
-
-  to {
-    right: 100%;
-  }
+list_wrapper {
+    width: 150px;
+}
+.list_wrapper li {
+    overflow: hidden;
+}
+.list_wrapper li f {
+    white-space: nowrap;
+    position: relative;
 }
 #CC_pin_items {
      left: 656px!important;
