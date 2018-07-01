@@ -7,7 +7,7 @@ f {
     float: left;
     overflow: hidden;
     text-overflow: ellipsis;
-    max-width: 210px;	
+    max-width: 205px;	
 }
 #CC_pin_items {
      left: 656px!important;
