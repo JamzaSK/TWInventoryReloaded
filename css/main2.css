@@ -7,16 +7,7 @@ f {
     float: left;
     overflow: hidden;
     max-width: 205px;
-}
-.list_wrapper {
-    width: 150px;
-}
-.list_wrapper li {
-    overflow: hidden;
-}
-.list_wrapper li f {
-    white-space: nowrap;
-    position: relative;
+    text-overflow: ellipsis;
 }
 #CC_pin_items {
      left: 656px!important;
