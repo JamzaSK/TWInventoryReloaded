@@ -11,12 +11,11 @@ f {
 }
 @-webkit-keyframes floatText{
   from {
-    left: 00%;
+    right: 00%;
   }
 
   to {
-    /* left: auto; */
-    left: 100%;
+    right: 100%;
   }
 }
 #CC_pin_items {
