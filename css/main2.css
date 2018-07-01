@@ -8,7 +8,7 @@ f {
     overflow: hidden;
     max-width: 205px;
 }
-list_wrapper {
+.list_wrapper {
     width: 150px;
 }
 .list_wrapper li {
