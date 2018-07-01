@@ -6,8 +6,9 @@ f {
     bottom: 5px;
     float: left;
     overflow: hidden;
-    max-width: 205px;
+    max-width: 200px;
     text-overflow: ellipsis;
+    text-align: center;
 }
 #CC_pin_items {
      left: 656px!important;
