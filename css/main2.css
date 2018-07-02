@@ -4,7 +4,7 @@
 }
 #bag::-webkit-scrollbar {
 	width: 10px;
-	background-color: #F5F5F5;
+	background-color: #f5f5f500;
 }
 #bag::-webkit-scrollbar-thumb {
 	background-color: #000000;
