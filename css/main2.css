@@ -33,7 +33,6 @@ f {
      margin-bottom: 0px!important;
      width: 60px !important;
      height: 60px !important;
-     background-size: contain !important;
 }
 #inventory_menust:hover {
      background: url(https://jamzask.github.io/TWInventoryReloaded/ikony/donateicon-hover.png)!important;
@@ -60,7 +59,7 @@ f {
     overflow: hidden!important;
 }
 #bag {
-    width: 692px!important;
+    width: 672px!important;
     height: 366px!important;
     text-align: center!important;
     color: rgb(255, 231, 177)!important;
