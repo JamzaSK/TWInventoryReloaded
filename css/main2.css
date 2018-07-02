@@ -66,7 +66,6 @@ f {
     overflow-y: auto!important;
     margin-bottom: -20px!important;
     margin-left: 10px!important;
-    overflow: hidden!important;
 }
 div.tw2gui_window.inventory div.tw2gui_inner_window_bg {
     background: url(https://jamzask.github.io/TWInventoryReloaded/bg/window2_bg_topv3.png) center bottom no-repeat;
