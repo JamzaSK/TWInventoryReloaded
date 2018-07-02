@@ -4,11 +4,10 @@
 }
 #bag::-webkit-scrollbar {
 	width: 10px;
-	background-color: #f5f5f500;
+	background-color: #2d2518ab;
 }
 #bag::-webkit-scrollbar-thumb {
-	background-color: #000000;
-	border: 2px solid #555555;
+      background: url(https://jamzask.github.io/TWInventoryReloaded/bg/window2_scrollbar_vertical.png) repeat-y -45px 0px!important;
 }
 f {
     position: relative;
