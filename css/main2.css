@@ -1,6 +1,6 @@
 #bag::-webkit-scrollbar-track {
-       box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 6px inset;
-       background-color: rgb(0, 0, 0, 0);
+       box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 6px inset!important;
+       background-color: rgb(0, 0, 0, 0)!important;
 }
 #bag::-webkit-scrollbar {
 	width: 10px;
