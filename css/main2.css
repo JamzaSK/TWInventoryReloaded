@@ -59,13 +59,13 @@ f {
     overflow: hidden!important;
 }
 #bag {
-    width: 672px!important;
+    width: 692px!important;
     height: 366px!important;
     text-align: center!important;
     color: rgb(255, 231, 177)!important;
     overflow-y: auto!important;
     margin-bottom: -20px!important;
-    margin-left: 0px;
+    margin-left: 10px!important;
 }
 div.tw2gui_window.inventory div.tw2gui_inner_window_bg {
     background: url(https://jamzask.github.io/TWInventoryReloaded/bg/window2_bg_topv3.png) center bottom no-repeat;
