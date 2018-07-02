@@ -66,6 +66,7 @@ f {
     overflow-y: auto!important;
     margin-bottom: -20px!important;
     margin-left: 10px!important;
+    overflow: hidden!important;
 }
 div.tw2gui_window.inventory div.tw2gui_inner_window_bg {
     background: url(https://jamzask.github.io/TWInventoryReloaded/bg/window2_bg_topv3.png) center bottom no-repeat;
@@ -173,7 +174,7 @@ div.tw2gui_selectbox ul.tw2gui_selectbox_content {
     background-position: -174px -44px;
 }
 .inventory .filters .filter_yield.active {
-    background-position: -173px -136px;
+    background-position: -172px -136px;
 }
 .inventory .filters .filter_new {
     background-position: -2px 0;
