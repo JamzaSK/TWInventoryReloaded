@@ -98,10 +98,12 @@ div.tw2gui_selectbox ul.tw2gui_selectbox_content {
 .inventory .bag_next {
     background-position: -50px 0px!important;
     right: 170px!important;
+    display: none!important;
 }
 .inventory .bag_previous {
     background-position: -31px 0px!important;
     left: 170px!important;
+    display: none!important;
 }
 .inventory .bag_pages {
     display: none!important;
