@@ -1,3 +1,15 @@
+@-webkit-keyframes fadeIn {
+            0% {opacity: 0;}
+            100% {opacity: 1;}
+}      
+@keyframes fadeIn {
+            0% {opacity: 0;}
+            100% {opacity: 1;}
+}        
+.fadeIn {
+            -webkit-animation-name: fadeIn;
+            animation-name: fadeIn;
+}
 #inventory_menust:hover {
      background: url(https://jamzask.github.io/TWInventoryReloaded/ikony/iconmenu-hover.png)!important;
 }
