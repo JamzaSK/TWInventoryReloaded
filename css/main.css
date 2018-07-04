@@ -1,13 +1,8 @@
-@-webkit-keyframes fadeIn {
-            0% {opacity: 0;}
-            100% {opacity: 1;}
-}      
-@keyframes fadeIn {
+  @keyframes fadeIn {
             0% {opacity: 0;}
             100% {opacity: 1;}
 }        
 .fadeIn {
-            -webkit-animation-name: fadeIn;
             animation-name: fadeIn;
 }
 #inventory_menust:hover {
