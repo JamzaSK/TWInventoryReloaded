@@ -1,3 +1,7 @@
+@keyframes fadeIn {
+        0% {opacity: 0;}
+        100% {opacity: 1;}
+}         
 .instant_wear_container {
 	bottom: -24px!important;
 }.search_container {
@@ -118,6 +122,9 @@ div.tw2gui_selectbox ul.tw2gui_selectbox_content {
     background: url(https://jamzask.github.io/TWInventoryReloaded/menu/iconv3.png) no-repeat;
     vertical-align: middle;
     cursor: pointer;
+    animation-name: fadeIn;
+    animation-fill-mode: both;
+    animation-duration: 5s;
 }
 .search_container {
     position: absolute;
