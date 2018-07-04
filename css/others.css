@@ -146,7 +146,7 @@ div.tw2gui_selectbox ul.tw2gui_selectbox_content {
     cursor: pointer;
     animation-name: fadeIn!important;
     animation-fill-mode: both!important;
-    animation-duration: 5s!important;
+    animation-duration: 3s!important;
 }
 .search_container {
     position: absolute;
