@@ -114,10 +114,6 @@ div.tw2gui_selectbox ul.tw2gui_selectbox_content {
     background: url(https://jamzask.github.io/TWInventoryReloaded/menu/iconv3.png) no-repeat;
     vertical-align: middle;
     cursor: pointer;
-	-webkit-animation-duration: 10s;
-            animation-duration: 10s;
-            -webkit-animation-fill-mode: both;
-            animation-fill-mode: both;
 }
 .search_container {
     position: absolute;
