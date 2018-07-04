@@ -1,3 +1,24 @@
+#inventory_finfo {
+    cursor: help;
+    left: 233px;
+    top: 435px;
+    z-index: 2;
+    position: absolute;
+    padding-top: 10px;
+    padding-left: 10px;
+    background: url(https://jamzask.github.io/TWInventoryReloaded/bg/loader-progressbg.png) no-repeat 0 -38px;
+    width: 214px;
+    height: 15px;
+    line-height: 15px;
+    white-space: nowrap;
+    font-weight: bold;
+    text-align: center;
+    overflow: hidden;
+    margin: 10px 10px 0 0;
+    float: left;
+    animation-name: fadeIn!important;
+    animation-fill-mode: both!important;
+    animation-duration: 5s!important;
 @keyframes fadeIn {
         0% {opacity: 0;}
         100% {opacity: 1;}
