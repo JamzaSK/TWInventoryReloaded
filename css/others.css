@@ -18,7 +18,7 @@
     float: left;
     animation-name: fadeIn!important;
     animation-fill-mode: both!important;
-    animation-duration: 5s!important;
+    animation-duration: 3s!important;
 }	
 @keyframes fadeIn {
         0% {opacity: 0;}
