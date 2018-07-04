@@ -16,9 +16,6 @@
     overflow: hidden;
     margin: 10px 10px 0 0;
     float: left;
-    animation-name: fadeIn!important;
-    animation-fill-mode: both!important;
-    animation-duration: 3s!important;
 }	
 @keyframes fadeIn {
         0% {opacity: 0;}
