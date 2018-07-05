@@ -1,3 +1,7 @@
+.inventory_settings {
+    position: relative;
+    z-index: 5;
+}	
 #inventory_menust:hover {
      background: url(https://jamzask.github.io/TWInventoryReloaded/ikony/iconmenu-hover.png)!important;
 }
