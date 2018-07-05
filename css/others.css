@@ -1,8 +1,9 @@
 .inventory_settings {
-font-family: Georgia, 'Times New Roman', serif;
+        font-family: Georgia, 'Times New Roman', serif;
+        margin-left: 20px;
 } 
 .inventory_toggle {
-font-family: Georgia, 'Times New Roman', serif;
+         font-family: Georgia, 'Times New Roman', serif;
 } 
 @keyframes fadeIn {
         0% {opacity: 0;}
