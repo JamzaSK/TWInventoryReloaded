@@ -9,7 +9,7 @@
 } 
 .inventory_donate {
 	  position: relative;
-          left: 20px;
+          left: -40px;
 	   top: 100px;
 } 
 @keyframes fadeIn {
@@ -52,6 +52,7 @@ t {
     margin-top: 8px;
     text-shadow: 2px 1px 2px #643;
     position: relative;
+    float: left;
 }
 #CC_pin_items {
      left: 656px!important;
