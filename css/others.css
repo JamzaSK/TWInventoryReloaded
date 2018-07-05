@@ -61,6 +61,9 @@ a.toggler {
     border-radius: 5px;
     text-decoration: none;
     transition: all .5s ease;
+    left: 670px;
+    position: absolute;
+    top: 55px;
 }
 a.toggler.off {
     background: red;
