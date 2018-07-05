@@ -3,7 +3,8 @@
 } 
 .inventory_toggle {
          font-family: Georgia, 'Times New Roman', serif;
-	  margin-left: 20px;
+	  position: relative;
+          left: 20px;
 } 
 @keyframes fadeIn {
         0% {opacity: 0;}
@@ -44,6 +45,8 @@ t {
     display: inline-block;
     margin-top: 8px;
     text-shadow: 2px 1px 2px #643;
+    position: relative;
+    top: -50px;
 }
 #CC_pin_items {
      left: 656px!important;
