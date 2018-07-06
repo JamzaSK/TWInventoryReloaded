@@ -1,6 +1,3 @@
-.twir_toggler {
-        font-family: "Courier New", Courier, monospace;
-} 
 .inventory_settings {
         font-family: Georgia, 'Times New Roman', serif;
 } 
@@ -12,7 +9,7 @@
         overflow: hidden;
 }
 .inventory_toggle {
-         font-family: Georgia, 'Times New Roman', serif;
+         font-family: "Courier New", Courier, monospace;
 	  position: relative;
           left: 20px;
 	   top: 10px;
