@@ -4,6 +4,9 @@
 .inventory_triedenie {
         font-family: Georgia, 'Times New Roman', serif;
 	text-shadow: 2px 1px 2px #dba901;
+	text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
 }
 .inventory_toggle {
          font-family: Georgia, 'Times New Roman', serif;
