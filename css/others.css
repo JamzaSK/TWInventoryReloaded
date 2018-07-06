@@ -1,6 +1,9 @@
 .inventory_settings {
         font-family: Georgia, 'Times New Roman', serif;
 } 
+.inventory_triedenie {
+        font-family: Georgia, 'Times New Roman', serif;
+}
 .inventory_toggle {
          font-family: Georgia, 'Times New Roman', serif;
 	  position: relative;
