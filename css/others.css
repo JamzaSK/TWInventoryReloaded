@@ -7,10 +7,6 @@
 	text-overflow: ellipsis;
         white-space: nowrap;
         overflow: hidden;
-	background-color: black!important;
-	display: block!important;
-	width: 200px!important;
-	height: 25px!important;
 }
 .inventory_toggle {
          font-family: "Courier New", Courier, monospace;
