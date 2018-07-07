@@ -153,7 +153,7 @@ div.tw2gui_selectbox ul.tw2gui_selectbox_content {
     display: inline-block;
     height: 46px;
     width: 43px;
-    background: url(https://jamzask.github.io/TWInventoryReloaded/menu/iconv3.png) no-repeat;
+    background: url(https://jamzask.github.io/TWInventoryReloaded/menu/twirui_default.png) no-repeat;
     vertical-align: middle;
     cursor: pointer;
     animation-name: fadeIn!important;
