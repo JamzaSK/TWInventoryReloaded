@@ -1,3 +1,7 @@
+.inventory_triedenie li:hover {
+	background: url(https://jamzask.github.io/TWInventoryReloaded/bg/selectbox_row.png) repeat-x!important;
+	background-position: 0 -26px!important;
+} 
 .inventory_triedenie li {
 	background: url(https://jamzask.github.io/TWInventoryReloaded/bg/selectbox_row.png) repeat-x!important;
 } 
