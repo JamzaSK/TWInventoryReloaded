@@ -10,7 +10,7 @@
 } 
 .inventory_triedenie {
         font-family: "Arial Black", Gadget, sans-serif;
-	text-shadow: 2px 1px 2px #dba901;
+	color: white!important;
 	text-overflow: ellipsis;
         white-space: nowrap;
         overflow: hidden;
