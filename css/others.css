@@ -4,13 +4,16 @@
 } 
 .inventory_triedenie li {
 	background: url(https://jamzask.github.io/TWInventoryReloaded/bg/selectbox_row.png) repeat-x!important;
+	color: rgba(240,240,240,1)!important;
+	text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
 } 
 .inventory_settings {
         font-family: Georgia, 'Times New Roman', serif;
 } 
 .inventory_triedenie {
         font-family: "Arial Black", Gadget, sans-serif;
-	color: white!important;
 	text-overflow: ellipsis;
         white-space: nowrap;
         overflow: hidden;
