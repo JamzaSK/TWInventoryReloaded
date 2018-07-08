@@ -3,8 +3,7 @@
 	background-position: 0 -26px!important;
 } 
 .inventory_triedenie li {
-	background: url(https://jamzask.github.io/TWInventoryReloaded/bg/selectbox_row.png) repeat-x!important;
-	color: rgba(240,240,240,1)!important;
+	color: #4D392C!important;
 	text-overflow: ellipsis;
         white-space: nowrap;
         overflow: hidden;
@@ -17,6 +16,7 @@
 	text-overflow: ellipsis;
         white-space: nowrap;
         overflow: hidden;
+	left: 5px;
 }
 .inventory_toggle {
 	  position: relative;
