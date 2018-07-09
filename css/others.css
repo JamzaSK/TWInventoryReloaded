@@ -19,7 +19,8 @@
 .inventory_toggle {
 	  position: relative;
           left: 20px;
-	   top: 10px;
+	  top: 10px;
+	  font-family: "Courier New", Courier, monospace;
 } 
 .inventory_donate {
 	  position: relative;
