@@ -257,7 +257,6 @@ div.tw2gui_selectbox ul.tw2gui_selectbox_content {
 }
 .inventory .filters .filter_yield.active {
     background-position: -174px -136px;
-	    top: 5px;
     position: relative;
     cursor: s-resize;
 }
