@@ -181,6 +181,7 @@ div.tw2gui_selectbox ul.tw2gui_selectbox_content {
 }
 .inventory .filters .filter_animal {
     background-position: -45px -44px;
+	position: relative;
 }
 .inventory .filters .filter_animal.active {
     background-position: -45px -136px;
@@ -189,6 +190,7 @@ div.tw2gui_selectbox ul.tw2gui_selectbox_content {
 }
 .inventory .filters .filter_head {
     background-position: -174px 0;
+	position: relative;
 }
 .inventory .filters .filter_head.active {
     background-position: -174px -92px;
@@ -197,6 +199,7 @@ div.tw2gui_selectbox ul.tw2gui_selectbox_content {
 }
 .inventory .filters .filter_right_arm {
     background-position: -88px -44px;
+	position: relative;
 }
 .inventory .filters .filter_right_arm.active {
     background-position: -88px -136px;
@@ -205,6 +208,7 @@ div.tw2gui_selectbox ul.tw2gui_selectbox_content {
 }
 .inventory .filters .filter_left_arm {
     background-position: -131px -44px;
+	position: relative;
 }
 .inventory .filters .filter_left_arm.active {
     background-position: -131px -136px;
@@ -213,6 +217,7 @@ div.tw2gui_selectbox ul.tw2gui_selectbox_content {
 }
 .inventory .filters .filter_body {
     background-position: -88px 0;
+	position: relative;
 }
 .inventory .filters .filter_body.active {
     background-position: -88px -92px;
@@ -221,6 +226,7 @@ div.tw2gui_selectbox ul.tw2gui_selectbox_content {
 }
 .inventory .filters .filter_belt {
     background-position: -45px 0;
+	position: relative;
 }
 .inventory .filters .filter_belt.active {
     background-position: -45px -92px;
@@ -229,6 +235,7 @@ div.tw2gui_selectbox ul.tw2gui_selectbox_content {
 }
 .inventory .filters .filter_pants {
     background-position: -2px -44px;
+	position: relative;
 }
 .inventory .filters .filter_pants.active {
     background-position: -2px -136px;
@@ -237,6 +244,7 @@ div.tw2gui_selectbox ul.tw2gui_selectbox_content {
 }
 .inventory .filters .filter_foot {
     background-position: -131px 0;
+	position: relative;
 }
 .inventory .filters .filter_foot.active {
     background-position: -131px -92px;
@@ -245,6 +253,7 @@ div.tw2gui_selectbox ul.tw2gui_selectbox_content {
 }
 .inventory .filters .filter_neck {
     background-position: -216px 0;
+	position: relative;
 }
 .inventory .filters .filter_neck.active {
     background-position: -216px -92px;
@@ -254,6 +263,7 @@ div.tw2gui_selectbox ul.tw2gui_selectbox_content {
 .inventory .filters .filter_yield {
     background-position: -174px -44px;
     cursor: s-resize;
+	position: relative;
 }
 .inventory .filters .filter_yield.active {
     background-position: -174px -136px;
@@ -263,6 +273,7 @@ div.tw2gui_selectbox ul.tw2gui_selectbox_content {
 }
 .inventory .filters .filter_new {
     background-position: -2px 0;
+	position: relative;
 }
 .inventory .filters .filter_new.active {
     background-position: -2px -92px;
@@ -271,6 +282,7 @@ div.tw2gui_selectbox ul.tw2gui_selectbox_content {
 }
 .inventory .filters .filter_upgradeable {
     background-position: -217px -44px;
+	position: relative;
 }
 .inventory .filters .filter_upgradeable.active {
     background-position: -217px -136px;
