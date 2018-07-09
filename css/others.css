@@ -116,6 +116,7 @@ t {
     display: inline-block!important;
     height: 46px!important;
     overflow: hidden!important;
+        position: relative!important;	
 }
 #bag {
     width: 692px!important;
