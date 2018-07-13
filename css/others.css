@@ -71,6 +71,9 @@ t {
 g {
     text-align: center;
     font-family: comic sans ms;
+    left: 10px;
+    right: 10px;
+    position: relative;
 }
 #CC_pin_items {
      left: 656px!important;
