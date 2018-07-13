@@ -66,7 +66,8 @@ t {
     margin-top: 8px;
     text-shadow: 2px 1px 2px #dba901;
     position: relative;
-    float: left;
+    left: 15px;
+}
 }
 g {
     text-align: center;
