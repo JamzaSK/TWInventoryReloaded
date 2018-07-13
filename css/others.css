@@ -76,6 +76,16 @@ t1 {
     right: 10px;
     position: relative;
 }
+.icons {
+    min-height: 20px;
+    width: 20px;
+    min-width: 20px;
+    display:inline;
+    background-color: red;
+    border-style:dashed;
+    border-width: 1px;
+    float:left;
+}
 #CC_pin_items {
      left: 656px!important;
 }
