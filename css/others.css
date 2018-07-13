@@ -68,6 +68,9 @@ t {
     position: relative;
     float: left;
 }
+g {
+    text-align: center;
+}
 #CC_pin_items {
      left: 656px!important;
 }
