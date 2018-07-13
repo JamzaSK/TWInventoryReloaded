@@ -24,8 +24,8 @@
 } 
 .inventory_donate {
 	  position: relative;
-          left: -40px;
-	   top: 100px;
+          left: 40px;
+	   top: 150px;
 } 
 @keyframes fadeIn {
         0% {opacity: 0;}
