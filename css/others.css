@@ -77,9 +77,8 @@ t1 {
     position: relative;
 }
 .icons {
-    min-height: 29px;
+    height: 29px;
     width: 29px;
-    min-width: 29px;
     display:inline;
     margin-left: 2px;
     float:left;
