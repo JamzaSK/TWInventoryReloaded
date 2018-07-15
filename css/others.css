@@ -76,13 +76,6 @@ t1 {
     right: 10px;
     position: relative;
 }
-.icons {
-    height: 29px;
-    width: 29px;
-    display:inline;
-    margin-left: 1px;
-    float:left;
-}
 #CC_pin_items {
      left: 656px!important;
 }
