@@ -81,7 +81,7 @@ t1 {
     width: 29px;
     min-width: 29px;
     display:inline;
-    background: rgba(127, 111, 85, 0.7);
+    margin-left: 2px;
     float:left;
 }
 #CC_pin_items {
