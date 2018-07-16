@@ -32,7 +32,8 @@
         100% {opacity: 1;}
 }         
 .instant_wear_container {
-	bottom: -24px!important;
+	bottom: -25px!important;
+	    left: 400px!important;
 }.search_container {
 	z-index: 999!important;
 }
