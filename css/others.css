@@ -36,10 +36,10 @@
 	    left: 400px!important;
 }.search_container {
 	z-index: 999!important;
-	position: relative!important;
+	position: absolute!important;
 	    width: 256px;
             height: 49px;
-              bottom: 0px!important;
+             bottom: -25px!important;
 }
 #bag::-webkit-scrollbar-track {
        box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 6px inset!important;
