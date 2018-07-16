@@ -59,6 +59,15 @@ f {
     max-width: 200px;
     text-overflow: ellipsis;
 }
+f1 {
+    position: relative;
+    color: #4d392c;
+    white-space: nowrap;
+    font: bold 10pt Arial;
+    float: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
 t {
     font-size: 115%;
     font-weight: bold;
