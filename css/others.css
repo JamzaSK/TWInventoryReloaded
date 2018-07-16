@@ -36,6 +36,10 @@
 	    left: 400px!important;
 }.search_container {
 	z-index: 999!important;
+	position: relative!important;
+	    width: 256px;
+            height: 49px;
+              bottom: 0px!important;
 }
 #bag::-webkit-scrollbar-track {
        box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 6px inset!important;
@@ -171,20 +175,6 @@ div.tw2gui_selectbox ul.tw2gui_selectbox_content {
     animation-name: fadeIn!important;
     animation-fill-mode: both!important;
     animation-duration: 3s!important;
-}
-.search_container {
-    position: absolute;
-    display: none;
-    width: 256px;
-    height: 49px;
-    bottom: 40px;
-    left: 35%;
-    text-align: center;
-    user-select: none;
-    -moz-user-select: none;
-    -khtml-user-select: none;
-    -webkit-user-select: none;
-    -o-user-select: none;
 }
 .inventory .filters .filter_animal {
     background-position: -45px -44px;
