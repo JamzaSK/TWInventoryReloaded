@@ -82,7 +82,7 @@ t1 {
     position: relative;
 }
 #CC_pin_items {
-     left: 656px!important;
+     left: 590px!important;
 }
 .upgrade_items .textart_title {
      color: #ffe7b100!important;
@@ -94,12 +94,12 @@ t1 {
      height: 16px!important;
 }
 .inventory .actions .upgrade_items {
-     left: 295px!important;
+     left: 294px!important;
      min-width: 16px!important;
      width: 16px!important;
 }	
 .inventory .open_search {
-     right: 65px!important;
+     right: 0px!important;
 }		
 #bag .item.item_inventory {
      margin-bottom: 0px!important;
