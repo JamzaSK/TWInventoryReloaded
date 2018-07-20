@@ -11,7 +11,7 @@ testers: Davca.Jonda, Paul Jones, Liza, Radewww
 translation: -
 
 <p align="center">
-<img align="right" width="508" height="220" src="https://jamzask.github.io/TWInventoryReloaded/menu/twir_biglogo.png">
+<img width="508" height="220" src="https://jamzask.github.io/TWInventoryReloaded/menu/twir_biglogo.png">
 </p>
 
 
