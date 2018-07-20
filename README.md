@@ -1,6 +1,6 @@
 # TW Inventory Reloaded 2.0
 
-#### credits: Jackson, Tom Robert, neversleep1911, Dun (for base code and idea)<br>
+<b> credits: </b>Jackson, Tom Robert, neversleep1911, Dun (for base code and idea)<br>
 collaborators: danom333/ Fejm
 
 artwork: Lorc and Delapouite with team
