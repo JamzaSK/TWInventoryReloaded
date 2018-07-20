@@ -10,7 +10,8 @@ testers: Davca.Jonda, Paul Jones, Liza, Radewww
 
 translation: -
 
-
-<img align="right" width="100" height="100" src="https://jamzask.github.io/TWInventoryReloaded/menu/twir_biglogo.png">
+<p align="center">
+<img align="right" width="508" height="220" src="https://jamzask.github.io/TWInventoryReloaded/menu/twir_biglogo.png">
+</p>
 
 
