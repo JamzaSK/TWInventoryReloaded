@@ -1,4 +1,4 @@
 var scriptUpdate={
-    TWIR: '2.03',
-    TWIRNew: 'Update 2.03 (pre launch): Oprava chyby pri updatovaní z 1.931, Script je teraz možné používať na všetkých Blink based prehliadačoch.',
+    TWIR: '2.04',
+    TWIRNew: 'TWIR 2 (pre launch) Update 2.04: Oprava chyby v prekladu, Nové Dark menu.',
 };
