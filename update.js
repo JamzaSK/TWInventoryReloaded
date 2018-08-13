@@ -1,4 +1,4 @@
 var scriptUpdate={
-    TWIR: '2.06',
-    TWIRNew: 'TWIR 2 (pre launch) Update 2.06: Update databázy, Bugfix',
+    TWIR: '2.10',
+    TWIRNew: 'TWIR 2 (pre launch) Update 2.10: Nový dizajn',
 };
