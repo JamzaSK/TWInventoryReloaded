@@ -1,5 +1,5 @@
 var scriptUpdate={
     TWIR: '2.125',
-    TWIRrev: '1',
-    TWIRNew: 'Added stats, Code and design changes - bonus search will be back soon!',
+    TWIRrev: '2',
+    TWIRNew: 'Added new Lucille set and quest items',
 };
