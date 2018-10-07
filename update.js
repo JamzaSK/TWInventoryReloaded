@@ -5,4 +5,4 @@ var scriptUpdate={
 };
 
 
-("west.wof.WofOctoberWindow").remove();
+$("west.wof.WofOctoberWindow").remove();
