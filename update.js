@@ -5,5 +5,5 @@ var scriptUpdate={
 };
 
 
-
+$('.reset').remove();
 
