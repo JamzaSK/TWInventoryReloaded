@@ -3,3 +3,5 @@ var scriptUpdate={
     TWIRrev: '2',
     TWIRNew: 'Inventory stats updated - now with percentage',
 };
+
+$("#ui_topbar #buy").hide();
