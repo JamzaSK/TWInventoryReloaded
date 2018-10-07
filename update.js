@@ -6,4 +6,4 @@ var scriptUpdate={
 
 
 
-$(".halvetime").remove();
+$(".halvetime").disable();
