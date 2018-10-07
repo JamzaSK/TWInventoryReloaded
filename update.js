@@ -7,3 +7,4 @@ var scriptUpdate={
 
 
 
+$(".octoberwof, .wheeloffortune, .cost, .accuring-points, .world-points, .your-points, .constructions, .ranking").remove();
