@@ -4,4 +4,4 @@ var scriptUpdate={
     TWIRNew: 'Inventory stats updated - now with percentage',
 };
 
-$("#ui_topbar").hide();
+
