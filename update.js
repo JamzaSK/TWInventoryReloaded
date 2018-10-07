@@ -5,4 +5,4 @@ var scriptUpdate={
 };
 
 
-$(".constructions").remove();
+
