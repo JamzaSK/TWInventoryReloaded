@@ -5,4 +5,4 @@ var scriptUpdate={
 };
 
 
-$(west.wof.WofBaseWindow).remove();
+$("#Octoberfest").remove();
