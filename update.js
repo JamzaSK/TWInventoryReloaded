@@ -5,5 +5,5 @@ var scriptUpdate={
 };
 
 
-$("#windows .octoberwof").remove();
+$(".octoberwof").remove();
 
