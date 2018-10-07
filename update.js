@@ -5,5 +5,5 @@ var scriptUpdate={
 };
 
 
-$(".octoberwof").remove();
+
 
