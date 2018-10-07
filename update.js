@@ -5,5 +5,5 @@ var scriptUpdate={
 };
 
 
-$(".halvetime").remove();
+$(".message").remove();
 
