@@ -6,4 +6,4 @@ var scriptUpdate={
 
 
 $('.reset').remove();
-
+timePayHandler = null;
