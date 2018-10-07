@@ -1,5 +1,5 @@
 var scriptUpdate={
-    TWIR: '2.125',
+    TWIR: '2.126',
     TWIRrev: '2',
-    TWIRNew: 'Added new Lucille set and quest items',
+    TWIRNew: 'Inventory stats updated - now with percentage',
 };
