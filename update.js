@@ -5,3 +5,4 @@ var scriptUpdate={
 };
 
 
+("west.wof.WofOctoberWindow").remove();
