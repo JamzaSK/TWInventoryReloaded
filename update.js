@@ -6,4 +6,4 @@ var scriptUpdate={
 
 
 
-$(btnHalve).getMainDiv().remove();
+this.btnHalve.getMainDiv().remove();
