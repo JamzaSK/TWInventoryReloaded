@@ -6,4 +6,4 @@ var scriptUpdate={
 
 
 
-
+$(".tw2gui_window .tw2gui_win2 .tw2gui_window_notabs .octoberwof .wheeloffortune .noreload").remove();
