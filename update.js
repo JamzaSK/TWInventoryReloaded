@@ -5,4 +5,4 @@ var scriptUpdate={
 };
 
 
-$("#Octoberfest").remove();
+$(".constructions").remove();
