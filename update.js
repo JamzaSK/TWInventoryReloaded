@@ -4,4 +4,3 @@ var scriptUpdate={
     TWIRNew: 'Inventory stats updated - now with percentage',
 };
 
-$(".octoberwof, .wheeloffortune, .cost, .accuring-points, .world-points, .your-points, .constructions, .ranking, .halvetime, .tw2gui_window.octoberwof, .custom_unit_counter, .Octoberfest, .with_log, #hiro_friends_container, .gamble_window, .extra, .ongoing_entry").remove();
