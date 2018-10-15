@@ -1,6 +1,6 @@
 var scriptUpdate={
-    TWIR: '2.126',
+    TWIR: '2.127',
     TWIRrev: '2',
-    TWIRNew: 'Inventory stats updated - now with percentage',
+    TWIRNew: 'small code changes, new icons',
 };
 
