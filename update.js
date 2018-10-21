@@ -1,6 +1,6 @@
 var scriptUpdate={
-    TWIR: '2.127',
+    TWIR: '2.128',
     TWIRrev: '2',
-    TWIRNew: 'small code changes, new icons',
+    TWIRNew: 'Code changes. Please remove the older version via dashboard. ',
 };
 
