@@ -1,8 +1,12 @@
 // ==UserScript==
 // @name TW Inventory Reloaded
+// @name:cs TW Inventory Reloaded
+// @name:sk TW Inventory Reloaded
 // @namespace TWIR
 // @author Jamza (CZ14)
 // @description Redesigned The West inventory with many advanced features.
+// @description:cs Přepracovaný The West inventář s mnoha pokročilými funkcemi.
+// @description:sk Prepracovaný The West inventár s mnohými pokročilými funkciami.
 // @include https://*.the-west.*/game.php*
 // @exclude https://classic.the-west.net*
 // @version 2.128
