@@ -1,6 +1,6 @@
 var scriptUpdate={
-    TWIR: '2.128',
+    TWIR: '2.129',
     TWIRrev: '2',
-    TWIRNew: 'Code changes. Please remove the older version via dashboard. ',
+    TWIRNew: 'New fully responsive design supporting Firefox',
 };
 
