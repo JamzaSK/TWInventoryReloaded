@@ -1,6 +1,6 @@
 var scriptUpdate={
-    TWIR: '2.129',
+    TWIR: '2.130',
     TWIRrev: '2',
-    TWIRNew: 'New fully responsive design supporting Firefox',
+    TWIRNew: 'Added Polish language - credits to Wojcieszy, now you can change language via Api register page, fixed shiftclick',
 };
 
