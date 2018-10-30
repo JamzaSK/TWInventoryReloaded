@@ -21,7 +21,7 @@
 // collaborators: danom333/ Fejm
 // artwork: Lorc and Delapouite with team
 // testers: Davca.Jonda, Paul Jones, Liza, Radewww (RIP)
-// translation: -
+// translators: Wojcieszy
 //
 //
 //
