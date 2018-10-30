@@ -1,7 +1,8 @@
- en_EN: { // a valid language locale
+en: { // a valid language locale
  script_name: "TW Inventory Reloaded", //do not edit this
- translate: "English (EN)",
- translated_by: "your name", //thank you
+ translate: "English (EN)", //displayed in menu
+ translated_by: "translated by yourname",  //thank you
+ language: "Language",
  invent: "Inventory",
  script_version: "Version",
  script_revision: "Revision",
@@ -74,4 +75,5 @@
  sell_price: "Total sell price",
  error404: "No items of this type found :-(",
  gime_time: "Working on it...",
-}
+ submit: "Submit",
+ },
