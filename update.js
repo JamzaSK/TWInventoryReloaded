@@ -1,6 +1,6 @@
 var scriptUpdate={
     TWIR: '2.131',
-    TWIRrev: '2',
+    TWIRrev: '3',
     TWIRNew: 'Fully reworked.',
 };
 
