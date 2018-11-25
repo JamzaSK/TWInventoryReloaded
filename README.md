@@ -7,7 +7,7 @@
 <b> translation:</b> - <br>
 
 <p align="center">
-<img width="508" height="220" src="https://jamzask.github.io/TWInventoryReloaded/menu/twir_biglogo.png">
+<img src="https://jamzask.github.io/TWInventoryReloaded/menu/twir_biglogo.png">
 </p>
 
 
