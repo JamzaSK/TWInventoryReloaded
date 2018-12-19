@@ -110,5 +110,7 @@ dropable: "Nájditeľné",
  feat_title: "Nezobrazovat název sekce inventáře v Title",
 feat_minititle: "Nezobrazovat více informací v MiniTitle", 
 feat_ministats: 'Nezobrazovat "Mini Stats" funkci', 
+sort_setname: "Meno súpravy",
+
  },
  ` 
