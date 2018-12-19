@@ -110,6 +110,7 @@ dropable: "Najitelné",
  feat_title: "Nezobrazovať názov sekcie inventára v Title",
 feat_minititle: "Nezobrazovať viac informácií v MiniTitle", 
 feat_ministats: 'Nezobrazovať "Mini Stats" funkciu', 
+sort_setname: "Jméno sady",
 
  },
  ` 
