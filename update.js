@@ -1,6 +1,6 @@
 var scriptUpdate={
-    TWIR: '2.132',
+    TWIR: '2.133',
     TWIRrev: '4',
-    TWIRNew: 'Fix to previous update. Please remove older version manually in Tampermonkey Dashboard! Previous update: New options window, added bonus search, reworked filter and sort feature.',
+    TWIRNew: 'Added 2.92 items, fixed compatibility issue, fixed sorting for weapon damage with updated sorting menu. Merry Christmas!',
 };
 
