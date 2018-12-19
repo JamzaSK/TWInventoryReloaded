@@ -110,5 +110,7 @@ dropable: "Dropable",
 feat_title: "Disable Inventory Section Highlight in the Title",
 feat_minititle: "Disable more informations in the Mini Title", 
 feat_ministats: 'Disable "Mini Stats" feature', 
+sort_setname: "Set name",
+
  },
  ` 
