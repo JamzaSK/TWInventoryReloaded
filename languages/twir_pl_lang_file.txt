@@ -110,5 +110,7 @@ features: "Features",
 feat_title: "Disable Inventory Section Highligt in the Title",
 feat_minititle: "Disable more informations in the MiniTitle", 
 feat_ministats: 'Disable "Mini Stats" feature', 
+sort_setname: "Set name",
+
  },
  ` 
