@@ -1,16 +1,13 @@
 {
 				
- "1855000": {
+ 1855000: {
   "recipe": 20000,
   "profsymbol": 1,
-  "resources": [{
-   "item": 711,
-   "count": 1
-  }, {
-   "item": 716,
-   "count": 1
-  }]
- },
+  "resources": [
+  {"item": 711, "count": 1},
+  {"item": 716,"count": 1}
+  ]
+ }
  
  
  
