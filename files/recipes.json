@@ -1,5 +1,5 @@
 {
- 1855000: {
+ "1855000": {
   "recipe": 20000,
   "profsymbol": 1,
   "resources": [
@@ -8,7 +8,7 @@
   
   ]
  },
- 1862000: {
+ "1862000": {
   "recipe": 20001,
   "profsymbol": 1,
   "resources": [{
