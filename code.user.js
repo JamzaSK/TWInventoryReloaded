@@ -344,7 +344,7 @@
       gender: "Charakterové",
       rare: "Vzácní",
       submit: "Potvrdit",
-      sort_by: "Třízení",
+      sort_by: "Třídění",
       filter: "Filtrování",
       sort_up: "Vzestupně",
       sort_down: "Sestupně",
