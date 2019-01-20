@@ -342,7 +342,7 @@
       droppable: "Nalezitelné",
       duplicates: "Duplikáty",
       gender: "Charakterové",
-      rare: "Vzácní",
+      rare: "Vzácné",
       submit: "Potvrdit",
       sort_by: "Třídění",
       filter: "Filtrování",
