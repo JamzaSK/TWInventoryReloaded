@@ -53,7 +53,7 @@
  t.setAttribute("type", "application/javascript"), t.textContent = "(" + function() {
   var e, t = {
    version: "2.140",
-   revision: "4",
+   revision: "5",
    name: "TW Inventory Reloaded",
    author: "Jamza",
    minGame: "2.92",
@@ -805,7 +805,7 @@
     "background-repeat": "no-repeat, no-repeat",
     "background-position": "center, center",
     "background-size": "30px 30px, auto"
-   }), $(".inventory .filters .filter_head.active").css({
+   }).attr("title", Inventory.categoryDesc.head), $(".inventory .filters .filter_head.active").css({
     background: "url(" + t.images.defaultFilters.head + "), url(https://westcz.innogamescdn.com/images/inventory/itembox.png?9)",
     "background-repeat": "no-repeat, no-repeat",
     "background-position": "center, center",
@@ -815,7 +815,7 @@
     "background-repeat": "no-repeat, no-repeat",
     "background-position": "center, center",
     "background-size": "30px 30px, auto"
-   }).attr("title", Inventory.categoryDesc.head), $(".inventory .filters .filter_right_arm.active").css({
+   }).attr("title", Inventory.categoryDesc.right_arm), $(".inventory .filters .filter_right_arm.active").css({
     background: "url(" + t.images.defaultFilters.right_arm + "), url(https://westcz.innogamescdn.com/images/inventory/itembox.png?9)",
     "background-repeat": "no-repeat, no-repeat",
     "background-position": "center, center",
@@ -1233,8 +1233,8 @@
      q = '<span class="invPopup_sellicon"></span>&nbsp;',
      Y = o.max_price.objects_max_sell_price.item_id,
      C = $('<span style="font-style: italic;">&emsp;&emsp;(' + e.stats.item + ")</span>").addMousePopup(new ItemPopup(ItemManager.getByBaseId(Y)).popup),
-     F = o.max_price.products_max_sell_price.item_id,
-     G = $('<span style="font-style: italic;">&emsp;&emsp;(' + e.stats.product + ")</span>").addMousePopup(new ItemPopup(ItemManager.getByBaseId(F)).popup),
+     G = o.max_price.products_max_sell_price.item_id,
+     F = $('<span style="font-style: italic;">&emsp;&emsp;(' + e.stats.product + ")</span>").addMousePopup(new ItemPopup(ItemManager.getByBaseId(G)).popup),
      E = o.max_count.objects_max_total_count.item_id,
      Q = $('<span style="font-style: italic;">&nbsp;(' + e.stats.item + ")</span><span>&emsp;x" + format_money(h(o.max_count.objects_max_total_count.item_count)) + "</span>").addMousePopup(new ItemPopup(ItemManager.getByBaseId(E)).popup),
      f = o.max_count.products_max_total_count.item_id,
@@ -1268,12 +1268,12 @@
       value: R + "$" + format_money(h(o.value.products_buy_price)) + "&nbsp;&nbsp;" + q + "$" + h(o.value.products_sell_price)
      }, {
       desc: e.stats.most_expensive,
-      value: G
+      value: F
      }, {
       desc: e.stats.recipes,
       value: R + "$" + format_money(h(o.value.recipe_buy_price)) + "&nbsp;&nbsp;" + q + "$" + h(o.value.recipe_sell_price)
      }],
-     z = [{
+     O = [{
       desc: e.stats.items,
       value: "&emsp;&emsp;&emsp;&emsp;x" + format_money(o.count.objects_total_count)
      }, {
@@ -1346,17 +1346,17 @@
       desc: e.stats.other_products,
       value: "&emsp;&emsp;&emsp;&emsp;x" + format_money(o.count.useables_total_count) + "&nbsp;[" + format_money(o.count.useables_count) + "]"
      }],
-     O = (new west.gui.Table).addColumn("twir_stats_desc").addColumn("twir_stats_value").appendToCell("head", "twir_stats_desc").appendToCell("head", "twir_stats_value");
-    O.appendRow($("<h2>" + e.stats.sales_value + "</h2>"));
-    for (var H = 0; H < v.length; H++) O.appendRow().appendToCell(-1, "twir_stats_desc", v[H].desc).appendToCell(-1, "twir_stats_value", v[H].value);
-    O.appendRow(), O.appendRow($("<h2>" + e.stats.quantities + "</h2>"));
-    for (var W = 0; W < z.length; W++) O.appendRow().appendToCell(-1, "twir_stats_desc", z[W].desc).appendToCell(-1, "twir_stats_value", z[W].value);
-    if (O.appendRow(), O.appendRow($("<h2>" + e.stats.item_set + "</h2>")), null != o.sets) {
+     z = (new west.gui.Table).addColumn("twir_stats_desc").addColumn("twir_stats_value").appendToCell("head", "twir_stats_desc").appendToCell("head", "twir_stats_value");
+    z.appendRow($("<h2>" + e.stats.sales_value + "</h2>"));
+    for (var H = 0; H < v.length; H++) z.appendRow().appendToCell(-1, "twir_stats_desc", v[H].desc).appendToCell(-1, "twir_stats_value", v[H].value);
+    z.appendRow(), z.appendRow($("<h2>" + e.stats.quantities + "</h2>"));
+    for (var W = 0; W < O.length; W++) z.appendRow().appendToCell(-1, "twir_stats_desc", O[W].desc).appendToCell(-1, "twir_stats_value", O[W].value);
+    if (z.appendRow(), z.appendRow($("<h2>" + e.stats.item_set + "</h2>")), null != o.sets) {
      var D = "&emsp;&emsp;&emsp;&emsp;(" + o.sets.item_set + "/" + o.sets.all_sets + ")";
-     O.appendRow().appendToCell(-1, "twir_stats_desc", e.stats.owned_sets).appendToCell(-1, "twir_stats_value", D), O.appendRow().appendToCell(-1, "twir_stats_desc", e.stats.completed_sets).appendToCell(-1, "twir_stats_value", "&emsp;&emsp;&emsp;&emsp;" + o.sets.complete_sets)
+     z.appendRow().appendToCell(-1, "twir_stats_desc", e.stats.owned_sets).appendToCell(-1, "twir_stats_value", D), z.appendRow().appendToCell(-1, "twir_stats_desc", e.stats.completed_sets).appendToCell(-1, "twir_stats_value", "&emsp;&emsp;&emsp;&emsp;" + o.sets.complete_sets)
     } else {
      var Z = '<span style="font-style: italic;">' + e.stats.set_menu_error + "</span>";
-     O.appendRow().appendToCell(-1, "twir_err_stats_desc", Z).appendToCell(-1, "twir_err_stats_value", "")
+     z.appendRow().appendToCell(-1, "twir_err_stats_desc", Z).appendToCell(-1, "twir_err_stats_value", "")
     }
     var T = new west.gui.Checkbox(e.features.window_title, "featBox").setSelected(r.twir_inventory.window_title),
      P = new west.gui.Checkbox(e.features.window_minititle, "featBox").setSelected(r.twir_inventory.window_minititle),
@@ -1482,7 +1482,7 @@
      }).css({
       cursor: "pointer"
      })).append('<br><img class="tw2gui-iconset tw2gui-icon-charclass" src="https://westcz.innogamescdn.com/images/tw2gui/pixel-vfl3z5WfW.gif" style="margin-right: 5px;margin-bottom: 3px;"/><span id="bs_display"></span><br>').append(ge.getMainDiv()).append("<br><hr><br>")).getMainDiv()).append((new west.gui.Groupframe).appendToContentPane($('<div class="twirBSPage" style="height:32px;" />').append(be.getMainDiv())).getMainDiv())),
-     Se = new west.gui.Accordion("twir_stats_feature", e.stats.stats, "twirSearchPage").setContent($('<span class="twirSearchPage" />').append(O.getMainDiv())),
+     Se = new west.gui.Accordion("twir_stats_feature", e.stats.stats, "twirSearchPage").setContent($('<span class="twirSearchPage" />').append(z.getMainDiv())),
      Be = new west.gui.Accordion("twir_features", e.features.preferences, "twirSearchPage").setContent($("<span />").append((new west.gui.Groupframe).appendToContentPane($("<span />").append(re.getMainDiv()).append('<span style="text-align:center;display:block;margin-top:15px;">' + e.translator + '</span><hr><br><div class="twir_text">' + e.features.inventory_menus + " </div><br> ").append(T.getMainDiv().css({
       margin: "2px",
       "min-width": "100px"
@@ -1791,8 +1791,8 @@
       Y = [],
       C = [];
      if (a = a.replace('<span class="text_bold">' + B.name + ":</span>", '<span style="color: #800080 !important;font-weight: bold;max-width: 220px;display: inline-block;">' + B.name + U + "</span>"), !0 === r.twir_popup.partial_bonus) {
-      for (var F = '<td class="twir_partial_bonus" style="vertical-align: middle!important;padding: 1px;max-width:170px;"><div style="color: #8b4513; text-align:center;margin-top:15px;margin-bottom:10px;">' + e.tooltips.partial_items_bonus + ':</div><div style="margin-left: 5px;display: block;padding: 1px;border-collapse: separate !important;border-spacing: 1px !important;border-radius: 3px;border: 1px solid #804000;min-width: 130px;"><span style="border: 1px solid #996b39;border-color: rgba(110, 57, 0, 0.5);background-color: #d4ba91 !important;border-collapse: separate !important;border-spacing: 1px !important;padding: 5px;display: block;" class="text_gray">', G = 0; G < B.items.length + 1; G++) {
-       var E = B.getMergedStages(G);
+      for (var G = '<td class="twir_partial_bonus" style="vertical-align: middle!important;padding: 1px;max-width:170px;"><div style="color: #8b4513; text-align:center;margin-top:15px;margin-bottom:10px;">' + e.tooltips.partial_items_bonus + ':</div><div style="margin-left: 5px;display: block;padding: 1px;border-collapse: separate !important;border-spacing: 1px !important;border-radius: 3px;border: 1px solid #804000;min-width: 130px;"><span style="border: 1px solid #996b39;border-color: rgba(110, 57, 0, 0.5);background-color: #d4ba91 !important;border-collapse: separate !important;border-spacing: 1px !important;padding: 5px;display: block;" class="text_gray">', F = 0; F < B.items.length + 1; F++) {
+       var E = B.getMergedStages(F);
        if (E.sort(function(e, t) {
          var i = function(e, t) {
            return (e.bonus ? e.bonus.type : e.type) == t && (e.bonus ? e.bonus.name : e.name)
@@ -1803,12 +1803,12 @@
           s = i(t, "skill");
          return a && n ? a < n ? -1 : 1 : a ? -1 : n ? 1 : o && s ? 0 : o ? -1 : s ? 1 : 0
         }), null !== E && E.length > 0) {
-        (2 == G && 0 == M && E.length < 16 || 6 == G && 0 == M && 10 == K || G == K && M < K || G == V && M == K && 0 != V) && (F += '<span style="color: #5e321a;"> (' + G + ")&nbsp;" + e.organizing.bonus + ":&nbsp;</span>");
-        for (var Q = 0; Q < E.length; Q++) 2 == G && 0 == M && G != K && E.length < 16 && q.push(j.getDesc(E[Q])), 6 == G && 0 == M && 10 == K && Y.push(j.getDesc(E[Q])), G == K && M < K && R.push(j.getDesc(E[Q])), G == V && M == K && 0 != V && C.push(j.getDesc(E[Q]));
-        0 != q.lenght && 2 == G && 0 == M && E.length < 16 && (F += '<span style="margin-bottom: 15px;display: block;font-style: italic;font-size: 12px;">' + q.join(", <br>") + "</span>"), 0 != Y.lenght && 6 == G && 0 == M && 10 == K && (F += '<span style="margin-bottom: 15px;display: block;font-style: italic;font-size: 12px;">' + Y.join(", <br>") + "</span>"), 0 != R.lenght && G == K && M < K && (F += '<span style="margin-bottom: 5px;display: block;font-style: italic;font-size: 12px;">' + R.join(", <br>") + "</span>"), 0 != C.lenght && G == V && M == K && 0 != V && (F += '<span style="margin-bottom: 5px;display: block;font-style: italic;font-size: 12px;">' + C.join(", <br>") + "</span>")
+        (2 == F && 0 == M && E.length < 16 || 6 == F && 0 == M && 10 == K || F == K && M < K || F == V && M == K && 0 != V) && (G += '<span style="color: #5e321a;"> (' + F + ")&nbsp;" + e.organizing.bonus + ":&nbsp;</span>");
+        for (var Q = 0; Q < E.length; Q++) 2 == F && 0 == M && F != K && E.length < 16 && q.push(j.getDesc(E[Q])), 6 == F && 0 == M && 10 == K && Y.push(j.getDesc(E[Q])), F == K && M < K && R.push(j.getDesc(E[Q])), F == V && M == K && 0 != V && C.push(j.getDesc(E[Q]));
+        0 != q.lenght && 2 == F && 0 == M && E.length < 16 && (G += '<span style="margin-bottom: 15px;display: block;font-style: italic;font-size: 12px;">' + q.join(", <br>") + "</span>"), 0 != Y.lenght && 6 == F && 0 == M && 10 == K && (G += '<span style="margin-bottom: 15px;display: block;font-style: italic;font-size: 12px;">' + Y.join(", <br>") + "</span>"), 0 != R.lenght && F == K && M < K && (G += '<span style="margin-bottom: 5px;display: block;font-style: italic;font-size: 12px;">' + R.join(", <br>") + "</span>"), 0 != C.lenght && F == V && M == K && 0 != V && (G += '<span style="margin-bottom: 5px;display: block;font-style: italic;font-size: 12px;">' + C.join(", <br>") + "</span>")
        }
       }
-      F = (F += "</span></div></td></tr></table>").replace(/\+/g, "").replace(/\s*,\s*/g, ", "), a += F
+      G = (G += "</span></div></td></tr></table>").replace(/\+/g, "").replace(/\s*,\s*/g, ", "), a += G
      }
     }
     return a
@@ -1884,15 +1884,15 @@
     q = 0,
     Y = 0,
     C = 0,
-    F = 0,
     G = 0,
+    F = 0,
     E = 0,
     Q = 0,
     f = 0,
     J = 0,
     v = 0,
-    z = 0,
     O = 0,
+    z = 0,
     H = 0,
     W = 0,
     D = 0,
@@ -1910,12 +1910,12 @@
     ae = 0;
    for (var ne in e) {
     if (e.hasOwnProperty(ne)) var oe = e[ne].obj;
-    switch ("shot" === oe.sub_type ? (v += 1, z += e[ne].count) : "hand" === oe.sub_type && (f += 1, J += e[ne].count), "yield" != oe.type && null != oe.set && (h += 1, S += e[ne].count), "yield" != oe.type && "recipe" != oe.type && e[ne].count > l.item_count && (l = {
+    switch ("shot" === oe.sub_type ? (v += 1, O += e[ne].count) : "hand" === oe.sub_type && (f += 1, J += e[ne].count), "yield" != oe.type && null != oe.set && (h += 1, S += e[ne].count), "yield" != oe.type && "recipe" != oe.type && e[ne].count > l.item_count && (l = {
      item_id: oe.item_base_id,
      item_count: e[ne].count
     }), oe.type) {
      case "belt":
-      k += 1, y += e[ne].count, O += 1, H += e[ne].count;
+      k += 1, y += e[ne].count, z += 1, H += e[ne].count;
       break;
      case "body":
       k += 1, y += e[ne].count, W += 1, D += e[ne].count;
@@ -1955,7 +1955,7 @@
    for (var re = 0; re < i.length; re++) U += 1, j += i[re].count;
    for (var le = 0; le < a.length; le++) "recipe" != a[le].obj.type && (R += 1, q += a[le].count);
    for (var pe = 0; pe < n.length; pe++) Y += 1, C += n[pe].count;
-   for (var ce = 0; ce < s.length; ce++) F += 1, G += s[ce].count;
+   for (var ce = 0; ce < s.length; ce++) G += 1, F += s[ce].count;
    for (var Ae = 0; Ae < r.length; Ae++) E += 1, Q += r[Ae].count;
    return o.count = {
     objects_count: k,
@@ -1974,15 +1974,15 @@
     craft_total_count: q,
     bonus_count: Y,
     bonus_total_count: C,
-    work_count: F,
-    work_total_count: G,
+    work_count: G,
+    work_total_count: F,
     quest_count: E,
     quest_total_count: Q,
     hand_count: f,
     hand_total_count: J,
     shot_count: v,
-    shot_total_count: z,
-    belt_count: O,
+    shot_total_count: O,
+    belt_count: z,
     belt_total_count: H,
     body_count: W,
     body_total_count: D,
@@ -2166,19 +2166,19 @@
       for (var R = x.length > 0 && j.length > 0 ? "<div style=&quot;color: #8b4513;margin-bottom: 10px;&quot;>" + e.tooltips.owned_items_bonus + ":&nbsp;</div>" : "", q = 0; q < j.length; q++) R += x.length > 0 && j.hasOwnProperty(q) ? "<div style=&quot;color: #070;&quot;>" + U.getDesc(j[q]) + "</div>" : "";
       var Y = 0 != r.twir_inventory.sets_counts ? "inline-block" : "none",
        C = 0 != r.twir_inventory.event ? "inline-block" : "none",
-       F = 0 != r.twir_inventory.sets_counts || 0 != r.twir_inventory.event ? "left: 5px" : "right: 20px",
-       G = 0 != r.twir_inventory.sets_counts || 0 != r.twir_inventory.event ? "20px" : "10px",
+       G = 0 != r.twir_inventory.sets_counts || 0 != r.twir_inventory.event ? "left: 5px" : "right: 20px",
+       F = 0 != r.twir_inventory.sets_counts || 0 != r.twir_inventory.event ? "20px" : "10px",
        E = 0 != r.twir_inventory.sets_counts ? g : "",
        Q = 0 != r.twir_inventory.sets_counts ? K : "",
        f = 0 != r.twir_inventory.sets_color ? u : "#5e321a",
        J = 0 != r.twir_inventory.sets_color ? m : "#8b4513",
        v = 0 != r.twir_inventory.empty_opacity ? d : 1,
-       z = 0 != r.twir_inventory.event ? b : "",
-       O = 0 != r.twir_inventory.event ? y : "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+       O = 0 != r.twir_inventory.event ? b : "",
+       z = 0 != r.twir_inventory.event ? y : "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
        H = 0 != r.twir_inventory.sets_counts || 0 != r.twir_inventory.event ? "170px" : "200px",
        W = p.name.replace(/"/g, "&quot;"),
        D = "<span>" + W + "</span>";
-      t.global.SelectMenu.addItem(p.items, '<img title="' + R + '" style="' + F + ";opacity: " + v + ';" src="' + A + '" height="20" width="auto"></img><span style="margin-top: 2px;word-wrap: break-word;max-width: ' + H + ";display: inline-block;padding-left: " + G + "; text-overflow:ellipsis; white-space:nowrap; overflow:hidden;opacity: " + v + ";color: " + f + ';" title="' + D + '">' + W + '</span><span style="float: right;opacity: ' + v + ';"><img style="display: ' + C + ';position: relative;" src="' + O + '" height="20" width="auto"></img><span style="display: ' + C + ';margin-right: 10px;position: relative;color: #8b4513;font-size: 10px;font-style: italic;">' + z + '</span><span title="' + Q + '" style="display: ' + Y + ";margin-top: 2px;color: " + J + ';position: relative;">' + E + "</span></span>")
+      t.global.SelectMenu.addItem(p.items, '<img title="' + R + '" style="' + G + ";opacity: " + v + ';" src="' + A + '" height="20" width="auto"></img><span style="margin-top: 2px;word-wrap: break-word;max-width: ' + H + ";display: inline-block;padding-left: " + F + "; text-overflow:ellipsis; white-space:nowrap; overflow:hidden;opacity: " + v + ";color: " + f + ';" title="' + D + '">' + W + '</span><span style="float: right;opacity: ' + v + ';"><img style="display: ' + C + ';position: relative;" src="' + z + '" height="20" width="auto"></img><span style="display: ' + C + ';margin-right: 10px;position: relative;color: #8b4513;font-size: 10px;font-style: italic;">' + O + '</span><span title="' + Q + '" style="display: ' + Y + ";margin-top: 2px;color: " + J + ';position: relative;">' + E + "</span></span>")
      }
     }
     var Z = west.storage.ItemSetManager.getAll().length;
