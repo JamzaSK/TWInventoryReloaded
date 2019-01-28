@@ -10,11 +10,9 @@
 // @include	http*://*.the-west.*/game.php*
 // @include	http*://*.the-west.*.*/game.php*
 // @exclude https://classic.the-west.net*
-// @version 2.140
+// @version 2.141
 // @license GPL-3.0
 // @icon https://jamzask.github.io/TWInventoryReloaded/TWinventoryreloaded.ico
-// @downloadURL  https://jamzask.github.io/TWInventoryReloaded/code.user.js
-// @updateURL    http://greasyfork.org/scripts/373294-tw-inventory-reloaded/code/TW%20Inventory%20Reloaded.user.js
 // @grant none
 // @nocompat Chrome
 // ==/UserScript==
@@ -52,7 +50,7 @@
  var t = document.createElement("script");
  t.setAttribute("type", "application/javascript"), t.textContent = "(" + function() {
   var e, t = {
-   version: "2.140",
+   version: "2.141",
    revision: "5",
    name: "TW Inventory Reloaded",
    author: "Jamza",
@@ -64,6 +62,7 @@
    updateAds: "http://festyy.com/wJMk7P",
    setsURL: "https://west-tools.alwaysdata.net/script/files/sets.json",
    images: {
+    market_watcher: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4wEaFgUwHcVG7AAAE+xJREFUWMNtmGmMXOeVnp+71Hpr766qrt6X6mYvJJuruFMitVsbBY3I0Vj2WCMNDEwGAYIBjCxAIGSC/AkSBIYxyMTOyDNjezyOHEuiJNomtZGyKIp7s9ls9t5d3V3VtVfd2u+WH5IMJ8gBPpwf5wPOA7wHBziv8NSxY0JiPcPU8qwF4ADB67Lh9folxe3p9AVD/8JyyN8sFIsxr6ddtNlFPB4nLqeNRq1CanOLZDJFRa0xPjZASzexOzxL23fueezH//DGEl/Fg488JIz2DFh/+8Yb1uMPnxQAfvPBh9bXddM0BVEULV3XBVmWrfPnz9uuXr26U+j0KMJmpfr7j5Ojg4JDsjl03eypqNVX1Vr9parR6jYtS3zwyHH8fi8Op4ihN3DZHXjcCvW6Rnory9rGMo2WjscbWhwd3/nU3/34fy4D1lfP/CrzdT516lnhrbfe+X3vP4xEIiG8/fbbkvyHcABut1tsVuuHQHwlGAw+4g0EozavW4xEoyzMzHL02CG2j48giCY2ScSr+NjY2EQt5HE6nZi0cDqdQYfDcUhRlFK1WtUBDWh9lQ1AACxFUf5/bFiWJRqGwfj4uCH+YeHxk0+Idd02lqnp/7IhSaeydbUjlU2KB3du5/t//R/4xQ//Pfb6Cr/6h+/T7jSxaiXqhQyFVBLJ0qipJTZWV1hdWPLX1cpfPP3EM2eOH3tw/6FDB4bCkfag2+VyANLX/fzBgDA3P2f/fwEFQTAlSbJ2796NAPDg4QOiz+ez6nUzmCsW/vX6ZuJVSRKCbaGA0Ob3M9jdS29XJ6ODbhqNFnMLi0xNzXDi5GPcuj1NsVDGFESWEys4nApDg+MIot2YnV8ohdqDpR27JtYardqUXm7cvr+w8N6Vm7czX0nO2XfPCidPnBRcLpcpiuL/peb6+rooPHzkULTZbGZ9Pp+Z3CocEGXhR063eyzSERYH+ntx2x0sz80zf2+WfTuj7JjcjcPh4p2z75HJFnC5FGJdPTSbGtt37aBareNwegkE22i1NG7dmbJWVpaNWFdHS2hZpeRW6m82cvkfrK2tV/9gLq3bt2/bZmdnjTNnzhhfA166dEmUhnp6hizTSrtdLptNlk47nY5n+ocGnP0DAwSCIRSXC7vNTiQaZfH+NF6Pn/XNFGur66QzWYJtYVS1iuLxkMlvsXfPXo4dO0Jfbxe6ruFy2ASv4hJn7tyxSZJNyWQzbUjStXyhWPpqFgUAm2wzDh85LMViMS5dugTAG2+8YUlj8bhTlmXV6/X2Fgr5v3I47CNj42OCx+enXq8jShJ2m4NwewQZnZ/+9E3KahmbzYnb4yXa0cnY+DiVeg2vz0WlUqZZqxBuD6CWC0Ta2zh68BBL8ws0dVNIZzJm0zCvlctqGbABgsfjYW1tzbp+/brpcrm4ceMGX4NLg11ddsu0DKfTGcmlt15xK0pkx+RO7A47zZZGMNBGo9EkmyuiyAIer5dyuUJ7NMreffuJRqOsJBKcOfPHvPbqt2k2qvyvN39OvabyxKOPEG4LkUtn8bgU7i+tkNracshOh25aVqrZbEqAYFmWoWmaoeu6+cEHH5inT58WJiYmhLt37yKbuq6ZpukSLSs3MTG2uZXNbSsU8hKyTFmt4vX6EWU7be3tzN+YY2F+GafixuX08JOf/JSu3h4KhQK6YSBQZ8+eXVjmS5x9+y1+9+mHTO7Yw/y9GWTJia7raJpmt4nCgWhH9GapVHYBNk3TDE3TWpVKRQOE7u5uYXBw0GaaZkuaHB2VC5VKxRLFptthi87O3d8ZicWUzu5uQZRkWi2DXDaHR/Eiag2m793jmWeexRIsunv7GBwc4Njx4xSLRd5+601WV5d57bXvgGVw6ZOLRNvCGC0Trakxu7xGLp/D4/fb9x94IL+4uFQFTLvd3hQEoW6aZgswLl++bL3//vvGzMwM0kh3+7GReH8ut5VojwYDqsNhy92bmR9RlKDXq/gEpyBgNlQcaNz9/DqTuya59MUXVIGnXnyJqi6CpNDZE6dNcfLZJ59Rzas8fOQhLn34MXrLIBqLUlKLLOe2WF1fYWJ02Ga0GtEj+/fbn3z04eCDh49EJUEoNlqtgs/rNVRV/f26kQ7uGj83Nzezy+/3nlxZmneolfq81++vlCuleKGQd9dqZfRWg1s3vkBxuTBEAbVep3coTku3sMlOAr4QG5tbbB/pYzWxhk0W2b1rFxvrSe4vLBCOxEilc0wvrFIt1+jvHxRCgaAyPDTU7/f5do5v27Z3YmxbfNvYmBqLdWSTyWSj/CWkID3/5Invd3d3jp4+/eKY0WyO54t5NZnaGBJEmstL82GtVZUbNRW324HT6SJXLpIvlTl49Chul496w6BW13C5vVTLKUpllatXruB0OQmHoyytrRFq7yCTK1BQDSwNvIoPQ9MFt8spJzc37Gop79Za9d6xifF9oiR1jAzH14ulUnkrnbakgJPXI5Gw1N3dLfs8Tl+hWIjbZLEhi4hDA30dzXpVLpUKGIbOvYX7SDYbmVwOj8dPd3c/jXqLUqFEZ2cvNqFBuVwitZlkOD5MtV5jZXUdl9dHsayyuV7AYXfQ3dmFLIlgGnjcDlZXFwm3BaQbt+4E+rq7RiZ3Te46fvSoMj66TZf27xh9fWVlhc8++wyP2ylEI2H3xNi2yPtn3+2Y3DFhb7WagigIzC8skslXiMcHCPoCLM0v4fd4iUQidMRiqOUi9UqO6TtTOG0y28fHuHDhPPl8Ad20EAQRQ5fwKW68XicbiRWW5u+xd88klVKRbzz5OC6PTzh29IgznUp257KZw/GhwePSqccffR0E0uksma0k8cFBwdJbcjKxJm+urwmRSJTllXVcioeh4SGMlkY4FKJaLJNNb9FqVAn43Ezfvcn9mSnaggGyqXXmZqcxmk1Gx0a4fu06ggWWZdBsqmA0MfQm4fYQLzx/inq9ymBfH9t3TrKytCjcmbojVaoV5/zcbFTySNLrbreX9nCY+dl7VMsV9EaTQw/s597MPRRvgNvTC/T29RMMBFmeX8RsagR9CoXsFhuJZTY2VygWtwh5/fT3dpHdWqeYTbN/926i0TC3btzE5XSgmzXC4QC7dk7w6CMneO7ZpxgdjqM1m+SyWeaXFllPrNHR0cGO7Tu4c/u2IPz5Cy9Ym5vrdHZ2YjSLfHLhI558/EHQNeYXF0hmSwSjPXT1D7KwMIfH6UI2LXpiHeh6i7rZZDW5Tv/wAA7Zz3tv/4bhgXa+8djDVNQSd2dmcbgVenr72XNoF709PQT8IXRNo6bWuHnjNt1dXViWxc9++b/p6enh888/JxBqp7OrB3lwqIuOcICuji4Ep4Rp2VhPZREMk3JFRG+KtKp1JK1FbHgbsuijqztOtVZGbG3R3Jinls0hh2JIoXUemtyJmsvhaq4QCXnoP/AUDz38ON5ojmxTQDYbJOev8cnlm/SP72czm2NrY43nH38Iu3uA2cQWy6USo91DXLi1iqw1y3RE21mYn8Hb28HwrgnMlka7P8gPfvADukfjBMPtnP/0Ek8//yIeJUyz2aDNr1ApSfT3drI6PcXm+io7uyIcefwEfsVLfESiv3+QfDZIsVZDq6qoTSfF1AYOJOx2O3du3yIS6+LihYvsGe8n0h4jYgvxjWefRq3qpLNNZLukYekq2ycGmK+U8AX9yAisJTYJdkapGjofnfuIvQd2UqsUccoK1UKDYlrFr7ToiAX45kun6esc4MDhPko5O4VskWqjQLmuUafOSnKRpevXufDxLFsr93n20eOEY90sbS5RKKtoWpP42Ag///V5LJtGtrhF79AYAz1xpP/4vVdf17UWwTY/NsXNh+d/y4X3f03A42VkeJRiqcTBg/tZXlnD6ZAxNItoJIJRL/PIQw8Q8Ng5sHcf/b0D6JrKRmITEwtdFPjVu7/hl+++g91r5/bMFOkMCIbOgX27GYrHSWVzfPrZ5wRDPmyywOkz30GSW1y7cZnllSXKZRW5MxbF4/OSK5VIXryCoJb41qlT1Osa20YneOzBR7kzO49Zt9DtGrVynXpFxekQGY73I1sNBFMmlckiWjXK9QK/euccuZJOIplCchm8+pevsJlOcvnqNF0+BVm2k9pMUqlUeO65U7SFvKytLKB/+g55NcNrr75AJl9l/4GTiKG2MBMPHOTmnRk++PVZvvtn32YsPkBHKMTd21P83Q9/xMcXPiSdylDTTExRIlcsYBgGN25cp9Fqcu78Bc5/fIm//Ff/hmBnGz0jA2TLINjaqDc1Ws0a1ZJJONYJkojL5cI0TaZu3WFoeIxcvorDHWRpfgqtUUJvqMT7uxgd7kdU/O0kE0kufHKJH//T39PeFaZ/fIiGoHNl6ia6TUZQ3JQ0nYW1BNWmjs8fpKm1WFhaIlss8vZ75/jh3/8cQ3BjU1yUmg3uLm9QLFt0dkaRBJH1xSTYBNRqmWpVxedxYxgGmXSeegMGBiZILG2STRa4cO4TkusFZqcWkH/205/zz2ff4Zt/+mf0Tm6jV4OPfnuJN8+dJRobwpLtxEfG8OVLfHrldyysrCJrJlNffMTzzx4l0hFjYHiEdO4uVd3k7vx9FL8PCS9FtYksO/EpHmyWk1wugyKYrK2tUCrkkJCYnp4l2tHFJxev8NjJZ8iVc7Sw+Pj8Zb74bAFZCUWQJSerc6tc+e1FJncf5B//6T0eOPEiW+kKbl+ITK6Oyx7kwPbDvPuLf0Z3u2h3QiTgYHltmd/dnCFZFYgpIj2mkzsrGwRGOxEEiUEvlGZWSKoVSK0huqG3ewxNF3jqyR6WUxkaiCSbGvnqPTp7+kFy8/yLT9M30I+YTCbx+4OcOHGCfKHMf/4v/416Q8dCxBS+vOsLhQKBUIjNxAoCFm63G8XrRvH4uXlrmkSygtPlo6FbRLoHKap1EnP3qRdzTO4cJ5tOk0+u8L3vfZenn3uKX/7qTWbuz9AebSMQVNg23E9XZ4RCtkR3dw/T09OEQiEwDcSZu7PE43FaLY0nz3yLja08jZZBYj2FppuYBiiKQjK5iWw2aPO7qVXK5As1QpEomimwd98kf/M/fsT49klWMjVu3V0kqNiIuARqVZV8NsV//69/DaLFYHyQb37nZdR6mXqrTKGYZv7+HWiViXX0srK8Tnd3H5VSmVpFRb569SoDhThtbe0UShmyuTLt4X7qmg0LkeWVRUbicRKri9TVLH6PA02rIwgQ6+zm6vR9isUi2XSG03/yLTKVHJbTz+HxIeJdERpNjXNvfcTRosq+J57AMAwsQcDtd1GuF4kP92EIAn39HTRTa2RzZfLFCoWCitenIB88eAhRtpPc3GJzM0EpXybULlDI5Ih19+Fx2mlUCzRqJZq1Ag6bnYpaBOvLw7VZrVArZPjo/bc5ePwIvX3j/NW/+08Ul6aQ9ArxeJzOrh4GOwO8c/UqliBy8eJFXvijP6JWq6E3NAYGhvB5vGQNnfvzC1iyHUu0kUrnkRrFzOsDg4NEozG2j41y88ZtPEqARGKDgM+H3+3i2uVPqJZySEYVmyjSrNXweSSOH92PXYSDex/gwO59rGYKTC1vEfQF6HXr9MXaSJRa/O7GLS6ce5NcU0KU7Rx98CH6Bwfo6e9BLZXpCLdhNOoEY50sr28SaI/iD4atL65d14XBkM0yEfF4PIzFe7l56y4HjzxCvWWxsZlCFAzm7k0RCnjRNZW+WA9d0SgT23rZvWuQpcV5tg3vQRIC3KxIXF4qEpJM2rc+p1LY4sPFIppocqjPjj08Qqyrk4PHDvHuu2d5YP9umuUyRq2Gmi9i7+zGrfj4za8/tMbGdhTm7t1bkB46sO/1aq2Gqlapl7LUG002NjaxyQ5uTN20rEbN2hYfoKJmBVkw6OnuZff2nezbNU5qfZ7p29fpjXbSqjZw9Y/Tu+MohXSKS7/4W1IbCaKTR4n1x3HqOVp4eOW1P+fe3BwT28epN+rYRYlWrcrIUJySKIAk4VD82rVrt6cXlhM3pbE+3791261WNOTRLLtXcymKLgimmUomdK9Lrvb0dhbtDpteqze1UDjessmIc3OXxWJxXVAC7cQnH2Wp4KXhGcE2EKTTZ9EqbJG1/FiRCWqVMlJ5mXhXiD/51ksszN6mqRZxSQKRQAhZ/FL2umaxkdzA43YTCvi0VHpzbmFxLS/bnY4PMMxVC7Phd3ltuVzO5/H5/cG2NtRqrZIuFpt2myyLTruQLqaQBGXEaLH98hd3XcmsLnjDNQbHDjG8c4yl6jr+WBcvv/wyiwvrXP7iJnduXuG1M48wvr0LtWHRMGRalkzTlGkYArpgQ3QoiILMyMAQhUoFzWqJPp/P2Wg2LLnR1L6natbWykZByZU2e3RNGxFFsce0TF9L022maQl87TVZUG1Urx7ZOepdmFsZSaRN6bmThznz6neZnl8g5AsQCYdpC/n49rdfZi2VplIZweZS8AUj5MsVGrqJKcpoFjQNExMB0e7AZrPhsWTSyTRKqE2KRqMeWZYsuVxvLH50ZdGQJVE0TKsB1MCqWRY2QP/SkQXL/NJoVOuaVVBbpfauMfPQsSekU3/8Co5gkFv3Z3jx+Wfwul0YhsXeveM89czT+ANuSrUtSnWNWj2Jqes4ZBlZr0PDAkv/0pc2ZEqVFrqmYbfbW7lCIVlWa4LosDt27djWbbMsywCrIQhUBEHIS5KQcTmkjMspp+02KS0IbNlkcWvf5Ii0mFjv8rfH5D/97l/gC0f5x5/8jEg0SiwcxuVwI4kCuWKFo8eP4QuG0BFJ5cu0cklsjTJeGnisOg6thL1ZRKxmMYobqKqKzWajWq8Zi8srDUEU+D8mJLOmq1obHAAAAABJRU5ErkJggg==",
     upgradeicon: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAMCAYAAAC9QufkAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAgFJREFUeNqUUUtoE2EQnuxuu6murRpEsdHUtNZaLy2ih/hAKj5qBW3pA6SeFA/FFhR8XDxUDR6MiAiCYg8q+KjiwaMoFQ+exFNBq5hCkwa7TbfBbJLdzW4+55f2IgF14JufeXz/MPNJVN4q2aJ9PdtmNK3yNsdL6D/s7IXzfTYwiOvDqzyOhxnKvxCP9/cfNO3cIIp6CDCbcPpUwOL80N+Ih9oPRPSscQ7ebAPyU0G4ej0soxm9nTUm13vLkcRO+1pbt3xNpS4CmWY4qSCQDsOa3sBvA4zUZuzZqSW578jiDWTG1qZN6x9GdrQM3b21e23dmjHyCmmampbpzbsCrQsqJEsgrQrUtitQnZwJHEbJ3Zues8bFBwOvnvcAOInSbAtPrIX9I4yBEzVQVZ89OrIamA8jn6hDSW/kvv24GQ1B8CR2kpWLE5lj5NhzVKGqNPrSpEfPsgnbxpnLsfmJybhLfr9ERdchT/9C8UlDDJUEGb9VkPykVin08ZNNV29kKGuWYly7M/7ZiV66Zjj5AkhRJJIVXkMWNILwsqoWmexRMuHRlViGJr47Tzh/f+GYTx+/MEfuPfhJrkvkOEQeaPFe1N3VoRWOdS1DZLsfiuL7wLmNf6hRu3KF/LqzQ8PR9qVorK8Qunf72C1ntDGCjBzjPeNbGTlDC33VDCHZ218CDACj79t/Wk/bQQAAAABJRU5ErkJggg==",
     none: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4goBFSoBZ9XyyAAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAABwUlEQVQ4y82TT2sTURTFf+O/ZPGSIenYTRqpWLUUwVJhtCQYiYsggis3Lo0bP4FkYTapiyKC4KLQxbR0n267EkFqUAtiFjWkTqWxSUasMyljKqYgxNV7jIkfoHd13z2cc+89lwdHKspZM//4yrl+OWvmB7HF3GxpPjXVX3jx6FawfixIrvqedfHSJFXfs4Ii5ayZt53dYiwewVlZXbt/744psRMyqfqeZWbSnJqMo48YbLx+Y5WzpsIuz0wDIDpdEp8/vQe0fyYQ4RC+56rRzEyadz/alhSW4f70EeGQemvBfeZTU/3ExFnETJLjX3+ruhTe2qwjwiEKlZo25AGAe/OG2Nqss/fyoyJ+s+sAtLd3EOEQ31NXT/7XRIBnpYVfSWN0rum4JI1Iv729w36nq0aPCX3u+dPlP0GONniqprtXNDNp1Rlgv9MlFo/QdFym9ZEHd19tLA0JLOZmS7azWzw/PqYIsrvMY/EIdqPFtdMJJaJWGCTbjRYAB71DVQMwojpV37OGPDCiOnajpchGVKdQqWlPPnzRDnqHNB1XeTE2Pro+JFCo1DQpIskS693OCQC70WLiwpn1h6tvrx+dD/gXKc7ErG+37IwAAAAASUVORK5CYII=",
     menuicon: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4wEOFwUNmxSgAgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAADh0lEQVQ4y62Uy28bVRTGf+PM2POwnbh5OU4cJymYWDShTdNGasUCKhoo6oZuQGFZIfGP8BfAhk3FAqkLWBQUUR6qqESFaJW0VdqQ0KCkTYwTv8Yej+3xI74sTCaENllxNlc6557vfOfc7x6JI+zyuxMiqHqJBUMAPLVMLKfOt/NL0mE50mFAs+OjxOKTL0xaXV7k9trmC4Gfc8xdOS3ev/gOAPWS6fq9gRD1kok3EHJjC49X+eTaT9KhgB9/OCsuvX4GgKKZP1BIkyWqTYEmS24BgOs/fMeXXy9IzwHOXTktEiMT3Ph5kcauAASqohDQFc6fihPvN7h28z45yyGoezke7efCTIKArvL5Nzfc9j0AU2cHxamhfoJ+jfhwL12GAkhEevzIioIiyySzJTLFKuGQDyFaLKw849Prt8gVbV6LHmciMSRcwEQ0THhghMGAh/fOj6OrProMH3MXJrn69knGwwaZQgWANyYjXL08w5snR6nUGszffkDYaDEy1h6BByCo9bgzKtdbbOdt+roMd1beQIh0wQagy1BoVnNMjQ+heWWKlRqGobqz9gCElF2qTUGjkqVYrtISYOg+crbjXsxaVToNLwBOS+fWwhOq9SbxwTazoNqOyQBmo4NGJUu57JAulQCI9gbp9quuVDIFm1qjxWfzq/+UEEy9HGE6MYyo7StC/q8OTbsOQHdAc6WRS29Ta7RQFRmn0QQg0tPJ2UQUUctTLjsEtZ59wG6/Rs4sk7LqPPmrCMDdlSRL6zuce3WYbLEMwMXpMfzeBg82Siw/zfLFzQUuTYWp1ppsmTv7gL+s/knEH2B5s+QyfbyRRpE7GI0cI5vdQVU8SE0LXdc491KAkCa4t5YnX6qjeT0kM/mDwv7og7fE9IlXKKbWwdOi81gEy0wRDA1gmSlUWcZptttVZZmGHEBptgl8v7LOj3eWcApInj3Ah2spnm1uMTAUQ5IkLDNFoebFMlN0qCEacuBf/7oXQ1MxDJVfN5IkM3mcQpuc+yi/3XskaX5JAISNNptWzSYYjlGuOuw6+4tCV30A3Hm0xe+b2yzeTR6+bWbOnBB9fRKz46MAxOKTrC4vui3vnfe3dlh7VuPh0gaOY0uHyiaTLlKxBV9VIDEYwW7+gWXV8fi85OxdtsxN0mlBxS5Qrkjouobj2Ecv2D0bi0WFoYsDvmLFxmori0KhcGT+/2J/A/BBfU+UOKlQAAAAAElFTkSuQmCC",
@@ -159,10 +158,16 @@
       jobdrop: "Droppable from job",
       not_auctionable: "Not auctionable",
       upgradeable: "Upgradeable",
-      craftable: "Can be crafted",
+      craftable: "Craftable",
       missing_items: "Missing Items",
       owned_items_bonus: "Bonus (owned)",
-      partial_items_bonus: "Partial Set bonus"
+      partial_items_bonus: "Partial Set bonus",
+      market_price: "Market price",
+      suggested_price: "Suggested price",
+      minimal_price: "Min",
+      maximal_price: "Max",
+      listings: "listings",
+      items: "items"
      },
      organizing: {
       invert_text: "Show/Hide different items based on a filter selected",
@@ -187,8 +192,8 @@
       sort_up: "Ascending",
       sort_down: "Descending",
       sort_ab: "Item name",
-      sort_buyprice: "Buy price",
-      sort_sellprice: "Sell price",
+      sort_buyprice: "Price (buy)",
+      sort_sellprice: "Price (sell)",
       sort_id: "Item ID",
       sort_reqlvl: "Level (required)",
       sort_upglvl: "Level (upgrade)",
@@ -196,6 +201,7 @@
       sort_maxdamage: "Damage (max)",
       sort_quantity: "Stack size",
       sort_setname: "Set name",
+      sort_marketprice: "Price (market)",
       value: "Value"
      },
      stats: {
@@ -232,7 +238,17 @@
       shot: "Firearms",
       hand: "Melee weapons",
       set_menu_error: "Open Item Sets list first to calculate",
-      shiftinfo: "Press [Shift] to show more info"
+      shiftinfo: "Press [Shift] to show more info",
+      average: "Average"
+     },
+     market_watcher: {
+      add_name: "TWIR Market Watcher",
+      progress_msg: "searching for new listings",
+      checked: "checked",
+      checking: "checking",
+      price_update: "All market prices have been updated",
+      new_found: "Found $1 new listings!",
+      finished_msg: "Now you can reload TW. Next search in $1 hours."
      },
      features: {
       preferences: "Preferences",
@@ -250,7 +266,9 @@
       item_crafting: "item crafting",
       recipe_name: "recipe name",
       short_currency: "short currency format",
-      partial_bonus: "partial bonus"
+      partial_bonus: "partial bonus",
+      market_watcher: "market watcher",
+      set_pieces: "set pieces"
      },
      informative: {
       error404: "No items of this type found",
@@ -258,7 +276,13 @@
       sucess: "Successfully changed",
       bs_limit: "The limit is 5 skills",
       storage_error: "Local Storage is not allowed",
-      no_sets: "You don't own any set"
+      no_sets: "You don't own any set",
+      years: "$1 years ago",
+      months: "$1 months ago",
+      days: "$1 days ago",
+      hours: "$1 hours ago",
+      minutes: "$1 minutes ago",
+      seconds: "$1 seconds ago"
      }
     },
     cs: {
@@ -324,7 +348,13 @@
       craftable: "Lze vyrobit",
       missing_items: "Chybějící předměty",
       owned_items_bonus: "Bonus (vlastněné)",
-      partial_items_bonus: "Částkový bonus setu"
+      partial_items_bonus: "Částkový bonus setu",
+      market_price: "Tržní cena",
+      suggested_price: "Doporučená cena",
+      minimal_price: "Min",
+      maximal_price: "Max",
+      listings: "nabídek",
+      items: "předmětů"
      },
      organizing: {
       invert_text: "Zobrazit / Skrýt předměty podle vybraného filtru",
@@ -358,6 +388,7 @@
       sort_maxdamage: "Poškození (max)",
       sort_quantity: "Množství",
       sort_setname: "Jméno soupravy",
+      sort_marketprice: "Cena (tržní)",
       value: "Hodnota"
      },
      stats: {
@@ -394,7 +425,17 @@
       shot: "Střelní zbraně",
       hand: "Ruční zbraně",
       set_menu_error: "Pro přesnou kalkulaci otevři seznam souprav",
-      shiftinfo: "Stlač [Shift] pro více informací"
+      shiftinfo: "Stlač [Shift] pro více informací",
+      average: "Průměr"
+     },
+     market_watcher: {
+      add_name: "TWIR Market Watcher",
+      progress_msg: "hledání nových nabídek",
+      checked: "zkontrolováno",
+      checking: "kontroluji",
+      price_update: "Tržní ceny byly aktualizovány",
+      new_found: "Nalezeno $1 nových nabídek!",
+      finished_msg: "Nyní můžeš obnovit okno TW. Další hledání za $1 hodin."
      },
      features: {
       preferences: "Preference",
@@ -412,7 +453,9 @@
       item_crafting: "způsob výroby",
       recipe_name: "jméno receptu",
       short_currency: "krátký formát měny",
-      partial_bonus: "částkový bonus"
+      partial_bonus: "částkový bonus",
+      market_watcher: "sledování trhu",
+      set_pieces: "části soupravy"
      },
      informative: {
       error404: "Nebyly nalezeny žádné položky tohoto typu",
@@ -420,7 +463,13 @@
       sucess: "Úspěšně změněno",
       bs_limit: "Limit je 5 schopností",
       storage_error: "Local Storage není povolen",
-      no_sets: "Nevlastníš zádnou sadu"
+      no_sets: "Nevlastníš zádnou sadu",
+      years: "před $1 roky",
+      months: "před $1 měsíci",
+      days: "před $1 dny",
+      hours: "před $1 hodinami",
+      minutes: "před $1 minutami",
+      seconds: "před $1 sekundami"
      }
     },
     sk: {
@@ -486,7 +535,13 @@
       craftable: "Môže byť vyrobené",
       missing_items: "Chýbajúce predmety",
       owned_items_bonus: "Bonus (vlastnené)",
-      partial_items_bonus: "Čiastkový bonus setu"
+      partial_items_bonus: "Čiastkový bonus setu",
+      market_price: "Trhová cena",
+      suggested_price: "Odporúčaná cena",
+      minimal_price: "Min",
+      maximal_price: "Max",
+      listings: "ponúk",
+      items: "predmetov"
      },
      organizing: {
       invert_text: "Zobraziť/Skryť predmety podľa vybraného filtera",
@@ -520,6 +575,7 @@
       sort_maxdamage: "Poškodenie (max)",
       sort_quantity: "Množstvo",
       sort_setname: "Meno súpravy",
+      sort_marketprice: "Cena (trhová)",
       value: "Hodnota"
      },
      stats: {
@@ -556,7 +612,17 @@
       shot: "Strelné zbrane",
       hand: "Ručné zbrane",
       set_menu_error: "Pre kalkuláciu otvor zoznam súprav",
-      shiftinfo: "Stlač [Shift] pre viac informácií"
+      shiftinfo: "Stlač [Shift] pre viac informácií",
+      average: "Priemer"
+     },
+     market_watcher: {
+      add_name: "TWIR Market Watcher",
+      progress_msg: "hľadanie nových ponúk",
+      checked: "skontrolované",
+      checking: "kontrolujem",
+      price_update: "Trhové ceny boli aktulizované",
+      new_found: "Nájdených $1 nových ponúk!",
+      finished_msg: "Teraz môžeš obnoviť okno TW. Ďalšie hľadanie za $1 hodín."
      },
      features: {
       preferences: "Preferencie",
@@ -574,7 +640,9 @@
       item_crafting: "spôsob výroby",
       recipe_name: "meno receptu",
       short_currency: "krátky formát meny",
-      partial_bonus: "čiastkový bonus"
+      partial_bonus: "čiastkový bonus",
+      market_watcher: "sledovanie trhu",
+      set_pieces: "časti súpravy"
      },
      informative: {
       error404: "Neboli nájdené žiadne položky tohto typu",
@@ -582,7 +650,13 @@
       sucess: "Úspešne zmenené",
       bs_limit: "Limit je 5 schopností",
       storage_error: "Local Storage nie je povolený",
-      no_sets: "Nevlastníš žiadnu súpravu"
+      no_sets: "Nevlastníš žiadnu súpravu",
+      years: "pred $1 rokmi",
+      months: "pred $1 mesiacmi",
+      days: "pred $1 dňami",
+      hours: "pred $1 hodinami",
+      minutes: "pred $1 minútami",
+      seconds: "pred $1 sekundami"
      }
     },
     pl: {
@@ -593,7 +667,7 @@
      script_version: "Wersja",
      script_revision: "Zmiany",
      changes: "Co nowego?",
-     translator: "Przetłumacz: TWIR",
+     translator: "Przetłumacz: Wojcieszy",
      language: "Język",
      download: "Pobierz",
      no_ads: "Bez reklam",
@@ -648,7 +722,13 @@
       craftable: "Może być stworzony",
       missing_items: "Brakujący przedmiot",
       owned_items_bonus: "Bonus (własny)",
-      partial_items_bonus: "Bonus setowy"
+      partial_items_bonus: "Bonus setowy",
+      market_price: "Market price",
+      suggested_price: "Suggested price",
+      minimal_price: "Min",
+      maximal_price: "Max",
+      listings: "listings",
+      items: "items"
      },
      organizing: {
       invert_text: "Pokaż/Ukryj przedmioty pasujące do filtra",
@@ -682,6 +762,7 @@
       sort_maxdamage: "Max. obrażeń",
       sort_quantity: "Ilości przedmiotów",
       sort_setname: "Nazwy zestawu",
+      sort_marketprice: "Market price",
       value: "Wartości"
      },
      stats: {
@@ -720,6 +801,15 @@
       set_menu_error: "Najpierw otwórz Przedmioty z Zestawów, by je policzyć",
       shiftinfo: "Naciśnij [Shift] by pokazać więcej"
      },
+     market_watcher: {
+      add_name: "TWIR Market Watcher",
+      progress_msg: "searching for new listings",
+      checked: "checked",
+      checking: "checking",
+      price_update: "All market prices have been updated",
+      new_found: "Found $1 new listings!",
+      finished_msg: "Now you can reload TW. Next search in $1 hours."
+     },
      features: {
       preferences: "Preferencje",
       inventory_menus: "Ekwipunek / Menu",
@@ -736,7 +826,9 @@
       item_crafting: "Przedmiot z rzemiosła",
       recipe_name: "Nazwa przepisu",
       short_currency: "Skrócona wersja",
-      partial_bonus: "Premia całkowita zestawu"
+      partial_bonus: "Premia całkowita zestawu",
+      market_watcher: "market watcher",
+      set_pieces: "set pieces"
      },
      informative: {
       error404: "Nie znaleziono przedmiotu tego typu",
@@ -744,7 +836,13 @@
       sucess: "Zmiany zapisane.",
       bs_limit: "Limit to 5 umiejętności.",
       storage_error: "Pamięć wewnętrzna (ciasteczka) jest zablokowana!",
-      no_sets: "Nie masz żadnego zestawu"
+      no_sets: "Nie masz żadnego zestawu",
+      years: "$1 years ago",
+      months: "$1 months ago",
+      days: "$1 days ago",
+      hours: "$1 hours ago",
+      minutes: "$1 minutes ago",
+      seconds: "$1 seconds ago"
      }
     }
    },
@@ -758,15 +856,19 @@
    a = (new west.gui.Scrollpane).appendContent('<span style="display: block;margin-left: auto;margin-right: auto;width: 500px;"><img src="https://jamzask.github.io/TWInventoryReloaded/menu/twir_biglogo.png"></img></span><br><span class="twir_text" style="margin-left: 55px;">' + e.donate_title + '</span><br><span style="text-align: center;font-family: comic sans ms;margin-left: auto;margin-right: auto;width: 500px;display: block;font-size: 15px;"><form target="_blank" action="https://www.paypal.com/cgi-bin/webscr method="post"><input type="hidden" name="cmd" value="_s-xclick"><input type="hidden" name="hosted_button_id" value="TE95VRHUPXCUW"><input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!"><img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1"></form></span><br><span style="display: block;margin-left: 55px;"><span class="twir_text">credits:</span> Tom Robert, Thathanka Iyothanka<br><span class="twir_text">translators</span> - Wojcieszy (pl)<br><br></span><span style="text-align:center;display:block;font-size:15px;">' + e.tyty + "!</span>");
   i.setGui(a.getMainDiv()), $(document).keydown(function(e) {
    e.which
-  }), Inventory.uid = "inventory", Inventory.size = 99999, Inventory.sizeSearch = 99999, Inventory.sizeCustom = 66, Inventory.width = 608, Inventory.availableCategories = ["new", "head", "neck", "body", "pants", "belt", "foot", "right_arm", "left_arm", "animal"], Inventory.defaultCategory = "new", Inventory.latestSize = 66, Inventory.context = null, $('<style type="text/css">.twir_text{color:#5e321a;font-size:115%;font-weight:700;font-style:italic;display:inline-block;text-shadow:2px 1px 2px #dba901;position:relative}#CC_pin_items{float:left!important;position:relative!important;display:inline-block!important}.twir_filterDesign li:hover{border-bottom:1px solid #8a7e6800!important;background-position:0 -26px!important}.twir_filterDesign{-o-text-overflow:ellipsis;text-overflow:ellipsis;white-space:nowrap;overflow:hidden;left:5px}@-webkit-keyframes fadeIn{0%{opacity:0}100%{opacity:1}}@keyframes fadeIn{0%{opacity:0}100%{opacity:1}}.instant_wear_container{z-index:9999;bottom:0px!important;left:485px!important}.search_container{z-index:999!important;position:absolute!important;width:210px;height:49px;top:14px!important;left:unset!important;right:29px!important}.upgrade_items .textart_title{color:#ffe7b100!important;margin-left:0px!important;margin-right:0px!important;}.inventory .actions .upgrade_items{float:left!important;min-width:16px!important;width:16px!important;z-index:999!important;position:relative!important;display:inline-block!important}#bag .item.item_inventory{margin-bottom:0px!important;width:60px!important;height:58px!important}#twir_menu:hover{background:url(' + t.images.menuiconhover + ")!important}.tw2gui_window_buttons{width:auto!important}#windows .inventory{width:740px!important}#windows .inventory .filters{display:inline-block!important;height:40px!important;width:auto!important;position:absolute!important;left:4px!important;top:40px!important;margin-bottom:16px!important;border-radius:3px!important;-webkit-box-shadow:0 0 20px inset;box-shadow:0 0 20px inset;background-image:url(" + t.images.menubg + ");padding-right:3px;padding-left:3px;border:3px solid transparent;-webkit-border-image:url(" + t.images.menuborder + ") 0 0 stretch}#bag{width:671px!important;height:100%!important;text-align:center!important;color:#4d392c!important;margin-left:4px!important;overflow:hidden!important;padding-left:3px;border-radius:3px;padding-top:3px;padding-bottom:3px;-webkit-box-shadow:0 0 20px inset;box-shadow:0 0 20px inset;background-image:url(" + t.images.bagbg + ");background-size:100% auto}div.tw2gui_window.inventory div.tw2gui_inner_window_bg{background:none!important;background-image:url(https://westcz.innogamescdn.com/images/window/premium/premium_buy_bg_large.jpg)!important;background-position:100% 100%!important;background-repeat:no-repeat!important;background-size:100% auto!important}div.tw2gui_selectbox ul.tw2gui_selectbox_content{min-width:100px!important}.inventory .bag_navigation{margin:2px 50px 0}.inventory .bag_control{width:9px!important;top:24px!important;display:none!important}.inventory .bag_next{background-position:-50px 0px!important;right:170px!important;display:none!important}.inventory .bag_previous{background-position:-31px 0px!important;left:170px!important;display:none!important}.inventory .bag_pages{display:none!important}.inventory .filters .filter_inventory{display:inline-block;height:35px!important;width:35px!important;margin-left:2px;margin-right:2px;margin-top:1px;background:none;vertical-align:middle;cursor:pointer;border-radius:25%;-webkit-box-shadow:inset 0 0 5px 2px #4d392c,inset 0 0 2px 1px #222;box-shadow:inset 0 0 5px 2px #4d392c,inset 0 0 2px 1px #222}.inventory .filters .filter_animal{-webkit-filter:opacity(75%);filter:opacity(75%);position:relative}.inventory .filters .filter_animal:hover{-webkit-transform:scale(1.1);transform:scale(1.1);-webkit-filter:opacity(100%);filter:opacity(100%);position:relative}.inventory .filters .filter_head{-webkit-filter:opacity(75%);filter:opacity(75%);position:relative}.inventory .filters .filter_head:hover{-webkit-transform:scale(1.1);transform:scale(1.1);-webkit-filter:opacity(100%);filter:opacity(100%);position:relative}.inventory .filters .filter_right_arm{-webkit-filter:opacity(75%);filter:opacity(75%);position:relative}.inventory .filters .filter_right_arm:hover{-webkit-transform:scale(1.1);transform:scale(1.1);-webkit-filter:opacity(100%);filter:opacity(100%);position:relative}.inventory .filters .filter_left_arm{-webkit-filter:opacity(75%);filter:opacity(75%);position:relative}.inventory .filters .filter_left_arm:hover{-webkit-transform:scale(1.1);transform:scale(1.1);-webkit-filter:opacity(100%);filter:opacity(100%);position:relative}.inventory .filters .filter_body{-webkit-filter:opacity(75%);filter:opacity(75%);position:relative}.inventory .filters .filter_body:hover{-webkit-transform:scale(1.1);transform:scale(1.1);-webkit-filter:opacity(100%);filter:opacity(100%);position:relative}.inventory .filters .filter_belt{-webkit-filter:opacity(75%);filter:opacity(75%);position:relative}.inventory .filters .filter_belt:hover{-webkit-transform:scale(1.1);transform:scale(1.1);-webkit-filter:opacity(100%);filter:opacity(100%);position:relative}.inventory .filters .filter_pants{-webkit-filter:opacity(75%);filter:opacity(75%);position:relative}.inventory .filters .filter_pants:hover{-webkit-transform:scale(1.1);transform:scale(1.1);-webkit-filter:opacity(100%);filter:opacity(100%);position:relative}.inventory .filters .filter_foot{-webkit-filter:opacity(75%);filter:opacity(75%);position:relative}.inventory .filters .filter_foot:hover{-webkit-transform:scale(1.1);transform:scale(1.1);-webkit-filter:opacity(100%);filter:opacity(100%);position:relative}.inventory .filters .filter_neck{-webkit-filter:opacity(75%);filter:opacity(75%);position:relative}.inventory .filters .filter_neck:hover{-webkit-transform:scale(1.1);transform:scale(1.1);-webkit-filter:opacity(100%);filter:opacity(100%);position:relative}.inventory .filters .filter_yield{display:none!important}.inventory .filters .filter_yield:active{display:none!important}.inventory .filters .filter_new{-webkit-filter:opacity(75%);filter:opacity(75%);position:relative}.inventory .filters .filter_new:hover{-webkit-transform:scale(1.1);transform:scale(1.1);-webkit-filter:opacity(100%);filter:opacity(100%);position:relative}.inventory .filters .filter_upgradeable{display:none!important}.inventory .filters .filter_upgradeable.active{display:none!important}.inventory .actions{text-align:center;position:absolute!important;top:14px!important;width:700px!important}.inventory .actions .tw2gui_iconbutton{position:relative!important;float:left;display:inline-block!important}@-webkit-keyframes blinker{50%{opacity:0}}@keyframes blinker{50%{opacity:0}}#inventory_search{width:150px!important}.inventory .bag_navigation{display:none!important}.twir_combobox{margin-left:auto;margin-right:auto;display:block!important;width:200px}.inventory .no-items{-webkit-filter:opacity(50%) grayscale(50)!important;filter:opacity(50%) grayscale(50)!important}.filter_quests:hover{-webkit-transform:scale(1.1);transform:scale(1.1);-webkit-filter:opacity(100%);filter:opacity(100%)}.filter_craft:hover{-webkit-transform:scale(1.1);transform:scale(1.1);-webkit-filter:opacity(100%);filter:opacity(100%)}.filter_work:hover{-webkit-transform:scale(1.1);transform:scale(1.1);-webkit-filter:opacity(100%);filter:opacity(100%)}.filter_bonus:hover{-webkit-transform:scale(1.1);transform:scale(1.1);-webkit-filter:opacity(100%);filter:opacity(100%)}.filter_useables:hover{-webkit-transform:scale(1.1);transform:scale(1.1);-webkit-filter:opacity(100%);filter:opacity(100%)}.filter_buff:hover{-webkit-transform:scale(1.1);transform:scale(1.1);-webkit-filter:opacity(100%);filter:opacity(100%)}.filter_inventory{display:inline-block;height:35px!important;width:35px!important;margin-left:2px;margin-right:2px;margin-top:1px;background:none;vertical-align:middle;cursor:pointer;border-radius:25%;-webkit-box-shadow:inset 0 0 5px 2px #4d392c,inset 0 0 2px 1px #222;box-shadow:inset 0 0 5px 2px #4d392c,inset 0 0 2px 1px #222}#twir_bonus_search.accordion_closed{position:relative!important;width:250px!important;margin-top:5px;margin-right:auto;margin-left:auto;margin-bottom:25px}#twir_bonus_search.accordion_opened{position:relative!important;width:250px!important;margin-bottom:5px;margin-top:5px;margin-right:auto;margin-left:auto}#twir_sort_feature{position:relative!important;width:250px!important;margin-bottom:5px;margin-top:5px;margin-right:auto;margin-left:auto}#twir_features{position:relative!important;width:250px!important;margin-bottom:5px;margin-top:5px;margin-right:auto;margin-left:auto}#twir_donate{position:relative!important;width:250px!important;margin-bottom:5px;margin-top:5px;margin-right:auto;margin-left:auto}.skillbtn{margin-left:1px;margin-top:1px;width:25px;height:25px;display:inline-block;background-size:cover;background-position:center;background-repeat:no-repeat;cursor:pointer;vertical-align:middle;border-radius:25%}#bonusAccordion{position:relative!important;width:250px!important;margin-bottom:5px;margin-top:5px;margin-right:auto;margin-left:auto}#bonusAccordion_content{width:263px;margin-left:auto;margin-right:auto;margin-top:5px}.tw2gui_selectbox_header{max-width:350px!important}#twir_filter_feature.accordion_closed{position:relative!important;width:250px!important;margin-bottom:5px;margin-top:25px;margin-right:auto;margin-left:auto}#twir_filter_feature.accordion_opened{position:relative!important;width:250px!important;margin-bottom:5px;margin-top:5px;margin-right:auto;margin-left:auto}.twir_stats_desc{width:150px!important;display:inline-block!important}.twir_stats_value{float: right;margin-right: 15px;max-width:160px!important;display:inline-block!important}#twir_stats_feature.accordion_closed{position:relative!important;width:250px!important;margin-top:5px;margin-right:auto;margin-left:auto;margin-bottom:25px}#twir_stats_feature.accordion_opened{position:relative!important;width:250px!important;margin-bottom:5px;margin-top:5px;margin-right:auto;margin-left:auto}.twir_buttons{float:right;display:block!important;}</style>").appendTo($("head"));
+  }), Inventory.uid = "inventory", Inventory.size = 99999, Inventory.sizeSearch = 99999, Inventory.sizeCustom = 66, Inventory.width = 608, Inventory.availableCategories = ["new", "head", "neck", "body", "pants", "belt", "foot", "right_arm", "left_arm", "animal"], Inventory.defaultCategory = "new", Inventory.latestSize = 66, Inventory.context = null, $('<style type="text/css">.twir_text{color:#5e321a;font-size:115%;font-weight:700;font-style:italic;display:inline-block;text-shadow:2px 1px 2px #dba901;position:relative}#CC_pin_items{float:left!important;position:relative!important;display:inline-block!important}.twir_filterDesign li:hover{border-bottom:1px solid #8a7e6800!important;background-position:0 -26px!important}.twir_filterDesign{-o-text-overflow:ellipsis;text-overflow:ellipsis;white-space:nowrap;overflow:hidden;left:5px}@-webkit-keyframes fadeIn{0%{opacity:0}100%{opacity:1}}@keyframes fadeIn{0%{opacity:0}100%{opacity:1}}.instant_wear_container{z-index:9999;bottom:0px!important;left:485px!important}.search_container{z-index:999!important;position:absolute!important;width:210px;height:49px;top:14px!important;left:unset!important;right:29px!important}.upgrade_items .textart_title{color:#ffe7b100!important;margin-left:0px!important;margin-right:0px!important;}.inventory .actions .upgrade_items{float:left!important;min-width:16px!important;width:16px!important;z-index:999!important;position:relative!important;display:inline-block!important}#bag .item.item_inventory{margin-bottom:0px!important;width:60px!important;height:58px!important}#twir_menu:hover{background:url(' + t.images.menuiconhover + ")!important}.tw2gui_window_buttons{width:auto!important}#windows .inventory{width:740px!important}#windows .inventory .filters{display:inline-block!important;height:40px!important;width:auto!important;position:absolute!important;left:5px!important;top:40px!important;margin-bottom:16px!important;border-radius:3px!important;-webkit-box-shadow:0 0 20px inset;box-shadow:0 0 20px inset;background-image:url(" + t.images.menubg + ");padding-right:5px;padding-left:5px;border:3px solid transparent;-webkit-border-image:url(" + t.images.menuborder + ") 0 0 stretch}#bag{width:671px!important;height:100%!important;text-align:center!important;color:#4d392c!important;margin-left:4px!important;overflow:hidden!important;padding-left:3px;border-radius:3px;padding-top:3px;padding-bottom:3px;-webkit-box-shadow:0 0 20px inset;box-shadow:0 0 20px inset;background-image:url(" + t.images.bagbg + ");background-size:100% auto}div.tw2gui_window.inventory div.tw2gui_inner_window_bg{background:none!important;background-image:url(https://westcz.innogamescdn.com/images/window/premium/premium_buy_bg_large.jpg)!important;background-position:100% 100%!important;background-repeat:no-repeat!important;background-size:100% auto!important}div.tw2gui_selectbox ul.tw2gui_selectbox_content{min-width:100px!important}.inventory .bag_navigation{margin:2px 50px 0}.inventory .bag_control{width:9px!important;top:24px!important;display:none!important}.inventory .bag_next{background-position:-50px 0px!important;right:170px!important;display:none!important}.inventory .bag_previous{background-position:-31px 0px!important;left:170px!important;display:none!important}.inventory .bag_pages{display:none!important}.inventory .filters .filter_inventory{display:inline-block;height:35px!important;width:35px!important;margin-left:2px;margin-right:2px;margin-top:1px;background:none;vertical-align:middle;cursor:pointer;border-radius:25%;-webkit-box-shadow:inset 0 0 5px 2px #4d392c,inset 0 0 2px 1px #222;box-shadow:inset 0 0 5px 2px #4d392c,inset 0 0 2px 1px #222}.inventory .filters .filter_animal{-webkit-filter:opacity(75%);filter:opacity(75%);position:relative}.inventory .filters .filter_animal:hover{-webkit-transform:scale(1.1);transform:scale(1.1);-webkit-filter:opacity(100%);filter:opacity(100%);position:relative}.inventory .filters .filter_head{-webkit-filter:opacity(75%);filter:opacity(75%);position:relative}.inventory .filters .filter_head:hover{-webkit-transform:scale(1.1);transform:scale(1.1);-webkit-filter:opacity(100%);filter:opacity(100%);position:relative}.inventory .filters .filter_right_arm{-webkit-filter:opacity(75%);filter:opacity(75%);position:relative}.inventory .filters .filter_right_arm:hover{-webkit-transform:scale(1.1);transform:scale(1.1);-webkit-filter:opacity(100%);filter:opacity(100%);position:relative}.inventory .filters .filter_left_arm{-webkit-filter:opacity(75%);filter:opacity(75%);position:relative}.inventory .filters .filter_left_arm:hover{-webkit-transform:scale(1.1);transform:scale(1.1);-webkit-filter:opacity(100%);filter:opacity(100%);position:relative}.inventory .filters .filter_body{-webkit-filter:opacity(75%);filter:opacity(75%);position:relative}.inventory .filters .filter_body:hover{-webkit-transform:scale(1.1);transform:scale(1.1);-webkit-filter:opacity(100%);filter:opacity(100%);position:relative}.inventory .filters .filter_belt{-webkit-filter:opacity(75%);filter:opacity(75%);position:relative}.inventory .filters .filter_belt:hover{-webkit-transform:scale(1.1);transform:scale(1.1);-webkit-filter:opacity(100%);filter:opacity(100%);position:relative}.inventory .filters .filter_pants{-webkit-filter:opacity(75%);filter:opacity(75%);position:relative}.inventory .filters .filter_pants:hover{-webkit-transform:scale(1.1);transform:scale(1.1);-webkit-filter:opacity(100%);filter:opacity(100%);position:relative}.inventory .filters .filter_foot{-webkit-filter:opacity(75%);filter:opacity(75%);position:relative}.inventory .filters .filter_foot:hover{-webkit-transform:scale(1.1);transform:scale(1.1);-webkit-filter:opacity(100%);filter:opacity(100%);position:relative}.inventory .filters .filter_neck{-webkit-filter:opacity(75%);filter:opacity(75%);position:relative}.inventory .filters .filter_neck:hover{-webkit-transform:scale(1.1);transform:scale(1.1);-webkit-filter:opacity(100%);filter:opacity(100%);position:relative}.inventory .filters .filter_yield{display:none!important}.inventory .filters .filter_yield:active{display:none!important}.inventory .filters .filter_new{-webkit-filter:opacity(75%);filter:opacity(75%);position:relative}.inventory .filters .filter_new:hover{-webkit-transform:scale(1.1);transform:scale(1.1);-webkit-filter:opacity(100%);filter:opacity(100%);position:relative}.inventory .filters .filter_upgradeable{display:none!important}.inventory .filters .filter_upgradeable.active{display:none!important}.inventory .actions{text-align:center;position:absolute!important;top:14px!important;width:700px!important}.inventory .actions .tw2gui_iconbutton{position:relative!important;float:left;display:inline-block!important}@-webkit-keyframes blinker{50%{opacity:0}}@keyframes blinker{50%{opacity:0}}#inventory_search{width:150px!important}.inventory .bag_navigation{display:none!important}.twir_combobox{margin-left:auto;margin-right:auto;display:block!important;width:200px}.inventory .no-items{-webkit-filter:opacity(50%) grayscale(50)!important;filter:opacity(50%) grayscale(50)!important}.filter_quests:hover{-webkit-transform:scale(1.1);transform:scale(1.1);-webkit-filter:opacity(100%);filter:opacity(100%)}.filter_craft:hover{-webkit-transform:scale(1.1);transform:scale(1.1);-webkit-filter:opacity(100%);filter:opacity(100%)}.filter_work:hover{-webkit-transform:scale(1.1);transform:scale(1.1);-webkit-filter:opacity(100%);filter:opacity(100%)}.filter_bonus:hover{-webkit-transform:scale(1.1);transform:scale(1.1);-webkit-filter:opacity(100%);filter:opacity(100%)}.filter_useables:hover{-webkit-transform:scale(1.1);transform:scale(1.1);-webkit-filter:opacity(100%);filter:opacity(100%)}.filter_buff:hover{-webkit-transform:scale(1.1);transform:scale(1.1);-webkit-filter:opacity(100%);filter:opacity(100%)}.filter_inventory{display:inline-block;height:35px!important;width:35px!important;margin-left:2px;margin-right:2px;margin-top:1px;background:none;vertical-align:middle;cursor:pointer;border-radius:25%;-webkit-box-shadow:inset 0 0 5px 2px #4d392c,inset 0 0 2px 1px #222;box-shadow:inset 0 0 5px 2px #4d392c,inset 0 0 2px 1px #222}#twir_bonus_search.accordion_closed{position:relative!important;width:250px!important;margin-top:5px;margin-right:auto;margin-left:auto;margin-bottom:25px}#twir_bonus_search.accordion_opened{position:relative!important;width:250px!important;margin-bottom:5px;margin-top:5px;margin-right:auto;margin-left:auto}#twir_sort_feature{position:relative!important;width:250px!important;margin-bottom:5px;margin-top:5px;margin-right:auto;margin-left:auto}#twir_features{position:relative!important;width:250px!important;margin-bottom:5px;margin-top:5px;margin-right:auto;margin-left:auto}#twir_donate{position:relative!important;width:250px!important;margin-bottom:5px;margin-top:5px;margin-right:auto;margin-left:auto}.skillbtn{margin-left:1px;margin-top:1px;width:25px;height:25px;display:inline-block;background-size:cover;background-position:center;background-repeat:no-repeat;cursor:pointer;vertical-align:middle;border-radius:25%}#bonusAccordion{position:relative!important;width:250px!important;margin-bottom:5px;margin-top:5px;margin-right:auto;margin-left:auto}#bonusAccordion_content{width:263px;margin-left:auto;margin-right:auto;margin-top:5px}.tw2gui_selectbox_header{max-width:350px!important}#twir_filter_feature.accordion_closed{position:relative!important;width:250px!important;margin-bottom:5px;margin-top:25px;margin-right:auto;margin-left:auto}#twir_filter_feature.accordion_opened{position:relative!important;width:250px!important;margin-bottom:5px;margin-top:5px;margin-right:auto;margin-left:auto}.twir_stats_desc{width:150px!important;display:inline-block!important}.twir_stats_value{float: right;margin-right: 15px;max-width:160px!important;display:inline-block!important}#twir_stats_feature.accordion_closed{position:relative!important;width:250px!important;margin-top:5px;margin-right:auto;margin-left:auto;margin-bottom:25px}#twir_stats_feature.accordion_opened{position:relative!important;width:250px!important;margin-bottom:5px;margin-top:5px;margin-right:auto;margin-left:auto}.twir_buttons{float:right;display:block!important;}.twir_mw_percentage{color: white;text-align: center;font-size: 11px;top: 27px;text-shadow: rgb(0, 0, 0) 0px 0px 4px;overflow: hidden;position:relative;background: url(https://westcz.innogamescdn.com/images/window/trader/preis_gross.png) no-repeat;}</style>").appendTo($("head"));
   var n = {};
   $.getJSON(t.setsURL, function(e) {
    n = e
   });
   var o = [],
-   s = ["none", !0, !1],
    r = [];
-  null == localStorage ? new UserMessage(e.informative.storage_error + "!", UserMessage.TYPE_ERROR).show() : null != localStorage.twir_inventory || null != localStorage.twir_popup ? (r.twir_inventory = JSON.parse(localStorage.twir_inventory), r.twir_popup = JSON.parse(localStorage.twir_popup)) : (r.twir_inventory = {
+  null == localStorage ? new UserMessage(e.informative.storage_error + "!", UserMessage.TYPE_ERROR).show() : r = null != localStorage.twir_marketData ? JSON.parse(localStorage.twir_marketData) : [];
+  var s = ["none", !0, !1],
+   l = [];
+  null == localStorage ? new UserMessage(e.informative.storage_error + "!", UserMessage.TYPE_ERROR).show() : null != localStorage.twir_inventory || null != localStorage.twir_popup ? (l.twir_inventory = JSON.parse(localStorage.twir_inventory), l.twir_popup = JSON.parse(localStorage.twir_popup), Object.assign(l.twir_popup, {
+   partial_bonus: !1
+  })) : (l.twir_inventory = {
    window_title: !0,
    window_minititle: !0,
    empty_opacity: !0,
@@ -774,20 +876,28 @@
    sets_counts: !0,
    sets_color: !0,
    event: !0
-  }, r.twir_popup = {
+  }, l.twir_popup = {
    item_id: !0,
    job_name: !0,
    item_crafting: !0,
    recipe_name: !1,
    short_currency: !1,
-   partial_bonus: !1
+   partial_bonus: !1,
+   set_pieces: !1,
+   market_watcher: !0
   });
   if (null != localStorage.tws_settings) {
-   var l = JSON.parse(localStorage.tws_settings) || {};
-   Object.assign(l, {
+   var p = JSON.parse(localStorage.tws_settings) || {};
+   Object.assign(p, {
     enableWir: !1,
     enableWirExt: !1
-   }), localStorage.tws_settings = JSON.stringify(l)
+   }), localStorage.tws_settings = JSON.stringify(p)
+  }
+  if (null != localStorage.TWLT) {
+   var c = JSON.parse(localStorage.TWLT) || {};
+   Object.assign(c, {
+    ShortPopups: !1
+   }), localStorage.TWLT = JSON.stringify(c)
   }
   t.enchantCss = function() {
    $(".inventory .filters .filter_animal").css({
@@ -922,7 +1032,7 @@
     "background-size": "30px 30px, auto"
    }), $(".twir_setsButton").css("cssText", "position: absolute !important;right: 5px; display: inline-block;"), $(".inventory .open_search").css("cssText", "position: absolute !important;right: 41px; display: inline-block;")
   };
-  var p = [{
+  var A = [{
     name: e.inventory.fort_battles,
     items: [1872, 1873, 1900, 1909, 1910, 1946, 1949, 1990, 1991, 2106, 2107, 2108, 2109, 2110, 2111, 2112, 2113, 2114, 2115, 2119, 2120, 2121, 2122, 2123, 2124, 2125, 2127, 2258, 2259, 2260, 2261, 2269, 2285, 2286, 2287, 2288, 2289, 2516, 2522, 2525, 2529, 2530, 2741, 50480, 50481, 50482, 50483, 50484, 50485, 50486, 50487, 51126]
    }, {
@@ -956,7 +1066,7 @@
     name: "*" + e.inventory.health,
     items: [1883, 1892, 1898, 1946, 1974, 1991, 2116, 2117, 2235, 2253, 2254, 2255, 2256, 2257, 2295, 2296, 2357, 2358, 2486, 2525, 2671, 2672, 2734, 12705, 12706, 13705, 13706, 16100, 17028, 50113, 50845, 51038, 185204, 185205, 51232, 51233]
    }],
-   c = [{
+   g = [{
     name: e.inventory.premium,
     items: [2311, 2312, 2313, 2314, 2315, 2316, 2317, 2318, 2319, 2320, 2321, 2322, 2323, 2324, 2325, 2326, 2470, 2472, 2473, 2475, 2476, 2478, 2479, 2481, 2491, 2493, 2495, 2497, 21340, 21341, 21342, 21343]
    }, {
@@ -969,7 +1079,7 @@
     name: e.inventory.unpacks,
     items: [371, 374, 376, 377, 378, 379, 852, 853, 926, 927, 928, 973, 974, 975, 976, 1003, 1838, 1868, 1869, 1878, 1887, 1888, 1897, 1905, 1906, 1915, 1923, 1924, 1933, 1960, 1961, 1964, 1967, 1975, 1976, 2131, 2132, 2133, 2134, 2136, 2137, 2138, 2139, 2144, 2152, 2172, 2173, 2174, 2175, 2176, 2187, 2192, 2193, 2194, 2195, 2196, 2197, 2198, 2199, 2200, 2201, 2202, 2203, 2204, 2205, 2226, 2227, 2297, 2298, 2299, 2300, 2305, 2329, 2330, 2331, 2332, 2333, 2334, 2335, 2336, 2337, 2338, 2345, 2359, 2360, 2361, 2362, 2379, 2380, 2381, 2382, 2383, 2384, 2385, 2393, 2394, 2395, 2396, 2397, 2421, 2460, 2461, 2462, 2482, 2487, 2488, 2489, 2490, 2499, 2507, 2518, 2521, 2524, 2527, 2533, 2534, 2535, 2536, 2537, 2538, 2540, 2542, 2556, 2557, 2558, 2559, 2560, 2561, 2562, 2563, 2564, 2565, 2566, 2567, 2579, 2580, 2581, 2585, 2586, 2587, 2588, 2589, 2590, 2591, 2592, 2593, 2594, 2602, 2603, 2604, 2605, 2606, 2614, 2615, 2616, 2617, 2618, 2619, 2620, 2621, 2622, 2623, 2624, 2626, 2627, 2628, 2629, 2630, 2645, 2646, 2647, 2648, 2650, 2665, 2666, 2673, 2674, 2675, 2676, 2677, 2678, 2679, 2680, 2685, 2687, 2688, 2689, 2690, 2692, 2693, 2694, 2698, 2699, 2700, 2701, 2702, 2703, 2704, 2705, 2714, 2715, 2721, 2722, 2723, 2728, 2755, 12700, 12709, 12710, 12711, 13711, 17e3, 17001, 17002, 17003, 17004, 17005, 17006, 17007, 17008, 50001, 50002, 50003, 50009, 50023, 50025, 50080, 50081, 50082, 50086, 50087, 50088, 50093, 50105, 50128, 50130, 50131, 50132, 50133, 50134, 50168, 50169, 50170, 50171, 50177, 50195, 50251, 50252, 50253, 50254, 50255, 50256, 50257, 50258, 50259, 50295, 50296, 50297, 50298, 50299, 50300, 50301, 50302, 50305, 50346, 50347, 50348, 50368, 50381, 50382, 50383, 50384, 50385, 50386, 50387, 50388, 50391, 50409, 50423, 50424, 50425, 50426, 50427, 50428, 50442, 50446, 50456, 50477, 50478, 50479, 50488, 50501, 50509, 50540, 50545, 50547, 50556, 50557, 50558, 50559, 50560, 50570, 50579, 50588, 50603, 50604, 50605, 50606, 50607, 50608, 50622, 50623, 50624, 50625, 50675, 50676, 50677, 50678, 50679, 50680, 50681, 50682, 50683, 50684, 50685, 50686, 50687, 50688, 50689, 50690, 50691, 50696, 50697, 50698, 50699, 50700, 50712, 50724, 50736, 50748, 50760, 50819, 50820, 50835, 50836, 50837, 50838, 50839, 50840, 50841, 50842, 50843, 50844, 50854, 50855, 50880, 50884, 50896, 50897, 50919, 50920, 50921, 50931, 50941, 50951, 50959, 50975, 50989, 50990, 50992, 51004, 51008, 51009, 51010, 51013, 51015, 51025, 51040, 51041, 51042, 51043, 51044, 51059, 51066, 51067, 51059, 51066, 51067, 51068, 51075, 51089, 51098, 51107, 51122, 51139, 51140, 51141, 51153, 51154, 51155, 51156, 51174, 51184, 51194, 51220, 51221, 51222, 51223, 51224, 51225, 51226, 51227, 51228, 51229, 51230, 51231, 51249, 51250, 51255, 51256, 51257, 51258, 51259, 51260, 51261, 51262, 51263, 51264, 51265, 51280, 51292, 51304, 51305, 51310, 51311, 51312, 51324, 51325, 51326, 51327, 51328, 51329, 51330]
    }],
-   A = [{
+   m = [{
     name: "*" + e.inventory.field_cook,
     items: [1941, 1855, 1862, 1856, 1942, 1865, 1866, 1867, 1870, 1874, 1875, 1877, 2736, 1980, 2737, 1999, 1876, 2e3, 2517]
    }, {
@@ -991,34 +1101,36 @@
     name: e.inventory.recipes,
     items: [2e4, 20001, 20002, 20083, 20084, 20085, 20086, 20003, 20004, 20005, 20006, 20007, 20008, 20009, 20010, 20011, 20012, 20013, 20014, 20015, 20016, 20017, 20116, 20018, 20019, 20134, 20096, 20120, 20124, 20097, 20098, 20135, 20099, 20100, 20136, 20020, 20021, 20022, 20081, 20087, 20088, 20089, 20023, 20024, 20025, 20026, 20027, 20028, 20029, 20030, 20031, 20032, 20033, 20034, 20035, 20036, 20037, 20119, 20038, 20039, 20123, 20128, 20101, 20127, 20102, 20103, 20129, 20104, 20105, 20130, 20040, 20041, 20042, 20082, 20090, 20091, 20092, 20043, 20044, 20045, 20046, 20047, 20048, 20049, 20050, 20051, 20052, 20053, 20054, 20055, 20056, 20057, 20118, 20058, 20059, 20122, 20131, 20111, 20126, 20112, 20113, 20132, 20114, 20115, 20133, 20060, 20061, 20062, 20080, 20093, 20094, 20095, 20063, 20064, 20065, 20066, 20067, 20068, 20069, 20070, 20071, 20072, 20073, 20074, 20075, 20076, 20077, 20117, 20078, 20079, 20121, 20137, 20106, 20125, 20107, 20108, 20138, 20109, 20110, 20139]
    }],
-   g = [251, 770, 772, 773, 738, 774, 775, 776, 796, 799, 995, 996, 1016, 1019, 1700, 1701, 1702, 1703, 1704, 1706, 1707, 1709, 1710, 1711, 1712, 1750, 1751, 1752, 1753, 1754, 1757, 1758, 1760, 1761, 1763, 1764, 1765, 1766, 1767, 1768, 1769, 1770, 1771, 1773, 1774, 1775, 1776, 1777, 1778, 1779, 1780, 1781, 1782, 1783, 1784, 1785, 1786, 1789, 1790, 1792, 1793, 1794, 1795, 1796, 1797, 1798, 1799, 1800, 1801, 1802, 1803, 1804, 1805, 1806, 1838, 1839, 1840, 1841, 1842, 1843, 1844, 1845, 1846, 1847, 1848, 1849, 1850, 1851, 1852, 1853, 1854, 1935, 1936, 1953, 1954, 1956, 1957, 1958, 1959, 1962, 1963, 1964, 1965, 1966, 1973, 1992, 1993, 1994, 1995, 1996, 2001, 2004, 2007, 2010, 2145, 2146, 2147, 2148, 2153, 2224, 2245, 2265, 2266, 2267, 2306, 2307, 2308, 2309, 2328, 2340, 2346, 2347, 2348, 2349, 2350, 2351, 2364, 2365, 2366, 2367, 2368, 2369, 2370, 2371, 2372, 2373, 2374, 2375, 2376, 2377, 2378, 2386, 2387, 2388, 2389, 2390, 2392, 2398, 2399, 2400, 2401, 2402, 2403, 2404, 2405, 2406, 2407, 2408, 2410, 2411, 2412, 2413, 2414, 2415, 2416, 2417, 2418, 2419, 2420, 2421, 2422, 2424, 2425, 2426, 2427, 2428, 2429, 2500, 2501, 2502, 2503, 2504, 2505, 2506, 2508, 2509, 2510, 2511, 2512, 2513, 2514, 2515, 2532, 2552, 2553, 2554, 2568, 2569, 2570, 2571, 2572, 2573, 2574, 2575, 2681, 2682, 2683, 2702, 2703, 2704, 2705, 2708, 2709, 2710, 2711, 2712, 2713, 2729, 12707, 12708, 17020, 17021, 17022, 17023, 17024, 17025, 17026, 17027, 50091, 50094, 50172, 50173, 50174, 50175, 50176, 50178, 50179, 50180, 50181, 50182, 50183, 50184, 50185, 50186, 50196, 50197, 50198, 50199, 50200, 50201, 50202, 50203, 50204, 50207, 50208, 50209, 50271, 50272, 50273, 50274, 50275, 50276, 50277, 50278, 50317, 50318, 50319, 50320, 50321, 50322, 50349, 50350, 50351, 50352, 50369, 50389, 50429, 50430, 50431, 50489, 50490, 50491, 50492, 50493, 50494, 50495, 50496, 50497, 50498, 50499, 50500, 50546, 50548, 50566, 50609, 50610, 50611, 50612, 50613, 50761, 50762, 50763, 50764, 50765, 50847, 50848, 50849, 50850, 50851, 50852, 50857, 50858, 50859, 50860, 50861, 50881, 50882, 50893, 50894, 50895, 50952, 50953, 50954, 50955, 50956, 50957, 50976, 51011, 51014, 51016, 51017, 51018, 51019, 51020, 51021, 51022, 51027, 51028, 51029, 51030, 51031, 51057, 51058, 51057, 51058, 51069, 51071, 51073, 51074, 51076, 51077, 51078, 51080, 51099, 51124, 51158, 51159, 51160, 51161, 51163, 51164, 51234, 51235, 51238, 51253, 51248, 51239],
-   m = [],
-   u = [252, 674, 723, 768, 792, 794, 797, 945, 979, 991, 997, 998, 999, 1702, 1715, 1717, 1740, 1759, 1762, 1772, 1955, 1972, 2154, 2188, 2189, 2190, 2191, 2223, 2228, 2301, 2302, 2339, 2352, 2363, 2409, 2483, 2539, 2541, 2551, 2555, 2577, 2578, 2583, 2600, 2610, 2611, 2612, 2613, 2640, 2641, 2642, 2643, 2644, 2649, 2660, 2661, 2662, 2663, 2684, 2691, 2696, 2697, 2716, 2717, 2718, 2719, 2720, 2724, 2725, 2726, 2727, 12713, 5e4, 50016, 50076, 50089, 50090, 50092, 50107, 50109, 50111, 50112, 50137, 50145, 50153, 50161, 50194, 50206, 50243, 50279, 50292, 50313, 50323, 50331, 50342, 50353, 50377, 50402, 50422, 50432, 50464, 50502, 50510, 50511, 50512, 50513, 50514, 50515, 50516, 50517, 50518, 50519, 50520, 50521, 50522, 50523, 50524, 50525, 50526, 50527, 50528, 50529, 50530, 50531, 50532, 50533, 50534, 50535, 50536, 50537, 50538, 50539, 50544, 50549, 50555, 50569, 50578, 50587, 50596, 50621, 50626, 50635, 50661, 50671, 50708, 50720, 50732, 50744, 50756, 50804, 50815, 50828, 50832, 50833, 50834, 50853, 50856, 50862, 50873, 50883, 50891, 50905, 50968, 50978, 51e3, 51012, 51023, 51026, 51051, 51052, 51053, 51054, 51055, 51051, 51052, 51053, 51054, 51055, 51088, 51097, 51106, 51118, 51134, 51138, 51149, 51157, 51202, 51213, 51236, 51237, 51266, 51267, 51268, 51276, 51288, 51300, 51323],
-   d = [],
-   k = [10, 14, 18, 22, 26, 30, 34, 38, 42, 806, 810, 814, 818, 822, 826, 830, 834, 838, 842, 865, 909, 912, 917, 921, 925, 45001, 45005, 45009, 45013, 45017],
-   y = {},
-   b = function(e) {
+   d = [251, 770, 772, 773, 738, 774, 775, 776, 796, 799, 995, 996, 1016, 1019, 1700, 1701, 1702, 1703, 1704, 1706, 1707, 1709, 1710, 1711, 1712, 1750, 1751, 1752, 1753, 1754, 1757, 1758, 1760, 1761, 1763, 1764, 1765, 1766, 1767, 1768, 1769, 1770, 1771, 1773, 1774, 1775, 1776, 1777, 1778, 1779, 1780, 1781, 1782, 1783, 1784, 1785, 1786, 1789, 1790, 1792, 1793, 1794, 1795, 1796, 1797, 1798, 1799, 1800, 1801, 1802, 1803, 1804, 1805, 1806, 1838, 1839, 1840, 1841, 1842, 1843, 1844, 1845, 1846, 1847, 1848, 1849, 1850, 1851, 1852, 1853, 1854, 1935, 1936, 1953, 1954, 1956, 1957, 1958, 1959, 1962, 1963, 1964, 1965, 1966, 1973, 1992, 1993, 1994, 1995, 1996, 2001, 2004, 2007, 2010, 2145, 2146, 2147, 2148, 2153, 2224, 2245, 2265, 2266, 2267, 2306, 2307, 2308, 2309, 2328, 2340, 2346, 2347, 2348, 2349, 2350, 2351, 2364, 2365, 2366, 2367, 2368, 2369, 2370, 2371, 2372, 2373, 2374, 2375, 2376, 2377, 2378, 2386, 2387, 2388, 2389, 2390, 2392, 2398, 2399, 2400, 2401, 2402, 2403, 2404, 2405, 2406, 2407, 2408, 2410, 2411, 2412, 2413, 2414, 2415, 2416, 2417, 2418, 2419, 2420, 2421, 2422, 2424, 2425, 2426, 2427, 2428, 2429, 2500, 2501, 2502, 2503, 2504, 2505, 2506, 2508, 2509, 2510, 2511, 2512, 2513, 2514, 2515, 2532, 2552, 2553, 2554, 2568, 2569, 2570, 2571, 2572, 2573, 2574, 2575, 2681, 2682, 2683, 2702, 2703, 2704, 2705, 2708, 2709, 2710, 2711, 2712, 2713, 2729, 12707, 12708, 17020, 17021, 17022, 17023, 17024, 17025, 17026, 17027, 50091, 50094, 50172, 50173, 50174, 50175, 50176, 50178, 50179, 50180, 50181, 50182, 50183, 50184, 50185, 50186, 50196, 50197, 50198, 50199, 50200, 50201, 50202, 50203, 50204, 50207, 50208, 50209, 50271, 50272, 50273, 50274, 50275, 50276, 50277, 50278, 50317, 50318, 50319, 50320, 50321, 50322, 50349, 50350, 50351, 50352, 50369, 50389, 50429, 50430, 50431, 50489, 50490, 50491, 50492, 50493, 50494, 50495, 50496, 50497, 50498, 50499, 50500, 50546, 50548, 50566, 50609, 50610, 50611, 50612, 50613, 50761, 50762, 50763, 50764, 50765, 50847, 50848, 50849, 50850, 50851, 50852, 50857, 50858, 50859, 50860, 50861, 50881, 50882, 50893, 50894, 50895, 50952, 50953, 50954, 50955, 50956, 50957, 50976, 51011, 51014, 51016, 51017, 51018, 51019, 51020, 51021, 51022, 51027, 51028, 51029, 51030, 51031, 51057, 51058, 51057, 51058, 51069, 51071, 51073, 51074, 51076, 51077, 51078, 51080, 51099, 51124, 51158, 51159, 51160, 51161, 51163, 51164, 51234, 51235, 51238, 51253, 51248, 51239],
+   u = [],
+   k = [252, 674, 723, 768, 792, 794, 797, 945, 979, 991, 997, 998, 999, 1702, 1715, 1717, 1740, 1759, 1762, 1772, 1955, 1972, 2154, 2188, 2189, 2190, 2191, 2223, 2228, 2301, 2302, 2339, 2352, 2363, 2409, 2483, 2539, 2541, 2551, 2555, 2577, 2578, 2583, 2600, 2610, 2611, 2612, 2613, 2640, 2641, 2642, 2643, 2644, 2649, 2660, 2661, 2662, 2663, 2684, 2691, 2696, 2697, 2716, 2717, 2718, 2719, 2720, 2724, 2725, 2726, 2727, 12713, 5e4, 50016, 50076, 50089, 50090, 50092, 50107, 50109, 50111, 50112, 50137, 50145, 50153, 50161, 50194, 50206, 50243, 50279, 50292, 50313, 50323, 50331, 50342, 50353, 50377, 50402, 50422, 50432, 50464, 50502, 50510, 50511, 50512, 50513, 50514, 50515, 50516, 50517, 50518, 50519, 50520, 50521, 50522, 50523, 50524, 50525, 50526, 50527, 50528, 50529, 50530, 50531, 50532, 50533, 50534, 50535, 50536, 50537, 50538, 50539, 50544, 50549, 50555, 50569, 50578, 50587, 50596, 50621, 50626, 50635, 50661, 50671, 50708, 50720, 50732, 50744, 50756, 50804, 50815, 50828, 50832, 50833, 50834, 50853, 50856, 50862, 50873, 50883, 50891, 50905, 50968, 50978, 51e3, 51012, 51023, 51026, 51051, 51052, 51053, 51054, 51055, 51051, 51052, 51053, 51054, 51055, 51088, 51097, 51106, 51118, 51134, 51138, 51149, 51157, 51202, 51213, 51236, 51237, 51266, 51267, 51268, 51276, 51288, 51300, 51323],
+   b = [],
+   y = [],
+   w = [10, 14, 18, 22, 26, 30, 34, 38, 42, 806, 810, 814, 818, 822, 826, 830, 834, 838, 842, 865, 909, 912, 917, 921, 925, 45001, 45005, 45009, 45013, 45017],
+   h = {},
+   x = {},
+   I = function(e) {
     var t = e.map(e => e.items),
      i = [].concat.apply([], t),
      a = i.filter(Number);
     return a
    },
-   w = function(e) {
+   S = function(e) {
     for (var t = [], i = 0; i < e.length; i++)
      for (var a = 0; a <= 5; a++) t.push(1e3 * e[i] + a);
     return t
    },
-   I = function(t, i) {
-    0 != r.twir_inventory.window_minititle ? Inventory.window.setMiniTitle(i) : Inventory.window.setMiniTitle("TWIR"), 0 != r.twir_inventory.window_title ? Inventory.window.setTitle(t.replace("*", "")) : Inventory.window.setTitle("TWIR - " + e.invent)
+   B = function(t, i) {
+    0 != l.twir_inventory.window_minititle ? Inventory.window.setMiniTitle(i) : Inventory.window.setMiniTitle("TWIR"), 0 != l.twir_inventory.window_title ? Inventory.window.setTitle(t.replace("*", "")) : Inventory.window.setTitle("TWIR - " + e.invent)
    },
-   x = function(e) {
+   M = function(e) {
     return e.toUpperCase().replace(/"/g, "").replace(/Á/g, "A").replace(/Č/g, "C").replace(/É|Ě/g, "E").replace(/Ő/g, "O").replace(/Ú|Ü|Ů|Ű/g, "U").replace(/Ś|Š/g, "S")
    },
-   h = function(e) {
-    return Math.abs(e) >= 1e3 && Math.abs(e) < 1e5 ? parseFloat((e / 1e3).toFixed(1)) + "k" : Math.abs(e) >= 1e5 && Math.abs(e) < 1e6 ? parseFloat((e / 1e3).toFixed(0)) + "k" : Math.abs(e) >= 1e6 ? (parseFloat(100 * e) / 100 / 1e6).toFixed(1) + "M" : e
+   K = function(e) {
+    return Math.abs(e) >= 1e3 && Math.abs(e) < 1e5 ? parseFloat(e / 1e3).toFixed(1).replace(/\.0+$/, "").replace(".", ",") + "k" : Math.abs(e) >= 1e5 && Math.abs(e) < 1e6 ? parseFloat(e / 1e3).toFixed(0).replace(/\.0+$/, "").replace(".", ",") + "k" : Math.abs(e) >= 1e6 ? parseFloat(100 * e / 100 / 1e6).toFixed(1).replace(/\.0+$/, "").replace(".", ",") + "M" : parseFloat(e).toFixed(0)
    },
-   S = ["none", !1, !1],
-   B = function(e) {
+   V = ["none", !1, !1],
+   j = function(e) {
     e.sort(function(e, t) {
      var i = null != localStorage ? JSON.parse(localStorage.getItem("twir_orderCache")) : null,
       a = null == i ? s[0] : i[0],
@@ -1050,6 +1162,10 @@
        var r = west.storage.ItemSetManager.get(e.obj.set).name,
         l = west.storage.ItemSetManager.get(t.obj.set).name;
        return r.localeCompare(l);
+      case "sort_marketprice":
+       var p = x.hasOwnProperty(e.obj.short) ? x[e.obj.short].price_sum / x[e.obj.short].offer_count : 0,
+        c = x.hasOwnProperty(t.obj.short) ? x[t.obj.short].price_sum / x[t.obj.short].offer_count : 0;
+       return 0 < p && 0 < c && p === c ? 0 : 0 === p ? 1 : 0 === c ? -1 : p - c;
       default:
        return e.obj.item_id - t.obj.item_id
      } else if (1 == o) switch (a) {
@@ -1078,21 +1194,55 @@
        var r = west.storage.ItemSetManager.get(e.obj.set).name,
         l = west.storage.ItemSetManager.get(t.obj.set).name;
        return l.localeCompare(r);
+      case "sort_marketprice":
+       var p = x.hasOwnProperty(e.obj.short) ? x[e.obj.short].price_sum / x[e.obj.short].offer_count : 0,
+        c = x.hasOwnProperty(t.obj.short) ? x[t.obj.short].price_sum / x[t.obj.short].offer_count : 0;
+       return 0 < p && 0 < c && p === c ? 0 : 0 === p ? 1 : 0 === c ? -1 : c - p;
       default:
        return t.obj.item_id - e.obj.item_id
      }
     })
    },
-   M = function(e, t) {
+   U = function() {
+    var e = r.sort(function(e, t) {
+     var i = new Date(e.date),
+      a = new Date(t.date);
+     return i > a ? -1 : i < a ? 1 : 0
+    });
+    return e = e.reduce((e, t) => {
+     var i = e.find(({
+      item_base_id: e,
+      seller_name: i,
+      max_price: a,
+      item_count: n,
+      auction_price: o,
+      auction_end_date: r
+     }) => t.item_base_id === e && t.seller_name === i && t.max_price === a && t.item_count === n && t.auction_price === o && t.auction_end_date === r);
+     return i || e.push(t), e
+    }, [])
+   },
+   R = function(e, t) {
     for (var i = e.length; i--;) {
      var a = e[i];
      a.name ? a.name.name && (a.name = a.name.name) : e.splice(i, 1)
     }
     e.sort(function(e, t) {
-     var i = x(e.name),
-      a = x(t.name);
+     var i = M(e.name),
+      a = M(t.name);
      return i == a ? 0 : i > a ? 1 : -1
     })
+   },
+   q = function(t) {
+    var i = Math.floor((new Date - t) / 1e3),
+     a = Math.floor(i / 31536e3);
+    return a > 1 ? e.informative.years.replace("$1", Math.floor(a)) : (a = Math.floor(i / 2592e3)) > 1 ? e.informative.months.replace("$1", Math.floor(a)) : (a = Math.floor(i / 86400)) > 1 ? e.informative.days.replace("$1", Math.floor(a)) : (a = Math.floor(i / 3600)) > 1 ? e.informative.hours.replace("$1", Math.floor(a)) : (a = Math.floor(i / 60)) > 1 ? e.informative.minutes.replace("$1", Math.floor(a)) : e.informative.seconds.replace("$1", Math.floor(i))
+   },
+   Y = function(e) {
+    var t, i = e % 1e3,
+     a = (e = (e - i) / 1e3) % 60,
+     n = (e = (e - a) / 60) % 60,
+     o = (e - n) / 60;
+    return (0 != o ? o + "h " : "") + (0 != n ? n + "m " : "") + ("00" + a).slice(-(t = t || 2)) + "s"
    };
   t.global = {
    SelectMenu: null
@@ -1100,8 +1250,13 @@
    gui: {
     window: {}
    },
+   reload: function() {
+    $("#twir_stats_feature").hasClass("accordion_opened") ? (t.settings.open(), $("#twir_stats_feature").trigger("click")) : $("#twir_donate").hasClass("accordion_opened") ? (t.settings.open(), $("#twir_donate").trigger("click")) : $("#twir_features ").hasClass("accordion_opened") ? (t.settings.open(), $("#twir_features ").trigger("click")) : $("#twir_bonus_search ").hasClass("accordion_opened") ? (t.settings.open(), $("#twir_bonus_search ").trigger("click")) : $("#twir_filter_feature ").hasClass("accordion_opened") ? (t.settings.open(), $("#twir_filter_feature ").trigger("click")) : $("#twir_sort_feature  ").hasClass("accordion_opened") ? (t.settings.open(), $("#twir_sort_feature  ").trigger("click")) : t.settings.open()
+   },
    open: function() {
-    this.gui.window = wman.open("TWIR", null, "escape noreload nominimize nocloseall").setMiniTitle("TWIR - " + e.inventory.twir_menu).setSize(400, 400).addClass("inventory_settings").setTitle("TWIR v" + t.version).center();
+    this.gui.window = wman.open("TWIR", null, "escape nominimize nocloseall").setMiniTitle("TWIR - " + e.inventory.twir_menu).setSize(400, 400).addClass("inventory_settings").setTitle("TWIR v" + t.version).addEventListener("WINDOW_RELOAD", function() {
+     t.settings.reload()
+    });
     var i = [{
      sort: "sort_id",
      style: "background: url(https://westcz.innogamescdn.com/images/tw2gui/iconset.png?14) no-repeat transparent;background-position: -110px -30px;width: 17px!important;right: 2px;position: relative;top: 1px;",
@@ -1142,10 +1297,14 @@
      sort: "sort_setname",
      style: "background: url(https://westcz.innogamescdn.com/images/forum/icon/sombrero.png) no-repeat transparent;background-size: contain;background-position: 0 2px;position: relative;left: 2px;",
      name: e.organizing.sort_setname
+    }, {
+     sort: "sort_marketprice",
+     style: "background: url(https://westcz.innogamescdn.com/images/tw2gui/iconset.png?14) no-repeat transparent;background-position: -64px 0px;position: relative;top:2px;",
+     name: e.organizing.sort_marketprice
     }];
-    M(i, name);
-    for (var a = (new west.gui.Combobox).addClass("twir_combobox").setWidth(165), n = 0; n < i.length; n++) a.addItem(i[n].sort, '<span style="display: inline-block;height: 15px;width: 16px;' + i[n].style + '" /><span title="' + i[n].name + '" style="display: inline-block;padding-left: 20px;">' + i[n].name + "</span><hr>", i[n].name);
-    var l = new west.gui.Checkbox(e.organizing.sort_down, "upDownBox").setRadiobutton().setCallback(function() {
+    R(i, name);
+    for (var a = (new west.gui.Combobox).addClass("twir_combobox").setWidth(165), n = 0; n < i.length; n++) a.addItem(i[n].sort, '<span style="display: inline-block;height: 15px;width: 16px;' + i[n].style + '" /><span title="' + i[n].name + '" style="display: inline-block;padding-left: 20px;">' + i[n].name + "</span>", i[n].name);
+    var r = new west.gui.Checkbox(e.organizing.sort_down, "upDownBox").setRadiobutton().setCallback(function() {
       g()
      }),
      p = new west.gui.Checkbox(e.organizing.sort_up, "upDownBox").setRadiobutton().setCallback(function() {
@@ -1156,122 +1315,128 @@
      }),
      A = function() {
       this.timeout = setTimeout(function() {
-       if (null == localStorage || null == localStorage.getItem("twir_orderCache")) s = ["none", !0, !1], a.select("sort_id"), null == localStorage && (c.setEnabled(!1), new UserMessage(e.informative.storage_error + "!", UserMessage.TYPE_ERROR).show()), 1 == s[1] ? p.setSelected(!0) : 0 == s[1] && 1 == s[2] && l.setSelected(!0);
+       if (null == localStorage || null == localStorage.getItem("twir_orderCache")) s = ["none", !0, !1], a.select("sort_id"), null == localStorage && (c.setEnabled(!1), new UserMessage(e.informative.storage_error + "!", UserMessage.TYPE_ERROR).show()), 1 == s[1] ? p.setSelected(!0) : 0 == s[1] && 1 == s[2] && r.setSelected(!0);
        else {
         var t = JSON.parse(localStorage.getItem("twir_orderCache"));
-        c.setSelected(!0), a.select(t[0]), 1 == t[1] ? p.setSelected(!0) : 0 == t[1] && 1 == t[2] && l.setSelected(!0)
+        c.setSelected(!0), a.select(t[0]), 1 == t[1] ? p.setSelected(!0) : 0 == t[1] && 1 == t[2] && r.setSelected(!0)
        }
       }, 150)
      };
     EventHandler.listen("inventory_ready", A), A();
     var g = function() {
      t.settings.gui.window.showLoader(), this.timeout = setTimeout(function() {
-      s[1] = p.isSelected(), s[2] = l.isSelected(), c.isSelected() && null != localStorage ? localStorage.setItem("twir_orderCache", JSON.stringify(s)) : null != localStorage ? localStorage.removeItem("twir_orderCache") : new UserMessage(e.informative.storage_error + "!", UserMessage.TYPE_ERROR).show(), Inventory.update(), t.settings.gui.window.hideLoader()
+      s[1] = p.isSelected(), s[2] = r.isSelected(), c.isSelected() && null != localStorage ? localStorage.setItem("twir_orderCache", JSON.stringify(s)) : null != localStorage ? localStorage.removeItem("twir_orderCache") : new UserMessage(e.informative.storage_error + "!", UserMessage.TYPE_ERROR).show(), Inventory.update(), t.settings.gui.window.hideLoader()
      }, 500)
     };
     a.addListener(function(i) {
      t.settings.gui.window.showLoader(), this.timeout = setTimeout(function() {
-      s[0] = i, s[1] = p.isSelected(), s[2] = l.isSelected(), c.isSelected() && null != localStorage ? localStorage.setItem("twir_orderCache", JSON.stringify(s)) : null != localStorage ? localStorage.removeItem("twir_orderCache") : new UserMessage(e.informative.storage_error + "!", UserMessage.TYPE_ERROR).show(), Inventory.update(), t.settings.gui.window.hideLoader()
+      s[0] = i, s[1] = p.isSelected(), s[2] = r.isSelected(), c.isSelected() && null != localStorage ? localStorage.setItem("twir_orderCache", JSON.stringify(s)) : null != localStorage ? localStorage.removeItem("twir_orderCache") : new UserMessage(e.informative.storage_error + "!", UserMessage.TYPE_ERROR).show(), Inventory.update(), t.settings.gui.window.hideLoader()
      }, 1e3)
     });
     var m = new west.gui.Checkbox(e.organizing.none, "twir_filter").setRadiobutton().setValue("none").setSelected(!0).setCallback(function() {
-      this.isSelected() && (S[0] = this.getValue()), U.isSelected() || Inventory.update()
+      this.isSelected() && (V[0] = this.getValue()), M.isSelected() || Inventory.update()
      }),
-     u = new west.gui.Checkbox(e.organizing.auctionable, "twir_filter").setRadiobutton().setValue("auctionable").setCallback(function() {
-      this.isSelected() && (S[0] = this.getValue()), U.isSelected() ? t.settings.showThis(this.getValue()) : Inventory.update()
+     d = new west.gui.Checkbox(e.organizing.auctionable, "twir_filter").setRadiobutton().setValue("auctionable").setCallback(function() {
+      this.isSelected() && (V[0] = this.getValue()), M.isSelected() ? t.settings.showThis(this.getValue()) : Inventory.update()
      }),
-     d = new west.gui.Checkbox(e.organizing.sellable, "twir_filter").setRadiobutton().setValue("sellable").setCallback(function() {
-      this.isSelected() && (S[0] = this.getValue()), U.isSelected() ? t.settings.showThis(S[0]) : Inventory.update()
+     u = new west.gui.Checkbox(e.organizing.sellable, "twir_filter").setRadiobutton().setValue("sellable").setCallback(function() {
+      this.isSelected() && (V[0] = this.getValue()), M.isSelected() ? t.settings.showThis(V[0]) : Inventory.update()
      }),
      k = new west.gui.Checkbox(e.organizing.upgradeable, "twir_filter").setRadiobutton().setValue("upgradeable").setCallback(function() {
-      this.isSelected() && (S[0] = this.getValue()), U.isSelected() ? t.settings.showThis(S[0]) : Inventory.update()
+      this.isSelected() && (V[0] = this.getValue()), M.isSelected() ? t.settings.showThis(V[0]) : Inventory.update()
      }),
-     y = new west.gui.Checkbox(e.organizing.droppable, "twir_filter").setRadiobutton().setValue("dropable").setCallback(function() {
-      this.isSelected() && (S[0] = this.getValue()), U.isSelected() ? t.settings.showThis(S[0]) : Inventory.update()
+     b = new west.gui.Checkbox(e.organizing.droppable, "twir_filter").setRadiobutton().setValue("dropable").setCallback(function() {
+      this.isSelected() && (V[0] = this.getValue()), M.isSelected() ? t.settings.showThis(V[0]) : Inventory.update()
      }),
-     b = new west.gui.Checkbox(e.inventory.from_set, "twir_filter").setRadiobutton().setValue("from_set").setCallback(function() {
-      this.isSelected() && (S[0] = this.getValue()), U.isSelected() ? t.settings.showThis(S[0]) : Inventory.update()
+     y = new west.gui.Checkbox(e.inventory.from_set, "twir_filter").setRadiobutton().setValue("from_set").setCallback(function() {
+      this.isSelected() && (V[0] = this.getValue()), M.isSelected() ? t.settings.showThis(V[0]) : Inventory.update()
      }),
      w = new west.gui.Checkbox(e.organizing.gender, "twir_filter").setRadiobutton().setValue("gender").setCallback(function() {
-      this.isSelected() && (S[0] = this.getValue()), U.isSelected() ? t.settings.showThis(S[0]) : Inventory.update()
+      this.isSelected() && (V[0] = this.getValue()), M.isSelected() ? t.settings.showThis(V[0]) : Inventory.update()
      }),
-     I = new west.gui.Checkbox(e.organizing.rare, "twir_filter").setRadiobutton().setValue("rare").setCallback(function() {
-      this.isSelected() && (S[0] = this.getValue()), U.isSelected() ? t.settings.showThis(S[0]) : Inventory.update()
+     h = new west.gui.Checkbox(e.organizing.rare, "twir_filter").setRadiobutton().setValue("rare").setCallback(function() {
+      this.isSelected() && (V[0] = this.getValue()), M.isSelected() ? t.settings.showThis(V[0]) : Inventory.update()
      }),
      x = new west.gui.Checkbox(e.inventory.upgraded, "twir_filter").setRadiobutton().setValue("upgraded").setCallback(function() {
-      this.isSelected() && (S[0] = this.getValue()), U.isSelected() ? t.settings.showThis(S[0]) : Inventory.update()
+      this.isSelected() && (V[0] = this.getValue()), M.isSelected() ? t.settings.showThis(V[0]) : Inventory.update()
      }),
-     B = new west.gui.Checkbox(e.organizing.duplicates, "twir_filter").setRadiobutton().setValue("useless").setCallback(function() {
-      this.isSelected() && (S[0] = this.getValue()), U.isSelected() ? t.settings.showThis(S[0]) : Inventory.update()
+     I = new west.gui.Checkbox(e.organizing.duplicates, "twir_filter").setRadiobutton().setValue("useless").setCallback(function() {
+      this.isSelected() && (V[0] = this.getValue()), M.isSelected() ? t.settings.showThis(V[0]) : Inventory.update()
      }),
-     K = new west.gui.Checkbox(e.organizing.tradeable, "twir_filter").setRadiobutton().setValue("tradeable").setCallback(function() {
-      this.isSelected() && (S[0] = this.getValue()), U.isSelected() ? t.settings.showThis(S[0]) : Inventory.update()
+     S = new west.gui.Checkbox(e.organizing.tradeable, "twir_filter").setRadiobutton().setValue("tradeable").setCallback(function() {
+      this.isSelected() && (V[0] = this.getValue()), M.isSelected() ? t.settings.showThis(V[0]) : Inventory.update()
      }),
-     V = new west.gui.Checkbox(e.organizing.invert).setTooltip(e.organizing.invert_text).setCallback(function() {
-      if (S[1] = this.isSelected(), Inventory.update(), U.isSelected()) {
-       switch (S[0]) {
+     B = new west.gui.Checkbox(e.organizing.invert).setTooltip(e.organizing.invert_text).setCallback(function() {
+      if (V[1] = this.isSelected(), Inventory.update(), M.isSelected()) {
+       switch (V[0]) {
         case "none":
          return !1
        }
-       t.settings.showThis(S[0])
+       t.settings.showThis(V[0])
       }
      }),
-     U = new west.gui.Checkbox(e.organizing.all_items).setCallback(function() {
-      if (S[2] = this.isSelected(), this.isSelected()) {
-       switch (S[0]) {
+     M = new west.gui.Checkbox(e.organizing.all_items).setCallback(function() {
+      if (V[2] = this.isSelected(), this.isSelected()) {
+       switch (V[0]) {
         case "none":
          return !1
        }
-       t.settings.showThis(S[0])
+       t.settings.showThis(V[0])
       }
      }),
      j = function() {
-      S = ["none", !1, !1]
+      V = ["none", !1, !1]
      };
     EventHandler.listen("inventory_ready", j), j();
-    var R = '<span class="invPopup_buyicon"></span>&nbsp;',
+    var U = '<span class="invPopup_buyicon"></span>&nbsp;',
      q = '<span class="invPopup_sellicon"></span>&nbsp;',
      Y = o.max_price.objects_max_sell_price.item_id,
      C = $('<span style="font-style: italic;">&emsp;&emsp;(' + e.stats.item + ")</span>").addMousePopup(new ItemPopup(ItemManager.getByBaseId(Y)).popup),
-     G = o.max_price.products_max_sell_price.item_id,
-     F = $('<span style="font-style: italic;">&emsp;&emsp;(' + e.stats.product + ")</span>").addMousePopup(new ItemPopup(ItemManager.getByBaseId(G)).popup),
-     E = o.max_count.objects_max_total_count.item_id,
-     Q = $('<span style="font-style: italic;">&nbsp;(' + e.stats.item + ")</span><span>&emsp;x" + format_money(h(o.max_count.objects_max_total_count.item_count)) + "</span>").addMousePopup(new ItemPopup(ItemManager.getByBaseId(E)).popup),
-     f = o.max_count.products_max_total_count.item_id,
-     J = $('<span style="font-style: italic;">&nbsp;(' + e.stats.product + ")</span><span>&emsp;x" + format_money(h(o.max_count.products_max_total_count.item_count)) + "</span>").addMousePopup(new ItemPopup(ItemManager.getByBaseId(f)).popup),
-     v = [{
+     f = o.max_price.products_max_sell_price.item_id,
+     G = $('<span style="font-style: italic;">&emsp;&emsp;(' + e.stats.product + ")</span>").addMousePopup(new ItemPopup(ItemManager.getByBaseId(f)).popup),
+     F = o.max_count.objects_max_total_count.item_id,
+     E = $('<span style="font-style: italic;">&nbsp;(' + e.stats.item + ")</span><span>&emsp;x" + K(o.max_count.objects_max_total_count.item_count) + "</span>").addMousePopup(new ItemPopup(ItemManager.getByBaseId(F)).popup),
+     Q = o.max_count.products_max_total_count.item_id,
+     v = $('<span style="font-style: italic;">&nbsp;(' + e.stats.product + ")</span><span>&emsp;x" + K(o.max_count.products_max_total_count.item_count) + "</span>").addMousePopup(new ItemPopup(ItemManager.getByBaseId(Q)).popup),
+     J = [{
       desc: e.stats.total_buy_price,
-      value: R + "$" + format_money(o.value.inventory_buy_price)
+      value: U + "$" + format_money(o.value.inventory_buy_price)
      }, {
       desc: e.stats.total_sell_price,
       value: q + "$" + format_money(o.value.inventory_sell_price)
      }, {
       desc: e.stats.distinct_items,
-      value: R + "$" + format_money(h(o.value.unique_buy_price)) + "&nbsp;&nbsp;" + q + "$" + h(o.value.unique_sell_price)
+      value: U + "$" + K(o.value.unique_buy_price) + "&nbsp;&nbsp;" + q + "$" + K(o.value.unique_sell_price)
      }, {
       desc: e.stats.duplicates,
-      value: R + "$" + format_money(h(o.value.duplicates_buy_price)) + "&nbsp;&nbsp;" + q + "$" + h(o.value.duplicates_sell_price)
+      value: U + "$" + K(o.value.duplicates_buy_price) + "&nbsp;&nbsp;" + q + "$" + K(o.value.duplicates_sell_price)
      }, {
       desc: e.stats.dropped,
-      value: R + "$" + format_money(h(o.value.droppable_buy_price)) + "&nbsp;&nbsp;" + q + "$" + h(o.value.droppable_sell_price)
+      value: U + "$" + K(o.value.droppable_buy_price) + "&nbsp;&nbsp;" + q + "$" + K(o.value.droppable_sell_price)
      }, {
       desc: e.stats.wear,
-      value: R + "$" + format_money(h(o.value.wear_buy_price)) + "&nbsp;&nbsp;" + q + "$" + h(o.value.wear_sell_price)
+      value: U + "$" + K(o.value.wear_buy_price) + "&nbsp;&nbsp;" + q + "$" + K(o.value.wear_sell_price)
      }, {
       desc: e.stats.items,
-      value: R + "$" + format_money(h(o.value.objects_buy_price)) + "&nbsp;&nbsp;" + q + "$" + h(o.value.objects_sell_price)
+      value: U + "$" + K(o.value.objects_buy_price) + "&nbsp;&nbsp;" + q + "$" + K(o.value.objects_sell_price)
+     }, {
+      desc: e.stats.average + "&nbsp;(" + e.stats.items.toLowerCase() + ")",
+      value: U + "$" + K(o.value.average_obj_buy_price) + "&nbsp;&nbsp;" + q + "$" + K(o.value.average_obj_sell_price)
      }, {
       desc: e.stats.most_expensive,
       value: C
      }, {
       desc: e.stats.products,
-      value: R + "$" + format_money(h(o.value.products_buy_price)) + "&nbsp;&nbsp;" + q + "$" + h(o.value.products_sell_price)
+      value: U + "$" + K(o.value.products_buy_price) + "&nbsp;&nbsp;" + q + "$" + K(o.value.products_sell_price)
+     }, {
+      desc: e.stats.average + "&nbsp;(" + e.stats.products.toLowerCase() + ")",
+      value: U + "$" + K(o.value.average_prod_buy_price) + "&nbsp;&nbsp;" + q + "$" + K(o.value.average_prod_sell_price)
      }, {
       desc: e.stats.most_expensive,
-      value: F
+      value: G
      }, {
       desc: e.stats.recipes,
-      value: R + "$" + format_money(h(o.value.recipe_buy_price)) + "&nbsp;&nbsp;" + q + "$" + h(o.value.recipe_sell_price)
+      value: U + "$" + K(o.value.recipe_buy_price) + "&nbsp;&nbsp;" + q + "$" + K(o.value.recipe_sell_price)
      }],
      O = [{
       desc: e.stats.items,
@@ -1284,7 +1449,7 @@
       value: "&emsp;&emsp;&emsp;&emsp;x" + format_money(o.count.setitems_total_count) + "&nbsp;[" + format_money(o.count.setitems_count) + "]"
      }, {
       desc: e.stats.most_pieces,
-      value: Q
+      value: E
      }, {
       desc: Inventory.categoryDesc.head,
       value: "&emsp;&emsp;&emsp;&emsp;x" + format_money(o.count.head_total_count) + "&nbsp;[" + format_money(o.count.head_count) + "]"
@@ -1323,7 +1488,7 @@
       value: "&emsp;&emsp;&emsp;&emsp;x" + format_money(o.count.products_count)
      }, {
       desc: e.stats.most_pieces,
-      value: J
+      value: v
      }, {
       desc: e.stats.set_and_bonus,
       value: "&emsp;&emsp;&emsp;&emsp;x" + format_money(o.count.bonus_total_count) + "&nbsp;[" + format_money(o.count.bonus_count) + "]"
@@ -1348,111 +1513,115 @@
      }],
      z = (new west.gui.Table).addColumn("twir_stats_desc").addColumn("twir_stats_value").appendToCell("head", "twir_stats_desc").appendToCell("head", "twir_stats_value");
     z.appendRow($("<h2>" + e.stats.sales_value + "</h2>"));
-    for (var H = 0; H < v.length; H++) z.appendRow().appendToCell(-1, "twir_stats_desc", v[H].desc).appendToCell(-1, "twir_stats_value", v[H].value);
+    for (var H = 0; H < J.length; H++) z.appendRow().appendToCell(-1, "twir_stats_desc", J[H].desc).appendToCell(-1, "twir_stats_value", J[H].value);
     z.appendRow(), z.appendRow($("<h2>" + e.stats.quantities + "</h2>"));
     for (var W = 0; W < O.length; W++) z.appendRow().appendToCell(-1, "twir_stats_desc", O[W].desc).appendToCell(-1, "twir_stats_value", O[W].value);
     if (z.appendRow(), z.appendRow($("<h2>" + e.stats.item_set + "</h2>")), null != o.sets) {
      var D = "&emsp;&emsp;&emsp;&emsp;(" + o.sets.item_set + "/" + o.sets.all_sets + ")";
      z.appendRow().appendToCell(-1, "twir_stats_desc", e.stats.owned_sets).appendToCell(-1, "twir_stats_value", D), z.appendRow().appendToCell(-1, "twir_stats_desc", e.stats.completed_sets).appendToCell(-1, "twir_stats_value", "&emsp;&emsp;&emsp;&emsp;" + o.sets.complete_sets)
     } else {
-     var Z = '<span style="font-style: italic;">' + e.stats.set_menu_error + "</span>";
-     z.appendRow().appendToCell(-1, "twir_err_stats_desc", Z).appendToCell(-1, "twir_err_stats_value", "")
+     var T = '<span style="font-style: italic;">' + e.stats.set_menu_error + "</span>";
+     z.appendRow().appendToCell(-1, "twir_err_stats_desc", T).appendToCell(-1, "twir_err_stats_value", "")
     }
-    var T = new west.gui.Checkbox(e.features.window_title, "featBox").setSelected(r.twir_inventory.window_title),
-     P = new west.gui.Checkbox(e.features.window_minititle, "featBox").setSelected(r.twir_inventory.window_minititle),
-     N = new west.gui.Checkbox(e.features.empty_opacity, "featBox").setSelected(r.twir_inventory.empty_opacity),
-     L = new west.gui.Checkbox(e.features.item_counts, "featBox").setSelected(r.twir_inventory.item_counts),
-     X = new west.gui.Checkbox(e.features.sets_counts, "featBox").setSelected(r.twir_inventory.sets_counts),
-     _ = new west.gui.Checkbox(e.features.sets_color, "featBox").setSelected(r.twir_inventory.sets_color),
-     ee = new west.gui.Checkbox(e.features.event, "featBox").setSelected(r.twir_inventory.event),
-     te = new west.gui.Checkbox(e.features.item_id, "featBox").setSelected(r.twir_popup.item_id),
-     ie = new west.gui.Checkbox(e.features.job_name, "featBox").setSelected(r.twir_popup.job_name),
-     ae = new west.gui.Checkbox(e.features.item_crafting, "featBox").setSelected(r.twir_popup.item_crafting),
-     ne = new west.gui.Checkbox(e.features.recipe_name, "featBox").setSelected(r.twir_popup.recipe_name),
-     oe = new west.gui.Checkbox(e.features.partial_bonus + "&nbsp;(beta)", "featBox").setSelected(r.twir_popup.partial_bonus),
-     se = new west.gui.Checkbox(e.features.short_currency, "featBox").setSelected(r.twir_popup.short_currency),
-     re = (new west.gui.Combobox).addClass("twir_combobox").setWidth(165);
-    const le = {};
-    for (var pe in Object.keys(t.langs).sort().forEach(function(e) {
-      le[e] = t.langs[e]
-     }), le) re.addItem(pe, '<span style="background: url(//portal-bar.innogamescdn.com/images/west-sprite_01.1541670091.png) no-repeat top left;height: 12px;padding-left: 25px;background-position:' + le[pe].iso + ';">' + le[pe].translate + "</span>");
-    re.select(t.lang);
-    var ce = new west.gui.Button(e.organizing.submit, function() {
-      r.twir_inventory = {
-       window_title: T.isSelected(),
+    var Z = new west.gui.Checkbox(e.features.window_title, "featBox").setSelected(l.twir_inventory.window_title),
+     P = new west.gui.Checkbox(e.features.window_minititle, "featBox").setSelected(l.twir_inventory.window_minititle),
+     N = new west.gui.Checkbox(e.features.empty_opacity, "featBox").setSelected(l.twir_inventory.empty_opacity),
+     L = new west.gui.Checkbox(e.features.item_counts, "featBox").setSelected(l.twir_inventory.item_counts),
+     X = new west.gui.Checkbox(e.features.sets_counts, "featBox").setSelected(l.twir_inventory.sets_counts),
+     _ = new west.gui.Checkbox(e.features.sets_color, "featBox").setSelected(l.twir_inventory.sets_color),
+     ee = new west.gui.Checkbox(e.features.event, "featBox").setSelected(l.twir_inventory.event),
+     te = new west.gui.Checkbox(e.features.item_id, "featBox").setSelected(l.twir_popup.item_id),
+     ie = new west.gui.Checkbox(e.features.job_name, "featBox").setSelected(l.twir_popup.job_name),
+     ae = new west.gui.Checkbox(e.features.item_crafting, "featBox").setSelected(l.twir_popup.item_crafting),
+     ne = new west.gui.Checkbox(e.features.recipe_name, "featBox").setSelected(l.twir_popup.recipe_name),
+     oe = new west.gui.Checkbox(e.features.partial_bonus + "&nbsp;(currently disabled)", "featBox").setSelected(!1).setEnabled(!1),
+     re = new west.gui.Checkbox(e.features.short_currency, "featBox").setSelected(l.twir_popup.short_currency),
+     se = new west.gui.Checkbox(e.features.market_watcher, "featBox").setSelected(null == l.twir_popup.market_watcher || l.twir_popup.market_watcher),
+     le = new west.gui.Checkbox(e.features.set_pieces, "featBox").setSelected(null != l.twir_popup.set_pieces && l.twir_popup.set_pieces),
+     pe = (new west.gui.Combobox).addClass("twir_combobox").setWidth(165);
+    const ce = {};
+    for (var Ae in Object.keys(t.langs).sort().forEach(function(e) {
+      ce[e] = t.langs[e]
+     }), ce) pe.addItem(Ae, '<span style="background: url(//portal-bar.innogamescdn.com/images/west-sprite_01.1541670091.png) no-repeat top left;height: 12px;padding-left: 25px;background-position:' + ce[Ae].iso + ';">' + ce[Ae].translate + "</span>");
+    pe.select(t.lang);
+    var ge = new west.gui.Button(e.organizing.submit, function() {
+      l.twir_inventory = {
+       window_title: Z.isSelected(),
        window_minititle: P.isSelected(),
        empty_opacity: N.isSelected(),
        item_counts: L.isSelected(),
        sets_counts: X.isSelected(),
        sets_color: _.isSelected(),
        event: ee.isSelected()
-      }, r.twir_popup = {
+      }, l.twir_popup = {
        item_id: te.isSelected(),
        job_name: ie.isSelected(),
        item_crafting: ae.isSelected(),
        recipe_name: ne.isSelected(),
-       partial_bonus: oe.isSelected(),
-       short_currency: se.isSelected()
-      }, null != localStorage ? (localStorage.twir_inventory = JSON.stringify(r.twir_inventory), localStorage.twir_popup = JSON.stringify(r.twir_popup), localStorage.setItem("scriptsLang", re.getValue()), new UserMessage(e.informative.sucess, UserMessage.TYPE_SUCCESS).show(), location.reload()) : new UserMessage(e.informative.storage_error + "!", UserMessage.TYPE_ERROR).show()
+       partial_bonus: !1,
+       set_pieces: le.isSelected(),
+       short_currency: re.isSelected(),
+       market_watcher: se.isSelected()
+      }, null != localStorage ? (localStorage.twir_inventory = JSON.stringify(l.twir_inventory), localStorage.twir_popup = JSON.stringify(l.twir_popup), localStorage.setItem("scriptsLang", pe.getValue()), new UserMessage(ce[pe.getValue()].informative.sucess, UserMessage.TYPE_SUCCESS).show(), location.reload()) : new UserMessage(ce[pe.getValue()].informative.storage_error + "!", UserMessage.TYPE_ERROR).show()
      }).addClass("twir_buttons").setMinWidth(80).setMaxWidth(100),
-     Ae = new west.gui.Textfield("bonusField").onlyNumeric().setName("skillValue").setSize(1).maxlength(1).setValue(5),
-     ge = new west.gui.Accordion("bonusAccordion", e.organizing.bonus, "bonusSearch"),
-     me = CharacterSkills.allSkillKeys;
-    ge.setContent($('<div class="skillbtn" id="' + me[0] + '" title="' + CharacterSkills.keyNames[me[0]] + '" style="background-image: url(https://westcz.innogamescdn.com/images/window/skills/skillicon_' + me[0] + '.png)" /><div class="skillbtn" id="' + me[1] + '" title="' + CharacterSkills.keyNames[me[1]] + '" style="background-image: url(https://westcz.innogamescdn.com/images/window/skills/skillicon_' + me[1] + '.png)" /><div class="skillbtn" id="' + me[2] + '" title="' + CharacterSkills.keyNames[me[2]] + '" style="background-image: url(https://westcz.innogamescdn.com/images/window/skills/skillicon_' + me[2] + '.png)" /><div class="skillbtn" id="' + me[3] + '" title="' + CharacterSkills.keyNames[me[3]] + '" style="background-image: url(https://westcz.innogamescdn.com/images/window/skills/skillicon_' + me[3] + '.png)" /><div class="skillbtn" id="' + me[4] + '" title="' + CharacterSkills.keyNames[me[4]] + '" style="background-image: url(https://westcz.innogamescdn.com/images/window/skills/skillicon_' + me[4] + '.png)" /><div class="skillbtn" id="' + me[5] + '" title="' + CharacterSkills.keyNames[me[5]] + '" style="background-image: url(https://westcz.innogamescdn.com/images/window/skills/skillicon_' + me[5] + '.png)" /><div class="skillbtn" id="' + me[6] + '" title="' + CharacterSkills.keyNames[me[6]] + '" style="background-image: url(https://westcz.innogamescdn.com/images/window/skills/skillicon_' + me[6] + '.png)" /><div class="skillbtn" id="' + me[7] + '" title="' + CharacterSkills.keyNames[me[7]] + '" style="background-image: url(https://westcz.innogamescdn.com/images/window/skills/skillicon_' + me[7] + '.png)" /><div class="skillbtn" id="' + me[8] + '" title="' + CharacterSkills.keyNames[me[8]] + '" style="background-image: url(https://westcz.innogamescdn.com/images/window/skills/skillicon_' + me[8] + '.png)" /><div class="skillbtn" id="' + me[9] + '" title="' + CharacterSkills.keyNames[me[9]] + '" style="background-image: url(https://westcz.innogamescdn.com/images/window/skills/skillicon_' + me[9] + '.png)" /><div class="skillbtn" id="' + me[10] + '" title="' + CharacterSkills.keyNames[me[10]] + '" style="background-image: url(https://westcz.innogamescdn.com/images/window/skills/skillicon_' + me[10] + '.png)" /><div class="skillbtn" id="' + me[11] + '" title="' + CharacterSkills.keyNames[me[11]] + '" style="background-image: url(https://westcz.innogamescdn.com/images/window/skills/skillicon_' + me[11] + '.png)" /><div class="skillbtn" id="' + me[12] + '" title="' + CharacterSkills.keyNames[me[12]] + '" style="background-image: url(https://westcz.innogamescdn.com/images/window/skills/skillicon_' + me[12] + '.png)" /><div class="skillbtn" id="' + me[13] + '" title="' + CharacterSkills.keyNames[me[13]] + '" style="background-image: url(https://westcz.innogamescdn.com/images/window/skills/skillicon_' + me[13] + '.png)" /><div class="skillbtn" id="' + me[14] + '" title="' + CharacterSkills.keyNames[me[14]] + '" style="background-image: url(https://westcz.innogamescdn.com/images/window/skills/skillicon_' + me[14] + '.png)" /><div class="skillbtn" id="' + me[15] + '" title="' + CharacterSkills.keyNames[me[15]] + '" style="background-image: url(https://westcz.innogamescdn.com/images/window/skills/skillicon_' + me[15] + '.png)" /><div class="skillbtn" id="' + me[16] + '" title="' + CharacterSkills.keyNames[me[16]] + '" style="background-image: url(https://westcz.innogamescdn.com/images/window/skills/skillicon_' + me[16] + '.png)" /><div class="skillbtn" id="' + me[17] + '" title="' + CharacterSkills.keyNames[me[17]] + '" style="background-image: url(https://westcz.innogamescdn.com/images/window/skills/skillicon_' + me[17] + '.png)" /><div class="skillbtn" id="' + me[18] + '" title="' + CharacterSkills.keyNames[me[18]] + '" style="background-image: url(https://westcz.innogamescdn.com/images/window/skills/skillicon_' + me[18] + '.png)" /><div class="skillbtn" id="' + me[19] + '" title="' + CharacterSkills.keyNames[me[19]] + '" style="background-image: url(https://westcz.innogamescdn.com/images/window/skills/skillicon_' + me[19] + '.png)" />').click(function(e) {
-     ye(e.target.id)
+     me = new west.gui.Textfield("bonusField").onlyNumeric().setName("skillValue").setSize(1).maxlength(1).setValue(5),
+     de = new west.gui.Accordion("bonusAccordion", e.organizing.bonus, "bonusSearch"),
+     ue = CharacterSkills.allSkillKeys;
+    de.setContent($('<div class="skillbtn" id="' + ue[0] + '" title="' + CharacterSkills.keyNames[ue[0]] + '" style="background-image: url(https://westcz.innogamescdn.com/images/window/skills/skillicon_' + ue[0] + '.png)" /><div class="skillbtn" id="' + ue[1] + '" title="' + CharacterSkills.keyNames[ue[1]] + '" style="background-image: url(https://westcz.innogamescdn.com/images/window/skills/skillicon_' + ue[1] + '.png)" /><div class="skillbtn" id="' + ue[2] + '" title="' + CharacterSkills.keyNames[ue[2]] + '" style="background-image: url(https://westcz.innogamescdn.com/images/window/skills/skillicon_' + ue[2] + '.png)" /><div class="skillbtn" id="' + ue[3] + '" title="' + CharacterSkills.keyNames[ue[3]] + '" style="background-image: url(https://westcz.innogamescdn.com/images/window/skills/skillicon_' + ue[3] + '.png)" /><div class="skillbtn" id="' + ue[4] + '" title="' + CharacterSkills.keyNames[ue[4]] + '" style="background-image: url(https://westcz.innogamescdn.com/images/window/skills/skillicon_' + ue[4] + '.png)" /><div class="skillbtn" id="' + ue[5] + '" title="' + CharacterSkills.keyNames[ue[5]] + '" style="background-image: url(https://westcz.innogamescdn.com/images/window/skills/skillicon_' + ue[5] + '.png)" /><div class="skillbtn" id="' + ue[6] + '" title="' + CharacterSkills.keyNames[ue[6]] + '" style="background-image: url(https://westcz.innogamescdn.com/images/window/skills/skillicon_' + ue[6] + '.png)" /><div class="skillbtn" id="' + ue[7] + '" title="' + CharacterSkills.keyNames[ue[7]] + '" style="background-image: url(https://westcz.innogamescdn.com/images/window/skills/skillicon_' + ue[7] + '.png)" /><div class="skillbtn" id="' + ue[8] + '" title="' + CharacterSkills.keyNames[ue[8]] + '" style="background-image: url(https://westcz.innogamescdn.com/images/window/skills/skillicon_' + ue[8] + '.png)" /><div class="skillbtn" id="' + ue[9] + '" title="' + CharacterSkills.keyNames[ue[9]] + '" style="background-image: url(https://westcz.innogamescdn.com/images/window/skills/skillicon_' + ue[9] + '.png)" /><div class="skillbtn" id="' + ue[10] + '" title="' + CharacterSkills.keyNames[ue[10]] + '" style="background-image: url(https://westcz.innogamescdn.com/images/window/skills/skillicon_' + ue[10] + '.png)" /><div class="skillbtn" id="' + ue[11] + '" title="' + CharacterSkills.keyNames[ue[11]] + '" style="background-image: url(https://westcz.innogamescdn.com/images/window/skills/skillicon_' + ue[11] + '.png)" /><div class="skillbtn" id="' + ue[12] + '" title="' + CharacterSkills.keyNames[ue[12]] + '" style="background-image: url(https://westcz.innogamescdn.com/images/window/skills/skillicon_' + ue[12] + '.png)" /><div class="skillbtn" id="' + ue[13] + '" title="' + CharacterSkills.keyNames[ue[13]] + '" style="background-image: url(https://westcz.innogamescdn.com/images/window/skills/skillicon_' + ue[13] + '.png)" /><div class="skillbtn" id="' + ue[14] + '" title="' + CharacterSkills.keyNames[ue[14]] + '" style="background-image: url(https://westcz.innogamescdn.com/images/window/skills/skillicon_' + ue[14] + '.png)" /><div class="skillbtn" id="' + ue[15] + '" title="' + CharacterSkills.keyNames[ue[15]] + '" style="background-image: url(https://westcz.innogamescdn.com/images/window/skills/skillicon_' + ue[15] + '.png)" /><div class="skillbtn" id="' + ue[16] + '" title="' + CharacterSkills.keyNames[ue[16]] + '" style="background-image: url(https://westcz.innogamescdn.com/images/window/skills/skillicon_' + ue[16] + '.png)" /><div class="skillbtn" id="' + ue[17] + '" title="' + CharacterSkills.keyNames[ue[17]] + '" style="background-image: url(https://westcz.innogamescdn.com/images/window/skills/skillicon_' + ue[17] + '.png)" /><div class="skillbtn" id="' + ue[18] + '" title="' + CharacterSkills.keyNames[ue[18]] + '" style="background-image: url(https://westcz.innogamescdn.com/images/window/skills/skillicon_' + ue[18] + '.png)" /><div class="skillbtn" id="' + ue[19] + '" title="' + CharacterSkills.keyNames[ue[19]] + '" style="background-image: url(https://westcz.innogamescdn.com/images/window/skills/skillicon_' + ue[19] + '.png)" />').click(function(e) {
+     we(e.target.id)
     }));
-    var ue = [],
-     de = {},
-     ke = "",
-     ye = function(t) {
+    var ke = [],
+     be = {},
+     ye = "",
+     we = function(t) {
       $("#bonusField").val(Math.min(5, Math.max(1, $("#bonusField").val())));
       var i = $("#bonusField").val(),
-       a = ue.map(e => e.name).indexOf(t);
-      a > -1 ? ue.splice(a, 1) : ue.push({
+       a = ke.map(e => e.name).indexOf(t);
+      a > -1 ? ke.splice(a, 1) : ke.push({
        name: t,
        value: i
-      }), ue.length > 5 && (ue.splice(5, 5), new UserMessage(e.informative.bs_limit + "!", UserMessage.TYPE_ERROR).show()), de = {};
-      for (var n = 0; n < ue.length; n++) de[ue[n].name] = ue[n].value;
-      for (var o in ke = "", de) ke += CharacterSkills.keyNames[o] + ": " + de[o] + ", ";
-      $("#bs_display").html(ke)
+      }), ke.length > 5 && (ke.splice(5, 5), new UserMessage(e.informative.bs_limit + "!", UserMessage.TYPE_ERROR).show()), be = {};
+      for (var n = 0; n < ke.length; n++) be[ke[n].name] = ke[n].value;
+      for (var o in ye = "", be) ye += CharacterSkills.keyNames[o] + ": " + be[o] + ", ";
+      $("#bs_display").html(ye)
      },
-     be = new west.gui.Button(e.organizing.show, function() {
-      jQuery.isEmptyObject(de) ? new UserMessage(e.informative.error + "!", UserMessage.TYPE_ERROR).show() : (t.settings.gui.window.showLoader(), this.timeout = setTimeout(function() {
-       Bag.searchBest(de, null, !0), t.settings.gui.window.hideLoader()
+     he = new west.gui.Button(e.organizing.show, function() {
+      jQuery.isEmptyObject(be) ? new UserMessage(e.informative.error + "!", UserMessage.TYPE_ERROR).show() : (t.settings.gui.window.showLoader(), this.timeout = setTimeout(function() {
+       Bag.searchBest(be, null, !0), t.settings.gui.window.hideLoader()
       }, 750))
      }).addClass("twir_buttons").setMinWidth(80).setMaxWidth(100),
-     we = new west.gui.Icon("abort", "Reset"),
-     Ie = new west.gui.Accordion("twir_filter_feature", e.organizing.filter, "twirSearchPage").setContent($("<span />").append((new west.gui.Groupframe).appendToContentPane($("<span />").append(V.getMainDiv().css({
+     xe = new west.gui.Icon("abort", "Reset"),
+     Ie = new west.gui.Accordion("twir_filter_feature", e.organizing.filter, "twirSearchPage").setContent($("<span />").append((new west.gui.Groupframe).appendToContentPane($("<span />").append(B.getMainDiv().css({
       float: "right",
       "margin-right": "20px"
-     })).append(U.getMainDiv().css({
+     })).append(M.getMainDiv().css({
       float: "right",
       "margin-right": "20px"
      })).append("<br><br><hr>").append(m.getMainDiv().css({
       margin: "2px",
       float: "left"
-     })).append("<br><br><hr>").append(B.getMainDiv().css({
+     })).append("<br><br><hr>").append(I.getMainDiv().css({
       margin: "2px",
       float: "left"
-     })).append(u.getMainDiv().css({
+     })).append(d.getMainDiv().css({
       margin: "2px",
       float: "right",
       "min-width": "100px"
-     })).append("<br><br><hr>").append(d.getMainDiv().css({
+     })).append("<br><br><hr>").append(u.getMainDiv().css({
       margin: "2px",
       float: "left"
-     })).append(K.getMainDiv().css({
-      margin: "2px",
-      float: "right",
-      "min-width": "100px"
-     })).append("<br><br><hr>").append(y.getMainDiv().css({
-      margin: "2px",
-      float: "left"
-     })).append(I.getMainDiv().css({
+     })).append(S.getMainDiv().css({
       margin: "2px",
       float: "right",
       "min-width": "100px"
      })).append("<br><br><hr>").append(b.getMainDiv().css({
+      margin: "2px",
+      float: "left"
+     })).append(h.getMainDiv().css({
+      margin: "2px",
+      float: "right",
+      "min-width": "100px"
+     })).append("<br><br><hr>").append(y.getMainDiv().css({
       margin: "2px",
       float: "left"
      })).append(w.getMainDiv().css({
@@ -1467,23 +1636,23 @@
       float: "right",
       "min-width": "100px"
      })).append("<br><br><hr>")).getMainDiv())),
-     xe = new west.gui.Accordion("twir_sort_feature", e.organizing.sort_by, "twirSearchPage").setContent($("<span />").append((new west.gui.Groupframe).appendToContentPane($("<span />").append(p.getMainDiv().css({
+     Se = new west.gui.Accordion("twir_sort_feature", e.organizing.sort_by, "twirSearchPage").setContent($("<span />").append((new west.gui.Groupframe).appendToContentPane($("<span />").append(p.getMainDiv().css({
       float: "right",
       "margin-right": "20px"
-     })).append(l.getMainDiv().css({
+     })).append(r.getMainDiv().css({
       float: "right",
       "margin-right": "20px"
      })).append("<br><br>").append(a.getMainDiv()).append("<br><hr><br>").append(c.getMainDiv().css({
       float: "left",
       "margin-left": "20px"
      })).append("<br><br><br>")).getMainDiv())),
-     he = new west.gui.Accordion("twir_bonus_search", e.organizing.bonus_search, "twirSearchPage").setContent($("<span />").append((new west.gui.Groupframe).appendToContentPane($("<span />").append("<br>" + e.organizing.value + ": ").append(Ae.getMainDiv()).append(we.getMainDiv().on("click", function() {
-      ue = [], de = {}, $("#bs_display").html("")
+     Be = new west.gui.Accordion("twir_bonus_search", e.organizing.bonus_search, "twirSearchPage").setContent($("<span />").append((new west.gui.Groupframe).appendToContentPane($("<span />").append("<br>" + e.organizing.value + ": ").append(me.getMainDiv()).append(xe.getMainDiv().on("click", function() {
+      ke = [], be = {}, $("#bs_display").html("")
      }).css({
       cursor: "pointer"
-     })).append('<br><img class="tw2gui-iconset tw2gui-icon-charclass" src="https://westcz.innogamescdn.com/images/tw2gui/pixel-vfl3z5WfW.gif" style="margin-right: 5px;margin-bottom: 3px;"/><span id="bs_display"></span><br>').append(ge.getMainDiv()).append("<br><hr><br>")).getMainDiv()).append((new west.gui.Groupframe).appendToContentPane($('<div class="twirBSPage" style="height:32px;" />').append(be.getMainDiv())).getMainDiv())),
-     Se = new west.gui.Accordion("twir_stats_feature", e.stats.stats, "twirSearchPage").setContent($('<span class="twirSearchPage" />').append(z.getMainDiv())),
-     Be = new west.gui.Accordion("twir_features", e.features.preferences, "twirSearchPage").setContent($("<span />").append((new west.gui.Groupframe).appendToContentPane($("<span />").append(re.getMainDiv()).append('<span style="text-align:center;display:block;margin-top:15px;">' + e.translator + '</span><hr><br><div class="twir_text">' + e.features.inventory_menus + " </div><br> ").append(T.getMainDiv().css({
+     })).append('<br><img class="tw2gui-iconset tw2gui-icon-charclass" src="https://westcz.innogamescdn.com/images/tw2gui/pixel-vfl3z5WfW.gif" style="margin-right: 5px;margin-bottom: 3px;"/><span id="bs_display"></span><br>').append(de.getMainDiv()).append("<br><hr><br>")).getMainDiv()).append((new west.gui.Groupframe).appendToContentPane($('<div class="twirBSPage" style="height:32px;" />').append(he.getMainDiv())).getMainDiv())),
+     Me = new west.gui.Accordion("twir_stats_feature", e.stats.stats, "twirSearchPage").setContent($('<span class="twirSearchPage" />').append(z.getMainDiv())),
+     Ke = new west.gui.Accordion("twir_features", e.features.preferences, "twirSearchPage").setContent($("<span />").append((new west.gui.Groupframe).appendToContentPane($("<span />").append(pe.getMainDiv()).append('<span style="text-align:center;display:block;margin-top:15px;">' + e.translator + '</span><hr><br><div class="twir_text">' + e.features.inventory_menus + " </div><br> ").append(Z.getMainDiv().css({
       margin: "2px",
       "min-width": "100px"
      })).append("<br>").append(P.getMainDiv().css({
@@ -1519,13 +1688,19 @@
      })).append("<br>").append(oe.getMainDiv().css({
       margin: "2px",
       "min-width": "100px"
+     })).append("<br>").append(le.getMainDiv().css({
+      margin: "2px",
+      "min-width": "100px"
+     })).append("<br>").append(re.getMainDiv().css({
+      margin: "2px",
+      "min-width": "100px"
      })).append("<br>").append(se.getMainDiv().css({
       margin: "2px",
       "min-width": "100px"
-     })).append("<br><br><hr><br>")).getMainDiv()).append((new west.gui.Groupframe).appendToContentPane($('<div style="height:32px;" />').append(ce.getMainDiv())).getMainDiv())),
-     Me = new west.gui.Accordion("twir_donate", e.donate_title, "twirSearchPage").setContent($("<span />").append((new west.gui.Groupframe).appendToContentPane($("<span />").append('<div style="text-align: center;margin-left: auto;margin-right: auto;display: block;font-size: 14px;">' + e.donate_text + ':</div><br><span style="color: #5e321a;font-weight: bold;text-align: center;margin-left: auto;margin-right: auto;display: block;font-size: 15px;">' + e.donate_paypal + ':<br><br><form target="_blank" action="https://www.paypal.com/cgi-bin/webscr method="post"><input type="hidden" name="cmd" value="_s-xclick"><input type="hidden" name="hosted_button_id" value="TE95VRHUPXCUW"><input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!"><img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1"></form></span><br><div style="color: #5e321a;font-weight: bold;text-align: center;margin-left: auto;margin-right: auto;display: block;font-size: 15px;">' + e.donate_ingame + ':</div><div style="text-align: center;margin-left: auto;margin-right: auto;display: block;font-size: 13px;">(CZ server only : ingame money, sets, some items, ..) : <br><a target="_blank" href="https://www.the-west.cz/?ref=west_invite_linkrl&player_id=746376&world_id=15&hash=6511">Jamza</a> @ <a target="_blank" href="https://www.the-west.cz/?ref=west_invite_linkrl&player_id=273882&world_id=15&hash=591e">danom333</a></div><br><div style="text-align:center;display:block;font-size:15px;color: #5e321a;font-weight: bold;margin-top: 15px;">' + e.tyty + '!&nbsp;<img src="https://westcz.innogamescdn.com/images/chat/emoticons/smile.png?1" alt=":)"></div>')).getMainDiv())),
-     Ke = new west.gui.Scrollpane;
-    t.settings.gui.window.appendToContentPane(Ke.getMainDiv()), Ke.appendContent(Ie.getMainDiv()), Ke.appendContent(xe.getMainDiv()), Ke.appendContent(he.getMainDiv()), Ke.appendContent(Se.getMainDiv()), Ke.appendContent(Be.getMainDiv()), Ke.appendContent(Me.getMainDiv())
+     })).append("<br><br><hr><br>")).getMainDiv()).append((new west.gui.Groupframe).appendToContentPane($('<div style="height:32px;" />').append(ge.getMainDiv())).getMainDiv())),
+     Ve = new west.gui.Accordion("twir_donate", e.donate_title, "twirSearchPage").setContent($("<span />").append((new west.gui.Groupframe).appendToContentPane($("<span />").append('<div style="text-align: center;margin-left: auto;margin-right: auto;display: block;font-size: 14px;">' + e.donate_text + ':</div><br><span style="color: #5e321a;font-weight: bold;text-align: center;margin-left: auto;margin-right: auto;display: block;font-size: 15px;">' + e.donate_paypal + ':<br><br><form target="_blank" action="https://www.paypal.com/cgi-bin/webscr method="post"><input type="hidden" name="cmd" value="_s-xclick"><input type="hidden" name="hosted_button_id" value="TE95VRHUPXCUW"><input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!"><img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1"></form></span><br><div style="color: #5e321a;font-weight: bold;text-align: center;margin-left: auto;margin-right: auto;display: block;font-size: 15px;">' + e.donate_ingame + ':</div><div style="text-align: center;margin-left: auto;margin-right: auto;display: block;font-size: 13px;">(CZ server only : ingame money, sets, some items, ..) : <br><a target="_blank" href="https://www.the-west.cz/?ref=west_invite_linkrl&player_id=746376&world_id=15&hash=6511">Jamza</a> @ <a target="_blank" href="https://www.the-west.cz/?ref=west_invite_linkrl&player_id=273882&world_id=15&hash=591e">danom333</a></div><br><div style="text-align:center;display:block;font-size:15px;color: #5e321a;font-weight: bold;margin-top: 15px;">' + e.tyty + '!&nbsp;<img src="https://westcz.innogamescdn.com/images/chat/emoticons/smile.png?1" alt=":)"></div>')).getMainDiv())),
+     je = new west.gui.Scrollpane;
+    t.settings.gui.window.appendToContentPane(je.getMainDiv()), je.appendContent(Ie.getMainDiv()), je.appendContent(Se.getMainDiv()), je.appendContent(Be.getMainDiv()), je.appendContent(Me.getMainDiv()), je.appendContent(Ke.getMainDiv()), je.appendContent(Ve.getMainDiv())
    },
    showThis: function(t) {
     Inventory.window.showLoader();
@@ -1533,12 +1708,12 @@
     0 == i.lenght || "set" != Inventory.category ? i = ".*" : i.lenght;
     var a = Bag.search(i),
      n = [],
-     o = u;
+     o = k;
     $.each(a, function(e, i) {
      if ("yield" != i.obj.type && "recipe" != i.obj.type || o.indexOf(i.obj.item_base_id) > 0 && ($.inArray(i.getType(), Inventory.getCategoryTypes(Inventory.category)) > -1 || "set" == Inventory.category || "new" == Inventory.category)) {
       var a = i.getCount(),
-       s = Wear.carries(i.obj.item_base_id);
-      if (s && a++, a > 0 && 1 == S[1]) {
+       r = Wear.carries(i.obj.item_base_id);
+      if (r && a++, a > 0 && 1 == V[1]) {
        switch (t) {
         case "useless":
          (a > 1 || 0 != i.obj.item_level || i.isJobItem()) && (i = null);
@@ -1565,13 +1740,13 @@
          null == i.obj.characterSex && null == i.obj.characterClass || (i = null);
          break;
         case "rare":
-         (i.obj.short.indexOf("_fine") > 0 || k.indexOf(i.obj.item_base_id) > 0) && (i = null);
+         (i.obj.short.indexOf("_fine") > 0 || w.indexOf(i.obj.item_base_id) > 0) && (i = null);
          break;
         case "dropable":
          i.obj.dropable && (i = null)
        }
        i && n.push(i)
-      } else if (a > 0 && 0 == S[1]) {
+      } else if (a > 0 && 0 == V[1]) {
        switch (t) {
         case "useless":
          (a < 2 || 0 != i.obj.item_level || i.isJobItem()) && (i = null);
@@ -1598,7 +1773,7 @@
          i.obj.characterSex || i.obj.characterClass || (i = null);
          break;
         case "rare":
-         i.obj.short.indexOf("_fine") < 0 && k.indexOf(i.obj.item_base_id) < 0 && (i = null);
+         i.obj.short.indexOf("_fine") < 0 && w.indexOf(i.obj.item_base_id) < 0 && (i = null);
          break;
         case "dropable":
          i.obj.dropable || (i = null)
@@ -1607,20 +1782,20 @@
       }
       Inventory.window.hideLoader()
      }
-    }), Inventory.window.showLoader(), B(n), this.timeout = setTimeout(function() {
-     return Inventory.searchResult = n || [], Inventory.addItems("set", 1), I("TWIR - " + e.invent, e.organizing.all_items)
+    }), Inventory.window.showLoader(), j(n), this.timeout = setTimeout(function() {
+     return Inventory.searchResult = n || [], Inventory.addItems("set", 1), B("TWIR - " + e.invent, e.organizing.all_items)
     }, 1e3)
    }
   }, t.init = function() {
-   t.attach(), t.enhancedPopup(), JobsWindow.updateJobs(), EventHandler.listen("inventory_ready", t.injectFilters), EventHandler.listen("inventory_ready", t.enhancedInventory), EventHandler.listen("inventory_ready", t.statsSalesValue), EventHandler.listen("inventory_ready", t.statsQuantities), this.timeout = setTimeout(function() {
-    t.updateCrafting()
+   t.attach(), t.enhancedPopup(), JobsWindow.updateJobs(), EventHandler.listen("inventory_ready", t.injectFilters), EventHandler.listen("inventory_ready", t.enhancedInventory), EventHandler.listen("inventory_ready", t.statsQuantities), EventHandler.listen("inventory_ready", t.statsSalesValue), this.timeout = setTimeout(function() {
+    t.injectFilters(), t.marketBest(), null == localStorage || null == localStorage.twir_crafting ? t.updateCrafting() : h = JSON.parse(localStorage.twir_crafting), t.updateMarket(y)
    }, 2e3)
   }, t.attach = function() {
    var i = Inventory.firstLoad;
    Inventory.firstLoad = function() {
     i.apply(this, arguments), Inventory.guiElements.searchTextfield.maxlength(24).setPlaceholder(Inventory.categoryDesc.set + ".. [Enter]"), Inventory.guiElements.searchClearButton = "", $("#windows .inventory .actions .upgrade_items").find(".textart_title").html('<img style="margin-right: 1px;margin-bottom: 2px;"src="' + t.images.upgradeicon + '">'), $("#windows .inventory .search_container").find(".tw2gui-icon-abort").css({
      display: "none"
-    }), I("TWIR - " + e.invent, "TWIR"), $("#windows .inventory .tw2gui_inner_window_title").find(".textart_title").css({
+    }), B("TWIR - " + e.invent, "TWIR"), $("#windows .inventory .tw2gui_inner_window_title").find(".textart_title").css({
      "margin-top": "4px",
      "font-size": "16pt",
      "padding-right": "200px",
@@ -1640,11 +1815,11 @@
    };
    Inventory.addItemsByCategory;
    Inventory.addItemsByCategory = function(e, t, i) {
-    for (var a = Inventory.calcPages(e), n = Inventory.getCategoryTypes(e), o = 0, s = n.length, r = []; o < s; o++) r = r.concat(Bag.getItemsIdsByType(n[o]));
-    var l = Bag.getItemsByItemIds(r);
+    for (var a = Inventory.calcPages(e), n = Inventory.getCategoryTypes(e), o = 0, r = n.length, s = []; o < r; o++) s = s.concat(Bag.getItemsIdsByType(n[o]));
+    var l = Bag.getItemsByItemIds(s);
     for (! function(e) {
       for (var t = e.length - 1; t >= 0; --t)
-       if (0 == S[1]) switch ("filt_" + S[0]) {
+       if (0 == V[1]) switch ("filt_" + V[0]) {
         case "filt_auctionable":
          0 == e[t].obj.auctionable && e.splice(t, 1);
          break;
@@ -1667,7 +1842,7 @@
          null == e[t].obj.characterSex && null == e[t].obj.characterClass && e.splice(t, 1);
          break;
         case "filt_rare":
-         e[t].obj.short.indexOf("_fine") < 0 && k.indexOf(e[t].obj.item_base_id) < 0 && e.splice(t, 1);
+         e[t].obj.short.indexOf("_fine") < 0 && w.indexOf(e[t].obj.item_base_id) < 0 && e.splice(t, 1);
          break;
         case "filt_upgraded":
          0 == e[t].obj.item_level && e.splice(t, 1);
@@ -1677,7 +1852,7 @@
          break;
         default:
          0 == e[t].obj.active && e.splice(t, 1)
-       } else switch ("filt_" + S[0]) {
+       } else switch ("filt_" + V[0]) {
         case "filt_auctionable":
          1 == e[t].obj.auctionable && e.splice(t, 1);
          break;
@@ -1700,7 +1875,7 @@
          null !== e[t].obj.characterSex && null !== e[t].obj.characterClass && e.splice(t, 1);
          break;
         case "filt_rare":
-         e[t].obj.short.indexOf("_fine") > 0 && k.indexOf(e[t].obj.item_base_id) > 0 && e.splice(t, 1);
+         e[t].obj.short.indexOf("_fine") > 0 && w.indexOf(e[t].obj.item_base_id) > 0 && e.splice(t, 1);
          break;
         case "filt_upgraded":
          0 !== e[t].obj.item_level && e.splice(t, 1);
@@ -1711,7 +1886,7 @@
         default:
          0 == e[t].obj.active && e.splice(t, 1)
        }
-     }(l), B(l), r = r.slice(t, t + Inventory.size), o = 0, s = l.length; o < s; o++) Inventory.addItemDivToInv(l[o]);
+     }(l), j(l), s = s.slice(t, t + Inventory.size), o = 0, r = l.length; o < r; o++) Inventory.addItemDivToInv(l[o]);
     0 != a && a > 0 && i >= a && (i = a - 1), Inventory.setNavigation(e, i + 1, a)
    };
    var n = Inventory.updateFilters;
@@ -1720,17 +1895,17 @@
      Character.level < 20 && $(".upgrade_items .textart_title").addClass("no-items"), o.count.bonus_count < 1 && $(".filter_bonus, .filter_bonus:hover").addClass("no-items"), o.count.work_count < 1 && $(".filter_work, .filter_work:hover").addClass("no-items"), o.count.quest_count < 1 && $(".filter_quests, .filter_quests:hover").addClass("no-items"), o.count.useables_count < 1 && $(".filter_useables, .filter_useables:hover").addClass("no-items"), o.count.quest_count < 1 && $(".filter_buff, .filter_buff:hover").addClass("no-items"), o.count.craft_count < 1 && o.count.recipes_count < 1 && $(".filter_craft, .filter_craft:hover").addClass("no-items")
     }, 100)
    };
-   var s = Inventory.showCategory;
+   var r = Inventory.showCategory;
    Inventory.showCategory = function(e, t) {
-    s.apply(this, arguments), I(Inventory.categoryDesc[Inventory.category], Inventory.categoryDesc[Inventory.category])
+    r.apply(this, arguments), B(Inventory.categoryDesc[Inventory.category], Inventory.categoryDesc[Inventory.category])
    };
-   var r = Inventory.showCustomItems;
+   var s = Inventory.showCustomItems;
    Inventory.showCustomItems = function(t) {
-    r.apply(this, arguments), I("TWIR - " + e.invent, "TWIR")
+    s.apply(this, arguments), B("TWIR - " + e.invent, "TWIR")
    };
    var l = Inventory.showSearchResult;
    Inventory.showSearchResult = function(t) {
-    l.apply(this, arguments), I("TWIR - " + e.invent, "TWIR")
+    l.apply(this, arguments), B("TWIR - " + e.invent, "TWIR")
    }
   }, t.enhancedPopup = function() {
    var t = ItemPopup.getXHTML;
@@ -1739,165 +1914,248 @@
      a = t.call(this);
     (a = a.replace(/<br><span class="inventory_popup_requirement_text(.*?)>$/, function(e) {
      return i = e, ""
-    }).replace('<div class="invPopup_body">', "").replace(/(inventory_popup_type")(>)/g, '$1 style="max-width: 200px!important;margin-left: auto;margin-right: auto;">').replace('inventory_popup"', 'invPopup_body $& style="max-width:550px;"><table><td').replace(/bonus_attr tw_green"/g, '$& style="padding-left:5px;max-width:200px;min-width:150px;display:block;"').replace('<br><br><div class="item_set_bonus">', i + '</td><td style="padding-left:5px;max-width:200px;min-width:150px;display:block;">')).includes(i) || (a += i), a = (a = a.replace(/(<p)(>)/g, '$1 class="inventory_popup_type" style="max-width: 250px!important;margin-left: auto;margin-right: auto;">')).replace(/(inventory_popup_requirement_text")(>)/g, '$1 style="max-width: 200px!important;display: inline-block;">'), window.TWToolkit || !0 !== r.twir_popup.item_id || (a = a.replace(this.item_obj.name, '$& <br><p class="twir_id" style="margin-top: 5px;color: #5e321a;text-align: center;font-size: 11px;margin-bottom: 5px;">[item=<b>' + this.item_obj.item_id + "</b>]</p>"));
-    var n = ItemManager.get(this.item_obj.item_id);
-    if (n.auctionable || (a = a.replace(/(invPopup_foot")(>)/g, '$1 style="display:block;text-align: center;font-size: 13px!important;"> <span class="tw_red" style="margin-bottom: 5px;"><br>' + e.tooltips.not_auctionable + "</span>")), n.upgradeable && (a = a.replace(/(invPopup_foot")(>)/g, '$1 style="display:block;text-align: center;font-size: 13px!important;"> <span class="tw_green" style="margin-bottom: 5px;"><br>' + e.tooltips.upgradeable + "</span>")), n.sellable || (a = a.replace(/invPopup_notsellable"/g, '$& style="text-align: center;color: #900;font-style: normal!important;font-size: 13px!important;display: block!important;"')), !n.sellable && n.auctionable) {
-     var o = "";
-     if (0 != n.sell_price) {
-      var s = !0 === r.twir_popup.short_currency ? format_money(h(n.sell_price)) : n.sell_price;
-      o = '<span class="inventory_popup_trader_price_sell"><span class="invPopup_sellicon"/>&nbsp;$' + s + "</span>"
+    }).replace('<div class="invPopup_body">', "").replace(/(inventory_popup_type")(>)/g, '$1 style="max-width: 200px!important;margin-left: auto;margin-right: auto;">').replace('inventory_popup"', 'invPopup_body $& style="max-width:550px!important;"><table><td').replace(/bonus_attr tw_green"/g, '$& style="padding-left:5px;max-width:200px;min-width:150px;display:block;"').replace('<br><br><div class="item_set_bonus">', i + '</td><td style="padding-left:5px;max-width:200px;min-width:150px;display:block;">')).includes(i) || (a += i), a = (a = a.replace(/(<p)(>)/g, '$1 class="inventory_popup_type" style="max-width: 250px!important;margin-left: auto;margin-right: auto;">')).replace(/(inventory_popup_requirement_text")(>)/g, '$1 style="max-width: 200px!important;display: inline-block;">');
+    var n = !(!window.TWToolkit || null == localStorage.TWToolkit_preferences) && JSON.parse(localStorage.TWToolkit_preferences).ids_popup;
+    !1 === n && !0 === l.twir_popup.item_id && (a = a.replace(this.item_obj.name, '$& <br><p class="twir_id" style="margin-top: 5px;color: #5e321a;text-align: center;font-size: 11px;margin-bottom: 5px;">[item=<b>' + this.item_obj.item_id + "</b>]</p>"));
+    var o = ItemManager.get(this.item_obj.item_id);
+    if (o.auctionable || (a = a.replace(/(invPopup_foot")(>)/g, '$1 style="display:block;text-align: center;font-size: 13px!important;"> <span class="tw_red" style="margin-bottom: 5px;"><br>' + e.tooltips.not_auctionable + "</span>")), o.upgradeable && (a = a.replace(/(invPopup_foot")(>)/g, '$1 style="display:block;text-align: center;font-size: 13px!important;"> <span class="tw_green" style="margin-bottom: 5px;"><br>' + e.tooltips.upgradeable + "</span>")), o.sellable || (a = a.replace(/invPopup_notsellable"/g, '$& style="text-align: center;color: #900;font-style: normal!important;font-size: 13px!important;display: block!important;"')), a = (a = (a = a.replace(/inventory_popup_bonus_attr tw_green"/g, '$& style="max-width: 200px;display: block;min-width: 180px;white-space: unset!important;"')).replace(/inventory_popup_label tw_green"/g, '$& style="max-width: 200px;display: block;min-width: 170px;white-space: unset!important;"')).replace(/inventory_popup_bonus_skills"/g, '$& style="max-width: 200px;display: block;min-width: 170px;white-space: unset!important;"'), !o.sellable && o.auctionable) {
+     var r = "";
+     if (0 != o.sell_price) {
+      var s = !0 === l.twir_popup.short_currency ? K(o.sell_price) : o.sell_price;
+      r = '<span class="inventory_popup_trader_price_sell"><span class="invPopup_sellicon"/>&nbsp;$' + s + "</span>"
      }
-     var l = !0 === r.twir_popup.short_currency ? format_money(h(n.price * (this.options.traderCharge || 1))) : n.price * (this.options.traderCharge || 1);
-     a = a.replace(/(inventory_popup_prices")(>)/g, '$1 style="margin-bottom: 5px;"> <span class="inventory_popup_trader_price_buy"><span class="invPopup_buyicon"/>&nbsp;&#36;' + l + "</span>" + o)
+     var p = !0 === l.twir_popup.short_currency ? K(o.price * (this.options.traderCharge || 1)) : o.price * (this.options.traderCharge || 1);
+     a = a.replace(/(inventory_popup_prices")(>)/g, '$1 style="margin-bottom: 5px;"> <span class="inventory_popup_trader_price_buy"><span class="invPopup_buyicon"/>&nbsp;&#36;' + p + "</span>" + r)
     }
-    if (!0 === r.twir_popup.short_currency && (null != n.price && (a = a.replace("&nbsp;$" + n.price * (this.options.traderCharge || 1), "&nbsp;&#36;" + format_money(h(n.price * (this.options.traderCharge || 1))))), 0 != n.sell_price && (a = a.replace("&nbsp;$" + n.sell_price, "&nbsp;&#36;" + format_money(h(n.sell_price))))), "crafting" == n.spec_type && y.hasOwnProperty(this.item_obj.item_id)) {
-     if (!0 === r.twir_popup.item_crafting) {
-      a += '<div style="color: #8b4513; text-align:center;margin-top:15px;margin-bottom:10px;">' + e.tooltips.craftable + ":</div>";
-      for (var p = '<div class="twir_better_popup" style="text-align:center;margin: 0 auto;display: table;"><table style="display: table !important;border-collapse: separate !important;border-spacing: 1px !important;border-radius: 3px;border: 1px solid #804000;"><tbody><tr><td style="padding: 5px;border: 1px solid #996b39;border-color: rgba(110,57,0,0.5);background-color: #d4ba91 !important;background-image: none !important;color: #5e321a !important;font-size: 16px;border-collapse: separate !important;border-spacing: 1px !important;vertical-align: middle!important;"><img src="https://westzz.innogamescdn.com/images/crafting/profsymbol_' + y[this.item_obj.item_id].profsymbol + '_small.png"></td><td style="padding: 5px;border: 1px solid #996b39;border-color: rgba(110,57,0,0.5);background-color: #d4ba91 !important;background-image: none !important;color: #5e321a !important;font-size: 16px;border-collapse: separate !important;border-spacing: 1px !important;"><table style="display: table !important;border-collapse: separate !important;border-spacing: 1px !important;border-radius: 3px;border: 1px solid #804000;"><tbody><tr>', c = 0; c < y[this.item_obj.item_id].resources.length; c++) {
-       var A = Bag.getItemByItemId(y[this.item_obj.item_id].resources[c].item),
-        g = null != A ? A.count : 0;
-       p += '<td style="vertical-align: middle!important;padding: 5px;border: 1px solid #996b39;border-color: rgba(110,57,0,0.5);background-color: #d4ba91 !important;background-image: none !important;color: #5e321a !important;font-size: 16px;border-collapse: separate !important;border-spacing: 1px !important;"><img style="width:30px;height:30px;" src="' + ItemManager.get(y[this.item_obj.item_id].resources[c].item).image + '"><div style="font-size:8pt;">(' + h(g) + ")</div></td>"
+    if (!0 === l.twir_popup.short_currency && (null != o.price && (a = a.replace("&nbsp;$" + o.price * (this.options.traderCharge || 1), "&nbsp;&#36;" + K(o.price * (this.options.traderCharge || 1)))), 0 != o.sell_price && (a = a.replace("&nbsp;$" + o.sell_price, "&nbsp;&#36;" + K(o.sell_price)))), "crafting" == o.spec_type && h.hasOwnProperty(this.item_obj.item_id)) {
+     if (!0 === l.twir_popup.item_crafting) {
+      var c = Character.professionId == h[this.item_obj.item_id].profsymbol && Character.professionSkill >= ItemManager.getByBaseId(h[this.item_obj.item_id].recipe).min_level ? "#070" : "#8b4513";
+      a += '<div style="color: ' + c + '; text-align:center;margin-top:15px;margin-bottom:10px;">' + e.tooltips.craftable + ":</div>";
+      for (var A = '<div class="twir_better_popup" style="text-align:center;margin: 0 auto;display: table;"><table style="display: table !important;border-collapse: separate !important;border-spacing: 1px !important;border-radius: 3px;border: 1px solid #804000;"><tbody><tr><td style="padding: 5px;border: 1px solid #996b39;border-color: rgba(110,57,0,0.5);background-color: #d4ba91 !important;background-image: none !important;color: #5e321a !important;font-size: 16px;border-collapse: separate !important;border-spacing: 1px !important;vertical-align: middle!important;"><img src="https://westzz.innogamescdn.com/images/crafting/profsymbol_' + h[this.item_obj.item_id].profsymbol + '_small.png"></td><td style="padding: 5px;border: 1px solid #996b39;border-color: rgba(110,57,0,0.5);background-color: #d4ba91 !important;background-image: none !important;color: #5e321a !important;font-size: 16px;border-collapse: separate !important;border-spacing: 1px !important;"><table style="display: table !important;border-collapse: separate !important;border-spacing: 1px !important;border-radius: 3px;border: 1px solid #804000;"><tbody><tr>', g = 0; g < h[this.item_obj.item_id].resources.length; g++) {
+       var m = Bag.getItemByItemId(h[this.item_obj.item_id].resources[g].item),
+        d = null != m ? m.count : 0;
+       A += '<td style="vertical-align: middle!important;padding: 5px;border: 1px solid #996b39;border-color: rgba(110,57,0,0.5);background-color: #d4ba91 !important;background-image: none !important;color: #5e321a !important;font-size: 16px;border-collapse: separate !important;border-spacing: 1px !important;"><img style="width:30px;height:30px;" src="' + ItemManager.get(h[this.item_obj.item_id].resources[g].item).image + '"><div style="font-size:8pt;">(' + K(d) + ")</div></td>"
       }
-      p += "</tr><tr>";
-      for (var m = 0; m < y[this.item_obj.item_id].resources.length; m++) p += '<td style="vertical-align: middle!important;padding: 5px;border: 1px solid #996b39;border-color: rgba(110,57,0,0.5);background-color: #d4ba91 !important;background-image: none !important;color: #5e321a !important;font-size: 14px;border-collapse: separate !important;border-spacing: 1px !important;"><span>x' + y[this.item_obj.item_id].resources[m].count + "</span></td>";
-      p += "</tr></tbody></table></td></tr></tbody></table></div>"
+      A += "</tr><tr>";
+      for (var u = 0; u < h[this.item_obj.item_id].resources.length; u++) A += '<td style="vertical-align: middle!important;padding: 5px;border: 1px solid #996b39;border-color: rgba(110,57,0,0.5);background-color: #d4ba91 !important;background-image: none !important;color: #5e321a !important;font-size: 14px;border-collapse: separate !important;border-spacing: 1px !important;"><span>x' + h[this.item_obj.item_id].resources[u].count + "</span></td>";
+      A += "</tr></tbody></table></td></tr></tbody></table></div>"
      }
-     var u = ItemManager.getByBaseId(y[this.item_obj.item_id].recipe).min_level >= 50;
-     !0 === r.twir_popup.recipe_name && u && (p += '<div class="twir_better_popup" style="text-align:center;margin: 0 auto;display: table;"><table style="display: table !important;border-collapse: separate !important;border-spacing: 1px !important;border-radius: 3px;border: 1px solid #804000;"><tbody><tr><td style="vertical-align: middle!important;padding: 5px;border: 1px solid #996b39;border-color: rgba(110,57,0,0.5);background-color: #d4ba91 !important;background-image: none !important;color: #5e321a !important;font-size: 16px;border-collapse: separate !important;border-spacing: 1px !important;"><img style="width: 30px;height: 30px;" src="' + ItemManager.getByBaseId(y[this.item_obj.item_id].recipe).image + '"/></td><td style="vertical-align: middle!important;padding: 5px;border: 1px solid #996b39;border-color: rgba(110,57,0,0.5);background-color: #d4ba91 !important;background-image: none !important;color: #5e321a !important;font-style: italic;font-size: 8pt;border-collapse: separate !important;border-spacing: 1px !important;width: 125px;"><span>' + ItemManager.getByBaseId(y[this.item_obj.item_id].recipe).name + "&nbsp;(" + ItemManager.getByBaseId(y[this.item_obj.item_id].recipe).min_level + ")</span></td></tr></tbody></table></div>"), a += p
+     var k = ItemManager.getByBaseId(h[this.item_obj.item_id].recipe).min_level >= 50;
+     !0 === l.twir_popup.recipe_name && k && (A += '<div class="twir_better_popup" style="text-align:center;margin: 0 auto;display: table;"><table style="display: table !important;border-collapse: separate !important;border-spacing: 1px !important;border-radius: 3px;border: 1px solid #804000;"><tbody><tr><td style="vertical-align: middle!important;padding: 5px;border: 1px solid #996b39;border-color: rgba(110,57,0,0.5);background-color: #d4ba91 !important;background-image: none !important;color: #5e321a !important;font-size: 16px;border-collapse: separate !important;border-spacing: 1px !important;"><img style="width: 30px;height: 30px;" src="' + ItemManager.getByBaseId(h[this.item_obj.item_id].recipe).image + '"/></td><td style="vertical-align: middle!important;padding: 5px;border: 1px solid #996b39;border-color: rgba(110,57,0,0.5);background-color: #d4ba91 !important;background-image: none !important;color: #5e321a !important;font-style: italic;font-size: 8pt;border-collapse: separate !important;border-spacing: 1px !important;width: 125px;"><span>' + ItemManager.getByBaseId(h[this.item_obj.item_id].recipe).name + "&nbsp;(" + ItemManager.getByBaseId(h[this.item_obj.item_id].recipe).min_level + ")</span></td></tr></tbody></table></div>"), a += A
     }
-    if (JobList.dropsItem(this.item_obj.item_id) && !0 === r.twir_popup.job_name) {
-     var d = JobList.getJobsByItemId(this.item_obj.item_id);
+    if (JobList.dropsItem(this.item_obj.item_id) && !0 === l.twir_popup.job_name) {
+     var b = JobList.getJobsByItemId(this.item_obj.item_id);
      a += '<div style="color: #8b4513; text-align:center;margin-top:15px;margin-bottom:10px;">' + e.tooltips.jobdrop + ":</div>";
-     for (var k = '<div class="twir_better_popup" style="text-align:center;margin: 0 auto;display: table;"><table style="display: table !important;border-collapse: separate !important;border-spacing: 1px !important;border-radius: 3px;border: 1px solid #804000;"><tbody>', b = 0; b < d.length; b++) {
-      var w = 0,
-       I = 0;
-      $.isEmptyObject(JobsModel.Beans) || null == JobsModel.Beans[d[b].id].basis.long.yields[0] ? (w = Math.ceil(600 * d[b].yields[this.item_obj.item_id].prop), I = 0) : $.isEmptyObject(JobsModel.Beans) || JobsModel.Beans[d[b].id].basis.long.yields[0].itemid !== this.item_obj.item_id ? $.isEmptyObject(JobsModel.Beans) || JobsModel.Beans[d[b].id].basis.long.yields[1].itemid !== this.item_obj.item_id ? $.isEmptyObject(JobsModel.Beans) || JobsModel.Beans[d[b].id].basis.long.yields[2].itemid !== this.item_obj.item_id || (w = JobsModel.Beans[d[b].id].basis.long.yields[2].prop, I = JobsModel.Beans[d[b].id].basis.long.yields[2].probBonus) : (w = JobsModel.Beans[d[b].id].basis.long.yields[1].prop, I = JobsModel.Beans[d[b].id].basis.long.yields[1].probBonus) : (w = JobsModel.Beans[d[b].id].basis.long.yields[0].prop, I = JobsModel.Beans[d[b].id].basis.long.yields[0].probBonus);
-      var x = w + I,
-       S = $.isEmptyObject(JobsModel.Beans) || 0 == x ? "" : "&nbsp;(" + x + "&nbsp;%)";
-      d.hasOwnProperty(b) && (k += '<tr><td style="vertical-align: middle!important;padding: 5px;border: 1px solid #996b39;border-color: rgba(110,57,0,0.5);background-color: #d4ba91 !important;background-image: none !important;color: #5e321a !important;font-size: 16px;border-collapse: separate !important;border-spacing: 1px !important;"><img style="width: 30px;height: 30px;" src="https://westcz.innogamescdn.com/images/jobs/' + d[b].shortname + '.png"/></td><td style="vertical-align: middle!important;padding: 5px;border: 1px solid #996b39;border-color: rgba(110,57,0,0.5);background-color: #d4ba91 !important;background-image: none !important;color: #5e321a !important;font-style: italic;font-size: 8pt;border-collapse: separate !important;border-spacing: 1px !important;width: 125px;"><span>' + d[b].name + S + "</span></td></tr>")
+     for (var y = '<div class="twir_better_popup" style="text-align:center;margin: 0 auto;display: table;"><table style="display: table !important;border-collapse: separate !important;border-spacing: 1px !important;border-radius: 3px;border: 1px solid #804000;"><tbody>', w = 0; w < b.length; w++) {
+      var I = 0,
+       S = 0;
+      $.isEmptyObject(JobsModel.Beans) || null == JobsModel.Beans[b[w].id].basis.long.yields[0] ? (I = Math.ceil(600 * b[w].yields[this.item_obj.item_id].prop), S = 0) : $.isEmptyObject(JobsModel.Beans) || JobsModel.Beans[b[w].id].basis.long.yields[0].itemid !== this.item_obj.item_id ? $.isEmptyObject(JobsModel.Beans) || JobsModel.Beans[b[w].id].basis.long.yields[1].itemid !== this.item_obj.item_id ? $.isEmptyObject(JobsModel.Beans) || JobsModel.Beans[b[w].id].basis.long.yields[2].itemid !== this.item_obj.item_id || (I = JobsModel.Beans[b[w].id].basis.long.yields[2].prop, S = JobsModel.Beans[b[w].id].basis.long.yields[2].probBonus) : (I = JobsModel.Beans[b[w].id].basis.long.yields[1].prop, S = JobsModel.Beans[b[w].id].basis.long.yields[1].probBonus) : (I = JobsModel.Beans[b[w].id].basis.long.yields[0].prop, S = JobsModel.Beans[b[w].id].basis.long.yields[0].probBonus);
+      var B = I + S,
+       M = $.isEmptyObject(JobsModel.Beans) || 0 == B ? "" : "&nbsp;(" + B + "&nbsp;%)";
+      b.hasOwnProperty(w) && (y += '<tr><td style="vertical-align: middle!important;padding: 5px;border: 1px solid #996b39;border-color: rgba(110,57,0,0.5);background-color: #d4ba91 !important;background-image: none !important;color: #5e321a !important;font-size: 16px;border-collapse: separate !important;border-spacing: 1px !important;"><img style="width: 30px;height: 30px;" src="https://westcz.innogamescdn.com/images/jobs/' + b[w].shortname + '.png"/></td><td style="vertical-align: middle!important;padding: 5px;border: 1px solid #996b39;border-color: rgba(110,57,0,0.5);background-color: #d4ba91 !important;background-image: none !important;color: #5e321a !important;font-style: italic;font-size: 8pt;border-collapse: separate !important;border-spacing: 1px !important;width: 125px;"><span>' + b[w].name + M + "</span></td></tr>")
      }
-     a += k += "</tbody></table></div>"
+     a += y += "</tbody></table></div>"
+    }
+    if (x.hasOwnProperty(o.short) && !0 === l.twir_popup.market_watcher) {
+     a += '<div style="color: #8b4513; text-align:center;margin-top:15px;margin-bottom:10px;">' + e.tooltips.market_price + ":</div>";
+     var V = '<div class="twir_better_popup" style="text-align:center;margin: 0 auto;display: table;"><table style="display: table !important;border-collapse: separate !important;border-spacing: 1px !important;border-radius: 3px;border: 1px solid #804000;width: 200px;"><tbody>';
+     V += '<tr><td style="vertical-align: middle!important;padding: 5px;border: 1px solid #996b39;border-color: rgba(110,57,0,0.5);background-color: #d4ba91 !important;background-image: none !important;color: #5e321a !important;border-collapse: separate !important;border-spacing: 1px !important;"><div><span style="display: inline-block; float: left;">' + e.tooltips.suggested_price + ':&nbsp;</span><span style="display: inline-block; float: right;">$' + K(x[o.short].price_sum / x[o.short].offer_count) + '</span></div><br><div style="font-style: italic;font-size: 8pt;display: inline-block;">(' + K(x[o.short].offer_count) + "&nbsp;" + e.tooltips.listings + "/" + K(x[o.short].item_count) + "&nbsp;" + e.tooltips.items + ")</div></td></tr>", V += '<tr><td style="vertical-align: middle!important;padding: 5px;border: 1px solid #996b39;border-color: rgba(110,57,0,0.5);background-color: #d4ba91 !important;background-image: none !important;color: #5e321a !important;border-collapse: separate !important;border-spacing: 1px !important;"><div><span style="display: inline-block; float: left;">' + e.tooltips.minimal_price + '&nbsp;</span><span style="font-size: 8pt;display: inline-block;float: left;margin-top: 1px;color: #666;text-overflow: ellipsis;white-space: nowrap;overflow: hidden;max-width: 120px;">@' + x[o.short].offer_min.name + '&nbsp;</span><span style="display: inline-block; float: right">$' + K(x[o.short].offer_min.price) + "</span></div><br>";
+     var j = new Date - new Date(x[o.short].offer_min.date);
+     V += '<div style="font-style: italic;font-size: 8pt;display: inline-block;">(' + q(new Date(Date.now() - j)) + ")</div></td></tr>", V += '<tr><td style="vertical-align: middle!important;padding: 5px;border: 1px solid #996b39;border-color: rgba(110,57,0,0.5);background-color: #d4ba91 !important;background-image: none !important;color: #5e321a !important;border-collapse: separate !important;border-spacing: 1px !important;"><div><span style="display: inline-block; float: left;">' + e.tooltips.maximal_price + '&nbsp;</span><span style="font-size: 8pt;display: inline-block;float: left;margin-top: 1px;color: #666;text-overflow: ellipsis;white-space: nowrap;overflow: hidden;max-width: 120px;">@' + x[o.short].offer_max.name + '&nbsp;</span><span style="display: inline-block; float: right">$' + K(x[o.short].offer_max.price) + "</span></div><br>";
+     var U = new Date - new Date(x[o.short].offer_max.date);
+     V += '<div style="font-style: italic;font-size: 8pt;display: inline-block;">(' + q(new Date(Date.now() - U)) + ")</div></td></tr>", a += V += "</tbody></table></div>"
     }
     if (null != this.item_obj.set) {
-     var B = west.storage.ItemSetManager.get(this.item_obj.set),
-      M = B.getWornItems().length,
-      K = 0,
-      V = 0;
-     11 == B.items.length ? (K = 10, V = 7) : 3 == B.items.length ? (K = 2, V = 0) : 9 == B.items.length ? (K = 8, V = 7) : 6 == B.items.length ? (K = 6, V = 5) : (K = B.items.length, V = 0);
-     var U = "&nbsp;(" + M + "/" + K + ")",
-      j = new west.item.BonusExtractor(Character),
-      R = [],
-      q = [],
-      Y = [],
-      C = [];
-     if (a = a.replace('<span class="text_bold">' + B.name + ":</span>", '<span style="color: #800080 !important;font-weight: bold;max-width: 220px;display: inline-block;">' + B.name + U + "</span>"), !0 === r.twir_popup.partial_bonus) {
-      for (var G = '<td class="twir_partial_bonus" style="vertical-align: middle!important;padding: 1px;max-width:170px;"><div style="color: #8b4513; text-align:center;margin-top:15px;margin-bottom:10px;">' + e.tooltips.partial_items_bonus + ':</div><div style="margin-left: 5px;display: block;padding: 1px;border-collapse: separate !important;border-spacing: 1px !important;border-radius: 3px;border: 1px solid #804000;min-width: 130px;"><span style="border: 1px solid #996b39;border-color: rgba(110, 57, 0, 0.5);background-color: #d4ba91 !important;border-collapse: separate !important;border-spacing: 1px !important;padding: 5px;display: block;" class="text_gray">', F = 0; F < B.items.length + 1; F++) {
-       var E = B.getMergedStages(F);
-       if (E.sort(function(e, t) {
+     var R = west.storage.ItemSetManager.get(this.item_obj.set),
+      Y = R.getWornItems().length,
+      C = 0,
+      f = 0;
+     11 == R.items.length ? (C = 10, f = 7) : 3 == R.items.length ? (C = 2, f = 0) : 9 == R.items.length ? (C = 8, f = 7) : 6 == R.items.length ? (C = 6, f = 5) : (C = R.items.length, f = 0);
+     var G = Y > 0 ? "&nbsp;(" + Y + "/" + C + ")" : "",
+      F = new west.item.BonusExtractor(Character),
+      E = [],
+      Q = [],
+      v = [],
+      J = [];
+     if (a = a.replace('<span class="text_bold">' + R.name + ":</span>", '<span style="color: #800080 !important;font-weight: bold;max-width: 220px;display: block;text-align: center;">' + R.name + G + "</span>"), 0 === Y && !1 === l.twir_popup.set_pieces && (a = a.replace(/inventory_popup_item_set_names"/g, '$& style="display: none!important;"')), !0 === l.twir_popup.partial_bonus) {
+      for (var O = '<td class="twir_partial_bonus" style="vertical-align: middle!important;padding: 1px;max-width:170px;"><div style="color: #8b4513; text-align:center;margin-top:15px;margin-bottom:10px;">' + e.tooltips.partial_items_bonus + ':</div><div style="margin-left: 5px;display: block;padding: 1px;border-collapse: separate !important;border-spacing: 1px !important;border-radius: 3px;border: 1px solid #804000;min-width: 130px;"><span style="border: 1px solid #996b39;border-color: rgba(110, 57, 0, 0.5);background-color: #d4ba91 !important;border-collapse: separate !important;border-spacing: 1px !important;padding: 5px;display: block;" class="text_gray">', z = 0; z < R.items.length + 1; z++) {
+       var H = R.getMergedStages(z);
+       if (H.sort(function(e, t) {
          var i = function(e, t) {
            return (e.bonus ? e.bonus.type : e.type) == t && (e.bonus ? e.bonus.name : e.name)
           },
           a = i(e, "attribute"),
           n = i(t, "attribute"),
           o = i(e, "skill"),
-          s = i(t, "skill");
-         return a && n ? a < n ? -1 : 1 : a ? -1 : n ? 1 : o && s ? 0 : o ? -1 : s ? 1 : 0
-        }), null !== E && E.length > 0) {
-        (2 == F && 0 == M && E.length < 16 || 6 == F && 0 == M && 10 == K || F == K && M < K || F == V && M == K && 0 != V) && (G += '<span style="color: #5e321a;"> (' + F + ")&nbsp;" + e.organizing.bonus + ":&nbsp;</span>");
-        for (var Q = 0; Q < E.length; Q++) 2 == F && 0 == M && F != K && E.length < 16 && q.push(j.getDesc(E[Q])), 6 == F && 0 == M && 10 == K && Y.push(j.getDesc(E[Q])), F == K && M < K && R.push(j.getDesc(E[Q])), F == V && M == K && 0 != V && C.push(j.getDesc(E[Q]));
-        0 != q.lenght && 2 == F && 0 == M && E.length < 16 && (G += '<span style="margin-bottom: 15px;display: block;font-style: italic;font-size: 12px;">' + q.join(", <br>") + "</span>"), 0 != Y.lenght && 6 == F && 0 == M && 10 == K && (G += '<span style="margin-bottom: 15px;display: block;font-style: italic;font-size: 12px;">' + Y.join(", <br>") + "</span>"), 0 != R.lenght && F == K && M < K && (G += '<span style="margin-bottom: 5px;display: block;font-style: italic;font-size: 12px;">' + R.join(", <br>") + "</span>"), 0 != C.lenght && F == V && M == K && 0 != V && (G += '<span style="margin-bottom: 5px;display: block;font-style: italic;font-size: 12px;">' + C.join(", <br>") + "</span>")
+          r = i(t, "skill");
+         return a && n ? a < n ? -1 : 1 : a ? -1 : n ? 1 : o && r ? 0 : o ? -1 : r ? 1 : 0
+        }), null !== H && H.length > 0) {
+        (2 == z && 0 == Y && H.length < 16 || 6 == z && 0 == Y && 10 == C || z == C && Y < C || z == f && Y == C && 0 != f) && (O += '<span style="color: #5e321a;"> (' + z + ")&nbsp;" + e.organizing.bonus + ":&nbsp;</span>");
+        for (var W = 0; W < H.length; W++) 2 == z && 0 == Y && z != C && H.length < 16 && Q.push(F.getDesc(H[W])), 6 == z && 0 == Y && 10 == C && v.push(F.getDesc(H[W])), z == C && Y < C && E.push(F.getDesc(H[W])), z == f && Y == C && 0 != f && J.push(F.getDesc(H[W]));
+        0 != Q.lenght && 2 == z && 0 == Y && H.length < 16 && (O += '<span style="margin-bottom: 15px;display: block;font-style: italic;font-size: 12px;">' + Q.join(", <br>") + "</span>"), 0 != v.lenght && 6 == z && 0 == Y && 10 == C && (O += '<span style="margin-bottom: 15px;display: block;font-style: italic;font-size: 12px;">' + v.join(", <br>") + "</span>"), 0 != E.lenght && z == C && Y < C && (O += '<span style="margin-bottom: 5px;display: block;font-style: italic;font-size: 12px;">' + E.join(", <br>") + "</span>"), 0 != J.lenght && z == f && Y == C && 0 != f && (O += '<span style="margin-bottom: 5px;display: block;font-style: italic;font-size: 12px;">' + J.join(", <br>") + "</span>")
        }
       }
-      G = (G += "</span></div></td></tr></table>").replace(/\+/g, "").replace(/\s*,\s*/g, ", "), a += G
+      O = (O += "</span></div></td></tr></table>").replace(/\+/g, "").replace(/\s*,\s*/g, ", "), a += O
      }
     }
     return a
    }
   }, t.injectFilters = function() {
    var t = Bag.items_by_id,
-    i = [];
-   for (var a in t) {
-    if (t.hasOwnProperty(a)) var n = t[a].obj;
-    if ("yield" === n.type && t[a].isJobItem() && -1 === m.indexOf(a) && m.push(a), "yield" === n.type && null != n.set) {
-     var o = ItemManager.itemIdToBaseItemId(a); - 1 === u.indexOf(o) && u.push(o)
+    i = [],
+    a = ItemManager.getAll();
+   for (var n in t) {
+    if (t.hasOwnProperty(n)) var o = t[n].obj;
+    if ("yield" === o.type && t[n].isJobItem() && -1 === u.indexOf(n) && u.push(n), "yield" === o.type && null != o.set) {
+     var r = ItemManager.itemIdToBaseItemId(n); - 1 === k.indexOf(r) && k.push(r)
     }
-    null != n.set && -1 === d.indexOf(a) && d.push(a), "yield" !== n.type || null !== n.set || t[a].isJobItem() || -1 === i.indexOf(n.item_base_id) && i.push(n.item_base_id)
+    null != o.set && -1 === b.indexOf(n) && b.push(n), "yield" !== o.type || null !== o.set || t[n].isJobItem() || -1 === i.indexOf(o.item_base_id) && i.push(o.item_base_id)
    }
-   var s = b(c),
-    r = b(p),
-    l = b(A),
-    k = u,
-    y = g,
-    w = s.concat(r).concat(l).concat(k).concat(y),
-    I = $.grep(i, function(e) {
-     return $.inArray(e, w) < 0
+   var s = I(g),
+    l = I(A),
+    p = I(m),
+    c = k,
+    w = d,
+    h = s.concat(l).concat(p).concat(c).concat(w),
+    x = $.grep(i, function(e) {
+     return $.inArray(e, h) < 0
     });
-   !1 === c.some(t => t.name === e.inventory.uncategorized) && c.push({
-    name: e.inventory.uncategorized,
-    items: I,
-    title: e.inventory.uncategorized_text + ".."
-   })
+   for (var S in !1 === g.some(t => t.name === e.inventory.uncategorized) && g.push({
+     name: e.inventory.uncategorized,
+     items: x,
+     title: e.inventory.uncategorized_text + ".."
+    }), a) a.hasOwnProperty(S) && !0 === a[S].auctionable && null != a[S].set && -1 === y.indexOf(a[S].item_base_id) && y.push(a[S].item_base_id);
+   for (var B = 0; B < c; B++) {
+    var M = ItemManager.getByBaseId(c[B]);
+    !0 === M.auctionable && -1 === y.indexOf(M.item_base_id) && y.push(M.item_base_id)
+   }
+   y = y.sort((e, t) => t - e)
   }, t.updateCrafting = function() {
-   if (!0 === r.twir_popup.item_crafting || !0 === r.twir_popup.recipe_name) {
-    var e = ItemManager.getAll();
-    for (var t in e) {
-     if (e.hasOwnProperty(t)) var i = e[t];
-     "recipe" == i.type && (y.hasOwnProperty(t) || Object.assign(y, {
-      [i.craftitem]: {
-       recipe: i.item_base_id,
-       profsymbol: i.profession_id,
-       resources: i.resources
+   if (!0 === l.twir_popup.item_crafting || !0 === l.twir_popup.recipe_name) {
+    var t = ItemManager.getAll();
+    for (var i in t) {
+     if (t.hasOwnProperty(i)) var a = t[i];
+     "recipe" == a.type && (h.hasOwnProperty(i) || Object.assign(h, {
+      [a.craftitem]: {
+       recipe: a.item_base_id,
+       profsymbol: a.profession_id,
+       resources: a.resources
       }
      }))
     }
-    console.log("TWIR Popups: Crafting recipes has been updated.")
+    null != localStorage ? (localStorage.twir_crafting = JSON.stringify(h), console.log("TWIR Popups: Crafting DB successfully created and saved.")) : new UserMessage("TWIR Popups: " + e.informative.storage_error + "!", UserMessage.TYPE_ERROR).show()
+   }
+  }, t.marketBest = function() {
+   var e = U();
+   x = {};
+   for (var t = 0; t < e.length; t++) {
+    var i = ItemManager.getByBaseId(e[t].item_base_id);
+    x.hasOwnProperty(i.short) || Object.assign(x, {
+     [i.short]: {
+      offer_max: {
+       price: Number.NEGATIVE_INFINITY,
+       name: null,
+       date: 0
+      },
+      offer_min: {
+       price: Number.POSITIVE_INFINITY,
+       name: null,
+       date: 0
+      },
+      price_sum: 0,
+      offer_count: 0,
+      item_count: 0
+     }
+    }), x[i.short].price_sum += parseInt(e[t].max_price / e[t].item_count), x[i.short].item_count += e[t].item_count, x[i.short].offer_count += 1, (e[t].max_price / e[t].item_count > x[i.short].offer_max.price || e[t].max_price / e[t].item_count == x[i.short].offer_max.price && new Date(e[t].date) > new Date(x[i.short].offer_max.date)) && (x[i.short].offer_max.price = parseInt(e[t].max_price / e[t].item_count), x[i.short].offer_max.name = e[t].seller_name, x[i.short].offer_max.date = e[t].date), (e[t].max_price / e[t].item_count < x[i.short].offer_min.price || e[t].max_price / e[t].item_count == x[i.short].offer_min.price && new Date(e[t].date) > new Date(x[i.short].offer_min.date)) && (x[i.short].offer_min.price = parseInt(e[t].max_price / e[t].item_count), x[i.short].offer_min.name = e[t].seller_name, x[i.short].offer_min.date = e[t].date)
+   }
+  }, t.updateMarket = function(i) {
+   var a = localStorage.getItem("twir_marketTimer"),
+    n = U().length;
+   if (a) var o = (new Date).getTime() - new Date(a).getTime();
+   else var o = Number.POSITIVE_INFINITY;
+   if (o >= 288e5) {
+    document.styleSheets[0].insertRule('div.ongoing_entry div.image.twir_marketWatcher {background: url("' + t.images.market_watcher + '") no-repeat;}', document.styleSheets[0].cssRules.length);
+    var s = new OnGoingPermanentEntry(function() {}, '<div style="font-weight: bold;">' + e.market_watcher.add_name + '</div><span style="font-style: italic;">..' + e.market_watcher.progress_msg + "..</span>", "twir_marketWatcher", !1);
+    WestUi.NotiBar.add(s), $("#ui_notibar .ui_ongoing .ui_ongoing_content .ongoing_entry").find(".twir_marketWatcher").after($('<div class="twir_mw_percentage"/>'));
+    for (var l = 0; l < i.length; l++) ! function(a) {
+     this.timeout = setTimeout(function() {
+      var o = (new Date).toString(),
+       l = ItemManager.getByBaseId(i[a]),
+       p = new Date,
+       c = 0;
+      1 == l.auctionable && Ajax.remoteCall("building_market", "search", {
+       item_id: l.item_id
+      }, function(e) {
+       for (var t = 0; t < e.msg.search_result.length; t++) 2 == e.msg.search_result[t].sell_rights && r.push({
+        date: o,
+        auction_end_date: e.msg.search_result[t].auction_end_date,
+        item_base_id: l.item_base_id,
+        item_count: e.msg.search_result[t].item_count,
+        auction_price: e.msg.search_result[t].auction_price,
+        max_price: e.msg.search_result[t].max_price,
+        seller_name: e.msg.search_result[t].seller_name
+       });
+       A(new Date - p)
+      });
+      var A = function(e) {
+       c = e
+      };
+      if (s.setTooltip('<div style="font-weight: bold;">' + e.market_watcher.add_name + '</div><span style="font-style: italic;">...' + e.market_watcher.progress_msg + '..</span><hr><br> <span style="font-weight: bold;">' + e.market_watcher.checked + ":</span>&nbsp;" + a + "/" + i.length + "&nbsp;" + e.tooltips.items.toLowerCase() + '&nbsp;<span style="font-style: italic;">(ETA: ' + Y(2 * (i.length - a) * 1e3 + c) + ')</span> <br><span style="font-weight: bold;">' + e.market_watcher.checking + ':</span><span style="font-style:italic;">&nbsp;' + l.short + "</span>"), $(".twir_mw_percentage").html((a / i.length * 100).toFixed(0) + " %"), a % 30 == 0 && (null != localStorage ? localStorage.twir_marketData = JSON.stringify(r) : new UserMessage("TWIR Popups: " + e.informative.storage_error + "!", UserMessage.TYPE_ERROR).show()), a == i.length - 1) {
+       var g = U();
+       null != localStorage ? (localStorage.twir_marketData = JSON.stringify(g), localStorage.setItem("twir_marketTimer", (new Date).toString()), s.setTooltip('<div style="font-weight: bold;">' + e.market_watcher.add_name + "</div><br><div>" + e.market_watcher.price_update + ".</div><div>" + e.market_watcher.new_found.replace("$1", U().length - n) + '</div><br><div style="font-style: italic;">' + e.market_watcher.finished_msg.replace("$1", "8") + "</div>")) : new UserMessage("TWIR Popups: " + e.informative.storage_error + "!", UserMessage.TYPE_ERROR).show(), t.marketBest()
+      }
+     }, 2e3 * a)
+    }(l)
+   } else {
+    var p = 288e5 - o;
+    console.log("TWIR MarketWatcher: Already checked! Next check in: " + Y(p))
    }
   }, t.statsQuantities = function() {
    var e = Bag.items_by_id,
-    t = Bag.getItemsByItemIds(w(b(c))),
-    i = Bag.getItemsByItemIds(w(b(p))),
-    a = Bag.getItemsByItemIds(w(b(A))),
-    n = Bag.getItemsByItemIds(w(u)),
-    s = Bag.getItemsByItemIds(m),
-    r = Bag.getItemsByItemIds(w(g)),
+    t = Bag.getItemsByItemIds(S(I(g))),
+    i = Bag.getItemsByItemIds(S(I(A))),
+    a = Bag.getItemsByItemIds(S(I(m))),
+    n = Bag.getItemsByItemIds(S(k)),
+    r = Bag.getItemsByItemIds(u),
+    s = Bag.getItemsByItemIds(S(d)),
     l = {
      item_id: 0,
      item_count: 0
     },
-    d = {
+    p = {
      item_id: 0,
      item_count: 0
     },
-    k = 0,
+    c = 0,
+    b = 0,
     y = 0,
-    I = 0,
-    x = 0,
+    w = 0,
     h = 0,
-    S = 0,
+    x = 0,
     B = 0,
     M = 0,
     K = 0,
     V = 0,
-    U = 0,
     j = 0,
+    U = 0,
     R = 0,
     q = 0,
     Y = 0,
     C = 0,
+    f = 0,
     G = 0,
     F = 0,
     E = 0,
     Q = 0,
-    f = 0,
-    J = 0,
     v = 0,
+    J = 0,
     O = 0,
     z = 0,
     H = 0,
     W = 0,
     D = 0,
-    Z = 0,
     T = 0,
+    Z = 0,
     P = 0,
     N = 0,
     L = 0,
@@ -1910,39 +2168,39 @@
     ae = 0;
    for (var ne in e) {
     if (e.hasOwnProperty(ne)) var oe = e[ne].obj;
-    switch ("shot" === oe.sub_type ? (v += 1, O += e[ne].count) : "hand" === oe.sub_type && (f += 1, J += e[ne].count), "yield" != oe.type && null != oe.set && (h += 1, S += e[ne].count), "yield" != oe.type && "recipe" != oe.type && e[ne].count > l.item_count && (l = {
+    switch ("shot" === oe.sub_type ? (J += 1, O += e[ne].count) : "hand" === oe.sub_type && (Q += 1, v += e[ne].count), "yield" != oe.type && null != oe.set && (h += 1, x += e[ne].count), "yield" != oe.type && "recipe" != oe.type && e[ne].count > l.item_count && (l = {
      item_id: oe.item_base_id,
      item_count: e[ne].count
     }), oe.type) {
      case "belt":
-      k += 1, y += e[ne].count, z += 1, H += e[ne].count;
+      c += 1, b += e[ne].count, z += 1, H += e[ne].count;
       break;
      case "body":
-      k += 1, y += e[ne].count, W += 1, D += e[ne].count;
+      c += 1, b += e[ne].count, W += 1, D += e[ne].count;
       break;
      case "foot":
-      k += 1, y += e[ne].count, Z += 1, T += e[ne].count;
+      c += 1, b += e[ne].count, T += 1, Z += e[ne].count;
       break;
      case "head":
-      k += 1, y += e[ne].count, P += 1, N += e[ne].count;
+      c += 1, b += e[ne].count, P += 1, N += e[ne].count;
       break;
      case "neck":
-      k += 1, y += e[ne].count, L += 1, X += e[ne].count;
+      c += 1, b += e[ne].count, L += 1, X += e[ne].count;
       break;
      case "pants":
-      k += 1, y += e[ne].count, _ += 1, $ += e[ne].count;
+      c += 1, b += e[ne].count, _ += 1, $ += e[ne].count;
       break;
      case "animal":
-      k += 1, y += e[ne].count, ee += 1, te += e[ne].count;
+      c += 1, b += e[ne].count, ee += 1, te += e[ne].count;
       break;
      case "right_arm":
-      k += 1, y += e[ne].count;
+      c += 1, b += e[ne].count;
       break;
      case "left_arm":
-      k += 1, y += e[ne].count, ie += 1, ae += e[ne].count;
+      c += 1, b += e[ne].count, ie += 1, ae += e[ne].count;
       break;
      case "yield":
-      I += 1, x += e[ne].count, e[ne].count > d.item_count && (d = {
+      y += 1, w += e[ne].count, e[ne].count > p.item_count && (p = {
        item_id: oe.item_base_id,
        item_count: e[ne].count
       });
@@ -1951,43 +2209,43 @@
       B += 1, M += e[ne].count
     }
    }
-   for (var se = 0; se < t.length; se++) K += 1, V += t[se].count;
-   for (var re = 0; re < i.length; re++) U += 1, j += i[re].count;
+   for (var re = 0; re < t.length; re++) K += 1, V += t[re].count;
+   for (var se = 0; se < i.length; se++) j += 1, U += i[se].count;
    for (var le = 0; le < a.length; le++) "recipe" != a[le].obj.type && (R += 1, q += a[le].count);
    for (var pe = 0; pe < n.length; pe++) Y += 1, C += n[pe].count;
-   for (var ce = 0; ce < s.length; ce++) G += 1, F += s[ce].count;
-   for (var Ae = 0; Ae < r.length; Ae++) E += 1, Q += r[Ae].count;
+   for (var ce = 0; ce < r.length; ce++) f += 1, G += r[ce].count;
+   for (var Ae = 0; Ae < s.length; Ae++) F += 1, E += s[Ae].count;
    return o.count = {
-    objects_count: k,
-    objects_total_count: y,
-    products_count: I,
-    products_total_count: x,
+    objects_count: c,
+    objects_total_count: b,
+    products_count: y,
+    products_total_count: w,
     recipes_count: B,
     recipes_total_count: M,
     setitems_count: h,
-    setitems_total_count: S,
+    setitems_total_count: x,
     useables_count: K,
     useables_total_count: V,
-    buff_count: U,
-    buff_total_count: j,
+    buff_count: j,
+    buff_total_count: U,
     craft_count: R,
     craft_total_count: q,
     bonus_count: Y,
     bonus_total_count: C,
-    work_count: G,
-    work_total_count: F,
-    quest_count: E,
-    quest_total_count: Q,
-    hand_count: f,
-    hand_total_count: J,
-    shot_count: v,
+    work_count: f,
+    work_total_count: G,
+    quest_count: F,
+    quest_total_count: E,
+    hand_count: Q,
+    hand_total_count: v,
+    shot_count: J,
     shot_total_count: O,
     belt_count: z,
     belt_total_count: H,
     body_count: W,
     body_total_count: D,
-    foot_count: Z,
-    foot_total_count: T,
+    foot_count: T,
+    foot_total_count: Z,
     head_count: P,
     head_total_count: N,
     neck_count: L,
@@ -2000,7 +2258,7 @@
     left_arm_total_count: ae
    }, o.max_count = {
     objects_max_total_count: l,
-    products_max_total_count: d
+    products_max_total_count: p
    }
   }, t.statsSalesValue = function() {
    var e = 0,
@@ -2008,26 +2266,22 @@
     i = 0,
     a = 0,
     n = 0,
-    s = 0,
     r = 0,
+    s = 0,
     l = 0,
     p = 0,
     c = 0,
     A = 0,
     g = 0,
     m = 0,
-    u = 0,
     d = 0,
+    u = 0,
     k = 0,
-    y = {
-     item_id: 0,
-     item_price: 0
-    },
-    b = {
-     item_id: 0,
-     item_price: 0
-    },
-    w = {
+    b = 0,
+    y = 0,
+    w = 0,
+    h = 0,
+    x = {
      item_id: 0,
      item_price: 0
     },
@@ -2035,27 +2289,35 @@
      item_id: 0,
      item_price: 0
     },
-    x = Bag.items_by_id,
-    h = Wear.wear;
-   for (var S in h) {
-    if (h.hasOwnProperty(S)) var B = h[S].obj.item_id;
-    n += $.isNumeric(ItemManager.get(B).price) ? 1 * ItemManager.get(B).price : 0, s += $.isNumeric(ItemManager.get(B).sell_price) ? 1 * ItemManager.get(B).sell_price : 0
+    S = {
+     item_id: 0,
+     item_price: 0
+    },
+    B = {
+     item_id: 0,
+     item_price: 0
+    },
+    M = Bag.items_by_id,
+    K = Wear.wear;
+   for (var V in K) {
+    if (K.hasOwnProperty(V)) var j = K[V].obj.item_id;
+    p += $.isNumeric(ItemManager.get(j).price) ? 1 * ItemManager.get(j).price : 0, c += $.isNumeric(ItemManager.get(j).sell_price) ? 1 * ItemManager.get(j).sell_price : 0
    }
-   for (var M in x) x.hasOwnProperty(M) && (e += $.isNumeric(ItemManager.get(M).price) ? ItemManager.get(M).price * x[M].count : 0), t += $.isNumeric(ItemManager.get(M).sell_price) ? ItemManager.get(M).sell_price * x[M].count : 0, 1 == x[M].count && (i += $.isNumeric(ItemManager.get(M).price) ? 1 * ItemManager.get(M).price : 0, a += $.isNumeric(ItemManager.get(M).sell_price) ? 1 * ItemManager.get(M).sell_price : 0);
-   for (var K in x) {
-    if (x.hasOwnProperty(K)) var V = x[K].obj;
-    switch (V.type) {
+   for (var U in M) M.hasOwnProperty(U) && (e += $.isNumeric(ItemManager.get(U).price) ? ItemManager.get(U).price * M[U].count : 0), t += $.isNumeric(ItemManager.get(U).sell_price) ? ItemManager.get(U).sell_price * M[U].count : 0, 1 == M[U].count && (s += $.isNumeric(ItemManager.get(U).price) ? 1 * ItemManager.get(U).price : 0, l += $.isNumeric(ItemManager.get(U).sell_price) ? 1 * ItemManager.get(U).sell_price : 0);
+   for (var R in M) {
+    if (M.hasOwnProperty(R)) var q = M[R].obj;
+    switch (q.type) {
      case "yield":
-      r += $.isNumeric(ItemManager.get(K).price) ? ItemManager.get(K).price * x[K].count : 0, l += $.isNumeric(ItemManager.get(K).sell_price) ? ItemManager.get(K).sell_price * x[K].count : 0, V.price > b.item_price ? b = {
-       item_id: V.item_base_id,
-       item_price: V.price
-      } : V.sell_price > I.item_price && (I = {
-       item_id: V.item_base_id,
-       item_price: V.sell_price
+      n += $.isNumeric(ItemManager.get(R).price) ? ItemManager.get(R).price : 0, r += $.isNumeric(ItemManager.get(R).sell_price) ? ItemManager.get(R).sell_price : 0, A += $.isNumeric(ItemManager.get(R).price) ? ItemManager.get(R).price * M[R].count : 0, g += $.isNumeric(ItemManager.get(R).sell_price) ? ItemManager.get(R).sell_price * M[R].count : 0, q.price > I.item_price ? I = {
+       item_id: q.item_base_id,
+       item_price: q.price
+      } : q.sell_price > B.item_price && (B = {
+       item_id: q.item_base_id,
+       item_price: q.sell_price
       });
       break;
      case "recipe":
-      A += $.isNumeric(ItemManager.get(K).price) ? ItemManager.get(K).price * x[K].count : 0, g += $.isNumeric(ItemManager.get(K).sell_price) ? ItemManager.get(K).sell_price * x[K].count : 0;
+      u += $.isNumeric(ItemManager.get(R).price) ? ItemManager.get(R).price * M[R].count : 0, k += $.isNumeric(ItemManager.get(R).sell_price) ? ItemManager.get(R).sell_price * M[R].count : 0;
       break;
      case "belt":
      case "body":
@@ -2066,138 +2328,142 @@
      case "animal":
      case "right_arm":
      case "left_arm":
-      p += $.isNumeric(ItemManager.get(K).price) ? ItemManager.get(K).price * x[K].count : 0, c += $.isNumeric(ItemManager.get(K).sell_price) ? ItemManager.get(K).sell_price * x[K].count : 0, V.price > y.item_price ? y = {
-       item_id: V.item_base_id,
-       item_price: V.price
-      } : V.sell_price > w.item_price && (w = {
-       item_id: V.item_base_id,
-       item_price: V.sell_price
+      i += $.isNumeric(ItemManager.get(R).price) ? ItemManager.get(R).price : 0, a += $.isNumeric(ItemManager.get(R).sell_price) ? ItemManager.get(R).sell_price : 0, m += $.isNumeric(ItemManager.get(R).price) ? ItemManager.get(R).price * M[R].count : 0, d += $.isNumeric(ItemManager.get(R).sell_price) ? ItemManager.get(R).sell_price * M[R].count : 0, q.price > x.item_price ? x = {
+       item_id: q.item_base_id,
+       item_price: q.price
+      } : q.sell_price > S.item_price && (S = {
+       item_id: q.item_base_id,
+       item_price: q.sell_price
       })
     }
-    "yield" != V.type && x[K].count > 1 && (d += $.isNumeric(ItemManager.get(K).price) ? ItemManager.get(K).price * x[K].count : 0, k += $.isNumeric(ItemManager.get(K).sell_price) ? ItemManager.get(K).sell_price * x[K].count : 0), "yield" != V.type && !0 === V.dropable && (m += $.isNumeric(ItemManager.get(K).price) ? ItemManager.get(K).price * x[K].count : 0, u += $.isNumeric(ItemManager.get(K).sell_price) ? ItemManager.get(K).sell_price * x[K].count : 0)
+    "yield" != q.type && M[R].count > 1 && (w += $.isNumeric(ItemManager.get(R).price) ? ItemManager.get(R).price * M[R].count : 0, h += $.isNumeric(ItemManager.get(R).sell_price) ? ItemManager.get(R).sell_price * M[R].count : 0), "yield" != q.type && !0 === q.dropable && (b += $.isNumeric(ItemManager.get(R).price) ? ItemManager.get(R).price * M[R].count : 0, y += $.isNumeric(ItemManager.get(R).sell_price) ? ItemManager.get(R).sell_price * M[R].count : 0)
    }
-   return o.value = {
+   return i = Math.round(i / o.count.objects_count), a = Math.round(a / o.count.objects_count), n = Math.round(n / o.count.products_count), r = Math.round(r / o.count.products_count), o.value = {
     inventory_buy_price: e,
     inventory_sell_price: t,
-    unique_buy_price: i,
-    unique_sell_price: a,
-    wear_buy_price: n,
-    wear_sell_price: s,
-    products_buy_price: r,
-    products_sell_price: l,
-    objects_buy_price: p,
-    objects_sell_price: c,
-    recipe_buy_price: A,
-    recipe_sell_price: g,
-    droppable_buy_price: m,
-    droppable_sell_price: u,
-    duplicates_buy_price: d,
-    duplicates_sell_price: k
+    average_obj_buy_price: i,
+    average_obj_sell_price: a,
+    average_prod_buy_price: n,
+    average_prod_sell_price: r,
+    unique_buy_price: s,
+    unique_sell_price: l,
+    wear_buy_price: p,
+    wear_sell_price: c,
+    products_buy_price: A,
+    products_sell_price: g,
+    objects_buy_price: m,
+    objects_sell_price: d,
+    recipe_buy_price: u,
+    recipe_sell_price: k,
+    droppable_buy_price: b,
+    droppable_sell_price: y,
+    duplicates_buy_price: w,
+    duplicates_sell_price: h
    }, o.max_price = {
-    products_max_buy_price: b,
-    objects_max_buy_price: y,
-    products_max_sell_price: I,
-    objects_max_sell_price: w
+    products_max_buy_price: I,
+    objects_max_buy_price: x,
+    products_max_sell_price: B,
+    objects_max_sell_price: S
    }
   }, t.makeSelectMenu = function(i, a) {
-   if (M(i, name), !t.global.SelectMenu) {
+   if (R(i, name), !t.global.SelectMenu) {
     var n = i;
     t.global.SelectMenu = (new west.gui.Selectbox).setHeader(a).setWidth(300).addClass("twir_filterDesign");
     for (var o = 0; o < n.length; o++) {
-     for (var s = i[o], l = [], p = s.items, c = 0; c < p.length; c++) l.push(1e3 * p[c]);
-     var A = Bag.getItemsByItemIds(l),
-      g = s.hasOwnProperty("title") ? "<div style=&quot;font-style: italic;&quot;>*" + s.title + "</div>" : "",
+     for (var r = i[o], s = [], p = r.items, c = 0; c < p.length; c++) s.push(1e3 * p[c]);
+     var A = Bag.getItemsByItemIds(s),
+      g = r.hasOwnProperty("title") ? "<div style=&quot;font-style: italic;&quot;>*" + r.title + "</div>" : "",
       m = A.length > 0 ? 0 : 100,
-      u = A.length > 0 ? 1 : .5,
-      d = A.length > 0 ? A[Math.floor(Math.random() * A.length)].obj.image : t.images.none,
+      d = A.length > 0 ? 1 : .5,
+      u = A.length > 0 ? A[Math.floor(Math.random() * A.length)].obj.image : t.images.none,
       k = (A.length > 0 && A.length, 0);
-     for (var y of l) {
-      var b = Bag.getItemCount(y);
-      b && (k += b)
+     for (var b of s) {
+      var y = Bag.getItemCount(b);
+      y && (k += y)
      }
-     var w = 0 != r.twir_inventory.item_counts ? "(" + format_money(h(k)) + ")" : "",
-      x = 0 != r.twir_inventory.item_counts ? "unset" : "none",
-      S = 0 != r.twir_inventory.item_counts ? "170px" : "200px",
-      K = 0 != r.twir_inventory.item_counts ? "left: 5px" : "right: 20px",
-      V = 0 != r.twir_inventory.item_counts ? "20px" : "10px",
-      U = 0 != r.twir_inventory.empty_opacity ? u : 1,
-      j = 0 != r.twir_inventory.empty_opacity ? m : 0,
-      R = s.name.replace(/"/g, "&quot;").replace("*", ""),
-      q = "<span>" + R + g + "</span>";
-     t.global.SelectMenu.addItem(o, '<img title="' + q + '" style="opacity: ' + U + ";-webkit-filter: grayscale(" + j + "%);filter: grayscale(" + j + "%);" + K + ';" src="' + d + '" height="20" width="auto"></img><span title="' + q + '" style="margin-top: 2px;word-wrap: break-word;max-width: ' + S + ";display: inline-block;opacity: " + U + ";padding-left: " + V + '; text-overflow:ellipsis; white-space:nowrap; overflow:hidden;color: #5e321a;">' + s.name + '</span><span title="' + e.stats.count_text + '" style="display: ' + x + ";margin-top: 2px;margin-right:5px;opacity: " + U + ';color: #8b4513;position: relative;float: right;">' + w + "</span>", s.name)
+     var w = 0 != l.twir_inventory.item_counts ? "(" + K(k) + ")" : "",
+      h = 0 != l.twir_inventory.item_counts ? "unset" : "none",
+      x = 0 != l.twir_inventory.item_counts ? "170px" : "200px",
+      I = 0 != l.twir_inventory.item_counts ? "left: 5px" : "right: 20px",
+      S = 0 != l.twir_inventory.item_counts ? "20px" : "10px",
+      M = 0 != l.twir_inventory.empty_opacity ? d : 1,
+      V = 0 != l.twir_inventory.empty_opacity ? m : 0,
+      U = r.name.replace(/"/g, "&quot;").replace("*", ""),
+      q = "<span>" + U + g + "</span>";
+     t.global.SelectMenu.addItem(o, '<img title="' + q + '" style="opacity: ' + M + ";-webkit-filter: grayscale(" + V + "%);filter: grayscale(" + V + "%);" + I + ';" src="' + u + '" height="20" width="auto"></img><span title="' + q + '" style="margin-top: 2px;word-wrap: break-word;max-width: ' + x + ";display: inline-block;opacity: " + M + ";padding-left: " + S + '; text-overflow:ellipsis; white-space:nowrap; overflow:hidden;color: #5e321a;">' + r.name + '</span><span title="' + e.stats.count_text + '" style="display: ' + h + ";margin-top: 2px;margin-right:2px;opacity: " + M + ';color: #8b4513;position: relative;float: right;">' + w + "</span>", r.name)
     }
    }
    t.global.SelectMenu.addListener(function(t) {
-    for (var n = [], o = i[t].items, s = 0; s < o.length; s++) n.push(1e3 * o[s]);
-    var r = Bag.getItemsByItemIds(n);
-    if (0 < r.length) return Inventory.window.showLoader(), B(r), Inventory.searchResult = r, Inventory.addItems("set", 1), I(i[t].name, a), Inventory.window.hideLoader();
+    for (var n = [], o = i[t].items, r = 0; r < o.length; r++) n.push(1e3 * o[r]);
+    var s = Bag.getItemsByItemIds(n);
+    if (0 < s.length) return Inventory.window.showLoader(), j(s), Inventory.searchResult = s, Inventory.addItems("set", 1), B(i[t].name, a), Inventory.window.hideLoader();
     new UserMessage(e.informative.error404 + "!", UserMessage.TYPE_HINT).show()
    })
   }, t.makeSetsMenu = function(i) {
    if (isDefined(west.storage.ItemSetManager)) {
     var a = [],
-     s = 0;
+     r = 0;
     t.global.SelectMenu = (new west.gui.Selectbox).addClass("twir_filterDesign").setHeader(e.inventory.sets);
-    0 != r.twir_inventory.sets_counts || 0 != r.twir_inventory.event ? t.global.SelectMenu.setWidth(350) : t.global.SelectMenu.setWidth(300);
-    for (var l = 0; l < i.length; l++) {
-     var p = west.storage.ItemSetManager.get(i[l].obj.set),
-      c = Bag.getItemsByItemIds(w(p.items));
+    0 != l.twir_inventory.sets_counts || 0 != l.twir_inventory.event ? t.global.SelectMenu.setWidth(350) : t.global.SelectMenu.setWidth(300);
+    for (var s = 0; s < i.length; s++) {
+     var p = west.storage.ItemSetManager.get(i[s].obj.set),
+      c = Bag.getItemsByItemIds(S(p.items));
      if (-1 === a.indexOf(p.name)) {
       a.push(p.name);
       var A = c.length > 0 ? c[Math.floor(Math.random() * c.length)].obj.image : t.images.none,
        g = c.length === p.items.length ? "(" + e.stats.all_collected + ")" : "(" + c.length + "/" + p.items.length + ")";
-      s += c.length === p.items.length ? 1 : 0;
-      for (var m = c.length === p.items.length ? "#800080" : "#8b4513", u = c.length === p.items.length ? "#800080" : "#5e321a", d = c.length === p.items.length ? 1 : 1 === c.length && p.items.length >= 4 ? .5 : 1, k = n[p.key], y = n[p.key] ? t.images.gameEvents[k[0]] : "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7", b = n[p.key] ? k[1] : "", x = [], h = [], S = 0; S < c.length; S++) x.push(c[S].obj.item_base_id), "right_arm" === c[S].obj.type && h.push(c[S].obj.item_base_id);
-      for (var M = $.grep(p.items, function(e) {
-        return $.inArray(e, x) < 0
-       }), K = M.length > 0 ? "<div style=&quot;color: #8b4513;margin-bottom: 10px;&quot;>" + e.tooltips.missing_items + ":&nbsp;</div>" : "", V = 0; V < M.length; V++) K += M.length > 0 ? "<div><img style=&quot;-webkit-filter: grayscale(100%);filter: grayscale(100%);display: inline-block;position: relative;margin-right: 2px;margin-bottom: 2px;&quot; src=&quot;" + ItemManager.getByBaseId(M[V]).image + "&quot; height=&quot;16&quot; width=&quot;auto&quot;></img><span style=&quot;color: #666;display: inline-block;&quot;>" + ItemManager.getByBaseId(M[V]).name + "</span></div>" : "";
-      var U = new west.item.BonusExtractor(Character),
-       j = p.getMergedStages(x.length);
-      (j = 2 != h.length ? p.getMergedStages(x.length) : p.getMergedStages(x.length - 1)).sort(function(e, t) {
+      r += c.length === p.items.length ? 1 : 0;
+      for (var m = c.length === p.items.length ? "#800080" : "#8b4513", d = c.length === p.items.length ? "#800080" : "#5e321a", u = c.length === p.items.length ? 1 : 1 === c.length && p.items.length >= 4 ? .5 : 1, k = n[p.key], b = n[p.key] ? t.images.gameEvents[k[0]] : "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7", y = n[p.key] ? k[1] : "", w = [], h = [], x = 0; x < c.length; x++) w.push(c[x].obj.item_base_id), "right_arm" === c[x].obj.type && h.push(c[x].obj.item_base_id);
+      for (var I = $.grep(p.items, function(e) {
+        return $.inArray(e, w) < 0
+       }), M = I.length > 0 ? "<div style=&quot;color: #8b4513;margin-bottom: 10px;&quot;>" + e.tooltips.missing_items + ":&nbsp;</div>" : "", K = 0; K < I.length; K++) M += I.length > 0 ? "<div><img style=&quot;-webkit-filter: grayscale(100%);filter: grayscale(100%);display: inline-block;position: relative;margin-right: 2px;margin-bottom: 2px;&quot; src=&quot;" + ItemManager.getByBaseId(I[K]).image + "&quot; height=&quot;16&quot; width=&quot;auto&quot;></img><span style=&quot;color: #666;display: inline-block;&quot;>" + ItemManager.getByBaseId(I[K]).name + "</span></div>" : "";
+      var V = new west.item.BonusExtractor(Character),
+       U = p.getMergedStages(w.length);
+      (U = 2 != h.length ? p.getMergedStages(w.length) : p.getMergedStages(w.length - 1)).sort(function(e, t) {
        var i = function(e, t) {
          return (e.bonus ? e.bonus.type : e.type) == t && (e.bonus ? e.bonus.name : e.name)
         },
         a = i(e, "attribute"),
         n = i(t, "attribute"),
         o = i(e, "skill"),
-        s = i(t, "skill");
-       return a && n ? a < n ? -1 : 1 : a ? -1 : n ? 1 : o && s ? 0 : o ? -1 : s ? 1 : 0
+        r = i(t, "skill");
+       return a && n ? a < n ? -1 : 1 : a ? -1 : n ? 1 : o && r ? 0 : o ? -1 : r ? 1 : 0
       });
-      for (var R = x.length > 0 && j.length > 0 ? "<div style=&quot;color: #8b4513;margin-bottom: 10px;&quot;>" + e.tooltips.owned_items_bonus + ":&nbsp;</div>" : "", q = 0; q < j.length; q++) R += x.length > 0 && j.hasOwnProperty(q) ? "<div style=&quot;color: #070;&quot;>" + U.getDesc(j[q]) + "</div>" : "";
-      var Y = 0 != r.twir_inventory.sets_counts ? "inline-block" : "none",
-       C = 0 != r.twir_inventory.event ? "inline-block" : "none",
-       G = 0 != r.twir_inventory.sets_counts || 0 != r.twir_inventory.event ? "left: 5px" : "right: 20px",
-       F = 0 != r.twir_inventory.sets_counts || 0 != r.twir_inventory.event ? "20px" : "10px",
-       E = 0 != r.twir_inventory.sets_counts ? g : "",
-       Q = 0 != r.twir_inventory.sets_counts ? K : "",
-       f = 0 != r.twir_inventory.sets_color ? u : "#5e321a",
-       J = 0 != r.twir_inventory.sets_color ? m : "#8b4513",
-       v = 0 != r.twir_inventory.empty_opacity ? d : 1,
-       O = 0 != r.twir_inventory.event ? b : "",
-       z = 0 != r.twir_inventory.event ? y : "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
-       H = 0 != r.twir_inventory.sets_counts || 0 != r.twir_inventory.event ? "170px" : "200px",
+      for (var R = w.length > 0 && U.length > 0 ? "<div style=&quot;color: #8b4513;margin-bottom: 10px;&quot;>" + e.tooltips.owned_items_bonus + ":&nbsp;</div>" : "", q = 0; q < U.length; q++) R += w.length > 0 && U.hasOwnProperty(q) ? "<div style=&quot;color: #070;&quot;>" + V.getDesc(U[q]) + "</div>" : "";
+      var Y = 0 != l.twir_inventory.sets_counts ? "inline-block" : "none",
+       C = 0 != l.twir_inventory.event ? "inline-block" : "none",
+       f = 0 != l.twir_inventory.sets_counts || 0 != l.twir_inventory.event ? "left: 5px" : "right: 20px",
+       G = 0 != l.twir_inventory.sets_counts || 0 != l.twir_inventory.event ? "20px" : "10px",
+       F = 0 != l.twir_inventory.sets_counts ? g : "",
+       E = 0 != l.twir_inventory.sets_counts ? M : "",
+       Q = 0 != l.twir_inventory.sets_color ? d : "#5e321a",
+       v = 0 != l.twir_inventory.sets_color ? m : "#8b4513",
+       J = 0 != l.twir_inventory.empty_opacity ? u : 1,
+       O = 0 != l.twir_inventory.event ? y : "",
+       z = 0 != l.twir_inventory.event ? b : "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+       H = 0 != l.twir_inventory.sets_counts || 0 != l.twir_inventory.event ? "170px" : "200px",
        W = p.name.replace(/"/g, "&quot;"),
        D = "<span>" + W + "</span>";
-      t.global.SelectMenu.addItem(p.items, '<img title="' + R + '" style="' + G + ";opacity: " + v + ';" src="' + A + '" height="20" width="auto"></img><span style="margin-top: 2px;word-wrap: break-word;max-width: ' + H + ";display: inline-block;padding-left: " + F + "; text-overflow:ellipsis; white-space:nowrap; overflow:hidden;opacity: " + v + ";color: " + f + ';" title="' + D + '">' + W + '</span><span style="float: right;opacity: ' + v + ';"><img style="display: ' + C + ';position: relative;" src="' + z + '" height="20" width="auto"></img><span style="display: ' + C + ';margin-right: 10px;position: relative;color: #8b4513;font-size: 10px;font-style: italic;">' + O + '</span><span title="' + Q + '" style="display: ' + Y + ";margin-top: 2px;color: " + J + ';position: relative;">' + E + "</span></span>")
+      t.global.SelectMenu.addItem(p.items, '<img title="' + R + '" style="' + f + ";opacity: " + J + ';" src="' + A + '" height="20" width="auto"></img><span style="margin-top: 2px;word-wrap: break-word;max-width: ' + H + ";display: inline-block;padding-left: " + G + "; text-overflow:ellipsis; white-space:nowrap; overflow:hidden;opacity: " + J + ";color: " + Q + ';" title="' + D + '">' + W + '</span><span style="float: right;opacity: ' + J + ';"><img style="display: ' + C + ';position: relative;" src="' + z + '" height="20" width="auto"></img><span style="display: ' + C + ';margin-right: 10px;position: relative;color: #8b4513;font-size: 10px;font-style: italic;">' + O + '</span><span title="' + E + '" style="display: ' + Y + ";margin-top: 2px;color: " + v + ';position: relative;">' + F + "</span></span>")
      }
     }
-    var Z = west.storage.ItemSetManager.getAll().length;
-    a.length === Z ? o.sets = {
+    var T = west.storage.ItemSetManager.getAll().length;
+    a.length === T ? o.sets = {
      item_set: "(" + e.stats.all_collected + ")",
-     complete_sets: s
+     complete_sets: r
     } : o.sets = {
      item_set: a.length,
-     all_sets: Z,
-     complete_sets: s
+     all_sets: T,
+     complete_sets: r
     }, 0 == i.length && t.global.SelectMenu.addItem("none", '<span style="font-style: italic; color: #900;">' + e.informative.no_sets + "</span>")
    }
    t.global.SelectMenu.addListener(function(t) {
     if ("none" != t) {
-     var i = Bag.getItemsByItemIds(w(t));
+     var i = Bag.getItemsByItemIds(S(t));
      if (0 < i.length) {
-      B(i);
+      j(i);
       var a = west.storage.ItemSetManager.get(i[0].obj.set).name;
-      return Inventory.customResult = i, Inventory.addItems("custom", 1), I(a, e.inventory.sets)
+      return Inventory.customResult = i, Inventory.addItems("custom", 1), B(a, e.inventory.sets)
      }
     }
    })
@@ -2206,30 +2472,30 @@
    $('<span title="<b>' + e.inventory.twir_menu + '</b>" id="twir_menu" style="background-image: url(' + t.images.menuicon + ');cursor: pointer;position: relative;z-index: 9999991;background-repeat: no-repeat;width: 20px;height: 20px;display: inline-block;float: left;"</span>').appendTo(".inventory .tw2gui_window_buttons").click(function(e) {
     t.settings.open()
    });
-   var a = $('<div class="twir_enchanted_filters ui-state-default" style="display: inline-block; position: absolute; width: auto; height: 40px;top: 55px;right:12px;border-radius: 3px;-webkit-box-shadow: 0 0 20px inset;box-shadow: 0 0 20px inset;border: 3px solid #4d392c;background-image: url(' + t.images.menubg + ");padding-right: 3px;padding-left: 3px;border: 3px solid transparent;-webkit-border-image: url(" + t.images.menuborder + ') 0 0 stretch;"></div>'),
-    n = $('<div class="twir_enchanted_yield_filters ui-state-default" style="display: inline-block; position: absolute; width: auto; height: 40px;top: 55px;right: 148px;border-radius: 3px;-webkit-box-shadow: 0 0 20px inset;box-shadow: 0 0 20px inset;border: 3px solid #4d392c;background-image: url(' + t.images.menubg + ");padding-right: 3px;padding-left: 3px;border: 3px solid transparent;-webkit-border-image: url(" + t.images.menuborder + ') 0 0 stretch;"></div>');
-   $(".filters", Inventory.DOM).before(n), $(".filters", Inventory.DOM).before(a);
+   var a = $('<div class="twir_enchanted_filters ui-state-default" style="display: inline-block; position: absolute; width: auto; height: 40px;top: 55px;right:13px;border-radius: 3px;-webkit-box-shadow: 0 0 20px inset;box-shadow: 0 0 20px inset;border: 3px solid #4d392c;background-image: url(' + t.images.menubg + ");padding-right: 5px;padding-left: 5px;border: 3px solid transparent;-webkit-border-image: url(" + t.images.menuborder + ') 0 0 stretch;"></div>'),
+    n = $('<div class="twir_enchanted_yield_filters ui-state-default" style="display: inline-block; position: absolute; width: auto; height: 40px;top: 55px;right: 146px;border-radius: 3px;-webkit-box-shadow: 0 0 20px inset;box-shadow: 0 0 20px inset;border: 3px solid #4d392c;background-image: url(' + t.images.menubg + ");padding-right: 5px;padding-left: 5px;border: 3px solid transparent;-webkit-border-image: url(" + t.images.menuborder + ') 0 0 stretch;"></div>');
+   $(".filters", Inventory.DOM).after(a), $(".filters", Inventory.DOM).after(n);
    $('<span title="' + e.inventory.useables + '" class="filter_inventory filter_useables" style= "-webkit-filter: opacity(75%); filter: opacity(75%);"></span>').appendTo(a).click(function(i) {
-    t.makeSelectMenu(c, e.inventory.useables), null != t.global.SelectMenu && wman.getById(Inventory.uid) ? this.interval = setTimeout(function() {
+    t.makeSelectMenu(g, e.inventory.useables), null != t.global.SelectMenu && wman.getById(Inventory.uid) ? this.interval = setTimeout(function() {
      t.global.SelectMenu.show(i), t.global.SelectMenu = null
     }, 100) : Inventory.open()
    }), $('<span title="' + e.inventory.buffs + '" class="filter_inventory filter_buff" style="-webkit-filter: opacity(75%); filter: opacity(75%);"></span>').appendTo(a).click(function(i) {
-    t.makeSelectMenu(p, e.inventory.buffs), null != t.global.SelectMenu && wman.getById(Inventory.uid) ? this.interval = setTimeout(function() {
+    t.makeSelectMenu(A, e.inventory.buffs), null != t.global.SelectMenu && wman.getById(Inventory.uid) ? this.interval = setTimeout(function() {
      t.global.SelectMenu.show(i), t.global.SelectMenu = null
     }, 100) : Inventory.open()
    }), $('<span title="' + e.inventory.crafting + '" class="filter_inventory filter_craft" style="-webkit-filter: opacity(75%); filter: opacity(75%);" ></span>').appendTo(a).click(function(i) {
-    t.makeSelectMenu(A, e.inventory.crafting), null != t.global.SelectMenu && wman.getById(Inventory.uid) ? this.interval = setTimeout(function() {
+    t.makeSelectMenu(m, e.inventory.crafting), null != t.global.SelectMenu && wman.getById(Inventory.uid) ? this.interval = setTimeout(function() {
      t.global.SelectMenu.show(i), t.global.SelectMenu = null
     }, 100) : Inventory.open()
    });
    var o = $('<span title="' + e.inventory.other + '" class="filter_inventory filter_bonus" style="-webkit-filter: opacity(75%); filter: opacity(75%);" ></span>').appendTo(n),
-    s = $('<span title="' + e.inventory.work_items + '" class="filter_inventory filter_work" style="-webkit-filter: opacity(75%); filter: opacity(75%);" ></span>').appendTo(n),
-    r = $('<span title="' + e.inventory.quest_items + '" class="filter_inventory filter_quests" style="-webkit-filter: opacity(75%); filter: opacity(75%);" ></span>').appendTo(n);
+    r = $('<span title="' + e.inventory.work_items + '" class="filter_inventory filter_work" style="-webkit-filter: opacity(75%); filter: opacity(75%);" ></span>').appendTo(n),
+    s = $('<span title="' + e.inventory.quest_items + '" class="filter_inventory filter_quests" style="-webkit-filter: opacity(75%); filter: opacity(75%);" ></span>').appendTo(n);
    new west.gui.Iconbutton(new west.gui.Icon("shirt")).addClass("twir_setsButton").setTitle(e.inventory.sets).appendTo(".actions", Inventory.DOM);
    Inventory.window.hideLoader(), $(".twir_setsButton").on("click", function(e) {
     if (!t.global.SelectMenu) {
      Inventory.window.showLoader();
-     var i = Bag.getItemsByItemIds(d);
+     var i = Bag.getItemsByItemIds(b);
      i.sort(function(e, t) {
       var i = west.storage.ItemSetManager.get(e.obj.set).name,
        a = west.storage.ItemSetManager.get(t.obj.set).name;
@@ -2238,17 +2504,17 @@
       t.global.SelectMenu.show(e), t.global.SelectMenu = null
      }, 250))
     }
-   }), s.click(function(t) {
-    var i = Bag.getItemsByItemIds(m);
-    if (0 < m.length) return Inventory.window.showLoader(), B(i), Inventory.searchResult = i, Inventory.addItems("set", 1), I(e.inventory.work_items, e.inventory.work_items), Inventory.window.hideLoader()
    }), r.click(function(t) {
-    var i = g,
-     a = Bag.getItemsByItemIds(w(i));
-    if (0 < a.length) return Inventory.window.showLoader(), B(a), Inventory.searchResult = a, Inventory.addItems("set", 1), I(e.inventory.quest_items, e.inventory.quest_items), Inventory.window.hideLoader()
+    var i = Bag.getItemsByItemIds(u);
+    if (0 < u.length) return Inventory.window.showLoader(), j(i), Inventory.searchResult = i, Inventory.addItems("set", 1), B(e.inventory.work_items, e.inventory.work_items), Inventory.window.hideLoader()
+   }), s.click(function(t) {
+    var i = d,
+     a = Bag.getItemsByItemIds(S(i));
+    if (0 < a.length) return Inventory.window.showLoader(), j(a), Inventory.searchResult = a, Inventory.addItems("set", 1), B(e.inventory.quest_items, e.inventory.quest_items), Inventory.window.hideLoader()
    }), o.click(function(t) {
-    var i = u,
-     a = Bag.getItemsByItemIds(w(i));
-    if (0 < a.length) return Inventory.window.showLoader(), B(a), Inventory.searchResult = a, Inventory.addItems("set", 1), I(e.inventory.other, e.inventory.other), Inventory.window.hideLoader()
+    var i = k,
+     a = Bag.getItemsByItemIds(S(i));
+    if (0 < a.length) return Inventory.window.showLoader(), j(a), Inventory.searchResult = a, Inventory.addItems("set", 1), B(e.inventory.other, e.inventory.other), Inventory.window.hideLoader()
    }), t.enchantCss(), console.log("TWIR version " + t.version + " by Jamza SUCCESSFULLY LOADED.")
   }, t.Updater = function() {
    $.getScript(t.updateUrl, function() {
