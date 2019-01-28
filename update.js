@@ -1,6 +1,6 @@
 var scriptUpdate={
-    TWIR: '2.140',
+    TWIR: '2.141',
     TWIRrev: '5',
-    TWIRNew: 'New icons, updated menus, updated item set list, updated filter, sort and bonus search, better popups with additional informations including crafting recipes, job names and much more!',
+    TWIRNew: 'Added new function - Market Watcher - simple function that scans market and tracks items and their prices. Fixed for latest TW LeoTools.',
 };
 
