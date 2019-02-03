@@ -1,5 +1,8 @@
 // ==UserScript==
 // @name TW Inventory Reloaded
+// @name:cs TW Inventory Reloaded
+// @name:sk TW Inventory Reloaded
+// @name:pl TW Inventory Reloaded
 // @description Find items as quickly and as easily as possible!
 // @description:cs Najdi předměty co nejrychleji a co nejsnadněji!
 // @description:sk Nájdi predmety čo najrýchlejšie a čo najjednoduchšie!
