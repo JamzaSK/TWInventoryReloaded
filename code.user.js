@@ -60,7 +60,7 @@
  t.setAttribute("type", "application/javascript"), t.textContent = "(" + function() {
   var e, t = {
    version: "2.143",
-   revision: "6",
+   revision: "5",
    name: "TW Inventory Reloaded",
    author: "Jamza",
    minGame: "2.94",
@@ -1867,7 +1867,7 @@
       $("#MWhtml_part1").html(""), $("#MWhtml_part2").html("");
       for (var e = 0; e < s.length; e++) {
        var t = $("<div />");
-       t.append($('<span style="margin-left: 5px;color: #9a5b49;font-weight: bold;">[ <span style="cursor: pointer; max-width: 255px;display: inline-block;text-overflow: ellipsis;white-space: nowrap;overflow: hidden;margin-bottom: -3px;">' + ItemManager.get(s[e].item_id).name + "</span> ]</span>").addMousePopup(new ItemPopup(ItemManager.get(s[e].item_id)).popup)), 0 != s[e].item_price && t.append($('<span style="margin-left: 10px;">$' + V(s[e].item_price) + "</span>")), t.append(new west.gui.Icon("abort").getMainDiv().css({
+       t.append($('<span style="margin-left: 5px;color: #9a5b49;font-weight: bold;">[ <span style="cursor: pointer; max-width: 200px;display: inline-block;text-overflow: ellipsis;white-space: nowrap;overflow: hidden;margin-bottom: -3px;">' + ItemManager.get(s[e].item_id).name + "</span> ]</span>").addMousePopup(new ItemPopup(ItemManager.get(s[e].item_id)).popup)), 0 != s[e].item_price && t.append($('<span style="margin-left: 10px;">$' + V(s[e].item_price) + "</span>")), t.append(new west.gui.Icon("abort").getMainDiv().css({
         "margin-bottom": "2px",
         "margin-left": "5px",
         cursor: "pointer"
