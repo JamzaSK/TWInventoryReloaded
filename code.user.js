@@ -60,7 +60,7 @@
  t.setAttribute("type", "application/javascript"), t.textContent = "(" + function() {
   var e, t = {
    version: "2.143",
-   revision: "5",
+   revision: "6",
    name: "TW Inventory Reloaded",
    author: "Jamza",
    minGame: "2.94",
