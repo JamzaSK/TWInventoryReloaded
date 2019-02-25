@@ -2730,11 +2730,10 @@
    TWIR.storage.inventory.use_all = TWIR.mergeArr(TWIR.storage.inventory.use), TWIR.storage.inventory.buffs_all = TWIR.mergeArr(TWIR.storage.inventory.buffs), TWIR.storage.inventory.crafting_all = TWIR.mergeArr(TWIR.storage.inventory.crafting);
    var pe = TWIR.storage.inventory.bonus,
     ce = TWIR.storage.inventory.quest,
-    me = TWIR.storage.inventory.use_all.concat(TWIR.storage.inventory.buffs_all).concat(TWIR.storage.inventory.crafting_all).concat(pe).concat(ce),
-    te = $.grep(a, function(e) {
+    me = TWIR.storage.inventory.use_all.concat(TWIR.storage.inventory.buffs_all).concat(TWIR.storage.inventory.crafting_all).concat(pe).concat(ce);
+   for (var ue in te = $.grep(a, function(e) {
      return $.inArray(e, me) < 0
-    });
-   for (var ue in !1 === TWIR.storage.inventory.use.some(t => t.name === "#" + e.inventory.others) && 0 != te.length && TWIR.storage.inventory.use.push({
+    }), !1 === TWIR.storage.inventory.use.some(t => t.name === "#" + e.inventory.others) && 0 != te.length && TWIR.storage.inventory.use.push({
      name: "#" + e.inventory.others,
      items: te
     }), s) s.hasOwnProperty(ue) && !0 === s[ue].auctionable && null != s[ue].set && -1 === TWIR.storage.marketWatcher.market_whitelist.indexOf(s[ue].item_base_id) && TWIR.storage.marketWatcher.market_whitelist.push(s[ue].item_base_id), TWIR.storage.inventory.collectibles.indexOf(s[ue].item_base_id) > 0 && -1 === TWIR.storage.marketWatcher.market_whitelist.indexOf(s[ue].item_base_id) && TWIR.storage.marketWatcher.market_whitelist.push(s[ue].item_base_id), (s[ue].short.indexOf("_fine") > 0 && null === s[ue].set || null === s[ue].traderlevel && "yield" != s[ue].type && "recipe" != s[ue].type && !0 === s[ue].auctionable && !0 === s[ue].dropable && null === s[ue].set) && -1 === TWIR.storage.inventory.collectibles.indexOf(s[ue].item_base_id) && TWIR.storage.inventory.collectibles.push(s[ue].item_base_id);
