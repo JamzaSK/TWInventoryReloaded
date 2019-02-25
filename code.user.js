@@ -23,6 +23,8 @@
 // @grant none
 // @nocompat Chrome
 
+// @updateURL https://jamzask.github.io/TWInventoryReloaded/update.js
+// @downloadURL http://greasyfork.org/scripts/373294-tw-inventory-reloaded/code/TW%20Inventory%20Reloaded.user.js
 // @supportURL https://greasyfork.org/scripts/373294-tw-inventory-reloaded
 // @homepage https://greasyfork.org/scripts/373294-tw-inventory-reloaded
 // ==/UserScript==
@@ -59,7 +61,7 @@
   var e;
   TWIR = {
    version: "2.144",
-   revision: "6",
+   revision: "7",
    name: "TW Inventory Reloaded",
    author: "Jamza",
    minGame: "2.94",
@@ -2555,30 +2557,31 @@
     L = [],
     X = [],
     _ = [],
-    ee = [];
-   for (var te in t) {
-    if (t.hasOwnProperty(te)) var ae = t[te].obj;
-    if ("yield" === ae.type) {
-     if ("mapdrop" === ae.spec_type && "none" === ae.usetype) - 1 === TWIR.storage.inventory.work.indexOf(ae.item_id) && TWIR.storage.inventory.work.push(ae.item_id);
-     else if (null != ae.set || TWIR.hasBonus(te) > 0) - 1 === TWIR.storage.inventory.bonus.indexOf(ae.item_id) && TWIR.storage.inventory.bonus.push(ae.item_id);
-     else if ("crafting" === ae.spec_type) {
-      if (ae.usebonus)
-       for (var se = 0; se < ae.usebonus.length; se++) {
-        for (var ie in CharacterSkills.keyNames) CharacterSkills.keyNames.hasOwnProperty(ie) && (ae.usebonus[se].match(i) && -1 === E.indexOf(ae.item_id) ? E.push(ae.item_id) : ae.usebonus[se].match(r) && -1 === G.indexOf(ae.item_id) ? G.push(ae.item_id) : (ae.usebonus[se].match(n) || ae.usebonus[se].match(o)) && -1 === F.indexOf(ae.item_id) ? F.push(ae.item_id) : (ae.usebonus[se].match(p) || ae.usebonus[se].match(c)) && -1 === Q.indexOf(ae.item_id) ? Q.push(ae.item_id) : (ae.usebonus[se].match(p) || ae.usebonus[se].match(c) || ae.usebonus[se].match(l)) && -1 === O.indexOf(ae.item_id) ? O.push(ae.item_id) : (ae.usebonus[se].match(y) || ae.usebonus[se].match(b)) && -1 === z.indexOf(ae.item_id) ? z.push(ae.item_id) : (ae.usebonus[se].match(g) || ae.usebonus[se].match(A)) && -1 === H.indexOf(ae.item_id) ? H.push(ae.item_id) : (ae.usebonus[se].match(m) || ae.usebonus[se].match(u)) && -1 === J.indexOf(ae.item_id) ? J.push(ae.item_id) : ae.usebonus[se].match(k) && -1 === P.indexOf(ae.item_id) ? P.push(ae.item_id) : (ae.usebonus[se].match(d) || ae.usebonus[se].match(I) || ae.usebonus[se].match(h)) && -1 === Z.indexOf(ae.item_id) ? Z.push(ae.item_id) : ae.usebonus[se].match(CharacterSkills.keyNames[ie]) && -1 === D.indexOf(ae.item_id) ? D.push(ae.item_id) : !ae.usebonus[se].match(R) || -1 !== ee.indexOf(ae.item_id) && -1 !== C.indexOf(ae.item_id) || (ee.push(ae.item_id), C.push(ae.item_id)));
-        TWIR.storage.popups.crafting.hasOwnProperty(ae.item_id) && (ae.usebonus[se].match(R) && -1 === C.indexOf(ae.item_id) ? C.push(ae.item_id) : ae.usebonus[se].match(R) || -1 !== q.indexOf(ae.item_id) || q.push(ae.item_id))
+    ee = [],
+    te = [];
+   for (var ae in t) {
+    if (t.hasOwnProperty(ae)) var se = t[ae].obj;
+    if ("yield" === se.type) {
+     if ("mapdrop" === se.spec_type && "none" === se.usetype) - 1 === TWIR.storage.inventory.work.indexOf(se.item_id) && TWIR.storage.inventory.work.push(se.item_id);
+     else if (null != se.set || TWIR.hasBonus(ae) > 0) - 1 === TWIR.storage.inventory.bonus.indexOf(se.item_id) && TWIR.storage.inventory.bonus.push(se.item_id);
+     else if ("crafting" === se.spec_type) {
+      if (se.usebonus)
+       for (var ie = 0; ie < se.usebonus.length; ie++) {
+        for (var re in CharacterSkills.keyNames) CharacterSkills.keyNames.hasOwnProperty(re) && (se.usebonus[ie].match(i) && -1 === E.indexOf(se.item_id) ? E.push(se.item_id) : se.usebonus[ie].match(r) && -1 === G.indexOf(se.item_id) ? G.push(se.item_id) : (se.usebonus[ie].match(n) || se.usebonus[ie].match(o)) && -1 === F.indexOf(se.item_id) ? F.push(se.item_id) : (se.usebonus[ie].match(p) || se.usebonus[ie].match(c)) && -1 === Q.indexOf(se.item_id) ? Q.push(se.item_id) : (se.usebonus[ie].match(p) || se.usebonus[ie].match(c) || se.usebonus[ie].match(l)) && -1 === O.indexOf(se.item_id) ? O.push(se.item_id) : (se.usebonus[ie].match(y) || se.usebonus[ie].match(b)) && -1 === z.indexOf(se.item_id) ? z.push(se.item_id) : (se.usebonus[ie].match(g) || se.usebonus[ie].match(A)) && -1 === H.indexOf(se.item_id) ? H.push(se.item_id) : (se.usebonus[ie].match(m) || se.usebonus[ie].match(u)) && -1 === J.indexOf(se.item_id) ? J.push(se.item_id) : se.usebonus[ie].match(k) && -1 === P.indexOf(se.item_id) ? P.push(se.item_id) : (se.usebonus[ie].match(d) || se.usebonus[ie].match(I) || se.usebonus[ie].match(h)) && -1 === Z.indexOf(se.item_id) ? Z.push(se.item_id) : se.usebonus[ie].match(CharacterSkills.keyNames[re]) && -1 === D.indexOf(se.item_id) ? D.push(se.item_id) : !se.usebonus[ie].match(R) || -1 !== ee.indexOf(se.item_id) && -1 !== C.indexOf(se.item_id) || (ee.push(se.item_id), C.push(se.item_id)));
+        TWIR.storage.popups.crafting.hasOwnProperty(se.item_id) && (se.usebonus[ie].match(R) && -1 === C.indexOf(se.item_id) ? C.push(se.item_id) : se.usebonus[ie].match(R) || -1 !== q.indexOf(se.item_id) || q.push(se.item_id))
        }
-      TWIR.storage.popups.crafting.hasOwnProperty(ae.item_id) && (1 === TWIR.storage.popups.crafting[ae.item_id].profsymbol && -1 === j.indexOf(ae.item_id) ? j.push(ae.item_id) : 2 === TWIR.storage.popups.crafting[ae.item_id].profsymbol && -1 === U.indexOf(ae.item_id) ? U.push(ae.item_id) : 3 === TWIR.storage.popups.crafting[ae.item_id].profsymbol && -1 === V.indexOf(ae.item_id) ? V.push(ae.item_id) : 4 === TWIR.storage.popups.crafting[ae.item_id].profsymbol && -1 === K.indexOf(ae.item_id) && K.push(ae.item_id))
-     } else if ("bonus_medal" === ae.spec_type && "use" === ae.usetype) - 1 === L.indexOf(ae.item_id) && L.push(ae.item_id);
-     else if ("none" === ae.usetype || "jobdrop" === ae.spec_type) - 1 === TWIR.storage.inventory.quest.indexOf(ae.item_id) && TWIR.storage.inventory.quest.push(ae.item_id);
-     else if ("use" === ae.usetype) {
-      if (ae.usebonus)
-       for (var se = 0; se < ae.usebonus.length; se++) ae.usebonus[se].match(i) && -1 === E.indexOf(ae.item_id) ? E.push(ae.item_id) : ae.usebonus[se].match(r) && -1 === G.indexOf(ae.item_id) ? G.push(ae.item_id) : (ae.usebonus[se].match(n) || ae.usebonus[se].match(o)) && -1 === F.indexOf(ae.item_id) ? F.push(ae.item_id) : (ae.usebonus[se].match(d) || ae.usebonus[se].match(I) || ae.usebonus[se].match(h)) && -1 === Z.indexOf(ae.item_id) ? Z.push(ae.item_id) : (ae.usebonus[se].match(y) || ae.usebonus[se].match(b)) && -1 === z.indexOf(ae.item_id) ? z.push(ae.item_id) : (ae.usebonus[se].match(g) || ae.usebonus[se].match(A)) && -1 === H.indexOf(ae.item_id) ? H.push(ae.item_id) : (ae.usebonus[se].match(B) || ae.usebonus[se].match(S) || ae.usebonus[se].match(v) || ae.usebonus[se].match(M)) && -1 === N.indexOf(ae.item_id) ? N.push(ae.item_id) : (ae.usebonus[se].match(x) || ae.usebonus[se].match(w)) && -1 === N.indexOf(ae.item_id) ? X.push(ae.item_id) : (ae.usebonus[se].match(T) || ae.usebonus[se].match(f) || ae.usebonus[se].match(W)) && -1 === _.indexOf(ae.item_id) ? _.push(ae.item_id) : ae.usebonus[se].match(R) && -1 === ee.indexOf(ae.item_id) && ee.push(ae.item_id)
-     } else if ("buff" === ae.usetype && ae.usebonus)
-      for (var se = 0; se < ae.usebonus.length; se++)
-       for (var ie in CharacterSkills.keyNames) CharacterSkills.keyNames.hasOwnProperty(ie) && ((ae.usebonus[se].match(p) || ae.usebonus[se].match(c)) && -1 === Q.indexOf(ae.item_id) ? Q.push(ae.item_id) : (ae.usebonus[se].match(p) || ae.usebonus[se].match(c) || ae.usebonus[se].match(l)) && -1 === O.indexOf(ae.item_id) ? O.push(ae.item_id) : (ae.usebonus[se].match(m) || ae.usebonus[se].match(u)) && -1 === J.indexOf(ae.item_id) ? J.push(ae.item_id) : ae.usebonus[se].match(k) && -1 === P.indexOf(ae.item_id) ? P.push(ae.item_id) : (ae.usebonus[se].match(d) || ae.usebonus[se].match(I) || ae.usebonus[se].match(h) || ae.usebonus[se].match(T) || ae.usebonus[se].match(f)) && -1 === Z.indexOf(ae.item_id) ? Z.push(ae.item_id) : (ae.usebonus[se].match(y) || ae.usebonus[se].match(b)) && -1 === z.indexOf(ae.item_id) ? z.push(ae.item_id) : (ae.usebonus[se].match(g) || ae.usebonus[se].match(A)) && -1 === H.indexOf(ae.item_id) ? H.push(ae.item_id) : ae.usebonus[se].match(CharacterSkills.keyNames[ie]) && -1 === D.indexOf(ae.item_id) && D.push(ae.item_id));
-     null !== ae.set || t[te].isJobItem() || "crafting" == ae.spec_type || -1 === a.indexOf(ae.item_id) && a.push(ae.item_id)
+      TWIR.storage.popups.crafting.hasOwnProperty(se.item_id) && (1 === TWIR.storage.popups.crafting[se.item_id].profsymbol && -1 === j.indexOf(se.item_id) ? j.push(se.item_id) : 2 === TWIR.storage.popups.crafting[se.item_id].profsymbol && -1 === U.indexOf(se.item_id) ? U.push(se.item_id) : 3 === TWIR.storage.popups.crafting[se.item_id].profsymbol && -1 === V.indexOf(se.item_id) ? V.push(se.item_id) : 4 === TWIR.storage.popups.crafting[se.item_id].profsymbol && -1 === K.indexOf(se.item_id) && K.push(se.item_id))
+     } else if ("bonus_medal" === se.spec_type && "use" === se.usetype) - 1 === L.indexOf(se.item_id) && L.push(se.item_id);
+     else if ("none" === se.usetype || "jobdrop" === se.spec_type) - 1 === TWIR.storage.inventory.quest.indexOf(se.item_id) && TWIR.storage.inventory.quest.push(se.item_id);
+     else if ("use" === se.usetype) {
+      if (se.usebonus)
+       for (var ie = 0; ie < se.usebonus.length; ie++) se.usebonus[ie].match(i) && -1 === E.indexOf(se.item_id) ? E.push(se.item_id) : se.usebonus[ie].match(r) && -1 === G.indexOf(se.item_id) ? G.push(se.item_id) : (se.usebonus[ie].match(n) || se.usebonus[ie].match(o)) && -1 === F.indexOf(se.item_id) ? F.push(se.item_id) : (se.usebonus[ie].match(d) || se.usebonus[ie].match(I) || se.usebonus[ie].match(h)) && -1 === Z.indexOf(se.item_id) ? Z.push(se.item_id) : (se.usebonus[ie].match(y) || se.usebonus[ie].match(b)) && -1 === z.indexOf(se.item_id) ? z.push(se.item_id) : (se.usebonus[ie].match(g) || se.usebonus[ie].match(A)) && -1 === H.indexOf(se.item_id) ? H.push(se.item_id) : (se.usebonus[ie].match(B) || se.usebonus[ie].match(S) || se.usebonus[ie].match(v) || se.usebonus[ie].match(M)) && -1 === N.indexOf(se.item_id) ? N.push(se.item_id) : (se.usebonus[ie].match(x) || se.usebonus[ie].match(w)) && -1 === N.indexOf(se.item_id) ? X.push(se.item_id) : (se.usebonus[ie].match(T) || se.usebonus[ie].match(f) || se.usebonus[ie].match(W)) && -1 === _.indexOf(se.item_id) ? _.push(se.item_id) : se.usebonus[ie].match(R) && -1 === ee.indexOf(se.item_id) && ee.push(se.item_id)
+     } else if ("buff" === se.usetype && se.usebonus)
+      for (var ie = 0; ie < se.usebonus.length; ie++)
+       for (var re in CharacterSkills.keyNames) CharacterSkills.keyNames.hasOwnProperty(re) && ((se.usebonus[ie].match(p) || se.usebonus[ie].match(c)) && -1 === Q.indexOf(se.item_id) ? Q.push(se.item_id) : (se.usebonus[ie].match(p) || se.usebonus[ie].match(c) || se.usebonus[ie].match(l)) && -1 === O.indexOf(se.item_id) ? O.push(se.item_id) : (se.usebonus[ie].match(m) || se.usebonus[ie].match(u)) && -1 === J.indexOf(se.item_id) ? J.push(se.item_id) : se.usebonus[ie].match(k) && -1 === P.indexOf(se.item_id) ? P.push(se.item_id) : (se.usebonus[ie].match(d) || se.usebonus[ie].match(I) || se.usebonus[ie].match(h) || se.usebonus[ie].match(T) || se.usebonus[ie].match(f)) && -1 === Z.indexOf(se.item_id) ? Z.push(se.item_id) : (se.usebonus[ie].match(y) || se.usebonus[ie].match(b)) && -1 === z.indexOf(se.item_id) ? z.push(se.item_id) : (se.usebonus[ie].match(g) || se.usebonus[ie].match(A)) && -1 === H.indexOf(se.item_id) ? H.push(se.item_id) : se.usebonus[ie].match(CharacterSkills.keyNames[re]) && -1 === D.indexOf(se.item_id) && D.push(se.item_id));
+     null !== se.set || t[ae].isJobItem() || "crafting" == se.spec_type || -1 === a.indexOf(se.item_id) && a.push(se.item_id)
     }
-    "recipe" === ae.type && -1 === Y.indexOf(ae.item_id) && Y.push(ae.item_id), null != ae.set && -1 === TWIR.storage.setList.ownedSetItems.indexOf(te) && TWIR.storage.setList.ownedSetItems.push(te)
+    "recipe" === se.type && -1 === Y.indexOf(se.item_id) && Y.push(se.item_id), null != se.set && -1 === TWIR.storage.setList.ownedSetItems.indexOf(ae) && TWIR.storage.setList.ownedSetItems.push(ae)
    }!1 === TWIR.storage.inventory.buffs.some(t => t.name === "*" + e.inventory.energy) && 0 != E.length && TWIR.storage.inventory.buffs.push({
     name: "*" + e.inventory.energy,
     items: E
@@ -2649,94 +2652,94 @@
     name: e.inventory.recipes,
     items: Y
    });
-   for (var re = 0; re < TWIR.storage.inventory.buffs.length; re++) TWIR.storage.inventory.buffs[re].name === "*" + e.inventory.energy && TWIR.storage.inventory.buffs[re].items.length < E.length && (TWIR.storage.inventory.buffs.splice(re, 1), TWIR.storage.inventory.buffs.push({
+   for (var oe = 0; oe < TWIR.storage.inventory.buffs.length; oe++) TWIR.storage.inventory.buffs[oe].name === "*" + e.inventory.energy && TWIR.storage.inventory.buffs[oe].items.length < E.length && (TWIR.storage.inventory.buffs.splice(oe, 1), TWIR.storage.inventory.buffs.push({
     name: "*" + e.inventory.energy,
     items: E
-   })), TWIR.storage.inventory.buffs[re].name === "*" + e.inventory.health && TWIR.storage.inventory.buffs[re].items.length < G.length && (TWIR.storage.inventory.buffs.splice(re, 1), TWIR.storage.inventory.buffs.push({
+   })), TWIR.storage.inventory.buffs[oe].name === "*" + e.inventory.health && TWIR.storage.inventory.buffs[oe].items.length < G.length && (TWIR.storage.inventory.buffs.splice(oe, 1), TWIR.storage.inventory.buffs.push({
     name: "*" + e.inventory.health,
     items: G
-   })), TWIR.storage.inventory.buffs[re].name === "*" + e.inventory.motivation && TWIR.storage.inventory.buffs[re].items.length < F.length && (TWIR.storage.inventory.buffs.splice(re, 1), TWIR.storage.inventory.buffs.push({
+   })), TWIR.storage.inventory.buffs[oe].name === "*" + e.inventory.motivation && TWIR.storage.inventory.buffs[oe].items.length < F.length && (TWIR.storage.inventory.buffs.splice(oe, 1), TWIR.storage.inventory.buffs.push({
     name: "*" + e.inventory.motivation,
     items: F
-   })), TWIR.storage.inventory.buffs[re].name === e.inventory.adventures && TWIR.storage.inventory.buffs[re].items.length < Q.length && (TWIR.storage.inventory.buffs.splice(re, 1), TWIR.storage.inventory.buffs.push({
+   })), TWIR.storage.inventory.buffs[oe].name === e.inventory.adventures && TWIR.storage.inventory.buffs[oe].items.length < Q.length && (TWIR.storage.inventory.buffs.splice(oe, 1), TWIR.storage.inventory.buffs.push({
     name: e.inventory.adventures,
     items: Q
-   })), TWIR.storage.inventory.buffs[re].name === e.inventory.skills && TWIR.storage.inventory.buffs[re].items.length < D.length && (TWIR.storage.inventory.buffs.splice(re, 1), TWIR.storage.inventory.buffs.push({
+   })), TWIR.storage.inventory.buffs[oe].name === e.inventory.skills && TWIR.storage.inventory.buffs[oe].items.length < D.length && (TWIR.storage.inventory.buffs.splice(oe, 1), TWIR.storage.inventory.buffs.push({
     name: e.inventory.skills,
     items: D
-   })), TWIR.storage.inventory.buffs[re].name === e.inventory.labor_points && TWIR.storage.inventory.buffs[re].items.length < P.length && (TWIR.storage.inventory.buffs.splice(re, 1), TWIR.storage.inventory.buffs.push({
+   })), TWIR.storage.inventory.buffs[oe].name === e.inventory.labor_points && TWIR.storage.inventory.buffs[oe].items.length < P.length && (TWIR.storage.inventory.buffs.splice(oe, 1), TWIR.storage.inventory.buffs.push({
     name: e.inventory.labor_points,
     items: P
-   })), TWIR.storage.inventory.buffs[re].name === e.inventory.luck_money && TWIR.storage.inventory.buffs[re].items.length < Z.length && (TWIR.storage.inventory.buffs.splice(re, 1), TWIR.storage.inventory.buffs.push({
+   })), TWIR.storage.inventory.buffs[oe].name === e.inventory.luck_money && TWIR.storage.inventory.buffs[oe].items.length < Z.length && (TWIR.storage.inventory.buffs.splice(oe, 1), TWIR.storage.inventory.buffs.push({
     name: e.inventory.luck_money,
     items: Z
-   })), TWIR.storage.inventory.buffs[re].name === e.inventory.fort_battles && TWIR.storage.inventory.buffs[re].items.length < O.length && (TWIR.storage.inventory.buffs.splice(re, 1), TWIR.storage.inventory.buffs.push({
+   })), TWIR.storage.inventory.buffs[oe].name === e.inventory.fort_battles && TWIR.storage.inventory.buffs[oe].items.length < O.length && (TWIR.storage.inventory.buffs.splice(oe, 1), TWIR.storage.inventory.buffs.push({
     name: e.inventory.fort_battles,
     items: O
-   })), TWIR.storage.inventory.buffs[re].name === e.inventory.duels && TWIR.storage.inventory.buffs[re].items.length < J.length && (TWIR.storage.inventory.buffs.splice(re, 1), TWIR.storage.inventory.buffs.push({
+   })), TWIR.storage.inventory.buffs[oe].name === e.inventory.duels && TWIR.storage.inventory.buffs[oe].items.length < J.length && (TWIR.storage.inventory.buffs.splice(oe, 1), TWIR.storage.inventory.buffs.push({
     name: e.inventory.duels,
     items: J
-   })), TWIR.storage.inventory.buffs[re].name === e.inventory.speed && TWIR.storage.inventory.buffs[re].items.length < z.length && (TWIR.storage.inventory.buffs.splice(re, 1), TWIR.storage.inventory.buffs.push({
+   })), TWIR.storage.inventory.buffs[oe].name === e.inventory.speed && TWIR.storage.inventory.buffs[oe].items.length < z.length && (TWIR.storage.inventory.buffs.splice(oe, 1), TWIR.storage.inventory.buffs.push({
     name: e.inventory.speed,
     items: z
-   })), TWIR.storage.inventory.buffs[re].name === e.inventory.xp && TWIR.storage.inventory.buffs[re].items.length < H.length && (TWIR.storage.inventory.buffs.splice(re, 1), TWIR.storage.inventory.buffs.push({
+   })), TWIR.storage.inventory.buffs[oe].name === e.inventory.xp && TWIR.storage.inventory.buffs[oe].items.length < H.length && (TWIR.storage.inventory.buffs.splice(oe, 1), TWIR.storage.inventory.buffs.push({
     name: e.inventory.xp,
     items: H
    }));
-   for (var oe = 0; oe < TWIR.storage.inventory.use.length; oe++) TWIR.storage.inventory.use[oe].name === e.inventory.events && TWIR.storage.inventory.use[oe].items.length < N.length && (TWIR.storage.inventory.use.splice(oe, 1), TWIR.storage.inventory.use.push({
+   for (var ne = 0; ne < TWIR.storage.inventory.use.length; ne++) TWIR.storage.inventory.use[ne].name === e.inventory.events && TWIR.storage.inventory.use[ne].items.length < N.length && (TWIR.storage.inventory.use.splice(ne, 1), TWIR.storage.inventory.use.push({
     name: e.inventory.events,
     items: N
-   })), TWIR.storage.inventory.use[oe].name === e.inventory.premium && TWIR.storage.inventory.use[oe].items.length < L.length && (TWIR.storage.inventory.use.splice(oe, 1), TWIR.storage.inventory.use.push({
+   })), TWIR.storage.inventory.use[ne].name === e.inventory.premium && TWIR.storage.inventory.use[ne].items.length < L.length && (TWIR.storage.inventory.use.splice(ne, 1), TWIR.storage.inventory.use.push({
     name: e.inventory.premium,
     items: L
-   })), TWIR.storage.inventory.use[oe].name === e.inventory.unpacks && TWIR.storage.inventory.use[oe].items.length < X.length && (TWIR.storage.inventory.use.splice(oe, 1), TWIR.storage.inventory.use.push({
+   })), TWIR.storage.inventory.use[ne].name === e.inventory.unpacks && TWIR.storage.inventory.use[ne].items.length < X.length && (TWIR.storage.inventory.use.splice(ne, 1), TWIR.storage.inventory.use.push({
     name: e.inventory.unpacks,
     items: X
-   })), TWIR.storage.inventory.use[oe].name === e.inventory.coll_cards && TWIR.storage.inventory.use[oe].items.length < ee.length && (TWIR.storage.inventory.use.splice(oe, 1), TWIR.storage.inventory.use.push({
+   })), TWIR.storage.inventory.use[ne].name === e.inventory.coll_cards && TWIR.storage.inventory.use[ne].items.length < ee.length && (TWIR.storage.inventory.use.splice(ne, 1), TWIR.storage.inventory.use.push({
     name: e.inventory.coll_cards,
     items: ee
-   })), TWIR.storage.inventory.use[oe].name === e.inventory.bonds_money && TWIR.storage.inventory.use[oe].items.length < _.length && (TWIR.storage.inventory.use.splice(oe, 1), TWIR.storage.inventory.use.push({
+   })), TWIR.storage.inventory.use[ne].name === e.inventory.bonds_money && TWIR.storage.inventory.use[ne].items.length < _.length && (TWIR.storage.inventory.use.splice(ne, 1), TWIR.storage.inventory.use.push({
     name: e.inventory.bonds_money,
     items: _
-   })), TWIR.storage.inventory.use[oe].name === "#" + e.inventory.others && TWIR.storage.inventory.use[oe].items.length < me.length && (TWIR.storage.inventory.use.splice(oe, 1), TWIR.storage.inventory.use.push({
+   })), TWIR.storage.inventory.use[ne].name === "#" + e.inventory.others && TWIR.storage.inventory.use[ne].items.length < te.length && (TWIR.storage.inventory.use.splice(ne, 1), TWIR.storage.inventory.use.push({
     name: "#" + e.inventory.others,
-    items: me
+    items: te
    }));
-   for (var ne = 0; ne < TWIR.storage.inventory.crafting.length; ne++) TWIR.storage.inventory.crafting[ne].name === "*" + e.inventory.field_cook && TWIR.storage.inventory.crafting[ne].items.length < j.length && (TWIR.storage.inventory.crafting.splice(ne, 1), TWIR.storage.inventory.crafting.push({
+   for (var le = 0; le < TWIR.storage.inventory.crafting.length; le++) TWIR.storage.inventory.crafting[le].name === "*" + e.inventory.field_cook && TWIR.storage.inventory.crafting[le].items.length < j.length && (TWIR.storage.inventory.crafting.splice(le, 1), TWIR.storage.inventory.crafting.push({
     name: "*" + e.inventory.field_cook,
     items: j
-   })), TWIR.storage.inventory.crafting[ne].name === "*" + e.inventory.tonic_peddler && TWIR.storage.inventory.crafting[ne].items.length < U.length && (TWIR.storage.inventory.crafting.splice(ne, 1), TWIR.storage.inventory.crafting.push({
+   })), TWIR.storage.inventory.crafting[le].name === "*" + e.inventory.tonic_peddler && TWIR.storage.inventory.crafting[le].items.length < U.length && (TWIR.storage.inventory.crafting.splice(le, 1), TWIR.storage.inventory.crafting.push({
     name: "*" + e.inventory.tonic_peddler,
     items: U
-   })), TWIR.storage.inventory.crafting[ne].name === "*" + e.inventory.blacksmith && TWIR.storage.inventory.crafting[ne].items.length < V.length && (TWIR.storage.inventory.crafting.splice(ne, 1), TWIR.storage.inventory.crafting.push({
+   })), TWIR.storage.inventory.crafting[le].name === "*" + e.inventory.blacksmith && TWIR.storage.inventory.crafting[le].items.length < V.length && (TWIR.storage.inventory.crafting.splice(le, 1), TWIR.storage.inventory.crafting.push({
     name: "*" + e.inventory.blacksmith,
     items: V
-   })), TWIR.storage.inventory.crafting[ne].name === "*" + e.inventory.master_saddler && TWIR.storage.inventory.crafting[ne].items.length < K.length && (TWIR.storage.inventory.crafting.splice(ne, 1), TWIR.storage.inventory.crafting.push({
+   })), TWIR.storage.inventory.crafting[le].name === "*" + e.inventory.master_saddler && TWIR.storage.inventory.crafting[le].items.length < K.length && (TWIR.storage.inventory.crafting.splice(le, 1), TWIR.storage.inventory.crafting.push({
     name: "*" + e.inventory.master_saddler,
     items: K
-   })), TWIR.storage.inventory.crafting[ne].name === e.inventory.coll_cards && TWIR.storage.inventory.crafting[ne].items.length < C.length && (TWIR.storage.inventory.crafting.splice(ne, 1), TWIR.storage.inventory.crafting.push({
+   })), TWIR.storage.inventory.crafting[le].name === e.inventory.coll_cards && TWIR.storage.inventory.crafting[le].items.length < C.length && (TWIR.storage.inventory.crafting.splice(le, 1), TWIR.storage.inventory.crafting.push({
     name: e.inventory.coll_cards,
     items: C
-   })), TWIR.storage.inventory.crafting[ne].name === e.inventory.crafted_items && TWIR.storage.inventory.crafting[ne].items.length < q.length && (TWIR.storage.inventory.crafting.splice(ne, 1), TWIR.storage.inventory.crafting.push({
+   })), TWIR.storage.inventory.crafting[le].name === e.inventory.crafted_items && TWIR.storage.inventory.crafting[le].items.length < q.length && (TWIR.storage.inventory.crafting.splice(le, 1), TWIR.storage.inventory.crafting.push({
     name: e.inventory.crafted_items,
     items: q
-   })), TWIR.storage.inventory.crafting[ne].name === e.inventory.recipes && TWIR.storage.inventory.crafting[ne].items.length < Y.length && (TWIR.storage.inventory.crafting.splice(ne, 1), TWIR.storage.inventory.crafting.push({
+   })), TWIR.storage.inventory.crafting[le].name === e.inventory.recipes && TWIR.storage.inventory.crafting[le].items.length < Y.length && (TWIR.storage.inventory.crafting.splice(le, 1), TWIR.storage.inventory.crafting.push({
     name: e.inventory.recipes,
     items: Y
    }));
    TWIR.storage.inventory.use_all = TWIR.mergeArr(TWIR.storage.inventory.use), TWIR.storage.inventory.buffs_all = TWIR.mergeArr(TWIR.storage.inventory.buffs), TWIR.storage.inventory.crafting_all = TWIR.mergeArr(TWIR.storage.inventory.crafting);
-   var le = TWIR.storage.inventory.bonus,
-    pe = TWIR.storage.inventory.quest,
-    ce = TWIR.storage.inventory.use_all.concat(TWIR.storage.inventory.buffs_all).concat(TWIR.storage.inventory.crafting_all).concat(le).concat(pe),
-    me = $.grep(a, function(e) {
-     return $.inArray(e, ce) < 0
+   var pe = TWIR.storage.inventory.bonus,
+    ce = TWIR.storage.inventory.quest,
+    me = TWIR.storage.inventory.use_all.concat(TWIR.storage.inventory.buffs_all).concat(TWIR.storage.inventory.crafting_all).concat(pe).concat(ce),
+    te = $.grep(a, function(e) {
+     return $.inArray(e, me) < 0
     });
-   for (var ue in !1 === TWIR.storage.inventory.use.some(t => t.name === "#" + e.inventory.others) && 0 != me.length && TWIR.storage.inventory.use.push({
+   for (var ue in !1 === TWIR.storage.inventory.use.some(t => t.name === "#" + e.inventory.others) && 0 != te.length && TWIR.storage.inventory.use.push({
      name: "#" + e.inventory.others,
-     items: me
+     items: te
     }), s) s.hasOwnProperty(ue) && !0 === s[ue].auctionable && null != s[ue].set && -1 === TWIR.storage.marketWatcher.market_whitelist.indexOf(s[ue].item_base_id) && TWIR.storage.marketWatcher.market_whitelist.push(s[ue].item_base_id), TWIR.storage.inventory.collectibles.indexOf(s[ue].item_base_id) > 0 && -1 === TWIR.storage.marketWatcher.market_whitelist.indexOf(s[ue].item_base_id) && TWIR.storage.marketWatcher.market_whitelist.push(s[ue].item_base_id), (s[ue].short.indexOf("_fine") > 0 && null === s[ue].set || null === s[ue].traderlevel && "yield" != s[ue].type && "recipe" != s[ue].type && !0 === s[ue].auctionable && !0 === s[ue].dropable && null === s[ue].set) && -1 === TWIR.storage.inventory.collectibles.indexOf(s[ue].item_base_id) && TWIR.storage.inventory.collectibles.push(s[ue].item_base_id);
-   for (var ge = 0; ge < le; ge++) {
-    var Ae = ItemManager.getByBaseId(le[ge]);
+   for (var ge = 0; ge < pe; ge++) {
+    var Ae = ItemManager.getByBaseId(pe[ge]);
     !0 === Ae.auctionable && -1 === TWIR.storage.marketWatcher.market_whitelist.indexOf(Ae.item_base_id) && TWIR.storage.marketWatcher.market_whitelist.push(Ae.item_base_id)
    }
    TWIR.storage.marketWatcher.market_whitelist = TWIR.storage.marketWatcher.market_whitelist.sort((e, t) => t - e)
