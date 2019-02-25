@@ -2222,6 +2222,7 @@
         break;
        case "valentine":
         TWIR.storage.setList.eventIcons.hasOwnProperty(n.set) && "valentine" === TWIR.storage.setList.eventIcons[n.set][0] && i.push(s);
+		break;
        case "xmas":
         TWIR.storage.setList.eventIcons.hasOwnProperty(n.set) && "xmas" === TWIR.storage.setList.eventIcons[n.set][0] && i.push(s);
         break;
