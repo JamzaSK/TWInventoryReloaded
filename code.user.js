@@ -23,8 +23,6 @@
 // @grant none
 // @nocompat Chrome
 
-// @updateURL https://jamzask.github.io/TWInventoryReloaded/update.js
-// @downloadURL http://greasyfork.org/scripts/373294-tw-inventory-reloaded/code/TW%20Inventory%20Reloaded.user.js
 // @supportURL https://greasyfork.org/scripts/373294-tw-inventory-reloaded
 // @homepage https://greasyfork.org/scripts/373294-tw-inventory-reloaded
 // ==/UserScript==
@@ -1993,7 +1991,7 @@
      })).append("<br>").append(X.getMainDiv().css({
       margin: "2px",
       "min-width": "100px"
-     })).append("<br><br>").append(te.getMainDiv().css({
+     })).append("<br>").append(te.getMainDiv().css({
       margin: "2px",
       "min-width": "100px"
      })).append("<br>").append(_.getMainDiv().css({
@@ -2005,7 +2003,7 @@
      })).append("<br>").append(se.getMainDiv().css({
       margin: "2px",
       "min-width": "100px"
-     })).append("<br>")).getMainDiv()).append((new west.gui.Groupframe).appendToContentPane($("<span />").append('<br><div class="twir_text">' + e.market_watcher.add_name + " </div><br>").append(ae.getMainDiv().css({
+     })).append("<br><br>")).getMainDiv()).append((new west.gui.Groupframe).appendToContentPane($("<span />").append('<br><div class="twir_text">' + e.market_watcher.add_name + " </div><br>").append(ae.getMainDiv().css({
       margin: "2px",
       "min-width": "100px"
      })).append("<br>").append(ie.getMainDiv().css({
