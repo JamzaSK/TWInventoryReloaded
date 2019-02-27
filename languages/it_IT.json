@@ -23,7 +23,7 @@
     "duels": "Duelli",
     "energy": "Riposo",
     "motivation": "Motivatione",
-    "skills": "Attributiabilità",
+    "skills": "Attributi/abilità",
     "fort_battles": "Battaglie ai forti",
     "speed": "Velocità",
     "health": "Punti vita",
@@ -69,7 +69,7 @@
     "items": "oggetti"
   },
   "organizing": {
-    "invert_text": "MostraNascondi oggetti diversi basati sul filtro selezionato",
+    "invert_text": "Mostra/Nascondi oggetti diversi basati sul filtro selezionato",
     "invert": "Inverti",
     "none": "Niente",
     "all_items": "Mostra tutto",
@@ -78,9 +78,9 @@
     "bonus_search": "Cerca per bonus",
     "show": "Mostra",
     "upgradeable": "Migliorabile",
-    "sellable": "Vendibile ai negozimercante",
+    "sellable": "Vendibile ai negozi/mercante",
     "auctionable": "Vendibile all'asta",
-    "tradeable": "In vendita ai negozimercante",
+    "tradeable": "In vendita ai negozi/mercante",
     "droppable": "Trovabile lavorando",
     "duplicates": "Doppioni",
     "gender": "Genere",
@@ -155,7 +155,7 @@
   },
   "features": {
     "preferences": "Prefereenze",
-    "inventory_menus": "Inventariomenu",
+    "inventory_menus": "Inventario/menu",
     "window_title": "Migliora titolo principale",
     "window_minititle": "Migliora titolo in basso",
     "empty_opacity": "Opacità nel vuoto",
