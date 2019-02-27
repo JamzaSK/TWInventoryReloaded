@@ -1,7 +1,6 @@
 {
   "script_name": "TW Inventory Reloaded",
   "translate": "Čeština (cs)",
-  "iso": "0 -785px",
   "invent": "Inventář",
   "script_version": "Verze",
   "script_revision": "Revize",
@@ -48,7 +47,6 @@
     "crafting": "Řemeslné",
     "buffs": "Posílení",
     "others": "Ostatní",
-    "uncategorized_text": "Tyto předměty jsou nové nebo nepotřebné",
     "sets": "Seznam souprav",
     "twir_menu": "Menu",
     "bonds_money": "UPD a peníze"
