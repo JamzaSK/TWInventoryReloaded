@@ -1,7 +1,6 @@
 {
   "script_name": "TW Inventory Reloaded",
   "translate": "Italiano (it)",
-  "iso": "0 -1297px",
   "invent": "Inventario",
   "script_version": "Versione",
   "script_revision": "Revisione",
@@ -51,7 +50,7 @@
     "others": "Altri",
     "sets": "Elenco set oggetti",
     "twir_menu": "Menu",
-    "bonds_money": "Bonds and dollars"
+    "bonds_money": "Bond e dollari"
   },
   "tooltips": {
     "jobdrop": "Trovabile lavorando",
@@ -163,7 +162,7 @@
     "sets_counts": "Contatore set oggetti",
     "sets_color": "Colore set completati",
     "event": "Mostra eventi",
-    "popup_tooltips": "Pop-up",
+    "popup_tooltips": "Tooltip",
     "item_id": "ID oggetto",
     "job_name": "Nome lavoro",
     "item_crafting": "Oggetto professione",
@@ -219,8 +218,8 @@
     "valid_auctionable": "L'oggetto $1 non è vendibile al mercato",
     "valid_defined": "L'oggetto $1 è già osservato",
     "valid_max": "Non puoi osservare più di 50 oggetti",
-    "search": "Search items, sets, events, skills.. or search $kw",
-    "keyword": "keyword",
-    "error_wait": "Please wait untill search is completed"
+    "search": "Cerca oggetti, set, eventi, abilità... oppure $kw",
+    "keyword": "Parole chiave",
+    "error_wait": "Per favore attendi finché la ricerca non sarà completata"
   }
 }
