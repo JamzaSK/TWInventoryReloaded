@@ -1,7 +1,6 @@
 {
   "script_name": "TW Inventory Reloaded",
   "translate": "Español (es)",
-  "iso": "0 -1393px",
   "invent": "Inventario",
   "script_version": "Versión",
   "script_revision": "Revisión",
@@ -48,7 +47,6 @@
     "crafting": "Elaboración",
     "buffs": "Buffs",
     "others": "Sin categorizar",
-    "uncategorized_text": "Estos artículos pueden ser nuevos o simplemente son inútiles.",
     "sets": "Lista de elementos de Conjunto",
     "twir_menu": "Menú",
     "bonds_money": "Bonds and dollars"
