@@ -40,7 +40,7 @@
     "coll_cards": "Tarjetas de coleccionista",
     "from_set": "Elementos de Conjunto",
     "upgraded": "Actualizado",
-    "useable": "Useable",
+    "useable": "Utilizable",
     "premium": "Premium",
     "xp": "Experiencia",
     "luck_money": "Suerte y Dinero",
@@ -49,7 +49,7 @@
     "others": "Sin categorizar",
     "sets": "Lista de elementos de Conjunto",
     "twir_menu": "Menú",
-    "bonds_money": "Bonds and dollars"
+    "bonds_money": "Bonos y dólares"
   },
   "tooltips": {
     "jobdrop": "Obtenibles desde trabajos",
@@ -170,17 +170,23 @@
     "market_watcher": "observador de mercado",
     "set_pieces": "piezas sueltas",
     "update_prices": "seguimiento precios",
-    "market_alert": "item tracking",
-    "alert_sound": "alert sound"
+    "market_alert": "Seguimiento de artículo",
+    "alert_sound": "sonido de alerta"
   },
   "keyWords": {
-    "xmas": "Christmas",
-    "valentine": "Valentine",
-    "independance": "Independance day",
-    "dotd": "Day of the Dead",
-    "easter": "Easter",
-    "oktoberfest": "Octoberfest"
-  },
+  "xmas": [
+    "Navidad",
+    "Venta de vacaciones"
+  ],
+  "valentine": "San Valentín",
+  "independance": "Día de la Independencia",
+  "dotd": [
+    "Día de los Muertos",
+    "Día de los Muertos"
+  ],
+  "easter": "Pascua",
+  "oktoberfest": "Oktoberfest"
+},
   "informative": {
     "error404": "No se encontraron artículos de este tipo",
     "error": "Parámetros inválidos.",
@@ -199,8 +205,8 @@
     "valid_auctionable": "Artículo $1 no es subastable",
     "valid_defined": "Artículo $1 ya está vigilado",
     "valid_max": "No puedes observar más de 50 artículos ",
-    "search": "Search items, sets, events, skills.. or search $kw",
-    "keyword": "keyword",
-    "error_wait": "Please wait till search is completed"
+    "search": "Buscar artículos, conjuntos, eventos, habilidades, ... o buscar $kw",
+    "keyword": "palabra clave",
+    "error_wait": "Por favor espere hasta que se complete la búsqueda"
   }
 }
