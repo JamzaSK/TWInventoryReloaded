@@ -1,7 +1,6 @@
 {
   "script_name": "TW Inventory Reloaded",
   "translate": "Slovenčina (sk)",
-  "iso": "0 -817px",
   "invent": "Inventár",
   "script_version": "Verzia",
   "script_revision": "Revízia",
@@ -48,7 +47,6 @@
     "crafting": "Remeselné",
     "buffs": "Posilnenie",
     "others": "Ostatní",
-    "uncategorized_text": "Tieto predmety sú nové alebo nepotrebné",
     "sets": "Zoznam súprav",
     "twir_menu": "Menu",
     "bonds_money": "Dlhopisy a peniaze"
