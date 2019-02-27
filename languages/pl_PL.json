@@ -1,7 +1,6 @@
 {
   "script_name": "TW Inventory Reloaded",
   "translate": "Polish (pl)",
-  "iso": "0 -1201px",
   "invent": "Ekwipunek",
   "script_version": "Wersja",
   "script_revision": "Zmiany",
@@ -48,7 +47,6 @@
     "crafting": "Rzemiosło",
     "buffs": "Buffy",
     "others": "Inne",
-    "uncategorized_text": "Te przedmioty mogą być nowe lub po prostu nieprzydatne",
     "sets": "Lista zestawów",
     "twir_menu": "Menu",
     "bonds_money": "Obligacje i dolary"
