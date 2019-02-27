@@ -37,7 +37,7 @@
     "recipes": "Ricette",
     "quest_items": "Oggetti missione",
     "work_items": "Prodotti",
-    "equipment": "Equipment",
+    "equipment": "Equipaggiamento",
     "coll_cards": "Carte da collezione",
     "from_set": "Set oggetti",
     "upgraded": "Migliorati",
@@ -48,7 +48,7 @@
     "luck_money": "Fortuna e denaro",
     "crafting": "Professioni",
     "buffs": "Potenziamenti",
-    "others": "Other",
+    "others": "Altri",
     "sets": "Elenco set oggetti",
     "twir_menu": "Menu",
     "bonds_money": "Bonds and dollars"
@@ -179,13 +179,25 @@
   "keyWords": {
     "xmas": [
       "Natale",
-      "Vendite di Natale"
+      "Vendite di Natale",
+      "Xmas",
+      "Christmas"
     ],
-    "valentine": "San Valentino",
-    "independance": "Giorno dell'Indipendenza",
+    "valentine": [
+      "San Valentino",
+      "Valentino",
+      "Valentine"
+    ],
+    "independance": [
+      "Giorno dell'Indipendenza",
+      "Indipendenza",
+      "Independence"
+    ],
     "dotd": [
       "Giorno dei morti",
-      "Dia de los Muertos"
+      "Dia de los Muertos",
+      "DoD",
+      "Morti"
     ],
     "easter": "Pasqua",
     "oktoberfest": "Oktoberfest"
