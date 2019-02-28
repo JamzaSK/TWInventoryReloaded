@@ -21,7 +21,6 @@
     "labor_points": "Pracovné body",
     "duels": "Duely",
     "energy": "Energia",
-    "motivation": "Motivácia",
     "skills": "Body schopností",
     "fort_battles": "Boje",
     "speed": "Rýchlosť",
@@ -50,7 +49,9 @@
     "sets": "Zoznam súprav",
     "twir_menu": "Menu",
     "bonds_money": "Dlhopisy a peniaze",
-    "waytime_shortening": "Skrátenie cestovania"
+    "waytime_shortening": "Skrátenie cestovania",
+    "work_motivation": "Pracovná motivácia",
+    "duel_motivation": "Duelová motivácia"
   },
   "tooltips": {
     "jobdrop": "Dá sa nájsť pri práci",
