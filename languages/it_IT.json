@@ -21,7 +21,6 @@
     "labor_points": "Punti lavoro",
     "duels": "Duelli",
     "energy": "Riposo",
-    "motivation": "Motivatione",
     "skills": "Attributi/abilità",
     "fort_battles": "Battaglie ai forti",
     "speed": "Velocità",
@@ -51,7 +50,9 @@
     "sets": "Elenco set oggetti",
     "twir_menu": "Menu",
     "bonds_money": "Bond e dollari",
-    "waytime_shortening": "Waytime shortening"
+    "waytime_shortening": "Waytime shortening",
+    "work_motivation": "Work motivation",
+    "duel_motivation": "Duel motivation"
   },
   "tooltips": {
     "jobdrop": "Trovabile lavorando",
