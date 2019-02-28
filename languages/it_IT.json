@@ -24,7 +24,7 @@
     "motivation": "Motivatione",
     "skills": "Attributi/abilità",
     "fort_battles": "Battaglie ai forti",
-    "speed": "Velocità",
+    "speed": "Velocità ($1)",
     "health": "Punti vita",
     "events": "Eventi",
     "unpacks": "Da aprire",
@@ -50,7 +50,9 @@
     "others": "Altri",
     "sets": "Elenco set oggetti",
     "twir_menu": "Menu",
-    "bonds_money": "Bond e dollari"
+    "bonds_money": "Bond e dollari",
+    "active": "active",
+    "passive": "passive"
   },
   "tooltips": {
     "jobdrop": "Trovabile lavorando",
