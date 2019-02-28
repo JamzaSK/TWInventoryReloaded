@@ -49,9 +49,9 @@
     "sets": "Lista zestawów",
     "twir_menu": "Menu",
     "bonds_money": "Obligacje i dolary",
-    "waytime_shortening": "Waytime shortening",
-    "work_motivation": "Work motivation",
-    "duel_motivation": "Duel motivation"
+    "waytime_shortening": "Skrócenie czasu podróży",
+    "work_motivation": "Motywacja do prac",
+    "duel_motivation": "Motywacja do pojedynków"
   },
   "tooltips": {
     "jobdrop": "Znalezione w pracy",
