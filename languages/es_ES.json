@@ -24,7 +24,7 @@
     "motivation": "Motivación",
     "skills": "Habilidades",
     "fort_battles": "Batallas",
-    "speed": "Velocidad ($1)",
+    "speed": "Velocidad",
     "health": "Puntos de Salud",
     "events": "Eventos",
     "unpacks": "Desempaquetar",
@@ -50,8 +50,7 @@
     "sets": "Lista de elementos de Conjunto",
     "twir_menu": "Menú",
     "bonds_money": "Bonos y dólares",
-    "active": "active",
-    "passive": "passive"
+    "waytime_shortening": "Waytime shortening"
   },
   "tooltips": {
     "jobdrop": "Obtenibles desde trabajos",
