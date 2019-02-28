@@ -24,7 +24,7 @@
     "motivation": "Motivace",
     "skills": "Body schopností",
     "fort_battles": "Bitvy",
-    "speed": "Rychlost ($1)",
+    "speed": "Rychlost",
     "health": "Body zdraví",
     "events": "Eventy",
     "unpacks": "Tašky a truhly",
@@ -50,8 +50,7 @@
     "sets": "Seznam souprav",
     "twir_menu": "Menu",
     "bonds_money": "UPD a peníze"
-    "active": "aktivní",
-    "passive": "pasivní"
+    "waytime_shortening": "Zkrácení cestování"
   },
   "tooltips": {
     "jobdrop": "Lze najít při práci",
