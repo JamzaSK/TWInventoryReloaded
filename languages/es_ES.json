@@ -21,7 +21,6 @@
     "labor_points": "Puntos de Trabajo (PT)",
     "duels": "Duelos",
     "energy": "Energía",
-    "motivation": "Motivación",
     "skills": "Habilidades",
     "fort_battles": "Batallas",
     "speed": "Velocidad",
@@ -50,7 +49,9 @@
     "sets": "Lista de elementos de Conjunto",
     "twir_menu": "Menú",
     "bonds_money": "Bonos y dólares",
-    "waytime_shortening": "Waytime shortening"
+    "waytime_shortening": "Waytime shortening",
+    "work_motivation": "Work motivation",
+    "duel_motivation": "Duel motivation"
   },
   "tooltips": {
     "jobdrop": "Obtenibles desde trabajos",
