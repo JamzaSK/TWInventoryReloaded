@@ -24,7 +24,7 @@
     "motivation": "Motivation",
     "skills": "Skills",
     "fort_battles": "Fort battles",
-    "speed": "Speed ($1)",
+    "speed": "Speed",
     "health": "Health points",
     "events": "Event stuff",
     "unpacks": "Unpacks",
@@ -50,8 +50,7 @@
     "sets": "Item Sets list",
     "twir_menu": "Menu",
     "bonds_money": "Bonds and dollars",
-    "active": "active",
-    "passive": "passive"
+    "waytime_shortening": "Waytime shortening"
   },
   "tooltips": {
     "jobdrop": "Droppable from job",
