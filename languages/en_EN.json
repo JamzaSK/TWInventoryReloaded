@@ -21,7 +21,6 @@
     "labor_points": "Labor points",
     "duels": "Duels",
     "energy": "Energy",
-    "motivation": "Motivation",
     "skills": "Skill points",
     "fort_battles": "Fort battles",
     "speed": "Speed",
@@ -50,7 +49,9 @@
     "sets": "Item Sets list",
     "twir_menu": "Menu",
     "bonds_money": "Bonds and dollars",
-    "waytime_shortening": "Waytime shortening"
+    "waytime_shortening": "Waytime shortening",
+    "work_motivation": "Work motivation",
+    "duel_motivation": "Duel motivation"
   },
   "tooltips": {
     "jobdrop": "Droppable from job",
