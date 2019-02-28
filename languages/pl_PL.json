@@ -24,7 +24,7 @@
     "motivation": "Motywacja",
     "skills": "Umiejętności",
     "fort_battles": "Bitwy fortowe",
-    "speed": "Prędkość ($1)",
+    "speed": "Prędkość",
     "health": "Punkty Życia",
     "events": "Eventy",
     "unpacks": "Do otwarcia",
@@ -50,8 +50,7 @@
     "sets": "Lista zestawów",
     "twir_menu": "Menu",
     "bonds_money": "Obligacje i dolary",
-    "active": "active",
-    "passive": "passive"
+    "waytime_shortening": "Waytime shortening"
   },
   "tooltips": {
     "jobdrop": "Znalezione w pracy",
