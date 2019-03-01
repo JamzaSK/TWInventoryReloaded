@@ -222,6 +222,7 @@
     "valid_max": "Non puoi osservare più di 50 oggetti",
     "search": "Cerca oggetti, set, eventi, abilità... oppure $kw",
     "keyword": "Parole chiave",
-    "error_wait": "Per favore attendi finché la ricerca non sarà completata"
+    "error_wait": "Per favore attendi finché la ricerca non sarà completata",
+    "error_other": "An error has occurred, please open console for details"
   }
 }
