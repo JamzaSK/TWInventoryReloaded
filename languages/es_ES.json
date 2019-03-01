@@ -209,6 +209,7 @@
     "valid_max": "No puedes observar más de 50 artículos ",
     "search": "Buscar artículos, conjuntos, eventos, habilidades, ... o buscar $kw",
     "keyword": "palabra clave",
-    "error_wait": "Por favor espere hasta que se complete la búsqueda"
+    "error_wait": "Por favor espere hasta que se complete la búsqueda",
+    "error_other": "An error has occurred, please open console for details"
   }
 }
