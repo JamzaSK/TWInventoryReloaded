@@ -221,6 +221,7 @@
     "valid_max": "Nie możesz obserwować więcej niż  50 przedmiotów",
     "search": "Wyszukaj przedmioty, sety, wydarzenia, umiejętności... lub wyszukaj $kw",
     "keyword": "słowo kluczowe",
-    "error_wait": "Poczekaj aż wyszukiwanie zostanie zakończone."
+    "error_wait": "Poczekaj aż wyszukiwanie zostanie zakończone.",
+    "error_other": "An error has occurred, please open console for details"
   }
 }
