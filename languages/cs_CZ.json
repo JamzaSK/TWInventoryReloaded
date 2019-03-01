@@ -207,6 +207,7 @@
     "valid_max": "Nemůžeš sledovat více než 50 předmětů",
     "search": "Hledej předměty, sety, eventy, schopnosti.. nebo $kw pro vyhledávaní",
     "keyword": "klíčové slovo",
-    "error_wait": "Prosím počkej, až bude hledání dokončeno"
+    "error_wait": "Prosím počkej, až bude hledání dokončeno",
+    "error_other": "Došlo k chybě, prosím, otevři konzolu pro podrobnosti"
   }
 }
