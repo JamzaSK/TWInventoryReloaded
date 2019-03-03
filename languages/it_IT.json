@@ -211,6 +211,7 @@
     "storage_error": "Salvataggio in locale non consentito",
     "no_sets": "Non possiedi set oggetti",
     "years": "$1 anni fa",
+    "year": "year",
     "months": "$1 mesi fa",
     "days": "$1 giorni fa",
     "hours": "$1 ore fa",
