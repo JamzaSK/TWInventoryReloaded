@@ -1,6 +1,6 @@
 var scriptUpdate={
-    TWIR: '2.144',
+    TWIR: '2.145',
     TWIRrev: '8',
-    TWIRNew: 'Fixed bugs: MarketWatcher cooldown changed from 5 minutes to 5-15 minutes, 1-5 sec per check (previously caused timeout error). Time left for limited items is now correct.',
+    TWIRNew: 'Added Italian translation, Speed and Motivation category is now splitted to Work/Duel motivation and Speed/Waytime shortening, Fixed: Instant Wear button, Filter, ScrollPane bug',
 };
 
