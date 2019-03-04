@@ -1143,7 +1143,7 @@
           0 === a.obj.item_level && (a = null);
           break;
          case "from_set":
-          !1 === a.obj.set && (a = null);
+          null === a.obj.set && (a = null);
           break;
          case "sellable":
           !1 === a.obj.sellable && (a = null);
