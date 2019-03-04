@@ -62,7 +62,7 @@
   var e;
   TWIR = {
    version: "2.145",
-   revision: "8",
+   revision: "9",
    name: "TW Inventory Reloaded",
    author: "Jamza",
    minGame: "2.94",
@@ -77,32 +77,32 @@
     en: {
      icon: "0 -721px",
      translate: "English (en)",
-     url: "https://jamzask.github.io/TWInventoryReloaded/languages/en_EN.json"
+     url: "https://raw.githubusercontent.com/JamzaSK/TWInventoryReloaded/master/languages/en_EN.json"
     },
     cs: {
      icon: "0 -785px",
      translate: "Čeština (cs)",
-     url: "https://jamzask.github.io/TWInventoryReloaded/languages/cs_CZ.json"
+     url: "https://raw.githubusercontent.com/JamzaSK/TWInventoryReloaded/master/languages/cs_CZ.json"
     },
     sk: {
      icon: "0 -817px",
      translate: "Slovenčina (sk)",
-     url: "https://jamzask.github.io/TWInventoryReloaded/languages/sk_SK.json"
+     url: "https://raw.githubusercontent.com/JamzaSK/TWInventoryReloaded/master/languages/sk_SK.json"
     },
     pl: {
      icon: "0 -1201px",
      translate: "Polish (pl)",
-     url: "https://jamzask.github.io/TWInventoryReloaded/languages/pl_PL.json"
+     url: "https://raw.githubusercontent.com/JamzaSK/TWInventoryReloaded/master/languages/pl_PL.json"
     },
     es: {
      icon: "0 -1393px",
      translate: "Español (es)",
-     url: "https://jamzask.github.io/TWInventoryReloaded/languages/es_ES.json"
+     url: "https://raw.githubusercontent.com/JamzaSK/TWInventoryReloaded/master/languages/es_ES.json"
     },
     it: {
      icon: "0 -1297px",
      translate: "Italiano (it)",
-     url: "https://jamzask.github.io/TWInventoryReloaded/languages/it_IT.json"
+     url: "https://raw.githubusercontent.com/JamzaSK/TWInventoryReloaded/master/languages/it_IT.json"
     }
    },
    images: {
@@ -983,30 +983,36 @@
       }), w) b.addItem(k, '<span style="background: url(//portal-bar.innogamescdn.com/images/west-sprite_01.1541670091.png) no-repeat top left;height: 12px;padding-left: 25px;background-position:' + w[k].icon + ';">' + w[k].translate + "</span>");
      b.select(TWIR.lang);
      var W = new west.gui.Button(e.organizing.submit, function() {
-      TWIR.storage.features.cache.twir_inventory = {
-       window_title: t.isSelected(),
-       window_minititle: a.isSelected(),
-       empty_opacity: r.isSelected(),
-       item_counts: i.isSelected(),
-       sets_counts: o.isSelected(),
-       sets_color: s.isSelected(),
-       event: n.isSelected()
-      }, TWIR.storage.features.cache.twir_popup = {
-       item_id: l.isSelected(),
-       job_name: p.isSelected(),
-       item_crafting: c.isSelected(),
-       recipe_name: A.isSelected(),
-       partial_bonus: g.isSelected(),
-       set_pieces: d.isSelected(),
-       short_currency: m.isSelected(),
-       market_watcher: u.isSelected(),
-       item_counts: h.isSelected()
-      }, TWIR.storage.features.cache.twir_market_watcher = {
-       cooldown: 480,
-       enabled: I.isSelected(),
-       alert: R.isSelected(),
-       sound: y.isSelected()
-      }, null != localStorage ? (localStorage.twir_inventory = JSON.stringify(TWIR.storage.features.cache.twir_inventory), localStorage.twir_popup = JSON.stringify(TWIR.storage.features.cache.twir_popup), localStorage.twir_market_watcher = JSON.stringify(TWIR.storage.features.cache.twir_market_watcher), localStorage.setItem("scriptsLang", b.getValue()), new UserMessage(e.informative.sucess, UserMessage.TYPE_SUCCESS).show(), location.reload()) : new UserMessage(e.informative.storage_error + "!", UserMessage.TYPE_ERROR).show()
+      if (TWIR.storage.features.cache.twir_inventory = {
+        window_title: t.isSelected(),
+        window_minititle: a.isSelected(),
+        empty_opacity: r.isSelected(),
+        item_counts: i.isSelected(),
+        sets_counts: o.isSelected(),
+        sets_color: s.isSelected(),
+        event: n.isSelected()
+       }, TWIR.storage.features.cache.twir_popup = {
+        item_id: l.isSelected(),
+        job_name: p.isSelected(),
+        item_crafting: c.isSelected(),
+        recipe_name: A.isSelected(),
+        partial_bonus: g.isSelected(),
+        set_pieces: d.isSelected(),
+        short_currency: m.isSelected(),
+        market_watcher: u.isSelected(),
+        item_counts: h.isSelected()
+       }, TWIR.storage.features.cache.twir_market_watcher = {
+        cooldown: 480,
+        enabled: I.isSelected(),
+        alert: R.isSelected(),
+        sound: y.isSelected()
+       }, null != localStorage) {
+       localStorage.twir_inventory = JSON.stringify(TWIR.storage.features.cache.twir_inventory), localStorage.twir_popup = JSON.stringify(TWIR.storage.features.cache.twir_popup), localStorage.twir_market_watcher = JSON.stringify(TWIR.storage.features.cache.twir_market_watcher), localStorage.setItem("scriptsLang", b.getValue());
+       var k = TWIR.translations;
+       $.getJSON(k[b.getValue()].url, function(e) {
+        new UserMessage(e.informative.sucess, UserMessage.TYPE_SUCCESS).show()
+       }), location.reload()
+      } else new UserMessage(e.informative.storage_error + "!", UserMessage.TYPE_ERROR).show()
      }).addClass("twir_buttons").setMinWidth(80).setMaxWidth(100);
      this.parts.features = new west.gui.Accordion("twir_features", e.features.preferences, "twirSearchPage").setContent($("<span />").append((new west.gui.Groupframe).appendToContentPane($("<span />").append(b.getMainDiv()).append('<span style="text-align:center;display:block;margin-top:15px;">' + e.translator + '</span><hr><br><div class="twir_text">' + e.features.inventory_menus + " </div><br> ").append(t.getMainDiv().css({
       margin: "2px",
@@ -1177,7 +1183,7 @@
     r = e.length;
    TWIR.orderCat(e), e.length && e.length < 55 && TWIR.allSetItems(e) && t && $(Inventory.DOM).addClass("instant_wear_enabled"), this.timeout = setTimeout(function() {
     for (; a < r; ++a) Inventory.addItemDivToInv(e[a]);
-    null != TWIR.builder.ScrollPane && $("#bag").height() != TWIR.builder.BagHeight && (TWIR.builder.ScrollPane.scrollToTop(), TWIR.builder.BagHeight = $("#bag").height()), Inventory.window.hideLoader()
+    Inventory.window.hideLoader()
    }, r)
   }, TWIR.attach = function() {
    var t = Inventory.firstLoad;
@@ -1203,7 +1209,7 @@
     var o = Bag.getItemsByItemIds(i);
     TWIR.filterCat(o), TWIR.orderCat(o), a = 0, r = o.length, this.timeout = setTimeout(function() {
      for (; a < r; a++) Inventory.addItemDivToInv(o[a]);
-     null == TWIR.builder.ScrollPane || TWIR.arraysEqual(o, TWIR.builder.Inventory.LastItems, !1) && $("#bag").height() == TWIR.builder.BagHeight || (TWIR.builder.ScrollPane.scrollToTop(), TWIR.builder.BagHeight = $("#bag").height()), Inventory.window.hideLoader()
+     Inventory.window.hideLoader()
     }, r)
    };
    Inventory.showCustom;
@@ -1214,12 +1220,12 @@
      a = e.length;
     e.length && (TWIR.orderCat(e), $(Inventory.DOM).addClass("instant_wear_enabled")), this.timeout = setTimeout(function() {
      for (; t < a; ++t) Bag.getItemCount(e[t].getId()) && Inventory.addItemDivToInv(e[t]);
-     null == TWIR.builder.ScrollPane || TWIR.arraysEqual(e, TWIR.builder.Inventory.LastItems, !1) && $("#bag").height() == TWIR.builder.BagHeight || (TWIR.builder.ScrollPane.scrollToTop(), TWIR.builder.BagHeight = $("#bag").height()), Inventory.window.hideLoader()
+     Inventory.window.hideLoader()
     }, 2 * a)
    }, twir_showSearch = Inventory.showSearch, Inventory.showSearch = function() {
     Inventory.window.showLoader(), $(Inventory.DOM).addClass("search_enabled"), $("#inventory_search").trigger("focus"), Inventory.searchResult.length && TWIR.orderCat(Inventory.searchResult), this.timeout = setTimeout(function() {
      for (var t = 0, a = Inventory.searchResult.length; t < a; ++t) Bag.getItemCount(Inventory.searchResult[t].getId()) && Inventory.addItemDivToInv(Inventory.searchResult[t]);
-     if (null == TWIR.builder.ScrollPane || TWIR.arraysEqual(Inventory.searchResult, TWIR.builder.Inventory.LastItems, !1) && $("#bag").height() == TWIR.builder.BagHeight || (TWIR.builder.ScrollPane.scrollToTop(), TWIR.builder.BagHeight = $("#bag").height()), Inventory.window.hideLoader(), 0 == a && $("#inventory_search", Inventory.DOM).val().length) $('<div style="margin:auto;"><span style="margin:auto; font-weight:bold;text-align: center!important;color: #4d392c!important;">' + e.informative.error404 + "</span></div>").appendTo($("#bag", Inventory.DOM));
+     if (Inventory.window.hideLoader(), 0 == a && $("#inventory_search", Inventory.DOM).val().length) $('<div style="margin:auto;"><span style="margin:auto; font-weight:bold;text-align: center!important;color: #4d392c!important;">' + e.informative.error404 + "</span></div>").appendTo($("#bag", Inventory.DOM));
      else if (0 == a) {
       var r = "en" != TWIR.lang ? "<span>&ensp;<b>/</b>&ensp;<b>&quot;</b>" + e.inventory.useable.toLowerCase() + "<b>&quot;</b>, <b>&quot;</b>" + e.inventory.buffs.toLowerCase() + "<b>&quot;</b>, <b>&quot;</b>" + e.inventory.crafting.toLowerCase() + "<b>&quot;</b></span>" : "",
        i = '<span style="color: #8b4513;" title="<div><b>&quot;</b>setitems<b>&quot;</b>, <b>&quot;</b>yield<b>&quot;</b>, <b>&quot;</b>recipe<b>&quot;</b></div><div><b>&quot;</b>useable<b>&quot;</b>, <b>&quot;</b>buffs<b>&quot;</b>, <b>&quot;</b>crafting<b>&quot;</b>' + r + "</div><div><b>&quot;</b>valentine <span style=&quot;color: #666&quot; >[" + e.informative.year + "]</span><b>&quot;</b>, <b>&quot;</b>easter <span style=&quot;color: #666&quot; >[" + e.informative.year + "]</span><b>&quot;</b>, <b>&quot;</b>independance <span style=&quot;color: #666&quot; >[" + e.informative.year + "]</span><b>&quot;</b>, <b>&quot;</b>oktoberfest <span style=&quot;color: #666&quot; >[" + e.informative.year + "]</span><b>&quot;</b>, <b>&quot;</b>dotd <span style=&quot;color: #666&quot; >[" + e.informative.year + "]</span><b>&quot;</b>, <b>&quot;</b>xmas <span style=&quot;color: #666&quot; >[" + e.informative.year + ']</span><b>&quot;</b></div>" > ' + e.informative.keyword + "</span>";
@@ -1228,10 +1234,10 @@
     }, 2 * Inventory.searchResult.length)
    };
    Inventory.addItems;
-   Inventory.addItems = function(t, a, r) {
+   Inventory.addItems = function(t, a, r, i) {
     switch ($("#bag", Inventory.DOM).empty(), t = t || Inventory.defaultCategory, Inventory.setCategoryActive(t), $(Inventory.DOM).removeClass("search_enabled instant_wear_enabled"), "set" !== t && Inventory.clearSearch(), "custom" !== t && Inventory.clearCustom(), "twir" !== t && ($("#bag", Inventory.DOM).empty(), TWIR.builder.Inventory.LastItems = []), t) {
      case "new":
-      Inventory.showLastItems(), null != TWIR.builder.ScrollPane && TWIR.builder.ScrollPane.scrollToTop(), TWIR.repTitle("TWIR - " + e.invent, "TWIR");
+      Inventory.showLastItems(), null != TWIR.builder.ScrollPane && TWIR.builder.ScrollPane.verticalBar.move(0, !1, !0), TWIR.repTitle("TWIR - " + e.invent, "TWIR");
       break;
      case "twir":
       TWIR.showItems(TWIR.builder.Inventory.update_LastItems(), r), TWIR.repTitle(TWIR.builder.Inventory.title[0], TWIR.builder.Inventory.title[1]);
@@ -1240,7 +1246,7 @@
       Inventory.showSearch(), TWIR.repTitle("TWIR - " + e.invent, "TWIR");
       break;
      case "upgradeable":
-      Inventory.showUpgradeable(), null != TWIR.builder.ScrollPane && TWIR.builder.ScrollPane.scrollToTop(), TWIR.repTitle("TWIR - " + e.invent, "TWIR");
+      Inventory.showUpgradeable(), null != TWIR.builder.ScrollPane && TWIR.builder.ScrollPane.verticalBar.move(0, !1, !0), TWIR.repTitle("TWIR - " + e.invent, "TWIR");
       break;
      case "custom":
       Inventory.showCustom(), TWIR.repTitle("TWIR - " + e.invent, "TWIR");
@@ -1257,7 +1263,7 @@
      case "yield":
       Inventory.addItemsByCategory(t), TWIR.repTitle(Inventory.categoryDesc[t], Inventory.categoryDesc[t])
     }
-    Inventory.category = t, Inventory.page = 1
+    i || null == TWIR.builder.ScrollPane || TWIR.builder.ScrollPane.verticalBar.move(0, !1, !0), Inventory.category = t, Inventory.page = 1
    }, Bag.search = function(t) {
     if (Bag.loaded) {
      var a = new RegExp("^.*" + t + "(.*)$", "i"),
@@ -1326,6 +1332,8 @@
     }), TWIR.builder.Inventory.update_LastItems().forEach(function(e) {
      Wear.carry(e)
     })
+   }, Inventory.update = function() {
+    wman.getById(Inventory.uid) && (TWIR.fillFilters(), Inventory.addItems(Inventory.category, Inventory.page, !1, !0), Inventory.updateFilters())
    };
    var a = Inventory.addItemDivToInv;
    Inventory.addItemDivToInv = function(e) {
@@ -2377,7 +2385,7 @@
     TWIR.builder.SelectMenu.addListener(function(r) {
      var i = t[r].items,
       o = Bag.getItemsByItemIds(i);
-     if (0 < o.length) return TWIR.builder.Inventory.LastItems = o, TWIR.builder.Inventory.title = [t[r].name, e.inventory[a]], Inventory.addItems("twir", 1);
+     if (0 < o.length) return TWIR.builder.Inventory.LastItems = o, TWIR.builder.Inventory.title = [t[r].name, e.inventory[a]], Inventory.addItems("twir", 1, !1, !1);
      new UserMessage(e.informative.error404 + "!", UserMessage.TYPE_HINT).show()
     })
    } catch (t) {
@@ -2445,7 +2453,7 @@
      var a = Bag.getItemsByItemIds(TWIR.makeEmUp(t));
      if (0 < a.length) {
       var r = west.storage.ItemSetManager.get(a[0].obj.set).name;
-      return TWIR.builder.Inventory.LastItems = a, TWIR.builder.Inventory.title = [r, e.inventory.sets], Inventory.addItems("twir", 1, !0)
+      return TWIR.builder.Inventory.LastItems = a, TWIR.builder.Inventory.title = [r, e.inventory.sets], Inventory.addItems("twir", 1, !0, !1)
      }
     })
    } catch (t) {
@@ -2488,13 +2496,13 @@
     }
    }), o.click(function(t) {
     var a = Bag.getItemsByItemIds(TWIR.storage.inventory.work);
-    if (0 < a.length) return TWIR.builder.Inventory.LastItems = a, TWIR.builder.Inventory.title = [e.inventory.work_items, e.inventory.work_items], Inventory.addItems("twir", 1)
+    if (0 < a.length) return TWIR.builder.Inventory.LastItems = a, TWIR.builder.Inventory.title = [e.inventory.work_items, e.inventory.work_items], Inventory.addItems("twir", 1, !1, !1)
    }), s.click(function(t) {
     var a = Bag.getItemsByItemIds(TWIR.storage.inventory.quest);
-    if (0 < a.length) return TWIR.builder.Inventory.LastItems = a, TWIR.builder.Inventory.title = [e.inventory.quest_items, e.inventory.quest_items], Inventory.addItems("twir", 1)
+    if (0 < a.length) return TWIR.builder.Inventory.LastItems = a, TWIR.builder.Inventory.title = [e.inventory.quest_items, e.inventory.quest_items], Inventory.addItems("twir", 1, !1, !1)
    }), i.click(function(t) {
     var a = Bag.getItemsByItemIds(TWIR.storage.inventory.bonus);
-    if (0 < a.length) return TWIR.builder.Inventory.LastItems = a, TWIR.builder.Inventory.title = [e.inventory.equipment, e.inventory.equipment], Inventory.addItems("twir", 1)
+    if (0 < a.length) return TWIR.builder.Inventory.LastItems = a, TWIR.builder.Inventory.title = [e.inventory.equipment, e.inventory.equipment], Inventory.addItems("twir", 1, !1, !1)
    }), TWIR.expandCss()
   }, TWIR.Updater = function() {
    $.getScript(TWIR.updateUrl, function() {
