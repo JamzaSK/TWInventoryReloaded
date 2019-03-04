@@ -62,7 +62,7 @@
   var e;
   TWIR = {
    version: "2.146",
-   revision: "9",
+   revision: "09",
    name: "TW Inventory Reloaded",
    author: "Jamza",
    minGame: "2.94",
