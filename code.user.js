@@ -11,7 +11,7 @@
 // @description:it Miglior inventario e altre funzionalità per The West!
 
 // @author Jamza (CZ14)
-// @version 2.145
+// @version 2.146
 // @license GPL-3.0
 
 // @include https://*.the-west.*/game.php*
@@ -61,7 +61,7 @@
  t.setAttribute("type", "application/javascript"), t.textContent = "(" + function() {
   var e;
   TWIR = {
-   version: "2.145",
+   version: "2.146",
    revision: "9",
    name: "TW Inventory Reloaded",
    author: "Jamza",
