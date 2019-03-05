@@ -174,7 +174,8 @@
     "set_pieces": "části soupravy",
     "update_prices": "sledovat tržní ceny",
     "market_alert": "sledovat předměty",
-    "alert_sound": "upozornit se zvukem"
+    "alert_sound": "upozornit se zvukem",
+    "trader": "úroveň obchodu"
   },
   "keyWords": {
     "xmas": [
