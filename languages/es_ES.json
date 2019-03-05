@@ -173,7 +173,8 @@
     "set_pieces": "piezas sueltas",
     "update_prices": "seguimiento precios",
     "market_alert": "Seguimiento de artículo",
-    "alert_sound": "sonido de alerta"
+    "alert_sound": "sonido de alerta",
+    "trader": "trader level"
   },
   "keyWords": {
   "xmas": [
