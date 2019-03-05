@@ -174,7 +174,8 @@
     "set_pieces": "set pieces",
     "update_prices": "price tracking",
     "market_alert": "item tracking",
-    "alert_sound": "alert sound"
+    "alert_sound": "alert sound",
+    "trader": "trader level"
   },
   "keyWords": {
     "xmas": [
