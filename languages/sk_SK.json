@@ -174,7 +174,8 @@
     "set_pieces": "časti súpravy",
     "update_prices": "sledovať trhové ceny",
     "market_alert": "sledovať predmety",
-    "alert_sound": "upozorniť so zvukom"
+    "alert_sound": "upozorniť so zvukom",
+    "trader": "úroveň obchodu"
   },
   "keyWords": {
     "xmas": "Vianoce",
