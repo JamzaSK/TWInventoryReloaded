@@ -175,7 +175,8 @@
 "set_pieces": "Pezzi set",
 "update_prices": "Tracciatore prezzi",
 "market_alert": "Tracciatore oggetti al mercato",
-"alert_sound": "Suono di avvertimento"
+"alert_sound": "Suono di avvertimento",
+"trader": "trader level"
 },
 "keyWords": {
 "xmas": [
