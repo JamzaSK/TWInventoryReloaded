@@ -174,7 +174,8 @@
     "set_pieces": "Część zestawu",
     "update_prices": "Śledzenie cen",
     "market_alert": "Śledzenie przedmiotów",
-    "alert_sound": "dźwięk powiadomienia"
+    "alert_sound": "dźwięk powiadomienia",
+    "trader": "trader level"
   },
   "keyWords": {
     "xmas": [
