@@ -1,6 +1,6 @@
 var scriptUpdate={
-    TWIR: '2.146',
+    TWIR: '2.147',
     TWIRrev: '10',
-    TWIRNew: 'Added trader name and level for base items. Very useful for Smoking guns ;-) Disabled by default. If you want to, you can meet me there @Jamza.',
+    TWIRNew: 'Improved job popup (added xp/15s and drop chance), Added Avatar part category to Useable, Improved loading., ',
 };
 
