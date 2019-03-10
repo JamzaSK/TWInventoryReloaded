@@ -1414,7 +1414,7 @@
       var c = ItemManager.get(JobsModel.Beans[a.id].basis.long.yields[p].itemid).short;
       n = 0 != JobsModel.Beans[a.id].basis.long.yields[p].prop ? JobsModel.Beans[a.id].basis.long.yields[p].prop : Math.ceil(600 * a.yields[JobsModel.Beans[a.id].basis.long.yields[p].itemid].prop), l = JobsModel.Beans[a.id].basis.long.yields[p].probBonus;
       var g = n + l,
-       A = g;
+       A = g.toFixed(0);
       Object.assign(o, {
        [c]: {
         percenta: A,
