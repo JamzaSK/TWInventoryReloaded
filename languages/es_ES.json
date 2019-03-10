@@ -51,7 +51,8 @@
     "bonds_money": "Bonos y dólares",
     "waytime_shortening": "Waytime shortening",
     "work_motivation": "Work motivation",
-    "duel_motivation": "Duel motivation"
+    "duel_motivation": "Duel motivation",
+    "avatar_part": "Avatar part"
   },
   "tooltips": {
     "jobdrop": "Obtenibles desde trabajos",
