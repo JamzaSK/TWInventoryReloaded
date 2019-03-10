@@ -51,7 +51,8 @@
     "bonds_money": "Obligacje i dolary",
     "waytime_shortening": "Skrócenie czasu podróży",
     "work_motivation": "Motywacja do prac",
-    "duel_motivation": "Motywacja do pojedynków"
+    "duel_motivation": "Motywacja do pojedynków",
+    "avatar_part": "Avatar part"
   },
   "tooltips": {
     "jobdrop": "Znalezione w pracy",
