@@ -1170,7 +1170,7 @@
        }
        Inventory.window.hideLoader()
       }
-     }), Inventory.searchResult = s || [], TWIR.builder.Inventory.title = ["TWIR - " + e.invent, e.organizing.all_items], Inventory.addItems("set", 1)
+     }), Inventory.searchResult = s || [], TWIR.builder.Inventory.title = ["TWIR - " + e.invent, e.organizing.all_items], Inventory.addItems("set", 1, !1)
     } catch (t) {
      TWIR.console("TWIR/ please report following Error at https://greasyfork.org/scripts/373294-tw-inventory-reloaded/feedback ", "red"), console.log(t.stack), TWIR.console("/ShowAll (menu) err version: " + TWIR.version + "/" + Game.version + " locale: " + Game.locale, "red"), new UserMessage(e.informative.error_other + ".", UserMessage.TYPE_ERROR).show()
     }
@@ -1347,7 +1347,7 @@
      Wear.carry(e)
     })
    }, Inventory.update = function() {
-    wman.getById(Inventory.uid) && (TWIR.fillFilters(), Inventory.addItems(Inventory.category, Inventory.page, !1, !0), Inventory.updateFilters())
+    wman.getById(Inventory.uid) && (TWIR.fillFilters(), Inventory.addItems(Inventory.category, Inventory.page, !0), Inventory.updateFilters())
    };
    var a = Inventory.addItemDivToInv;
    Inventory.addItemDivToInv = function(e) {
@@ -1371,7 +1371,7 @@
       "-webkit-filter": "opacity(75%)"
      })
     }));
-    for (var t = 0; t < Inventory.availableCategories.length; t++) Bag.getItemsByType(Inventory.availableCategories[t]).length < 1 ? ($(".inventory .filters .filter_" + Inventory.availableCategories[t]).unbind("mouseenter"), $(".inventory .filters .filter_" + Inventory.availableCategories[t]).unbind("mouseleave"), $(".inventory .filters .filter_" + Inventory.availableCategories[t] + ".active").unbind("mouseenter"), $(".inventory .filters .filter_" + Inventory.availableCategories[t] + ".active").unbind("mouseleave")) : ($(".inventory .filters .filter_" + Inventory.availableCategories[t]).mouseenter(function() {
+    for (var t = 0; t < Inventory.availableCategories.length; t++) Bag.getItemsByType(Inventory.availableCategories[t]).length < 1 && "new" != Inventory.availableCategories[t] ? ($(".inventory .filters .filter_" + Inventory.availableCategories[t]).unbind("mouseenter"), $(".inventory .filters .filter_" + Inventory.availableCategories[t]).unbind("mouseleave"), $(".inventory .filters .filter_" + Inventory.availableCategories[t] + ".active").unbind("mouseenter"), $(".inventory .filters .filter_" + Inventory.availableCategories[t] + ".active").unbind("mouseleave")) : ($(".inventory .filters .filter_" + Inventory.availableCategories[t]).mouseenter(function() {
      $(this).css({
       filter: "opacity(100%)",
       "-webkit-filter": "opacity(100%)"
@@ -2615,7 +2615,7 @@
     TWIR.builder.SelectMenu.addListener(function(r) {
      var s = t[r].items,
       i = Bag.getItemsByItemIds(s);
-     if (0 < i.length) return TWIR.builder.Inventory.LastItems = i, TWIR.builder.Inventory.title = [t[r].name, e.inventory[a]], Inventory.addItems("twir", 1, !1, !1);
+     if (0 < i.length) return TWIR.builder.Inventory.LastItems = i, TWIR.builder.Inventory.title = [t[r].name, e.inventory[a]], Inventory.addItems("twir", 1, !1);
      new UserMessage(e.informative.error404 + "!", UserMessage.TYPE_HINT).show()
     })
    } catch (t) {
