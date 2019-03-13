@@ -62,7 +62,7 @@
   var e;
   TWIR = {
    version: "2.147",
-   revision: "10",
+   revision: "11",
    name: "TW Inventory Reloaded",
    author: "Jamza",
    minGame: "2.94",
@@ -772,7 +772,7 @@
        $("#MWhtml_part1").html(""), $("#MWhtml_part2").html("");
        for (var e = 0; e < TWIR.storage.marketWatcher.marketAlert_whitelist.length; e++) {
         var t = $("<div />");
-        t.append($('<span style="margin-left: 5px;color: #9a5b49;font-weight: bold;">[ <span style="cursor: pointer; max-width: 200px;display: inline-block;text-overflow: ellipsis;white-space: nowrap;overflow: hidden;margin-bottom: -3px;">' + ItemManager.get(TWIR.storage.marketWatcher.marketAlert_whitelist[e].item_id).name + "</span> ]</span>").addMousePopup(new ItemPopup(ItemManager.get(TWIR.storage.marketWatcher.marketAlert_whitelist[e].item_id)).popup)), 0 != TWIR.storage.marketWatcher.marketAlert_whitelist[e].item_price && t.append($('<span style="margin-left: 10px;">$' + TWIR.replSum(TWIR.storage.marketWatcher.marketAlert_whitelist[e].item_price) + "</span>")), t.append(new west.gui.Icon("abort").getMainDiv().css({
+        t.append($('<span style="margin-left: 5px;color: #9a5b49;font-weight: bold;">[</span>')), t.append($('<span style="color: #9a5b49;font-weight: bold;cursor: pointer; max-width: 200px;display: inline-block;text-overflow: ellipsis;white-space: nowrap;overflow: hidden;margin-bottom: -3px;">' + ItemManager.get(TWIR.storage.marketWatcher.marketAlert_whitelist[e].item_id).name + "</span>").data("itemId", TWIR.storage.marketWatcher.marketAlert_whitelist[e].item_id).addMousePopup(new ItemPopup(ItemManager.get(TWIR.storage.marketWatcher.marketAlert_whitelist[e].item_id)).popup)), t.append($('<span style="color: #9a5b49;font-weight: bold;">]</span>')), 0 != TWIR.storage.marketWatcher.marketAlert_whitelist[e].item_price && t.append($('<span style="margin-left: 10px;">$' + TWIR.replSum(TWIR.storage.marketWatcher.marketAlert_whitelist[e].item_price) + "</span>")), t.append(new west.gui.Icon("abort").getMainDiv().css({
          "margin-bottom": "2px",
          "margin-left": "5px",
          cursor: "pointer"
@@ -1409,22 +1409,21 @@
     if (JobsModel.Beans.hasOwnProperty(a.id)) {
      var s = JobsModel.Beans[a.id].basis.short.experience + JobsModel.Beans[a.id].basis.short.bonus_experience,
       i = Math.floor(e / 100 * s);
-     r = r.replace('<div class="strong">' + a.name + "</div>", '$&  <div class="marker_popup_small_text" style="color: #5e321a !important;"><strong>' + (s + i) + "</strong> xp /<strong>" + JobsModel.Beans[a.id].basis.short.duration.getTime2EndToken() + "</strong></div>");
+     r = r.replace('<div class="strong">' + a.name + "</div>", '$&  <div class="marker_popup_small_text" style="font-weight: bold;">' + (s + i) + "&nbsp;xp&nbsp;/" + JobsModel.Beans[a.id].basis.short.duration.getTime2EndToken() + "</strong></div>");
      for (var o = {}, n = 0, l = 0, p = 0; p < JobsModel.Beans[a.id].basis.long.yields.length; p++) {
       var c = ItemManager.get(JobsModel.Beans[a.id].basis.long.yields[p].itemid).short;
-      n = 0 != JobsModel.Beans[a.id].basis.long.yields[p].prop ? JobsModel.Beans[a.id].basis.long.yields[p].prop : Math.ceil(600 * a.yields[JobsModel.Beans[a.id].basis.long.yields[p].itemid].prop), l = JobsModel.Beans[a.id].basis.long.yields[p].probBonus;
+      n = JobsModel.Beans[a.id].basis.long.yields[p].prop || 0, l = JobsModel.Beans[a.id].basis.long.yields[p].probBonus || 0;
       var g = n + l,
        A = g.toFixed(0);
-      Object.assign(o, {
-       [c]: {
-        percenta: A,
-        duration: JobsModel.Beans[a.id].basis.long.duration.getTime2EndToken()
-       }
-      })
+      o[c] = {
+       percentage: A
+      }
      }
      for (var m in a.yields) {
-      var u = ItemManager.get(m);
-      r = r.replace("</div>" + u.name + "</div>", "</div>" + u.name + '<div class="marker_popup_small_text" style="color: #5e321a !important;"><strong>(' + o[u.short].percenta + "&nbsp;%</strong>&nbsp;/<strong>" + o[u.short].duration + ")</strong></div></div>")
+      var u = ItemManager.get(m),
+       d = null != o[u.short] && 0 != o[u.short].percentage ? o[u.short].percentage : Math.ceil(600 * a.yields[m].prop),
+       I = JobsModel.Beans[a.id].basis.long.duration.getTime2EndToken();
+      r = r.replace("</div>" + u.name + "</div>", "</div>" + u.name + '<div class="marker_popup_small_text" style="font-weight: normal!important;">(' + d + "&nbsp;%&nbsp;/" + I + ")</div></div>")
      }
     }
     return r
@@ -1442,7 +1441,7 @@
       var i = Wear.item_ids.includes(this.item_obj.item_id) ? 1 : 0;
       r = r.replace('<img width="73" height="73" src="' + to_cdn(this.item_obj.image) + '">', '<div class="item"><span class="count" style="display:block;top:74px;left:3px">' + TWIR.replSum(Bag.getItemCount(this.item_obj.item_id) + i) + "</span></div>$&")
      }
-     var o = !!window.TWToolkit && (!!window.TWToolkit.preferences && TWToolkit.preferences.ids_popup);
+     var o = (void 0 !== window.TWToolkit || void 0 !== window.TWToolkit.preferences) && TWToolkit.preferences.ids_popup;
      if (!1 === o && 0 != TWIR.storage.features.cache.twir_popup.item_id && (r = r.replace(this.item_obj.name, '$& <br><p class="twir_id" style="margin-top: 5px;color: #5e321a;text-align: center;font-size: 11px;margin-bottom: 5px;">[item=<b>' + this.item_obj.item_id + "</b>]</p>")), s.usebonus && "recipe" != s.type) {
       for (var n = TWIR.usebonus.keys.energy, l = TWIR.usebonus.keys.health, p = "", c = 0; c < s.usebonus.length; c++)
        if (s.usebonus[c].match(n)) {
@@ -2035,8 +2034,8 @@
     })), TWIR.storage.inventory.buffs[me] && TWIR.storage.inventory.buffs[me].name === "*" + e.inventory.health && TWIR.storage.inventory.buffs[me].items.length != J.length && (TWIR.storage.inventory.buffs.splice(me, 1), 0 != J && TWIR.storage.inventory.buffs.push({
      name: "*" + e.inventory.health,
      items: J
-    })), TWIR.storage.inventory.buffs[me] && TWIR.storage.inventory.buffs[me].name === "*" + e.inventory.motivation && TWIR.storage.inventory.buffs[me].items.length != H.length && (TWIR.storage.inventory.buffs.splice(me, 1), 0 != H && TWIR.storage.inventory.buffs.push({
-     name: "*" + e.inventory.motivation,
+    })), TWIR.storage.inventory.buffs[me] && TWIR.storage.inventory.buffs[me].name === "*" + e.inventory.work_motivation && TWIR.storage.inventory.buffs[me].items.length != H.length && (TWIR.storage.inventory.buffs.splice(me, 1), 0 != H && TWIR.storage.inventory.buffs.push({
+     name: "*" + e.inventory.work_motivation,
      items: H
     })), TWIR.storage.inventory.buffs[me] && TWIR.storage.inventory.buffs[me].name === e.inventory.duel_motivation && TWIR.storage.inventory.buffs[me].items.length != D.length && (TWIR.storage.inventory.buffs.splice(me, 1), 0 != D && TWIR.storage.inventory.buffs.push({
      name: e.inventory.duel_motivation,
@@ -2316,7 +2315,7 @@
      $(TWIR.builder.MarketWatcher.OnGoing.getMainDiv()).mouseenter(function() {
       $(".border", R).removeClass("highlight").css("opacity", "1.0")
      }), TWIR.console("TWIR/: Found " + a + " matching offers, next check in " + (t / 1e3).getTime2EndToken() + ".", "green")
-    } else !0 === TWIR.builder.MarketWatcher.OnGoingAdded && WestUi.NotiBar.remove(TWIR.builder.MarketWatcher.OnGoing), TWIR.builder.MarketWatcher.OnGoingAdded = !1, TWIR.builder.MarketWatcher.LastAlert = 0, TWIR.console("TWIR/: No matching offers found, next check in " + (t / 1e3).getTime2EndToken() + ".", "#8b4513");
+    } else !0 === TWIR.builder.MarketWatcher.OnGoingAdded && WestUi.NotiBar.remove(TWIR.builder.MarketWatcher.OnGoing), TWIR.builder.MarketWatcher.OnGoingAdded = !1, TWIR.builder.MarketWatcher.LastAlert = 0, $(".twir_mw_found").html(""), TWIR.console("TWIR/: No matching offers found, next check in " + (t / 1e3).getTime2EndToken() + ".", "#8b4513");
     this.timeout = setTimeout(function() {
      TWIR.marketAlert(TWIR.storage.marketWatcher.marketAlert_whitelist)
     }, t)
@@ -2687,7 +2686,7 @@
      }
     })
    } catch (t) {
-    TWIR.console("TWIR/ please report following Error at https://greasyfork.org/scripts/373294-tw-inventory-reloaded/feedback ", "red"), console.log(t.stack), TWIR.console("/SetList err version: " + TWIR.version + "/" + Game.version + " locale: " + Game.locale, "red"), new UserMessage(e.informative.error_other + ".", UserMessage.TYPE_ERROR).show()
+    TWIR.console("TWIR/ please report following Error at https://github.com/JamzaSK/TWInventoryReloaded/issues ", "red"), console.log(t.stack), TWIR.console("/SetList err version: " + TWIR.version + "/" + Game.version + " locale: " + Game.locale, "red"), new UserMessage(e.informative.error_other + ".", UserMessage.TYPE_ERROR).show()
    }
   }, TWIR.enhancedInventory = function(t) {
    Inventory.window.showLoader();
