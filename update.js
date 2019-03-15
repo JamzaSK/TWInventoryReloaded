@@ -1,6 +1,6 @@
 var scriptUpdate={
     TWIR: '2.147',
-    TWIRrev: '11',
-    TWIRNew: 'Firefox bug (job popup level <20) fixed.',
+    TWIRrev: '12',
+    TWIRNew: 'Popup bug for non Toolkit users should be fixed now. Let me know please.',
 };
 
