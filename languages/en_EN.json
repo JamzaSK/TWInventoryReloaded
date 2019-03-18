@@ -193,7 +193,8 @@
     "oktoberfest": "Octoberfest"
   },
   "menulink": {
-    "market": "Open market"
+    "market": "Open market",
+    "forum": "Open town forum"
   },
   "informative": {
     "error404": "No items of this type found",
