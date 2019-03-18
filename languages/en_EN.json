@@ -192,6 +192,9 @@
     "easter": "Easter",
     "oktoberfest": "Octoberfest"
   },
+  "menulink": {
+    "market": "Open market"
+  },
   "informative": {
     "error404": "No items of this type found",
     "error": "Invalid parameters",
