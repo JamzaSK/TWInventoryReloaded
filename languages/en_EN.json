@@ -193,8 +193,9 @@
     "oktoberfest": "Octoberfest"
   },
   "menulink": {
-    "market": "Open market",
-    "forum": "Open town forum"
+    "market": "Market",
+    "forum": "Town forum",
+    "npc": "Quest givers"
   },
   "informative": {
     "error404": "No items of this type found",
