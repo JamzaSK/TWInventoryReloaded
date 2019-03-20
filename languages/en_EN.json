@@ -196,7 +196,7 @@
     "market": "Market",
     "forum": "Town forum",
     "npc": "Quest givers",
-    "nearest:" "Nearest"
+    "nearest": "Nearest"
   },
   "informative": {
     "error404": "No items of this type found",
