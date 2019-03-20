@@ -195,7 +195,8 @@
   "menulink": {
     "market": "Market",
     "forum": "Town forum",
-    "npc": "Quest givers"
+    "npc": "Quest givers",
+    "nearest:" "Nearest"
   },
   "informative": {
     "error404": "No items of this type found",
