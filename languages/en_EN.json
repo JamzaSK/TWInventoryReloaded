@@ -196,7 +196,8 @@
     "market": "Market",
     "forum": "Town forum",
     "npc": "Quest givers",
-    "nearest": "Nearest",
+    "nearest": "Nearest hotel",
+    "nearest_five": "Nearest 5 star hotel",
     "sleep": "Sleep"
   },
   "informative": {
