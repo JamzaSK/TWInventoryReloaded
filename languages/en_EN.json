@@ -199,7 +199,8 @@
     "npc": "Quest givers",
     "nearest": "Nearest hotel",
     "nearest_five": "Nearest 5 star hotel",
-    "sleep": "Sleep"
+    "sleep": "Sleep",
+    "travel": "Travel to $1"
   },
   "informative": {
     "error404": "No items of this type found",
