@@ -200,7 +200,9 @@
     "nearest": "Nearest hotel",
     "nearest_five": "Nearest 5 star hotel",
     "sleep": "Sleep",
-    "travel": "Travel to $1"
+    "travel": "Travel to $1",
+    "premium_bids": "Collect all bids",
+    "premium_offers": "Collect all offers"
   },
   "informative": {
     "error404": "No items of this type found",
