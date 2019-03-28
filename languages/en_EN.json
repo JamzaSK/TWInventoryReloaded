@@ -228,6 +228,7 @@
     "error_other": "An error has occurred, please open console for details",
     "distance": "Distance",
     "error_hotel": "No hotel room found",
-    "error_npc": "No employers found"
+    "error_npc": "No employers found",
+    "error_market": "No ended auctions found"
   }
 }
