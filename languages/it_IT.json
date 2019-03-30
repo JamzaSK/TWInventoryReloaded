@@ -69,7 +69,8 @@
     "minimal_price": "Min",
     "maximal_price": "Max",
     "listings": "aste",
-    "items": "oggetti"
+    "items": "oggetti",
+    "items_short": "pcs"
   },
   "organizing": {
     "invert_text": "Mostra/Nascondi oggetti diversi basati sul filtro selezionato",
