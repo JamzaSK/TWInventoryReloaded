@@ -68,7 +68,8 @@
     "minimal_price": "Min",
     "maximal_price": "Max",
     "listings": "Aukcje",
-    "items": "Przedmioty"
+    "items": "Przedmioty",
+    "items_short": "pcs"
   },
   "organizing": {
     "invert_text": "Pokaż/Ukryj przedmioty pasujące do filtra",
