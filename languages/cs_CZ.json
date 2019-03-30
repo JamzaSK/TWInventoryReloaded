@@ -68,7 +68,8 @@
     "minimal_price": "Min",
     "maximal_price": "Max",
     "listings": "nabídek",
-    "items": "předmětů"
+    "items": "předmětů",
+    "items_short": "ks"
   },
   "organizing": {
     "invert_text": "Zobrazit / Skrýt předměty podle vybraného filtru",
