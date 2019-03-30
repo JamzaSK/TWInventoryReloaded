@@ -175,7 +175,10 @@
     "update_prices": "seguimiento precios",
     "market_alert": "Seguimiento de artículo",
     "alert_sound": "sonido de alerta",
-    "trader": "trader level"
+    "trader": "trader level",
+    "market_collector": "market collector",
+    "sleep": "direct sleep",
+    "npc": "npc locator"
   },
   "keyWords": {
   "xmas": [
@@ -191,6 +194,16 @@
   "easter": "Pascua",
   "oktoberfest": "Oktoberfest"
 },
+  "menulink": {
+    "add_name": "Menulink bar",
+    "market": "Market Collector",
+    "npc": "Quest givers",
+    "nearest": "Nearest hotel",
+    "nearest_five": "Nearest 5 star hotel",
+    "sleep": "Find a bed",
+    "premium_bids": "Collect all bids",
+    "premium_offers": "Collect all offers"
+  },
   "informative": {
     "error404": "No se encontraron artículos de este tipo",
     "error": "Parámetros inválidos.",
@@ -212,6 +225,10 @@
     "search": "Buscar artículos, conjuntos, eventos, habilidades, ... o buscar $kw",
     "keyword": "palabra clave",
     "error_wait": "Por favor espere hasta que se complete la búsqueda",
-    "error_other": "An error has occurred, please open console for details"
+    "error_other": "An error has occurred, please open console for details",
+    "distance": "Distance",
+    "error_hotel": "No hotel room found",
+    "error_npc": "No employers found",
+    "error_market": "No ended auctions found"
   }
 }
