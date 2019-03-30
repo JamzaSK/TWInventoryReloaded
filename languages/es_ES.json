@@ -68,7 +68,8 @@
     "minimal_price": "Mín",
     "maximal_price": "Máx",
     "listings": "listados",
-    "items": "artículos"
+    "items": "artículos",
+    "items_short": "pcs"
   },
   "organizing": {
     "invert_text": "Mostrar / Ocultar diferentes elementos basados en un filtro seleccionado",
