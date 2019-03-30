@@ -177,7 +177,10 @@
     "update_prices": "price tracking",
     "market_alert": "item tracking",
     "alert_sound": "alert sound",
-    "trader": "trader level"
+    "trader": "trader level",
+    "market_collector": "market collector",
+    "sleep": "direct sleep",
+    "npc": "npc locator"
   },
   "keyWords": {
     "xmas": [
@@ -194,6 +197,7 @@
     "oktoberfest": "Octoberfest"
   },
   "menulink": {
+    "add_name": "Menulink bar",
     "market": "Market Collector",
     "forum": "Town forum",
     "npc": "Quest givers",
