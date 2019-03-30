@@ -176,7 +176,10 @@
     "update_prices": "Παρακολούθηση τιμών",
     "market_alert": "Παρακολούθηση αντικειμένων",
     "alert_sound": "Ήχος ειδοποίησης",
-    "trader": "Λέβελ εμπόρου"
+    "trader": "Λέβελ εμπόρου",
+    "market_collector": "market collector",
+    "sleep": "direct sleep",
+    "npc": "npc locator"
   },
   "keyWords": {
     "xmas": [
@@ -197,6 +200,16 @@
     ],
     "easter": "Πάσχα",
     "oktoberfest": "Οκτόμπερφεστ"
+  },
+  "menulink": {
+    "add_name": "Menulink bar",
+    "market": "Market Collector",
+    "npc": "Quest givers",
+    "nearest": "Nearest hotel",
+    "nearest_five": "Nearest 5 star hotel",
+    "sleep": "Find a bed",
+    "premium_bids": "Collect all bids",
+    "premium_offers": "Collect all offers"
   },
   "informative": {
     "error404": "Δεν βρέθηκαν αντικείμενα αυτού του τύπου",
@@ -219,6 +232,10 @@
     "search": "Αναζήτηση αντικειμένων, σετ, εκδηλώσεων, ικανοτήτων.. ή αναζήτηση $kw",
     "keyword": "Λέξεις-κλειδιά",
     "error_wait": "Περιμένετε μέχρι να ολοκληρωθεί η αναζήτηση",
-    "error_other": "Παρουσιάστηκε σφάλμα, ανοίξτε την κονσόλα για λεπτομέρειες"
+    "error_other": "Παρουσιάστηκε σφάλμα, ανοίξτε την κονσόλα για λεπτομέρειες",
+    "distance": "Distance",
+    "error_hotel": "No hotel room found",
+    "error_npc": "No employers found",
+    "error_market": "No ended auctions found"
   }
 }
