@@ -37,6 +37,7 @@
     "work_items": "Prodotti",
     "equipment": "Equipaggiamento",
     "coll_cards": "Carte da collezione",
+    "coll_cards": "Carte da collezione",
     "from_set": "Set oggetti",
     "upgraded": "Migliorati",
     "useable": "Non aperti o non utilizzati",
@@ -177,7 +178,10 @@
     "update_prices": "Tracciatore prezzi",
     "market_alert": "Tracciatore oggetti al mercato",
     "alert_sound": "Suono di avvertimento",
-    "trader": "Livello negozio"
+    "trader": "Livello negozio",
+    "market_collector": "market collector",
+    "sleep": "direct sleep",
+    "npc": "npc locator"
   },
   "keyWords": {
     "xmas": [
@@ -205,6 +209,16 @@
     "easter": "Pasqua",
     "oktoberfest": "Oktoberfest"
   },
+  "menulink": {
+    "add_name": "Menulink bar",
+    "market": "Market Collector",
+    "npc": "Quest givers",
+    "nearest": "Nearest hotel",
+    "nearest_five": "Nearest 5 star hotel",
+    "sleep": "Find a bed",
+    "premium_bids": "Collect all bids",
+    "premium_offers": "Collect all offers"
+  },
   "informative": {
     "error404": "Nessun oggetto di questo tipo è stato trovato",
     "error": "Parametri non corretti",
@@ -226,6 +240,10 @@
     "search": "Cerca oggetti, set, eventi, abilità... oppure $kw",
     "keyword": "Parole chiave",
     "error_wait": "Per favore attendi finché la ricerca non sarà completata",
-    "error_other": "Si è verificato un errore, per favore apri la console per i dettagli"
+    "error_other": "Si è verificato un errore, per favore apri la console per i dettagli",
+    "distance": "Distance",
+    "error_hotel": "No hotel room found",
+    "error_npc": "No employers found",
+    "error_market": "No ended auctions found"
   }
 }
