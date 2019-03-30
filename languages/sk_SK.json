@@ -176,7 +176,10 @@
     "update_prices": "sledovať trhové ceny",
     "market_alert": "sledovať predmety",
     "alert_sound": "upozorniť so zvukom",
-    "trader": "úroveň obchodu"
+    "trader": "úroveň obchodu",
+    "market_collector": "prehľad trhu",
+    "sleep": "okamžitý spánok",
+    "npc": "hľadač zadávateľa"
   },
   "keyWords": {
     "xmas": "Vianoce",
@@ -185,6 +188,16 @@
     "dotd": "Day of the Dead",
     "easter": "Veľká noc",
     "oktoberfest": "Októberfest"
+  },
+  "menulink": {
+    "add_name": "Menulink panel",
+    "market": "Prehľad trhu",
+    "npc": "Nájdi zadávateľa",
+    "nearest": "Najbližší hotel",
+    "nearest_five": "Najbližší 5 hv. hotel",
+    "sleep": "Nájdi posteľ",
+    "premium_bids": "Všetky nákupné ponuky",
+    "premium_offers": "Všetky predajné ponuky"
   },
   "informative": {
     "error404": "Neboli nájdené žiadne položky tohto typu",
@@ -207,6 +220,10 @@
     "search": "Hľadaj predmety, sady, eventy, schopnosti.. alebo $kw vyhľadávania",
     "keyword": "kľúčové slovo",
     "error_wait": "Prosím počkaj, kým sa vyhľadávanie neskončí",
-    "error_other": "Vyskytla sa chyba, prosím otvor konzolu pre podrobnosti"
+    "error_other": "Vyskytla sa chyba, prosím otvor konzolu pre podrobnosti",
+    "distance": "Vzdialenosť",
+    "error_hotel": "Nebola nájdená žiadna hotelová izba",
+    "error_npc": "Nebol nájdený žiadny zadávateľ úloh",
+    "error_market": "Neboli nájdené žiadne ukončené aukcie"
   }
 }
