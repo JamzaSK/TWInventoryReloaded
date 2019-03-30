@@ -176,7 +176,10 @@
     "update_prices": "sledovat tržní ceny",
     "market_alert": "sledovat předměty",
     "alert_sound": "upozornit se zvukem",
-    "trader": "úroveň obchodu"
+    "trader": "úroveň obchodu",
+    "market_collector": "přehled trhu",
+    "sleep": "okamžitý spánek",
+    "npc": "hledač npc"
   },
   "keyWords": {
     "xmas": [
@@ -188,6 +191,16 @@
     "dotd": "Dny mrtvých",
     "easter": "Velikonoce",
     "oktoberfest": "Oktoberfest"
+  },
+  "menulink": {
+    "add_name": "Menulink panel",
+    "market": "Přehled trhu",
+    "npc": "Zadavatelé úkolů",
+    "nearest": "Nejbližší hotel",
+    "nearest_five": "Nejbližší 5 hv. hotel",
+    "sleep": "Najít postel",
+    "premium_bids": "Všechny nákupní nabídky",
+    "premium_offers": "Všechny prodejní nabídky"
   },
   "informative": {
     "error404": "Nebyly nalezeny žádné položky tohoto typu",
@@ -210,6 +223,10 @@
     "search": "Hledej předměty, sety, eventy, schopnosti.. nebo $kw pro vyhledávaní",
     "keyword": "klíčové slovo",
     "error_wait": "Prosím počkej, až bude hledání dokončeno",
-    "error_other": "Došlo k chybě, prosím, otevři konzolu pro podrobnosti"
+    "error_other": "Došlo k chybě, prosím, otevři konzolu pro podrobnosti",
+    "distance": "Vzdálenost",
+    "error_hotel": "Nebyl nalezen žádný hotelový pokoj",
+    "error_npc": "Nebyl nalezen žádný zadavatel úkolů",
+    "error_market": "Nebyla nalezena žádná ukončená aukce"
   }
 }
