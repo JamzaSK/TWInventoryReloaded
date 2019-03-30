@@ -37,6 +37,7 @@
     "work_items": "Z prac",
     "equipment": "Setowe lub bonusem",
     "coll_cards": "Kolekcje kart",
+    "craft_cards": "Kolekcje kart",
     "from_set": "Przedmioty setowe",
     "upgraded": "Ulepszalne",
     "useable": "Do użycia",
@@ -176,7 +177,10 @@
     "update_prices": "Śledzenie cen",
     "market_alert": "Śledzenie przedmiotów",
     "alert_sound": "dźwięk powiadomienia",
-    "trader": "trader level"
+    "trader": "trader level",
+    "market_collector": "Przedmioty na targu",
+    "sleep": " Najbliższy hotel ",
+    "npc": "Lokacja NPC"
   },
   "keyWords": {
     "xmas": [
@@ -203,6 +207,16 @@
       "Oktoberfest"
     ]
   },
+  "menulink": {
+    "add_name": "Szybkie menu",
+    "market": "Targ",
+    "npc": "NPC",
+    "nearest": "Najbliższy hotel",
+    "nearest_five": "Najbliższy 5 gwiazdkowy hotel",
+    "sleep": "Najbliższe łóżko",
+    "premium_bids": "Zbierz wszystkie licytowane",
+    "premium_offers": "Zbierz wszystkie sprzedane"
+  },
   "informative": {
     "error404": "Nie znaleziono przedmiotu tego typu",
     "error": "Nieprawidłowe parametry.",
@@ -224,6 +238,10 @@
     "search": "Wyszukaj przedmioty, sety, wydarzenia, umiejętności... lub wyszukaj $kw",
     "keyword": "słowo kluczowe",
     "error_wait": "Poczekaj aż wyszukiwanie zostanie zakończone.",
-    "error_other": "An error has occurred, please open console for details"
+    "error_other": "An error has occurred, please open console for details",
+    "distance": "Dystans",
+    "error_hotel": "Nie znaleziono hotelu",
+    "error_npc": "Nie znaleziono NPC",
+    "error_market": "Nie znaleziono zakończonych akucji"
   }
 }
