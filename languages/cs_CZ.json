@@ -201,8 +201,8 @@
     "nearest": "Nejbližší hotel",
     "nearest_five": "Nejbližší 5 hv. hotel",
     "sleep": "Najít postel",
-    "premium_bids": "Všechny nákupní nabídky",
-    "premium_offers": "Všechny prodejní nabídky"
+    "premium_bids": "Vyzvednout nákupní nabídky",
+    "premium_offers": "Vyzvednout prodejní nabídky"
   },
   "informative": {
     "error404": "Nebyly nalezeny žádné položky tohoto typu",
