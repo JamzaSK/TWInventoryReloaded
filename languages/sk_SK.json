@@ -198,8 +198,8 @@
     "nearest": "Najbližší hotel",
     "nearest_five": "Najbližší 5 hv. hotel",
     "sleep": "Nájdi posteľ",
-    "premium_bids": "Všetky nákupné ponuky",
-    "premium_offers": "Všetky predajné ponuky"
+    "premium_bids": "Vyzdvihnúť nákupné ponuky",
+    "premium_offers": "Vyzdvihnúť predajné ponuky"
   },
   "informative": {
     "error404": "Neboli nájdené žiadne položky tohto typu",
