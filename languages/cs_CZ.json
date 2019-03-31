@@ -108,7 +108,7 @@
   },
   "stats": {
     "stats": "Statistiky",
-    "all_collected": "Všechny",
+    "all_collected": "Komplet",
     "sales_value": "Prodejní hodnota",
     "quantities": "Množství",
     "total_buy_price": "Celková nákupní cena",
@@ -145,7 +145,7 @@
     "total_market_price": "Celková tržní cena"
   },
   "market_watcher": {
-    "add_name": "Market Watcher",
+    "add_name": "Sledovač trhu",
     "seen": "některé ze sledovaných předmětů byly viděny",
     "seen_more": "a $1 dalších sledovaných předmětů",
     "add_item": "sledovat",
