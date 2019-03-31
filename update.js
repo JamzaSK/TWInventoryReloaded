@@ -1,6 +1,6 @@
 var scriptUpdate={
-    TWIR: '2.148',
+    TWIR: '2.149',
     TWIRrev: '12',
-    TWIRNew: 'Popup bug for non Toolkit users should be fixed now. Let me know please. Improved popups and discount price for shop items is now correct.',
+    TWIRNew: 'Added new Menulink bar with many useful functions (more soon!). Added Greece (EL) translation, thanks to Timemod Herkumo.',
 };
 
