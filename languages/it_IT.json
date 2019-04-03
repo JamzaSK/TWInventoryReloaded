@@ -70,7 +70,7 @@
     "maximal_price": "Max",
     "listings": "aste",
     "items": "oggetti",
-    "items_short": "pcs"
+    "items_short": "pezzi"
   },
   "organizing": {
     "invert_text": "Mostra/Nascondi oggetti diversi basati sul filtro selezionato",
@@ -180,9 +180,9 @@
     "market_alert": "Tracciatore oggetti al mercato",
     "alert_sound": "Suono di avvertimento",
     "trader": "Livello negozio",
-    "market_collector": "market collector",
-    "sleep": "direct sleep",
-    "npc": "npc locator"
+    "market_collector": "Riscossioni dal mercato",
+    "sleep": "Posti dove dormire",
+    "npc": "Posizionamento PNG"
   },
   "keyWords": {
     "xmas": [
@@ -211,14 +211,14 @@
     "oktoberfest": "Oktoberfest"
   },
   "menulink": {
-    "add_name": "Menulink bar",
-    "market": "Market Collector",
-    "npc": "Quest givers",
-    "nearest": "Nearest hotel",
-    "nearest_five": "Nearest 5 star hotel",
-    "sleep": "Find a bed",
-    "premium_bids": "Collect all bids",
-    "premium_offers": "Collect all offers"
+    "add_name": "Barra collegamenti",
+    "market": "Riscossioni mercato",
+    "npc": "Mandanti missione",
+    "nearest": "Albergo più vicino",
+    "nearest_five": "Albergo 5° livello più vicino",
+    "sleep": "Trova un letto",
+    "premium_bids": "Ritira tutti gli oggetti",
+    "premium_offers": "Ritira tutte le offerte"
   },
   "informative": {
     "error404": "Nessun oggetto di questo tipo è stato trovato",
@@ -242,9 +242,9 @@
     "keyword": "Parole chiave",
     "error_wait": "Per favore attendi finché la ricerca non sarà completata",
     "error_other": "Si è verificato un errore, per favore apri la console per i dettagli",
-    "distance": "Distance",
-    "error_hotel": "No hotel room found",
-    "error_npc": "No employers found",
-    "error_market": "No ended auctions found"
+    "distance": "Distanza",
+    "error_hotel": "Nessuna stanza di hotel trovata",
+    "error_npc": "Nessun PNG trovato",
+    "error_market": "Nessuna asta terminata trovata"
   }
 }
