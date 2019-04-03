@@ -69,7 +69,7 @@
     "maximal_price": "Μέγιστη",
     "listings": "Λίστες",
     "items": "αντικείμενα",
-    "items_short": "pcs"
+    "items_short": "κομμάτια"
   },
   "organizing": {
     "invert_text": "Εμφάνιση/Απόκρυψη διαφορετικών αντικειμένων βάση ενός επιλεγμένου φίλτρου",
@@ -179,9 +179,9 @@
     "market_alert": "Παρακολούθηση αντικειμένων",
     "alert_sound": "Ήχος ειδοποίησης",
     "trader": "Λέβελ εμπόρου",
-    "market_collector": "market collector",
-    "sleep": "direct sleep",
-    "npc": "npc locator"
+    "market_collector": "Συλλέκτης αγορών",
+    "sleep": "Άμεσος ύπνος",
+    "npc": "Δότες αποστολών"
   },
   "keyWords": {
     "xmas": [
@@ -204,14 +204,14 @@
     "oktoberfest": "Οκτόμπερφεστ"
   },
   "menulink": {
-    "add_name": "Menulink bar",
-    "market": "Market Collector",
-    "npc": "Quest givers",
-    "nearest": "Nearest hotel",
-    "nearest_five": "Nearest 5 star hotel",
-    "sleep": "Find a bed",
-    "premium_bids": "Collect all bids",
-    "premium_offers": "Collect all offers"
+    "add_name": "Συντομεύσεις",
+    "market": "Συλλέκτης αγορών",
+    "npc": "Δότες αποστολών",
+    "nearest": "Κοντινότερο ξενοδοχείο",
+    "nearest_five": "Κοντινότερο Διαμέρισμα πολυτελείας",
+    "sleep": "Ύπνος",
+    "premium_bids": "Συλλέξτε όλες τις αγορές σας",
+    "premium_offers": "Συλλέξτε όλες τις προσφορές σας"
   },
   "informative": {
     "error404": "Δεν βρέθηκαν αντικείμενα αυτού του τύπου",
@@ -235,9 +235,9 @@
     "keyword": "Λέξεις-κλειδιά",
     "error_wait": "Περιμένετε μέχρι να ολοκληρωθεί η αναζήτηση",
     "error_other": "Παρουσιάστηκε σφάλμα, ανοίξτε την κονσόλα για λεπτομέρειες",
-    "distance": "Distance",
-    "error_hotel": "No hotel room found",
-    "error_npc": "No employers found",
-    "error_market": "No ended auctions found"
+    "distance": "Απόσταση",
+    "error_hotel": "Δεν βρέθηκε δωμάτιο ξενοδοχείου",
+    "error_npc": "Δεν βρέθηκε δότης αποστολής",
+    "error_market": "Δεν βρέθηκε δημοπρασία προς παραλαβή"
   }
 }
