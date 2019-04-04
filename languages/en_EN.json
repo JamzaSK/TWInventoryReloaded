@@ -69,7 +69,11 @@
     "maximal_price": "Max",
     "listings": "listings",
     "items": "items",
-    "items_short": "pcs"
+    "items_short": "pcs",
+    "points": "points",
+    "position": "position",
+    "crafted": "crafted",
+    "learnt": "learnt"
   },
   "organizing": {
     "invert_text": "Show/Hide different items based on a filter selected",
