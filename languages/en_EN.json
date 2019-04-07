@@ -187,7 +187,7 @@
     "sleep": "direct sleep",
     "npc": "npc locator",
     "profile": "Player profiles",
-    "rank_bar": "best 3 ranks",
+    "rank_bar": "ranking bar",
     "craft_points": "crafting points"
   },
   "keyWords": {
