@@ -235,7 +235,8 @@
     "stage_ups": "Levels increased",
     "mpi": "Adventures",
     "ko": "KOs",
-    "games": "Games"
+    "games": "Games",
+    "rg": "Rage quits"
   },
   "informative": {
     "error404": "No items of this type found",
