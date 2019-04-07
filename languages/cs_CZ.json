@@ -181,7 +181,10 @@
     "trader": "úroveň obchodu",
     "market_collector": "přehled trhu",
     "sleep": "okamžitý spánek",
-    "npc": "hledač npc"
+    "npc": "hledač npc",
+    "profile": "Hráčske profily",
+    "rank_bar": "nejlepší pozice",
+    "craft_points": "řemeslné body"
   },
   "keyWords": {
     "xmas": [
@@ -203,6 +206,29 @@
     "sleep": "Najít postel",
     "premium_bids": "Vyzvednout nákupní nabídky",
     "premium_offers": "Vyzvednout prodejní nabídky"
+  },
+  "ranking": {
+    "add_name": "Rank panel",
+    "rank": "Pozice",
+    "duels": "Duely",
+    "won": "Výhry",
+    "lost": "Prohry",
+    "diff": "Rozdíl",
+    "fb": "Bitvy o pevnosti",
+    "dd": "Způsobené škody",
+    "taken": "Obdržené zásahy",
+    "dodges": "Úhyby",
+    "crafting": "Řemeslo",
+    "learnt": "Naučeno",
+    "points": "Body",
+    "crafted": "Vyrobeno",
+    "construction": "Výstavba",
+    "fair": "Kočovný cirkus",
+    "stage_ups": "Úrovne budov",
+    "mpi": "DObrodružství",
+    "ko": "KO nepřátel",
+    "games": "Odehráno",
+    "rg": "Rage quity"
   },
   "informative": {
     "error404": "Nebyly nalezeny žádné položky tohoto typu",
