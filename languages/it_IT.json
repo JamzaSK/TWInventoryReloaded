@@ -182,7 +182,10 @@
     "trader": "Livello negozio",
     "market_collector": "Riscossioni dal mercato",
     "sleep": "Posti dove dormire",
-    "npc": "Posizionamento PNG"
+    "npc": "Posizionamento PNG",
+    "profile": "Player profiles",
+    "rank_bar": "best 3 ranks",
+    "craft_points": "crafting points"
   },
   "keyWords": {
     "xmas": [
@@ -219,6 +222,29 @@
     "sleep": "Trova un letto",
     "premium_bids": "Ritira tutti gli oggetti",
     "premium_offers": "Ritira tutte le offerte"
+  },
+  "ranking": {
+    "add_name": "Rank bar",
+    "rank": "Rank",
+    "duels": "Duels",
+    "won": "Won",
+    "lost": "Lost",
+    "diff": "Difference",
+    "fb": "Fort Battles",
+    "dd": "Damage dealt",
+    "taken": "Hits taken",
+    "dodges": "Dodges",
+    "crafting": "Crafting",
+    "learnt": "Learnt",
+    "points": "Points",
+    "crafted": "Crafted",
+    "construction": "Construction",
+    "fair": "Travelling fair",
+    "stage_ups": "Levels increased",
+    "mpi": "Adventures",
+    "ko": "KOs",
+    "games": "Games",
+    "rg": "Rage quits"
   },
   "informative": {
     "error404": "Nessun oggetto di questo tipo è stato trovato",
