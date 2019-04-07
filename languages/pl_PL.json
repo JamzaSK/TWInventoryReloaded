@@ -181,7 +181,9 @@
     "trader": "trader level",
     "market_collector": "Przedmioty na targu",
     "sleep": " Najbliższy hotel ",
-    "npc": "Lokacja NPC"
+    "npc": "Lokacja NPC",
+    "rank_bar": "Widoczne 3 rankingi",
+    "craft_points": "Punkty rzemieślnicze"
   },
   "keyWords": {
     "xmas": [
@@ -217,6 +219,29 @@
     "sleep": "Najbliższe łóżko",
     "premium_bids": "Zbierz wszystkie licytowane",
     "premium_offers": "Zbierz wszystkie sprzedane"
+  },
+  "ranking": {
+    "add_name": "Pasek rankingu",
+    "rank": "Ranking",
+    "duels": "Pojedynki",
+    "won": "Wygrane",
+    "lost": "Przegrane",
+    "diff": "Różnica",
+    "fb": "Bitwy fortowe",
+    "dd": "Zadane obrażenia",
+    "taken": "Przyjęte obrażenia",
+    "dodges": "Uniki",
+    "crafting": "Rzemiosło",
+    "learnt": "Nauczone przepisy",
+    "points": "Punkty",
+    "crafted": "Wytworzone",
+    "construction": "Punkty budowy",
+    "fair": "Cyrk wędrowny",
+    "stage_ups": "Podniesione poziomy budynków",
+    "mpi": "Przygody",
+    "ko": "KO",
+    "games": "Gry",
+    "rg": "Porzucone"
   },
   "informative": {
     "error404": "Nie znaleziono przedmiotu tego typu",
