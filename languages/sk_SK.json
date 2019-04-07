@@ -181,7 +181,10 @@
     "trader": "úroveň obchodu",
     "market_collector": "prehľad trhu",
     "sleep": "okamžitý spánok",
-    "npc": "hľadač zadávateľa"
+    "npc": "hľadač zadávateľa",
+    "profile": "Hráčske profily",
+    "rank_bar": "najlepšie pozície",
+    "craft_points": "remeselné body"
   },
   "keyWords": {
     "xmas": "Vianoce",
@@ -200,6 +203,29 @@
     "sleep": "Nájdi posteľ",
     "premium_bids": "Vyzdvihnúť nákupné ponuky",
     "premium_offers": "Vyzdvihnúť predajné ponuky"
+  },
+  "ranking": {
+    "add_name": "Rank panel",
+    "rank": "Pozícia",
+    "duels": "Duely",
+    "won": "Výhry",
+    "lost": "Prehry",
+    "diff": "Rozdiel",
+    "fb": "Boje o pevnosti",
+    "dd": "Spôsobené poškodenie",
+    "taken": "Obdržané zásahy",
+    "dodges": "Úhyby",
+    "crafting": "Remeslo",
+    "learnt": "Naučené",
+    "points": "Body",
+    "crafted": "Vyrobené",
+    "construction": "Výstavba",
+    "fair": "Cirkus",
+    "stage_ups": "Stupne",
+    "mpi": "Dobrodružstvá",
+    "ko": "KO nepriateľov",
+    "games": "Odohrané",
+    "rg": "Rage quity"
   },
   "informative": {
     "error404": "Neboli nájdené žiadne položky tohto typu",
