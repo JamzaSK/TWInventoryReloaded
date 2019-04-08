@@ -255,6 +255,7 @@
     "distance": "Vzdálenost",
     "error_hotel": "Nebyl nalezen žádný hotelový pokoj",
     "error_npc": "Nebyl nalezen žádný zadavatel úkolů",
-    "error_market": "Nebyla nalezena žádná ukončená aukce"
+    "error_market": "Nebyla nalezena žádná ukončená aukce",
+    "travel_fort": "Jít k pevnosti"
   }
 }
