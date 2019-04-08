@@ -269,6 +269,7 @@
     "distance": "Dystans",
     "error_hotel": "Nie znaleziono hotelu",
     "error_npc": "Nie znaleziono NPC",
-    "error_market": "Nie znaleziono zakończonych akucji"
+    "error_market": "Nie znaleziono zakończonych akucji",
+    "travel_fort": "Idź do fortu"
   }
 }
