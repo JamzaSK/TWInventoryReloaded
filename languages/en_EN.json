@@ -262,6 +262,7 @@
     "distance": "Distance",
     "error_hotel": "No hotel room found",
     "error_npc": "No employers found",
-    "error_market": "No ended auctions found"
+    "error_market": "No ended auctions found",
+    "travel_fort": "Travel to fort"
   }
 }
