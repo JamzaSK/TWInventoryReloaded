@@ -252,6 +252,7 @@
     "distance": "Vzdialenosť",
     "error_hotel": "Nebola nájdená žiadna hotelová izba",
     "error_npc": "Nebol nájdený žiadny zadávateľ úloh",
-    "error_market": "Neboli nájdené žiadne ukončené aukcie"
+    "error_market": "Neboli nájdené žiadne ukončené aukcie",
+    "travel_fort": "Presunúť sa k pevnosti"
   }
 }
