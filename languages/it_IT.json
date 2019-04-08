@@ -271,6 +271,7 @@
     "distance": "Distanza",
     "error_hotel": "Nessuna stanza di hotel trovata",
     "error_npc": "Nessun PNG trovato",
-    "error_market": "Nessuna asta terminata trovata"
+    "error_market": "Nessuna asta terminata trovata",
+    "travel_fort": "Travel to fort"
   }
 }
