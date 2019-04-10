@@ -74,7 +74,8 @@
     "position": "position",
     "crafted": "crafted",
     "learnt": "learnt",
-    "seen": "Seen"
+    "seen": "Seen",
+    "last_seen": "Last seen"
   },
   "organizing": {
     "invert_text": "Show/Hide different items based on a filter selected",
