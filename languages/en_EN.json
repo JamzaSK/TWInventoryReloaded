@@ -73,7 +73,8 @@
     "points": "points",
     "position": "position",
     "crafted": "crafted",
-    "learnt": "learnt"
+    "learnt": "learnt",
+    "seen": "Seen"
   },
   "organizing": {
     "invert_text": "Show/Hide different items based on a filter selected",
