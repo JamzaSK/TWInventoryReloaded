@@ -75,7 +75,9 @@
     "crafted": "crafted",
     "learnt": "learnt",
     "seen": "Seen",
-    "last_seen": "Last seen"
+    "last_seen": "Last seen",
+    "average": "Average",
+    "average_since": "Average $1 days"
   },
   "organizing": {
     "invert_text": "Show/Hide different items based on a filter selected",
