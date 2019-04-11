@@ -77,7 +77,8 @@
     "seen": "Seen",
     "last_seen": "Last seen",
     "average": "Average",
-    "average_since": "Average $1 days"
+    "average_since": "Average $1 days",
+    "each": "each"
   },
   "organizing": {
     "invert_text": "Show/Hide different items based on a filter selected",
