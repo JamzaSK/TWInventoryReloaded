@@ -69,7 +69,12 @@
     "maximal_price": "Max",
     "listings": "ponúk",
     "items": "predmetov",
-    "items_short": "ks"
+    "items_short": "ks",
+    "seen": "Videné $1 krát",
+    "last_seen": "Naposledy videné",
+    "average": "Priemer",
+    "average_since": "Priemer za $1 dní",
+    "each": "kus"
   },
   "organizing": {
     "invert_text": "Zobraziť/Skryť predmety podľa vybraného filtera",
@@ -173,7 +178,7 @@
     "recipe_name": "meno receptu",
     "short_currency": "krátky formát meny",
     "partial_bonus": "čiastkový bonus",
-    "market_watcher": "sledovanie trhu",
+    "market_watcher": "trhové ceny",
     "set_pieces": "časti súpravy",
     "update_prices": "sledovať trhové ceny",
     "market_alert": "sledovať predmety",
@@ -184,7 +189,8 @@
     "npc": "hľadač zadávateľa",
     "profile": "Hráčske profily",
     "rank_bar": "najlepšie pozície",
-    "craft_points": "remeselné body"
+    "craft_points": "remeselné body",
+    "market_watcher_all": "trhová cena (všetky predmety)"
   },
   "keyWords": {
     "xmas": "Vianoce",
