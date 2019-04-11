@@ -190,7 +190,12 @@
     "profile": "Hráčske profily",
     "rank_bar": "najlepšie pozície",
     "craft_points": "remeselné body",
-    "market_watcher_all": "trhová cena (všetky predmety)"
+    "market_watcher_all": "trhová cena (všetky predmety)",
+    "forts": "Pevnosti a Boje",
+    "travel_button": "tlačítko cestovať do pevnosti",
+    "topic": "topic chatu v príprave boja",
+    "online_status": "zobraziť online status",
+    "ranks": "zobraziť hodnosti"
   },
   "keyWords": {
     "xmas": "Vianoce",
