@@ -69,7 +69,12 @@
     "maximal_price": "Máx",
     "listings": "listados",
     "items": "artículos",
-    "items_short": "pcs"
+    "items_short": "pcs",
+    "seen": "Seen $1 times",
+    "last_seen": "Last seen",
+    "average": "Average",
+    "average_since": "Average $1 days",
+    "each": "each"
   },
   "organizing": {
     "invert_text": "Mostrar / Ocultar diferentes elementos basados en un filtro seleccionado",
@@ -183,7 +188,8 @@
     "npc": "npc locator",
     "profile": "Player profiles",
     "rank_bar": "best 3 ranks",
-    "craft_points": "crafting points"
+    "craft_points": "crafting points",
+    "market_watcher_all": "market price (all items)"
   },
   "keyWords": {
   "xmas": [
