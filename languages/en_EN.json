@@ -182,7 +182,7 @@
     "recipe_name": "recipe name",
     "short_currency": "short currency format",
     "partial_bonus": "partial bonus",
-    "market_watcher": "market watcher",
+    "market_watcher": "market price",
     "set_pieces": "set pieces",
     "update_prices": "price tracking",
     "market_alert": "item tracking",
@@ -193,7 +193,8 @@
     "npc": "npc locator",
     "profile": "Player profiles",
     "rank_bar": "ranking bar",
-    "craft_points": "crafting points"
+    "craft_points": "crafting points",
+    "market_watcher_all": "market price (all items)"
   },
   "keyWords": {
     "xmas": [
