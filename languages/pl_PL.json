@@ -69,7 +69,12 @@
     "maximal_price": "Max",
     "listings": "Aukcje",
     "items": "Przedmioty",
-    "items_short": "szt"
+    "items_short": "szt",
+    "seen": "Widziane $1 temu",
+    "last_seen": "Ostatnio widziane",
+    "average": "Średnia",
+    "average_since": "Średnia $1 dnia",
+    "each": "każdy"
   },
   "organizing": {
     "invert_text": "Pokaż/Ukryj przedmioty pasujące do filtra",
@@ -184,7 +189,8 @@
     "npc": "Lokacja NPC",
     "profile": "Profil gracza",
     "rank_bar": "Widoczne 3 rankingi",
-    "craft_points": "Punkty rzemieślnicze"
+    "craft_points": "Punkty rzemieślnicze",
+    "market_watcher_all": "Cena na targu (wszystkie przedmioty)" 
   },
   "keyWords": {
     "xmas": [
