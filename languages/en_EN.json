@@ -74,7 +74,7 @@
     "position": "position",
     "crafted": "crafted",
     "learnt": "learnt",
-    "seen": "Seen",
+    "seen": "Seen $1 times",
     "last_seen": "Last seen",
     "average": "Average",
     "average_since": "Average $1 days",
