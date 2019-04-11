@@ -69,7 +69,12 @@
     "maximal_price": "Max",
     "listings": "nabídek",
     "items": "předmětů",
-    "items_short": "ks"
+    "items_short": "ks",
+    "seen": "Viděno $1 krát",
+    "last_seen": "Naposledy viděno",
+    "average": "Průměr",
+    "average_since": "Průměr za $1 dní",
+    "each": "kus"
   },
   "organizing": {
     "invert_text": "Zobrazit / Skrýt předměty podle vybraného filtru",
@@ -173,7 +178,7 @@
     "recipe_name": "jméno receptu",
     "short_currency": "krátký formát měny",
     "partial_bonus": "částkový bonus",
-    "market_watcher": "sledování trhu",
+    "market_watcher": "tržní ceny",
     "set_pieces": "části soupravy",
     "update_prices": "sledovat tržní ceny",
     "market_alert": "sledovat předměty",
@@ -184,7 +189,8 @@
     "npc": "hledač npc",
     "profile": "Hráčske profily",
     "rank_bar": "nejlepší pozice",
-    "craft_points": "řemeslné body"
+    "craft_points": "řemeslné body",
+    "market_watcher_all": "tržní ceny (všechny předměty)"
   },
   "keyWords": {
     "xmas": [
