@@ -190,7 +190,12 @@
     "profile": "Hráčske profily",
     "rank_bar": "nejlepší pozice",
     "craft_points": "řemeslné body",
-    "market_watcher_all": "tržní ceny (všechny předměty)"
+    "market_watcher_all": "tržní ceny (všechny předměty)",
+    "forts": "Pevnosti a Bitvy",
+    "travel_button": "tlačítko cestovat do pevnosti",
+    "topic": "topic chatu v přípravě bitvy",
+    "online_status": "zobrazit online status",
+    "ranks": "zobrazit hodnosti"
   },
   "keyWords": {
     "xmas": [
