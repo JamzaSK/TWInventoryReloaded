@@ -69,7 +69,12 @@
     "maximal_price": "Μέγιστη",
     "listings": "Λίστες",
     "items": "αντικείμενα",
-    "items_short": "κομμάτια"
+    "items_short": "κομμάτια",
+    "seen": "Seen $1 times",
+    "last_seen": "Last seen",
+    "average": "Average",
+    "average_since": "Average $1 days",
+    "each": "each"
   },
   "organizing": {
     "invert_text": "Εμφάνιση/Απόκρυψη διαφορετικών αντικειμένων βάση ενός επιλεγμένου φίλτρου",
@@ -184,7 +189,8 @@
     "npc": "Δότες αποστολών",
     "profile": "Player profiles",
     "rank_bar": "best 3 ranks",
-    "craft_points": "crafting points"
+    "craft_points": "crafting points",
+    "market_watcher_all": "market price (all items)"
   },
   "keyWords": {
     "xmas": [
