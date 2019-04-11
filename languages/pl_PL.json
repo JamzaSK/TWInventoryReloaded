@@ -190,7 +190,12 @@
     "profile": "Profil gracza",
     "rank_bar": "Widoczne 3 rankingi",
     "craft_points": "Punkty rzemieślnicze",
-    "market_watcher_all": "Cena na targu (wszystkie przedmioty)" 
+    "market_watcher_all": "Cena na targu (wszystkie przedmioty)",
+    "forts": "Forty i bitwy o fort",
+    "travel_button": "przycisk podróży do fortu",
+    "topic": "Temat czatu bitwy w przygotowaniach",
+    "online_status": "Pokaż status online",
+    "ranks": "Pokaż rangi"
   },
   "keyWords": {
     "xmas": [
