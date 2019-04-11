@@ -191,7 +191,12 @@
     "profile": "Profilo giocatori",
     "rank_bar": "Migliori 3 in classifica",
     "craft_points": "Punti professione",
-    "market_watcher_all": "market price (all items)"
+    "market_watcher_all": "market price (all items)",
+    "forts": "Forts and Fort Battles",
+    "travel_button": "travel to fort button",
+    "topic": "chat topic in battle preparation",
+    "online_status": "show online status",
+    "ranks": "show ranks"
   },
   "keyWords": {
     "xmas": [
