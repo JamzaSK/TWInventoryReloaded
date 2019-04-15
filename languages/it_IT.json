@@ -71,11 +71,11 @@
     "listings": "aste",
     "items": "oggetti",
     "items_short": "pezzi",
-    "seen": "Seen $1 times",
-    "last_seen": "Last seen",
-    "average": "Average",
-    "average_since": "Average $1 days",
-    "each": "each"
+    "seen": "Seen $1 volte",
+    "last_seen": "Visto l'ultima volta",
+    "average": "Media",
+    "average_since": "Media $1 giorni",
+    "each": "ciascuno"
   },
   "organizing": {
     "invert_text": "Mostra/Nascondi oggetti diversi basati sul filtro selezionato",
@@ -187,16 +187,16 @@
     "trader": "Livello negozio",
     "market_collector": "Riscossioni dal mercato",
     "sleep": "Posti dove dormire",
-    "npc": "Posizionamento PNG",
+    "npc": "Posizionamento PNG attivi",
     "profile": "Profilo giocatori",
-    "rank_bar": "Migliori 3 in classifica",
-    "craft_points": "Punti professione",
-    "market_watcher_all": "market price (all items)",
-    "forts": "Forts and Fort Battles",
-    "travel_button": "travel to fort button",
-    "topic": "chat topic in battle preparation",
-    "online_status": "show online status",
-    "ranks": "show ranks"
+    "rank_bar": "Mostra migliori 3 posizioni nelle classifiche",
+    "craft_points": "Mostra punti professione",
+    "market_watcher_all": "prezzo di mercato (tutti gli oggetti)",
+    "forts": "Forti e battaglie",
+    "travel_button": "icona per lo spostamento al forte",
+    "topic": "topic chat nella preparazione battaglia",
+    "online_status": "mostra status online",
+    "ranks": "mostra gradi"
   },
   "keyWords": {
     "xmas": [
@@ -283,6 +283,6 @@
     "error_hotel": "Nessuna stanza di hotel trovata",
     "error_npc": "Nessun PNG trovato",
     "error_market": "Nessuna asta terminata trovata",
-    "travel_fort": "Travel to fort"
+    "travel_fort": "Viaggia al forte"
   }
 }
