@@ -13,7 +13,7 @@
 // @description:el Καλύτερα Αποθέματα και διάφορα εργαλεία για το The West!
 
 // @author Jamza (CZ14)
-// @version 2.151
+// @version 2.152
 // @license GPL-3.0
 
 // @include https://*.the-west.*/game.php*
@@ -61,7 +61,7 @@
  t.setAttribute("type", "application/javascript"), t.textContent = "(" + function() {
   var e;
   TWIR = {
-   version: "2.151",
+   version: "2.152",
    name: "TW Inventory Reloaded",
    author: "Jamza",
    minGame: "2.94",
@@ -1658,12 +1658,14 @@
    Chat.Formatter.formatContactClient = function(e, a) {
     var r = t.apply(this, arguments);
     if (0 != e.professionId) {
+	try {
      var s = new RegExp(Game.InfoHandler.getLocalString4ProfessionId(e.professionId), "g"),
       o = Game.InfoHandler.getLocalString4ProfessionId(e.professionId),
       i = TWIR.storage.stats.global.craft[Object.keys(TWIR.storage.stats.global.craft).find(t => TWIR.storage.stats.global.craft[t].player_id === e.playerId)].profession_skill;
      $(r).html(function(e, t) {
       return t.replace(s, o + "&nbsp;(" + i + ")")
      })
+	 } catch(err) {};
     }
     return r
    }
