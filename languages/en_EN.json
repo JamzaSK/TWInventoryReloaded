@@ -159,7 +159,8 @@
     "price": "price",
     "max_price": "Max price",
     "item_id": "Item ID",
-    "bid": "bid"
+    "bid": "bid",
+    "max_hv": "Max percentage of historical price"
   },
   "features": {
     "preferences": "Preferences",
