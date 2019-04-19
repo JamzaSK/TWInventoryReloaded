@@ -160,7 +160,8 @@
     "max_price": "Max price",
     "item_id": "Item ID",
     "bid": "bid",
-    "max_hv": "Max percentage of historical price"
+    "max_hv": "Max percentage of historical price",
+    "desc": "Market Watcher scans the market for your specified items and tracks items and their prices"
   },
   "features": {
     "preferences": "Preferences",
