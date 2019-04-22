@@ -162,7 +162,9 @@
     "bid": "bid",
     "max_hv": "Max percentage of historical price",
     "desc": "Market Watcher scans the market for your specified items and tracks items and their prices",
-    "cld": "Scan the market every"
+    "cld": "Autoscan",
+    "scan": "Scan",
+    "underprice": "Underprice notifier"
   },
   "features": {
     "preferences": "Preferences",
