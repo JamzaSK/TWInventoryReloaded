@@ -161,7 +161,8 @@
     "item_id": "Item ID",
     "bid": "bid",
     "max_hv": "Max percentage of historical price",
-    "desc": "Market Watcher scans the market for your specified items and tracks items and their prices"
+    "desc": "Market Watcher scans the market for your specified items and tracks items and their prices",
+    "cld": "Scan the market every"
   },
   "features": {
     "preferences": "Preferences",
@@ -272,6 +273,7 @@
     "error_hotel": "No hotel room found",
     "error_npc": "No employers found",
     "error_market": "No ended auctions found",
-    "travel_fort": "Travel to fort"
+    "travel_fort": "Travel to fort",
+    "never": "never"
   }
 }
