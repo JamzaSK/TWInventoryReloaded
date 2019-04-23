@@ -269,7 +269,7 @@
     "valid_max": "You cannot watch more than 50 items",
     "search": "Search items, sets, events, skills.. or search $kw",
     "keyword": "keyword",
-    "error_wait": "Please wait untill search is completed",
+    "error_wait": "Please wait untill scan is completed",
     "error_other": "An error has occurred, please open console for details",
     "distance": "Distance",
     "error_hotel": "No hotel room found",
