@@ -162,7 +162,7 @@
     "bid": "bid",
     "max_hv": "percent of market value",
     "desc": "Market Watcher scans the market for your specified items and tracks items and their prices",
-    "valuable": "Valuable only",
+    "valuable": "Valuable items",
     "all_items": "All items",
     "watched_items": "Watched only",
     "nothing": "Nothing",
