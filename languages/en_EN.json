@@ -164,6 +164,8 @@
     "desc": "Market Watcher scans the market for your specified items and tracks items and their prices",
     "valuable": "Valuable only",
     "all_items": "All items",
+    "watched_items": "Watched only",
+    "nothing": "Nothing",
     "underprice": "Underprice notifier",
     "bid_now": "Show on market"
   },
