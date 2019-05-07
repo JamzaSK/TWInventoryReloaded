@@ -262,7 +262,7 @@
     "sucess": "Successfully changed",
     "bs_limit": "The limit is 5 skills",
     "storage_error": "Local Storage is not allowed",
-    "no_sets": "You don't own any set",
+    "no_sets": "No set items found",
     "years": "$1 years ago",
     "year": "year",
     "months": "$1 months ago",
