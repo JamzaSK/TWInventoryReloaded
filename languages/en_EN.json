@@ -53,7 +53,11 @@
     "waytime_shortening": "Waytime shortening",
     "work_motivation": "Work motivation",
     "duel_motivation": "Duel motivation",
-    "avatar_part": "Avatar part"
+    "avatar_part": "Avatar part",
+    "weapons": "Weapons",
+    "ride": "Ride",
+    "clothes": "Clothes",
+    "other_sets": "Other"
   },
   "tooltips": {
     "jobdrop": "Droppable from job",
