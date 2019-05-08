@@ -59,8 +59,7 @@
     "clothes": "Clothes",
     "other_sets": "Other",
     "set_name": "Set name",
-    "bonus_text": "Bonus text",
-    "all_sets": "All sets"
+    "bonus_text": "Bonus text"
   },
   "tooltips": {
     "jobdrop": "Droppable from job",
@@ -286,6 +285,8 @@
     "error_npc": "No employers found",
     "error_market": "No ended auctions found",
     "travel_fort": "Travel to fort",
-    "never": "Never"
+    "never": "Never",
+    "any": "Any",
+    "none": "None"
   }
 }
