@@ -1,4 +1,4 @@
-// ==UserScript==
+3// ==UserScript==
 // @name TW Inventory Reloaded
 // @name:cs TW Inventory Reloaded
 // @name:sk TW Inventory Reloaded
@@ -13,7 +13,7 @@
 // @description:el Καλύτερα Αποθέματα και διάφορα εργαλεία για το The West!
 
 // @author Jamza (CZ14)
-// @version 2.152
+// @version 2.153
 // @license GPL-3.0
 
 // @include https://*.the-west.*/game.php*
@@ -61,7 +61,7 @@
  t.setAttribute("type", "application/javascript"), t.textContent = "(" + function() {
   var e;
   TWIR = {
-   version: "2.152",
+   version: "2.153",
    name: "TW Inventory Reloaded",
    author: "Jamza",
    minGame: "2.0",
