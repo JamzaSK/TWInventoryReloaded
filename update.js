@@ -1,6 +1,6 @@
 var scriptUpdate={
-    TWIR: '2.152',
+    TWIR: '2.153',
     TWIRrev: '12',
-    TWIRNew: 'MPI error fixed. Sorry about that.',
+    TWIRNew: '2.100 TW error window fix, update with new features soon!',
 };
 
