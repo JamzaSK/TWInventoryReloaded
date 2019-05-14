@@ -64,7 +64,7 @@
    version: "2.152",
    name: "TW Inventory Reloaded",
    author: "Jamza",
-   minGame: "2.94",
+   minGame: "2.0",
    maxGame: Game.version.toString(),
    website: "https://greasyfork.org/scripts/373294-tw-inventory-reloaded",
    updateUrl: "https://jamzask.github.io/TWInventoryReloaded/update.js",
