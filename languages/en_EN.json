@@ -60,7 +60,8 @@
     "other_sets": "Other",
     "set_name": "Set name",
     "bonus_text": "Bonus text",
-    "event": "Event"
+    "event": "Event",
+    "search": "Search"
   },
   "tooltips": {
     "jobdrop": "Droppable from job",
