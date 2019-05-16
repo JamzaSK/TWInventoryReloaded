@@ -117,7 +117,8 @@
     "sort_quantity": "Stack size",
     "sort_setname": "Set name",
     "sort_marketprice": "Price (market)",
-    "value": "Value"
+    "value": "Value",
+    "sort_ups": "Price (UPS)"
   },
   "stats": {
     "stats": "Statistics",
