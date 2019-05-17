@@ -176,7 +176,8 @@
     "watched_items": "Watched only",
     "nothing": "Nothing",
     "underprice": "Underprice notifier",
-    "bid_now": "Show on market"
+    "bid_now": "Show on market",
+    "underpriced_found": "found underpriced item u may want to buy"
   },
   "features": {
     "preferences": "Preferences",
