@@ -263,7 +263,7 @@
     "rg": "Rage quits"
   },
   "informative": {
-    "error404": "No items of this type found",
+    "error404": "No items found",
     "error": "Invalid parameters",
     "sucess": "Successfully changed",
     "bs_limit": "The limit is 5 skills",
