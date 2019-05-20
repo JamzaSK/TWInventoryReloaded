@@ -59,7 +59,10 @@
     "clothes": "Clothes",
     "other_sets": "Other",
     "event": "Event",
-    "search": "Search"
+    "search": "Advanced Search",
+    "subcat": "Subcategory",
+    "property": "Property",
+    "item_type" "Type"
   },
   "tooltips": {
     "jobdrop": "Droppable from job",
