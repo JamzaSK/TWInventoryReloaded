@@ -61,7 +61,7 @@
     "event": "Event",
     "search": "Advanced Search",
     "subcat": "Subcategory",
-    "property": "Property",
+    "property": "Item property",
     "item_type": "Type"
   },
   "tooltips": {
