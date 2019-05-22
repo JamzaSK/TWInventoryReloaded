@@ -214,7 +214,8 @@
     "travel_button": "travel to fort button",
     "topic": "chat topic in battle preparation",
     "online_status": "show online status",
-    "ranks": "show ranks"
+    "ranks": "show ranks",
+    "other": "Other preferences"
   },
   "feat_strings": {
     "inv_window_title": "Show category in window title",
