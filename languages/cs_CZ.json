@@ -47,13 +47,22 @@
     "crafting": "Řemeslné",
     "buffs": "Posílení",
     "others": "Ostatní",
-    "sets": "Seznam souprav",
+    "sets": "Menu souprav",
     "twir_menu": "Menu",
     "bonds_money": "UPD a peníze",
     "waytime_shortening": "Zkrácení cestování",
     "work_motivation": "Pracovní motivace",
     "duel_motivation": "Duelová motivace",
-    "avatar_part": "Části avataru"
+    "avatar_part": "Části avataru",
+    "weapons": "Zbraně",
+    "ride": "Jízdy",
+    "clothes": "Oblečení",
+    "other_sets": "Ostatní",
+    "event": "Event",
+    "search": "Pokročilé vyhledávaní",
+    "subcat": "Podkategorie",
+    "property": "Vlastnosti",
+    "item_type": "Typ"
   },
   "tooltips": {
     "jobdrop": "Lze najít při práci",
@@ -109,7 +118,8 @@
     "sort_quantity": "Množství",
     "sort_setname": "Jméno soupravy",
     "sort_marketprice": "Cena (tržní)",
-    "value": "Hodnota"
+    "value": "Hodnota",
+    "sort_ups": "Cena (UPS)"
   },
   "stats": {
     "stats": "Statistiky",
@@ -159,7 +169,15 @@
     "price": "cena",
     "max_price": "Max cena",
     "item_id": "ID předmětu",
-    "bid": "nabídka"
+    "bid": "nabídnout",
+    "max_hv": "percento trhové hodnoty",
+    "desc": "Sledovač trhu je funkce, která sleduje vámi zvolené předměty a ceny všech předmětů na trhu",
+    "valuable": "Hodnotné předměty",
+    "all_items": "Všechny předměty",
+    "watched_items": "Jenom vybrané",
+    "nothing": "Nic",
+    "bid_now": "Zobrazit na trhu",
+    "underpriced_found": "byl nalezen podhodnocený předmět"
   },
   "features": {
     "preferences": "Preference",
@@ -195,7 +213,47 @@
     "travel_button": "tlačítko cestovat do pevnosti",
     "topic": "topic chatu v přípravě bitvy",
     "online_status": "zobrazit online status",
-    "ranks": "zobrazit hodnosti"
+    "ranks": "zobrazit hodnosti",
+    "other": "Ostatní preference"
+  },
+  "feat_strings": {
+    "inv_window_title": "Ukázat kategorii v názvu okna",
+    "inv_window_minititle": "Ukázat kategorii v taskbaru",
+    "inv_setmenu_full_color": "Změnit barvu kompletních setů v set menu",
+    "inv_setmenu_empty_opacity": "Zobrazit sety s malým množstvím vlastněných předmětů transparentní",
+    "inv_setwindow_remember_search": "Zapamatovat vyhledávaní v okně setů",
+    "inv_searchwindow_remember_search": "Zapamatovat vyhledávaní",
+    "pop_item_id": "Zobrazit ID u každého předmětu",
+    "pop_display_event": "Zobrazit ikonu eventu související s týmto předmětem",
+    "pop_owned_counts": "Zobrazit počet vlastněných předmětů",
+    "pop_job_table": "Zobrazit názvy prací, ve kterých lze získat tento produkt",
+    "pop_crafting_recipe": "Zobrazit potřebné materiály pro tento produkt",
+    "pop_recipe_table": "Zobrazit název receptu",
+    "pop_partial_bonus": "Zobrazit částkový bonus pro set (na základě počtu oblečených předmětů z jiného setu)",
+    "pop_short_currency": "Zobrazit měny v kratším formátu",
+    "pop_market_price": "Zobrazit průměrnú tržní cenu",
+    "pop_ups_price": "Zobrazit cenu v UPS",
+    "pop_min_market_price": "Zobrazit minimální tržní cenu (pokud předmět není prodejní)",
+    "pop_avg_dmg": "Zobrazit průměrné poškození každé zbraně",
+    "pop_bonus_calc": "Vypočítat hodnotu doplněné energie nebo hp",
+    "pop_trader": "Zobrazit název obchodu a jeho minimální úroveň pokud daný předmět lze koupit",
+    "mw_item_price_tooltip": "Zobrazit tooltip tržní ceny",
+    "mw_product_price_tooltip": "Zobrazit tooltip tržní ceny pro produkty",
+    "mw_bbcode_tooltip": "Zobrazit tržní ceny v BB-kódech",
+    "mw_wtb_alert": "Dostat upozornění s ikonou (na levé straně nad Salónem)",
+    "mw_wtb_chat_alert": "Dostat upozornění v chatu",
+    "mw_underpriced_alert": "Dostat upozornění když Sledovač trhu nalezne podhodnocený předmět",
+    "mw_alert_playsound": "Stlumit zvukové upozornění",
+    "ml_market_collector": "Přidat tlačítko pro zobrazení nabídky Přehled trhu",
+    "ml_sleep": "Přidat tlačítko pro zobrazení nabídky Najít postel",
+    "ml_npc": "Přidat tlačítko pro zobrazení nabídky Najít zadavatele",
+    "prof_rank_bar": "Zobrazit aktuální pozici v žebříčku v profilu daného hráče",
+    "prof_craft_points": "Zobrazit počet řemeslných bodů v profilu daného hráče",
+    "fb_topic": "Zobrazit topic chatu v okně přípravy bitvy",
+    "fb_travel_button": "Přidat tlačítko cestování do pevnosti v okně bitev",
+    "fb_online_status": "Zobrazit online status vybraného hráče v průběhu bitvy",
+    "fb_ranks": "Zobrazit hodnost vybraného hráče v průběhu bitvy",
+    "fb_ali_name": "Zobrazit název aliance v profilu města"
   },
   "keyWords": {
     "xmas": [
@@ -242,7 +300,7 @@
     "rg": "Rage quity"
   },
   "informative": {
-    "error404": "Nebyly nalezeny žádné položky tohoto typu",
+    "error404": "Nebyly nalezeny žádné předměty",
     "error": "Neplatné parametry",
     "sucess": "Úspěšně změněno",
     "bs_limit": "Limit je 5 schopností",
@@ -267,6 +325,9 @@
     "error_hotel": "Nebyl nalezen žádný hotelový pokoj",
     "error_npc": "Nebyl nalezen žádný zadavatel úkolů",
     "error_market": "Nebyla nalezena žádná ukončená aukce",
-    "travel_fort": "Přesunout se k pevnosti"
+    "travel_fort": "Přesunout se k pevnosti",
+    "never": "Nikdy",
+    "any": "Jakýkoli",
+    "none": "Žádný"
   }
 }
