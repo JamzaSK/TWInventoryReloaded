@@ -253,7 +253,8 @@
     "fb_topic": "Add a chat topic in the battle preparation window",
     "fb_travel_button": "Add a travel button in the fort battles window",
     "fb_online_status": "Show player online status in the fort battle map's popup",
-    "fb_ranks": "Show player rank in the fort battle map's popup"
+    "fb_ranks": "Show player rank in the fort battle map's popup",
+    "fb_ali_name": "Show alliance name in town profile"
   },
   "keyWords": {
     "xmas": [
