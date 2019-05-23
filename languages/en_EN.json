@@ -220,12 +220,7 @@
   "feat_strings": {
     "inv_window_title": "Show category in window title",
     "inv_window_minititle": "Show category in the taskbar",
-    "inv_catmenu_item_counts": "Show item count in menu",
-    "inv_catmenu_item_icon": "Show item icon in menu",
-    "inv_setmenu_display_event": "Show event icon related to this set in the set menu",
     "inv_setmenu_full_color": "Change color for completed sets in the set menu",
-    "inv_setmenu_set_counts": "Show set count in the set menu (and missing items)",
-    "inv_setmenu_set_icon": "Show set icon in the set menu (and set bonus)",
     "inv_setmenu_empty_opacity": "Make sets with a low number of owned items transparent in the set menu",
     "inv_setwindow_remember_search": "Remember search settings in the set window",
     "inv_searchwindow_remember_search": "Remember search settings in the search window",
