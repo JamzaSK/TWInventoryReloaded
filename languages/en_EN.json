@@ -215,7 +215,8 @@
     "topic": "chat topic in battle preparation",
     "online_status": "show online status",
     "ranks": "show ranks",
-    "other": "Other preferences"
+    "other": "Other preferences",
+    "lang": "Choose language"
   },
   "feat_strings": {
     "inv_window_title": "Show category in window title",
