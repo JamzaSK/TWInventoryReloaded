@@ -172,9 +172,9 @@
     "bid": "nabídnout",
     "max_hv": "percento trhové hodnoty",
     "desc": "Sledovač trhu je funkce, která sleduje vámi zvolené předměty a ceny všech předmětů na trhu",
-    "valuable": "Hodnotné předměty",
-    "all_items": "Všechny předměty",
-    "watched_items": "Jenom vybrané",
+    "valuable": "Hodnotné",
+    "all_items": "Všechny",
+    "watched_items": "Vybrané",
     "nothing": "Nic",
     "bid_now": "Zobrazit na trhu",
     "underpriced_found": "byl nalezen podhodnocený předmět"
