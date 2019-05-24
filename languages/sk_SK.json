@@ -47,13 +47,22 @@
     "crafting": "Remeselné",
     "buffs": "Posilnenie",
     "others": "Ostatné",
-    "sets": "Zoznam súprav",
+    "sets": "Výber súprav",
     "twir_menu": "Menu",
     "bonds_money": "Dlhopisy a peniaze",
     "waytime_shortening": "Skrátenie cestovania",
     "work_motivation": "Pracovná motivácia",
     "duel_motivation": "Duelová motivácia",
-    "avatar_part": "Časti avataru"
+    "avatar_part": "Časti avataru",
+    "weapons": "Zbrane",
+    "ride": "Jazdy",
+    "clothes": "Oblečenie",
+    "other_sets": "Ostatné",
+    "event": "Event",
+    "search": "Rozšírené vyhľadávanie",
+    "subcat": "Podkategórie",
+    "property": "Vlastnosti",
+    "item_type": "Typ"
   },
   "tooltips": {
     "jobdrop": "Dá sa nájsť pri práci",
@@ -82,7 +91,7 @@
     "none": "Žiadne",
     "all_items": "Zobraziť všetky",
     "save_permanent": "Zapamätať",
-    "bonus": "Bonus",
+    "bonus": "Staty",
     "bonus_search": "Hľadanie bonusu",
     "show": "Zobraziť",
     "upgradeable": "Vylepšiteľné",
@@ -109,7 +118,8 @@
     "sort_quantity": "Množstvo",
     "sort_setname": "Meno súpravy",
     "sort_marketprice": "Cena (trhová)",
-    "value": "Hodnota"
+    "value": "Hodnota",
+    "sort_ups": "Cena (UPS)"
   },
   "stats": {
     "stats": "Štatistiky",
@@ -159,7 +169,15 @@
     "price": "cena",
     "max_price": "Max cena",
     "item_id": "ID itemu",
-    "bid": "ponuka"
+    "bid": "ponuka",
+    "max_hv": "percento trhovej hodnoty",
+    "desc": "Sledovač trhu je funkcia, ktorá sleduje dostupnosť vybraných predmetov a ceny všetkých predmetov na trhu",
+    "valuable": "Hodnotné",
+    "all_items": "Všetky",
+    "watched_items": "Vybrané",
+    "nothing": "Nič",
+    "bid_now": "Zobraziť na trhu",
+    "underpriced_found": "bol nájdený podhodnotený predmet"
   },
   "features": {
     "preferences": "Preferencie",
@@ -195,7 +213,47 @@
     "travel_button": "tlačítko cestovať do pevnosti",
     "topic": "topic chatu v príprave boja",
     "online_status": "zobraziť online status",
-    "ranks": "zobraziť hodnosti"
+    "ranks": "zobraziť hodnosti",
+    "other": "Ostatné preferencie"
+  },
+  "feat_strings": {
+    "inv_window_title": "Zobraziť názov kategórie v názvu okna",
+    "inv_window_minititle": "Zobraziť názov kategórie v taskbaru",
+    "inv_setmenu_full_color": "Zmeniť farbu kompletných setov v set menu",
+    "inv_setmenu_empty_opacity": "Zobraziť sety s malým množstvom vlastnených predmetov transparentné",
+    "inv_setwindow_remember_search": "Zapamätať nastavenia v okne setov",
+    "inv_searchwindow_remember_search": "Zamamätať nastavenia v okne vyhľadávania",
+    "pop_item_id": "Zobraziť ID u každého predmetu",
+    "pop_display_event": "Zobraziť ikonu eventu súvisiacu s týmto predmetom",
+    "pop_owned_counts": "Zobraziť počet vlastnených predmetov",
+    "pop_job_table": "Zobraziť názvy prác, v ktorých ide získať tento produkt",
+    "pop_crafting_recipe": "Zobraziť potrebné materiály pre tento produkt",
+    "pop_recipe_table": "Zobraziť názov receptu",
+    "pop_partial_bonus": "Zobraziť čiastkový bonus zo súpravy (na základne počtu oblečených predmetov z iného setu)",
+    "pop_short_currency": "Zobraziť meny v kratšom formáte",
+    "pop_market_price": "Zobraziť priemernú trhovú cenu",
+    "pop_ups_price": "Zobraziť cenu v UPS",
+    "pop_min_market_price": "Zobraziť minimálnu trhovú cenu (ak predmet nie je predajný)",
+    "pop_avg_dmg": "Zobraziť priemerné poškodenie každej zbrane",
+    "pop_bonus_calc": "Vypočítať hodnotu doplnenej energie alebo hp",
+    "pop_trader": "Zobraziť názov obchodu a jeho minimálnu úroveň ak daný predmet možno kúpiť",
+    "mw_item_price_tooltip": "Zobraziť tooltip trhovej ceny",
+    "mw_product_price_tooltip": "Zobraziť tooltip trhovej ceny pre produkty",
+    "mw_bbcode_tooltip": "Zobraziť trhové ceny v BB-kódoch",
+    "mw_wtb_alert": "Dostať upozornenie s ikonou (na ľavej strane nad Salónom)",
+    "mw_wtb_chat_alert": "Dostať upozornenie v chatu",
+    "mw_underpriced_alert": "Dostať upozornenie keď Sledovač trhu nájde podhodnotený predmet",
+    "mw_alert_playsound": "Stlmiť zvukové upozornenie",
+    "ml_market_collector": "Pridať tlačítko pre zobrazenie ponuky Prehľad trhu",
+    "ml_sleep": "Pridať tlačítko pre zobrazenie ponuky Nájdi posteľ",
+    "ml_npc": "Pridať tlačítko pre zobrazenie ponuky Nájdi zadávateľa",
+    "prof_rank_bar": "Zobraziť aktuálne pozície v rebríčku v profilu daného hráča",
+    "prof_craft_points": "Zobraziť počet remeselných bodov v profilu daného hráča",
+    "fb_topic": "Zobraziť topic chatu v okne prípravy boja",
+    "fb_travel_button": "Pridať tlačítko pre cestovanie k pevnosti v okne bojov",
+    "fb_online_status": "Zobraziť online status vybraného hráča v priebehu boja",
+    "fb_ranks": "Zobraziť hodnosť vybraného hráča v priebehu boja",
+    "fb_ali_name": "Zobraziť názov aliancie v profilu mesta"
   },
   "keyWords": {
     "xmas": "Vianoce",
@@ -264,6 +322,9 @@
     "error_hotel": "Nebola nájdená žiadna hotelová izba",
     "error_npc": "Nebol nájdený žiadny zadávateľ úloh",
     "error_market": "Neboli nájdené žiadne ukončené aukcie",
-    "travel_fort": "Presunúť sa k pevnosti"
+    "travel_fort": "Presunúť sa k pevnosti",
+    "never": "Nikdy",
+    "any": "Akýkoľvek",
+    "none": "Žiadny"
   }
 }
