@@ -1,6 +1,6 @@
 var scriptUpdate={
-    TWIR: '2.153',
+    TWIR: '2.154',
     TWIRrev: '12',
-    TWIRNew: '2.100 TW error window fix, update with new features soon!',
+    TWIRNew: 'New Inventory search, New set menu, Fully reworked Market Watcher, Detailed preferences, Added Deutsch, French translation and more!'
 };
 
