@@ -53,7 +53,16 @@
     "waytime_shortening": "Μείωση απόστασης",
     "work_motivation": "Κίνητρο δουλειάς",
     "duel_motivation": "Κίνητρο μονομαχίας",
-    "avatar_part": "Avatar"
+    "avatar_part": "Avatar",
+    "weapons": "Weapons",		
+    "ride": "Ride",		
+    "clothes": "Clothes",		
+    "other_sets": "Other",		
+    "event": "Event",		
+    "search": "Advanced Search",		
+    "subcat": "Subcategory",		
+    "property": "Item property",		
+    "item_type": "Type"
   },
   "tooltips": {
     "jobdrop": "Από την εργασία",
@@ -109,7 +118,8 @@
     "sort_quantity": "Ποσότητα",
     "sort_setname": "Όνομα Σετ",
     "sort_marketprice": "Τιμή (καταστήματα)",
-    "value": "Τιμή"
+    "value": "Τιμή",
+    "sort_ups": "Price (UPS)"
   },
   "stats": {
     "stats": "Στατιστικά",
@@ -159,7 +169,15 @@
     "price": "Τιμή",
     "max_price": "Μέγιστη τιμή",
     "item_id": "ID αντικειμένου",
-    "bid": "Προσφορά"
+    "bid": "Προσφορά",
+    "max_hv": "percent of market value",		
+    "desc": "Market Watcher scans the market for your specified items and tracks items and their prices",		
+    "valuable": "Valuable items",		
+    "all_items": "All items",		
+    "watched_items": "Watched only",		
+    "nothing": "Nothing",		
+    "bid_now": "Show on market",		
+    "underpriced_found": "found underpriced item u may want to buy"
   },
   "features": {
     "preferences": "Προτιμήσεις",
@@ -195,7 +213,47 @@
     "travel_button": "travel to fort button",
     "topic": "chat topic in battle preparation",
     "online_status": "show online status",
-    "ranks": "show ranks"
+    "ranks": "show ranks",
+    "other": "Other preferences"
+  },
+  "feat_strings": {		
+    "inv_window_title": "Show category in window title",		
+    "inv_window_minititle": "Show category in the taskbar",		
+    "inv_setmenu_full_color": "Change color for completed sets in the set menu",		
+    "inv_setmenu_empty_opacity": "Make sets with a low number of owned items transparent in the set menu",		
+    "inv_setwindow_remember_search": "Remember search settings in the set window",		
+    "inv_searchwindow_remember_search": "Remember search settings in the search window",		
+    "pop_item_id": "Show the item id",		
+    "pop_display_event": "Show event icon related to this item",		
+    "pop_owned_counts": "Show number of items you own",		
+    "pop_job_table": "Show name of job where you can find this product",		
+    "pop_crafting_recipe": "Show required resources for this product",		
+    "pop_recipe_table": "Show name of recipe",		
+    "pop_partial_bonus": "Show the partial bonus for set (based on the number of items you wear)",		
+    "pop_short_currency": "Make currencies shorter",		
+    "pop_market_price": "Show average market price",		
+    "pop_ups_price": "Show UPS price",		
+    "pop_min_market_price": "Show minimal sell price on the market (if item is not sellable)",		
+    "pop_avg_dmg": "Show average damage of every weapon",		
+    "pop_bonus_calc": "Calculate the value of refilled energy or hp of useable products",		
+    "pop_trader": "Show trader and trader level for tradeable items",		
+    "mw_item_price_tooltip": "Show the market price tooltip for items",		
+    "mw_product_price_tooltip": "Show the market price tooltip for products",		
+    "mw_bbcode_tooltip": "Show market price in the item BB-code",		
+    "mw_wtb_alert": "Get notified by alert icon (on the left side over Saloon)",		
+    "mw_wtb_chat_alert": "Get notified by message in chat",		
+    "mw_underpriced_alert": "Get notified when Market Watcher found an underpriced item",		
+    "mw_alert_playsound": "Mute alert sound",		
+    "ml_market_collector": "Add a button to show the Market Collector menu",		
+    "ml_sleep": "Add a button to show the Sleep menu",		
+    "ml_npc": "Add a button to show the Quest givers menu",		
+    "prof_rank_bar": "Show actual ranks of player in their profile",		
+    "prof_craft_points": "Show crafting points in the player profile",		
+    "fb_topic": "Add a chat topic in the battle preparation window",		
+    "fb_travel_button": "Add a travel button in the fort battles window",		
+    "fb_online_status": "Show player online status in the fort battle map's popup",		
+    "fb_ranks": "Show player rank in the fort battle map's popup",		
+    "fb_ali_name": "Show alliance name in town profile"		
   },
   "keyWords": {
     "xmas": [
@@ -276,6 +334,9 @@
     "error_hotel": "Δεν βρέθηκε δωμάτιο ξενοδοχείου",
     "error_npc": "Δεν βρέθηκε δότης αποστολής",
     "error_market": "Δεν βρέθηκε δημοπρασία προς παραλαβή",
-    "travel_fort": "Travel to fort"
+    "travel_fort": "Travel to fort",
+    "never": "Never",		
+    "any": "Any",		
+    "none": "None"
   }
 }
