@@ -217,8 +217,8 @@
     "other": "Ostatní preference"
   },
   "feat_strings": {
-    "inv_window_title": "Ukázat kategorii v názvu okna",
-    "inv_window_minititle": "Ukázat kategorii v taskbaru",
+    "inv_window_title": "Zobrazit název kategorie v názvu okna",
+    "inv_window_minititle": "Zobrazit název kategorie v taskbaru",
     "inv_setmenu_full_color": "Změnit barvu kompletních setů v set menu",
     "inv_setmenu_empty_opacity": "Zobrazit sety s malým množstvím vlastněných předmětů transparentní",
     "inv_setwindow_remember_search": "Zapamatovat nastavení v okně setů",
