@@ -297,12 +297,12 @@
     "rg": "Rage quity"
   },
   "informative": {
-    "error404": "Neboli nájdené žiadne položky tohto typu",
+    "error404": "Neboli nájdené žiadne itemy",
     "error": "Neplatné parametre",
     "sucess": "Úspešne zmenené",
     "bs_limit": "Limit je 5 schopností",
     "storage_error": "Local Storage nie je povolený",
-    "no_sets": "Nevlastníš žiadnu súpravu",
+    "no_sets": "Nebola nájdená žiadna súprava",
     "years": "pred $1 rokmi",
     "year": "rok",
     "months": "pred $1 mesiacmi",
