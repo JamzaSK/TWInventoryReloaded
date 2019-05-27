@@ -218,7 +218,7 @@
     "other": "Altre preferenze"
   },
   "feat_strings": {
-    "inv_window_title": "Nnome della categoria selezionata come titolo finestra",
+    "inv_window_title": "Nome della categoria selezionata come titolo finestra",
     "inv_window_minititle": "Nome della categoria selezionata come titolo della finestra in basso",
     "inv_setmenu_full_color": "Cambia il colore per i set completati nel menu set",
     "inv_setmenu_empty_opacity": "Rendi trasparenti nel menu dei set quei set con un numero basso di oggetti posseduti",
