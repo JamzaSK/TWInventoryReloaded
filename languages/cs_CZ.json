@@ -305,7 +305,7 @@
     "sucess": "Úspěšně změněno",
     "bs_limit": "Limit je 5 schopností",
     "storage_error": "Local Storage není povolen",
-    "no_sets": "Nevlastníš zádnou sadu",
+    "no_sets": "Nebyla nalezena žádná sada",
     "years": "před $1 roky",
     "year": "rok",
     "months": "před $1 měsíci",
