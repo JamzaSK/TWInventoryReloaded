@@ -548,7 +548,7 @@
                         var a = e.apply(this, arguments);
                         return $(a).html(function(e, t) {
                             var a = t.match(/(\b\d+(?:[\.,]\d+)?\b(?!(?:[\.,]\d+)))/g);
-                            return t.replace(a, Math.round(a))
+                            return isNaN(a) ? t : t.replace(a, Math.round(a))
                         }), a
                     }
                 } catch (e) {
@@ -565,7 +565,7 @@
                     }, function(e) {
                         if (e.error) return new UserMessage(e.msg, UserMessage.TYPE_ERROR).show();
                         var t = e.ranking.map(function(e) {
-                                return e.name
+                                if (e.name !== Character.name) return e.name
                             }),
                             a = t.join(";");
                         setTimeout(function() {
