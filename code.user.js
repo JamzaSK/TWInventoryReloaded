@@ -1117,7 +1117,7 @@
                             if (TWIR.storage.get("pop_partial_bonus") && 0 == N) {
                                 var ae = _ > ee ? ee : 0 === _ ? ee : _,
                                     re = '<br><div style="color: #8b4513; font-weight: bold;">(' + ae + ") " + e.tooltips.partial_items_bonus + ":</div>";
-                                re += '<div style="color: #666; margin-bottom: 5px;font-style: italic;">&nbsp;>' + X.name + "</div>", re += '<ul class="twir_partial_bonus" style="max-width: 200px;display: block;min-width: 170px;margin-left: 10px;">';
+                                re += '<div style="color: #666; margin-bottom: 5px;font-style: italic;">&nbsp;>&nbsp;' + X.name + "</div>", re += '<ul class="twir_partial_bonus" style="max-width: 200px;display: block;min-width: 170px;margin-left: 10px;">';
                                 var ie = _ > ee ? z.getMergedStages(ee) : 0 === _ ? z.getMergedStages(ee) : z.getMergedStages(_),
                                     oe = null != X && _ > ee ? X.getMergedStages(ee) : null != X ? X.getMergedStages(_) : [];
                                 ie.sort(function(e, t) {
