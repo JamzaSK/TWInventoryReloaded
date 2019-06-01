@@ -253,7 +253,8 @@
     "fb_travel_button": "Add a travel button in the fort battles window",
     "fb_online_status": "Show player online status in the fort battle map's popup",
     "fb_ranks": "Show player rank in the fort battle map's popup",
-    "fb_ali_name": "Show alliance name in town profile"
+    "fb_ali_name": "Show alliance name in town profile",
+    "mw_clear_time": "Automatically delete market data older than $1"
   },
   "keyWords": {
     "xmas": [
