@@ -334,6 +334,7 @@
     "travel_fort": "Travel to fort",
     "never": "Never",
     "any": "Any",
-    "none": "None"
+    "none": "None",
+    "mw_db_error_msg": "There is a memory limit that will result in the deletion of your saved scans not long after 5 megabytes. It is strongly recommended to keep Market Watcher's memory usage below 5 megabytes if you care about your scan data."
   }
 }
