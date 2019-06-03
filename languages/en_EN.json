@@ -177,7 +177,7 @@
     "watched_items": "Watched only",
     "nothing": "Nothing",
     "bid_now": "Show on market",
-    "underpriced_found": "found underpriced item u may want to buy",
+    "underpriced_found": "found undervalued item u may want to buy",
     "watched": "Watched",
     "collections": "Collections"
   },
@@ -244,7 +244,7 @@
     "mw_bbcode_tooltip": "Show market price in the item BB-code",
     "mw_wtb_alert": "Get notified by alert icon (on the left side over Saloon)",
     "mw_wtb_chat_alert": "Get notified by message in chat",
-    "mw_underpriced_alert": "Get notified when Market Watcher found an underpriced item",
+    "mw_underpriced_alert": "Get notified when Market Watcher found an undervalued item",
     "mw_alert_playsound": "Mute alert sound",
     "ml_market_collector": "Add a button to show the Market Collector menu",
     "ml_sleep": "Add a button to show the Sleep menu",
