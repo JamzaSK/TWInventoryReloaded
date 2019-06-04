@@ -179,7 +179,8 @@
     "bid_now": "Show on market",
     "underpriced_found": "found undervalued item u may want to buy",
     "watched": "Watched",
-    "collections": "Collections"
+    "collections": "Collections",
+    "last_scan": "Last scan"
   },
   "features": {
     "preferences": "Preferences",
