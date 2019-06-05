@@ -176,11 +176,12 @@
     "all_items": "All items",
     "watched_items": "Watched only",
     "nothing": "Nothing",
-    "bid_now": "Show on market",
+    "bid_now": "Find on the market",
     "underpriced_found": "found undervalued item u may want to buy",
     "watched": "Watched",
     "collections": "Collections",
-    "last_scan": "Last scan"
+    "last_scan": "Last scan",
+    "buy_trader": "Show a trader"
   },
   "features": {
     "preferences": "Preferences",
