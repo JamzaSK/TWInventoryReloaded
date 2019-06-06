@@ -306,6 +306,7 @@
     "travel_fort": "Travel to fort",
     "never": "Never",
     "any": "Any",
-    "none": "None"
+    "none": "None",
+    "set_auctionable": "There is not auctionable item in this set"
   }
 }
