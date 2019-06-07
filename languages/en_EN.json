@@ -196,7 +196,7 @@
     "inv_setmenu_empty_opacity": "Make sets with a low number of owned items transparent in the set menu",
     "inv_setwindow_remember_search": "Remember search settings in the set window",
     "inv_searchwindow_remember_search": "Remember search settings in the search window",
-    "pop_item_id": "Show the item id",
+    "pop_item_id": "Show the item ID",
     "pop_display_event": "Show event icon related to this item",
     "pop_owned_counts": "Show number of items you own",
     "pop_job_table": "Show name of job where you can find this product",
@@ -229,7 +229,8 @@
     "fb_ali_name": "Show alliance name in town profile",
     "mw_clear_time": "Automatically delete scan data older than",
     "mw_collections": "Watch items needed for collections",
-    "mw_trader": "Get notified when a trader is selling watched item"
+    "mw_trader": "Get notified when a trader is selling watched item",
+    "pop_set_id": "Show the set ID (key)"
   },
   "keyWords": {
     "xmas": [
