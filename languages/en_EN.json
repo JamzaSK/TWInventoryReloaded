@@ -186,6 +186,7 @@
   "features": {
     "preferences": "Preferences",
     "inventory_menus": "Inventory / Menus",
+    "popup_tooltips": "Tooltips",
     "other": "Other preferences"
   },
   "feat_strings": {
