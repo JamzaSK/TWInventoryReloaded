@@ -181,7 +181,9 @@
     "watched": "Watched",
     "collections": "Collections",
     "last_scan": "Last scan",
-    "buy_trader": "Show a trader"
+    "buy_trader": "Show a trader",
+    "import": "Import items",
+    "export": "Export items"
   },
   "features": {
     "preferences": "Preferences",
