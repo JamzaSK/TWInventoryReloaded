@@ -206,7 +206,7 @@
         "pop_recipe_table": "Zobrazit název receptu",
         "pop_partial_bonus": "Zobrazit částkový bonus pro set (na základě počtu oblečených předmětů z jiného setu)",
         "pop_short_currency": "Zobrazit měny v kratším formátu",
-        "pop_market_price": "Zobrazit průměrnú tržní cenu",
+        "pop_market_price": "Zobrazit průměrnou tržní cenu",
         "pop_ups_price": "Zobrazit cenu v UPS",
         "pop_min_market_price": "Zobrazit minimální tržní cenu (pokud předmět není prodejní)",
         "pop_avg_dmg": "Zobrazit průměrné poškození každé zbraně",
@@ -255,8 +255,8 @@
         "nearest": "Nejbližší hotel",
         "nearest_five": "Nejbližší 5 hv. hotel",
         "sleep": "Najít postel",
-        "premium_bids": "Vyzvednout nákupní nabídky",
-        "premium_offers": "Vyzvednout prodejní nabídky"
+        "premium_bids": "Vyzvednout všechny nákupní nabídky",
+        "premium_offers": "Vyzvednout všechny prodejní nabídky"
     },
     "ranking": {
         "add_name": "Rank panel",
