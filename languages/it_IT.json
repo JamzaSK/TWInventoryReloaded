@@ -169,7 +169,7 @@
     "time_left": "tempo rimanente",
     "price": "prezzo",
     "max_price": "Prezzo massimo",
-    "item_id": "ID oggetto",
+    "item_id": "Item/set ID",
     "bid": "Offri",
     "max_hv": "percentuale del valore di mercato",
     "desc": "L'osservatore del mercato scansiona il mercato per gli oggetti specificati e ne traccia il loro valore",
@@ -178,43 +178,18 @@
     "watched_items": "Solo gli osservati",
     "nothing": "Niente",
     "bid_now": "Mostra nel mercato",
-    "underpriced_found": "cerca oggetti sottocosto che potresti voler comprare"
+    "underpriced_found": "cerca oggetti sottocosto che potresti voler comprare",
+    "watched": "Watched items",
+    "collections": "Collections",
+    "last_scan": "Last scan",
+    "buy_trader": "Show a trader",
+    "import": "Import items",
+    "export": "Export items"
   },
   "features": {
     "preferences": "Preferenze",
     "inventory_menus": "Inventario/menu",
-    "window_title": "Migliora titolo principale",
-    "window_minititle": "Migliora titolo in basso",
-    "empty_opacity": "Opacità nel vuoto",
-    "item_counts": "Contatore oggetti",
-    "sets_counts": "Contatore set oggetti",
-    "sets_color": "Colore set completati",
-    "event": "Mostra eventi",
     "popup_tooltips": "Tooltip",
-    "item_id": "ID oggetto",
-    "job_name": "Nome lavoro",
-    "item_crafting": "Oggetto professione",
-    "recipe_name": "Nome ricetta",
-    "short_currency": "Formato valuta ridotto",
-    "partial_bonus": "Bonus parziali",
-    "market_watcher": "Osservatore mercato",
-    "set_pieces": "Pezzi set",
-    "update_prices": "Tracciatore prezzi",
-    "market_alert": "Tracciatore oggetti al mercato",
-    "alert_sound": "Suono di avvertimento",
-    "trader": "Livello negozio",
-    "market_collector": "Riscossioni dal mercato",
-    "sleep": "Posti dove dormire",
-    "npc": "Posizionamento PNG attivi",
-    "profile": "Profilo giocatori",
-    "rank_bar": "Mostra migliori 3 posizioni nelle classifiche",
-    "craft_points": "Mostra punti professione",
-    "market_watcher_all": "prezzo di mercato (tutti gli oggetti)",
-    "forts": "Forti e battaglie",
-    "travel_button": "icona per lo spostamento al forte",
-    "topic": "topic chat nella preparazione battaglia",
-    "online_status": "mostra status online",
-    "ranks": "mostra gradi",
     "other": "Altre preferenze"
   },
   "feat_strings": {
@@ -254,7 +229,11 @@
     "fb_travel_button": "Aggiungi un pulsante di spostamento nella finestra delle battaglie",
     "fb_online_status": "Mostra lo stato online dei giocatori nei popup della mappa di battaglia",
     "fb_ranks": "Mostra il rango dei giocatori nei popup della mappa di battaglia",
-    "fb_ali_name": "Mostra il nome dell'alleanza nel profilo città"
+    "fb_ali_name": "Mostra il nome dell'alleanza nel profilo città",
+    "mw_clear_time": "Automatically delete scan data older than",
+    "mw_collections": "Watch items needed for collections",
+    "mw_trader": "Get notified when a trader is selling watched item",
+    "pop_set_id": "Show the set ID (key)"
   },
   "keyWords": {
     "xmas": [
@@ -344,6 +323,7 @@
     "travel_fort": "Viaggia al forte",
     "never": "Mai",
     "any": "Tutti",
-    "none": "Niente"
+    "none": "Niente",
+    "set_auctionable": "There is not auctionable item in this set"
   }
 }
