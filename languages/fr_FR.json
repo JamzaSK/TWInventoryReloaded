@@ -178,12 +178,12 @@
     "nothing": "Aucun",
     "bid_now": "Afficher au marché",
     "underpriced_found": "Item trouvé en dessous du prix recherché",
-    "watched": "Watched items",
+    "watched": "Items surveillés",
     "collections": "Collections",
-    "last_scan": "Last scan",
-    "buy_trader": "Show a trader",
-    "import": "Import items",
-    "export": "Export items"
+    "last_scan": "Dernier scan",
+    "buy_trader": "Afficher un vendeur",
+    "import": "Importer des items",
+    "export": "Exporter des items"
   },
   "features": {
     "preferences": "Préférences",
@@ -229,10 +229,10 @@
     "fb_online_status": "Afficher le statut en ligne lors des batailles de fort",
     "fb_ranks": "Afficher le grade lors des batailles de fort",
     "fb_ali_name": "Afficher le nom de l'alliance dans les profils des villes",
-    "mw_clear_time": "Automatically delete scan data older than",
-    "mw_collections": "Watch items needed for collections",
-    "mw_trader": "Get notified when a trader is selling watched item",
-    "pop_set_id": "Show the set ID (key)"
+    "mw_clear_time": "Supprimer automatiquement les scans de plus de",
+    "mw_collections": "Surveiller les items nécessaires aux collections",
+    "mw_trader": "Afficher une notification quand un item surveillé est en vente",
+    "pop_set_id": "Afficher l'id des sets"
   },
   "keyWords": {
     "xmas": [
@@ -308,6 +308,6 @@
     "never": "Jamais",
     "any": "Tout",
     "none": "Aucun",
-    "set_auctionable": "There is not auctionable item in this set"
+    "set_auctionable": "Aucun item vendable aux enchères dans ce set"
   }
 }
