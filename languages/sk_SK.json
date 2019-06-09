@@ -168,7 +168,7 @@
     "time_left": "platné",
     "price": "cena",
     "max_price": "Max cena",
-    "item_id": "ID itemu",
+    "item_id": "ID itemu/setu",
     "bid": "ponuka",
     "max_hv": "percento trhovej hodnoty",
     "desc": "Sledovač trhu je funkcia, ktorá sleduje dostupnosť vybraných predmetov a ceny všetkých predmetov na trhu",
