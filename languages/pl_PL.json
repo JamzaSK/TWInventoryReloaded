@@ -168,7 +168,7 @@
     "time_left": "pozostały czas",
     "price": "cena",
     "max_price": "Max. cena",
-    "item_id": " ID przedmiotu",
+    "item_id": "Item/set ID",
     "bid": "Cena",
     "max_hv": "procent wartości rynkowej",
     "desc": "Obserwator Rynku skanuje targ w celu sprawdzenia wybranych przez ciebie przedmiotów i ich ceny.",
@@ -177,43 +177,18 @@
     "watched_items": "Tylko obserwowane",
     "nothing": "Nic",
     "bid_now": "Pokaż na targu",
-    "underpriced_found": "Znaleziono niedrogi przedmiot który może chcesz kupić"
+    "underpriced_found": "Znaleziono niedrogi przedmiot który może chcesz kupić",
+    "watched": "Watched items",
+    "collections": "Collections",
+    "last_scan": "Last scan",
+    "buy_trader": "Show a trader",
+    "import": "Import items",
+    "export": "Export items"
   },
   "features": {
     "preferences": "Preferencje",
     "inventory_menus": "Ekwipunek / Menu",
-    "window_title": "Zmieniony główny tytuł",
-    "window_minititle": "Zmieniona nazwa przycisków",
-    "empty_opacity": "Przezroczysty napis niepełnych zestawów",
-    "item_counts": "Licz przedmioty",
-    "sets_counts": "Licz przedmioty setowe",
-    "sets_color": "Kolorowa nazwa pełnego zestawu",
-    "event": "Pokaż z którego eventu jest przedmiot",
     "popup_tooltips": "Porady",
-    "item_id": "ID Przedmiotu",
-    "job_name": "Nazwa pracy",
-    "item_crafting": "Przedmiot z rzemiosła",
-    "recipe_name": "Nazwa przepisu",
-    "short_currency": "Skrócona wersja",
-    "partial_bonus": "Premia całkowita zestawu",
-    "market_watcher": "Obserwator targu",
-    "set_pieces": "Część zestawu",
-    "update_prices": "Śledzenie cen",
-    "market_alert": "Śledzenie przedmiotów",
-    "alert_sound": "dźwięk powiadomienia",
-    "trader": "trader level",
-    "market_collector": "Przedmioty na targu",
-    "sleep": " Najbliższy hotel ",
-    "npc": "Lokacja NPC",
-    "profile": "Profil gracza",
-    "rank_bar": "Widoczne 3 rankingi",
-    "craft_points": "Punkty rzemieślnicze",
-    "market_watcher_all": "Cena na targu (wszystkie przedmioty)",
-    "forts": "Forty i bitwy o fort",
-    "travel_button": "przycisk podróży do fortu",
-    "topic": "Temat czatu bitwy w przygotowaniach",
-    "online_status": "Pokaż status online",
-    "ranks": "Pokaż rangi",
     "other": "Inne preferencje"
   },
   "feat_strings": {
@@ -253,7 +228,11 @@
     "fb_travel_button": "Dodaj przycisk szybkiej podróży w oknie bitew o fort",
     "fb_online_status": "Pokaż status online gracza w czasie bitwy",
     "fb_ranks": "Pokaż rangę danego gracza w czasie bitwy",
-    "fb_ali_name": "Pokaż sojusz w oknie miasta"
+    "fb_ali_name": "Pokaż sojusz w oknie miasta",
+    "mw_clear_time": "Automatically delete scan data older than",
+    "mw_collections": "Watch items needed for collections",
+    "mw_trader": "Get notified when a trader is selling watched item",
+    "pop_set_id": "Show the set ID (key)"
   },
   "keyWords": {
     "xmas": [
@@ -342,6 +321,7 @@
     "travel_fort": "Idź do fortu",
     "never": "Nigdy",
     "any": "Każdy",
-    "none": "Żaden"
+    "none": "Żaden",
+    "set_auctionable": "There is not auctionable item in this set"
   }
 }
