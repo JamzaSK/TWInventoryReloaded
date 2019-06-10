@@ -233,7 +233,7 @@
         "mw_collections": "Watch items needed for collections",
         "mw_trader": "Get notified when a trader is selling watched item",
         "pop_set_id": "Show the set ID (key)",
-        "fb_count": "Show number of current fort battles"
+        "fb_count": "Show number of active fort battles"
     },
     "keyWords": {
         "xmas": [
