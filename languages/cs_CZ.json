@@ -309,5 +309,6 @@
         "any": "Jakýkoli",
         "none": "Žádný",
         "set_auctionable": "V této sadě není žádný dražitelný předmět"
-    }
+    },
+    "fb_count": "Show number of current fort battles"
 }
