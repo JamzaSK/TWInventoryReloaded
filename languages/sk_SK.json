@@ -232,7 +232,8 @@
         "mw_clear_time": "Automaticky vymazať dáta scanu staršieho ako",
         "mw_collections": "Sledovať predmety potrebné do zbierky",
         "mw_trader": "Dostať upozornenie keď obchodník predáva sledovaný predmet",
-        "pop_set_id": "Zobraziť ID každého setu (key)"
+        "pop_set_id": "Zobraziť ID každého setu (key)",
+        "fb_count": "Zobraziť počet aktívnych bojov"
     },
     "keyWords": {
         "xmas": [
@@ -309,6 +310,5 @@
         "any": "Nezáleží",
         "none": "Žiadny",
         "set_auctionable": "V tejto sade nie je žiadny dražiteľný predmet"
-    },
-    "fb_count": "Show number of current fort battles"
+    }
 }
