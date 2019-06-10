@@ -15,7 +15,7 @@
 // @description:fr Inventaire amélioré et outils pour The West!
 
 // @author Jamza (CZ14)
-// @version 2.157
+// @version 2.158
 // @license GPL-3.0
 
 // @include https://*.the-west.*/game.php*
@@ -66,7 +66,7 @@
     t.setAttribute("type", "application/javascript"), t.textContent = "(" + function() {
         var e;
         TWIR = {
-            version: "2.157",
+            version: "2.158",
             name: "TW Inventory Reloaded",
             author: "Jamza",
             minGame: "2.04",
@@ -367,7 +367,8 @@
                 fb_travel_button: !0,
                 fb_online_status: !0,
                 fb_ranks: !0,
-                fb_ali_name: !0
+                fb_ali_name: !0,
+                fb_count: !0
             },
             updateFeat: function() {
                 if (void 0 !== localStorage && void 0 !== localStorage.twir_features) {
@@ -591,7 +592,22 @@
             } else setTimeout(TWIR.init, 100)
         }, TWIR.otherEnhacements = {
             init: function() {
-                TWIR.otherEnhacements.addAllToAddressbook(), TWIR.otherEnhacements.addAliToTownWindow(), TWIR.otherEnhacements.fixJobNumbers()
+                TWIR.otherEnhacements.addAllToAddressbook(), TWIR.otherEnhacements.addAliToTownWindow(), TWIR.otherEnhacements.fixJobNumbers(), TWIR.otherEnhacements.addBattleCount()
+            },
+            addBattleCount: function() {
+                TWIR.storage.get("fb_count") && (EventHandler.listen("fort_battle_end", TWIR.otherEnhacements.addBattleCount), Ajax.remoteCall("fort_overview", "", {}, function(e) {
+                    var t = 0;
+                    if (e.js) {
+                        for (var a in e.js) {
+                            var r = e.js[a];
+                            r[3] && t++
+                        }
+                        if ($("#ui_bottombar .ui_bottombar_wrapper .button:nth-child(9) .dock-image").empty(), 0 != t) {
+                            var i = $('<div style="text-shadow:black -1px 0 1px,black 0 1px 1px,black 1px 0 1px,black 0 -1px 1px;line-height:15px;font-size:10px;font-weight:700;text-align:center;position:absolute;width:21px;z-index:2;background:url(' + Game.cdnURL + '/images/interface/friendsbar/level_bg.png);height:15px;right:2px;color:white;">' + t + "</div>");
+                            $("#ui_bottombar .ui_bottombar_wrapper .button:nth-child(9) .dock-image").append(i)
+                        }
+                    }
+                }))
             },
             fixJobNumbers: function() {
                 try {
@@ -2246,8 +2262,9 @@
                         for (var t = [], a = e.achievements.progress || [], r = 0; r < a.length; r++)
                             for (var i, o = /<span.*?([\s\S]*?)<\/span>/gm; i = o.exec(a[r].meta);) {
                                 var n = i[1],
-                                    s = /<img.*?alt="(.*?)"/.exec(n)[1];
-                                t.push(s)
+                                    s = /<img.*?alt="(.*?)"/.exec(n)[1],
+                                    p = n.indexOf("locked") > -1;
+                                p && t.push(s)
                             }
                         TWIR.storage.marketWatcher.missing = t
                     }
@@ -2390,7 +2407,7 @@
                                         var x = (new Date).getTime();
                                         TWIR.marketBest.init(), TWIR.console("TWIR/: Market Scan completed at " + Chat.Formatter.formatTime((new Date).getTime(), !1) + " in " + ((x - i) / 1e3).getTime2EndToken() + " (" + t + " pages, " + (TWIR.storage.marketWatcher.marketMain.length - a + (TWIR.storage.marketWatcher.marketOther.length - r)) + " new listings). Next scan in: " + (o / 1e3).getTime2EndString(!1) + ".", "green"), localStorage.setItem("twir_marketTimer", (new Date).valueOf())
                                     } else new UserMessage(e.informative.storage_error + "!", UserMessage.TYPE_ERROR).show();
-                                    TWIR.marketWatcher.showMarketAlert(), TWIR.marketWatcher.checking = !1, setTimeout(function() {
+                                    TWIR.marketWatcher.showMarketAlert(), TWIR.marketWatcher.checking = !1, TWIR.marketWatcher.checkCollectible(), TWIR.checkShop(), setTimeout(function() {
                                         TWIR.marketWatcher.scanMarket()
                                     }, o)
                                 }
