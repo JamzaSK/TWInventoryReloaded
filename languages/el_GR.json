@@ -232,7 +232,8 @@
         "mw_clear_time": "Αυτόματη διαγραφή δεδομένων σάρωσης μεγαλύτερων από",
         "mw_collections": "Παρακολουθήστε αντικείμενα που χρειάζονται για συλλογές",
         "mw_trader": "Λάβετε ειδοποίηση όταν ένας έμπορος πωλεί αντικείμενο παρακολούθησης",
-        "pop_set_id": "Show the set ID (key)"
+        "pop_set_id": "Show the set ID (key)",
+        "fb_count": "Show number of current fort battles"
     },
     "keyWords": {
         "xmas": [
@@ -309,6 +310,5 @@
         "any": "Οτιδήποτε",
         "none": "Κανένα",
         "set_auctionable": "Δεν υπάρχει αντικείμενο με δυνατότητα δημοπρασίας σε αυτό το Σετ"
-    },
-    "fb_count": "Show number of current fort battles"
+    }
 }
