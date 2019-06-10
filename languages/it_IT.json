@@ -313,5 +313,6 @@
         "any": "Tutti",
         "none": "Niente",
         "set_auctionable": "Non ci sono oggetti vendibili all'asta in questo set"
-    }
+    },
+    "fb_count": "Show number of current fort battles"
 }
