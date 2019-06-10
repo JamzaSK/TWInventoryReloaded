@@ -232,7 +232,8 @@
         "mw_clear_time": "Automatically delete scan data older than",
         "mw_collections": "Watch items needed for collections",
         "mw_trader": "Get notified when a trader is selling watched item",
-        "pop_set_id": "Show the set ID (key)"
+        "pop_set_id": "Show the set ID (key)",
+        "fb_count": "Show number of current fort battles"
     },
     "keyWords": {
         "xmas": [
@@ -313,6 +314,5 @@
         "any": "Tutti",
         "none": "Niente",
         "set_auctionable": "Non ci sono oggetti vendibili all'asta in questo set"
-    },
-    "fb_count": "Show number of current fort battles"
+    }
 }
