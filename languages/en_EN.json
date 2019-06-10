@@ -309,5 +309,6 @@
         "any": "Any",
         "none": "None",
         "set_auctionable": "There is not auctionable item in this set"
-    }
+    },
+    "fb_count": "Show number of current fort battles"
 }
