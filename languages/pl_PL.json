@@ -165,7 +165,7 @@
         "seen_more": "i $1 innych obserwowanych przedmiotów",
         "add_item": "Dodaj",
         "offer_count": "dodaj $1 innych ofert",
-        "time_left": "pozostały czas",
+        "time_left": "pozostało",
         "price": "cena",
         "max_price": "Max. cena",
         "item_id": "Item/set ID",
@@ -233,7 +233,7 @@
         "mw_collections": "Watch items needed for collections",
         "mw_trader": "Get notified when a trader is selling watched item",
         "pop_set_id": "Show the set ID (key)",
-        "fb_count": "Show number of current fort battles"
+        "fb_count": "Pokaż liczbę aktywnych bitew o fort\n"
     },
     "keyWords": {
         "xmas": [
