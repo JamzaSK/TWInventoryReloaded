@@ -13,7 +13,7 @@
     "update_message": "Skrypt wymaga aktualizacji! Prosimy pobrać nową wersję.",
     "donate_title": "Wesprzyj twórców",
     "donate_text": "Jeśli chcesz wspomóc twórców lub w jakiś sposób podziękować im, skorzystaj z poniższych możliwości",
-    "donate_paypal": "Postawa nam kawę",
+    "donate_paypal": "Postaw nam kawę\n",
     "donate_ingame": "Daj nam prezent",
     "tyty": "Dziękujemy",
     "inventory": {
@@ -78,7 +78,7 @@
         "maximal_price": "Max",
         "listings": "Aukcje",
         "items": "Przedmioty",
-        "items_short": "szt",
+        "items_short": "szt.",
         "seen": "Widziane $1 temu",
         "last_seen": "Ostatnio widziane",
         "average": "Średnia",
@@ -178,12 +178,12 @@
         "nothing": "Nic",
         "bid_now": "Pokaż na targu",
         "underpriced_found": "Znaleziono niedrogi przedmiot który może chcesz kupić",
-        "watched": "Watched items",
-        "collections": "Collections",
-        "last_scan": "Last scan",
-        "buy_trader": "Show a trader",
-        "import": "Import items",
-        "export": "Export items"
+        "watched": "Obserwowane przedmioty",
+        "collections": "Kolekcje",
+        "last_scan": "Ostatni skan",
+        "buy_trader": "Pokaż handlarza",
+        "import": "Importuj przedmioty",
+        "export": "Eksportuj przedmioty"
     },
     "features": {
         "preferences": "Preferencje",
@@ -197,7 +197,7 @@
         "inv_setmenu_full_color": "Zmień kolor dla kompletnego zestawu w liście setów",
         "inv_setmenu_empty_opacity": "Zestawy niekompletne, z małą liczbą przedmiotów oznacz jako przezroczyste w liście setów",
         "inv_setwindow_remember_search": "Zapamiętaj opcje wyszukiwania w oknie zestawów",
-        "inv_searchwindow_remember_search": " Zapamiętaj opcje wyszukiwania w oknie wyszukiwania ",
+        "inv_searchwindow_remember_search": "Zapamiętaj opcje wyszukiwania w oknie wyszukiwania",
         "pop_item_id": "Pokaż ID przedmiotów",
         "pop_display_event": "Pokaż ikonę eventu powiązanego z przedmiotem",
         "pop_owned_counts": "Pokaż ile posiadasz danego przedmiotu",
@@ -229,10 +229,10 @@
         "fb_online_status": "Pokaż status online gracza w czasie bitwy",
         "fb_ranks": "Pokaż rangę danego gracza w czasie bitwy",
         "fb_ali_name": "Pokaż sojusz w oknie miasta",
-        "mw_clear_time": "Automatically delete scan data older than",
-        "mw_collections": "Watch items needed for collections",
-        "mw_trader": "Get notified when a trader is selling watched item",
-        "pop_set_id": "Show the set ID (key)",
+        "mw_clear_time": "Usuwaj dane skanowania starsze niż",
+        "mw_collections": "Obserwuj przedmioty brakujące do kolekcji",
+        "mw_trader": "Otrzymaj powiadomienie gdy handlarz sprzedaje obserwowany przedmiot",
+        "pop_set_id": "Pokaż ID zestawu",
         "fb_count": "Pokaż liczbę aktywnych bitew o fort\n"
     },
     "keyWords": {
@@ -247,7 +247,9 @@
         "dotd": [
             "Day of the Dead",
             "Halloween",
-            "Dia de los Muertos"
+            "Dia de los Muertos",
+            "Święto zmarłych",
+            ""
         ],
         "easter": "Wielkanoc",
         "oktoberfest": "Oktoberfest"
@@ -303,7 +305,7 @@
         "valid_defined": "Przedmiot  $1 jest obecnie obserwowany",
         "valid_max": "Nie możesz obserwować więcej niż  50 przedmiotów",
         "error_wait": "Poczekaj aż wyszukiwanie zostanie zakończone.",
-        "error_other": "An error has occurred, please open console for details",
+        "error_other": "Wystąpił błąd, proszę otworzyć konsolę po szczegóły",
         "distance": "Dystans",
         "error_hotel": "Nie znaleziono hotelu",
         "error_npc": "Nie znaleziono NPC",
@@ -312,6 +314,6 @@
         "never": "Nigdy",
         "any": "Każdy",
         "none": "Żaden",
-        "set_auctionable": "There is not auctionable item in this set"
+        "set_auctionable": "Ten zestaw nie posiada przedmiotów na sprzedaż"
     }
 }
