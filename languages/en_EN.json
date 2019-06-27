@@ -62,7 +62,8 @@
         "search": "Advanced Search",
         "subcat": "Subcategory",
         "property": "Item property",
-        "item_type": "Type"
+        "item_type": "Type",
+        "combined": "combined"
     },
     "tooltips": {
         "jobdrop": "Droppable from job",
