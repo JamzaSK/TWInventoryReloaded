@@ -120,7 +120,8 @@
         "sort_setname": "Set name",
         "sort_marketprice": "Price (market)",
         "value": "Value",
-        "sort_ups": "Price (UPS)"
+        "sort_ups": "Price (UPS)",
+        "msg_world": "Whole world"
     },
     "stats": {
         "stats": "Statistics",
