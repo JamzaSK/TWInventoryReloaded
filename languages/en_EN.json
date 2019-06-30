@@ -121,6 +121,14 @@
         "sort_marketprice": "Price (market)",
         "value": "Value",
         "sort_ups": "Price (UPS)",
+        "msg": "Send message",
+        "msg_fb_ali": "Allied team",
+        "msg_fb_enemy": "Enemy team",
+        "msg_fb_all": "All players",
+        "msg_town_mem": "Town members",
+        "msg_town_lead": "Town leaders",
+        "msg_ali_mem": "Alliance members",
+        "msg_ali_lead": "Alliance leaders",
         "msg_world": "Whole world"
     },
     "stats": {
@@ -311,6 +319,7 @@
         "never": "Never",
         "any": "Any",
         "none": "None",
-        "set_auctionable": "There is not auctionable item in this set"
+        "set_auctionable": "There is not auctionable item in this set",
+        "enemy": "Enemy players"
     }
 }
