@@ -327,6 +327,7 @@
     "set_auctionable": "There is not auctionable item in this set",
     "enemy": "Enemy players",
     "update_data": "Update",
+    "loading": "Loading",
     "update_wait": "Hold on, this could take a while"
   }
 }
