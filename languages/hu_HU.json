@@ -17,9 +17,9 @@
     "donate_ingame": "Adj nekünk ajándékot",
     "tyty": "Köszönjük",
     "inventory": {
-        "adventures": "Kalandor",
+        "adventures": "Kalandok",
         "labor_points": "Munkapont",
-        "duels": "Párbajos",
+        "duels": "Párbajok",
         "energy": "Energia",
         "skills": "Képesség pont",
         "fort_battles": "Erődharcok",
@@ -85,7 +85,7 @@
         "average": "Átlagos",
         "average_since": "Átlagosan $1 nap",
         "each": "minden",
-        "quests": "küldetések"
+        "quests": "küldetés"
     },
     "organizing": {
         "invert_text": "Különböző tárgyak megjelenítése / elrejtése a kiválasztott szűrő alapján",
@@ -150,7 +150,7 @@
         "recipes": "Receptek",
         "dropped": "Talált",
         "duplicates": "Duplák",
-        "set_and_bonus": "Set /w Bonus products",
+        "set_and_bonus": "Bónuszt adó termékek",
         "job_products": "Munkában talált",
         "quest_products": "Kaland termékek",
         "buffs": "Erősítők",
@@ -176,7 +176,7 @@
         "seen_more": "és $1 másik megfigyelt tárgy",
         "add_item": "megfigyel",
         "offer_count": "és $1 más listák",
-        "time_left": "hátralévő idő",
+        "time_left": "idő maradt",
         "price": "ár",
         "max_price": "Maximum ár",
         "item_id": "Tárgy/termék ID",
