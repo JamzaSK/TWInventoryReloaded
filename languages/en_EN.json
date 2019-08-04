@@ -330,6 +330,8 @@
         "update_wait": "Hold on, this could take a while",
         "loading": "Loading",
         "updated_data": "Updated",
-        "success_load": "Successful"
+        "success_load": "Successful",
+        "fb_att": "Attackers",
+        "fb_def": "Defenders"
     }
 }
