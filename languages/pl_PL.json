@@ -14,7 +14,7 @@
     "donate_title": "Wesprzyj twórców",
     "donate_text": "Jeśli chcesz wspomóc twórców lub w jakiś sposób podziękować im, skorzystaj z poniższych możliwości",
     "donate_paypal": "Postaw nam kawę\n",
-    "donate_ingame": "Daj nam prezent",
+    "donate_ingame": "Podaruj prezent",
     "tyty": "Dziękujemy",
     "inventory": {
         "adventures": "Przygody",
@@ -62,7 +62,8 @@
         "search": "Zaawansowane wyszukiwanie",
         "subcat": "Podkategoria",
         "property": "Właściwości przedmiotu",
-        "item_type": "Typ"
+        "item_type": "Typ",
+        "combined": "Ulepszone"
     },
     "tooltips": {
         "jobdrop": "Znalezione w pracy",
@@ -83,7 +84,8 @@
         "last_seen": "Ostatnio widziane",
         "average": "Średnia",
         "average_since": "Średnia $1 dnia",
-        "each": "każdy"
+        "each": "każdy",
+        "quests": "zadania"
     },
     "organizing": {
         "invert_text": "Pokaż/Ukryj przedmioty pasujące do filtra",
@@ -119,7 +121,16 @@
         "sort_setname": "Nazwy zestawu",
         "sort_marketprice": "Cena na targu",
         "value": "Wartości",
-        "sort_ups": "Cena (Obligacje)"
+        "sort_ups": "Cena (Obligacje)",
+        "msg": "Wyślij wiadomość",
+        "msg_fb_ali": "Sojusznicy",
+        "msg_fb_enemy": "Przeciwnicy",
+        "msg_fb_all": "Wszyscy gracze",
+        "msg_town_mem": "Członkowie miasta",
+        "msg_town_lead": "Zarząd miasta",
+        "msg_ali_mem": "Członkowie sojuszu",
+        "msg_ali_lead": "Przywództwo sojuszu",
+        "msg_world": "Cały świat"
     },
     "stats": {
         "stats": "Statystyki",
@@ -157,7 +168,8 @@
         "set_menu_error": "Najpierw otwórz Przedmioty z Zestawów, by je policzyć",
         "shiftinfo": "Naciśnij [Shift] by pokazać więcej",
         "average": "Średni",
-        "total_market_price": "Łączna cena rynkowa"
+        "total_market_price": "Łączna cena rynkowa",
+        "total": "Total"
     },
     "market_watcher": {
         "add_name": "Obserwator rynku",
@@ -233,7 +245,9 @@
         "mw_collections": "Obserwuj przedmioty brakujące do kolekcji",
         "mw_trader": "Otrzymaj powiadomienie gdy handlarz sprzedaje obserwowany przedmiot",
         "pop_set_id": "Pokaż ID zestawu",
-        "fb_count": "Pokaż liczbę aktywnych bitew o fort\n"
+        "fb_count": "Pokaż liczbę aktywnych bitew o fort\n",
+        "ml_show": "Dodatkowe przyciski po lewo interfejsu",
+        "chat_smart": "Smarter chat (URL recognition)"
     },
     "keyWords": {
         "xmas": [
@@ -262,7 +276,10 @@
         "nearest_five": "Najbliższy 5 gwiazdkowy hotel",
         "sleep": "Najbliższe łóżko",
         "premium_bids": "Zbierz wszystkie licytowane",
-        "premium_offers": "Zbierz wszystkie sprzedane"
+        "premium_offers": "Zbierz wszystkie sprzedane",
+        "map_show": "Scentruj mapę",
+        "window_open": "Otwórz okno",
+        "walk": "Idź do"
     },
     "ranking": {
         "add_name": "Pasek rankingu",
@@ -314,6 +331,15 @@
         "never": "Nigdy",
         "any": "Każdy",
         "none": "Żaden",
-        "set_auctionable": "Ten zestaw nie posiada przedmiotów na sprzedaż"
+        "set_auctionable": "Ten zestaw nie posiada przedmiotów na sprzedaż",
+        "enemy": "Przeciwnicy",
+        "update_data": "Zaktualizuj",
+        "update_wait": "Poczekaj, to może zająć chwilę",
+        "loading": "Ładowanie",
+        "updated_data": "Aktualne",
+        "success_load": "Ładowanie pomyślne",
+        "fb_att": "Attackers",
+        "fb_def": "Defenders",
+        "joined": "Joined"
     }
 }
