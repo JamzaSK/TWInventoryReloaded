@@ -54,15 +54,16 @@
         "work_motivation": "Arbeitsmotivation",
         "duel_motivation": "Duellmotivation",
         "avatar_part": "Avatargegenstände",
-        "weapons": "Weapons",
-        "ride": "Ride",
-        "clothes": "Clothes",
-        "other_sets": "Other",
+        "weapons": "Waffen",
+        "ride": "Reise",
+        "clothes": "Kleidung",
+        "other_sets": "Andere",
         "event": "Event",
-        "search": "Advanced Search",
-        "subcat": "Subcategory",
-        "property": "Item property",
-        "item_type": "Type"
+        "search": "Erweiterte Suche",
+        "subcat": "Unterkategorie",
+        "property": "Eigenschaft",
+        "item_type": "Slot",
+        "combined": "Kombiniert"
     },
     "tooltips": {
         "jobdrop": "Findbar",
@@ -83,7 +84,8 @@
         "last_seen": "Zuletzt gesehen",
         "average": "Durchschnitt",
         "average_since": "Durchschnittlich $1 Tage",
-        "each": "1"
+        "each": "1",
+        "quests": "quests"
     },
     "organizing": {
         "invert_text": "Zeige/Verstecke Items durch Auswählen der Filter",
@@ -111,15 +113,24 @@
         "sort_buyprice": "Einkaufspreis",
         "sort_sellprice": "Verkaufspreis",
         "sort_id": "Item-ID",
-        "sort_reqlvl": "Level (required)",
-        "sort_upglvl": "Level (upgrade)",
+        "sort_reqlvl": "Charakterstufe",
+        "sort_upglvl": "Veredelungsstufe",
         "sort_mindamage": "Min. Schaden",
         "sort_maxdamage": "Max. Schaden",
         "sort_quantity": "Stückzahl",
         "sort_setname": "Setname",
         "sort_marketprice": "Marktpreis",
         "value": "Multiplikator",
-        "sort_ups": "Price (UPS)"
+        "sort_ups": "Shop-Preis",
+        "msg": "Send message",
+        "msg_fb_ali": "Allied team",
+        "msg_fb_enemy": "Enemy team",
+        "msg_fb_all": "All players",
+        "msg_town_mem": "Town members",
+        "msg_town_lead": "Town leaders",
+        "msg_ali_mem": "Alliance members",
+        "msg_ali_lead": "Alliance leaders",
+        "msg_world": "Whole world"
     },
     "stats": {
         "stats": "Statistik",
@@ -157,7 +168,8 @@
         "set_menu_error": "Öffne zuerst die Set-Liste um dies anzuzeigen",
         "shiftinfo": "Drücke [Shift] um mehr anzuzeigen",
         "average": "Durschnitt",
-        "total_market_price": "Total Marktpreis"
+        "total_market_price": "Total Marktpreis",
+        "total": "Total"
     },
     "market_watcher": {
         "add_name": "MarketWatcher",
@@ -168,28 +180,28 @@
         "time_left": "Zeit übrig",
         "price": "Preis",
         "max_price": "Max Preis",
-        "item_id": "Item/set-ID",
+        "item_id": "Item/Set-ID",
         "bid": "Gebot",
-        "max_hv": "percent of market value",
-        "desc": "Market Watcher scans the market for your specified items and tracks items and their prices",
-        "valuable": "Valuable items",
-        "all_items": "All items",
-        "watched_items": "Watched only",
-        "nothing": "Nothing",
-        "bid_now": "Show on market",
-        "underpriced_found": "found underpriced item u may want to buy",
-        "watched": "Watched items",
-        "collections": "Collections",
-        "last_scan": "Last scan",
-        "buy_trader": "Show a trader",
-        "import": "Import items",
-        "export": "Export items"
+        "max_hv": "Prozent des Marktpreises",
+        "desc": "Der MarketWatcher sammelt die Marktpreise und sucht nach deinen Items",
+        "valuable": "Wertvolle Items",
+        "all_items": "Alle Items",
+        "watched_items": "Nur verfolgte",
+        "nothing": "Nichts",
+        "bid_now": "Zeige am Markt",
+        "underpriced_found": "günstiges Item gefunden",
+        "watched": "Verfolgte Items",
+        "collections": "Sammlungen",
+        "last_scan": "Letzter Scan",
+        "buy_trader": "Händler zeigen",
+        "import": "Items importieren",
+        "export": "Items exportieren"
     },
     "features": {
         "preferences": "Einstellungen",
         "inventory_menus": "Inventar / Menü",
         "popup_tooltips": "Erweitertes Item-Popup",
-        "other": "Other preferences"
+        "other": "Weitere Einstellungen"
     },
     "feat_strings": {
         "inv_window_title": "Show category in window title",
@@ -198,20 +210,20 @@
         "inv_setmenu_empty_opacity": "Make sets with a low number of owned items transparent in the set menu",
         "inv_setwindow_remember_search": "Remember search settings in the set window",
         "inv_searchwindow_remember_search": "Remember search settings in the search window",
-        "pop_item_id": "Show the item id",
-        "pop_display_event": "Show event icon related to this item",
-        "pop_owned_counts": "Show number of items you own",
-        "pop_job_table": "Show name of job where you can find this product",
-        "pop_crafting_recipe": "Show required resources for this product",
-        "pop_recipe_table": "Show name of recipe",
-        "pop_partial_bonus": "Show the partial bonus for set (based on the number of items you wear)",
-        "pop_short_currency": "Make currencies shorter",
-        "pop_market_price": "Show average market price",
-        "pop_ups_price": "Show UPS price",
-        "pop_min_market_price": "Show minimal sell price on the market (if item is not sellable)",
-        "pop_avg_dmg": "Show average damage of every weapon",
-        "pop_bonus_calc": "Calculate the value of refilled energy or hp of useable products",
-        "pop_trader": "Show trader and trader level for tradeable items",
+        "pop_item_id": "Zeige Item-ID",
+        "pop_display_event": "Zeige Event-Icon",
+        "pop_owned_counts": "Zeige Anzahl Items in Besitz",
+        "pop_job_table": "Zeige Arbeit, bei welcher das Produkt droppt",
+        "pop_crafting_recipe": "Zeige Handwerks-Zutaten",
+        "pop_recipe_table": "Zeige Rezeptname",
+        "pop_partial_bonus": "Zeige den Teilbonus des Sets (getragene Gegenstände)",
+        "pop_short_currency": "Währungen abkürzen",
+        "pop_market_price": "Zeige Marktpreis",
+        "pop_ups_price": "Zeige Shop-Preis",
+        "pop_min_market_price": "Zeige Mindestpreis",
+        "pop_avg_dmg": "Zeige Durchschnittsschaden",
+        "pop_bonus_calc": "Berechne den Effekt von EP-/LP-Buffs",
+        "pop_trader": "Zeige Ladenstufe der kaufbaren Items",
         "mw_item_price_tooltip": "Show the market price tooltip for items",
         "mw_product_price_tooltip": "Show the market price tooltip for products",
         "mw_bbcode_tooltip": "Show market price in the item BB-code",
@@ -232,19 +244,19 @@
         "mw_clear_time": "Automatically delete scan data older than",
         "mw_collections": "Watch items needed for collections",
         "mw_trader": "Get notified when a trader is selling watched item",
-        "pop_set_id": "Show the set ID (key)",
-        "fb_count": "Show number of current fort battles"
+        "pop_set_id": "Zeige Set-ID",
+        "fb_count": "Zeige Anzahl aktiver Fortkämpfe",
+        "ml_show": "Additional buttons in left UI",
+        "chat_smart": "Smarter chat (URL recognition)"
     },
     "keyWords": {
         "xmas": [
-            "Christmas",
-            "Holiday Sale"
+            "Weihnachten"
         ],
         "valentine": "Valentinstag",
         "independence": "Unabhängigkeitstag",
         "dotd": [
-            "Day of the Dead",
-            "Dia de los Muertos"
+            "Tag der Toten"
         ],
         "easter": "Ostern",
         "oktoberfest": "Oktoberfest"
@@ -257,7 +269,10 @@
         "nearest_five": "Nächstes 5-Sterne-Hotel",
         "sleep": "DirectSleep",
         "premium_bids": "Alle Gebote abholen",
-        "premium_offers": "Alle Verkäufe abholen"
+        "premium_offers": "Alle Verkäufe abholen",
+        "map_show": "Center position",
+        "window_open": "Open window",
+        "walk": "Go there"
     },
     "ranking": {
         "add_name": "Ranglisten-Leiste",
@@ -306,9 +321,18 @@
         "error_npc": "Kein Questgeber gefunden",
         "error_market": "Keine beendeten Auktionen gefunden",
         "travel_fort": "Zum Fort reisen",
-        "never": "Never",
-        "any": "Any",
-        "none": "None",
-        "set_auctionable": "There is not auctionable item in this set"
+        "never": "Nie",
+        "any": "Alle",
+        "none": "Keine",
+        "set_auctionable": "There is not auctionable item in this set",
+        "enemy": "Enemy players",
+        "update_data": "Update",
+        "update_wait": "Hold on, this could take a while",
+        "loading": "Loading",
+        "updated_data": "Updated",
+        "success_load": "Successful",
+        "fb_att": "Attackers",
+        "fb_def": "Defenders",
+        "joined": "Joined"
     }
 }
