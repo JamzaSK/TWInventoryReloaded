@@ -169,7 +169,7 @@
         "shiftinfo": "Premi [Shift] per mostrare altre informazioni",
         "average": "Media",
         "total_market_price": "Prezzo totale al mercato",
-        "total": "Total"
+        "total": "Totale"
     },
     "market_watcher": {
         "add_name": "Osservatore del mercato",
@@ -247,7 +247,7 @@
         "pop_set_id": "Mostra l'ID del set (chiave)",
         "fb_count": "Mostra il numero delle battaglie ai forti disponibili",
         "ml_show": "Pulsanti aggiuntivi nell'interfaccia a sinistra",
-        "chat_smart": "Smarter chat (URL recognition)"
+        "chat_smart": "Chat più funzionale (riconoscimento link)"
     },
     "keyWords": {
         "xmas": [
