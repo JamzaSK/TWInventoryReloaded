@@ -62,7 +62,8 @@
         "search": "Recherche",
         "subcat": "Sous-catégorie",
         "property": "Propriété",
-        "item_type": "Type"
+        "item_type": "Type",
+        "combined": "combined"
     },
     "tooltips": {
         "jobdrop": "Peut être trouvé en travaillant",
@@ -83,7 +84,8 @@
         "last_seen": "Vu pour la dernière fois",
         "average": "En moyenne",
         "average_since": "En moyenne $1 jours",
-        "each": "l'unité"
+        "each": "l'unité",
+        "quests": "quests"
     },
     "organizing": {
         "invert_text": "Afficher/masquer différents items selon le filtre sélectionné",
@@ -119,7 +121,16 @@
         "sort_setname": "Nom du set",
         "sort_marketprice": "Prix (marché)",
         "value": "Valeur",
-        "sort_ups": "Prix (Shop)"
+        "sort_ups": "Prix (Shop)",
+        "msg": "Send message",
+        "msg_fb_ali": "Allied team",
+        "msg_fb_enemy": "Enemy team",
+        "msg_fb_all": "All players",
+        "msg_town_mem": "Town members",
+        "msg_town_lead": "Town leaders",
+        "msg_ali_mem": "Alliance members",
+        "msg_ali_lead": "Alliance leaders",
+        "msg_world": "Whole world"
     },
     "stats": {
         "stats": "Statistiques",
@@ -157,7 +168,8 @@
         "set_menu_error": "Ouvrez d'abord la liste des sets pour calculer",
         "shiftinfo": "Appuyez sur [Shift] pour afficher plus d'informations",
         "average": "Moyenne",
-        "total_market_price": "Valeur au marché"
+        "total_market_price": "Valeur au marché",
+        "total": "Total"
     },
     "market_watcher": {
         "add_name": "Market Watcher",
@@ -233,7 +245,9 @@
         "mw_collections": "Watch items needed for collections",
         "mw_trader": "Get notified when a trader is selling watched item",
         "pop_set_id": "Show the set ID (key)",
-        "fb_count": "Show number of current fort battles"
+        "fb_count": "Show number of active fort battles",
+        "ml_show": "Additional buttons in left UI",
+        "chat_smart": "Smarter chat (URL recognition)"
     },
     "keyWords": {
         "xmas": [
@@ -257,7 +271,10 @@
         "nearest_five": "Hôtel 5 étoiles le plus proche",
         "sleep": "Trouver un lit",
         "premium_bids": "Récupérer tous les achats",
-        "premium_offers": "Récupérer toutes les ventes"
+        "premium_offers": "Récupérer toutes les ventes",
+        "map_show": "Center position",
+        "window_open": "Open window",
+        "walk": "Go there"
     },
     "ranking": {
         "add_name": "Barre de classement",
@@ -309,6 +326,15 @@
         "never": "Jamais",
         "any": "Tout",
         "none": "Aucun",
-        "set_auctionable": "There is not auctionable item in this set"
+        "set_auctionable": "There is not auctionable item in this set",
+        "enemy": "Enemy players",
+        "update_data": "Update",
+        "update_wait": "Hold on, this could take a while",
+        "loading": "Loading",
+        "updated_data": "Updated",
+        "success_load": "Successful",
+        "fb_att": "Attackers",
+        "fb_def": "Defenders",
+        "joined": "Joined"
     }
 }
