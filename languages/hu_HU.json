@@ -168,7 +168,8 @@
         "set_menu_error": "Először nyisd meg a szettek listáját a számításhoz",
         "shiftinfo": "Nyomd meg a [Shift] gombot a további információhoz",
         "average": "Átlagos",
-        "total_market_price": "Teljes piaci ár"
+        "total_market_price": "Teljes piaci ár",
+        "total": "Total"
     },
     "market_watcher": {
         "add_name": "Piacfigyelő",
@@ -245,7 +246,8 @@
         "mw_trader": "Értesítsen ha a kereskedő árulja a kívánt terméket",
         "pop_set_id": "Mutasd a szett ID-t",
         "fb_count": "Mutassa az aktív erődharcok számát",
-        "ml_show": "További gombok a bal oldali felhasználói felületen"
+        "ml_show": "További gombok a bal oldali felhasználói felületen",
+        "chat_smart": "Smarter chat (URL recognition)"
     },
     "keyWords": {
         "xmas": [
@@ -330,6 +332,7 @@
         "updated_data": "Frissítve",
         "success_load": "Sikeres volt",
         "fb_att": "Támadók",
-        "fb_def": "Védők"
+        "fb_def": "Védők",
+        "joined": "Joined"
     }
 }
