@@ -62,7 +62,8 @@
         "search": "Ricerca avanzata",
         "subcat": "Sottocategoria",
         "property": "Proprietà oggetto",
-        "item_type": "Tipologia"
+        "item_type": "Tipologia",
+        "combined": "Combinato"
     },
     "tooltips": {
         "jobdrop": "Trovabile lavorando",
@@ -79,11 +80,12 @@
         "listings": "aste",
         "items": "oggetti",
         "items_short": "pezzi",
-        "seen": "Seen $1 volte",
+        "seen": "Visto $1 volte",
         "last_seen": "Visto l'ultima volta",
         "average": "Media",
         "average_since": "Media $1 giorni",
-        "each": "ciascuno"
+        "each": "ciascuno",
+        "quests": "missioni"
     },
     "organizing": {
         "invert_text": "Mostra/Nascondi oggetti diversi basati sul filtro selezionato",
@@ -119,7 +121,16 @@
         "sort_setname": "Nome set",
         "sort_marketprice": "Prezzo (al mercato)",
         "value": "Valore",
-        "sort_ups": "Valore (Bond)"
+        "sort_ups": "Valore (Bond)",
+        "msg": "Invia messaggio",
+        "msg_fb_ali": "Squadra alleata",
+        "msg_fb_enemy": "Squadra nemica",
+        "msg_fb_all": "Tutti i giocatori",
+        "msg_town_mem": "Membri città",
+        "msg_town_lead": "Capi città",
+        "msg_ali_mem": "Alleati",
+        "msg_ali_lead": "Capi alleanza",
+        "msg_world": "Mondo intero"
     },
     "stats": {
         "stats": "Statistiche",
@@ -157,7 +168,8 @@
         "set_menu_error": "E' necessario prima aprire la lista dei set",
         "shiftinfo": "Premi [Shift] per mostrare altre informazioni",
         "average": "Media",
-        "total_market_price": "Prezzo totale al mercato"
+        "total_market_price": "Prezzo totale al mercato",
+        "total": "Total"
     },
     "market_watcher": {
         "add_name": "Osservatore del mercato",
@@ -168,7 +180,7 @@
         "time_left": "tempo rimanente",
         "price": "prezzo",
         "max_price": "Prezzo massimo",
-        "item_id": "Item/set ID",
+        "item_id": "Oggetto/Set ID",
         "bid": "Offri",
         "max_hv": "percentuale del valore di mercato",
         "desc": "L'osservatore del mercato scansiona il mercato per gli oggetti specificati e ne traccia il loro valore",
@@ -178,12 +190,12 @@
         "nothing": "Niente",
         "bid_now": "Mostra nel mercato",
         "underpriced_found": "cerca oggetti sottocosto che potresti voler comprare",
-        "watched": "Watched items",
-        "collections": "Collections",
-        "last_scan": "Last scan",
-        "buy_trader": "Show a trader",
-        "import": "Import items",
-        "export": "Export items"
+        "watched": "Oggetti osservati",
+        "collections": "Collezioni",
+        "last_scan": "Ultima Scansione",
+        "buy_trader": "Mostra un venditore",
+        "import": "Importa oggetti",
+        "export": "Esporta oggetti"
     },
     "features": {
         "preferences": "Preferenze",
@@ -229,11 +241,13 @@
         "fb_online_status": "Mostra lo stato online dei giocatori nei popup della mappa di battaglia",
         "fb_ranks": "Mostra il rango dei giocatori nei popup della mappa di battaglia",
         "fb_ali_name": "Mostra il nome dell'alleanza nel profilo città",
-        "mw_clear_time": "Automatically delete scan data older than",
-        "mw_collections": "Watch items needed for collections",
-        "mw_trader": "Get notified when a trader is selling watched item",
-        "pop_set_id": "Show the set ID (key)",
-        "fb_count": "Show number of current fort battles"
+        "mw_clear_time": "Elimina automaticamente i dati delle scansioni più vecchie di",
+        "mw_collections": "Osserva gli oggetti utili per le collezioni (successi)",
+        "mw_trader": "Notifica quando un venditore sta vendendo un oggetto osservato",
+        "pop_set_id": "Mostra l'ID del set (chiave)",
+        "fb_count": "Mostra il numero delle battaglie ai forti disponibili",
+        "ml_show": "Pulsanti aggiuntivi nell'interfaccia a sinistra",
+        "chat_smart": "Smarter chat (URL recognition)"
     },
     "keyWords": {
         "xmas": [
@@ -261,7 +275,10 @@
         "nearest_five": "Albergo 5° livello più vicino",
         "sleep": "Trova un letto",
         "premium_bids": "Ritira tutti gli oggetti",
-        "premium_offers": "Ritira tutte le offerte"
+        "premium_offers": "Ritira tutte le offerte",
+        "map_show": "Centra la posizione",
+        "window_open": "Apri finestra",
+        "walk": "Spostati a"
     },
     "ranking": {
         "add_name": "Barra classifiche",
@@ -293,7 +310,7 @@
         "storage_error": "Salvataggio in locale non consentito",
         "no_sets": "Non possiedi set oggetti",
         "years": "$1 anni fa",
-        "year": "year",
+        "year": "anno",
         "months": "$1 mesi fa",
         "days": "$1 giorni fa",
         "hours": "$1 ore fa",
@@ -313,6 +330,15 @@
         "never": "Mai",
         "any": "Tutti",
         "none": "Niente",
-        "set_auctionable": "Non ci sono oggetti vendibili all'asta in questo set"
+        "set_auctionable": "Non ci sono oggetti vendibili all'asta in questo set",
+        "enemy": "Giocatori nemici",
+        "update_data": "Aggiorna",
+        "update_wait": "Attendi, questo potrebbe richiedere del tempo",
+        "loading": "Caricamento",
+        "updated_data": "Aggiornato",
+        "success_load": "Successo",
+        "fb_att": "Attaccanti",
+        "fb_def": "Difensori",
+        "joined": "Unito"
     }
 }
