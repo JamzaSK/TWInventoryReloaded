@@ -3264,9 +3264,9 @@
 
                 function r(e) {
                     if (e.length > a) {
-                        var r = 7.5 * (a = e.length) + 140,
-                            i = TWIRlang.menulink.premium_bids.length + TWIRlang.menulink.premium_offers.length + 60,
-                            n = 2 * r < i ? i / 2 : r;
+                        var r = 7.5 * (a = e.length) + 160,
+                            i = TWIRlang.menulink.premium_bids.length + TWIRlang.menulink.premium_offers.length + 80,
+                            n = 2 * r < i ? i : r;
                         t.setWidth(n <= 275 ? n : 275)
                     }
                 }
