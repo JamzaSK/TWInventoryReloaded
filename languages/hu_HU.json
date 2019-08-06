@@ -89,15 +89,15 @@
     },
     "organizing": {
         "invert_text": "Különböző tárgyak megjelenítése / elrejtése a kiválasztott szűrő alapján",
-        "invert": "Ellenkező",
+        "invert": "Fordított",
         "none": "Egyik sem",
         "all_items": "Mutasd mind",
         "save_permanent": "Emlékezz",
-        "bonus": "Bónusz statisztika",
+        "bonus": "Bónuszok",
         "bonus_search": "Bónusz keresés",
         "show": "Mutasd",
         "upgradeable": "Fejleszthető",
-        "sellable": "Eladható",
+        "sellable": "Árverezhető",
         "auctionable": "Árverezhető",
         "tradeable": "Eladható",
         "droppable": "Található",
@@ -169,7 +169,7 @@
         "shiftinfo": "Nyomd meg a [Shift] gombot a további információhoz",
         "average": "Átlagos",
         "total_market_price": "Teljes piaci ár",
-        "total": "Total"
+        "total": "Összes"
     },
     "market_watcher": {
         "add_name": "Piacfigyelő",
@@ -198,10 +198,10 @@
         "export": "Tárgyak exportálása"
     },
     "features": {
-        "preferences": "Támogatás",
+        "preferences": "Beállítások",
         "inventory_menus": "Felszerelés / Menük",
         "popup_tooltips": "Tooltip-ek",
-        "other": "Egyéb támogatások"
+        "other": "Egyéb lehetőségek"
     },
     "feat_strings": {
         "inv_window_title": "Mutasd a kategóriát az ablak címsorában",
@@ -247,13 +247,13 @@
         "pop_set_id": "Mutasd a szett ID-t",
         "fb_count": "Mutassa az aktív erődharcok számát",
         "ml_show": "További gombok a bal oldali felhasználói felületen",
-        "chat_smart": "Smarter chat (URL recognition)"
+        "chat_smart": "Okosabb chat (URL felismerés)"
     },
     "keyWords": {
         "xmas": [
             "Karácsonyi Vásár"
         ],
-        "valentine": "Valentín",
+        "valentine": "Valentin",
         "independence": "Függetlenség napja",
         "dotd": [
             "Halottak Napja"
@@ -333,6 +333,6 @@
         "success_load": "Sikeres volt",
         "fb_att": "Támadók",
         "fb_def": "Védők",
-        "joined": "Joined"
+        "joined": "Csatlakozott"
     }
 }
