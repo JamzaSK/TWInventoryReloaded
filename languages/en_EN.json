@@ -246,7 +246,8 @@
         "mw_trader": "Get notified when a trader is selling watched item",
         "pop_set_id": "Show the set ID (key)",
         "fb_count": "Show number of active fort battles",
-        "ml_show": "Additional buttons in left UI"
+        "ml_show": "Additional buttons in left UI",
+        "chat_smart": "Smarter chat (URL recognition)"
     },
     "keyWords": {
         "xmas": [
