@@ -169,7 +169,7 @@
         "shiftinfo": "Naciśnij [Shift] by pokazać więcej",
         "average": "Średni",
         "total_market_price": "Łączna cena rynkowa",
-        "total": "Total"
+        "total": "Razem"
     },
     "market_watcher": {
         "add_name": "Obserwator rynku",
@@ -247,7 +247,7 @@
         "pop_set_id": "Pokaż ID zestawu",
         "fb_count": "Pokaż liczbę aktywnych bitew o fort\n",
         "ml_show": "Dodatkowe przyciski po lewo interfejsu",
-        "chat_smart": "Smarter chat (URL recognition)"
+        "chat_smart": "Mądrzejszy czat (rozpoznawanie linków)"
     },
     "keyWords": {
         "xmas": [
@@ -338,8 +338,8 @@
         "loading": "Ładowanie",
         "updated_data": "Aktualne",
         "success_load": "Ładowanie pomyślne",
-        "fb_att": "Attackers",
-        "fb_def": "Defenders",
-        "joined": "Joined"
+        "fb_att": "Atakujący",
+        "fb_def": "Obrońcy",
+        "joined": "Dołączono"
     }
 }
