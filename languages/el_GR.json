@@ -62,7 +62,8 @@
         "search": "Προχωρημένη Αναζήτηση",
         "subcat": "Υποκατηγορία",
         "property": "Ιδιότητα Αντικειμένου",
-        "item_type": "Τύπος"
+        "item_type": "Τύπος",
+        "combined": "combined"
     },
     "tooltips": {
         "jobdrop": "Από την εργασία",
@@ -83,7 +84,8 @@
         "last_seen": "Τελευταία εμφάνιση",
         "average": "Μέσος όρος",
         "average_since": "Μέσος όρος σε $1 μέρα/ες",
-        "each": "για κάθε"
+        "each": "για κάθε",
+        "quests": "quests"
     },
     "organizing": {
         "invert_text": "Εμφάνιση/Απόκρυψη διαφορετικών αντικειμένων βάση ενός επιλεγμένου φίλτρου",
@@ -119,7 +121,16 @@
         "sort_setname": "Όνομα Σετ",
         "sort_marketprice": "Τιμή (καταστήματα)",
         "value": "Τιμή",
-        "sort_ups": "Τιμή (ομόλογα)"
+        "sort_ups": "Τιμή (ομόλογα)",
+        "msg": "Send message",
+        "msg_fb_ali": "Allied team",
+        "msg_fb_enemy": "Enemy team",
+        "msg_fb_all": "All players",
+        "msg_town_mem": "Town members",
+        "msg_town_lead": "Town leaders",
+        "msg_ali_mem": "Alliance members",
+        "msg_ali_lead": "Alliance leaders",
+        "msg_world": "Whole world"
     },
     "stats": {
         "stats": "Στατιστικά",
@@ -157,7 +168,8 @@
         "set_menu_error": "Ανοίξτε πρώτα την λίστα με τα Σετ Αντικειμένων",
         "shiftinfo": "Πατήστε [Shift] για να δείτε περισσότερες πληροφορίες",
         "average": "Μέσος όρος",
-        "total_market_price": "Συνολική τιμή στην αγορά"
+        "total_market_price": "Συνολική τιμή στην αγορά",
+        "total": "Total"
     },
     "market_watcher": {
         "add_name": "Παρακολούθηση αγοράς",
@@ -233,7 +245,9 @@
         "mw_collections": "Παρακολουθήστε αντικείμενα που χρειάζονται για συλλογές",
         "mw_trader": "Λάβετε ειδοποίηση όταν ένας έμπορος πωλεί αντικείμενο παρακολούθησης",
         "pop_set_id": "Show the set ID (key)",
-        "fb_count": "Show number of current fort battles"
+        "fb_count": "Show number of active fort battles",
+        "ml_show": "Additional buttons in left UI",
+        "chat_smart": "Smarter chat (URL recognition)"
     },
     "keyWords": {
         "xmas": [
@@ -257,7 +271,10 @@
         "nearest_five": "Κοντινότερο Διαμέρισμα πολυτελείας",
         "sleep": "Ύπνος",
         "premium_bids": "Συλλέξτε όλες τις αγορές σας",
-        "premium_offers": "Συλλέξτε όλες τις προσφορές σας"
+        "premium_offers": "Συλλέξτε όλες τις προσφορές σας",
+        "map_show": "Center position",
+        "window_open": "Open window",
+        "walk": "Go there"
     },
     "ranking": {
         "add_name": "Μπάρα κατάταξης",
@@ -309,6 +326,15 @@
         "never": "Ποτέ",
         "any": "Οτιδήποτε",
         "none": "Κανένα",
-        "set_auctionable": "Δεν υπάρχει αντικείμενο με δυνατότητα δημοπρασίας σε αυτό το Σετ"
+        "set_auctionable": "Δεν υπάρχει αντικείμενο με δυνατότητα δημοπρασίας σε αυτό το Σετ",
+        "enemy": "Enemy players",
+        "update_data": "Update",
+        "update_wait": "Hold on, this could take a while",
+        "loading": "Loading",
+        "updated_data": "Updated",
+        "success_load": "Successful",
+        "fb_att": "Attackers",
+        "fb_def": "Defenders",
+        "joined": "Joined"
     }
 }
