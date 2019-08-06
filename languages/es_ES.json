@@ -13,8 +13,8 @@
     "update_message": "¡El script ha sido actualizado! Por favor, descargue la última versión.",
     "donate_title": "Apoyando el desarrollo",
     "donate_text": "Si desea ayudar al desarrollo, o simplemente mostrar su aprecio, utilice una de las siguientes formas:",
-    "donate_paypal": "Invítanos a un Café",
-    "donate_ingame": "Danos un Regalo",
+    "donate_paypal": "Invítarnos a un Café",
+    "donate_ingame": "Hacernos un Regalo",
     "tyty": "Gracias",
     "inventory": {
         "adventures": "Aventuras",
@@ -62,7 +62,8 @@
         "search": "Búsqueda Avanzada",
         "subcat": "Subcategoría",
         "property": "Artículo poseído",
-        "item_type": "Tipo"
+        "item_type": "Tipo",
+        "combined": "Combinado"
     },
     "tooltips": {
         "jobdrop": "Obtenibles desde trabajos",
@@ -71,7 +72,7 @@
         "craftable": "Puede ser elaborado",
         "missing_items": "Objetos perdidos",
         "owned_items_bonus": "Bonus (objetos propios)",
-        "partial_items_bonus": "Set Bonus",
+        "partial_items_bonus": "Bonus conjunto",
         "market_price": "Precio Mercado",
         "suggested_price": "Precio sugerido",
         "minimal_price": "Mín",
@@ -83,13 +84,14 @@
         "last_seen": "Visto por última vez",
         "average": "Promedio",
         "average_since": "Promedio $1 días",
-        "each": "cada"
+        "each": "cada",
+        "quests": "quests"
     },
     "organizing": {
         "invert_text": "Mostrar / Ocultar diferentes elementos basados en un filtro seleccionado",
         "invert": "Invertir",
         "none": "Ninguno",
-        "all_items": "mostrar todos",
+        "all_items": "Mostrar todos",
         "save_permanent": "Recuerda",
         "bonus": "Bonus",
         "bonus_search": "Buscar Bonus",
@@ -110,7 +112,7 @@
         "sort_ab": "Alfabética",
         "sort_buyprice": "Precio Compras",
         "sort_sellprice": "Precio Venta",
-        "sort_id": "ID Objeto",
+        "sort_id": "ID Artículo",
         "sort_reqlvl": "Nivel requerido",
         "sort_upglvl": "Actualizar nivel",
         "sort_mindamage": "Daño Mín.",
@@ -119,7 +121,16 @@
         "sort_setname": "Nombre de Conjunto",
         "sort_marketprice": "Precio (mercado)",
         "value": "Valor",
-        "sort_ups": "Precio (UPS)"
+        "sort_ups": "Precio (UPS)",
+        "msg": "Enviar mensaje",
+        "msg_fb_ali": "Equipo aliado",
+        "msg_fb_enemy": "Equipo enemigo",
+        "msg_fb_all": "Todos jugadores",
+        "msg_town_mem": "Miembros ciudad",
+        "msg_town_lead": "Líderes ciudad",
+        "msg_ali_mem": "Miembros alianza",
+        "msg_ali_lead": "Líderes alianza",
+        "msg_world": "Todo el mundo"
     },
     "stats": {
         "stats": "Estadísticas",
@@ -148,7 +159,7 @@
         "most_expensive": "Más caro",
         "most_pieces": "Más piezas",
         "item_set": "Artículos de conjuntos",
-        "set_items": "Set items",
+        "set_items": "Fijar artículos",
         "owned_sets": "Conjuntos propios",
         "completed_sets": "Conjuntos completos",
         "count_text": "La cantidad de artículos en el inventario",
@@ -157,33 +168,34 @@
         "set_menu_error": "Abrir lista de elementos de conjuntos primero para calcular",
         "shiftinfo": "Presionar [Tecla-Shift] para mostrar más información",
         "average": "Promedio",
-        "total_market_price": "Total precio mercado"
+        "total_market_price": "Total precio mercado",
+        "total": "Total"
     },
     "market_watcher": {
         "add_name": "Observador de Mercado",
         "seen": "algunos de los artículos observados han sido vistos",
-        "seen_more": "y $1 artículos vistos ",
-        "add_item": "añadir artículo",
+        "seen_more": "y $1 artículos vigilados",
+        "add_item": "vigilar",
         "offer_count": "y $1 anuncios",
         "time_left": "tiempo restante",
         "price": "precio",
         "max_price": "Máx. precio",
-        "item_id": "Item/set ID",
+        "item_id": "Art./conj. ID",
         "bid": "oferta",
         "max_hv": "porcentaje del valor mercado",
         "desc": "Observador de Mercado escanea el mercado en busca de sus artículos específicos y rastrea los artículos y sus precios",
         "valuable": "Artículos de valor",
         "all_items": "Todos los artículos",
-        "watched_items": "Solo vistos",
+        "watched_items": "Solo vigilados",
         "nothing": "Nada",
-        "bid_now": "Mostrar en el mercado",
-        "underpriced_found": "artículo encontrado por debajo de precio que puede querer comprar",
-        "watched": "Watched items",
-        "collections": "Collections",
-        "last_scan": "Last scan",
-        "buy_trader": "Show a trader",
-        "import": "Import items",
-        "export": "Export items"
+        "bid_now": "Encontrar en el mercado",
+        "underpriced_found": "artículo encontrado por debajo del precio deseado para comprar",
+        "watched": "Artículos vigilados",
+        "collections": "Colecciones",
+        "last_scan": "Último escaneo",
+        "buy_trader": "Mostrar comerciante",
+        "import": "Importar artículos",
+        "export": "Exportar artículos"
     },
     "features": {
         "preferences": "Preferencias",
@@ -229,11 +241,13 @@
         "fb_online_status": "Mostrar el estado en línea del jugador en la ventana emergente del mapa de batalla del Fuerte",
         "fb_ranks": "Mostrar rango del jugador en la ventana emergente del mapa de batalla del fuerte",
         "fb_ali_name": "Mostrar nombre de la alianza en el perfil de la ciudad",
-        "mw_clear_time": "Automatically delete scan data older than",
-        "mw_collections": "Watch items needed for collections",
-        "mw_trader": "Get notified when a trader is selling watched item",
-        "pop_set_id": "Show the set ID (key)",
-        "fb_count": "Mostrar número batallas fuertes actvas"
+        "mw_clear_time": "Automáticamente borra escaneo de datos de más de",
+        "mw_collections": "Vigilar artículos necesarios para colecciones",
+        "mw_trader": "Recibir notificación cuando un comerciante venda un artículo seguido",
+        "pop_set_id": "Mostrar ID conjunto (clave)",
+        "fb_count": "Mostrar número batallas fuertes actvas",
+        "ml_show": "Additional buttons in left UI",
+        "chat_smart": "Smarter chat (URL recognition)"
     },
     "keyWords": {
         "xmas": [
@@ -257,7 +271,10 @@
         "nearest_five": "Hotel de 5 estrellas más cercano",
         "sleep": "Encontrar una cama",
         "premium_bids": "Recoger todas las pujas",
-        "premium_offers": "Recoger todas las ofertas"
+        "premium_offers": "Recoger todas las ofertas",
+        "map_show": "Center position",
+        "window_open": "Open window",
+        "walk": "Go there"
     },
     "ranking": {
         "add_name": "Barra rangos",
@@ -289,7 +306,7 @@
         "storage_error": "¡El almacenamiento local no está permitido!",
         "no_sets": "No posee ningún conjunto",
         "years": "hace $1 años",
-        "year": "year",
+        "year": "año",
         "months": "hace $1 meses",
         "days": "hace $1 días",
         "hours": "hace $1 horas",
@@ -297,8 +314,8 @@
         "seconds": "hace $1 segundos",
         "valid_id": "$1 no es un ID de artículo válido",
         "valid_auctionable": "Artículo $1 no es subastable",
-        "valid_defined": "Artículo $1 ya está vigilado",
-        "valid_max": "No puedes observar más de 50 artículos ",
+        "valid_defined": "Artículo/conjunto $1 ya está vigilado",
+        "valid_max": "No puedes vigilar más de 250 artículos ",
         "error_wait": "Por favor espere hasta que se complete la búsqueda",
         "error_other": "Ha ocurrido un error, por favor abra la consola para más detalles.",
         "distance": "Distancia",
@@ -309,6 +326,15 @@
         "never": "Nunca",
         "any": "Alguno",
         "none": "Ninguno",
-        "set_auctionable": "There is not auctionable item in this set"
+        "set_auctionable": "No hay artículos subastables en este conjunto",
+        "enemy": "Jugadores enemigos",
+        "update_data": "Update",
+        "update_wait": "Hold on, this could take a while",
+        "loading": "Loading",
+        "updated_data": "Updated",
+        "success_load": "Successful",
+        "fb_att": "Attackers",
+        "fb_def": "Defenders",
+        "joined": "Joined"
     }
 }
