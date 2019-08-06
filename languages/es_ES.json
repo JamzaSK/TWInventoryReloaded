@@ -85,7 +85,7 @@
         "average": "Promedio",
         "average_since": "Promedio $1 días",
         "each": "cada",
-        "quests": "quests"
+        "quests": "búsqeudas"
     },
     "organizing": {
         "invert_text": "Mostrar / Ocultar diferentes elementos basados en un filtro seleccionado",
@@ -246,8 +246,8 @@
         "mw_trader": "Recibir notificación cuando un comerciante venda un artículo seguido",
         "pop_set_id": "Mostrar ID conjunto (clave)",
         "fb_count": "Mostrar número batallas fuertes actvas",
-        "ml_show": "Additional buttons in left UI",
-        "chat_smart": "Smarter chat (URL recognition)"
+        "ml_show": "Botones adicionales izquierda de IU",
+        "chat_smart": "Chat más inteligente (reconocimiento de URL)"
     },
     "keyWords": {
         "xmas": [
@@ -272,9 +272,9 @@
         "sleep": "Encontrar una cama",
         "premium_bids": "Recoger todas las pujas",
         "premium_offers": "Recoger todas las ofertas",
-        "map_show": "Center position",
-        "window_open": "Open window",
-        "walk": "Go there"
+        "map_show": "Posición central",
+        "window_open": "Abrir ventana",
+        "walk": "Ir allí"
     },
     "ranking": {
         "add_name": "Barra rangos",
@@ -328,13 +328,13 @@
         "none": "Ninguno",
         "set_auctionable": "No hay artículos subastables en este conjunto",
         "enemy": "Jugadores enemigos",
-        "update_data": "Update",
-        "update_wait": "Hold on, this could take a while",
-        "loading": "Loading",
-        "updated_data": "Updated",
-        "success_load": "Successful",
-        "fb_att": "Attackers",
-        "fb_def": "Defenders",
-        "joined": "Joined"
+        "update_data": "Actualizar",
+        "update_wait": "Espera, ésto podría tomar un tiempo",
+        "loading": "Cargando",
+        "updated_data": "Actualizado",
+        "success_load": "Completado",
+        "fb_att": "Atacantes",
+        "fb_def": "Defensores",
+        "joined": "Ingresado"
     }
 }
