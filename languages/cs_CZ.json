@@ -62,7 +62,8 @@
         "search": "Rozšířené vyhledávaní",
         "subcat": "Podkategorie",
         "property": "Vlastnosti",
-        "item_type": "Typ"
+        "item_type": "Typ",
+        "combined": "Kombinované"
     },
     "tooltips": {
         "jobdrop": "Lze najít při práci",
@@ -83,7 +84,8 @@
         "last_seen": "Naposledy viděno",
         "average": "Průměr",
         "average_since": "Průměr za $1 dní",
-        "each": "kus"
+        "each": "kus",
+        "quests": "úkolů"
     },
     "organizing": {
         "invert_text": "Zobrazit / Skrýt předměty podle vybraného filtru",
@@ -119,7 +121,16 @@
         "sort_setname": "Jméno soupravy",
         "sort_marketprice": "Cena (tržní)",
         "value": "Hodnota",
-        "sort_ups": "Cena (UPS)"
+        "sort_ups": "Cena (UPS)",
+        "msg": "Poslat telegram",
+        "msg_fb_ali": "Spojenecký tým",
+        "msg_fb_enemy": "Nepřátelský tým",
+        "msg_fb_all": "Všichni hráči",
+        "msg_town_mem": "Členové města",
+        "msg_town_lead": "Vedení města",
+        "msg_ali_mem": "Členové aliance",
+        "msg_ali_lead": "Vedení aliance",
+        "msg_world": "Celý svět"
     },
     "stats": {
         "stats": "Statistiky",
@@ -157,7 +168,8 @@
         "set_menu_error": "Pro přesnou kalkulaci otevři seznam souprav",
         "shiftinfo": "Stlač [Shift] pro více informací",
         "average": "Průměr",
-        "total_market_price": "Celková tržní cena"
+        "total_market_price": "Celková tržní cena",
+        "total": "Spolu"
     },
     "market_watcher": {
         "add_name": "Sledovač trhu",
@@ -233,7 +245,9 @@
         "mw_collections": "Sledovat předměty potřebné do sbírky",
         "mw_trader": "Dostat upozornění když obchodník prodává sledovaný předmět",
         "pop_set_id": "Zobrazit ID každého setu (key)",
-        "fb_count": "Zobrazit počet aktivních bitev"
+        "fb_count": "Zobrazit počet aktivních bitev",
+        "ml_show": "Další tlačítka v levém uživatelském rozhraní",
+        "chat_smart": "Chytřejší chat (rozpoznávání URL)"
     },
     "keyWords": {
         "xmas": [
@@ -257,7 +271,10 @@
         "nearest_five": "Nejbližší 5 hv. hotel",
         "sleep": "Najít postel",
         "premium_bids": "Vyzvednout všechny nákupní nabídky",
-        "premium_offers": "Vyzvednout všechny prodejní nabídky"
+        "premium_offers": "Vyzvednout všechny prodejní nabídky",
+        "map_show": "Centrovat pozici",
+        "window_open": "Otevřít okno",
+        "walk": "Jít tam"
     },
     "ranking": {
         "add_name": "Rank panel",
@@ -309,6 +326,15 @@
         "never": "Nikdy",
         "any": "Jakýkoli",
         "none": "Žádný",
-        "set_auctionable": "V této sadě není žádný dražitelný předmět"
+        "set_auctionable": "V této sadě není žádný dražitelný předmět",
+        "enemy": "Nepřátelé",
+        "update_data": "Updatovat",
+        "update_wait": "Tohle chvíli potrvá",
+        "loading": "Načítaní",
+        "updated_data": "Updatováno",
+        "success_load": "Úspěšné",
+        "fb_att": "Útočníci",
+        "fb_def": "Obránci",
+        "joined": "Připojili se"
     }
 }
