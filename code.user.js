@@ -17,7 +17,7 @@
 // @description:hu Jobb felszerelés és eszközök a The West-hez!
 
 // @author Jamza (CZ14)
-// @version 2.161
+// @version 2.162
 // @license GPL-3.0
 
 // @include https://*.the-west.*/game.php*
@@ -63,11 +63,11 @@
 //
 //
 
-! function(e) {
-    var t = document.createElement("script");
-    t.setAttribute("type", "application/javascript"), t.textContent = "(" + function() {
+! function(fn) {
+    var script = document.createElement("script");
+    script.setAttribute("type", "application/javascript"), script.textContent = "(" + function() {
         TWIRlang = {}, TWIR = {
-            version: "2.161",
+            version: "2.162",
             name: "TW Inventory Reloaded",
             author: "Jamza",
             minGame: "2.04",
@@ -856,32 +856,14 @@
                     } return {}
             },
             addMsgToFb: function() {
-                FortBattleWindow.twir_updateRecruitlist = FortBattleWindow.twir_updateRecruitlist || FortBattleWindow.updateRecruitlist, FortBattleWindow.updateRecruitlist = function() {
-                    FortBattleWindow.twir_updateRecruitlist.apply(this, arguments);
+                var newfunction = String(FortBattleWindow.infoareaNavigation);
+                newfunction = newfunction.replace(/if\(nav\[match\[1\]\].func\)that\[nav\[match\[1\]\].func\]\(\);/, "$&if(nav[match[1]].func&&nav[match[1]].func==='updateRecruitlist')that.twir_updateRecruitlist_msg();"), eval("FortBattleWindow.infoareaNavigation = " + newfunction), FortBattleWindow.twir_updateRecruitlist_msg = function() {
                     try {
                         var e = this,
                             t = e.window.$("div.row_foot div.cell_6");
                         t.append('<div><img title="' + TWIRlang.organizing.msg + '" src="/images/window/friendslist/mail_icon.png?1" alt="" style="height: 18px;cursor: pointer;"/></div>').click(function() {
                             TWIR.otherEnhacements.getMessageMenu(arguments, e, "fort")
-                        });
-                        $(".fort_battle_recruitlist_count", e.infoareaEl);
-                        var a = e.preBattle.battleData.playerlist,
-                            r = [],
-                            i = TWIR.otherEnhacements.getRanks(e.preBattle.fortId);
-                        for (var n in i) {
-                            var o = $.grep(TWIR.storage.stats.global.forts, function(e) {
-                                return e.player_id === Number(n)
-                            })[0];
-                            r.push({
-                                playerId: Number(n),
-                                name: o.name
-                            })
-                        }
-                        r.filter(function(e) {
-                            if (e.name !== Character.name && !1 === a.some(function(t) {
-                                    return t.player_id === e.playerId
-                                })) return e.name
-                        }).length
+                        })
                     } catch (e) {}
                 }
             },
@@ -1032,7 +1014,8 @@
                 })
             }
         }, TWIR.betterBattleTopic = function() {
-            FortBattleWindow.twir_getInfoArea = FortBattleWindow.twir_getInfoArea || FortBattleWindow.getInfoArea, FortBattleWindow.getInfoArea = function() {
+            FortBattleWindow.twir_getInfoArea = FortBattleWindow.twir_getInfoArea || FortBattleWindow.__twdb__getInfoArea || FortBattleWindow.getInfoArea, FortBattleWindow.getInfoArea = function() {
+                this.preBattle.battleData.canSetPrivilege = !0;
                 var e = FortBattleWindow.twir_getInfoArea.apply(this, arguments);
                 if (TWIR.storage.get("fb_topic")) {
                     var t = Chat.Resource.Manager.getRooms();
@@ -1538,17 +1521,17 @@
                         if (JobList.dropsItem(this.item_obj.item_id) && TWIR.storage.get("pop_job_table")) {
                             var Q = JobList.getJobsByItemId(this.item_obj.item_id);
                             t += '<br><div style="color: #8b4513; text-align: center;margin-bottom: 2px;">' + TWIRlang.tooltips.jobdrop + ":</div>";
-                            for (var F = '<div class="twir_better_popup" style="text-align:center;margin: 0 auto;display: table;"><table style="display: table !important;border-collapse: separate !important;border-spacing: 1px !important;border-radius: 3px;border: 1px solid #804000;"><tbody>', Y = 0; Y < Q.length; Y++) {
+                            for (var Y = '<div class="twir_better_popup" style="text-align:center;margin: 0 auto;display: table;"><table style="display: table !important;border-collapse: separate !important;border-spacing: 1px !important;border-radius: 3px;border: 1px solid #804000;"><tbody>', F = 0; F < Q.length; F++) {
                                 var G = 0,
                                     J = 0;
-                                if ($.isEmptyObject(JobsModel.Beans) || null == JobsModel.Beans[Q[Y].id].basis.long.yields[0]) G = Math.ceil(600 * Q[Y].yields[this.item_obj.item_id].prop), J = 0;
-                                else if (!$.isEmptyObject(JobsModel.Beans) && void 0 !== JobsModel.Beans[Q[Y].id].basis.long.yields[0])
-                                    for (var O = 0; O < JobsModel.Beans[Q[Y].id].basis.long.yields.length; O++) JobsModel.Beans[Q[Y].id].basis.long.yields[O].itemid === this.item_obj.item_id && (G = JobsModel.Beans[Q[Y].id].basis.long.yields[O].prop, J = JobsModel.Beans[Q[Y].id].basis.long.yields[O].probBonus);
+                                if ($.isEmptyObject(JobsModel.Beans) || null == JobsModel.Beans[Q[F].id].basis.long.yields[0]) G = Math.ceil(600 * Q[F].yields[this.item_obj.item_id].prop), J = 0;
+                                else if (!$.isEmptyObject(JobsModel.Beans) && void 0 !== JobsModel.Beans[Q[F].id].basis.long.yields[0])
+                                    for (var O = 0; O < JobsModel.Beans[Q[F].id].basis.long.yields.length; O++) JobsModel.Beans[Q[F].id].basis.long.yields[O].itemid === this.item_obj.item_id && (G = JobsModel.Beans[Q[F].id].basis.long.yields[O].prop, J = JobsModel.Beans[Q[F].id].basis.long.yields[O].probBonus);
                                 var D = G + J,
                                     H = $.isEmptyObject(JobsModel.Beans) || 0 == D ? "" : "&nbsp;(" + D.toFixed(0) + "&nbsp;%)";
-                                Q[Y] && (F += '<tr><td style="vertical-align: middle!important;padding: 5px;border: 1px solid #996b39;border-color: rgba(110,57,0,0.5);background-color: #d4ba91 !important;background-image: none !important;color: #5e321a !important;font-size: 16px;border-collapse: separate !important;border-spacing: 1px !important;"><img style="width: 30px;height: 30px;" src="/images/jobs/' + Q[Y].shortname + '.png"/></td><td style="vertical-align: middle!important;padding: 5px;border: 1px solid #996b39;border-color: rgba(110,57,0,0.5);background-color: #d4ba91 !important;background-image: none !important;color: #5e321a !important;font-style: italic;font-size: 8pt;border-collapse: separate !important;border-spacing: 1px !important;width: 125px;"><span>' + Q[Y].name + H + "</span></td></tr>")
+                                Q[F] && (Y += '<tr><td style="vertical-align: middle!important;padding: 5px;border: 1px solid #996b39;border-color: rgba(110,57,0,0.5);background-color: #d4ba91 !important;background-image: none !important;color: #5e321a !important;font-size: 16px;border-collapse: separate !important;border-spacing: 1px !important;"><img style="width: 30px;height: 30px;" src="/images/jobs/' + Q[F].shortname + '.png"/></td><td style="vertical-align: middle!important;padding: 5px;border: 1px solid #996b39;border-color: rgba(110,57,0,0.5);background-color: #d4ba91 !important;background-image: none !important;color: #5e321a !important;font-style: italic;font-size: 8pt;border-collapse: separate !important;border-spacing: 1px !important;width: 125px;"><span>' + Q[F].name + H + "</span></td></tr>")
                             }
-                            t += F += "</tbody></table></div>"
+                            t += Y += "</tbody></table></div>"
                         }
                         if (null !== this.item_obj.set) var Z = west.storage.ItemSetManager.get(this.item_obj.set),
                             N = Z.getWornItems().length,
@@ -1763,8 +1746,8 @@
                     j = [],
                     q = [],
                     Q = [],
-                    F = [],
                     Y = [],
+                    F = [],
                     G = [],
                     J = [],
                     O = [],
@@ -1844,14 +1827,14 @@
                                         -1 === X.indexOf(pe.item_id) && X.push(pe.item_id);
                                         break;
                                     case TWIR.usebonus.same(f, ce):
-                                        -1 !== ne.indexOf(pe.item_id) && -1 !== F.indexOf(pe.item_id) || (ne.push(pe.item_id), F.push(pe.item_id));
+                                        -1 !== ne.indexOf(pe.item_id) && -1 !== Y.indexOf(pe.item_id) || (ne.push(pe.item_id), Y.push(pe.item_id));
                                         break;
                                     default:
                                         -1 === t.indexOf(pe.item_id) && t.push(pe.item_id)
                                 }
                                 if (TWIR.storage.popups.crafting[pe.item_id]) switch (!0) {
                                     case TWIR.usebonus.same(f, ce):
-                                        -1 === F.indexOf(pe.item_id) && F.push(pe.item_id);
+                                        -1 === Y.indexOf(pe.item_id) && Y.push(pe.item_id);
                                         break;
                                     case !TWIR.usebonus.same(f, ce):
                                         -1 === Q.indexOf(pe.item_id) && Q.push(pe.item_id)
@@ -1969,7 +1952,7 @@
                                     -1 === t.indexOf(pe.item_id) && t.push(pe.item_id)
                             }
                         }
-                    "recipe" === pe.type && -1 === Y.indexOf(pe.item_id) && Y.push(pe.item_id), null !== pe.set && -1 === TWIR.storage.setList.ownedSetItems.indexOf(le) && TWIR.storage.setList.ownedSetItems.push(le)
+                    "recipe" === pe.type && -1 === F.indexOf(pe.item_id) && F.push(pe.item_id), null !== pe.set && -1 === TWIR.storage.setList.ownedSetItems.indexOf(le) && TWIR.storage.setList.ownedSetItems.push(le)
                 }
                 var ge = TWIR.storage.inventory.buffs = {},
                     me = [],
@@ -2021,9 +2004,9 @@
                         tonic_peddler: E,
                         blacksmith: j,
                         master_saddler: q,
-                        craft_cards: F,
+                        craft_cards: Y,
                         crafted_items: Q,
-                        recipes: Y
+                        recipes: F
                     };
                 $.each(be, function(e, t) {
                     Re[e] = {
@@ -3069,8 +3052,8 @@
                 j = 0,
                 q = 0,
                 Q = 0,
-                F = 0,
                 Y = 0,
+                F = 0,
                 G = 0,
                 J = 0,
                 O = 0,
@@ -3095,7 +3078,7 @@
                         p += 1, A += e[z].count, q += 1, Q += e[z].count;
                         break;
                     case "head":
-                        p += 1, A += e[z].count, F += 1, Y += e[z].count;
+                        p += 1, A += e[z].count, Y += 1, F += e[z].count;
                         break;
                     case "neck":
                         p += 1, A += e[z].count, G += 1, J += e[z].count;
@@ -3159,8 +3142,8 @@
                 body_total_count: j,
                 foot_count: q,
                 foot_total_count: Q,
-                head_count: F,
-                head_total_count: Y,
+                head_count: Y,
+                head_total_count: F,
                 neck_count: G,
                 neck_total_count: J,
                 pants_count: O,
@@ -4747,15 +4730,15 @@
                                     var j = n.getDesc(C[E]).replace(/[0-9\%\+\.\,]/g, "").replace(/(\(|\)).*/g, "").trim(),
                                         q = n.getDesc(C[E]).replace(/[^0-9]/g, "").replace(/(\(|\)).*/g, "").trim(),
                                         Q = null !== r && j == r ? "blue" : "#666",
-                                        F = j.match(CharacterSkills.keyNames.health) && "soldier" === Character.charClass && Premium.hasBonus("character") ? 20 * q : j.match(CharacterSkills.keyNames.health) && "soldier" === Character.charClass ? 15 * q : j.match(CharacterSkills.keyNames.health) ? 10 * q : 0;
-                                    K += V.length > 0 && C[E] ? "<div style=&quot;color: " + Q + ";&quot;>" + n.getDesc(C[E]) + (0 != F ? "&nbsp;(" + F + "&nbsp;hp)" : "") + "</div>" : ""
+                                        Y = j.match(CharacterSkills.keyNames.health) && "soldier" === Character.charClass && Premium.hasBonus("character") ? 20 * q : j.match(CharacterSkills.keyNames.health) && "soldier" === Character.charClass ? 15 * q : j.match(CharacterSkills.keyNames.health) ? 10 * q : 0;
+                                    K += V.length > 0 && C[E] ? "<div style=&quot;color: " + Q + ";&quot;>" + n.getDesc(C[E]) + (0 != Y ? "&nbsp;(" + Y + "&nbsp;hp)" : "") + "</div>" : ""
                                 }
-                                var Y = TWIR.storage.setList.eventIcons[A.key] ? "inline-block" : "none",
+                                var F = TWIR.storage.setList.eventIcons[A.key] ? "inline-block" : "none",
                                     G = TWIR.storage.get("inv_setmenu_full_color") ? w : "#5e321a",
                                     J = TWIR.storage.get("inv_setmenu_full_color") ? b : "#8b4513",
                                     O = TWIR.storage.get("inv_setmenu_empty_opacity") ? T : 1,
                                     D = A.name.escapeHTML();
-                                l(A.name), i.addItem(A.items, '<span title="' + K + '" style="display: inline-block; height: 20px; width: 32px;vertical-align: top;position: relative;"><img style="left: 0px; right: unset;opacity: ' + O + ';display: inline-block;" src="' + u + '" height="20" width="auto"></img><img title="' + x + "&nbsp;" + y + '" style="display: ' + Y + ';right: 0px;bottom: 0px;" src="' + W + '" height="16" width="auto"></img></span><span style="margin-top: 2px;word-wrap: break-word;max-width: 230px;display: inline-block;margin-left: 5px; text-overflow:ellipsis; white-space:nowrap; overflow:hidden;opacity: ' + O + ";color: " + G + ';vertical-align: middle;" title="' + D + '">' + D + '</span><span title="' + M + '" style="display: inline-block;margin-top: 3px;color: ' + J + ";position: relative;font-size: 12px;font-style: italic;float: right;opacity: " + O + ';">' + k + "</span>")
+                                l(A.name), i.addItem(A.items, '<span title="' + K + '" style="display: inline-block; height: 20px; width: 32px;vertical-align: top;position: relative;"><img style="left: 0px; right: unset;opacity: ' + O + ';display: inline-block;" src="' + u + '" height="20" width="auto"></img><img title="' + x + "&nbsp;" + y + '" style="display: ' + F + ';right: 0px;bottom: 0px;" src="' + W + '" height="16" width="auto"></img></span><span style="margin-top: 2px;word-wrap: break-word;max-width: 230px;display: inline-block;margin-left: 5px; text-overflow:ellipsis; white-space:nowrap; overflow:hidden;opacity: ' + O + ";color: " + G + ';vertical-align: middle;" title="' + D + '">' + D + '</span><span title="' + M + '" style="display: inline-block;margin-top: 3px;color: ' + J + ";position: relative;font-size: 12px;font-style: italic;float: right;opacity: " + O + ';">' + k + "</span>")
                             }
                         }
                         i.addListener(function(e) {
@@ -4939,5 +4922,5 @@
                 TWIR.bugHunt(e)
             }
         }, setInterval(TWIR.Updater, Math.floor(-581999 * Math.random() + 6e5))
-    } + ")();", document.body.appendChild(t), document.body.removeChild(t)
+    } + ")();", document.body.appendChild(script), document.body.removeChild(script)
 }();
