@@ -335,6 +335,8 @@
         "success_load": "Completado",
         "fb_att": "Atacantes",
         "fb_def": "Defensores",
-        "joined": "Ingresado"
+        "joined": "Ingresado",
+        "missing_pos": "Not at the fort",
+        "missing_ali": "Not joined"
     }
 }
