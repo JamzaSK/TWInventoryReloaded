@@ -336,7 +336,7 @@
         "fb_att": "Útočníci",
         "fb_def": "Obranci",
         "joined": "Pridali sa",
-        "missing_pos": "Not at the fort",
-        "missing_ali": "Not joined"
+        "missing_pos": "Mimo pevnosti",
+        "missing_ali": "Nezúčastnení"
     }
 }
