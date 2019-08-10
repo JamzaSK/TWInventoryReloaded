@@ -335,6 +335,8 @@
         "success_load": "Successful",
         "fb_att": "Attackers",
         "fb_def": "Defenders",
-        "joined": "Joined"
+        "joined": "Joined",
+        "missing_pos": "Not at the fort",
+        "missing_ali": "Not joined"
     }
 }
