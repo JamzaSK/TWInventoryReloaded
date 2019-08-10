@@ -340,7 +340,7 @@
         "fb_att": "Attaccanti",
         "fb_def": "Difensori",
         "joined": "Unito",
-        "missing_pos": "Not at the fort",
-        "missing_ali": "Absent players"
+        "missing_pos": "Non al forte",
+        "missing_ali": "Giocatori assenti"
     }
 }
