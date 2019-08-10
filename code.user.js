@@ -410,7 +410,8 @@
         }, TWIR.getItemByName = function(e) {
             var t = ItemManager.getAll();
             for (var a in t)
-                if (t[a].name === e) return t[a]
+                if (t[a].name === e) return t[a].getId();
+            return 0
         }, TWIR.makeEmUp = function(e) {
             for (var t = [], a = 0; a < e.length; a++)
                 for (var r = 0; r <= Game.ui.itemUpgrade.max_level; r++) t.push(1e3 * e[a] + r);
@@ -1127,15 +1128,16 @@
                     var r = a.replace(/<a\b[^<]*class=['"]?bbcode itemlink["']?\b[^<]*?>([^<]*)<\/a>/g, "$1"),
                         i = r.replace(/[\[\]]/g, ""),
                         n = TWIR.getItemByName(i),
-                        o = TWIR.addPopup.getMarketPrice(n),
-                        s = ItemManager.get(n.item_id, !0),
-                        l = "<a href='javascript:void(0)' class='bbcode itemlink' data-item-id='" + n.item_id + "' title='" + new ItemPopup(s, {
+                        o = ItemManager.get(n, !0),
+                        s = TWIR.addPopup.getMarketPrice(o),
+                        o = ItemManager.get(n, !0),
+                        l = "<a href='javascript:void(0)' class='bbcode itemlink' data-item-id='" + n.item_id + "' title='" + new ItemPopup(o, {
                             character: {
                                 level: Character.level
                             }
-                        }).getXHTML().escapeHTML() + "'>[" + (s.getItemLevel() ? ' <span class="item_level' + (s.isUpgradeable() ? "" : " fake") + '">' + s.getItemLevel() + "</span>" : "") + s.name.escapeHTML() + "]</a>";
-                    if (o) {
-                        var p = '-<a style="color: #9a5b49 !important;" href="javascript:void(0)" title="' + o.escapeHTML() + '">[&#36;]</a>';
+                        }).getXHTML().escapeHTML() + "'>[" + (o.getItemLevel() ? ' <span class="item_level' + (o.isUpgradeable() ? "" : " fake") + '">' + o.getItemLevel() + "</span>" : "") + o.name.escapeHTML() + "]</a>";
+                    if (s) {
+                        var p = '-<a style="color: #9a5b49 !important;" href="javascript:void(0)" title="' + s.escapeHTML() + '">[&#36;]</a>';
                         t = t.replace(a, l + p)
                     } else t = t.replace(a, l)
                 }), t
