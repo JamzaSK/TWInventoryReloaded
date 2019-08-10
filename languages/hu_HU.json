@@ -334,7 +334,7 @@
         "fb_att": "Támadók",
         "fb_def": "Védők",
         "joined": "Csatlakozott",
-        "missing_pos": "Not at the fort",
-        "missing_ali": "Absent players"
+        "missing_pos": "Nincs az erődnél",
+        "missing_ali": "Hiányzó játékosok"
     }
 }
