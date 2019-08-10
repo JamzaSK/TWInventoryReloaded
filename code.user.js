@@ -17,7 +17,7 @@
 // @description:hu Jobb felszerelés és eszközök a The West-hez!
 
 // @author Jamza (CZ14)
-// @version 2.160
+// @version 2.161
 // @license GPL-3.0
 
 // @include https://*.the-west.*/game.php*
@@ -67,7 +67,7 @@
     var t = document.createElement("script");
     t.setAttribute("type", "application/javascript"), t.textContent = "(" + function() {
         TWIRlang = {}, TWIR = {
-            version: "2.160",
+            version: "2.161",
             name: "TW Inventory Reloaded",
             author: "Jamza",
             minGame: "2.04",
@@ -622,7 +622,7 @@
             } else setTimeout(TWIR.init, 100)
         }, TWIR.otherEnhacements = {
             init: function() {
-                TWIR.otherEnhacements.addAllToAddressbook(), TWIR.otherEnhacements.addAliToTownWindow(), TWIR.otherEnhacements.fixJobNumbers(), TWIR.otherEnhacements.addBattleCount(), TWIR.otherEnhacements.addBestClothes4Build(), TWIR.otherEnhacements.addCheatyThingsToFb(), TWIR.otherEnhacements.sendMsgAli()
+                TWIR.otherEnhacements.addAllToAddressbook(), TWIR.otherEnhacements.addAliToTownWindow(), TWIR.otherEnhacements.fixJobNumbers(), TWIR.otherEnhacements.addBattleCount(), TWIR.otherEnhacements.addBestClothes4Build(), TWIR.otherEnhacements.addMsgToFb(), TWIR.otherEnhacements.sendMsgAli(), TWIR.otherEnhacements.afterBattleMsg()
             },
             addBestClothes4Build: function() {
                 try {
@@ -681,23 +681,20 @@
             getMessageMenu: function(e, t, a) {
                 var r = (new west.gui.Selectbox).setWidth(200).setHeader(TWIRlang.organizing.msg);
                 if ("fort" === a) {
-                    $(".fort_battle_recruitlist_count", t.infoareaEl);
-                    r.addItem(1, TWIRlang.organizing.msg_fb_ali);
-                    var i = t.preBattle.battleData.playerlist,
-                        n = [],
-                        o = TWIR.otherEnhacements.getRanks(t.preBattle.fortId);
-                    for (var s in o) {
-                        var l = $.grep(TWIR.storage.stats.global.forts, function(e) {
-                            return e.player_id === Number(s)
-                        })[0];
-                        n.push({
-                            playerId: Number(s),
-                            name: l.name
-                        })
-                    }
-                    var p = !0 === t.preBattle.battleData.isDefender ? TWIRlang.informative.fb_att : TWIRlang.informative.fb_def;
-                    !1 === $.isEmptyObject(o) && r.addItem(2, p), !1 === $.isEmptyObject(o) && r.addItem(3, TWIRlang.organizing.msg_fb_all)
-                } else "town" === a ? (r.addItem(1, TWIRlang.organizing.msg_town_mem), r.addItem(2, TWIRlang.organizing.msg_town_lead)) : "ali" === a && (r.addItem(1, TWIRlang.organizing.msg_ali_mem), r.addItem(2, TWIRlang.organizing.msg_ali_lead));
+                    var i = t.preBattle.battleData.playerlist;
+                    r.addItem(1, TWIRlang.organizing.msg_fb_ali), r.addItem(2, TWIRlang.informative.missing_pos), 0 != Character.homeTown.alliance_id && r.addItem(3, TWIRlang.informative.missing_ali, TWIRlang.organizing.msg_ali_mem)
+                } else if ("town" === a) r.addItem(1, TWIRlang.organizing.msg_town_mem), r.addItem(2, TWIRlang.organizing.msg_town_lead);
+                else if ("ali" === a) r.addItem(1, TWIRlang.organizing.msg_ali_mem), r.addItem(2, TWIRlang.organizing.msg_ali_lead);
+                else if ("cemetery" === a) {
+                    var n = t.result.attackerlist,
+                        o = t.result.defenderlist,
+                        s = n.concat(o);
+                    n.some(function(e) {
+                        return e.westid === Character.playerId
+                    }) ? r.addItem(1, TWIRlang.organizing.msg_fb_ali) : r.addItem(1, TWIRlang.informative.fb_att), o.some(function(e) {
+                        return e.westid === Character.playerId
+                    }) ? r.addItem(2, TWIRlang.organizing.msg_fb_ali) : r.addItem(2, TWIRlang.informative.fb_def), r.addItem(3, TWIRlang.organizing.msg_fb_all)
+                }
                 r.addListener(function(e) {
                     if ("fort" === a) switch (e) {
                         case 1:
@@ -709,79 +706,110 @@
                             TWIR.otherEnhacements.sendMessage(r);
                             break;
                         case 2:
-                            var o = n.filter(function(e) {
-                                if (e.name !== Character.name && !1 === i.some(function(t) {
-                                        return t.player_id === e.playerId
-                                    })) return e.name
-                            }).map(function(e) {
-                                return e.name
-                            }).join(";");
-                            TWIR.otherEnhacements.sendMessage(o);
+                            var l = t.preBattle.battleData.fortCoords,
+                                p = i.filter(function(e) {
+                                    var t = l.x - e.coords.x,
+                                        a = l.y - e.coords.y;
+                                    if (e.name !== Character.name && t + a == 0) return e.name
+                                }).map(function(e) {
+                                    return e.name
+                                }).join(";");
+                            TWIR.otherEnhacements.sendMessage(p);
                             break;
                         case 3:
-                            var s = n.filter(function(e) {
-                                if (e.name !== Character.name) return e.name
-                            }).map(function(e) {
-                                return e.name
-                            }).join(";");
-                            TWIR.otherEnhacements.sendMessage(s)
+                            Ajax.remoteCallMode("alliance", "get_data", {
+                                alliance_id: Character.homeTown.alliance_id
+                            }, function(e) {
+                                var t = e.data.towns,
+                                    a = i.map(function(e) {
+                                        return e.player_id
+                                    }),
+                                    r = t.map(function(e) {
+                                        return e.town_id
+                                    });
+                                TWIR.otherEnhacements.getTownMem(r, 0, a)
+                            })
                     } else if ("town" === a) switch (e) {
                         case 1:
-                            var l = t.filter(function(e) {
+                            var A = t.filter(function(e) {
                                 if (e.name !== Character.name) return e.name
                             }).map(function(e) {
                                 return e.name
                             }).join(";");
-                            TWIR.otherEnhacements.sendMessage(l);
+                            TWIR.otherEnhacements.sendMessage(A);
                             break;
                         case 2:
-                            var l = t.filter(function(e) {
+                            var A = t.filter(function(e) {
                                 if (e.name !== Character.name && 1 !== e.town_rights) return e.name
                             }).map(function(e) {
                                 return e.name
                             }).join(";");
-                            TWIR.otherEnhacements.sendMessage(l)
+                            TWIR.otherEnhacements.sendMessage(A)
                     } else if ("ali" === a) {
-                        var p = t;
+                        var c = t;
                         switch (e) {
                             case 1:
-                                var A = p.map(function(e) {
+                                var g = c.map(function(e) {
                                     return e.town_id
                                 });
-                                TWIR.otherEnhacements.getTownMem(A, 0);
+                                TWIR.otherEnhacements.getTownMem(g, 0);
                                 break;
                             case 2:
-                                var c = p.filter(function(e) {
+                                var m = c.filter(function(e) {
                                     if (1 !== e.member_right) return e.town_id
                                 }).map(function(e) {
                                     return e.town_id
                                 });
-                                TWIR.otherEnhacements.getTownMem(c, 1)
+                                TWIR.otherEnhacements.getTownMem(m, 1)
                         }
+                    } else if ("cemetery" === a) switch (e) {
+                        case 1:
+                            var d = n.filter(function(e) {
+                                if (e.name !== Character.name) return e.name
+                            }).map(function(e) {
+                                return e.name
+                            }).join(";");
+                            TWIR.otherEnhacements.sendMessage(d);
+                            break;
+                        case 2:
+                            var u = o.filter(function(e) {
+                                if (e.name !== Character.name) return e.name
+                            }).map(function(e) {
+                                return e.name
+                            }).join(";");
+                            TWIR.otherEnhacements.sendMessage(u);
+                            break;
+                        case 3:
+                            var I = s.filter(function(e) {
+                                if (e.name !== Character.name) return e.name
+                            }).map(function(e) {
+                                return e.name
+                            }).join(";");
+                            TWIR.otherEnhacements.sendMessage(I)
                     }
                 }), r.show(e[0])
             },
-            getTownMem: function(e, t) {
+            getTownMem: function(e, t, a) {
                 if (!0 !== TWIR.otherEnhacements.checking && void 0 !== e && void 0 !== t) {
-                    TWIR.otherEnhacements.checking = !0;
-                    var a = 0,
-                        r = [];
-                    ! function i() {
+                    a || (a = []), TWIR.otherEnhacements.checking = !0;
+                    var r = 0,
+                        i = [];
+                    ! function n() {
                         Ajax.remoteCallMode("building_cityhall", "list_residents", {
-                            town_id: e[a]
-                        }, function(n) {
+                            town_id: e[r]
+                        }, function(o) {
                             new UserMessage(TWIRlang.informative.update_wait + "..", "hint").show();
-                            var o = n.list.data;
-                            if (o) {
-                                for (var s = 0; s < o.length; s++) o[s].name !== Character.name && o[s].town_rights > t && r.push(o[s].name);
-                                if (a < e.length - 1) {
-                                    var l = ++a > 20 ? Math.floor(501 * Math.random() + 500) : a > 30 ? Math.floor(501 * Math.random() + 1500) : 0;
+                            var s = o.list.data;
+                            if (s) {
+                                for (var l = 0; l < s.length; l++) s[l].name !== Character.name && s[l].town_rights > t && !a.includes(s[l].player_id) && i.push(s[l].name);
+                                if (r < e.length - 1) {
+                                    var p = ++r > 20 ? Math.floor(501 * Math.random() + 500) : r > 30 ? Math.floor(501 * Math.random() + 1500) : 0;
                                     setTimeout(function() {
-                                        i()
-                                    }, l)
+                                        n()
+                                    }, p)
                                 } else {
-                                    var p = r.join(";");
-                                    TWIR.otherEnhacements.sendMessage(p), TWIR.otherEnhacements.checking = !1
+                                    var A = i.join(";");
+                                    TWIR.otherEnhacements.sendMessage(A), TWIR.otherEnhacements.checking = !1
                                 }
                             }
                         })
@@ -806,7 +834,7 @@
                     }
                     if (this.ally_id !== Character.homeTown.alliance_id) {
                         var n = this.window.$("div.row_foot div.cell_2.bnd_town_points");
-                        n.append('<div><img title="' + TWIRlang.organizing.msg + '" src="/images/window/friendslist/mail_icon.png?1" alt="" style="height: 18px;cursor: pointer;"/></div>').click(function() {
+                        $("#twir_msg_ali", n).length || n.append('<div id="twir_msg_ali"><img title="' + TWIRlang.organizing.msg + '" src="/images/window/friendslist/mail_icon.png?1" alt="" style="height: 18px;cursor: pointer;"/></div>').click(function() {
                             TWIR.otherEnhacements.getMessageMenu(arguments, a, "ali")
                         })
                     }
@@ -826,7 +854,7 @@
                         return r
                     } return {}
             },
-            addCheatyThingsToFb: function() {
+            addMsgToFb: function() {
                 FortBattleWindow.twir_updateRecruitlist = FortBattleWindow.twir_updateRecruitlist || FortBattleWindow.updateRecruitlist, FortBattleWindow.updateRecruitlist = function() {
                     FortBattleWindow.twir_updateRecruitlist.apply(this, arguments);
                     try {
@@ -854,6 +882,15 @@
                                 })) return e.name
                         }).length
                     } catch (e) {}
+                }
+            },
+            afterBattleMsg: function() {
+                CemeteryWindow.twir_showStatUpdateTable = CemeteryWindow.twir_showStatUpdateTable || CemeteryWindow.showStatUpdateTable, CemeteryWindow.showStatUpdateTable = function(e) {
+                    CemeteryWindow.twir_showStatUpdateTable.apply(this, arguments);
+                    var t = $("div.footer", CemeteryWindow.DOM);
+                    t.append('<div style="position: absolute; right: 15px; bottom: 5px;"><img title="' + TWIRlang.organizing.msg + '" src="/images/window/friendslist/mail_icon.png?1" alt="" style="height: 18px;cursor: pointer;"/></div>').click(function() {
+                        TWIR.otherEnhacements.getMessageMenu(arguments, e, "cemetery")
+                    })
                 }
             },
             addAllToAddressbook: function() {
@@ -1464,13 +1501,13 @@
                                 t = t.replace(/(<div\s+class="inventory_popup_prices">[\S\s]*?)(<\/div>)/gi, '$1 <div class="twir_trader" style="color: #666;"> ' + Trader.name.general + "&nbsp;(Lvl&nbsp;" + this.item_obj.traderlevel + ")</div> $2")
                         }
                         if (!this.item_obj.sellable && this.item_obj.auctionable && TWIR.storage.get("pop_min_market_price")) {
-                            var W = "";
+                            var f = "";
                             if (0 != this.item_obj.sell_price) {
-                                var f = TWIR.storage.get("pop_short_currency") ? TWIR.replSum(this.item_obj.sell_price, !0) : this.item_obj.sell_price;
-                                W = '<span class="inventory_popup_trader_price_sell"><span class="invPopup_sellicon"/>&nbsp;$' + f + "</span>"
+                                var W = TWIR.storage.get("pop_short_currency") ? TWIR.replSum(this.item_obj.sell_price, !0) : this.item_obj.sell_price;
+                                f = '<span class="inventory_popup_trader_price_sell"><span class="invPopup_sellicon"/>&nbsp;$' + W + "</span>"
                             }
                             var y = TWIR.storage.get("pop_short_currency") ? TWIR.replSum(this.item_obj.price / 2 * (this.options.traderCharge || 1)) : this.item_obj.price / 2 * (this.options.traderCharge || 1);
-                            t = t.replace(/(inventory_popup_prices")(>)/g, '$1 style="margin-bottom: 5px;"> <span class="inventory_popup_trader_price_buy"><span class="tw2gui-iconset tw2gui-icon-friends" style="display: inline-block; vertical-align: top;"/>&nbsp;&#36;' + y + "</span>" + W)
+                            t = t.replace(/(inventory_popup_prices")(>)/g, '$1 style="margin-bottom: 5px;"> <span class="inventory_popup_trader_price_buy"><span class="tw2gui-iconset tw2gui-icon-friends" style="display: inline-block; vertical-align: top;"/>&nbsp;&#36;' + y + "</span>" + f)
                         }
                         if (TWIR.storage.get("pop_short_currency") && (null !== this.item_obj.price && this.item_obj.price >= 1e4 && (t = t.replace("&nbsp;$" + this.item_obj.price * (this.options.traderCharge || 1), "&nbsp;&#36;" + TWIR.replSum(this.item_obj.price * (this.options.traderCharge || 1), !0))), 0 != this.item_obj.sell_price && this.item_obj.price >= 1e4 && (t = t.replace("&nbsp;$" + this.item_obj.sell_price, "&nbsp;&#36;" + TWIR.replSum(this.item_obj.sell_price, !0)))), "crafting" == this.item_obj.spec_type && TWIR.storage.popups.crafting[this.item_obj.item_id]) {
                             for (var x = 2147483647, V = 0; V < TWIR.storage.popups.crafting[this.item_obj.item_id].resources.length; V++) {
@@ -1517,18 +1554,25 @@
                             z = null !== P ? west.storage.ItemSetManager.get(P) : null,
                             L = null !== P ? z.getWornItems().length : 0;
                         if (TWIR.storage.get("pop_partial_bonus") && null !== this.item_obj.set && 0 === N && -1 == t.indexOf("mpi_popup") && (t += '<td><div style="display: inline-block;background: url(/images/window/wof/prizes_sep.jpg);width: 25px;height: 270px;margin: 15px 0;"/></td><td class="twir_popup_pb" style="min-width: 200px;max-width: 250px;">'), null !== this.item_obj.set) {
-                            var X = 0;
-                            if (X = 11 == Z.items.length ? 10 : 3 == Z.items.length ? 2 : 9 == Z.items.length ? 8 : 6 == Z.items.length ? 6 : Z.items.length, null !== z) {
-                                11 == z.items.length ? 10 : 3 == z.items.length ? 2 : 9 == z.items.length ? 8 : 6 == z.items.length ? 6 : z.items.length
+                            function X(e) {
+                                for (var t = 0; t < e.length; t++) {
+                                    var a = ItemManager.getByBaseId(e[t], !0);
+                                    if ("right_arm" === a.type || "left_arm" === a.type) return !0
+                                }
+                                return !1
                             }
-                            var _ = new west.item.BonusExtractor(Character);
+                            var _ = 0;
+                            if (_ = 11 == Z.items.length ? 10 : 3 == Z.items.length && X(Z.items) ? 2 : 9 == Z.items.length ? 8 : 6 == Z.items.length ? 6 : Z.items.length, null !== z) {
+                                11 == z.items.length ? 10 : 3 == z.items.length && X(z.items) ? 2 : 9 == z.items.length ? 8 : 6 == z.items.length ? 6 : z.items.length
+                            }
+                            var ee = new west.item.BonusExtractor(Character);
                             if (TWIR.storage.get("pop_partial_bonus") && 0 == N && -1 == t.indexOf("mpi_popup")) {
-                                var ee = L > X ? X : 0 === L ? X : L,
-                                    te = '<br><div style="color: #8b4513; font-weight: bold;">(' + ee + ") " + TWIRlang.tooltips.partial_items_bonus + ":</div>";
-                                te += '<div style="color: #666; margin-bottom: 5px;font-style: italic;">' + (null !== z ? "&nbsp;>&nbsp;" + z.name : "") + "</div>", te += '<ul class="twir_partial_bonus" style="max-width: 200px;display: block;min-width: 170px;margin-left: 10px;">';
-                                var ae = L > X ? Z.getMergedStages(X) : 0 === L ? Z.getMergedStages(X) : Z.getMergedStages(L),
-                                    re = null !== z && L > X ? z.getMergedStages(X) : null !== z ? z.getMergedStages(L) : [];
-                                ae.sort(function(e, t) {
+                                var te = L > _ ? _ : 0 === L ? _ : L,
+                                    ae = '<br><div style="color: #8b4513; font-weight: bold;">(' + te + ") " + TWIRlang.tooltips.partial_items_bonus + ":</div>";
+                                ae += '<div style="color: #666; margin-bottom: 5px;font-style: italic;">' + (null !== z ? "&nbsp;>&nbsp;" + z.name : "") + "</div>", ae += '<ul class="twir_partial_bonus" style="max-width: 200px;display: block;min-width: 170px;margin-left: 10px;">';
+                                var re = L > _ ? Z.getMergedStages(_) : 0 === L ? Z.getMergedStages(_) : Z.getMergedStages(L),
+                                    ie = null !== z && L > _ ? z.getMergedStages(_) : null !== z ? z.getMergedStages(L) : [];
+                                re.sort(function(e, t) {
                                     var a = function(e, t) {
                                             return (e.bonus ? e.bonus.type : e.type) == t && (e.bonus ? e.bonus.name : e.name)
                                         },
@@ -1537,7 +1581,7 @@
                                         n = a(e, "skill"),
                                         o = a(t, "skill");
                                     return r && i ? r < i ? -1 : 1 : r ? -1 : i ? 1 : n && o ? 0 : n ? -1 : o ? 1 : 0
-                                }), re.sort(function(e, t) {
+                                }), ie.sort(function(e, t) {
                                     var a = function(e, t) {
                                             return (e.bonus ? e.bonus.type : e.type) == t && (e.bonus ? e.bonus.name : e.name)
                                         },
@@ -1547,62 +1591,62 @@
                                         o = a(t, "skill");
                                     return r && i ? r < i ? -1 : 1 : r ? -1 : i ? 1 : n && o ? 0 : n ? -1 : o ? 1 : 0
                                 });
-                                for (var ie = [], ne = [], oe = 0; oe < ae.length; oe++) {
-                                    var se = void 0 !== _.getDesc(ae[oe]) ? _.getDesc(ae[oe]).replace(/[^0-9.\%]/g, "") : "",
-                                        le = void 0 !== _.getDesc(ae[oe]) ? _.getDesc(ae[oe]).replace(/[0-9\%\+\.\,]/g, "").replace(/(\(|\)).*/g, "").trim() : "";
-                                    ie.push({
-                                        skill: le,
-                                        value: se
-                                    })
-                                }
-                                for (var pe = 0; pe < re.length; pe++) {
-                                    var Ae = void 0 !== _.getDesc(re[pe]) ? _.getDesc(re[pe]).replace(/[^0-9.\%]/g, "") : "",
-                                        ce = void 0 !== _.getDesc(re[pe]) ? _.getDesc(re[pe]).replace(/[0-9\%\+\.\,]/g, "").replace(/(\(|\)).*/g, "").trim() : "";
+                                for (var ne = [], oe = [], se = 0; se < re.length; se++) {
+                                    var le = void 0 !== ee.getDesc(re[se]) ? ee.getDesc(re[se]).replace(/[^0-9.\%]/g, "") : "",
+                                        pe = void 0 !== ee.getDesc(re[se]) ? ee.getDesc(re[se]).replace(/[0-9\%\+\.\,]/g, "").replace(/(\(|\)).*/g, "").trim() : "";
                                     ne.push({
-                                        skill: ce,
-                                        value: Ae
+                                        skill: pe,
+                                        value: le
                                     })
                                 }
-                                for (var ge = [], me = 0; me < ie.length; me++) {
-                                    for (var de = 0; de < ne.length; de++)
-                                        if (ie[me].skill === ne[de].skill) {
-                                            var ue = ie[me].value.indexOf("%") > -1 && ne[de].value.indexOf("%") > -1,
-                                                Ie = parseFloat(ie[me].value) - parseFloat(ne[de].value);
-                                            ge.push({
-                                                skill: ie[me].skill,
-                                                diff: ue ? Ie + "%" : Ie,
-                                                value: ie[me].value
+                                for (var Ae = 0; Ae < ie.length; Ae++) {
+                                    var ce = void 0 !== ee.getDesc(ie[Ae]) ? ee.getDesc(ie[Ae]).replace(/[^0-9.\%]/g, "") : "",
+                                        ge = void 0 !== ee.getDesc(ie[Ae]) ? ee.getDesc(ie[Ae]).replace(/[0-9\%\+\.\,]/g, "").replace(/(\(|\)).*/g, "").trim() : "";
+                                    oe.push({
+                                        skill: ge,
+                                        value: ce
+                                    })
+                                }
+                                for (var me = [], de = 0; de < ne.length; de++) {
+                                    for (var ue = 0; ue < oe.length; ue++)
+                                        if (ne[de].skill === oe[ue].skill) {
+                                            var Ie = ne[de].value.indexOf("%") > -1 && oe[ue].value.indexOf("%") > -1,
+                                                he = parseFloat(ne[de].value) - parseFloat(oe[ue].value);
+                                            me.push({
+                                                skill: ne[de].skill,
+                                                diff: Ie ? he + "%" : he,
+                                                value: ne[de].value
                                             })
-                                        } ge.find(function(e) {
-                                        return e.skill === ie[me].skill
-                                    }) || ge.push({
-                                        skill: ie[me].skill,
+                                        } me.find(function(e) {
+                                        return e.skill === ne[de].skill
+                                    }) || me.push({
+                                        skill: ne[de].skill,
                                         diff: null,
-                                        value: ie[me].value
+                                        value: ne[de].value
                                     })
                                 }
-                                for (var he = 0; he < ne.length; he++) ge.find(function(e) {
-                                    return e.skill === ne[he].skill
-                                }) || ge.push({
-                                    skill: ne[he].skill,
+                                for (var Re = 0; Re < oe.length; Re++) me.find(function(e) {
+                                    return e.skill === oe[Re].skill
+                                }) || me.push({
+                                    skill: oe[Re].skill,
                                     diff: "red",
-                                    value: ne[he].value
+                                    value: oe[Re].value
                                 });
-                                for (var Re = 0; Re < ge.length; Re++)
-                                    if ("red" !== ge[Re].diff) {
-                                        var ke = null === ge[Re].diff ? '&nbsp;(<span class="tw_green">+' + ge[Re].value + "</span>)&nbsp;" : parseFloat(ge[Re].diff) > 0 ? '&nbsp;(<span class="tw_green">+' + ge[Re].diff + "</span>)&nbsp;" : parseFloat(ge[Re].diff) < 0 ? '&nbsp;(<span class="tw_red">' + ge[Re].diff + "</span>)&nbsp;" : "&nbsp;",
-                                            be = 0 === ge[Re].diff ? "color: #CC7722" : "color: #666";
-                                        te += '<li style="' + be + ';">' + ge[Re].value + "&nbsp;" + ge[Re].skill + ke + "</li>"
-                                    } for (var we = 0; we < ge.length; we++) "red" === ge[we].diff && (te += '<li class="tw_red">-' + ge[we].value + "&nbsp;" + ge[we].skill + "</li>");
-                                t += te += "</ul>"
+                                for (var ke = 0; ke < me.length; ke++)
+                                    if ("red" !== me[ke].diff) {
+                                        var be = null === me[ke].diff ? '&nbsp;(<span class="tw_green">+' + me[ke].value + "</span>)&nbsp;" : parseFloat(me[ke].diff) > 0 ? '&nbsp;(<span class="tw_green">+' + me[ke].diff + "</span>)&nbsp;" : parseFloat(me[ke].diff) < 0 ? '&nbsp;(<span class="tw_red">' + me[ke].diff + "</span>)&nbsp;" : "&nbsp;",
+                                            we = 0 === me[ke].diff ? "color: #CC7722" : "color: #666";
+                                        ae += '<li style="' + we + ';">' + me[ke].value + "&nbsp;" + me[ke].skill + be + "</li>"
+                                    } for (var Te = 0; Te < me.length; Te++) "red" === me[Te].diff && (ae += '<li class="tw_red">-' + me[Te].value + "&nbsp;" + me[Te].skill + "</li>");
+                                t += ae += "</ul>"
                             }
-                            var Te = N > 0 ? "&nbsp;(" + N + "/" + X + ")" : "",
+                            var fe = N > 0 ? "&nbsp;(" + N + "/" + _ + ")" : "",
                                 We = TWIR.storage.get("pop_set_id") ? '<div style="color: #666; text-align: center;">(' + this.item_obj.set + ")</div>" : "";
-                            if (N > 0) t = t.replace('<span class="text_bold">' + Z.name + ":</span>", '<span style="color: #800080 !important;font-weight: bold;max-width: 220px;display: block;text-align: center;margin-bottom: 5px;">' + Z.name + Te + "</span>" + We);
+                            if (N > 0) t = t.replace('<span class="text_bold">' + Z.name + ":</span>", '<span style="color: #800080 !important;font-weight: bold;max-width: 220px;display: block;text-align: center;margin-bottom: 5px;">' + Z.name + fe + "</span>" + We);
                             else if (0 === N)
                                 if (TWIR.storage.get("pop_partial_bonus") && -1 == t.indexOf("mpi_popup")) {
-                                    var fe = '<span style="color: #800080 !important;font-weight: bold;max-width: 220px;display: block;text-align: center;margin-top: 15px;margin-bottom: 5px;">' + Z.name + "</span>" + We;
-                                    t = t.replace('<span class="text_bold">' + Z.name + ":</span>", ""), t += fe
+                                    var ye = '<span style="color: #800080 !important;font-weight: bold;max-width: 220px;display: block;text-align: center;margin-top: 15px;margin-bottom: 5px;">' + Z.name + "</span>" + We;
+                                    t = t.replace('<span class="text_bold">' + Z.name + ":</span>", ""), t += ye
                                 } else t = t.replace('<span class="text_bold">' + Z.name + ":</span>", '<span style="color: #800080 !important;font-weight: bold;max-width: 220px;display: block;text-align: center;margin-bottom: 5px;">' + Z.name + "</span>" + We);
                             t = 0 === N ? (t = t.replace(/<ul\s+class="inventory_popup_item_set_names">[\S\s]*?<\/ul>/gi, "")).replace(/<br><div\s+class="item_set_names">[\S\s]*?<\/div>/gi, "") : t.replace(/inventory_popup_item_set_names"/g, '$& style="max-width: 200px;display: block;min-width: 170px;white-space: unset!important;margin-left: 10px;"')
                         }
@@ -1701,8 +1745,8 @@
                     b = a.speed_passive,
                     w = a.lp,
                     T = a.avatar,
-                    W = a.unpack_card,
-                    f = a.unpack_multiple,
+                    f = a.unpack_card,
+                    W = a.unpack_multiple,
                     y = a.unpack_one,
                     x = a.bonds,
                     V = a.money_small,
@@ -1797,17 +1841,17 @@
                                     }) && !TWIR.usebonus.same(w, ce):
                                         -1 === X.indexOf(pe.item_id) && X.push(pe.item_id);
                                         break;
-                                    case TWIR.usebonus.same(W, ce):
+                                    case TWIR.usebonus.same(f, ce):
                                         -1 !== ne.indexOf(pe.item_id) && -1 !== F.indexOf(pe.item_id) || (ne.push(pe.item_id), F.push(pe.item_id));
                                         break;
                                     default:
                                         -1 === t.indexOf(pe.item_id) && t.push(pe.item_id)
                                 }
                                 if (TWIR.storage.popups.crafting[pe.item_id]) switch (!0) {
-                                    case TWIR.usebonus.same(W, ce):
+                                    case TWIR.usebonus.same(f, ce):
                                         -1 === F.indexOf(pe.item_id) && F.push(pe.item_id);
                                         break;
-                                    case !TWIR.usebonus.same(W, ce):
+                                    case !TWIR.usebonus.same(f, ce):
                                         -1 === Q.indexOf(pe.item_id) && Q.push(pe.item_id)
                                 }
                             }
@@ -1861,7 +1905,7 @@
                                         -1 === te.indexOf(pe.item_id) && te.push(pe.item_id);
                                         break;
                                     case TWIR.usebonus.same(y, ce):
-                                    case TWIR.usebonus.same(f, ce):
+                                    case TWIR.usebonus.same(W, ce):
                                         -1 === re.indexOf(pe.item_id) && re.push(pe.item_id);
                                         break;
                                     case TWIR.usebonus.same(v, ce):
@@ -1869,7 +1913,7 @@
                                     case TWIR.usebonus.same(x, ce):
                                         -1 === ie.indexOf(pe.item_id) && ie.push(pe.item_id);
                                         break;
-                                    case TWIR.usebonus.same(W, ce):
+                                    case TWIR.usebonus.same(f, ce):
                                         -1 === ne.indexOf(pe.item_id) && ne.push(pe.item_id);
                                         break;
                                     case TWIR.usebonus.same(T, ce):
@@ -1989,9 +2033,9 @@
                 }), TWIR.storage.inventory.use_all = Ie, TWIR.storage.inventory.buffs_all = me, TWIR.storage.inventory.crafting_all = ke;
                 var we = TWIR.storage.inventory.bonus,
                     Te = TWIR.storage.inventory.quest,
-                    We = TWIR.storage.inventory.use_all.concat(TWIR.storage.inventory.buffs_all).concat(TWIR.storage.inventory.crafting_all).concat(we).concat(Te);
+                    fe = TWIR.storage.inventory.use_all.concat(TWIR.storage.inventory.buffs_all).concat(TWIR.storage.inventory.crafting_all).concat(we).concat(Te);
                 se = $.grep(t, function(e) {
-                    return $.inArray(e, We) < 0
+                    return $.inArray(e, fe) < 0
                 }), ue.others = {
                     name: "#" + TWIRlang.inventory.others,
                     items: se
@@ -2435,7 +2479,7 @@
             underprice: null,
             init: function() {
                 var e = $.isNumeric(localStorage.getItem("twir_marketTimer")) ? JSON.parse(localStorage.getItem("twir_marketTimer")) : localStorage.getItem("twir_marketTimer"),
-                    t = Math.floor(Math.random() * (9e5 + 1) + 9e5),
+                    t = Math.floor(Math.random() * (6e5 + 1) + 6e5),
                     a = e ? (new Date).getTime() - new Date(e).getTime() : 6e4,
                     r = t - a,
                     i = r >= 0 ? r : 6e4;
@@ -2657,7 +2701,7 @@
                     t = TWIR.storage.marketWatcher.marketMain.length,
                     a = TWIR.storage.marketWatcher.marketOther.length,
                     r = (new Date).getTime(),
-                    i = Math.floor(Math.random() * (9e5 + 1) + 9e5),
+                    i = Math.floor(Math.random() * (6e5 + 1) + 6e5),
                     n = (new Date).valueOf(),
                     o = TWIR.storage.marketWatcher.mwl,
                     s = TWIR.marketWatcher.scan;
@@ -2667,93 +2711,69 @@
                         visibility: 2
                     }, function(p) {
                         if (!1 === p.error) {
-                            for (var A = p.msg.search_result, c = 0; c < A.length; c++) {
-                                0;
-                                var g = ItemManager.get(A[c].item_id).item_base_id,
-                                    m = ItemManager.get(A[c].item_id),
-                                    d = {
-                                        date: n,
-                                        auction_end_date: A[c].auction_end_date,
-                                        item_base_id: g,
-                                        item_count: A[c].item_count,
-                                        auction_price: A[c].auction_price,
-                                        max_price: A[c].max_price,
-                                        offer_id: A[c].market_offer_id
-                                    };
-                                if (!("yield" !== m.type || null !== m.set || TWIR.storage.inventory.collectibles.indexOf(g) >= 0 || TWIR.storage.inventory.bonus.indexOf(g) >= 0) || "all" != s && "valuable" != s) {
-                                    if ("all" == s)
-                                        if (TWIR.storage.marketWatcher.marketOther.some(function(e) {
-                                                return e.offer_id === A[c].market_offer_id
-                                            })) {
-                                            var u = TWIR.storage.marketWatcher.marketOther.findIndex(function(e) {
-                                                return e.offer_id === A[c].market_offer_id
-                                            });
-                                            TWIR.storage.marketWatcher.marketOther[u].date = n
-                                        } else TWIR.storage.marketWatcher.marketOther.push(d)
-                                } else if (TWIR.storage.marketWatcher.marketMain.some(function(e) {
-                                        return e.offer_id === A[c].market_offer_id
-                                    })) {
-                                    var I = TWIR.storage.marketWatcher.marketMain.findIndex(function(e) {
-                                        return e.offer_id === A[c].market_offer_id
-                                    });
-                                    TWIR.storage.marketWatcher.marketMain[I].date = n
-                                } else TWIR.storage.marketWatcher.marketMain.push(d);
-                                var h = [],
-                                    R = o.find(function(e) {
-                                        return e.item_id === A[c].item_id || e.item_id === m.set
-                                    });
-                                if (void 0 === R && ("yield" !== m.type || null !== m.set || TWIR.storage.inventory.collectibles.indexOf(m.item_base_id) >= 0 || TWIR.storage.inventory.bonus.indexOf(m.item_base_id) >= 0) && TWIR.marketWatcher.isUndervalued(A[c].item_id, A[c].max_price, A[c].auction_price)) {
-                                    var k = {
-                                        type: m.type,
-                                        auction_ends_in: A[c].auction_ends_in,
-                                        auction_end_date: A[c].auction_end_date,
-                                        item_id: A[c].item_id,
-                                        item_count: A[c].item_count,
-                                        auction_price: A[c].auction_price,
-                                        max_price: A[c].max_price,
-                                        seller_name: A[c].seller_name,
-                                        seller_id: A[c].seller_player_id,
-                                        market_town_id: A[c].market_town_id,
-                                        market_town: A[c].market_town_name,
-                                        posx: A[c].market_town_x,
-                                        posy: A[c].market_town_y,
-                                        spec: "undervalued"
-                                    };
-                                    h.push(k)
-                                }
-                                if (TWIR.storage.get("mw_collections") && TWIR.storage.marketWatcher.missing.includes(m.name) && !1 === TWIR.marketWatcher.getBuyed(A[c].item_id)) {
-                                    var b = {
-                                        type: m.type,
-                                        auction_ends_in: A[c].auction_ends_in,
-                                        auction_end_date: A[c].auction_end_date,
-                                        item_id: A[c].item_id,
-                                        item_count: A[c].item_count,
-                                        auction_price: A[c].auction_price,
-                                        max_price: A[c].max_price,
-                                        seller_name: A[c].seller_name,
-                                        seller_id: A[c].seller_player_id,
-                                        market_town_id: A[c].market_town_id,
-                                        market_town: A[c].market_town_name,
-                                        posx: A[c].market_town_x,
-                                        posy: A[c].market_town_y,
-                                        offer_id: A[c].market_offer_id
-                                    };
-                                    TWIR.storage.marketWatcher.wtb_missing[m.short] ? TWIR.storage.marketWatcher.wtb_missing[m.short].some(function(e) {
-                                        return e.offer_id === A[c].market_offer_id
-                                    }) || TWIR.storage.marketWatcher.wtb_missing[m.short].push(b) : (TWIR.storage.marketWatcher.wtb_missing[m.short] = [], TWIR.storage.marketWatcher.wtb_missing[m.short].some(function(e) {
-                                        return e.offer_id === A[c].market_offer_id
-                                    }) || TWIR.storage.marketWatcher.wtb_missing[m.short].push(b))
-                                }
-                                if (void 0 !== R) {
-                                    TWIR.storage.popups.marketBest, TWIR.storage.popups.marketBestJunk;
-                                    if (null !== A[c].max_price && A[c].max_price <= R.item_price || null === A[c].max_price || 0 === R.item_price) {
-                                        var w = {
+                            for (var A = p.msg.search_result, c = 0; c < A.length; c++)
+                                if (2 !== A.sell_rights) {
+                                    0;
+                                    var g = ItemManager.get(A[c].item_id).item_base_id,
+                                        m = ItemManager.get(A[c].item_id),
+                                        d = {
+                                            date: n,
+                                            auction_end_date: A[c].auction_end_date,
+                                            item_base_id: g,
+                                            item_count: A[c].item_count,
+                                            auction_price: A[c].auction_price,
+                                            max_price: A[c].max_price,
+                                            offer_id: A[c].market_offer_id
+                                        };
+                                    if (!("yield" !== m.type || null !== m.set || TWIR.storage.inventory.collectibles.indexOf(g) >= 0 || TWIR.storage.inventory.bonus.indexOf(g) >= 0) || "all" != s && "valuable" != s) {
+                                        if ("all" == s)
+                                            if (TWIR.storage.marketWatcher.marketOther.some(function(e) {
+                                                    return e.offer_id === A[c].market_offer_id
+                                                })) {
+                                                var u = TWIR.storage.marketWatcher.marketOther.findIndex(function(e) {
+                                                    return e.offer_id === A[c].market_offer_id
+                                                });
+                                                TWIR.storage.marketWatcher.marketOther[u].date = n
+                                            } else TWIR.storage.marketWatcher.marketOther.push(d)
+                                    } else if (TWIR.storage.marketWatcher.marketMain.some(function(e) {
+                                            return e.offer_id === A[c].market_offer_id
+                                        })) {
+                                        var I = TWIR.storage.marketWatcher.marketMain.findIndex(function(e) {
+                                            return e.offer_id === A[c].market_offer_id
+                                        });
+                                        TWIR.storage.marketWatcher.marketMain[I].date = n
+                                    } else TWIR.storage.marketWatcher.marketMain.push(d);
+                                    var h = [],
+                                        R = o.find(function(e) {
+                                            return e.item_id === A[c].item_id || e.item_id === m.set
+                                        });
+                                    if (void 0 === R && ("yield" !== m.type || null !== m.set || TWIR.storage.inventory.collectibles.indexOf(m.item_base_id) >= 0 || TWIR.storage.inventory.bonus.indexOf(m.item_base_id) >= 0) && TWIR.marketWatcher.isUndervalued(A[c].item_id, A[c].max_price, A[c].auction_price)) {
+                                        var k = {
                                             type: m.type,
                                             auction_ends_in: A[c].auction_ends_in,
                                             auction_end_date: A[c].auction_end_date,
                                             item_id: A[c].item_id,
                                             item_count: A[c].item_count,
-                                            auction_price: A[c].current_bid ? A[c].current_bid : A[c].auction_price,
+                                            auction_price: A[c].auction_price,
+                                            max_price: A[c].max_price,
+                                            seller_name: A[c].seller_name,
+                                            seller_id: A[c].seller_player_id,
+                                            market_town_id: A[c].market_town_id,
+                                            market_town: A[c].market_town_name,
+                                            posx: A[c].market_town_x,
+                                            posy: A[c].market_town_y,
+                                            spec: "undervalued"
+                                        };
+                                        h.push(k)
+                                    }
+                                    if (TWIR.storage.get("mw_collections") && TWIR.storage.marketWatcher.missing.includes(m.name) && !1 === TWIR.marketWatcher.getBuyed(A[c].item_id)) {
+                                        var b = {
+                                            type: m.type,
+                                            auction_ends_in: A[c].auction_ends_in,
+                                            auction_end_date: A[c].auction_end_date,
+                                            item_id: A[c].item_id,
+                                            item_count: A[c].item_count,
+                                            auction_price: A[c].auction_price,
                                             max_price: A[c].max_price,
                                             seller_name: A[c].seller_name,
                                             seller_id: A[c].seller_player_id,
@@ -2763,15 +2783,39 @@
                                             posy: A[c].market_town_y,
                                             offer_id: A[c].market_offer_id
                                         };
-                                        TWIR.storage.marketWatcher.wtb[m.short] ? TWIR.storage.marketWatcher.wtb[m.short].some(function(e) {
+                                        TWIR.storage.marketWatcher.wtb_missing[m.short] ? TWIR.storage.marketWatcher.wtb_missing[m.short].some(function(e) {
                                             return e.offer_id === A[c].market_offer_id
-                                        }) || TWIR.storage.marketWatcher.wtb[m.short].push(w) : (TWIR.storage.marketWatcher.wtb[m.short] = [], TWIR.storage.marketWatcher.wtb[m.short].some(function(e) {
+                                        }) || TWIR.storage.marketWatcher.wtb_missing[m.short].push(b) : (TWIR.storage.marketWatcher.wtb_missing[m.short] = [], TWIR.storage.marketWatcher.wtb_missing[m.short].some(function(e) {
                                             return e.offer_id === A[c].market_offer_id
-                                        }) || TWIR.storage.marketWatcher.wtb[m.short].push(w))
+                                        }) || TWIR.storage.marketWatcher.wtb_missing[m.short].push(b))
                                     }
-                                }
-                            }
-                            setTimeout(function() {
+                                    if (void 0 !== R) {
+                                        TWIR.storage.popups.marketBest, TWIR.storage.popups.marketBestJunk;
+                                        if (null !== A[c].max_price && A[c].max_price <= R.item_price || null === A[c].max_price || 0 === R.item_price) {
+                                            var w = {
+                                                type: m.type,
+                                                auction_ends_in: A[c].auction_ends_in,
+                                                auction_end_date: A[c].auction_end_date,
+                                                item_id: A[c].item_id,
+                                                item_count: A[c].item_count,
+                                                auction_price: A[c].current_bid ? A[c].current_bid : A[c].auction_price,
+                                                max_price: A[c].max_price,
+                                                seller_name: A[c].seller_name,
+                                                seller_id: A[c].seller_player_id,
+                                                market_town_id: A[c].market_town_id,
+                                                market_town: A[c].market_town_name,
+                                                posx: A[c].market_town_x,
+                                                posy: A[c].market_town_y,
+                                                offer_id: A[c].market_offer_id
+                                            };
+                                            TWIR.storage.marketWatcher.wtb[m.short] ? TWIR.storage.marketWatcher.wtb[m.short].some(function(e) {
+                                                return e.offer_id === A[c].market_offer_id
+                                            }) || TWIR.storage.marketWatcher.wtb[m.short].push(w) : (TWIR.storage.marketWatcher.wtb[m.short] = [], TWIR.storage.marketWatcher.wtb[m.short].some(function(e) {
+                                                return e.offer_id === A[c].market_offer_id
+                                            }) || TWIR.storage.marketWatcher.wtb[m.short].push(w))
+                                        }
+                                    }
+                                } setTimeout(function() {
                                 if (!0 === p.msg.next) e++, l();
                                 else {
                                     if (h.length > 0 && TWIR.storage.get("mw_underpriced_alert")) {
@@ -2901,9 +2945,9 @@
                                 b = "<div>@" + l[0].seller_name + (l[0].market_town ? "&nbsp;(" + l[0].market_town + ")" : "") + "</div><div>" + TWIRlang.informative.distance + ":&nbsp;" + k.formatDuration() + "</div>",
                                 w = s !== o.length - 1 || 9 === s ? "1px solid rgba(140,92,20,0.65)" : "none",
                                 T = l.length > 1 ? '<div style="font-style: italic;margin-left: 10px;color: #666;cursor: pointer;"><span title="' + b.escapeHTML() + '">@' + l[0].seller_name.cutIt(14) + '</span>&nbsp;<span title="' + p.escapeHTML() + '">' + TWIRlang.market_watcher.offer_count.replace("$1", l.length - 1) + "</span></div>" : '<div style="color: #666;margin-left: 10px;cursor: pointer;"><span title="' + b.escapeHTML() + '">@' + l[0].seller_name + "</span></div>",
-                                W = "trader" != l[0].spec ? "TWIR.marketWatcher.searchMarket(" + l[0].item_id + ")" : "west.window.shop.open(&quot;wear_window&quot;).showCategory(&quot;trader&quot;)",
-                                f = l[0].spec && "undervalued" == l[0].spec ? '<img src="' + TWIR.images.underprice + '" style="position: absolute; right: 0px; bottom: 0px;"/>' : l[0].spec && "trader" == l[0].spec ? '<img src="' + TWIR.images.trader + '" style="position: absolute; right: 0px; bottom: 0px;"/>' : "";
-                            n += '<tr style="border-spacing: 1px !important;border-radius: 3px;border-bottom: ' + w + ';"><td style="vertical-align: middle;"><div style="position: relative; height: 29px; width: 35px;"><img data-item-id="' + l[0].item_id + '" style="cursor: pointer;" title="' + new ItemPopup(d).getXHTML().escapeHTML() + '" src="' + d.image + '"; height="29"; width="29"></img>' + f + "</div></td>", n += '<td style="padding: 2px;padding-right: 8px;vertical-align: middle;"><div style="margin-bottom: -2px; cursor: pointer;"><span title="' + new ItemPopup(d).getXHTML().escapeHTML() + '" data-item-id="' + l[0].item_id + '" style="width: 220px;text-overflow: ellipsis;white-space: nowrap;overflow: hidden;display: inline-block; color: ' + R + ';">' + d.name + '</span><span style="display: inline-block;overflow: hidden;"> &nbsp;(x' + l[0].item_count + ")</span></div>" + T + "</td>", n += '<td title="' + l[0].auction_end_date.getFormattedTimeString4Timestamp() + '" style="text-align: center;padding: 2px; padding-right: 8px;cursor: pointer;"><div>' + TWIRlang.market_watcher.time_left + "</div><div>" + TWIR.msToTime(l[0].auction_ends_in) + "</div></td>", n += '<td title="' + (u ? u.escapeHTML() : "") + '" style="text-align: center;padding: 2px;cursor: pointer;"><div>' + I + '</div><div style="color: ' + R + ';">$' + TWIR.replSum(h) + "</div></td>", n += '<td style="vertical-align: middle;"><div onclick="' + W + '" style="margin-left: 10px;cursor: pointer;"><img src="/images/icons/bid.png" title="' + ("trader" != l[0].spec ? TWIRlang.market_watcher.bid_now : TWIRlang.market_watcher.buy_trader) + '" /> </div></td>', n += "</tr>"
+                                f = "trader" != l[0].spec ? "TWIR.marketWatcher.searchMarket(" + l[0].item_id + ")" : "west.window.shop.open(&quot;wear_window&quot;).showCategory(&quot;trader&quot;)",
+                                W = l[0].spec && "undervalued" == l[0].spec ? '<img src="' + TWIR.images.underprice + '" style="position: absolute; right: 0px; bottom: 0px;"/>' : l[0].spec && "trader" == l[0].spec ? '<img src="' + TWIR.images.trader + '" style="position: absolute; right: 0px; bottom: 0px;"/>' : "";
+                            n += '<tr style="border-spacing: 1px !important;border-radius: 3px;border-bottom: ' + w + ';"><td style="vertical-align: middle;"><div style="position: relative; height: 29px; width: 35px;"><img data-item-id="' + l[0].item_id + '" style="cursor: pointer;" title="' + new ItemPopup(d).getXHTML().escapeHTML() + '" src="' + d.image + '"; height="29"; width="29"></img>' + W + "</div></td>", n += '<td style="padding: 2px;padding-right: 8px;vertical-align: middle;"><div style="margin-bottom: -2px; cursor: pointer;"><span title="' + new ItemPopup(d).getXHTML().escapeHTML() + '" data-item-id="' + l[0].item_id + '" style="width: 220px;text-overflow: ellipsis;white-space: nowrap;overflow: hidden;display: inline-block; color: ' + R + ';">' + d.name + '</span><span style="display: inline-block;overflow: hidden;"> &nbsp;(x' + l[0].item_count + ")</span></div>" + T + "</td>", n += '<td title="' + l[0].auction_end_date.getFormattedTimeString4Timestamp() + '" style="text-align: center;padding: 2px; padding-right: 8px;cursor: pointer;"><div>' + TWIRlang.market_watcher.time_left + "</div><div>" + TWIR.msToTime(l[0].auction_ends_in) + "</div></td>", n += '<td title="' + (u ? u.escapeHTML() : "") + '" style="text-align: center;padding: 2px;cursor: pointer;"><div>' + I + '</div><div style="color: ' + R + ';">$' + TWIR.replSum(h) + "</div></td>", n += '<td style="vertical-align: middle;"><div onclick="' + f + '" style="margin-left: 10px;cursor: pointer;"><img src="/images/icons/bid.png" title="' + ("trader" != l[0].spec ? TWIRlang.market_watcher.bid_now : TWIRlang.market_watcher.buy_trader) + '" /> </div></td>', n += "</tr>"
                         }
                         return n += "</tbody></table>"
                     }
@@ -3007,8 +3051,8 @@
                 b = 0,
                 w = 0,
                 T = 0,
-                W = 0,
                 f = 0,
+                W = 0,
                 y = 0,
                 x = 0,
                 V = 0,
@@ -3079,7 +3123,7 @@
             for (var X = 0; X < t.length; X++) h += 1, R += t[X].count;
             for (var _ = 0; _ < a.length; _++) k += 1, b += a[_].count;
             for (var $ = 0; $ < r.length; $++) "recipe" !== r[$].obj.type && (w += 1, T += r[$].count);
-            for (var ee = 0; ee < i.length; ee++) W += 1, f += i[ee].count;
+            for (var ee = 0; ee < i.length; ee++) f += 1, W += i[ee].count;
             for (var te = 0; te < n.length; te++) y += 1, x += n[te].count;
             for (var ae = 0; ae < o.length; ae++) V += 1, v += o[ae].count;
             return TWIR.storage.stats.cache.count = {
@@ -3097,8 +3141,8 @@
                 buff_total_count: b,
                 craft_count: w,
                 craft_total_count: T,
-                bonus_count: W,
-                bonus_total_count: f,
+                bonus_count: f,
+                bonus_total_count: W,
                 work_count: y,
                 work_total_count: x,
                 quest_count: V,
@@ -3157,11 +3201,11 @@
                     item_id: 0,
                     item_price: 0
                 },
-                W = {
+                f = {
                     item_id: 0,
                     item_price: 0
                 },
-                f = {
+                W = {
                     item_id: 0,
                     item_price: 0
                 },
@@ -3180,7 +3224,7 @@
                         n += $.isNumeric(ItemManager.get(M).price) ? ItemManager.get(M).price : 0, o += $.isNumeric(ItemManager.get(M).sell_price) ? ItemManager.get(M).sell_price : 0, c += $.isNumeric(ItemManager.get(M).price) ? ItemManager.get(M).price * y[M].count : 0, g += $.isNumeric(ItemManager.get(M).sell_price) ? ItemManager.get(M).sell_price * y[M].count : 0, U.price > T.item_price ? T = {
                             item_id: U.item_base_id,
                             item_price: U.price
-                        } : U.sell_price > f.item_price && (f = {
+                        } : U.sell_price > W.item_price && (W = {
                             item_id: U.item_base_id,
                             item_price: U.sell_price
                         });
@@ -3200,7 +3244,7 @@
                         r += $.isNumeric(ItemManager.get(M).price) ? ItemManager.get(M).price : 0, i += $.isNumeric(ItemManager.get(M).sell_price) ? ItemManager.get(M).sell_price : 0, m += $.isNumeric(ItemManager.get(M).price) ? ItemManager.get(M).price * y[M].count : 0, d += $.isNumeric(ItemManager.get(M).sell_price) ? ItemManager.get(M).sell_price * y[M].count : 0, U.price > w.item_price ? w = {
                             item_id: U.item_base_id,
                             item_price: U.price
-                        } : U.sell_price > W.item_price && (W = {
+                        } : U.sell_price > f.item_price && (f = {
                             item_id: U.item_base_id,
                             item_price: U.sell_price
                         })
@@ -3232,8 +3276,8 @@
             }, TWIR.storage.stats.cache.max_price = {
                 products_max_buy_price: T,
                 objects_max_buy_price: w,
-                products_max_sell_price: f,
-                objects_max_sell_price: W
+                products_max_sell_price: W,
+                objects_max_sell_price: f
             }
         }, TWIR.pps = {
             page: [],
@@ -3274,16 +3318,40 @@
                     }).reduce(function(e, t, a) {
                         return e[a] = TWIR.storage.market[t], e
                     }, {});
-                    for (var n in t.addItem(["premium_bids"], ' <img src="' + TWIR.images.currency.nuggets + '" height="16px width="auto" style="left: 5px;top: 5px;"/><span style="margin-left: 15px;color: #5e321a; text-overflow: ellipsis;white-space: nowrap;overflow: hidden;word-wrap: break-word; margin-top: 2px; max-width: 200px;display: inline-block;">' + TWIRlang.menulink.premium_bids + "</span>", TWIRlang.menulink.premium_bids), t.addItem(["premium_offers"], ' <img src="' + TWIR.images.currency.nuggets + '" height="16px width="auto" style="left: 5px;top: 5px;"/><span style="margin-left: 15px;color: #5e321a; text-overflow: ellipsis;white-space: nowrap;overflow: hidden;word-wrap: break-word; margin-top: 2px; max-width: 200px;display: inline-block;">' + TWIRlang.menulink.premium_offers + "</span>", TWIRlang.menulink.premium_offers).addEmpty(), i) {
-                        var o = "",
-                            s = 0,
-                            l = 0;
-                        for (var p in o += "<div class=&quot;popup_yield&quot; style=&quot;display: block;max-width: 396px;&quot;>", i[n].items) {
-                            "offer_sold" === i[n].items[p].type ? l += i[n].items[p].money : "offer_sold" !== i[n].items[p].type && (s += i[n].items[p].count), Object.keys(i[n].items).length;
-                            var A = ItemManager.get(p);
-                            o += "<div class=&quot;popup_yield_image&quot; style=&quot;margin-right: 1px;margin-bottom: 1px;display: inline-block;&quot;><div class=&quot;item&quot;><span class=&quot;count&quot; style=&quot;display:block;top:30px;left:1px&quot;>" + TWIR.replSum(i[n].items[p].count) + "</span><img src=&quot;" + A.image + "&quot; alt=&quot;" + A.name + "&quot; width=&quot;43&quot; height=&quot;43&quot; /></div>", "offer_sold" === i[n].items[p].type && (o += "<span style=&quot;font-size: 11px;text-align: center;display: block;&quot;>$" + TWIR.replSum(i[n].items[p].money) + "</span>"), o += "</div>"
+
+                    function n(e) {
+                        switch (e[0]) {
+                            case 3:
+                                Guidepost.show(e[1].id, e[1].posx, e[1].posy, "town");
+                                break;
+                            case 2:
+                                Map.center(e[1].posx, e[1].posy);
+                                break;
+                            case 1:
+                                var t = Object.values(e[1].items),
+                                    a = t.filter(function(e) {
+                                        return "offer_sold" === e.type
+                                    });
+                                console.log(a), MarketWindow.open(e[1].id), MarketWindow.showTab(a.length ? "sell" : "offer");
+                                break;
+                            case 4:
+                                fetch = function(e) {
+                                    Ajax.remoteCall("building_market", e, {}, function(e) {
+                                        return e.error ? new UserMessage(e.msg).show() : (Character.setDeposit(e.deposit), Character.setMoney(e.cash), new MessageSuccess(e.msg).show())
+                                    })
+                                }, fetch("fetch_town_offers"), fetch("fetch_town_bids")
                         }
-                        o += "</div>", r(i[n].name), t.addItem(["town", i[n].id, i[n].posx, i[n].posy], '<img src="/images/map/minimap/icons/miniicon_market_items.png?2" style="left: 5px;top: 8px;"/><span style="margin-left: 15px;color: #5e321a; text-overflow: ellipsis;white-space: nowrap;overflow: hidden;word-wrap: break-word; margin-top: 2px; max-width: 170px;display: inline-block;">' + i[n].name + '</span><span title="' + o + '" style="display: inline-block;margin-top: 3px;color: #5e321a;position: relative;float: right;font-size: 12px;">&#124;&nbsp;' + (0 != l ? "$" + TWIR.replSum(l) + (0 != s ? ",&nbsp;" : "") : "") + (0 != s ? TWIR.replSum(s) + "&nbsp;" + TWIRlang.tooltips.items : "") + "</span>", "<div>" + i[n].name + "</div><div>" + TWIRlang.informative.distance + ":&nbsp;" + i[n].distance.formatDuration() + "</div>")
+                    }
+                    for (var o in t.addItem(["premium_bids"], ' <img src="' + TWIR.images.currency.nuggets + '" height="16px width="auto" style="left: 5px;top: 5px;"/><span style="margin-left: 15px;color: #5e321a; text-overflow: ellipsis;white-space: nowrap;overflow: hidden;word-wrap: break-word; margin-top: 2px; max-width: 200px;display: inline-block;">' + TWIRlang.menulink.premium_bids + "</span>", TWIRlang.menulink.premium_bids), t.addItem(["premium_offers"], ' <img src="' + TWIR.images.currency.nuggets + '" height="16px width="auto" style="left: 5px;top: 5px;"/><span style="margin-left: 15px;color: #5e321a; text-overflow: ellipsis;white-space: nowrap;overflow: hidden;word-wrap: break-word; margin-top: 2px; max-width: 200px;display: inline-block;">' + TWIRlang.menulink.premium_offers + "</span>", TWIRlang.menulink.premium_offers).addEmpty(), i) {
+                        var s = "",
+                            l = 0,
+                            p = 0;
+                        for (var A in s += "<div class=&quot;popup_yield&quot; style=&quot;display: block;max-width: 396px;&quot;>", i[o].items) {
+                            "offer_sold" === i[o].items[A].type ? p += i[o].items[A].money : "offer_sold" !== i[o].items[A].type && (l += i[o].items[A].count), Object.keys(i[o].items).length;
+                            var c = ItemManager.get(A);
+                            s += "<div class=&quot;popup_yield_image&quot; style=&quot;margin-right: 1px;margin-bottom: 1px;display: inline-block;&quot;><div class=&quot;item&quot;><span class=&quot;count&quot; style=&quot;display:block;top:30px;left:1px&quot;>" + TWIR.replSum(i[o].items[A].count) + "</span><img src=&quot;" + c.image + "&quot; alt=&quot;" + c.name + "&quot; width=&quot;43&quot; height=&quot;43&quot; /></div>", "offer_sold" === i[o].items[A].type && (s += "<span style=&quot;font-size: 11px;text-align: center;display: block;&quot;>$" + TWIR.replSum(i[o].items[A].money) + "</span>"), s += "</div>"
+                        }
+                        s += "</div>", r(i[o].name), t.addItem(0, '<img src="/images/map/minimap/icons/miniicon_market_items.png?2" style="left: 5px;top: 8px;"/><span title="' + ("<div>" + i[o].name + "</div><div>" + TWIRlang.informative.distance + ":&nbsp;" + i[o].distance.formatDuration() + "</div>").escapeHTML() + '" style="margin-left: 15px;color: #5e321a; text-overflow: ellipsis;white-space: nowrap;overflow: hidden;word-wrap: break-word; margin-top: 2px; max-width: 170px;display: inline-block;">' + i[o].name + '</span><span title="' + s + '" style="display: inline-block;margin-top: 3px;color: #5e321a;position: relative;float: right;font-size: 12px;">&#124;&nbsp;' + (0 != p ? "$" + TWIR.replSum(p) + (0 != l ? ",&nbsp;" : "") : "") + (0 != l ? TWIR.replSum(l) + "&nbsp;" + TWIRlang.tooltips.items : "") + "</span>", (new west.gui.Selectbox).setHeader(i[o].name.cutIt(16)).setWidth(180).addItem([1, i[o]], '<span style="color: #5e321a;">' + TWIRlang.menulink.window_open + "</span>").addItem([2, i[o]], '<span style="color: #5e321a;">' + TWIRlang.menulink.map_show + "</span>").addItem([3, i[o]], '<span style="color: #5e321a;">' + TWIRlang.menulink.walk + "</span>").addListener(n, this))
                     }
                     return t.addListener(function(e) {
                         var t = e[0];
@@ -3292,12 +3360,9 @@
                                 MarketWindow.Sell.collectAll("Offer");
                                 break;
                             case "premium_offers":
-                                MarketWindow.Sell.collectAll("Sell");
-                                break;
-                            case "town":
-                                Map.center(e[2], e[3])
+                                MarketWindow.Sell.collectAll("Sell")
                         }
-                    }), t.show(e)
+                    }), t.show(e), $(".tw2gui_selectbox_content").find(".tw2gui-icon-arrowright").remove()
                 }
                 return new UserMessage(TWIRlang.informative.error_market + "!").show()
             } catch (e) {
@@ -4021,7 +4086,7 @@
                     })), e.append(R);
                     var w = new west.gui.Checkbox(TWIRlang.organizing.save_permanent, "");
                     void 0 !== localStorage && localStorage.twir_sort ? w.setSelected(!0, !0) : void 0 === localStorage && w.setEnabled(!1);
-                    for (var T = new west.gui.Combobox, W = TWIR.Inventory.getSortBox(), f = 0; f < W.length; f++) T.addItem(W[f].sort, W[f].name);
+                    for (var T = new west.gui.Combobox, f = TWIR.Inventory.getSortBox(), W = 0; W < f.length; W++) T.addItem(f[W].sort, f[W].name);
                     T.select(TWIR.Inventory.data.order[0]);
                     var y = (new west.gui.Combobox).setWidth(90);
                     y.addItem("asc", TWIRlang.organizing.sort_up), y.addItem("desc", TWIRlang.organizing.sort_down), y.select(TWIR.Inventory.data.order[1]), w.setCallback(function() {
@@ -4257,14 +4322,14 @@
                     }
                     var T = $("#twir_sets_other");
                     T.empty();
-                    var W = TWIR.Inventory.getSetsImages(t, "other");
-                    if (3 == W.length) {
-                        var f = $('<img src="' + W[0] + '" style="width: 40px; height: auto;position: absolute;left: -5px; top: 5px;"/>'),
-                            y = $('<img src="' + W[1] + '" style="width: 30px;height: auto;position: absolute;right: -3px;top: -2px;"/>'),
-                            x = $('<img src="' + W[2] + '" style="width: 30px;height: auto;position: absolute;right: -3px;bottom: -2px;"/>');
-                        T.append(f, y, x)
-                    } else if (1 == W.length) {
-                        var V = $('<img src="' + W[0] + '" style="width: 40px;height: auto;position: absolute;left: 5px;top: 5px;"/>');
+                    var f = TWIR.Inventory.getSetsImages(t, "other");
+                    if (3 == f.length) {
+                        var W = $('<img src="' + f[0] + '" style="width: 40px; height: auto;position: absolute;left: -5px; top: 5px;"/>'),
+                            y = $('<img src="' + f[1] + '" style="width: 30px;height: auto;position: absolute;right: -3px;top: -2px;"/>'),
+                            x = $('<img src="' + f[2] + '" style="width: 30px;height: auto;position: absolute;right: -3px;bottom: -2px;"/>');
+                        T.append(W, y, x)
+                    } else if (1 == f.length) {
+                        var V = $('<img src="' + f[0] + '" style="width: 40px;height: auto;position: absolute;left: 5px;top: 5px;"/>');
                         T.append(V)
                     } else {
                         var w = $('<img src="/images/items/unknown.png" style="width: 45px;height: auto;position: absolute;left: 3px;top: 3px;"/>');
@@ -4661,7 +4726,7 @@
                                     }),
                                     k = R.length ? "(" + h.length + "/" + A.items.length + ")" : "(" + A.items.length + ")";
                                 R.length ? 0 : 1;
-                                for (var b = R.length ? "#8b4513" : "#800080", w = R.length ? "#5e321a" : "#800080", T = R.length && 1 === c.length && A.items.length >= 4 ? .5 : 1, W = TWIR.storage.setList.eventIcons[A.key], f = TWIR.storage.setList.eventIcons[A.key] ? TWIR.images.gameEvents[W[0]] : "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7", y = TWIR.storage.setList.eventIcons[A.key] ? "(" + W[1] + ")" : "", x = TWIR.storage.setList.eventIcons[A.key] && !Array.isArray(TWIRlang.keyWords[W[0]]) ? TWIRlang.keyWords[W[0]] : TWIR.storage.setList.eventIcons[A.key] && Array.isArray(TWIRlang.keyWords[W[0]]) ? TWIRlang.keyWords[W[0]][0] : "", V = [], v = [], B = 0; B < c.length; B++) V.push(c[B].obj.item_base_id), "right_arm" === c[B].obj.type && v.push(c[B].obj.item_base_id);
+                                for (var b = R.length ? "#8b4513" : "#800080", w = R.length ? "#5e321a" : "#800080", T = R.length && 1 === c.length && A.items.length >= 4 ? .5 : 1, f = TWIR.storage.setList.eventIcons[A.key], W = TWIR.storage.setList.eventIcons[A.key] ? TWIR.images.gameEvents[f[0]] : "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7", y = TWIR.storage.setList.eventIcons[A.key] ? "(" + f[1] + ")" : "", x = TWIR.storage.setList.eventIcons[A.key] && !Array.isArray(TWIRlang.keyWords[f[0]]) ? TWIRlang.keyWords[f[0]] : TWIR.storage.setList.eventIcons[A.key] && Array.isArray(TWIRlang.keyWords[f[0]]) ? TWIRlang.keyWords[f[0]][0] : "", V = [], v = [], B = 0; B < c.length; B++) V.push(c[B].obj.item_base_id), "right_arm" === c[B].obj.type && v.push(c[B].obj.item_base_id);
                                 for (var S = $.grep(A.items, function(e) {
                                         return $.inArray(e, V) < 0
                                     }), M = S.length > 0 ? "<div style=&quot;color: #8b4513;margin-bottom: 10px;&quot;>" + TWIRlang.tooltips.missing_items + "&nbsp;(" + TWIRlang.invent.toLowerCase() + "):</div>" : "", U = 0; U < S.length; U++) M += S.length > 0 ? "<div><img style=&quot;-webkit-filter: grayscale(100%);filter: grayscale(100%);display: inline-block;position: relative;margin-right: 2px;margin-bottom: 2px;&quot; src=&quot;" + ItemManager.getByBaseId(S[U]).image + "&quot; height=&quot;16&quot; width=&quot;auto&quot;></img><span style=&quot;color: #666;display: inline-block;&quot;>" + ItemManager.getByBaseId(S[U]).name + "</span></div>" : "";
@@ -4688,7 +4753,7 @@
                                     J = TWIR.storage.get("inv_setmenu_full_color") ? b : "#8b4513",
                                     O = TWIR.storage.get("inv_setmenu_empty_opacity") ? T : 1,
                                     D = A.name.escapeHTML();
-                                l(A.name), i.addItem(A.items, '<span title="' + K + '" style="display: inline-block; height: 20px; width: 32px;vertical-align: top;position: relative;"><img style="left: 0px; right: unset;opacity: ' + O + ';display: inline-block;" src="' + u + '" height="20" width="auto"></img><img title="' + x + "&nbsp;" + y + '" style="display: ' + Y + ';right: 0px;bottom: 0px;" src="' + f + '" height="16" width="auto"></img></span><span style="margin-top: 2px;word-wrap: break-word;max-width: 230px;display: inline-block;margin-left: 5px; text-overflow:ellipsis; white-space:nowrap; overflow:hidden;opacity: ' + O + ";color: " + G + ';vertical-align: middle;" title="' + D + '">' + D + '</span><span title="' + M + '" style="display: inline-block;margin-top: 3px;color: ' + J + ";position: relative;font-size: 12px;font-style: italic;float: right;opacity: " + O + ';">' + k + "</span>")
+                                l(A.name), i.addItem(A.items, '<span title="' + K + '" style="display: inline-block; height: 20px; width: 32px;vertical-align: top;position: relative;"><img style="left: 0px; right: unset;opacity: ' + O + ';display: inline-block;" src="' + u + '" height="20" width="auto"></img><img title="' + x + "&nbsp;" + y + '" style="display: ' + Y + ';right: 0px;bottom: 0px;" src="' + W + '" height="16" width="auto"></img></span><span style="margin-top: 2px;word-wrap: break-word;max-width: 230px;display: inline-block;margin-left: 5px; text-overflow:ellipsis; white-space:nowrap; overflow:hidden;opacity: ' + O + ";color: " + G + ';vertical-align: middle;" title="' + D + '">' + D + '</span><span title="' + M + '" style="display: inline-block;margin-top: 3px;color: ' + J + ";position: relative;font-size: 12px;font-style: italic;float: right;opacity: " + O + ';">' + k + "</span>")
                             }
                         }
                         i.addListener(function(e) {
