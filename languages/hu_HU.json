@@ -333,6 +333,8 @@
         "success_load": "Sikeres volt",
         "fb_att": "Támadók",
         "fb_def": "Védők",
-        "joined": "Csatlakozott"
+        "joined": "Csatlakozott",
+        "missing_pos": "Not at the fort",
+        "missing_ali": "Not joined"
     }
 }
