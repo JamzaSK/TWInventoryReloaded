@@ -340,6 +340,8 @@
         "success_load": "Ładowanie pomyślne",
         "fb_att": "Atakujący",
         "fb_def": "Obrońcy",
-        "joined": "Dołączono"
+        "joined": "Dołączono",
+        "missing_pos": "Not at the fort",
+        "missing_ali": "Not joined"
     }
 }
