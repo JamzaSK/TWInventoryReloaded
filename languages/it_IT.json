@@ -339,6 +339,8 @@
         "success_load": "Successo",
         "fb_att": "Attaccanti",
         "fb_def": "Difensori",
-        "joined": "Unito"
+        "joined": "Unito",
+        "missing_pos": "Not at the fort",
+        "missing_ali": "Not joined"
     }
 }
