@@ -335,6 +335,8 @@
         "success_load": "Úspešné",
         "fb_att": "Útočníci",
         "fb_def": "Obranci",
-        "joined": "Pridali sa"
+        "joined": "Pridali sa",
+        "missing_pos": "Not at the fort",
+        "missing_ali": "Not joined"
     }
 }
