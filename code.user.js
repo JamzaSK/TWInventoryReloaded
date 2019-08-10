@@ -683,7 +683,7 @@
                 var r = (new west.gui.Selectbox).setWidth(200).setHeader(TWIRlang.organizing.msg);
                 if ("fort" === a) {
                     var i = t.preBattle.battleData.playerlist;
-                    r.addItem(1, TWIRlang.organizing.msg_fb_ali), r.addItem(2, TWIRlang.informative.missing_pos), 0 != Character.homeTown.alliance_id && r.addItem(3, TWIRlang.informative.missing_ali, TWIRlang.organizing.msg_ali_mem)
+                    r.addItem(1, TWIRlang.organizing.msg_fb_ali), r.addItem(2, TWIRlang.informative.missing_pos), 0 != Character.homeTown.alliance_id && r.addItem(3, TWIRlang.informative.missing_ali, "(" + TWIRlang.organizing.msg_ali_mem + ")")
                 } else if ("town" === a) r.addItem(1, TWIRlang.organizing.msg_town_mem), r.addItem(2, TWIRlang.organizing.msg_town_lead);
                 else if ("ali" === a) r.addItem(1, TWIRlang.organizing.msg_ali_mem), r.addItem(2, TWIRlang.organizing.msg_ali_lead);
                 else if ("cemetery" === a) {
