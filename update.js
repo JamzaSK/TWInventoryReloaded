@@ -1,6 +1,5 @@
 var scriptUpdate={
-    TWIR: '2.161',
+    TWIR: '2.162',
     TWIRrev: '12',
-    TWIRNew: 'Attackers / Defenders option in the message menu (recruitment window) moved to cemetery window, added Not at fort and Absent players option instead'
+    TWIRNew: 'Fixed compatibility with TW-DB, fixed itemlink in chat, Attackers/ Defenders option in the message menu (recruitment window) moved to cemetery window, added Not at fort and Absent players option instead'
 };
-
