@@ -274,7 +274,8 @@
         "premium_offers": "Collect all offers",
         "map_show": "Center position",
         "window_open": "Open window",
-        "walk": "Go there"
+        "walk": "Go there",
+        "market_map": "Market map"
     },
     "ranking": {
         "add_name": "Rank bar",
@@ -337,6 +338,7 @@
         "fb_def": "Defenders",
         "joined": "Joined",
         "missing_pos": "Not at the fort",
-        "missing_ali": "Absent players"
+        "missing_ali": "Absent players",
+        "hide": "Hide"
     }
 }
