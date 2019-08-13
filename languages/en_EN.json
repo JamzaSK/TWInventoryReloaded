@@ -249,7 +249,8 @@
         "pop_set_id": "Show the set ID (key)",
         "fb_count": "Show number of active fort battles",
         "ml_show": "Additional buttons in left UI",
-        "chat_smart": "Smarter chat (URL recognition)"
+        "chat_smart": "Smarter chat (URL recognition)",
+        "mw_status": "Show market scan progress message"
     },
     "keyWords": {
         "xmas": [
