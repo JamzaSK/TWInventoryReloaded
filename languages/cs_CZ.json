@@ -195,7 +195,10 @@
         "last_scan": "Poslední scan",
         "buy_trader": "Zobrazit u obchodníka",
         "import": "Importovat",
-        "export": "Exportovat"
+        "export": "Exportovat",
+        "progress_page": "Zobrazuji stranu",
+        "progress_title": "Skenuji trh",
+        "progress_found": "Viděno"
     },
     "features": {
         "preferences": "Preference",
@@ -247,7 +250,8 @@
         "pop_set_id": "Zobrazit ID každého setu (key)",
         "fb_count": "Zobrazit počet aktivních bitev",
         "ml_show": "Další tlačítka v levém uživatelském rozhraní",
-        "chat_smart": "Chytřejší chat (rozpoznávání URL)"
+        "chat_smart": "Chytřejší chat (rozpoznávání URL)",
+        "mw_status": "Zobrazit zprávu o průběhu skenu trhu"
     },
     "keyWords": {
         "xmas": [
@@ -274,7 +278,8 @@
         "premium_offers": "Vyzvednout všechny prodejní nabídky",
         "map_show": "Centrovat pozici",
         "window_open": "Otevřít okno",
-        "walk": "Jít tam"
+        "walk": "Jít tam",
+        "market_map": "Mapa trhu"
     },
     "ranking": {
         "add_name": "Rank panel",
@@ -337,6 +342,7 @@
         "fb_def": "Obránci",
         "joined": "Připojili se",
         "missing_pos": "Mimo pevnost",
-        "missing_ali": "Nezúčastnění"
+        "missing_ali": "Nezúčastnění",
+        "hide": "Schovat"
     }
 }
