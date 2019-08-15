@@ -195,7 +195,10 @@
         "last_scan": "Τελευταία σάρωση",
         "buy_trader": "Εμφάνιση εμπόρου",
         "import": "Import items",
-        "export": "Export items"
+        "export": "Export items",
+        "progress_page": "Getting page",
+        "progress_title": "Scanning market",
+        "progress_found": "Seen"
     },
     "features": {
         "preferences": "Προτιμήσεις",
@@ -247,7 +250,8 @@
         "pop_set_id": "Show the set ID (key)",
         "fb_count": "Show number of active fort battles",
         "ml_show": "Additional buttons in left UI",
-        "chat_smart": "Smarter chat (URL recognition)"
+        "chat_smart": "Smarter chat (URL recognition)",
+        "mw_status": "Show market scan progress message"
     },
     "keyWords": {
         "xmas": [
@@ -274,7 +278,8 @@
         "premium_offers": "Συλλέξτε όλες τις προσφορές σας",
         "map_show": "Center position",
         "window_open": "Open window",
-        "walk": "Go there"
+        "walk": "Go there",
+        "market_map": "Market map"
     },
     "ranking": {
         "add_name": "Μπάρα κατάταξης",
@@ -337,6 +342,7 @@
         "fb_def": "Defenders",
         "joined": "Joined",
         "missing_pos": "Not at the fort",
-        "missing_ali": "Absent players"
+        "missing_ali": "Absent players",
+        "hide": "Hide"
     }
 }
