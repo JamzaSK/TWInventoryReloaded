@@ -198,7 +198,8 @@
         "export": "Exportovať",
         "progress_page": "Zobrazujem stranu",
         "progress_title": "Skenovanie trhu",
-        "progress_found": "Videné"
+        "progress_found": "Videné",
+        "remove_all": "Odobrať všetky"
     },
     "features": {
         "preferences": "Preferencie",
