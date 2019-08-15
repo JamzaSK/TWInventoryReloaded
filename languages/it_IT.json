@@ -195,7 +195,10 @@
         "last_scan": "Ultima Scansione",
         "buy_trader": "Mostra un venditore",
         "import": "Importa oggetti",
-        "export": "Esporta oggetti"
+        "export": "Esporta oggetti",
+        "progress_page": "Getting page",
+        "progress_title": "Scanning market",
+        "progress_found": "Seen"
     },
     "features": {
         "preferences": "Preferenze",
@@ -247,7 +250,8 @@
         "pop_set_id": "Mostra l'ID del set (chiave)",
         "fb_count": "Mostra il numero delle battaglie ai forti disponibili",
         "ml_show": "Pulsanti aggiuntivi nell'interfaccia a sinistra",
-        "chat_smart": "Chat più funzionale (riconoscimento link)"
+        "chat_smart": "Chat più funzionale (riconoscimento link)",
+        "mw_status": "Show market scan progress message"
     },
     "keyWords": {
         "xmas": [
@@ -278,7 +282,8 @@
         "premium_offers": "Ritira tutte le offerte",
         "map_show": "Centra la posizione",
         "window_open": "Apri finestra",
-        "walk": "Spostati a"
+        "walk": "Spostati a",
+        "market_map": "Market map"
     },
     "ranking": {
         "add_name": "Barra classifiche",
@@ -341,6 +346,7 @@
         "fb_def": "Difensori",
         "joined": "Unito",
         "missing_pos": "Non al forte",
-        "missing_ali": "Giocatori assenti"
+        "missing_ali": "Giocatori assenti",
+        "hide": "Hide"
     }
 }
