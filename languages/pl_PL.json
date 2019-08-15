@@ -198,7 +198,8 @@
         "export": "Eksportuj przedmioty",
         "progress_page": "Getting page",
         "progress_title": "Scanning market",
-        "progress_found": "Seen"
+        "progress_found": "Seen",
+        "remove_all": "Remove all"
     },
     "features": {
         "preferences": "Preferencje",
