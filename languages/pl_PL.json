@@ -195,7 +195,10 @@
         "last_scan": "Ostatni skan",
         "buy_trader": "Pokaż handlarza",
         "import": "Importuj przedmioty",
-        "export": "Eksportuj przedmioty"
+        "export": "Eksportuj przedmioty",
+        "progress_page": "Getting page",
+        "progress_title": "Scanning market",
+        "progress_found": "Seen"
     },
     "features": {
         "preferences": "Preferencje",
@@ -247,7 +250,8 @@
         "pop_set_id": "Pokaż ID zestawu",
         "fb_count": "Pokaż liczbę aktywnych bitew o fort\n",
         "ml_show": "Dodatkowe przyciski po lewo interfejsu",
-        "chat_smart": "Mądrzejszy czat (rozpoznawanie linków)"
+        "chat_smart": "Mądrzejszy czat (rozpoznawanie linków)",
+        "mw_status": "Show market scan progress message"
     },
     "keyWords": {
         "xmas": [
@@ -279,7 +283,8 @@
         "premium_offers": "Zbierz wszystkie sprzedane",
         "map_show": "Scentruj mapę",
         "window_open": "Otwórz okno",
-        "walk": "Idź do"
+        "walk": "Idź do",
+        "market_map": "Market map"
     },
     "ranking": {
         "add_name": "Pasek rankingu",
@@ -341,7 +346,8 @@
         "fb_att": "Atakujący",
         "fb_def": "Obrońcy",
         "joined": "Dołączono",
-        "missing_pos": "Not at the fort",
-        "missing_ali": "Absent players"
+        "missing_pos": "Nie w forcie",
+        "missing_ali": "Brakujący sojusznicy",
+        "hide": "Hide"
     }
 }
