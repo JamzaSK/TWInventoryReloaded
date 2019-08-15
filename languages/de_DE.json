@@ -195,7 +195,10 @@
         "last_scan": "Letzter Scan",
         "buy_trader": "Händler zeigen",
         "import": "Items importieren",
-        "export": "Items exportieren"
+        "export": "Items exportieren",
+        "progress_page": "Getting page",
+        "progress_title": "Scanning market",
+        "progress_found": "Seen"
     },
     "features": {
         "preferences": "Einstellungen",
@@ -247,7 +250,8 @@
         "pop_set_id": "Zeige Set-ID",
         "fb_count": "Zeige Anzahl aktiver Fortkämpfe",
         "ml_show": "Additional buttons in left UI",
-        "chat_smart": "Smarter chat (URL recognition)"
+        "chat_smart": "Smarter chat (URL recognition)",
+        "mw_status": "Show market scan progress message"
     },
     "keyWords": {
         "xmas": [
@@ -272,7 +276,8 @@
         "premium_offers": "Alle Verkäufe abholen",
         "map_show": "Center position",
         "window_open": "Open window",
-        "walk": "Go there"
+        "walk": "Go there",
+        "market_map": "Market map"
     },
     "ranking": {
         "add_name": "Ranglisten-Leiste",
@@ -335,6 +340,7 @@
         "fb_def": "Defenders",
         "joined": "Joined",
         "missing_pos": "Not at the fort",
-        "missing_ali": "Absent players"
+        "missing_ali": "Absent players",
+        "hide": "Hide"
     }
 }
