@@ -198,7 +198,8 @@
         "export": "Exportovat",
         "progress_page": "Zobrazuji stranu",
         "progress_title": "Skenuji trh",
-        "progress_found": "Viděno"
+        "progress_found": "Viděno",
+        "remove_all": "Odebrat všechny"
     },
     "features": {
         "preferences": "Preference",
