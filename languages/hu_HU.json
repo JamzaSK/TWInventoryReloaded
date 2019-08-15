@@ -195,7 +195,10 @@
         "last_scan": "Utolsó keresés",
         "buy_trader": "Mutass egy eladót",
         "import": "Tárgyak importálása",
-        "export": "Tárgyak exportálása"
+        "export": "Tárgyak exportálása",
+        "progress_page": "Getting page",
+        "progress_title": "Scanning market",
+        "progress_found": "Seen"
     },
     "features": {
         "preferences": "Beállítások",
@@ -247,7 +250,8 @@
         "pop_set_id": "Mutasd a szett ID-t",
         "fb_count": "Mutassa az aktív erődharcok számát",
         "ml_show": "További gombok a bal oldali felhasználói felületen",
-        "chat_smart": "Okosabb chat (URL felismerés)"
+        "chat_smart": "Okosabb chat (URL felismerés)",
+        "mw_status": "Show market scan progress message"
     },
     "keyWords": {
         "xmas": [
@@ -272,7 +276,8 @@
         "premium_offers": "Gyűjts be minden vételt",
         "map_show": "Pozíció megjelenítése",
         "window_open": "Ablak megnyitása",
-        "walk": "Menj ide: "
+        "walk": "Menj ide: ",
+        "market_map": "Market map"
     },
     "ranking": {
         "add_name": "Rangsor",
@@ -335,6 +340,7 @@
         "fb_def": "Védők",
         "joined": "Csatlakozott",
         "missing_pos": "Nincs az erődnél",
-        "missing_ali": "Hiányzó játékosok"
+        "missing_ali": "Hiányzó játékosok",
+        "hide": "Hide"
     }
 }
