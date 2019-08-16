@@ -196,10 +196,10 @@
         "buy_trader": "Mostra un venditore",
         "import": "Importa oggetti",
         "export": "Esporta oggetti",
-        "progress_page": "Getting page",
-        "progress_title": "Scanning market",
-        "progress_found": "Seen",
-        "remove_all": "Remove all"
+        "progress_page": "Ottenendo la pagina",
+        "progress_title": "Scansionando il mercato",
+        "progress_found": "Visto",
+        "remove_all": "Rimuovi tutto"
     },
     "features": {
         "preferences": "Preferenze",
@@ -252,7 +252,7 @@
         "fb_count": "Mostra il numero delle battaglie ai forti disponibili",
         "ml_show": "Pulsanti aggiuntivi nell'interfaccia a sinistra",
         "chat_smart": "Chat più funzionale (riconoscimento link)",
-        "mw_status": "Show market scan progress message"
+        "mw_status": "Mostra il messaggio di progresso scansione del mercato"
     },
     "keyWords": {
         "xmas": [
@@ -284,7 +284,7 @@
         "map_show": "Centra la posizione",
         "window_open": "Apri finestra",
         "walk": "Spostati a",
-        "market_map": "Market map"
+        "market_map": "Mappa mercato"
     },
     "ranking": {
         "add_name": "Barra classifiche",
@@ -348,6 +348,6 @@
         "joined": "Unito",
         "missing_pos": "Non al forte",
         "missing_ali": "Giocatori assenti",
-        "hide": "Hide"
+        "hide": "Nascondi"
     }
 }
