@@ -196,10 +196,10 @@
         "buy_trader": "Mostrar comerciante",
         "import": "Importar artículos",
         "export": "Exportar artículos",
-        "progress_page": "Getting page",
-        "progress_title": "Scanning market",
-        "progress_found": "Seen",
-        "remove_all": "Remove all"
+        "progress_page": "Obteniendo página",
+        "progress_title": "Escaneando mercado",
+        "progress_found": "Visto",
+        "remove_all": "Eliminar todo"
     },
     "features": {
         "preferences": "Preferencias",
@@ -252,7 +252,7 @@
         "fb_count": "Mostrar número batallas fuertes actvas",
         "ml_show": "Botones adicionales izquierda de IU",
         "chat_smart": "Chat más inteligente (reconocimiento de URL)",
-        "mw_status": "Show market scan progress message"
+        "mw_status": "Mostrar mensaje de progreso de escaneo de mercado"
     },
     "keyWords": {
         "xmas": [
@@ -280,7 +280,7 @@
         "map_show": "Posición central",
         "window_open": "Abrir ventana",
         "walk": "Ir allí",
-        "market_map": "Market map"
+        "market_map": "Mapa mercado"
     },
     "ranking": {
         "add_name": "Barra rangos",
@@ -342,8 +342,8 @@
         "fb_att": "Atacantes",
         "fb_def": "Defensores",
         "joined": "Ingresado",
-        "missing_pos": "Not at the fort",
-        "missing_ali": "Absent players",
-        "hide": "Hide"
+        "missing_pos": "No en el fuerte",
+        "missing_ali": "Jugadores ausentes",
+        "hide": "Esconder"
     }
 }
