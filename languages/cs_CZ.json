@@ -63,7 +63,8 @@
         "subcat": "Podkategorie",
         "property": "Vlastnosti",
         "item_type": "Typ",
-        "combined": "Kombinované"
+        "combined": "Kombinované",
+        "regen": "Regenerace"
     },
     "tooltips": {
         "jobdrop": "Lze najít při práci",
