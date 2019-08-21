@@ -63,7 +63,8 @@
         "subcat": "Subcategoría",
         "property": "Artículo poseído",
         "item_type": "Tipo",
-        "combined": "Combinado"
+        "combined": "Combinado",
+        "regen": "Regeneration"
     },
     "tooltips": {
         "jobdrop": "Obtenibles desde trabajos",
