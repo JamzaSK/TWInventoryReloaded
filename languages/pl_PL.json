@@ -63,7 +63,8 @@
         "subcat": "Podkategoria",
         "property": "Właściwości przedmiotu",
         "item_type": "Typ",
-        "combined": "Ulepszone"
+        "combined": "Ulepszone",
+        "regen": "Regeneration"
     },
     "tooltips": {
         "jobdrop": "Znalezione w pracy",
