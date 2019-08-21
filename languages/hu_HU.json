@@ -63,7 +63,8 @@
         "subcat": "Alkategória",
         "property": "Tárgy tulajdonsága",
         "item_type": "Típus",
-        "combined": "Kombinált"
+        "combined": "Kombinált",
+        "regen": "Regeneration"
     },
     "tooltips": {
         "jobdrop": "Munkából található",
