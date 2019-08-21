@@ -63,7 +63,8 @@
         "subcat": "Υποκατηγορία",
         "property": "Ιδιότητα Αντικειμένου",
         "item_type": "Τύπος",
-        "combined": "combined"
+        "combined": "combined",
+        "regen": "Regeneration"
     },
     "tooltips": {
         "jobdrop": "Από την εργασία",
