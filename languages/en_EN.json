@@ -63,7 +63,8 @@
         "subcat": "Subcategory",
         "property": "Item property",
         "item_type": "Type",
-        "combined": "combined"
+        "combined": "combined",
+        "regen": "Regeneration"
     },
     "tooltips": {
         "jobdrop": "Droppable from job",
