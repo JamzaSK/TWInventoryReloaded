@@ -63,7 +63,8 @@
         "subcat": "Podkategórie",
         "property": "Vlastnosti",
         "item_type": "Typ",
-        "combined": "Kombinované"
+        "combined": "Kombinované",
+        "regen": "Regenerácia"
     },
     "tooltips": {
         "jobdrop": "Dá sa nájsť pri práci",
