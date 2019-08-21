@@ -63,7 +63,8 @@
         "subcat": "Unterkategorie",
         "property": "Eigenschaft",
         "item_type": "Slot",
-        "combined": "Kombiniert"
+        "combined": "Kombiniert",
+        "regen": "Regeneration"
     },
     "tooltips": {
         "jobdrop": "Findbar",
