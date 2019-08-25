@@ -344,5 +344,24 @@
         "missing_pos": "Not at the fort",
         "missing_ali": "Absent players",
         "hide": "Hide"
+    },
+    "calc": {
+        "regen": "Regeneration",
+        "pray": "Praying",
+        "speed": "Speed",
+        "lp": "Labor points",
+        "xp": "Experience",
+        "dollar": "Income",
+        "luck": "Luck",
+        "drop": "Drop chance",
+        "attack": "Attack",
+        "defense": "Defense",
+        "attack_bonus": "Attack",
+        "defense_bonus": "Defense",
+        "damage": "Damage",
+        "resistance": "Resistance",
+        "health": "HP",
+        "find_eq": "Find equipment",
+        "equip": "Equip"
     }
 }
