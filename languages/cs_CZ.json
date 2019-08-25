@@ -350,23 +350,23 @@
     "calc": {
         "regen": "Regeneration",
         "pray": "Praying",
-        "speed": "Speed",
-        "lp": "Labor points",
-        "xp": "Experience",
         "dollar": "Income",
         "luck": "Luck",
         "drop": "Drop chance",
         "attack": "Attack",
         "defense": "Defense",
-        "attack_bonus": "Attack",
-        "defense_bonus": "Defense",
-        "damage": "Damage",
-        "resistance": "Resistance",
         "health": "HP",
         "find_eq": "Find equipment",
         "equip": "Equip",
         "fb": "Fortbattle bonus",
         "js": "Jobs and skills",
-        "ob": "Other bonuses"
+        "ob": "Other bonuses",
+        "ms": "Speed",
+        "job": "Labor points",
+        "experience": "Experience",
+        "fort_attack": "Attack",
+        "fort_defense": "Defense",
+        "fort_damage_sector": "Damage",
+        "fort_resistance": "Resistance"
     }
 }
