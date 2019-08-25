@@ -364,6 +364,9 @@
         "resistance": "Resistance",
         "health": "HP",
         "find_eq": "Find equipment",
-        "equip": "Equip"
+        "equip": "Equip",
+        "fb": "Fortbattle bonus",
+        "js": "Jobs and skills",
+        "ob": "Other bonuses"
     }
 }
