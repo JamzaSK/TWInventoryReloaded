@@ -359,12 +359,13 @@
         "fb": "Fortbattle bonus",
         "js": "Jobs and skills",
         "ob": "Other bonuses",
-        "ms": "Speed",
+        "ms": "Movement speed",
         "job": "Labor points",
         "experience": "Experience",
         "fort_attack": "Attack",
         "fort_defense": "Defense",
         "fort_damage_sector": "Damage",
-        "fort_resistance": "Resistance"
+        "fort_resistance": "Resistance",
+        "speed": "Speed"
     }
 }
