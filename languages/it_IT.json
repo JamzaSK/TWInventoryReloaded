@@ -360,7 +360,7 @@
         "attack": "Attacco",
         "defense": "Difesa",
         "health": "Punti vita",
-        "find_eq": "Cerca equipaggiamento",
+        "find_eq": "Cerca",
         "equip": "Equipaggia",
         "fb": "Bonus battaglia ai forti",
         "js": "Lavori e abilità",
@@ -368,10 +368,13 @@
         "ms": "Velocità",
         "job": "Punti lavoro",
         "experience": "Esperienza",
-        "fort_attack": "Attacco",
+        "fort_offense": "Attacco",
         "fort_defense": "Difesa",
         "fort_damage_sector": "Danno",
         "fort_resistance": "Resistenza",
-        "speed": "Speed"
+        "speed": "Velocità",
+        "total": "Total",
+        "bonuses": "Bonuses",
+        "plus_buffs": "+ buffs"
     }
 }
