@@ -351,8 +351,8 @@
         "dollar": "Income",
         "luck": "Luck",
         "drop": "Drop chance",
-        "attack": "Attack",
-        "defense": "Defense",
+        "attack": "Attacker",
+        "defense": "Defender",
         "health": "HP",
         "find_eq": "Find equipment",
         "equip": "Equip",
@@ -370,7 +370,7 @@
         "total": "Total",
         "bonuses": "Bonuses",
         "plus_buffs": "+ buffs",
-        "add_name": "Top Wear",
+        "add_name": "Best Wear",
         "bonus_count_title": "Bonuses from items and sets",
         "result_menu_title": "Other combinations"
     }
