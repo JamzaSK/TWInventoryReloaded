@@ -364,10 +364,13 @@
         "ms": "Velocidad",
         "job": "Puntos trabajo",
         "experience": "Experiencia",
-        "fort_attack": "Ataque",
+        "fort_offense": "Ataque",
         "fort_defense": "Defensa",
         "fort_damage_sector": "Daño",
         "fort_resistance": "Resistencia",
-        "speed": "Speed"
+        "speed": "Speed",
+        "total": "Total",
+        "bonuses": "Bonuses",
+        "plus_buffs": "+ buffs"
     }
 }
