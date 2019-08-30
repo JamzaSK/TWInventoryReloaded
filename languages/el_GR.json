@@ -131,7 +131,11 @@
         "msg_town_lead": "Town leaders",
         "msg_ali_mem": "Alliance members",
         "msg_ali_lead": "Alliance leaders",
-        "msg_world": "Whole world"
+        "msg_world": "Whole world",
+        "allitems": "All items",
+        "setitems": "Set items",
+        "yield": "Products",
+        "recipe": "Recipes"
     },
     "stats": {
         "stats": "Στατιστικά",
@@ -372,7 +376,7 @@
         "total": "Total",
         "bonuses": "Bonuses",
         "plus_buffs": "+ buffs",
-        "add_name": "Best Wear",
+        "add_name": "Dressing helper",
         "bonus_count_title": "Bonuses from items and sets",
         "result_menu_title": "Other combinations",
         "equipment_number": "Equipment $1"
