@@ -378,6 +378,7 @@
         "plus_buffs": "+ potenziamenti",
         "add_name": "Miglior equipaggiamento",
         "bonus_count_title": "Bonus da oggetti e set",
-        "result_menu_title": "Altre combinazioni"
+        "result_menu_title": "Altre combinazioni",
+        "equipment_number": "Equipment $1"
     }
 }
