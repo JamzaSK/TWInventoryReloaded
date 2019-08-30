@@ -377,8 +377,9 @@
         "total": "Total",
         "bonuses": "Bonuses",
         "plus_buffs": "+ buffs",
-        "add_name": "Dressing helper",
+        "add_name": "Best Wear",
         "bonus_count_title": "Bonuses from items and sets",
-        "result_menu_title": "Other combinations"
+        "result_menu_title": "Other combinations",
+        "equipment_number": "Equipment $1"
     }
 }
