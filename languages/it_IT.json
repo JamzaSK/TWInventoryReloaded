@@ -131,7 +131,11 @@
         "msg_town_lead": "Capi città",
         "msg_ali_mem": "Alleati",
         "msg_ali_lead": "Capi alleanza",
-        "msg_world": "Mondo intero"
+        "msg_world": "Mondo intero",
+        "allitems": "All items",
+        "setitems": "Set items",
+        "yield": "Products",
+        "recipe": "Recipes"
     },
     "stats": {
         "stats": "Statistiche",
@@ -379,6 +383,6 @@
         "add_name": "Miglior equipaggiamento",
         "bonus_count_title": "Bonus da oggetti e set",
         "result_menu_title": "Altre combinazioni",
-        "equipment_number": "Equipment $1"
+        "equipment_number": "Equipaggiamento $1"
     }
 }
