@@ -366,7 +366,6 @@
         "defense": "Defender",
         "health": "HP",
         "find_eq": "Find equipment",
-        "equip": "Equip",
         "fb": "Fortbattle bonus",
         "js": "Jobs and skills",
         "ob": "Other bonuses",
@@ -384,6 +383,7 @@
         "add_name": "Dressing helper",
         "bonus_count_title": "Bonuses from items and sets",
         "result_menu_title": "Other combinations",
-        "equipment_number": "Equipment $1"
+        "equipment_number": "Equipment $1",
+        "show_inv": "Show in the inventory"
     }
 }
