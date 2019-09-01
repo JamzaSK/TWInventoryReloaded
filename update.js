@@ -1,5 +1,5 @@
 var scriptUpdate={
-    TWIR: '2.165',
+    TWIR: '2.166',
     TWIRrev: '12',
-    TWIRNew: 'Compatibility with TW Kappa, better tooltip for item set menu.'
+    TWIRNew: 'First javascript calculator for items in your inventory - all bonuses available. Added Regeneration under buffs. Lot of bugfixes.'
 };
