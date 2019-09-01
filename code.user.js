@@ -17,7 +17,7 @@
 // @description:hu Jobb felszerelés és eszközök a The West-hez!
 
 // @author Jamza (CZ14)
-// @version 2.165
+// @version 2.166
 // @license GPL-3.0
 
 // @include https://*.the-west.*/game.php*
@@ -67,7 +67,7 @@
     var script = document.createElement("script");
     script.setAttribute("type", "application/javascript"), script.textContent = "(" + function() {
         TWIRlang = {}, TWIR = {
-            version: "2.165",
+            version: "2.166",
             name: "TW Inventory Reloaded",
             author: "Jamza",
             minGame: "2.04",
@@ -142,6 +142,10 @@
                 }
             },
             images: {
+                w_switch_1: "data:image/png;base64,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",
+                w_switch_2: "data:image/png;base64,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",
+                skill_universal: "data:image/png;base64,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",
+                skill_universal_nocount: "data:image/png;base64,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",
                 buy: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAKCAYAAABrGwT5AAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4gcQEzsui2VkeAAAAe9JREFUKM+NkU9IU3EAx79v7+Wc05m2jccT1MlKcy4qxIRuFrZLJaGsQ/+oDp3yEEIWYhG16KyBQYgNYoEReKl0gpfcwmazZzFlbW9lq2Xtvene+r3ettelOhhRn8v39OX75fulAODy0aZDtdYyTwlDY2llfcigp58Mel/H8Q+YW2d2XNrTbL3OtriwybAZTmHu9vso/xWAefBYM/spTY7klMJd73RC2WjW2TljP7fzMAKTD2IdPb0+/8zsvKZplQAgZVW2rbF6uNZi8J3YX2f5I9liri7VtCI+psmKkJIDHl+kwmmrTF472TK6nlO5bfUsHNsrul4sRBpoHXVqdFJ4+ctMuVrZp54L7k4T54C8GkNamIO49g1VJgPoEiOKeQIdU4qyKg58OCTOvvkycOdxfBgA6Ggye3/k4fNoMPBM57DINfb2Hj1ZXULknQSFEABFMFCxJqbAC5mYmFX94bcSDwD0vb62EUlWhc8SGQrHpPqDHa3OYoFgJhQ/zwuZZRtrbM/IKqZCqUcpSeke8yeCv2tPXNmrNezuBJGSeUZfTpVb7XRoaiztvhHcctZl22U26efF7PebOaUw4J1O5DeOdq63a+vyq/GL2uLEVa3f3fQBgBsA+robrcf31R3428/UT60BcBoADWAcwCL+gx+jK8wUQ17oPQAAAABJRU5ErkJggg==",
                 sell: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAKCAYAAABrGwT5AAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4gcQEzsb3dagWwAAAitJREFUKM91kltIU3EAxr//ztnO3OY2p7M52URqudSJ6JwSUdHD8sUKKro8ar4U6EMFXYiCCKOICI0KpGElZkgIveRwuYK8IC1TVlpNZ7OzdLp5Oaet3U4vq6f6wff4PXz8PgIAF4+a9xnzZW0SmsLMwkZ7FkMNXH7sncO/IZmk6RtNFRdqS/Ov6crrIc5Sw+Ifvxf4OrUCIE+rYhhC0LR9W27YVJj96mbfzBIA6k9ZtEUvP6+v3I8RZ+/snsOtTwfdwx5BEFRaFaOVS6leqynnrtmg7Ilw8UIAOFFfbAGQBABam6eRCkIawXBswaRXXDn3cEpKCCzlRUp3WZGqtKFOD5oicDj9T/ZWb9rwsZyqobZg+MVYsInUW3UDbaeP2JX6MvChWXhGXMFnbwIaszGbsVfpwIgpcLEk1vkE1vg4VHIJ1vg4Tna8JwSACMBxW4nm4PVGS5XBesjo6ncAAGpsNvyMsEgnYxDRUqTiPCiJHKk4j91nXIR6dNb2YJVP+JdWYx3sclS+s65yR45MwKXO0SE6GSneutkAIZVCt9M7/fHbms8zsxid+8GNj35a6abVcnFz+9VTzbFVNkkzCiKWqTE/5wuz4Zi9a3D+lo/lWnZV5IMRU8fu9H+ZaD1gqrz9/PMHAKB63IFFcfR7SU11lZaSKkRdjk629f5ES/RXairCJV4ur8ffiQiZLMiVvn09GeLGpsOhjK40yYgvBNCY2d8HwIv/8/ckvwE/oNchAMDWrgAAAABJRU5ErkJggg==",
                 statsIcon: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAIcAAACHAB84R9TAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAMgSURBVDiNTZLNaxxlAMZ/874z78xmspvdZTcN22oTStJaK2kES+LBKmpBsb0oghfxIILoIX+BNz156NWLf0RBpSBEJVgUxWoIscnma/PRzcdu9jM7OzPvOx7amDzn5wOe57E4hQLypeHhS5mhgXHXFufiUDta6ziMwma73V0/aHWXgT3gGEgArKfiAaXU6K03br45PXntdhx0rjXqtWK91ky0jnRiTK/Tba1uVQ/nljb27wVxvAA0ASMBpZQae/f2Wx/Ofv7pbLvdvnLv/o/e3IO/wsXyRlzeemz2603lu7I0knMnU0qU9lvdijHUgb4Eii9df/7ORx+8P7tR2c1/+fXdaPFRORJWbFwlEm202au3o+2DhpGWcUeH/SsG2z5s9laAQ5lLpydfm576pFWvX777zbdR9eAwBuIvPp62v/rsFX9yvJh8N7/ei7UxjW6I79qylPdKnUDvdoJoReSy/oSDfuH+z/PJfq2ugRiIlJ8xXraASg8hLDQQhZHurzxuRyRki1nvBnDetq1kpNNp5Td3qxFwYmDcTBZ/uEQq1zvpOgGio04Q9o1I+Z57ASjZ/TBKHdXrIgojnoo1gBpM4+ULuJkaCM5CG5zQVbaSkBZxHNLv96zkSUxyyrOwsM4sfYpMZkgoN5UAUmidtDE6SKccwZMsCyDudggbR0TtFpgzb1OOzOdydqBpa+iLXhRthlFUGS36ti2Fc2LQbx7R3dslaNT+P52Uwnn5+lV3MDUQbFdrFaAp+6F2PNd55nwu9ZwtLdXsRok2iWm1jpO/l3bi+T9Ww9XtIyOldF68OuG9fXPaWyivLz5cWv1VG/OPBMJWN0w813l2opS5OJiy7W6gRXm7oRfK+3ptp2EppdzXZ6ZS77w6k1qpbK99/9Nvc71++BB4ZAESGHWEuDU2knlv/EJuypaeH+EIY0kz6A9Y5wr5JJ/L9JY3dlZ++OX3B63O8QLwJ7B8UrEHXARuFIYGZkqF7OViLpvzfR8hZXwcBJ3N6uHO1u7++nEQrgH/AmWgfnYjBQwDl4AxISiAsIEEY/oGWkAVqAA7QBuI/wN+W4K0dZ6l0QAAAABJRU5ErkJggg==",
@@ -277,8 +281,7 @@
                 crafting_all: []
             },
             setList: {
-                eventIcons: {},
-                ownedSetItems: []
+                eventIcons: {}
             },
             find_LimitedPrices: function() {
                 void 0 !== localStorage && void 0 !== localStorage.twir_limitedSale && (TWIR.storage.popups.shop_limited_prices = JSON.parse(localStorage.twir_limitedSale))
@@ -503,7 +506,7 @@
             },
             showSelect: function(e) {
                 var t = (new west.gui.Selectbox).setWidth(250).setHeader("Inventory Reloaded");
-                return t.addItem(1, '<span style="color: #5e321a; display: inline-block; margin-left: 5px;">' + TWIRlang.features.preferences + "</span>"), t.addItem(3, '<span style="color: #5e321a; display: inline-block; margin-left: 5px;">' + TWIRlang.market_watcher.add_name + "</span>"), t.addItem(2, '<span style="color: #5e321a; display: inline-block; margin-left: 5px;">' + TWIRlang.donate_title + "</span>"), t.addListener(function(e) {
+                return t.addItem(1, '<span style="color: #5e321a; display: inline-block; margin-left: 5px;">' + TWIRlang.features.preferences + "</span>"), t.addItem(3, '<span style="color: #5e321a; display: inline-block; margin-left: 5px;">' + TWIRlang.market_watcher.add_name + "</span>"), t.addItem(4, '<span style="color: #5e321a; display: inline-block; margin-left: 5px;">' + TWIRlang.calc.add_name + "</span>"), t.addItem(2, '<span style="color: #5e321a; display: inline-block; margin-left: 5px;">' + TWIRlang.donate_title + "</span>"), t.addListener(function(e) {
                     switch (e) {
                         case 1:
                             TWIR.menu.open("Features");
@@ -512,7 +515,10 @@
                             TWIR.menu.open("Donate");
                             break;
                         case 3:
-                            MarketWindow.open(), MarketWindow.showTab("twir_mw"), MarketWindow.window.setTitle(TWIRlang.market_watcher.add_name), TWIR.marketWatcher.openMWTab()
+                            MarketWindow.open(), MarketWindow.showTab("twir_mw"), MarketWindow.window.setTitle(TWIRlang.market_watcher.add_name), TWIR.marketWatcher.openMWTab();
+                            break;
+                        case 4:
+                            TWIR.calc.show()
                     }
                 }), t.show(e)
             },
@@ -565,10 +571,10 @@
                                 }), location.reload()
                             } else new UserMessage(TWIRlang.informative.storage_error + "!", UserMessage.TYPE_ERROR).show()
                         }),
-                        m = $('<div style="margin-top: 10px;"/>'),
-                        d = $('<span style="position: absolute;right: 50px;bottom: 5px;"/>'),
+                        d = $('<div style="margin-top: 10px;"/>'),
+                        m = $('<span style="position: absolute;right: 50px;bottom: 5px;"/>'),
                         u = $('<span style="position: absolute;left: 20px;bottom: 5px;font-size: 10px;">' + TWIR.getStorage() + "</span>");
-                    d.append(g.getMainDiv()), m.append(u, d), $(TWIR.menu.gui.window.getContentPane()).append(e.getMainDiv()).append(m)
+                    m.append(g.getMainDiv()), d.append(u, m), $(TWIR.menu.gui.window.getContentPane()).append(e.getMainDiv()).append(d)
                 } catch (e) {
                     TWIR.bugHunt(e)
                 }
@@ -596,7 +602,7 @@
             }), EventHandler.listen("char_forts_changed", function() {
                 TWIR.checkForts()
             }), EventHandler.listen("inventory_ready", function() {
-                TWIR.fillFilters(), TWIR.Inventory.init(), TWIR.statsQuantities(), TWIR.statsSalesValue()
+                TWIR.initItems(), TWIR.Inventory.init(), TWIR.statsQuantities(), TWIR.statsSalesValue()
             }), EventHandler.listen("inventory_changed", function() {
                 TWIR.statsQuantities(), TWIR.statsSalesValue()
             }, Inventory), EventHandler.listen("questemployer_changed", function(e, t) {
@@ -619,18 +625,21 @@
             addBestClothes4Build: function() {
                 try {
                     var matchWindow = JobWindow.prototype.__twdb__getBestWearButton || JobWindow.prototype.getBestWearButton,
-                        obl = new RegExp(/<span>'\+'(.*?)'\+'<\/span>/, "g").exec(matchWindow.toString())[1],
-                        title = new RegExp(/title="'\+\n'(.*?)'\+'">/, "g").exec(matchWindow.toString())[1],
-                        button = $('<div style="height: 55px;"><div class="job_bestwearbutton" title="' + title + '"><span>' + obl + "</span></div></div>");
+                        mWStringed = matchWindow.toString(),
+                        obl = new RegExp(/<span>'\+(.*?)\+'<\/span>/, "g").exec(mWStringed);
+                    obl && obl[1] && (obl = obl[1].match(/'(.*?)'/)[1]);
+                    var title = new RegExp(/title="'\+[\w\W]*'">/, "g").exec(mWStringed);
+                    title && title[0] ? (title = title[0].match(/'(.*?)'/)[1], title.match(/<b>(.*)<\/b>/) && (title = title.match(/<b>(.*)<\/b>/)[0].replace(":", ""))) : title = "???";
+                    var button = $('<div style="height: 55px;"><div class="job_bestwearbutton" title="' + title.escapeHTML() + '"><span>' + obl + "</span></div></div>");
                     BuildWindow.twir_init = BuildWindow.twir_init || BuildWindow.init;
                     var oldBuild = BuildWindow.twir_init.toString();
-                    oldBuild = oldBuild.replace(/\+'\<div class\="build_left_divider" \/\>'\+'\<div class\="build_skills" \/\>'/, "+'<div class=\"build_skills\" />'+'<div class=\"twir_bestwear\" />'"), oldBuild = oldBuild.replace(/this\.initInfo\(data\);/, "$&BuildWindow.twir_bestWear(this, data);"), eval("BuildWindow.init = " + oldBuild), BuildWindow.twir_bestWear = function(e, t) {
+                    oldBuild = oldBuild.replace(/'\<div class\="build_left_divider" \/\>'\+/, "").replace(/'\<div class\="build_skills" \/\>'\+/, "'<div class=\"build_skills\" />'+'<div class=\"twir_bestwear\" />'+"), oldBuild = oldBuild.replace(/this\.initInfo\(data\);/, "$&BuildWindow.twir_bestWear(this, data);"), eval("BuildWindow.init = " + oldBuild), BuildWindow.twir_bestWear = function(e, t) {
                         var a = e;
                         a.window.$("div.twir_bestwear").append(button.click(function(e) {
                             for (var a = t.build_skills.skills, i = {}, r = 0; r < a.length; r++) i[a[r].skill] = a[r].coefficient;
                             ! function(e) {
                                 var t = function() {
-                                    return Bag.searchBest(e, !0, !0), EventHandler.ONE_TIME_EVENT
+                                    return Bag.searchBest(e, null, !0), EventHandler.ONE_TIME_EVENT
                                 }.bind(this);
                                 wman.getById(Inventory.uid) ? (t(), wman.getById(Wear.uid) || Wear.open()) : (EventHandler.listen("inventory_ready", t), Wear.open())
                             }(i)
@@ -751,21 +760,21 @@
                                 TWIR.otherEnhacements.getTownMem(g, 0);
                                 break;
                             case 2:
-                                var m = A.filter(function(e) {
+                                var d = A.filter(function(e) {
                                     if (1 !== e.member_right) return e.town_id
                                 }).map(function(e) {
                                     return e.town_id
                                 });
-                                TWIR.otherEnhacements.getTownMem(m, 1)
+                                TWIR.otherEnhacements.getTownMem(d, 1)
                         }
                     } else if ("cemetery" === a) switch (e) {
                         case 1:
-                            var d = n.filter(function(e) {
+                            var m = n.filter(function(e) {
                                 if (e.name !== Character.name) return e.name
                             }).map(function(e) {
                                 return e.name
                             });
-                            TWIR.otherEnhacements.sendMessage(d);
+                            TWIR.otherEnhacements.sendMessage(m);
                             break;
                         case 2:
                             var u = o.filter(function(e) {
@@ -776,12 +785,12 @@
                             TWIR.otherEnhacements.sendMessage(u);
                             break;
                         case 3:
-                            var I = s.filter(function(e) {
+                            var h = s.filter(function(e) {
                                 if (e.name !== Character.name) return e.name
                             }).map(function(e) {
                                 return e.name
                             });
-                            TWIR.otherEnhacements.sendMessage(I)
+                            TWIR.otherEnhacements.sendMessage(h)
                     }
                 }), i.show(e[0])
             },
@@ -822,9 +831,9 @@
                 }
                 addCss(), AllianceWindow.twir_Overviewinit = AllianceWindow.twir_Overviewinit || AllianceWindow.Overviewinit;
                 var newOver = AllianceWindow.twir_Overviewinit.toString();
-                newOver = newOver.replace(/\.addColumn\("bnd_town_points"\)/, '$&.addColumn("twir_town_joined")'), newOver = newOver.replace(/\.appendToThCell\("head","bnd_town_points",'(.*?)','&nbsp;'\)/, '$&.appendToThCell("head", "twir_town_joined", TWIRlang.informative.joined, \'&nbsp;\');'), eval("AllianceWindow.Overviewinit = " + newOver), AllianceWindow.twir_OverviewUpdateTable = AllianceWindow.twir_OverviewUpdateTable || AllianceWindow.OverviewUpdateTable;
+                newOver = newOver.replace(/\.addColumn\("bnd_town_points"\)/, '$&.addColumn("twir_town_joined")'), newOver = newOver.replace(/\.appendToThCell\("head","bnd_town_points",\s{0,1}(.*?),\s{0,1}'&nbsp;'\)/, '$&.appendToThCell("head", "twir_town_joined", TWIRlang.informative.joined, \'&nbsp;\');'), eval("AllianceWindow.Overviewinit = " + newOver), AllianceWindow.twir_OverviewUpdateTable = AllianceWindow.twir_OverviewUpdateTable || AllianceWindow.OverviewUpdateTable;
                 var upTable = AllianceWindow.twir_OverviewUpdateTable.toString();
-                upTable = upTable.replace(/tmpCells\['bnd_town_points'\]\=rd\.town_points;/, "$&var joined=(new Date()-new Date(Number(rd.join_date)*1000));tmpCells['twir_town_joined']='<span title=\"'+Number(rd.join_date).getFormattedTimeString4Timestamp()+'&nbsp;('+TWIR.timeSince(new Date(Date.now()-joined))+')\">'+TWIR.timeSince(new Date(Date.now()-joined))+'</span>';"), upTable = upTable.replace(/this\.overviewTable\.buildRow\('bnd_towns',tmpCells\);\}/, '$&this.window.$(\'div.row_foot div.bnd_town_points\').empty();this.overviewTable.appendToFooter("bnd_town_points", $(\'<div id="twir_msg_ali"><img title="\'+TWIRlang.organizing.msg+\'" src="/images/window/friendslist/mail_icon.png?1" alt="" style="height: 18px;cursor: pointer;"/></div>\').click(function(){TWIR.otherEnhacements.getMessageMenu(arguments, towns, "ali");}))'), eval("AllianceWindow.OverviewUpdateTable = " + upTable), AllianceWindow.twir_OverviewinitCont = AllianceWindow.twir_OverviewinitCont || AllianceWindow.OverviewinitCont;
+                upTable = upTable.replace(/tmpCells\['bnd_town_points'\]\s{0,}\=\s{0,1}rd\.town_points;/, "$&var joined=(new Date()-new Date(Number(rd.join_date)*1000));tmpCells['twir_town_joined']='<span title=\"'+Number(rd.join_date).getFormattedTimeString4Timestamp()+'&nbsp;('+TWIR.timeSince(new Date(Date.now()-joined))+')\">'+TWIR.timeSince(new Date(Date.now()-joined))+'</span>';"), upTable = upTable.replace(/this\.overviewTable\.buildRow\('bnd_towns',\s{0,1}tmpCells\);\n{0,1}\s{0,}\}/, '$&this.window.$(\'div.row_foot div.bnd_town_points\').empty();this.overviewTable.appendToFooter("bnd_town_points", $(\'<div id="twir_msg_ali"><img title="\'+TWIRlang.organizing.msg+\'" src="/images/window/friendslist/mail_icon.png?1" alt="" style="height: 18px;cursor: pointer;"/></div>\').click(function(){TWIR.otherEnhacements.getMessageMenu(arguments, towns, "ali");}))'), eval("AllianceWindow.OverviewUpdateTable = " + upTable), AllianceWindow.twir_OverviewinitCont = AllianceWindow.twir_OverviewinitCont || AllianceWindow.OverviewinitCont;
                 var buttonPos = AllianceWindow.twir_OverviewinitCont.toString();
                 buttonPos = buttonPos.replace(/this\.window\.\$\('div\.ally\-overview'\)\.append\(change_btn\.getMainDiv\(\)\);/, 'this.window.$(\'div.ally-overview\').append($(change_btn.getMainDiv()).css({"left":"350px"}));'), eval("AllianceWindow.OverviewinitCont = " + buttonPos), AllianceWindow.twir_calcCoord4Worldmap = function(e) {
                     return {
@@ -853,7 +862,7 @@
                     return $('<span class="ally_legendbox_' + e + '"' + (a ? ' title="' + a.escapeHTML() + '"' : "") + '>&nbsp;<img src="/images/map/minimap/icons/miniicon_' + e + '.png" />&nbsp;' + t + "</span>")
                 }, AllianceWindow.twir_MapInit = AllianceWindow.twir_MapInit || AllianceWindow.MapInit;
                 var aliMap = AllianceWindow.twir_MapInit.toString();
-                aliMap = aliMap.replace(/map\.appendArray\(createAlliPoints4Alliancemap\(towns,'towns',offset\)\)\.appendArray\(createAlliPoints4Alliancemap\(forts,'forts',offset\)\)\.append\(createPosPoint4Alliancemap\(offset\)\);/, "map.appendArray(AllianceWindow.twir_createAlliPoints4Alliancemap(towns,'towns',offset)).appendArray(AllianceWindow.twir_createAlliPoints4Alliancemap(forts,'forts',offset)).append(AllianceWindow.twir_createPosPoint4Alliancemap(offset));"), eval("AllianceWindow.MapInit=(function(){ var createLegendBox=AllianceWindow.twir_createLegendBox; return " + aliMap + "})();")
+                aliMap = aliMap.replace(/createAlliPoints4Alliancemap/g, "AllianceWindow.twir_createAlliPoints4Alliancemap").replace(/createPosPoint4Alliancemap/, "AllianceWindow.twir_createPosPoint4Alliancemap"), eval("AllianceWindow.MapInit=(function(){ var createLegendBox=AllianceWindow.twir_createLegendBox; return " + aliMap + "})();")
             },
             getRanks: function(e) {
                 var t = Chat.Resource.Manager.getRooms();
@@ -865,7 +874,7 @@
             },
             addMsgToFb: function() {
                 var newfunction = FortBattleWindow.infoareaNavigation.toString();
-                newfunction = newfunction.replace(/if\(nav\[match\[1\]\].func\)that\[nav\[match\[1\]\].func\]\(\);/, "$&if(nav[match[1]].func&&nav[match[1]].func==='updateRecruitlist')that.twir_updateRecruitlist_msg();"), eval("FortBattleWindow.infoareaNavigation = " + newfunction), FortBattleWindow.twir_updateRecruitlist_msg = function() {
+                newfunction = newfunction.replace(/if\(nav\s{0,1}\[match\[1\]\].func\)\s{0,1}that\[nav\[match\[1\]\].func\]\(\);/, "$&if(nav[match[1]].func&&nav[match[1]].func==='updateRecruitlist')that.twir_updateRecruitlist_msg();"), eval("FortBattleWindow.infoareaNavigation = " + newfunction), FortBattleWindow.twir_updateRecruitlist_msg = function() {
                     try {
                         var e = this,
                             t = e.window.$("div.row_foot div.cell_6");
@@ -882,7 +891,7 @@
                     return function(t) {
                         return e.length && $(".battle_okh", t).attr("title", e.join(", ")), t
                     }
-                }, CWi = CWi.replace(/\$\('div\.footer',CemeteryWindow\.DOM\)\.empty\(\)\.append\(txfight\+"\<\/br\>",txdied\+"\<\/br\>",data\.maneuver\?'(.*?)'\:"\<a href\='javascript\:CemeteryWindow\.init\(\);'\>"\+'(.*?)'\+"\<\/a\>"\)/, '$&.append($(\'<div style="position: absolute; right: 15px; bottom: 5px;"><img title="\' + TWIRlang.organizing.msg + \'" src="/images/window/friendslist/mail_icon.png" alt="" style="height: 18px;cursor: pointer;"/></div>\').click(function() {TWIR.otherEnhacements.getMessageMenu(arguments, data, "cemetery");}))'), eval("CemeteryWindow.showStatUpdateTable=(function(){ var addKoShotTitle=CemeteryWindow.addKoShotTitle; return " + CWi + "})();")
+                }, CWi = CWi.replace(/\$\('div\.footer',\s{0,1}CemeteryWindow\.DOM\)\.empty\(\)/, '$&.append($(\'<div style="position: absolute; right: 15px; bottom: 5px;"><img title="\' + TWIRlang.organizing.msg + \'" src="/images/window/friendslist/mail_icon.png" alt="" style="height: 18px;cursor: pointer;"/></div>\').click(function() {TWIR.otherEnhacements.getMessageMenu(arguments, data, "cemetery");}))'), eval("CemeteryWindow.showStatUpdateTable=(function(){ var addKoShotTitle=CemeteryWindow.addKoShotTitle; return " + CWi + "})();")
             },
             addAllToAddressbook: function() {
                 MessagesWindow.Telegram.twir_refresh_addressbook = MessagesWindow.Telegram.twir_refresh_addressbook || MessagesWindow.Telegram.refresh_addressbook, MessagesWindow.Telegram.refresh_addressbook = function() {
@@ -1010,8 +1019,8 @@
                                 A = '<td><img src="%1" /></td><td>&nbsp;%2&nbsp;</td>',
                                 g = "<div style='margin-left: 10px;'><table cellpadding=0 cellspacing=0><tr>" + (0 != i.bonusinfo.offense ? s(A, "/images/fort/battle/attacker_secondary.png", i.bonusinfo.offense || 0) : "") + (0 != i.bonusinfo.defense ? s(A, "/images/fort/battle/defender_secondary.png", i.bonusinfo.defense || 0) : "") + (0 != i.bonusinfo.leadbonus ? s(A, "/images/fort/battle/leadsupport.png", i.bonusinfo.leadbonus || 0) : "") + (0 != l ? s(A, "/images/fort/battle/resistance.png", l || 0) : "") + "</tr></table></div>";
                             g += '<table style="margin:0;padding:0;font-size:8pt"><tr style="font-size:8pt;height:20px;font-weight:bold;">', g += '<td style="vertical-align: middle;"><div style="font-size:13px; font-family: georgia, times new roman, serif; font-weight: bold;">' + i.name + '&nbsp;</div></td><td style="vertical-align: middle;">' + (TWIR.storage.get("fb_online_status") ? p : "") + '&nbsp;</td><td style="vertical-align: middle;">' + (TWIR.storage.get("fb_ranks") ? c : "") + "</td>";
-                            var m = i.health / i.healthmax * 84 + "px";
-                            g += '<td style="vertical-align: middle;"><div style="background: url(/images/character_bars/bars.png) right top;width: 100px;height: 14px;display: inline-block;padding: 2px;margin: 5px;font-size: 8pt;text-align: left"><div style="background: url(/images/character_bars/filler.png);width: ' + m + ';height: 14px;margin-top: 2px;padding: 0;margin: 0;position: absolute;"></div><div style="position: absolute;color: white;width: 85px;text-align: center;">' + i.health + " / " + i.healthmax + "</div></div></td>", g += "</tr></table>", g += '<div style="text-align: center"><span style="background: url(/images/fort/battle/report_icons.png) no-repeat;background-position: 0 -51px;height: 16px;width: 16px; display: inline-block;vertical-align: middle;"/>&nbsp;<span style="font-weight: bold; font-size: 11px;">' + i.causeddamage + "</span></div>", t.popup.setXHTML(g)
+                            var d = i.health / i.healthmax * 84 + "px";
+                            g += '<td style="vertical-align: middle;"><div style="background: url(/images/character_bars/bars.png) right top;width: 100px;height: 14px;display: inline-block;padding: 2px;margin: 5px;font-size: 8pt;text-align: left"><div style="background: url(/images/character_bars/filler.png);width: ' + d + ';height: 14px;margin-top: 2px;padding: 0;margin: 0;position: absolute;"></div><div style="position: absolute;color: white;width: 85px;text-align: center;">' + i.health + " / " + i.healthmax + "</div></div></td>", g += "</tr></table>", g += '<div style="text-align: center"><span style="background: url(/images/fort/battle/report_icons.png) no-repeat;background-position: 0 -51px;height: 16px;width: 16px; display: inline-block;vertical-align: middle;"/>&nbsp;<span style="font-weight: bold; font-size: 11px;">' + i.causeddamage + "</span></div>", t.popup.setXHTML(g)
                         })
                     } else t.popup.kill()
                 }
@@ -1019,7 +1028,7 @@
         }, TWIR.travelButton = function() {
             FortOverviewWindow.twir_createContent = FortOverviewWindow.twir_createContent || FortOverviewWindow.createContent;
             var FOver = FortOverviewWindow.twir_createContent.toString();
-            FOver = FOver.replace(/var e\=json\["js"\]\[i\];/, "$&if(TWIR.storage.get(\"fb_travel_button\"))$('.wayTime' + e[0], FortOverviewWindow.DOM).after($('<a title=\"' + TWIRlang.informative.travel_fort + '\" style=\"position: absolute; bottom: 8px; right: 15px;cursor: pointer;\" href=\"#\" onclick=\"Guidepost.show(' + e[0] + ', ' + e[1] + ', ' + e[2] + ', &quot;fort&quot;);\"><img src=\"/images/map/icons/instantwork.png\" </a>'));"), eval("FortOverviewWindow.createContent = " + FOver)
+            FOver = FOver.replace(/var e\s{0,1}\=\s{0,1}json\["js"\]\[i\];/, "$&if(TWIR.storage.get(\"fb_travel_button\"))$('.wayTime' + e[0], FortOverviewWindow.DOM).after($('<a title=\"' + TWIRlang.informative.travel_fort + '\" style=\"position: absolute; bottom: 8px; right: 15px;cursor: pointer;\" href=\"#\" onclick=\"Guidepost.show(' + e[0] + ', ' + e[1] + ', ' + e[2] + ', &quot;fort&quot;);\"><img src=\"/images/map/icons/instantwork.png\" </a>'));"), eval("FortOverviewWindow.createContent = " + FOver)
         }, TWIR.betterBattleTopic = function() {
             FortBattleWindow.twir_getInfoArea = FortBattleWindow.twir_getInfoArea || FortBattleWindow.__twdb__getInfoArea || FortBattleWindow.getInfoArea, FortBattleWindow.getInfoArea = function() {
                 this.preBattle.battleData.canSetPrivilege = !0;
@@ -1066,31 +1075,31 @@
                         break;
                     case i.test(e):
                         var g = i.exec(e),
-                            m = a.exec(e);
-                        if (g && g[1] && 11 == g[1].length && e.length === m[0].length) {
-                            var d = '<div class="twir_embed-container"><iframe src="https://www.youtube.com/embed/' + g[1] + '" frameborder="0" allowfullscreen></iframe></div>';
-                            return e = e.replace(m[0], d)
+                            d = a.exec(e);
+                        if (g && g[1] && 11 == g[1].length && e.length === d[0].length) {
+                            var m = '<div class="twir_embed-container"><iframe src="https://www.youtube.com/embed/' + g[1] + '" frameborder="0" allowfullscreen></iframe></div>';
+                            return e = e.replace(d[0], m)
                         }
                         break;
                     case r.test(e):
                         var u = r.exec(e);
                         if (u && u[1] && e.length === u[0].length) {
-                            var I = '<div class="twir_embed-container"><iframe src="https://player.vimeo.com/video/' + u[1] + '" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe></div>';
-                            return e = e.replace(u[0], I)
+                            var h = '<div class="twir_embed-container"><iframe src="https://player.vimeo.com/video/' + u[1] + '" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe></div>';
+                            return e = e.replace(u[0], h)
                         }
                         break;
                     case n.test(e):
-                        var h = n.exec(e);
-                        if (h && h[1] && e.length === h[0].length) {
-                            var R = '<div class="twir_embed-container"><iframe src="https://www.dailymotion.com/embed/video/' + h[1] + '" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe></div>';
-                            return e = e.replace(h[0], R)
+                        var I = n.exec(e);
+                        if (I && I[1] && e.length === I[0].length) {
+                            var k = '<div class="twir_embed-container"><iframe src="https://www.dailymotion.com/embed/video/' + I[1] + '" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe></div>';
+                            return e = e.replace(I[0], k)
                         }
                         break;
                     case o.test(e):
-                        var k = o.exec(e);
-                        if (k && k[1] && e.length === k[0].length) {
-                            var b = '<div class="twir_embed-container"><iframe src="https://www.facebook.com/plugins/video.php?href=' + encodeURIComponent(k[0]) + '&show_text=0&width=280&height=157" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allowFullScreen="true"></iframe></div>';
-                            return e = e.replace(k[0], b)
+                        var R = o.exec(e);
+                        if (R && R[1] && e.length === R[0].length) {
+                            var b = '<div class="twir_embed-container"><iframe src="https://www.facebook.com/plugins/video.php?href=' + encodeURIComponent(R[0]) + '&show_text=0&width=280&height=157" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allowFullScreen="true"></iframe></div>';
+                            return e = e.replace(R[0], b)
                         }
                         break;
                     case l.test(e):
@@ -1103,8 +1112,8 @@
                     case s.test(e):
                         var y = s.exec(e);
                         if (y && y[1] && e.length === y[0].length) {
-                            var T = '<div class="twir_embed-container"><iframe src="https://player.twitch.tv/?channel=' + y[1] + '&autoplay=false&width=280&height=157" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allowFullScreen="true"></iframe></div>';
-                            return e = e.replace(y[0], T)
+                            var W = '<div class="twir_embed-container"><iframe src="https://player.twitch.tv/?channel=' + y[1] + '&autoplay=false&width=280&height=157" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allowFullScreen="true"></iframe></div>';
+                            return e = e.replace(y[0], W)
                         }
                 }
                 return e = e.split(/[\s\u2060](?=\/\d\d\d)/).map(function(e) {
@@ -1117,7 +1126,7 @@
                     var r = ItemManager.get(i, !0);
                     if (!r) return e;
                     var n = TWIR.addPopup.getMarketPrice(r);
-                    return "<a href='javascript:void(0)' style='display: inline-block;' data-item-id='" + r.getId() + "' class='bbcode itemlink' title='" + new ItemPopup(r).getXHTML().escapeHTML() + "'>[" + (r.getItemLevel() ? ' <span class="item_level' + (r.isUpgradeable() ? "" : " fake") + '">' + r.getItemLevel() + "</span>" : "") + (n ? '<span title="' + n.escapeHTML() + '" style="display: inline-block;padding: 0 2px 0 0;margin-left: -4px;"><img alt="" style="width:16px;height:16px;" src="' + TWIR.images.currency.dollars + '"/></span>' : "") + r.name.escapeHTML() + "]</a>"
+                    return "<a href='javascript:void(0)' style='display: inline-block;' data-item-id='" + r.getId() + "' class='bbcode itemlink' title='" + new ItemPopup(r).getXHTML().escapeHTML() + "'>[" + (r.getItemLevel() ? ' <span class="item_level' + (r.isUpgradeable() ? "" : " fake") + '">' + r.getItemLevel() + "</span>" : "") + (n ? '<span title="' + n.escapeHTML() + '" style="display: inline-block;padding: 0 2px 0 0;margin-left: -4px;"><img alt="" style="width:16px;height:16px;display: inline-block;" src="' + TWIR.images.currency.dollars + '"/></span>' : "") + r.name.escapeHTML() + "]</a>"
                 })), Game.TextHandler.parse(e)
             })
         }, TWIR.enhancedChatInfo = function() {
@@ -1403,10 +1412,10 @@
                                 }
                             }
                             for (var g in t.yields) {
-                                var m = ItemManager.get(g, !0),
-                                    d = void 0 !== n[m.short] && 0 != n[m.short].percentage ? n[m.short].percentage : Math.ceil(600 * t.yields[g].prop),
+                                var d = ItemManager.get(g, !0),
+                                    m = void 0 !== n[d.short] && 0 != n[d.short].percentage ? n[d.short].percentage : Math.ceil(600 * t.yields[g].prop),
                                     u = JobsModel.Beans[t.id].basis.long.duration.getTime2EndToken();
-                                a = a.replace("</div>" + m.name + "</div>", "</div>" + m.name + '<div class="marker_popup_small_text" style="font-weight: normal!important;">(' + d + "&nbsp;%&nbsp;/" + u + ")</div></div>")
+                                a = a.replace("</div>" + d.name + "</div>", "</div>" + d.name + '<div class="marker_popup_small_text" style="font-weight: normal!important;">(' + m + "&nbsp;%&nbsp;/" + u + ")</div></div>")
                             }
                         }
                         return a
@@ -1423,7 +1432,7 @@
                             a = !!$(".mpi-ui").length;
                         if ((t = t.replace(/<br><span class="inventory_popup_requirement_text(.*?)>$/, function(t) {
                                 return e = t, "<br>"
-                            }).replace('<div class="invPopup_body">', "").replace('inventory_popup"', 'invPopup_body $& style="max-width:550px!important;min-width: 130px!important;padding-left: 10px!important;"><table><td style="min-width: 200px; max-width: 250px;"').replace(/bonus_attr tw_green"/g, '$& style="max-width:220px;min-width:150px;display:block;"').replace('<br><br><div class="item_set_bonus">', e + '</td><td><div style="display: inline-block;background: url(/images/window/wof/prizes_sep.jpg);width: 25px;height: 270px;margin: 15px 0;"/></td><td style="min-width: 200px; max-width: 250px;">')).includes(e) || (t += e), t = (t = t.replace(/invPopup_head"/g, '$& style="max-height: 140px!important; height: auto!important;"')).replace(/(<p)(>)/g, '$1 class="inventory_popup_type" style="max-width: 250px!important;margin-left: auto;margin-right: auto;">'), TWIR.storage.get("pop_owned_counts")) {
+                            }).replace('<div class="invPopup_body">', "").replace('inventory_popup"', 'invPopup_body $& style="max-width:550px!important;min-width: 130px!important;padding-left: 10px!important;"><table><td style="min-width: 200px; max-width: 275px;"').replace(/bonus_attr tw_green"/g, '$& style="max-width:220px;min-width:150px;display:block;"').replace('<br><br><div class="item_set_bonus">', e + '</td><td><div style="display: inline-block;background: url(/images/window/wof/prizes_sep.jpg);width: 25px;height: 270px;margin: 15px 0;"/></td><td style="min-width: 200px; max-width: 275px;">')).includes(e) || (t += e), t = (t = t.replace(/invPopup_head"/g, '$& style="max-height: 140px!important; height: auto!important;"')).replace(/(<p)(>)/g, '$1 class="inventory_popup_type" style="max-width: 250px!important;margin-left: auto;margin-right: auto;color: #007777;">'), TWIR.storage.get("pop_owned_counts")) {
                             var i = Wear.get(this.item_obj.type) && Wear.get(this.item_obj.type).getId() == this.item_obj.item_id ? 1 : 0;
                             t = t.replace('<div class="inventory_popup_icon">', '$&<div class="item"><span class="count" style="display:block;top:74px;left:3px">' + TWIR.replSum(Bag.getItemCount(this.item_obj.item_id) + i) + "</span></div>")
                         }
@@ -1432,41 +1441,41 @@
                             n = r ? "block" : "none",
                             o = TWIR.storage.setList.eventIcons[this.item_obj.set] && r ? TWIR.images.gameEvents[r[0]] : "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
                             s = TWIR.storage.setList.eventIcons[this.item_obj.set] && r ? r[1] : "";
-                        if (t = t.replace(/(<p\s+class="inventory_popup_type">)([\S\s]*?<\/p>)/gi, '<div style="text-align: center; display: ' + n + ';"><img src="' + o + '" height="16" width="auto"></img><span style="margin-right: 10px;position: relative;font-size: 11px;font-style: italic;vertical-align: middle;">' + s + '</span></div> <p class="inventory_popup_type" style="max-width: 250px!important;margin-left: auto;margin-right: auto;"> $2'), this.item_obj instanceof west.item.Weapon && TWIR.storage.get("pop_avg_dmg")) {
+                        if (t = t.replace(/(<p\s+class="inventory_popup_type">)([\S\s]*?<\/p>)/gi, '<div style="text-align: center; display: ' + n + ';"><img src="' + o + '" height="16" width="auto"></img><span style="margin-right: 10px;position: relative;font-size: 11px;font-style: italic;vertical-align: middle;">' + s + '</span></div> <p class="inventory_popup_type" style="max-width: 250px!important;margin-left: auto;margin-right: auto;margin-top: 5px;"> $2'), this.item_obj.description.length && (t = t.replace(this.item_obj.description, '<span style="color: #007777;">' + this.item_obj.description + "</span>")), this.item_obj instanceof west.item.Weapon && TWIR.storage.get("pop_avg_dmg")) {
                             var l = this.item_obj.getDamage(this.options.character),
                                 p = Math.floor((l.min + l.max) / 2);
                             t = t.replace('-<span class="current_value">' + l.max + "</span>", '$&<span style="color: #084f29;">&nbsp;(' + p + ")</span>")
                         }
                         if (this.item_obj.usebonus && "recipe" !== this.item_obj.type && TWIR.storage.get("pop_bonus_calc")) {
-                            for (var c = TWIR.usebonus.keys.energy, A = TWIR.usebonus.keys.health, g = "", m = 0; m < this.item_obj.usebonus.length; m++)
-                                if (this.item_obj.usebonus[m].match(c)) {
-                                    var d = this.item_obj.usebonus[m].replace(/[^0-9.]/g, "").replace(/(\(|\)).*/g, "").trim();
-                                    if (d < 100) {
-                                        var u = Math.floor(d / 100 * Character.maxEnergy);
-                                        g += "<li>" + this.item_obj.usebonus[m] + "&nbsp;(+" + u + ")</li>"
-                                    } else g += "<li>" + this.item_obj.usebonus[m] + "</li>"
-                                } else if (this.item_obj.usebonus[m].match(A)) {
-                                var I = this.item_obj.usebonus[m].replace(/[^0-9.]/g, "").replace(/(\(|\)).*/g, "").trim();
-                                if (I < 100) {
-                                    var h = Math.floor(I / 100 * Character.maxHealth);
-                                    g += "<li>" + this.item_obj.usebonus[m] + "&nbsp;(+" + h + ")</li>"
-                                } else g += "<li>" + this.item_obj.usebonus[m] + "</li>"
-                            } else g += "<li>" + this.item_obj.usebonus[m] + "</li>";
-                            t = t.replace(/<ul\s+class="inventory_popup_effect_list">[\S\s]*?<\/ul>/gi, '<ul class="inventory_popup_effect_list" style="max-width: 220px;display: block;min-width: 170px;white-space: unset!important;"> ' + g + " </ul>")
+                            for (var c = TWIR.usebonus.keys.energy, A = TWIR.usebonus.keys.health, g = "", d = 0; d < this.item_obj.usebonus.length; d++)
+                                if (this.item_obj.usebonus[d].match(c)) {
+                                    var m = this.item_obj.usebonus[d].replace(/[^0-9.]/g, "").replace(/(\(|\)).*/g, "").trim();
+                                    if (m < 100) {
+                                        var u = Math.floor(m / 100 * Character.maxEnergy);
+                                        g += "<li>" + this.item_obj.usebonus[d] + "&nbsp;(+" + u + ")</li>"
+                                    } else g += "<li>" + this.item_obj.usebonus[d] + "</li>"
+                                } else if (this.item_obj.usebonus[d].match(A)) {
+                                var h = this.item_obj.usebonus[d].replace(/[^0-9.]/g, "").replace(/(\(|\)).*/g, "").trim();
+                                if (h < 100) {
+                                    var I = Math.floor(h / 100 * Character.maxHealth);
+                                    g += "<li>" + this.item_obj.usebonus[d] + "&nbsp;(+" + I + ")</li>"
+                                } else g += "<li>" + this.item_obj.usebonus[d] + "</li>"
+                            } else g += "<li>" + this.item_obj.usebonus[d] + "</li>";
+                            t = t.replace(/<ul\s+class="inventory_popup_effect_list">[\S\s]*?<\/ul>/gi, '<ul class="inventory_popup_effect_list" style="max-width: 240px;display: block;min-width: 170px;white-space: unset!important;"> ' + g + " </ul>")
                         }!1 === this.item_obj.auctionable && !0 === this.item_obj.upgradeable ? t = t.replace(/(invPopup_foot")(>)/g, '$1 style="display:block;text-align: center;font-size: 13px!important;"><p class="tw_red">' + TWIRlang.tooltips.not_auctionable + '</p><p class="tw_green">' + TWIRlang.tooltips.upgradeable + "</p>") : !1 === this.item_obj.auctionable ? t = t.replace(/(invPopup_foot")(>)/g, '$1 style="display:block;text-align: center;font-size: 13px!important;"> <p class="tw_red">' + TWIRlang.tooltips.not_auctionable + "</p>") : !0 === this.item_obj.upgradeable && (t = t.replace(/(invPopup_foot")(>)/g, '$1 style="display:block;text-align: center;font-size: 13px!important;"> <p class="tw_green">' + TWIRlang.tooltips.upgradeable + "</p>")), !0 === this.item_obj.auctionable && (t = t.replace(/(<br>)(<p\s+class="inventory_popup_auctionable tw_green">[\S\s]*?<\/p>)/gi, "$2")), !1 === this.item_obj.upgradeable && (t = t.replace(/(<br>)(<p\s+class="inventory_popup_notupgradeable tw_red">[\S\s]*?<\/p>)/gi, "$2")), !1 === this.item_obj.sellable && (t = t.replace(/invPopup_notsellable"/g, '$& style="text-align: center;color: #900;font-style: normal!important;font-size: 13px!important;display: block!important;"')), t = (t = (t = (t = (t = (t = (t = (t = t.replace(/inventory_popup_label tw_green"/g, '$& style="max-width: 220px;display: block;min-width: 170px;white-space: unset!important;padding-top: 4px;margin-left: 5px;margin-right: 5px;"')).replace(/inventory_popup_label"/g, '$& style="max-width: 220px;display: block;min-width: 170px;white-space: unset!important;padding-top: 4px;margin-left: 5px;margin-right: 5px;"')).replace(/inventory_popup_bonus_skills"/g, '$& style="max-width: 200px;display: block;min-width: 170px;white-space: unset!important;margin-left: 10px;"')).replace(/(<br>)(<span\s+class="inventory_popup_requirement_text">[\S\s]*?<\/span>)/gi, "$2 <br>")).replace(/<br><p\s+class="inventory_alreadyown">[\S\s]*?<\/p>/gi, "")).replace(/<div\s+class="inventory_popup_prices">[\S\s]*?<\/div>/gi, "$& <br> ")).replace(/<span\s+class="inventory_popup_character_sex">[\S\s]*?<\/span>/gi, "$& <br>")).replace(/<span\s+class="inventory_popup_character_sex text_red">[\S\s]*?<\/span>/gi, "$& <br>");
-                        var R = TWIR.storage.popups.marketBest[this.item_obj.short] && TWIR.storage.popups.marketBest[this.item_obj.short].avg >= 1e4 ? TWIR.replSum(TWIR.storage.popups.marketBest[this.item_obj.short].avg) : TWIR.storage.popups.marketBest[this.item_obj.short] ? TWIR.storage.popups.marketBest[this.item_obj.short].avg.toFixed(0) : 0,
-                            k = TWIR.storage.popups.marketBest[this.item_obj.short] && TWIR.storage.get("pop_market_price") ? '<div style="margin-top: 5px;"><span class="tw2gui-iconset tw2gui-icon-world" style="display: inline-block; vertical-align: top;"/>&nbsp;&#36;' + R + "</div>" : "";
+                        var k = TWIR.storage.popups.marketBest[this.item_obj.short] && TWIR.storage.popups.marketBest[this.item_obj.short].avg >= 1e4 ? TWIR.replSum(TWIR.storage.popups.marketBest[this.item_obj.short].avg) : TWIR.storage.popups.marketBest[this.item_obj.short] ? TWIR.storage.popups.marketBest[this.item_obj.short].avg.toFixed(0) : 0,
+                            R = TWIR.storage.popups.marketBest[this.item_obj.short] && TWIR.storage.get("pop_market_price") ? '<div style="margin-top: 5px;"><span class="tw2gui-iconset tw2gui-icon-world" style="display: inline-block; vertical-align: top;"/>&nbsp;&#36;' + k + "</div>" : "";
                         if (TWIR.storage.popups.shop_prices[this.item_obj.short] && TWIR.storage.get("pop_ups_price")) {
                             var b = 1 === this.item_obj.item_level ? 3 : 2 === this.item_obj.item_level ? 9 : 3 === this.item_obj.item_level ? 27 : 4 === this.item_obj.item_level ? 81 : 5 === this.item_obj.item_level ? 243 : 1,
                                 w = 3 === TWIR.storage.popups.shop_prices[this.item_obj.short].currency ? '<span style="display: inline-block;position: relative;top: 3px;background: url(' + TWIR.images.currency.bonds_nuggets + ') no-repeat;width: 16px;height: 16px;"></span><span>&nbsp;' + (TWIR.storage.get("pop_short_currency") ? TWIR.replSum(TWIR.storage.popups.shop_prices[this.item_obj.short].price_bonds * b, !0) : TWIR.storage.popups.shop_prices[this.item_obj.short].price_bonds * b) + "</span>" : 2 === TWIR.storage.popups.shop_prices[this.item_obj.short].currency ? '<span style="display: inline-block;position: relative;top: 3px;background: url(' + TWIR.images.currency.nuggets + ') no-repeat;width: 16px;height: 16px;"></span><span>&nbsp;' + (TWIR.storage.get("pop_short_currency") ? TWIR.replSum(TWIR.storage.popups.shop_prices[this.item_obj.short].price_nuggets * b, !0) : TWIR.storage.popups.shop_prices[this.item_obj.short].price_nuggets * b) + "</span>" : 1 === TWIR.storage.popups.shop_prices[this.item_obj.short].currency ? '<span style="display: inline-block;position: relative;top: 3px;background: url(' + TWIR.images.currency.bonds + ') no-repeat;width: 16px;height: 16px;"></span><span>&nbsp;' + (TWIR.storage.get("pop_short_currency") ? TWIR.replSum(TWIR.storage.popups.shop_prices[this.item_obj.short].price_bonds * b, !0) : TWIR.storage.popups.shop_prices[this.item_obj.short].price_bonds * b) + "</span>" : 8 === TWIR.storage.popups.shop_prices[this.item_obj.short].currency ? '<span style="display: inline-block;position: relative;top: 3px;background: url(' + TWIR.images.currency.veteran + ') no-repeat;width: 16px;height: 16px;"></span><span>&nbsp;' + (TWIR.storage.get("pop_short_currency") ? TWIR.replSum(TWIR.storage.popups.shop_prices[this.item_obj.short].price_veteran * b, !0) : TWIR.storage.popups.shop_prices[this.item_obj.short].price_veteran * b) + "</span>" : 7 === TWIR.storage.popups.shop_prices[this.item_obj.short].currency ? '<span style="display: inline-block;position: relative;top: 3px;background: url(' + TWIR.images.currency.bonds_nuggets + ') no-repeat;width: 16px;height: 16px;"></span><span>&nbsp;' + (TWIR.storage.get("pop_short_currency") ? TWIR.replSum(TWIR.storage.popups.shop_prices[this.item_obj.short].price_nuggets * b, !0) : TWIR.storage.popups.shop_prices[this.item_obj.short].price_nuggets * b) + '</span><span style="display: inline-block;position: relative;top: 3px;background: url(' + TWIR.images.currency.dollars + ') no-repeat;width: 16px;height: 16px;margin-left: 5px;"/><span>&nbsp;&#36;' + TWIR.replSum(TWIR.storage.popups.shop_prices[this.item_obj.short].price_dollar * b) + "</span>" : "",
                                 f = null !== TWIR.storage.popups.shop_prices[this.item_obj.short].limited_time ? '<span style="color: #666;">&nbsp;(' + TWIR.msToTime((new Date(1e3 * TWIR.storage.popups.shop_prices[this.item_obj.short].limited_time).getTime() - (new Date).getTime()) / 1e3) + ")</span>" : "",
                                 y = 0 != TWIR.storage.popups.shop_prices[this.item_obj.short].reduced_value ? '<span style="color: #666;">&nbsp;/-' + TWIR.storage.popups.shop_prices[this.item_obj.short].reduced_value + "%</span>" : "";
-                            t = t.replace(/(<div\s+class="inventory_popup_prices">[\S\s]*?)(<\/div>)/gi, "$1" + k + '<div class="twir_other_popup_prices">&nbsp;' + w + y + f + "</div> $2")
+                            t = t.replace(/(<div\s+class="inventory_popup_prices">[\S\s]*?)(<\/div>)/gi, "$1" + R + '<div class="twir_other_popup_prices">&nbsp;' + w + y + f + "</div> $2")
                         } else if (TWIR.storage.popups.shop_limited_prices[this.item_obj.short] && TWIR.storage.get("pop_ups_price")) {
                             var b = 1 === this.item_obj.item_level ? 3 : 2 === this.item_obj.item_level ? 9 : 3 === this.item_obj.item_level ? 27 : 4 === this.item_obj.item_level ? 81 : 5 === this.item_obj.item_level ? 243 : 1,
                                 w = 3 === TWIR.storage.popups.shop_limited_prices[this.item_obj.short].currency ? '<span style="display: inline-block;position: relative;top: 3px;background: url(' + TWIR.images.currency.bonds_nuggets + ') no-repeat;width: 16px;height: 16px;"></span><span>&nbsp;' + (TWIR.storage.get("pop_short_currency") ? TWIR.replSum(TWIR.storage.popups.shop_limited_prices[this.item_obj.short].price_bonds * b, !0) : TWIR.storage.popups.shop_limited_prices[this.item_obj.short].price_bonds * b) + "</span>" : 2 === TWIR.storage.popups.shop_limited_prices[this.item_obj.short].currency ? '<span style="display: inline-block;position: relative;top: 3px;background: url(' + TWIR.images.currency.nuggets + ') no-repeat;width: 16px;height: 16px;"></span><span>&nbsp;' + (TWIR.storage.get("pop_short_currency") ? TWIR.replSum(TWIR.storage.popups.shop_limited_prices[this.item_obj.short].price_nuggets * b, !0) : TWIR.storage.popups.shop_limited_prices[this.item_obj.short].price_nuggets * b) + "</span>" : 1 === TWIR.storage.popups.shop_limited_prices[this.item_obj.short].currency ? '<span style="display: inline-block;position: relative;top: 3px;background: url(' + TWIR.images.currency.bonds + ') no-repeat;width: 16px;height: 16px;"></span><span>&nbsp;' + (TWIR.storage.get("pop_short_currency") ? TWIR.replSum(TWIR.storage.popups.shop_limited_prices[this.item_obj.short].price_bonds * b, !0) : TWIR.storage.popups.shop_limited_prices[this.item_obj.short].price_bonds * b) + "</span>" : 8 === TWIR.storage.popups.shop_limited_prices[this.item_obj.short].currency ? '<span style="display: inline-block;position: relative;top: 3px;background: url(' + TWIR.images.currency.veteran + ') no-repeat;width: 16px;height: 16px;"></span><span>&nbsp;' + (TWIR.storage.get("pop_short_currency") ? TWIR.replSum(TWIR.storage.popups.shop_limited_prices[this.item_obj.short].price_veteran * b, !0) : TWIR.storage.popups.shop_limited_prices[this.item_obj.short].price_veteran * b) + "</span>" : 7 === TWIR.storage.popups.shop_limited_prices[this.item_obj.short].currency ? '<span style="display: inline-block;position: relative;top: 3px;background: url(' + TWIR.images.currency.bonds_nuggets + ') no-repeat;width: 16px;height: 16px;"></span><span>&nbsp;' + (TWIR.storage.get("pop_short_currency") ? TWIR.replSum(TWIR.storage.popups.shop_limited_prices[this.item_obj.short].price_nuggets * b, !0) : TWIR.storage.popups.shop_limited_prices[this.item_obj.short].price_nuggets * b) + '</span><span style="display: inline-block;position: relative;top: 3px;background: url(' + TWIR.images.currency.dollars + ') no-repeat;width: 16px;height: 16px;margin-left: 5px;"/><span>&nbsp;&#36;' + TWIR.replSum(TWIR.storage.popups.shop_limited_prices[this.item_obj.short].price_dollar * b) + "</span>" : "";
-                            t = t.replace(/(<div\s+class="inventory_popup_prices">[\S\s]*?)(<\/div>)/gi, "$1" + k + '<div class="twir_popup_limited_prices">&nbsp;' + w + "</div> $2")
-                        } else t = t.replace(/(<div\s+class="inventory_popup_prices">[\S\s]*?)(<\/div>)/gi, "$1" + k + "$2");
+                            t = t.replace(/(<div\s+class="inventory_popup_prices">[\S\s]*?)(<\/div>)/gi, "$1" + R + '<div class="twir_popup_limited_prices">&nbsp;' + w + "</div> $2")
+                        } else t = t.replace(/(<div\s+class="inventory_popup_prices">[\S\s]*?)(<\/div>)/gi, "$1" + R + "$2");
                         if (TWIR.storage.get("pop_trader") && null !== this.item_obj.traderlevel && this.item_obj.traderlevel <= 20) switch (this.item_obj.type) {
                             case "belt":
                             case "body":
@@ -1485,13 +1494,13 @@
                                 t = t.replace(/(<div\s+class="inventory_popup_prices">[\S\s]*?)(<\/div>)/gi, '$1 <div class="twir_trader" style="color: #666;"> ' + Trader.name.general + "&nbsp;(Lvl&nbsp;" + this.item_obj.traderlevel + ")</div> $2")
                         }
                         if (!this.item_obj.sellable && this.item_obj.auctionable && TWIR.storage.get("pop_min_market_price")) {
-                            var T = "";
+                            var W = "";
                             if (0 != this.item_obj.sell_price) {
-                                var W = TWIR.storage.get("pop_short_currency") ? TWIR.replSum(this.item_obj.sell_price, !0) : this.item_obj.sell_price;
-                                T = '<span class="inventory_popup_trader_price_sell"><span class="invPopup_sellicon"/>&nbsp;$' + W + "</span>"
+                                var T = TWIR.storage.get("pop_short_currency") ? TWIR.replSum(this.item_obj.sell_price, !0) : this.item_obj.sell_price;
+                                W = '<span class="inventory_popup_trader_price_sell"><span class="invPopup_sellicon"/>&nbsp;$' + T + "</span>"
                             }
                             var x = TWIR.storage.get("pop_short_currency") ? TWIR.replSum(this.item_obj.price / 2 * (this.options.traderCharge || 1)) : this.item_obj.price / 2 * (this.options.traderCharge || 1);
-                            t = t.replace(/(inventory_popup_prices")(>)/g, '$1 style="margin-bottom: 5px;"> <span class="inventory_popup_trader_price_buy"><span class="tw2gui-iconset tw2gui-icon-friends" style="display: inline-block; vertical-align: top;"/>&nbsp;&#36;' + x + "</span>" + T)
+                            t = t.replace(/(inventory_popup_prices")(>)/g, '$1 style="margin-bottom: 5px;"> <span class="inventory_popup_trader_price_buy"><span class="tw2gui-iconset tw2gui-icon-friends" style="display: inline-block; vertical-align: top;"/>&nbsp;&#36;' + x + "</span>" + W)
                         }
                         if (TWIR.storage.get("pop_short_currency") && (null !== this.item_obj.price && this.item_obj.price >= 1e4 && (t = t.replace("&nbsp;$" + this.item_obj.price * (this.options.traderCharge || 1), "&nbsp;&#36;" + TWIR.replSum(this.item_obj.price * (this.options.traderCharge || 1), !0))), 0 != this.item_obj.sell_price && this.item_obj.price >= 1e4 && (t = t.replace("&nbsp;$" + this.item_obj.sell_price, "&nbsp;&#36;" + TWIR.replSum(this.item_obj.sell_price, !0)))), "crafting" == this.item_obj.spec_type && TWIR.storage.popups.crafting[this.item_obj.item_id]) {
                             for (var v = 2147483647, V = 0; V < TWIR.storage.popups.crafting[this.item_obj.item_id].resources.length; V++) {
@@ -1504,59 +1513,59 @@
                             if (TWIR.storage.get("pop_crafting_recipe")) {
                                 var M = Character.professionId == TWIR.storage.popups.crafting[this.item_obj.item_id].profsymbol && Character.professionSkill >= ItemManager.getByBaseId(TWIR.storage.popups.crafting[this.item_obj.item_id].recipe).min_level ? "#070" : "#8b4513";
                                 t += '<br><div style="color: ' + M + '; text-align: center;margin-bottom: 2px;">' + TWIRlang.tooltips.craftable + (0 != v ? "&nbsp;(" + TWIR.replSum(v) + ")" : "") + ":</div>";
-                                for (var U = '<div class="twir_better_popup" style="text-align:center;margin: 0 auto;display: table;"><table style="display: table !important;border-collapse: separate !important;border-spacing: 1px !important;border-radius: 3px;border: 1px solid #804000;"><tbody><tr><td style="padding: 5px;border: 1px solid #996b39;border-color: rgba(110,57,0,0.5);background-color: #d4ba91 !important;background-image: none !important;color: #5e321a !important;font-size: 16px;border-collapse: separate !important;border-spacing: 1px !important;vertical-align: middle!important;"><img src="/images/crafting/profsymbol_' + TWIR.storage.popups.crafting[this.item_obj.item_id].profsymbol + '_small.png"></td><td style="padding: 5px;border: 1px solid #996b39;border-color: rgba(110,57,0,0.5);background-color: #d4ba91 !important;background-image: none !important;color: #5e321a !important;font-size: 16px;border-collapse: separate !important;border-spacing: 1px !important;"><table style="display: table !important;border-collapse: separate !important;border-spacing: 1px !important;border-radius: 3px;border: 1px solid #804000;"><tbody><tr>', C = 0; C < TWIR.storage.popups.crafting[this.item_obj.item_id].resources.length; C++) {
-                                    var K = Bag.getItemByItemId(TWIR.storage.popups.crafting[this.item_obj.item_id].resources[C].item),
-                                        E = void 0 !== K ? K.count : 0,
-                                        j = E < TWIR.storage.popups.crafting[this.item_obj.item_id].resources[C].count ? "#900!important" : "#5e321a!important";
-                                    U += '<td style="vertical-align: middle!important;padding: 5px;border: 1px solid #996b39;border-color: rgba(110,57,0,0.5);background-color: #d4ba91 !important;background-image: none !important;color: #5e321a ;font-size: 16px;border-collapse: separate !important;border-spacing: 1px !important;"><img style="width:30px;height:30px;" src="' + ItemManager.get(TWIR.storage.popups.crafting[this.item_obj.item_id].resources[C].item, !0).image + '"><div style="font-size:8pt;">(<span style="color: ' + j + ';">' + TWIR.replSum(E) + "</span>)</div></td>"
+                                for (var U = TWIR.storage.popups.crafting[this.item_obj.item_id].resources.length, C = '<div class="twir_better_popup" style="text-align:center;margin: 0 auto;display: table;"><table style="display: table !important;border-collapse: separate !important;border-spacing: 1px !important;border-radius: 3px;border: 1px solid #804000;"><tbody><tr><td style="padding:' + (U > 5 ? "1px" : "5px") + ';border: 1px solid #996b39;border-color: rgba(110,57,0,0.5);background-color: #d4ba91 !important;background-image: none !important;color: #5e321a !important;font-size: 16px;border-collapse: separate !important;border-spacing: 1px !important;vertical-align: middle!important;"><img src="/images/crafting/profsymbol_' + TWIR.storage.popups.crafting[this.item_obj.item_id].profsymbol + '_small.png"></td><td style="padding: ' + (U > 5 ? "2px" : "5px") + ';border: 1px solid #996b39;border-color: rgba(110,57,0,0.5);background-color: #d4ba91 !important;background-image: none !important;color: #5e321a !important;font-size: 16px;border-collapse: separate !important;border-spacing: 1px !important;"><table style="display: table !important;border-collapse: separate !important;border-spacing: 1px !important;border-radius: 3px;border: 1px solid #804000;"><tbody><tr>', K = 0; K < TWIR.storage.popups.crafting[this.item_obj.item_id].resources.length; K++) {
+                                    var E = Bag.getItemByItemId(TWIR.storage.popups.crafting[this.item_obj.item_id].resources[K].item),
+                                        j = void 0 !== E ? E.count : 0,
+                                        q = j < TWIR.storage.popups.crafting[this.item_obj.item_id].resources[K].count ? "#900!important" : "#5e321a!important";
+                                    C += '<td style="vertical-align: middle!important;padding: ' + (U > 5 ? "2px" : "5px") + ';border: 1px solid #996b39;border-color: rgba(110,57,0,0.5);background-color: #d4ba91 !important;background-image: none !important;color: #5e321a ;font-size: 16px;border-collapse: separate !important;border-spacing: 1px !important;"><img style="width:30px;height:30px;" src="' + ItemManager.get(TWIR.storage.popups.crafting[this.item_obj.item_id].resources[K].item, !0).image + '"><div style="font-size:8pt;">(<span style="color: ' + q + ';">' + TWIR.replSum(j) + "</span>)</div></td>"
                                 }
-                                U += "</tr><tr>";
-                                for (var q = 0; q < TWIR.storage.popups.crafting[this.item_obj.item_id].resources.length; q++) U += '<td style="vertical-align: middle!important;padding: 5px;border: 1px solid #996b39;border-color: rgba(110,57,0,0.5);background-color: #d4ba91 !important;background-image: none !important;color: #5e321a !important;font-size: 14px;border-collapse: separate !important;border-spacing: 1px !important;"><span>x' + TWIR.storage.popups.crafting[this.item_obj.item_id].resources[q].count + "</span></td>";
-                                U += "</tr></tbody></table></td></tr></tbody></table></div>"
+                                C += "</tr><tr>";
+                                for (var Q = 0; Q < TWIR.storage.popups.crafting[this.item_obj.item_id].resources.length; Q++) C += '<td style="vertical-align: middle!important;padding: ' + (U > 5 ? "2px" : "5px") + ';border: 1px solid #996b39;border-color: rgba(110,57,0,0.5);background-color: #d4ba91 !important;background-image: none !important;color: #5e321a !important;font-size: 14px;border-collapse: separate !important;border-spacing: 1px !important;"><span>x' + TWIR.storage.popups.crafting[this.item_obj.item_id].resources[Q].count + "</span></td>";
+                                C += "</tr></tbody></table></td></tr></tbody></table></div>"
                             }
-                            var Q = ItemManager.getByBaseId(TWIR.storage.popups.crafting[this.item_obj.item_id].recipe, !0).min_level >= 50;
-                            TWIR.storage.get("pop_recipe_table") && Q && (U += '<div class="twir_better_popup" style="text-align:center;margin: 0 auto;display: table;"><table style="display: table !important;border-collapse: separate !important;border-spacing: 1px !important;border-radius: 3px;border: 1px solid #804000;"><tbody><tr><td style="vertical-align: middle!important;padding: 5px;border: 1px solid #996b39;border-color: rgba(110,57,0,0.5);background-color: #d4ba91 !important;background-image: none !important;color: #5e321a !important;font-size: 16px;border-collapse: separate !important;border-spacing: 1px !important;"><img style="width: 30px;height: 30px;" src="' + ItemManager.getByBaseId(TWIR.storage.popups.crafting[this.item_obj.item_id].recipe).image + '"/></td><td style="vertical-align: middle!important;padding: 5px;border: 1px solid #996b39;border-color: rgba(110,57,0,0.5);background-color: #d4ba91 !important;background-image: none !important;color: #5e321a !important;font-style: italic;font-size: 8pt;border-collapse: separate !important;border-spacing: 1px !important;width: 125px;"><span>' + ItemManager.getByBaseId(TWIR.storage.popups.crafting[this.item_obj.item_id].recipe).name + "&nbsp;(" + ItemManager.getByBaseId(TWIR.storage.popups.crafting[this.item_obj.item_id].recipe).min_level + ")</span></td></tr></tbody></table></div>"), t += U
+                            var Y = ItemManager.getByBaseId(TWIR.storage.popups.crafting[this.item_obj.item_id].recipe, !0).min_level >= 50;
+                            TWIR.storage.get("pop_recipe_table") && Y && (C += '<div class="twir_better_popup" style="text-align:center;margin: 0 auto;display: table;"><table style="display: table !important;border-collapse: separate !important;border-spacing: 1px !important;border-radius: 3px;border: 1px solid #804000;"><tbody><tr><td style="vertical-align: middle!important;padding: 5px;border: 1px solid #996b39;border-color: rgba(110,57,0,0.5);background-color: #d4ba91 !important;background-image: none !important;color: #5e321a !important;font-size: 16px;border-collapse: separate !important;border-spacing: 1px !important;"><img style="width: 30px;height: 30px;" src="' + ItemManager.getByBaseId(TWIR.storage.popups.crafting[this.item_obj.item_id].recipe).image + '"/></td><td style="vertical-align: middle!important;padding: 5px;border: 1px solid #996b39;border-color: rgba(110,57,0,0.5);background-color: #d4ba91 !important;background-image: none !important;color: #5e321a !important;font-style: italic;font-size: 8pt;border-collapse: separate !important;border-spacing: 1px !important;width: 125px;"><span>' + ItemManager.getByBaseId(TWIR.storage.popups.crafting[this.item_obj.item_id].recipe).name + "&nbsp;(" + ItemManager.getByBaseId(TWIR.storage.popups.crafting[this.item_obj.item_id].recipe).min_level + ")</span></td></tr></tbody></table></div>"), t += C
                         }
                         if (JobList.dropsItem(this.item_obj.item_id) && TWIR.storage.get("pop_job_table")) {
                             var F = JobList.getJobsByItemId(this.item_obj.item_id);
                             t += '<br><div style="color: #8b4513; text-align: center;margin-bottom: 2px;">' + TWIRlang.tooltips.jobdrop + ":</div>";
-                            for (var Y = '<div class="twir_better_popup" style="text-align:center;margin: 0 auto;display: table;"><table style="display: table !important;border-collapse: separate !important;border-spacing: 1px !important;border-radius: 3px;border: 1px solid #804000;"><tbody>', G = 0; G < F.length; G++) {
-                                var O = 0,
-                                    J = 0;
-                                if ($.isEmptyObject(JobsModel.Beans) || null == JobsModel.Beans[F[G].id].basis.long.yields[0]) O = Math.ceil(600 * F[G].yields[this.item_obj.item_id].prop), J = 0;
-                                else if (!$.isEmptyObject(JobsModel.Beans) && void 0 !== JobsModel.Beans[F[G].id].basis.long.yields[0])
-                                    for (var D = 0; D < JobsModel.Beans[F[G].id].basis.long.yields.length; D++) JobsModel.Beans[F[G].id].basis.long.yields[D].itemid === this.item_obj.item_id && (O = JobsModel.Beans[F[G].id].basis.long.yields[D].prop, J = JobsModel.Beans[F[G].id].basis.long.yields[D].probBonus);
-                                var H = O + J,
-                                    Z = $.isEmptyObject(JobsModel.Beans) || 0 == H ? "" : "&nbsp;(" + H.toFixed(0) + "&nbsp;%)";
-                                F[G] && (Y += '<tr><td style="vertical-align: middle!important;padding: 5px;border: 1px solid #996b39;border-color: rgba(110,57,0,0.5);background-color: #d4ba91 !important;background-image: none !important;color: #5e321a !important;font-size: 16px;border-collapse: separate !important;border-spacing: 1px !important;"><img style="width: 30px;height: 30px;" src="/images/jobs/' + F[G].shortname + '.png"/></td><td style="vertical-align: middle!important;padding: 5px;border: 1px solid #996b39;border-color: rgba(110,57,0,0.5);background-color: #d4ba91 !important;background-image: none !important;color: #5e321a !important;font-style: italic;font-size: 8pt;border-collapse: separate !important;border-spacing: 1px !important;width: 125px;"><span>' + F[G].name + Z + "</span></td></tr>")
+                            for (var G = '<div class="twir_better_popup" style="text-align:center;margin: 0 auto;display: table;"><table style="display: table !important;border-collapse: separate !important;border-spacing: 1px !important;border-radius: 3px;border: 1px solid #804000;"><tbody>', O = 0; O < F.length; O++) {
+                                var J = 0,
+                                    D = 0;
+                                if ($.isEmptyObject(JobsModel.Beans) || null == JobsModel.Beans[F[O].id].basis.long.yields[0]) J = Math.ceil(600 * F[O].yields[this.item_obj.item_id].prop), D = 0;
+                                else if (!$.isEmptyObject(JobsModel.Beans) && void 0 !== JobsModel.Beans[F[O].id].basis.long.yields[0])
+                                    for (var H = 0; H < JobsModel.Beans[F[O].id].basis.long.yields.length; H++) JobsModel.Beans[F[O].id].basis.long.yields[H].itemid === this.item_obj.item_id && (J = JobsModel.Beans[F[O].id].basis.long.yields[H].prop, D = JobsModel.Beans[F[O].id].basis.long.yields[H].probBonus);
+                                var Z = J + D,
+                                    N = $.isEmptyObject(JobsModel.Beans) || 0 == Z ? "" : "&nbsp;(" + Z.toFixed(0) + "&nbsp;%)";
+                                F[O] && (G += '<tr><td style="vertical-align: middle!important;padding: 5px;border: 1px solid #996b39;border-color: rgba(110,57,0,0.5);background-color: #d4ba91 !important;background-image: none !important;color: #5e321a !important;font-size: 16px;border-collapse: separate !important;border-spacing: 1px !important;"><img style="width: 30px;height: 30px;" src="/images/jobs/' + F[O].shortname + '.png"/></td><td style="vertical-align: middle!important;padding: 5px;border: 1px solid #996b39;border-color: rgba(110,57,0,0.5);background-color: #d4ba91 !important;background-image: none !important;color: #5e321a !important;font-style: italic;font-size: 8pt;border-collapse: separate !important;border-spacing: 1px !important;width: 125px;"><span>' + F[O].name + N + "</span></td></tr>")
                             }
-                            t += Y += "</tbody></table></div>"
+                            t += G += "</tbody></table></div>"
                         }
                         if (null !== this.item_obj.set) var P = west.storage.ItemSetManager.get(this.item_obj.set),
-                            N = P.getWornItems().length,
-                            z = void 0 !== Wear.get(this.item_obj.type) ? Wear.get(this.item_obj.type).obj.set : null,
-                            L = null !== z ? west.storage.ItemSetManager.get(z) : null,
-                            X = null !== z ? L.getWornItems().length : 0;
-                        if (TWIR.storage.get("pop_partial_bonus") && null !== this.item_obj.set && 0 === N && !1 === a && (t += '<td><div style="display: inline-block;background: url(/images/window/wof/prizes_sep.jpg);width: 25px;height: 270px;margin: 15px 0;"/></td><td class="twir_popup_pb" style="min-width: 200px;max-width: 250px;">'), null !== this.item_obj.set) {
-                            function _(e) {
+                            z = P.getWornItems().length,
+                            L = void 0 !== Wear.get(this.item_obj.type) ? Wear.get(this.item_obj.type).obj.set : null,
+                            X = null !== L ? west.storage.ItemSetManager.get(L) : null,
+                            _ = null !== L ? X.getWornItems().length : 0;
+                        if (TWIR.storage.get("pop_partial_bonus") && null !== this.item_obj.set && 0 === z && !1 === a && (t += '<td><div style="display: inline-block;background: url(/images/window/wof/prizes_sep.jpg);width: 25px;height: 270px;margin: 15px 0;"/></td><td class="twir_popup_pb" style="min-width: 200px;max-width: 275px;">'), null !== this.item_obj.set) {
+                            function ee(e) {
                                 for (var t = 0; t < e.length; t++) {
                                     var a = ItemManager.getByBaseId(e[t], !0);
                                     if ("right_arm" === a.type || "left_arm" === a.type) return !0
                                 }
                                 return !1
                             }
-                            var ee = 0;
-                            if (ee = 11 == P.items.length ? 10 : 3 == P.items.length && _(P.items) ? 2 : 9 == P.items.length ? 8 : 6 == P.items.length ? 6 : P.items.length, null !== L) {
-                                11 == L.items.length ? 10 : 3 == L.items.length && _(L.items) ? 2 : 9 == L.items.length ? 8 : 6 == L.items.length ? 6 : L.items.length
+                            var te = 0;
+                            if (te = 11 == P.items.length ? 10 : 3 == P.items.length && ee(P.items) ? 2 : 9 == P.items.length ? 8 : 6 == P.items.length ? 6 : P.items.length, null !== X) {
+                                11 == X.items.length ? 10 : 3 == X.items.length && ee(X.items) ? 2 : 9 == X.items.length ? 8 : 6 == X.items.length ? 6 : X.items.length
                             }
-                            var te = new west.item.BonusExtractor(Character);
-                            if (TWIR.storage.get("pop_partial_bonus") && 0 == N && !1 === a) {
-                                var ae = X > ee ? ee : 0 === X ? ee : X,
-                                    ie = '<br><div style="color: #8b4513; font-weight: bold;">(' + ae + ") " + TWIRlang.tooltips.partial_items_bonus + ":</div>";
-                                ie += '<div style="color: #666; margin-bottom: 5px;font-style: italic;">' + (null !== L ? "&nbsp;>&nbsp;" + L.name : "") + "</div>", ie += '<ul class="twir_partial_bonus" style="max-width: 200px;display: block;min-width: 170px;margin-left: 10px;">';
-                                var re = X > ee ? P.getMergedStages(ee) : 0 === X ? P.getMergedStages(ee) : P.getMergedStages(X),
-                                    ne = null !== L && X > ee ? L.getMergedStages(ee) : null !== L ? L.getMergedStages(X) : [];
-                                re.sort(function(e, t) {
+                            var ae = new west.item.BonusExtractor(Character);
+                            if (TWIR.storage.get("pop_partial_bonus") && 0 == z && !1 === a) {
+                                var ie = _ > te ? te : 0 === _ ? te : _,
+                                    re = '<br><div style="color: #8b4513; font-weight: bold;">(' + ie + ") " + TWIRlang.tooltips.partial_items_bonus + ":</div>";
+                                re += '<div style="color: #666; margin-bottom: 5px;font-style: italic;">' + (null !== X ? "&nbsp;>&nbsp;" + X.name : "") + "</div>", re += '<ul class="twir_partial_bonus" style="max-width: 200px;display: block;min-width: 170px;margin-left: 10px;">';
+                                var ne = _ > te ? P.getMergedStages(te) : 0 === _ ? P.getMergedStages(te) : P.getMergedStages(_),
+                                    oe = null !== X && _ > te ? X.getMergedStages(te) : null !== X ? X.getMergedStages(_) : [];
+                                ne.sort(function(e, t) {
                                     var a = function(e, t) {
                                             return (e.bonus ? e.bonus.type : e.type) == t && (e.bonus ? e.bonus.name : e.name)
                                         },
@@ -1565,7 +1574,7 @@
                                         n = a(e, "skill"),
                                         o = a(t, "skill");
                                     return i && r ? i < r ? -1 : 1 : i ? -1 : r ? 1 : n && o ? 0 : n ? -1 : o ? 1 : 0
-                                }), ne.sort(function(e, t) {
+                                }), oe.sort(function(e, t) {
                                     var a = function(e, t) {
                                             return (e.bonus ? e.bonus.type : e.type) == t && (e.bonus ? e.bonus.name : e.name)
                                         },
@@ -1575,66 +1584,66 @@
                                         o = a(t, "skill");
                                     return i && r ? i < r ? -1 : 1 : i ? -1 : r ? 1 : n && o ? 0 : n ? -1 : o ? 1 : 0
                                 });
-                                for (var oe = [], se = [], le = 0; le < re.length; le++) {
-                                    var pe = void 0 !== te.getDesc(re[le]) ? te.getDesc(re[le]).replace(/[^0-9.\%]/g, "") : "",
-                                        ce = void 0 !== te.getDesc(re[le]) ? te.getDesc(re[le]).replace(/[0-9\%\+\.\,]/g, "").replace(/(\(|\)).*/g, "").trim() : "";
-                                    oe.push({
-                                        skill: ce,
-                                        value: pe
-                                    })
-                                }
-                                for (var Ae = 0; Ae < ne.length; Ae++) {
-                                    var ge = void 0 !== te.getDesc(ne[Ae]) ? te.getDesc(ne[Ae]).replace(/[^0-9.\%]/g, "") : "",
-                                        me = void 0 !== te.getDesc(ne[Ae]) ? te.getDesc(ne[Ae]).replace(/[0-9\%\+\.\,]/g, "").replace(/(\(|\)).*/g, "").trim() : "";
+                                for (var se = [], le = [], pe = 0; pe < ne.length; pe++) {
+                                    var ce = void 0 !== ae.getDesc(ne[pe]) ? ae.getDesc(ne[pe]).replace(/[^0-9.\%]/g, "") : "",
+                                        Ae = void 0 !== ae.getDesc(ne[pe]) ? ae.getDesc(ne[pe]).replace(/[0-9\%\+\.\,]/g, "").replace(/(\(|\)).*/g, "").trim() : "";
                                     se.push({
+                                        skill: Ae,
+                                        value: ce
+                                    })
+                                }
+                                for (var ge = 0; ge < oe.length; ge++) {
+                                    var de = void 0 !== ae.getDesc(oe[ge]) ? ae.getDesc(oe[ge]).replace(/[^0-9.\%]/g, "") : "",
+                                        me = void 0 !== ae.getDesc(oe[ge]) ? ae.getDesc(oe[ge]).replace(/[0-9\%\+\.\,]/g, "").replace(/(\(|\)).*/g, "").trim() : "";
+                                    le.push({
                                         skill: me,
-                                        value: ge
+                                        value: de
                                     })
                                 }
-                                for (var de = [], ue = 0; ue < oe.length; ue++) {
-                                    for (var Ie = 0; Ie < se.length; Ie++)
-                                        if (oe[ue].skill === se[Ie].skill) {
-                                            var he = oe[ue].value.indexOf("%") > -1 && se[Ie].value.indexOf("%") > -1,
-                                                Re = parseFloat(oe[ue].value) - parseFloat(se[Ie].value);
-                                            de.push({
-                                                skill: oe[ue].skill,
-                                                diff: he ? Re + "%" : Re,
-                                                value: oe[ue].value
+                                for (var ue = [], he = 0; he < se.length; he++) {
+                                    for (var Ie = 0; Ie < le.length; Ie++)
+                                        if (se[he].skill === le[Ie].skill) {
+                                            var ke = se[he].value.indexOf("%") > -1 && le[Ie].value.indexOf("%") > -1,
+                                                Re = parseFloat(se[he].value) - parseFloat(le[Ie].value);
+                                            ue.push({
+                                                skill: se[he].skill,
+                                                diff: ke ? Re + "%" : Re,
+                                                value: se[he].value
                                             })
-                                        } de.find(function(e) {
-                                        return e.skill === oe[ue].skill
-                                    }) || de.push({
-                                        skill: oe[ue].skill,
+                                        } ue.find(function(e) {
+                                        return e.skill === se[he].skill
+                                    }) || ue.push({
+                                        skill: se[he].skill,
                                         diff: null,
-                                        value: oe[ue].value
+                                        value: se[he].value
                                     })
                                 }
-                                for (var ke = 0; ke < se.length; ke++) de.find(function(e) {
-                                    return e.skill === se[ke].skill
-                                }) || de.push({
-                                    skill: se[ke].skill,
+                                for (var be = 0; be < le.length; be++) ue.find(function(e) {
+                                    return e.skill === le[be].skill
+                                }) || ue.push({
+                                    skill: le[be].skill,
                                     diff: "red",
-                                    value: se[ke].value
+                                    value: le[be].value
                                 });
-                                for (var be = 0; be < de.length; be++)
-                                    if ("red" !== de[be].diff) {
-                                        var we = null === de[be].diff ? '&nbsp;(<span class="tw_green">+' + de[be].value + "</span>)&nbsp;" : parseFloat(de[be].diff) > 0 ? '&nbsp;(<span class="tw_green">+' + de[be].diff + "</span>)&nbsp;" : parseFloat(de[be].diff) < 0 ? '&nbsp;(<span class="tw_red">' + de[be].diff + "</span>)&nbsp;" : "&nbsp;",
-                                            fe = 0 === de[be].diff ? "color: #CC7722" : "color: #666";
-                                        ie += '<li style="' + fe + ';">' + de[be].value + "&nbsp;" + de[be].skill + we + "</li>"
-                                    } for (var ye = 0; ye < de.length; ye++) "red" === de[ye].diff && (ie += '<li class="tw_red">-' + de[ye].value + "&nbsp;" + de[ye].skill + "</li>");
-                                t += ie += "</ul>"
+                                for (var we = 0; we < ue.length; we++)
+                                    if ("red" !== ue[we].diff) {
+                                        var fe = null === ue[we].diff ? '&nbsp;(<span class="tw_green">+' + ue[we].value + "</span>)&nbsp;" : parseFloat(ue[we].diff) > 0 ? '&nbsp;(<span class="tw_green">+' + ue[we].diff + "</span>)&nbsp;" : parseFloat(ue[we].diff) < 0 ? '&nbsp;(<span class="tw_red">' + ue[we].diff + "</span>)&nbsp;" : "&nbsp;",
+                                            ye = 0 === ue[we].diff ? "color: #CC7722" : "color: #666";
+                                        re += '<li style="' + ye + ';">' + ue[we].value + "&nbsp;" + ue[we].skill + fe + "</li>"
+                                    } for (var We = 0; We < ue.length; We++) "red" === ue[We].diff && (re += '<li class="tw_red">-' + ue[We].value + "&nbsp;" + ue[We].skill + "</li>");
+                                t += re += "</ul>"
                             }
-                            var Te = N > 0 ? "&nbsp;(" + N + "/" + ee + ")" : "",
-                                We = TWIR.storage.get("pop_set_id") ? '<div style="color: #666; text-align: center;">(' + this.item_obj.set + ")</div>" : "";
-                            if (N > 0) t = t.replace('<span class="text_bold">' + P.name + ":</span>", '<span style="color: #800080 !important;font-weight: bold;max-width: 220px;display: block;text-align: center;margin-bottom: 5px;">' + P.name + Te + "</span>" + We);
-                            else if (0 === N)
+                            var Te = z > 0 ? "&nbsp;(" + z + "/" + te + ")" : "",
+                                xe = TWIR.storage.get("pop_set_id") ? '<div style="color: #666; text-align: center;">(' + this.item_obj.set + ")</div>" : "";
+                            if (z > 0) t = t.replace('<span class="text_bold">' + P.name + ":</span>", '<span style="color: #800080 !important;font-weight: bold;max-width: 220px;display: block;text-align: center;margin-bottom: 5px;">' + P.name + Te + "</span>" + xe);
+                            else if (0 === z)
                                 if (TWIR.storage.get("pop_partial_bonus") && !1 === a) {
-                                    var xe = '<span style="color: #800080 !important;font-weight: bold;max-width: 220px;display: block;text-align: center;margin-top: 15px;margin-bottom: 5px;">' + P.name + "</span>" + We;
-                                    t = t.replace('<span class="text_bold">' + P.name + ":</span>", ""), t += xe
-                                } else t = t.replace('<span class="text_bold">' + P.name + ":</span>", '<span style="color: #800080 !important;font-weight: bold;max-width: 220px;display: block;text-align: center;margin-bottom: 5px;">' + P.name + "</span>" + We);
-                            t = 0 === N ? (t = t.replace(/<ul\s+class="inventory_popup_item_set_names">[\S\s]*?<\/ul>/gi, "")).replace(/<br><div\s+class="item_set_names">[\S\s]*?<\/div>/gi, "") : t.replace(/inventory_popup_item_set_names"/g, '$& style="max-width: 200px;display: block;min-width: 170px;white-space: unset!important;margin-left: 10px;"')
+                                    var ve = '<span style="color: #800080 !important;font-weight: bold;max-width: 220px;display: block;text-align: center;margin-top: 15px;margin-bottom: 5px;">' + P.name + "</span>" + xe;
+                                    t = t.replace('<span class="text_bold">' + P.name + ":</span>", ""), t += ve
+                                } else t = t.replace('<span class="text_bold">' + P.name + ":</span>", '<span style="color: #800080 !important;font-weight: bold;max-width: 220px;display: block;text-align: center;margin-bottom: 5px;">' + P.name + "</span>" + xe);
+                            t = 0 === z ? (t = t.replace(/<ul\s+class="inventory_popup_item_set_names">[\S\s]*?<\/ul>/gi, "")).replace(/<br><div\s+class="item_set_names">[\S\s]*?<\/div>/gi, "") : t.replace(/inventory_popup_item_set_names"/g, '$& style="max-width: 200px;display: block;min-width: 170px;white-space: unset!important;margin-left: 10px;"')
                         }
-                        return TWIR.storage.get("pop_partial_bonus") && null !== this.item_obj.set && 0 === N && !1 === a && (t += "</td>"), t
+                        return TWIR.storage.get("pop_partial_bonus") && null !== this.item_obj.set && 0 === z && !1 === a && (t += "</td>"), t
                     } catch (e) {
                         TWIR.bugHunt(e)
                     }
@@ -1690,361 +1699,223 @@
                 event_3: 2619e3,
                 event_4: 2675e3,
                 event_5: 259e4,
-                avatar: 50088e3
+                avatar: 50088e3,
+                regen: 51579e3
             },
             getKeys: function() {
-                for (var e in this.keys)
-                    if ($.isNumeric(this.keys[e]))
-                        if (50136e3 === this.keys[e]) this.keys.duel_dmg_pl = ItemManager.get(50136e3, !0).usebonus[1].replace(/[0-9\%\+\:\-\$\.]/g, "").replace(/(\(|\)).*/g, "").trim(), this.keys.duel_hp_pl = ItemManager.get(50136e3, !0).usebonus[2].replace(/[0-9\%\+\:\-\$\.]/g, "").replace(/(\(|\)).*/g, "").trim();
+                var e = TWIR.usebonus.keys;
+                for (var t in e)
+                    if ($.isNumeric(e[t]))
+                        if (50136e3 === e[t]) e.duel_dmg_pl = ItemManager.get(50136e3, !0).usebonus[1].replace(/[0-9\%\+\:\-\$\.]/g, "").replace(/(\(|\)).*/g, "").trim(), e.duel_hp_pl = ItemManager.get(50136e3, !0).usebonus[2].replace(/[0-9\%\+\:\-\$\.]/g, "").replace(/(\(|\)).*/g, "").trim();
                         else {
-                            var t = ItemManager.get(this.keys[e], !0).usebonus[0];
-                            this.keys[e] = -1 !== t.indexOf(":") ? /(.*?):/.exec(t)[1] : t.replace(/[0-9\%\+\:\-\$\.]/g, "").replace(/(\(|\)).*/g, "").trim()
+                            var a = ItemManager.get(e[t], !0).usebonus[0];
+                            e[t] = -1 !== a.indexOf(":") ? /(.*?):/.exec(a)[1] : a.replace(/[0-9\%\+\:\-\$\.]/g, "").replace(/(\(|\)).*/g, "").trim()
                         }
             },
             same: function(e, t) {
                 return new RegExp("^.*" + e + "(.*)$", "i").test(t)
             }
-        }, TWIR.fillFilters = function() {
+        }, TWIR.initItems = function() {
             try {
                 var e = Bag.items_by_id,
                     t = [],
                     a = (ItemManager.getAll(), TWIR.usebonus.keys),
                     i = Wear.get("right_arm") && "shot" === Wear.get("right_arm").obj.sub_type ? CharacterSkills.keyNames.shot : CharacterSkills.keyNames.punch,
                     r = [CharacterSkills.keyNames.aim, CharacterSkills.keyNames.tough, CharacterSkills.keyNames.reflex, CharacterSkills.keyNames.dodge, CharacterSkills.keyNames.tactic, CharacterSkills.keyNames.appearance, i],
-                    n = a.energy,
-                    o = a.health,
-                    s = a.duel_motivation,
-                    l = a.work_motivation,
-                    p = a.fort,
-                    c = a.attack,
-                    A = a.defense,
-                    g = a.duel_dmg,
-                    m = a.duel_dmg_pl,
-                    d = (a.duel_hp_pl, a.xp),
-                    u = a.xp_bottle,
-                    I = a.luck,
-                    h = a.money,
-                    R = a.drop,
-                    k = a.speed_active,
-                    b = a.speed_passive,
-                    w = a.lp,
-                    f = a.avatar,
-                    y = a.unpack_card,
-                    T = a.unpack_multiple,
-                    W = a.unpack_one,
-                    x = a.bonds,
-                    v = a.money_small,
-                    V = a.money_big,
-                    B = a.event_1,
-                    S = a.event_2,
-                    M = a.event_3,
-                    U = a.event_4,
-                    C = a.event_5,
-                    K = [],
-                    E = [],
-                    j = [],
-                    q = [],
-                    Q = [],
-                    F = [],
-                    Y = [],
-                    G = [],
-                    O = [],
-                    J = [],
-                    D = [],
-                    H = [],
-                    Z = [],
-                    P = [],
-                    N = [],
-                    z = [],
-                    L = [],
-                    X = [],
-                    _ = [],
-                    ee = [],
-                    te = [],
-                    ae = [],
-                    ie = [],
-                    re = [],
-                    ne = [],
-                    oe = [],
-                    se = [];
-                for (var le in e) {
-                    if (e[le]) var pe = e[le].obj;
-                    if ("yield" === pe.type)
-                        if ("mapdrop" === pe.spec_type && "none" === pe.usetype) - 1 === TWIR.storage.inventory.work.indexOf(pe.item_id) && TWIR.storage.inventory.work.push(pe.item_id);
-                        else if (null !== pe.set || countObjectKeys(ItemManager.get(le, !0).exportBoni()) > 0) - 1 === TWIR.storage.inventory.bonus.indexOf(pe.item_id) && TWIR.storage.inventory.bonus.push(pe.item_id);
-                    else if ("crafting" === pe.spec_type) {
-                        if (pe.usebonus)
-                            for (var ce = 0; ce < pe.usebonus.length; ce++) {
-                                var Ae = pe.usebonus[ce];
+                    n = Object.values(a),
+                    o = Object.keys(a),
+                    s = [],
+                    l = {};
+                for (var p in e) {
+                    if (e[p]) var c = e[p].obj;
+                    if ("yield" === c.type)
+                        if ("mapdrop" === c.spec_type && "none" === c.usetype) TWIR.storage.inventory.work.includes(c.item_id) || TWIR.storage.inventory.work.push(c.item_id);
+                        else if (null !== c.set || countObjectKeys(ItemManager.get(p, !0).exportBoni()) > 0) TWIR.storage.inventory.bonus.includes(c.item_id) || TWIR.storage.inventory.bonus.push(c.item_id);
+                    else if ("crafting" === c.spec_type) {
+                        if (c.usebonus)
+                            for (var A = 0; A < c.usebonus.length; A++) {
+                                var g = c.usebonus[A],
+                                    d = n.findIndex(function(e) {
+                                        return TWIR.usebonus.same(e, g)
+                                    });
                                 switch (!0) {
-                                    case TWIR.usebonus.same(n, Ae):
-                                        -1 === G.indexOf(pe.item_id) && G.push(pe.item_id);
+                                    case d > -1 && !$.isNumeric(o[d]):
+                                        l[o[d]] || (l[o[d]] = []), l[o[d]].includes(c.item_id) || l[o[d]].push(c.item_id);
                                         break;
-                                    case TWIR.usebonus.same(o, Ae):
-                                        -1 === O.indexOf(pe.item_id) && O.push(pe.item_id);
-                                        break;
-                                    case TWIR.usebonus.same(l, Ae):
-                                        -1 === J.indexOf(pe.item_id) && J.push(pe.item_id);
-                                        break;
-                                    case TWIR.usebonus.same(s, Ae):
-                                        -1 === D.indexOf(pe.item_id) && D.push(pe.item_id);
-                                        break;
-                                    case TWIR.usebonus.same(c, Ae):
-                                    case TWIR.usebonus.same(A, Ae):
-                                        -1 === H.indexOf(pe.item_id) && H.push(pe.item_id);
-                                    case TWIR.usebonus.same(p, Ae):
-                                        -1 === Z.indexOf(pe.item_id) && Z.push(pe.item_id);
-                                        break;
-                                    case TWIR.usebonus.same(b, Ae):
-                                        -1 === N.indexOf(pe.item_id) && N.push(pe.item_id);
-                                        break;
-                                    case TWIR.usebonus.same(k, Ae):
-                                        -1 === z.indexOf(pe.item_id) && z.push(pe.item_id);
-                                        break;
-                                    case TWIR.usebonus.same(d, Ae):
-                                    case TWIR.usebonus.same(u, Ae):
-                                        -1 === L.indexOf(pe.item_id) && L.push(pe.item_id);
-                                        break;
-                                    case TWIR.usebonus.same(g, Ae):
-                                    case TWIR.usebonus.same(m, Ae):
                                     case Object.keys(CharacterSkills.keyNames).some(function(e) {
-                                        return TWIR.usebonus.same(CharacterSkills.keyNames[e].toLowerCase(), Ae.toLowerCase()) && $.inArray(CharacterSkills.keyNames[e], r) > -1
+                                        return TWIR.usebonus.same(CharacterSkills.keyNames[e].toLowerCase(), g.toLowerCase())
+                                    }) && !TWIR.usebonus.same(a.lp, g):
+                                        l.skills || (l.skills = []), l.skills.includes(c.item_id) || l.skills.push(c.item_id);
+                                    case Object.keys(CharacterSkills.keyNames).some(function(e) {
+                                        return TWIR.usebonus.same(CharacterSkills.keyNames[e].toLowerCase(), g.toLowerCase()) && $.inArray(CharacterSkills.keyNames[e], r) > -1
                                     }):
-                                        -1 === P.indexOf(pe.item_id) && P.push(pe.item_id);
-                                        break;
-                                    case TWIR.usebonus.same(w, Ae):
-                                        -1 === _.indexOf(pe.item_id) && _.push(pe.item_id);
-                                        break;
-                                    case TWIR.usebonus.same(I, Ae):
-                                    case TWIR.usebonus.same(h, Ae):
-                                    case TWIR.usebonus.same(R, Ae):
-                                        -1 === ee.indexOf(pe.item_id) && ee.push(pe.item_id);
-                                        break;
-                                    case Object.keys(CharacterSkills.keyNames).some(function(e) {
-                                        return TWIR.usebonus.same(CharacterSkills.keyNames[e].toLowerCase(), Ae.toLowerCase())
-                                    }) && !TWIR.usebonus.same(w, Ae):
-                                        -1 === X.indexOf(pe.item_id) && X.push(pe.item_id);
-                                        break;
-                                    case TWIR.usebonus.same(y, Ae):
-                                        -1 !== ne.indexOf(pe.item_id) && -1 !== F.indexOf(pe.item_id) || (ne.push(pe.item_id), F.push(pe.item_id));
+                                        l.duels || (l.duels = []), l.duels.includes(c.item_id) || l.duels.push(c.item_id);
                                         break;
                                     default:
-                                        -1 === t.indexOf(pe.item_id) && t.push(pe.item_id)
+                                        t.includes(c.item_id) || t.push(c.item_id)
                                 }
-                                if (TWIR.storage.popups.crafting[pe.item_id]) switch (!0) {
-                                    case TWIR.usebonus.same(y, Ae):
-                                        -1 === F.indexOf(pe.item_id) && F.push(pe.item_id);
+                                var m = TWIR.storage.popups.crafting[c.item_id];
+                                if (m) switch (!0) {
+                                    case TWIR.usebonus.same(a.unpack_card, g):
+                                        l.craft_cards || (l.craft_cards = []), l.craft_cards.includes(c.item_id) || l.craft_cards.push(c.item_id);
                                         break;
-                                    case !TWIR.usebonus.same(y, Ae):
-                                        -1 === Q.indexOf(pe.item_id) && Q.push(pe.item_id)
+                                    case !TWIR.usebonus.same(a.unpack_card, g):
+                                        l.crafted_items || (l.crafted_items = []), l.crafted_items.includes(c.item_id) || l.crafted_items.push(c.item_id)
                                 }
                             }
-                        TWIR.storage.popups.crafting[pe.item_id] && (1 === TWIR.storage.popups.crafting[pe.item_id].profsymbol && -1 === K.indexOf(pe.item_id) ? K.push(pe.item_id) : 2 === TWIR.storage.popups.crafting[pe.item_id].profsymbol && -1 === E.indexOf(pe.item_id) ? E.push(pe.item_id) : 3 === TWIR.storage.popups.crafting[pe.item_id].profsymbol && -1 === j.indexOf(pe.item_id) ? j.push(pe.item_id) : 4 === TWIR.storage.popups.crafting[pe.item_id].profsymbol && -1 === q.indexOf(pe.item_id) && q.push(pe.item_id))
-                    } else if ("bonus_medal" === pe.spec_type && "use" === pe.usetype) - 1 === ae.indexOf(pe.item_id) && ae.push(pe.item_id);
-                    else if ("none" === pe.usetype || "jobdrop" === pe.spec_type) - 1 === TWIR.storage.inventory.quest.indexOf(pe.item_id) && TWIR.storage.inventory.quest.push(pe.item_id);
-                    else if ("use" === pe.usetype) {
-                        if (pe.usebonus)
-                            for (var ce = 0; ce < pe.usebonus.length; ce++) {
-                                var Ae = pe.usebonus[ce];
+                        var u = TWIR.storage.popups.crafting[c.item_id];
+                        u && (l["prof_" + u.profsymbol] || (l["prof_" + u.profsymbol] = []), l["prof_" + u.profsymbol].includes(c.item_id) || l["prof_" + u.profsymbol].push(c.item_id))
+                    } else if ("bonus_medal" === c.spec_type && "use" === c.usetype || 50991e3 === c.item_id) l.bonus_medal || (l.bonus_medal = []), l.bonus_medal.includes(c.item_id) || l.bonus_medal.push(c.item_id);
+                    else if ("none" === c.usetype || "jobdrop" === c.spec_type) TWIR.storage.inventory.quest.includes(c.item_id) || TWIR.storage.inventory.quest.push(c.item_id);
+                    else if ("use" === c.usetype) {
+                        if (c.usebonus)
+                            for (var A = 0; A < c.usebonus.length; A++) {
+                                var g = c.usebonus[A],
+                                    d = n.findIndex(function(e) {
+                                        return TWIR.usebonus.same(e, g)
+                                    });
                                 switch (!0) {
-                                    case TWIR.usebonus.same(n, Ae):
-                                        -1 === G.indexOf(pe.item_id) && G.push(pe.item_id);
+                                    case d > -1 && !$.isNumeric(o[d]):
+                                        l[o[d]] || (l[o[d]] = []), l[o[d]].includes(c.item_id) || l[o[d]].push(c.item_id);
                                         break;
-                                    case TWIR.usebonus.same(o, Ae):
-                                        -1 === O.indexOf(pe.item_id) && O.push(pe.item_id);
-                                        break;
-                                    case TWIR.usebonus.same(l, Ae):
-                                        -1 === J.indexOf(pe.item_id) && J.push(pe.item_id);
-                                        break;
-                                    case TWIR.usebonus.same(s, Ae):
-                                        -1 === D.indexOf(pe.item_id) && D.push(pe.item_id);
-                                        break;
-                                    case TWIR.usebonus.same(g, Ae):
-                                    case TWIR.usebonus.same(m, Ae):
                                     case Object.keys(CharacterSkills.keyNames).some(function(e) {
-                                        return TWIR.usebonus.same(CharacterSkills.keyNames[e].toLowerCase(), Ae.toLowerCase()) && $.inArray(CharacterSkills.keyNames[e], r) > -1
+                                        return TWIR.usebonus.same(CharacterSkills.keyNames[e].toLowerCase(), g.toLowerCase())
+                                    }) && !TWIR.usebonus.same(a.lp, g):
+                                        l.skills || (l.skills = []), l.skills.includes(c.item_id) || l.skills.push(c.item_id);
+                                    case Object.keys(CharacterSkills.keyNames).some(function(e) {
+                                        return TWIR.usebonus.same(CharacterSkills.keyNames[e].toLowerCase(), g.toLowerCase()) && $.inArray(CharacterSkills.keyNames[e], r) > -1
                                     }):
-                                        -1 === P.indexOf(pe.item_id) && P.push(pe.item_id);
-                                        break;
-                                    case TWIR.usebonus.same(I, Ae):
-                                    case TWIR.usebonus.same(h, Ae):
-                                    case TWIR.usebonus.same(R, Ae):
-                                        -1 === ee.indexOf(pe.item_id) && ee.push(pe.item_id);
-                                        break;
-                                    case TWIR.usebonus.same(b, Ae):
-                                        -1 === N.indexOf(pe.item_id) && N.push(pe.item_id);
-                                        break;
-                                    case TWIR.usebonus.same(k, Ae):
-                                        -1 === z.indexOf(pe.item_id) && z.push(pe.item_id);
-                                        break;
-                                    case TWIR.usebonus.same(d, Ae):
-                                    case TWIR.usebonus.same(u, Ae):
-                                        -1 === L.indexOf(pe.item_id) && L.push(pe.item_id);
-                                        break;
-                                    case TWIR.usebonus.same(U, Ae):
-                                    case TWIR.usebonus.same(C, Ae):
-                                    case TWIR.usebonus.same(B, Ae):
-                                    case TWIR.usebonus.same(M, Ae):
-                                    case TWIR.usebonus.same(S, Ae):
-                                        -1 === te.indexOf(pe.item_id) && te.push(pe.item_id);
-                                        break;
-                                    case TWIR.usebonus.same(W, Ae):
-                                    case TWIR.usebonus.same(T, Ae):
-                                        -1 === ie.indexOf(pe.item_id) && ie.push(pe.item_id);
-                                        break;
-                                    case TWIR.usebonus.same(V, Ae):
-                                    case TWIR.usebonus.same(v, Ae):
-                                    case TWIR.usebonus.same(x, Ae):
-                                        -1 === re.indexOf(pe.item_id) && re.push(pe.item_id);
-                                        break;
-                                    case TWIR.usebonus.same(y, Ae):
-                                        -1 === ne.indexOf(pe.item_id) && ne.push(pe.item_id);
-                                        break;
-                                    case TWIR.usebonus.same(f, Ae):
-                                        -1 === oe.indexOf(pe.item_id) && oe.push(pe.item_id);
+                                        l.duels || (l.duels = []), l.duels.includes(c.item_id) || l.duels.push(c.item_id);
                                         break;
                                     default:
-                                        -1 === t.indexOf(pe.item_id) && t.push(pe.item_id)
+                                        t.includes(c.item_id) || t.push(c.item_id)
                                 }
                             }
-                    } else if ("buff" === pe.usetype && pe.usebonus)
-                        for (var ce = 0; ce < pe.usebonus.length; ce++) {
-                            var Ae = pe.usebonus[ce];
+                    } else if ("buff" === c.usetype && c.usebonus)
+                        for (var A = 0; A < c.usebonus.length; A++) {
+                            var g = c.usebonus[A],
+                                d = n.findIndex(function(e) {
+                                    return TWIR.usebonus.same(e, g)
+                                });
                             switch (!0) {
-                                case TWIR.usebonus.same(c, Ae):
-                                case TWIR.usebonus.same(A, Ae):
-                                    -1 === H.indexOf(pe.item_id) && H.push(pe.item_id);
-                                case TWIR.usebonus.same(p, Ae):
-                                    -1 === Z.indexOf(pe.item_id) && Z.push(pe.item_id);
+                                case d > -1 && !$.isNumeric(o[d]):
+                                    l[o[d]] || (l[o[d]] = []), l[o[d]].includes(c.item_id) || l[o[d]].push(c.item_id);
                                     break;
-                                case TWIR.usebonus.same(g, Ae):
-                                case TWIR.usebonus.same(m, Ae):
                                 case Object.keys(CharacterSkills.keyNames).some(function(e) {
-                                    return TWIR.usebonus.same(CharacterSkills.keyNames[e].toLowerCase(), Ae.toLowerCase()) && $.inArray(CharacterSkills.keyNames[e], r) > -1
+                                    return TWIR.usebonus.same(CharacterSkills.keyNames[e].toLowerCase(), g.toLowerCase())
+                                }) && !TWIR.usebonus.same(a.lp, g):
+                                    l.skills || (l.skills = []), l.skills.includes(c.item_id) || l.skills.push(c.item_id);
+                                case Object.keys(CharacterSkills.keyNames).some(function(e) {
+                                    return TWIR.usebonus.same(CharacterSkills.keyNames[e].toLowerCase(), g.toLowerCase()) && $.inArray(CharacterSkills.keyNames[e], r) > -1
                                 }):
-                                    -1 === P.indexOf(pe.item_id) && P.push(pe.item_id);
-                                    break;
-                                case TWIR.usebonus.same(w, Ae):
-                                    -1 === _.indexOf(pe.item_id) && _.push(pe.item_id);
-                                    break;
-                                case TWIR.usebonus.same(I, Ae):
-                                case TWIR.usebonus.same(h, Ae):
-                                case TWIR.usebonus.same(R, Ae):
-                                    -1 === ee.indexOf(pe.item_id) && ee.push(pe.item_id);
-                                    break;
-                                case TWIR.usebonus.same(b, Ae):
-                                    -1 === N.indexOf(pe.item_id) && N.push(pe.item_id);
-                                    break;
-                                case TWIR.usebonus.same(k, Ae):
-                                    -1 === z.indexOf(pe.item_id) && z.push(pe.item_id);
-                                    break;
-                                case TWIR.usebonus.same(d, Ae):
-                                case TWIR.usebonus.same(u, Ae):
-                                    -1 === L.indexOf(pe.item_id) && L.push(pe.item_id);
-                                    break;
-                                case Object.keys(CharacterSkills.keyNames).some(function(e) {
-                                    return TWIR.usebonus.same(CharacterSkills.keyNames[e].toLowerCase(), Ae.toLowerCase())
-                                }) && !TWIR.usebonus.same(w, Ae):
-                                    -1 === X.indexOf(pe.item_id) && X.push(pe.item_id);
+                                    l.duels || (l.duels = []), l.duels.includes(c.item_id) || l.duels.push(c.item_id);
                                     break;
                                 default:
-                                    -1 === t.indexOf(pe.item_id) && t.push(pe.item_id)
+                                    t.includes(c.item_id) || t.push(c.item_id)
                             }
                         }
-                    "recipe" === pe.type && -1 === Y.indexOf(pe.item_id) && Y.push(pe.item_id), null !== pe.set && -1 === TWIR.storage.setList.ownedSetItems.indexOf(le) && TWIR.storage.setList.ownedSetItems.push(le)
+                    "recipe" === c.type && (l.recipes || (l.recipes = []), l.recipes.includes(c.item_id) || l.recipes.push(c.item_id))
                 }
-                var ge = TWIR.storage.inventory.buffs = {},
-                    me = [],
-                    de = {
-                        energy: G,
-                        health: O,
-                        work_motivation: J,
-                        duel_motivation: D,
-                        adventures: H,
-                        skills: X,
-                        labor_points: _,
-                        luck_money: ee,
-                        fort_battles: Z,
-                        duels: P,
-                        speed: N,
-                        waytime_shortening: z,
-                        xp: L
+
+                function h(e) {
+                    if (!Array.isArray(e)) return l[e] || [];
+                    for (var t = [], a = 0; a < e.length; a++) l[e[a]] && (t = t.concat(l[e[a]]));
+                    return t
+                }
+                var I = TWIR.storage.inventory.buffs = {},
+                    k = [],
+                    R = {
+                        energy: h("energy"),
+                        health: h("health"),
+                        work_motivation: h("work_motivation"),
+                        duel_motivation: h("duel_motivation"),
+                        adventures: h(["attack", "defense"]),
+                        skills: h("skills"),
+                        labor_points: h("lp"),
+                        luck_money: h(["money", "luck", "drop"]),
+                        fort_battles: h(["attack", "defense", "fort"]),
+                        duels: h(["duel_dmg", "duel_dmg_pl", "duel_hp_pl", "duels"]),
+                        speed: h("speed_passive"),
+                        waytime_shortening: h("speed_active"),
+                        xp: h(["xp", "xp_bottle"]),
+                        regen: h("regen")
                     };
-                $.each(de, function(e, t) {
-                    ge[e] = {
+                $.each(R, function(e, t) {
+                    I[e] = {
                         name: TWIRlang.inventory[e],
                         items: t
-                    }, me = me.concat(t.filter(function(e) {
-                        return me.indexOf(e) < 0
+                    }, k = k.concat(t.filter(function(e) {
+                        return k.indexOf(e) < 0
                     }))
                 });
-                var ue = TWIR.storage.inventory.use = {},
-                    Ie = [],
-                    he = {
-                        events: te,
-                        premium: ae,
-                        unpacks: ie,
-                        coll_cards: ne,
-                        bonds_money: re,
-                        avatar_part: oe
+                var b = TWIR.storage.inventory.use = {},
+                    w = [],
+                    f = {
+                        events: h(["event_1", "event_2", "event_3", "event_4", "event_5"]),
+                        premium: h("bonus_medal"),
+                        unpacks: h(["unpack_multiple", "unpack_one"]),
+                        coll_cards: h("unpack_card"),
+                        bonds_money: h(["money_small", "money_big", "bonds"]),
+                        avatar_part: h("avatar")
                     };
-                $.each(he, function(e, t) {
-                    ue[e] = {
+                $.each(f, function(e, t) {
+                    b[e] = {
                         name: TWIRlang.inventory[e],
                         items: t
-                    }, Ie = Ie.concat(t.filter(function(e) {
-                        return Ie.indexOf(e) < 0
+                    }, w = w.concat(t.filter(function(e) {
+                        return w.indexOf(e) < 0
                     }))
                 });
-                var Re = TWIR.storage.inventory.crafting = {},
-                    ke = [],
-                    be = {
-                        field_cook: K,
-                        tonic_peddler: E,
-                        blacksmith: j,
-                        master_saddler: q,
-                        craft_cards: F,
-                        crafted_items: Q,
-                        recipes: Y
+                var y = TWIR.storage.inventory.crafting = {},
+                    W = [],
+                    T = {
+                        field_cook: h("prof_1"),
+                        tonic_peddler: h("prof_2"),
+                        blacksmith: h("prof_3"),
+                        master_saddler: h("prof_4"),
+                        craft_cards: h("craft_cards"),
+                        crafted_items: h("crafted_items"),
+                        recipes: h("recipes")
                     };
-                $.each(be, function(e, t) {
-                    Re[e] = {
+                $.each(T, function(e, t) {
+                    y[e] = {
                         name: TWIRlang.inventory[e],
                         items: t
-                    }, ke = ke.concat(t.filter(function(e) {
-                        return ke.indexOf(e) < 0
+                    }, W = W.concat(t.filter(function(e) {
+                        return W.indexOf(e) < 0
                     }))
-                }), TWIR.storage.inventory.use_all = Ie, TWIR.storage.inventory.buffs_all = me, TWIR.storage.inventory.crafting_all = ke;
-                var we = TWIR.storage.inventory.bonus,
-                    fe = TWIR.storage.inventory.quest,
-                    ye = TWIR.storage.inventory.use_all.concat(TWIR.storage.inventory.buffs_all).concat(TWIR.storage.inventory.crafting_all).concat(we).concat(fe);
-                se = $.grep(t, function(e) {
-                    return $.inArray(e, ye) < 0
-                }), ue.others = {
+                }), TWIR.storage.inventory.use_all = w, TWIR.storage.inventory.buffs_all = k, TWIR.storage.inventory.crafting_all = W;
+                var x = TWIR.storage.inventory.bonus,
+                    v = TWIR.storage.inventory.quest,
+                    V = TWIR.storage.inventory.use_all.concat(TWIR.storage.inventory.buffs_all).concat(TWIR.storage.inventory.crafting_all).concat(x).concat(v);
+                s = $.grep(t, function(e) {
+                    return $.inArray(e, V) < 0
+                }), b.others = {
                     name: "#" + TWIRlang.inventory.others,
-                    items: se
+                    items: s
                 }
             } catch (e) {
                 TWIR.bugHunt(e)
             }
-        }, TWIR.updateCrafting = function() {
-            var e = localStorage.twir_crafting;
-            if (void 0 !== localStorage && void 0 !== e && TWIR.LZ.decompress(e)) {
-                var t = TWIR.LZ.decompress(e);
-                TWIR.storage.popups.crafting = JSON.parse(t)
-            } else {
-                var a = ItemManager.getAll();
-                for (var i in a) {
-                    if (a[i]) var r = a[i];
-                    "recipe" == r.type && (TWIR.storage.popups.crafting[i] || Object.assign(TWIR.storage.popups.crafting, {
-                        [r.craftitem]: {
-                            recipe: r.item_base_id,
-                            profsymbol: r.profession_id,
-                            resources: r.resources
-                        }
+        }, TWIR.updateCrafting = function(e) {
+            var t = localStorage.twir_crafting,
+                a = TWIR.storage.popups.crafting,
+                i = TWIR.LZ.decompress(t),
+                r = localStorage.twir_dataVersion;
+            if (void 0 === localStorage || void 0 === t || !i || e) {
+                var n = ItemManager.getAll();
+                for (var o in n) {
+                    if (n[o]) var s = n[o];
+                    "recipe" === s.type && (a[o] || (a[s.craftitem] = {
+                        recipe: s.item_base_id,
+                        profsymbol: s.profession_id,
+                        resources: s.resources
                     }))
                 }
-                void 0 !== localStorage ? (localStorage.twir_crafting = TWIR.LZ.compress(JSON.stringify(TWIR.storage.popups.crafting)), TWIR.console("TWIR/: Crafting DB successfully created and saved.", "green")) : new UserMessage(TWIRlang.informative.storage_error + "!", UserMessage.TYPE_ERROR).show()
+                void 0 !== localStorage ? (localStorage.twir_crafting = TWIR.LZ.compress(JSON.stringify(a)), TWIR.console("TWIR/: Crafting DB successfully created and saved.", "green")) : new UserMessage(TWIRlang.informative.storage_error + "!", UserMessage.TYPE_ERROR).show()
+            } else {
+                var l = i;
+                TWIR.storage.popups.crafting = JSON.parse(l), (!r || r && Game.version > Number(r)) && TWIR.updateCrafting(!0), localStorage.twir_dataVersion = Game.version
             }
         }, TWIR.checkJobs = function() {
             Ajax.remoteCallMode("work", "index", {}, function(e) {
@@ -2573,20 +2444,20 @@
                             s = $("<span " + n + ' title="' + ($.isNumeric(t[a].item_id) ? new ItemPopup(i).getXHTML().escapeHTML() : i.name) + '">' + i.name + "</span>");
                         e.appendRow().appendToCell(-1, "twir_mw_idx", a + 1);
                         var g = $.isNumeric(t[a].item_id) ? 0 : i.items[~~(i.items.length * Math.random())],
-                            m = ItemManager.get(1e3 * g, !0);
-                        e.appendToCell(-1, "twir_mw_item", "<img " + n + ' style="cursor: pointer;" title="' + ($.isNumeric(t[a].item_id) ? new ItemPopup(i).getXHTML().escapeHTML() : i.name) + '" src="' + ($.isNumeric(t[a].item_id) ? i.image : m.image) + '"; height="29"; width="29"></img>'), e.appendToCell(-1, "twir_mw_name", s), t[a].item_price ? e.appendToCell(-1, "twir_mw_price", "$" + (t[a].item_price >= 1e5 ? TWIR.replSum(t[a].item_price) : t[a].item_price)) : e.appendToCell(-1, "twir_mw_price", "-");
-                        var d = new west.gui.Icon("abort").getMainDiv().css({
+                            d = ItemManager.get(1e3 * g, !0);
+                        e.appendToCell(-1, "twir_mw_item", "<img " + n + ' style="cursor: pointer;" title="' + ($.isNumeric(t[a].item_id) ? new ItemPopup(i).getXHTML().escapeHTML() : i.name) + '" src="' + ($.isNumeric(t[a].item_id) ? i.image : d.image) + '"; height="29"; width="29"></img>'), e.appendToCell(-1, "twir_mw_name", s), t[a].item_price ? e.appendToCell(-1, "twir_mw_price", "$" + (t[a].item_price >= 1e5 ? TWIR.replSum(t[a].item_price) : t[a].item_price)) : e.appendToCell(-1, "twir_mw_price", "-");
+                        var m = new west.gui.Icon("abort").getMainDiv().css({
                             "margin-bottom": "2px",
                             "margin-left": "5px",
                             cursor: "pointer"
                         }).data("id", t[a].item_id).click(function() {
                             A($(this).data("id"), e)
                         });
-                        if (e.appendToCell(-1, "twir_mw_remove", d), $.isNumeric(t[a].item_id)) l += "[item=" + t[a].item_id + "]&nbsp;";
+                        if (e.appendToCell(-1, "twir_mw_remove", m), $.isNumeric(t[a].item_id)) l += "[item=" + t[a].item_id + "]&nbsp;";
                         else
                             for (var u = 0; u < i.items.length; u++) l += "[item=" + 1e3 * i.items[u] + "]&nbsp;"
                     }
-                    var I = new west.gui.Icon("link").getMainDiv().css({
+                    var h = new west.gui.Icon("link").getMainDiv().css({
                         "margin-left": "5px",
                         cursor: "pointer"
                     }).click(function() {
@@ -2607,29 +2478,29 @@
                                             item_id: i,
                                             item_price: 0
                                         })
-                                    }), c(), R()
+                                    }), c(), k()
                                 }(t.getValue())
                             }).addButton(TWIRlang.informative.hide).show()
                         }()
                     });
-                    e.appendToFooter("twir_mw_idx", I);
-                    var h = new west.gui.Icon("abort", TWIRlang.market_watcher.remove_all).getMainDiv().css({
+                    e.appendToFooter("twir_mw_idx", h);
+                    var I = new west.gui.Icon("abort", TWIRlang.market_watcher.remove_all).getMainDiv().css({
                         "margin-left": "5px",
                         cursor: "pointer"
                     }).click(function() {
                         var e = new west.gui.Dialog(void 0, void 0, west.gui.Dialog.SYS_QUESTION).addButton("ok", function() {
-                            !0 !== TWIR.marketWatcher.checking ? (TWIR.marketWatcher.mwl = [], c(), R()) : new UserMessage(TWIRlang.informative.error_wait + ".", UserMessage.TYPE_ERROR).show()
+                            !0 !== TWIR.marketWatcher.checking ? (TWIR.marketWatcher.mwl = [], c(), k()) : new UserMessage(TWIRlang.informative.error_wait + ".", UserMessage.TYPE_ERROR).show()
                         }).addButton("cancel").show();
                         e.setTitle('<span style="margin-top: 4px; font-size: 16pt;">' + TWIRlang.market_watcher.remove_all + "</span>")
                     });
-                    t.length && e.appendToFooter("twir_mw_remove", h), r.append(e.getMainDiv()), e.noScrollbar || (null === p && (p = e.bodyscroll.getScrollPos()), e.bodyscroll.scrollTo(p.x, p.y), p = e.bodyscroll.getScrollPos())
+                    t.length && e.appendToFooter("twir_mw_remove", I), r.append(e.getMainDiv()), e.noScrollbar || (null === p && (p = e.bodyscroll.getScrollPos()), e.bodyscroll.scrollTo(p.x, p.y), p = e.bodyscroll.getScrollPos())
                 }
 
                 function A(e, t) {
                     if (!0 !== TWIR.marketWatcher.checking) {
                         t.noScrollbar || (p = t.bodyscroll.getScrollPos());
                         for (var a = TWIR.marketWatcher.mwl.length - 1; a >= 0; --a) TWIR.marketWatcher.mwl[a].item_id === e && TWIR.marketWatcher.mwl.splice(a, 1);
-                        c(), R()
+                        c(), k()
                     } else new UserMessage(TWIRlang.informative.error_wait + ".", UserMessage.TYPE_ERROR).show()
                 }
 
@@ -2646,47 +2517,47 @@
                     })
                 }
                 c();
-                var m = (new west.gui.Textfield).setPlaceholder(TWIRlang.market_watcher.item_id).setWidth(125),
-                    d = (new west.gui.Textfield).onlyNumeric().setName().maxlength(8).setTooltip(TWIRlang.market_watcher.max_price + "&nbsp;(" + TWIRlang.tooltips.each + ")").setPlaceholder("$").setWidth(65),
+                var d = (new west.gui.Textfield).setPlaceholder(TWIRlang.market_watcher.item_id).setWidth(125),
+                    m = (new west.gui.Textfield).onlyNumeric().setName().maxlength(8).setTooltip(TWIRlang.market_watcher.max_price + "&nbsp;(" + TWIRlang.tooltips.each + ")").setPlaceholder("$").setWidth(65),
                     u = $('<div style="position: absolute;top: 65px;left: 2px;width: 175px;height: 270px;"/>'),
-                    I = $('<div class="twir_mw_itemframe" style="position: absolute;height: 75px;width: 145px;top: 20px;"/>');
-                I.append(g(0)), m.getMainDiv().on("input change paste keyup", function() {
-                    MarketWindow.window.$("div.twir_mw_itemframe", MarketWindow.DOM).empty(), m.setValue(m.getValue().replace(/\[item=(.*?)\]/g, "$1").trim());
-                    var e = m.getValue();
-                    $.isNumeric(e) && (e -= e % 1e3), ($.isNumeric(e) && e >= 1e3 || !$.isNumeric(e)) && TWIR.marketWatcher.isValidItem(e, !1) ? I.append(g(e)) : I.append(g(0))
+                    h = $('<div class="twir_mw_itemframe" style="position: absolute;height: 75px;width: 145px;top: 20px;"/>');
+                h.append(g(0)), d.getMainDiv().on("input change paste keyup", function() {
+                    MarketWindow.window.$("div.twir_mw_itemframe", MarketWindow.DOM).empty(), d.setValue(d.getValue().replace(/\[item=(.*?)\]/g, "$1").trim());
+                    var e = d.getValue();
+                    $.isNumeric(e) && (e -= e % 1e3), ($.isNumeric(e) && e >= 1e3 || !$.isNumeric(e)) && TWIR.marketWatcher.isValidItem(e, !1) ? h.append(g(e)) : h.append(g(0))
                 });
-                var h = new west.gui.Button(TWIRlang.market_watcher.add_item, function() {
-                    var e = m.getValue();
+                var I = new west.gui.Button(TWIRlang.market_watcher.add_item, function() {
+                    var e = d.getValue();
                     if ("" !== e) {
-                        $.isNumeric(e) && m.setValue(Math.min(2147483647, Math.max(1e3, m.getValue()))), d.setValue(Math.min(99e6, Math.max(0, d.getValue())));
+                        $.isNumeric(e) && d.setValue(Math.min(2147483647, Math.max(1e3, d.getValue()))), m.setValue(Math.min(99e6, Math.max(0, m.getValue())));
                         var t = $.isNumeric(e) ? JSON.parse(e) : e,
-                            a = JSON.parse(d.getValue());
+                            a = JSON.parse(m.getValue());
                         TWIR.marketWatcher.isValidItem(t, !0) && (TWIR.marketWatcher.mwl.push({
                             item_id: t,
                             item_price: a
-                        }), c(), R())
+                        }), c(), k())
                     }
                 }).addClass("twir_mw_watch");
 
-                function R() {
+                function k() {
                     void 0 !== localStorage ? localStorage.twir_marketAlert = TWIR.LZ.compress(JSON.stringify(TWIR.marketWatcher.mwl)) : new UserMessage(TWIRlang.informative.storage_error + "!", UserMessage.TYPE_ERROR).show()
                 }
-                u.append((new west.gui.Groupframe).appendToContentPane($('<div style="width: 145px;height: 240px;"/>').append(I, new west.gui.Icon("abort", "").getMainDiv().css({
+                u.append((new west.gui.Groupframe).appendToContentPane($('<div style="width: 145px;height: 240px;"/>').append(h, new west.gui.Icon("abort", "").getMainDiv().css({
                     position: "absolute",
                     right: "25px",
                     top: "160px",
                     cursor: "pointer"
                 }).on("click", function() {
-                    m.setValue(""), d.setValue(""), I.append(g(0))
-                })).append(m.getMainDiv().css({
+                    d.setValue(""), m.setValue(""), h.append(g(0))
+                })).append(d.getMainDiv().css({
                     position: "absolute",
                     top: "115px",
                     left: "15px"
-                })).append(d.getMainDiv().css({
+                })).append(m.getMainDiv().css({
                     position: "absolute",
                     top: "155px",
                     left: "45px"
-                })).append(h.getMainDiv())).getMainDiv()), t.append(u, $('<div class="market_devider_bottom" style="left: 10px;width: 160px;" />'), $('<div class="market_devider_bottom" />'), i, a, r), MarketWindow.window.$("div.marketplace-twir_mw", MarketWindow.DOM).empty().append(t)
+                })).append(I.getMainDiv())).getMainDiv()), t.append(u, $('<div class="market_devider_bottom" style="left: 10px;width: 160px;" />'), $('<div class="market_devider_bottom" />'), i, a, r), MarketWindow.window.$("div.marketplace-twir_mw", MarketWindow.DOM).empty().append(t)
             },
             isUndervalued: function(e, t, a) {
                 var i = ItemManager.get(e, !0),
@@ -2748,116 +2619,116 @@
                             visibility: 2
                         }, function(A) {
                             if (!1 === A.error) {
-                                for (var g = A.msg.search_result, m = 0; m < g.length; m++)
+                                for (var g = A.msg.search_result, d = 0; d < g.length; d++)
                                     if (2 !== g.sell_rights) {
                                         0;
-                                        var d = ItemManager.get(g[m].item_id, !0).item_base_id,
-                                            u = ItemManager.get(g[m].item_id, !0),
-                                            I = {
+                                        var m = ItemManager.get(g[d].item_id, !0).item_base_id,
+                                            u = ItemManager.get(g[d].item_id, !0),
+                                            h = {
                                                 date: o,
-                                                auction_end_date: g[m].auction_end_date,
-                                                item_base_id: d,
-                                                item_count: g[m].item_count,
-                                                auction_price: g[m].auction_price,
-                                                max_price: g[m].max_price,
-                                                offer_id: g[m].market_offer_id
+                                                auction_end_date: g[d].auction_end_date,
+                                                item_base_id: m,
+                                                item_count: g[d].item_count,
+                                                auction_price: g[d].auction_price,
+                                                max_price: g[d].max_price,
+                                                offer_id: g[d].market_offer_id
                                             };
-                                        if (!("yield" !== u.type || null !== u.set || TWIR.storage.inventory.collectibles.indexOf(d) >= 0 || TWIR.storage.inventory.bonus.indexOf(d) >= 0) || "all" != p && "valuable" != p) {
+                                        if (!("yield" !== u.type || null !== u.set || TWIR.storage.inventory.collectibles.indexOf(m) >= 0 || TWIR.storage.inventory.bonus.indexOf(m) >= 0) || "all" != p && "valuable" != p) {
                                             if ("all" == p)
                                                 if (TWIR.marketWatcher.marketOther.some(function(e) {
-                                                        return e.offer_id === g[m].market_offer_id
+                                                        return e.offer_id === g[d].market_offer_id
                                                     })) {
-                                                    var h = TWIR.marketWatcher.marketOther.findIndex(function(e) {
-                                                        return e.offer_id === g[m].market_offer_id
+                                                    var I = TWIR.marketWatcher.marketOther.findIndex(function(e) {
+                                                        return e.offer_id === g[d].market_offer_id
                                                     });
-                                                    TWIR.marketWatcher.marketOther[h].date = o
-                                                } else TWIR.marketWatcher.marketOther.push(I)
+                                                    TWIR.marketWatcher.marketOther[I].date = o
+                                                } else TWIR.marketWatcher.marketOther.push(h)
                                         } else if (TWIR.marketWatcher.marketMain.some(function(e) {
-                                                return e.offer_id === g[m].market_offer_id
+                                                return e.offer_id === g[d].market_offer_id
                                             })) {
-                                            var R = TWIR.marketWatcher.marketMain.findIndex(function(e) {
-                                                return e.offer_id === g[m].market_offer_id
+                                            var k = TWIR.marketWatcher.marketMain.findIndex(function(e) {
+                                                return e.offer_id === g[d].market_offer_id
                                             });
-                                            TWIR.marketWatcher.marketMain[R].date = o
-                                        } else TWIR.marketWatcher.marketMain.push(I);
-                                        var k = [],
+                                            TWIR.marketWatcher.marketMain[k].date = o
+                                        } else TWIR.marketWatcher.marketMain.push(h);
+                                        var R = [],
                                             b = l.find(function(e) {
-                                                return e.item_id === g[m].item_id || e.item_id === u.set
+                                                return e.item_id === g[d].item_id || e.item_id === u.set
                                             });
-                                        if (void 0 === b && ("yield" !== u.type || null !== u.set || TWIR.storage.inventory.collectibles.indexOf(u.item_base_id) >= 0 || TWIR.storage.inventory.bonus.indexOf(u.item_base_id) >= 0) && TWIR.marketWatcher.isUndervalued(g[m].item_id, g[m].max_price, g[m].auction_price)) {
+                                        if (void 0 === b && ("yield" !== u.type || null !== u.set || TWIR.storage.inventory.collectibles.indexOf(u.item_base_id) >= 0 || TWIR.storage.inventory.bonus.indexOf(u.item_base_id) >= 0) && TWIR.marketWatcher.isUndervalued(g[d].item_id, g[d].max_price, g[d].auction_price)) {
                                             var w = {
                                                 type: u.type,
-                                                auction_ends_in: g[m].auction_ends_in,
-                                                auction_end_date: g[m].auction_end_date,
-                                                item_id: g[m].item_id,
-                                                item_count: g[m].item_count,
-                                                auction_price: g[m].auction_price,
-                                                max_price: g[m].max_price,
-                                                seller_name: g[m].seller_name,
-                                                seller_id: g[m].seller_player_id,
-                                                market_town_id: g[m].market_town_id,
-                                                market_town: g[m].market_town_name,
-                                                posx: g[m].market_town_x,
-                                                posy: g[m].market_town_y,
+                                                auction_ends_in: g[d].auction_ends_in,
+                                                auction_end_date: g[d].auction_end_date,
+                                                item_id: g[d].item_id,
+                                                item_count: g[d].item_count,
+                                                auction_price: g[d].auction_price,
+                                                max_price: g[d].max_price,
+                                                seller_name: g[d].seller_name,
+                                                seller_id: g[d].seller_player_id,
+                                                market_town_id: g[d].market_town_id,
+                                                market_town: g[d].market_town_name,
+                                                posx: g[d].market_town_x,
+                                                posy: g[d].market_town_y,
                                                 spec: "undervalued"
                                             };
-                                            k.push(w)
+                                            R.push(w)
                                         }
-                                        if (TWIR.storage.get("mw_collections") && TWIR.marketWatcher.missing.includes(u.name) && !1 === TWIR.marketWatcher.getBuyed(g[m].item_id)) {
+                                        if (TWIR.storage.get("mw_collections") && TWIR.marketWatcher.missing.includes(u.name) && !1 === TWIR.marketWatcher.getBuyed(g[d].item_id)) {
                                             var f = {
                                                 type: u.type,
-                                                auction_ends_in: g[m].auction_ends_in,
-                                                auction_end_date: g[m].auction_end_date,
-                                                item_id: g[m].item_id,
-                                                item_count: g[m].item_count,
-                                                auction_price: g[m].auction_price,
-                                                max_price: g[m].max_price,
-                                                seller_name: g[m].seller_name,
-                                                seller_id: g[m].seller_player_id,
-                                                market_town_id: g[m].market_town_id,
-                                                market_town: g[m].market_town_name,
-                                                posx: g[m].market_town_x,
-                                                posy: g[m].market_town_y,
-                                                offer_id: g[m].market_offer_id
+                                                auction_ends_in: g[d].auction_ends_in,
+                                                auction_end_date: g[d].auction_end_date,
+                                                item_id: g[d].item_id,
+                                                item_count: g[d].item_count,
+                                                auction_price: g[d].auction_price,
+                                                max_price: g[d].max_price,
+                                                seller_name: g[d].seller_name,
+                                                seller_id: g[d].seller_player_id,
+                                                market_town_id: g[d].market_town_id,
+                                                market_town: g[d].market_town_name,
+                                                posx: g[d].market_town_x,
+                                                posy: g[d].market_town_y,
+                                                offer_id: g[d].market_offer_id
                                             };
                                             TWIR.marketWatcher.wtb_missing[u.short] ? TWIR.marketWatcher.wtb_missing[u.short].some(function(e) {
-                                                return e.offer_id === g[m].market_offer_id
+                                                return e.offer_id === g[d].market_offer_id
                                             }) || TWIR.marketWatcher.wtb_missing[u.short].push(f) : (TWIR.marketWatcher.wtb_missing[u.short] = [], TWIR.marketWatcher.wtb_missing[u.short].some(function(e) {
-                                                return e.offer_id === g[m].market_offer_id
+                                                return e.offer_id === g[d].market_offer_id
                                             }) || TWIR.marketWatcher.wtb_missing[u.short].push(f))
                                         }
                                         if (void 0 !== b) {
                                             TWIR.storage.popups.marketBest, TWIR.storage.popups.marketBestJunk;
-                                            if (null !== g[m].max_price && g[m].max_price <= b.item_price || null === g[m].max_price || 0 === b.item_price) {
+                                            if (null !== g[d].max_price && g[d].max_price <= b.item_price || null === g[d].max_price || 0 === b.item_price) {
                                                 TWIR.storage.get("mw_status") && e.status(s(TWIRlang.market_watcher.progress_found + ": " + u.name));
                                                 var y = {
                                                     type: u.type,
-                                                    auction_ends_in: g[m].auction_ends_in,
-                                                    auction_end_date: g[m].auction_end_date,
-                                                    item_id: g[m].item_id,
-                                                    item_count: g[m].item_count,
-                                                    auction_price: g[m].current_bid ? g[m].current_bid : g[m].auction_price,
-                                                    max_price: g[m].max_price,
-                                                    seller_name: g[m].seller_name,
-                                                    seller_id: g[m].seller_player_id,
-                                                    market_town_id: g[m].market_town_id,
-                                                    market_town: g[m].market_town_name,
-                                                    posx: g[m].market_town_x,
-                                                    posy: g[m].market_town_y,
-                                                    offer_id: g[m].market_offer_id
+                                                    auction_ends_in: g[d].auction_ends_in,
+                                                    auction_end_date: g[d].auction_end_date,
+                                                    item_id: g[d].item_id,
+                                                    item_count: g[d].item_count,
+                                                    auction_price: g[d].current_bid ? g[d].current_bid : g[d].auction_price,
+                                                    max_price: g[d].max_price,
+                                                    seller_name: g[d].seller_name,
+                                                    seller_id: g[d].seller_player_id,
+                                                    market_town_id: g[d].market_town_id,
+                                                    market_town: g[d].market_town_name,
+                                                    posx: g[d].market_town_x,
+                                                    posy: g[d].market_town_y,
+                                                    offer_id: g[d].market_offer_id
                                                 };
                                                 TWIR.marketWatcher.wtb[u.short] ? TWIR.marketWatcher.wtb[u.short].some(function(e) {
-                                                    return e.offer_id === g[m].market_offer_id
+                                                    return e.offer_id === g[d].market_offer_id
                                                 }) || TWIR.marketWatcher.wtb[u.short].push(y) : (TWIR.marketWatcher.wtb[u.short] = [], TWIR.marketWatcher.wtb[u.short].some(function(e) {
-                                                    return e.offer_id === g[m].market_offer_id
+                                                    return e.offer_id === g[d].market_offer_id
                                                 }) || TWIR.marketWatcher.wtb[u.short].push(y))
                                             }
                                         }
                                     } setTimeout(function() {
                                     if (!0 === A.msg.next) t++, c();
                                     else {
-                                        if (k.length > 0 && TWIR.storage.get("mw_underpriced_alert")) {
-                                            var o = k[Math.floor(Math.random() * k.length)],
+                                        if (R && R.length > 0 && TWIR.storage.get("mw_underpriced_alert")) {
+                                            var o = R[Math.floor(Math.random() * R.length)],
                                                 s = ItemManager.get(o.item_id, !0),
                                                 p = TWIR.marketWatcher.wtb;
                                             TWIR.marketWatcher.wtb = {
@@ -2866,24 +2737,24 @@
                                             }, TWIR.marketWatcher.wtb[s.short].push(o)
                                         }
                                         if (TWIR.storage.get("mw_trader"))
-                                            for (var g = TWIR.marketWatcher.trader, m = 0; m < g.length; m++) {
-                                                var d = ItemManager.get(g[m].item_id, !0),
+                                            for (var g = TWIR.marketWatcher.trader, d = 0; d < g.length; d++) {
+                                                var m = ItemManager.get(g[d].item_id, !0),
                                                     u = l.find(function(e) {
-                                                        return e.item_id === g[m].item_id
+                                                        return e.item_id === g[d].item_id
                                                     }),
-                                                    I = new Date(1e3 * g[m].auction_end_date).getTime() - (new Date).getTime();
-                                                g[m].auction_ends_in = I / 1e3, g[m].posx = Character.position.x, g[m].posy = Character.position.y, TWIR.marketWatcher.wtb_missing[d.short] && 0 === TWIR.marketWatcher.wtb_missing[d.short].filter(function(e) {
+                                                    h = new Date(1e3 * g[d].auction_end_date).getTime() - (new Date).getTime();
+                                                g[d].auction_ends_in = h / 1e3, g[d].posx = Character.position.x, g[d].posy = Character.position.y, TWIR.marketWatcher.wtb_missing[m.short] && 0 === TWIR.marketWatcher.wtb_missing[m.short].filter(function(e) {
                                                     return "trader" === e.spec
-                                                }).length ? TWIR.marketWatcher.wtb_missing[d.short].unshift(g[m]) : TWIR.marketWatcher.missing.indexOf(d.name) >= 0 && !TWIR.marketWatcher.wtb_missing[d.short] && (TWIR.marketWatcher.wtb_missing[d.short] = [], TWIR.marketWatcher.wtb_missing[d.short].push(g[m])), TWIR.marketWatcher.wtb[d.short] && 0 === TWIR.marketWatcher.wtb[d.short].filter(function(e) {
+                                                }).length ? TWIR.marketWatcher.wtb_missing[m.short].unshift(g[d]) : TWIR.marketWatcher.missing.indexOf(m.name) >= 0 && !TWIR.marketWatcher.wtb_missing[m.short] && (TWIR.marketWatcher.wtb_missing[m.short] = [], TWIR.marketWatcher.wtb_missing[m.short].push(g[d])), TWIR.marketWatcher.wtb[m.short] && 0 === TWIR.marketWatcher.wtb[m.short].filter(function(e) {
                                                     return "trader" === e.spec
-                                                }).length ? TWIR.marketWatcher.wtb[d.short].unshift(g[m]) : !TWIR.marketWatcher.wtb[d.short] && u && (TWIR.marketWatcher.wtb[d.short] = [], TWIR.marketWatcher.wtb[d.short].push(g[m]))
+                                                }).length ? TWIR.marketWatcher.wtb[m.short].unshift(g[d]) : !TWIR.marketWatcher.wtb[m.short] && u && (TWIR.marketWatcher.wtb[m.short] = [], TWIR.marketWatcher.wtb[m.short].push(g[d]))
                                             }
                                         TWIR.marketWatcher.marketMain = TWIR.beatMarketData(TWIR.marketWatcher.marketMain), TWIR.marketWatcher.marketOther = TWIR.beatMarketData(TWIR.marketWatcher.marketOther);
-                                        var h = TWIR.marketWatcher.marketMain,
-                                            R = TWIR.marketWatcher.marketOther;
+                                        var I = TWIR.marketWatcher.marketMain,
+                                            k = TWIR.marketWatcher.marketOther;
                                         if (void 0 !== localStorage) {
-                                            var b = TWIR.minMarketData(h),
-                                                w = TWIR.minMarketData(R),
+                                            var b = TWIR.minMarketData(I),
+                                                w = TWIR.minMarketData(k),
                                                 f = TWIR.marketWatcher.wtb;
                                             try {
                                                 localStorage.twir_marketData = TWIR.LZ.compress(JSON.stringify(b)), localStorage.twir_marketDataJunk = TWIR.LZ.compress(JSON.stringify(w)), localStorage.twir_marketDataTemp = TWIR.LZ.compress(JSON.stringify(f))
@@ -2966,26 +2837,26 @@
                             if (l.length > 1) {
                                 for (var c = l.length <= 11 ? l.length : 11, A = 1; A < c; A++) {
                                     var g = null !== l[A].max_price ? TWIRlang.market_watcher.price : TWIRlang.market_watcher.bid,
-                                        m = null !== l[A].max_price ? parseInt(l[A].max_price / l[A].item_count) : parseInt(l[A].auction_price / l[A].item_count);
-                                    p += "<div>[" + A + "]&nbsp;@" + l[A].seller_name.cutIt(14) + "&nbsp;(x" + l[A].item_count + "),&nbsp;" + g + ":&nbsp;$" + TWIR.replSum(m, !0) + (l[A].item_count > 1 ? "&nbsp;(" + TWIRlang.tooltips.each + ")" : "") + ",&nbsp;" + TWIRlang.market_watcher.time_left + ":&nbsp;" + TWIR.msToTime(l[A].auction_ends_in) + "</div>"
+                                        d = null !== l[A].max_price ? parseInt(l[A].max_price / l[A].item_count) : parseInt(l[A].auction_price / l[A].item_count);
+                                    p += "<div>[" + A + "]&nbsp;@" + l[A].seller_name.cutIt(14) + "&nbsp;(x" + l[A].item_count + "),&nbsp;" + g + ":&nbsp;$" + TWIR.replSum(d, !0) + (l[A].item_count > 1 ? "&nbsp;(" + TWIRlang.tooltips.each + ")" : "") + ",&nbsp;" + TWIRlang.market_watcher.time_left + ":&nbsp;" + TWIR.msToTime(l[A].auction_ends_in) + "</div>"
                                 }
                                 l.length >= 11 && (p += '<div style="text-align: center;">...</div>')
                             }
-                            var d = ItemManager.get(l[0].item_id, !0),
-                                u = TWIR.addPopup.getMarketPrice(d),
-                                I = null !== l[0].max_price ? TWIRlang.market_watcher.price : TWIRlang.market_watcher.bid,
-                                h = null !== l[0].max_price ? l[0].max_price / l[0].item_count : l[0].auction_price / l[0].item_count,
-                                R = l[0].spec && "trader" == l[0].spec ? "blue" : TWIR.storage.popups.marketBest[d.short] && h <= TWIR.storage.popups.marketBest[d.short].price_sum / TWIR.storage.popups.marketBest[d.short].offer_count && TWIR.storage.popups.marketBest[d.short].offer_count > 2 ? "#070" : TWIR.storage.popups.marketBest[d.short] && TWIR.storage.popups.marketBest[d.short].offer_max.price <= h && TWIR.storage.popups.marketBest[d.short].offer_count > 2 && l[0].seller_name != TWIR.author ? "#900" : "unset",
-                                k = Map.calcWayTime(TWIR.lastPos(), {
+                            var m = ItemManager.get(l[0].item_id, !0),
+                                u = TWIR.addPopup.getMarketPrice(m),
+                                h = null !== l[0].max_price ? TWIRlang.market_watcher.price : TWIRlang.market_watcher.bid,
+                                I = null !== l[0].max_price ? l[0].max_price / l[0].item_count : l[0].auction_price / l[0].item_count,
+                                k = l[0].spec && "trader" == l[0].spec ? "blue" : TWIR.storage.popups.marketBest[m.short] && I <= TWIR.storage.popups.marketBest[m.short].price_sum / TWIR.storage.popups.marketBest[m.short].offer_count && TWIR.storage.popups.marketBest[m.short].offer_count > 2 ? "#070" : TWIR.storage.popups.marketBest[m.short] && TWIR.storage.popups.marketBest[m.short].offer_max.price <= I && TWIR.storage.popups.marketBest[m.short].offer_count > 2 && l[0].seller_name != TWIR.author ? "#900" : "unset",
+                                R = Map.calcWayTime(TWIR.lastPos(), {
                                     x: l[0].posx,
                                     y: l[0].posy
                                 }),
-                                b = "<div>@" + l[0].seller_name + (l[0].market_town ? "&nbsp;(" + l[0].market_town + ")" : "") + "</div><div>" + TWIRlang.informative.distance + ":&nbsp;" + k.formatDuration() + "</div>",
+                                b = "<div>@" + l[0].seller_name + (l[0].market_town ? "&nbsp;(" + l[0].market_town + ")" : "") + "</div><div>" + TWIRlang.informative.distance + ":&nbsp;" + R.formatDuration() + "</div>",
                                 w = s !== o.length - 1 || 9 === s ? "1px solid rgba(140,92,20,0.65)" : "none",
                                 f = l.length > 1 ? '<div style="font-style: italic;margin-left: 10px;color: #666;cursor: pointer;"><span title="' + b.escapeHTML() + '">@' + l[0].seller_name.cutIt(14) + '</span>&nbsp;<span title="' + p.escapeHTML() + '">' + TWIRlang.market_watcher.offer_count.replace("$1", l.length - 1) + "</span></div>" : '<div style="color: #666;margin-left: 10px;cursor: pointer;"><span title="' + b.escapeHTML() + '">@' + l[0].seller_name + "</span></div>",
                                 y = "trader" != l[0].spec ? "TWIR.marketWatcher.searchMarket(" + l[0].item_id + ")" : "west.window.shop.open(&quot;wear_window&quot;).showCategory(&quot;trader&quot;)",
-                                T = l[0].spec && "undervalued" == l[0].spec ? '<img src="' + TWIR.images.underprice + '" style="position: absolute; right: 0px; bottom: 0px;"/>' : l[0].spec && "trader" == l[0].spec ? '<img src="' + TWIR.images.trader + '" style="position: absolute; right: 0px; bottom: 0px;"/>' : "";
-                            n += '<tr style="border-spacing: 1px !important;border-radius: 3px;border-bottom: ' + w + ';"><td style="vertical-align: middle;"><div style="position: relative; height: 29px; width: 35px;"><img data-item-id="' + l[0].item_id + '" style="cursor: pointer;" title="' + new ItemPopup(d).getXHTML().escapeHTML() + '" src="' + d.image + '"; height="29"; width="29"></img>' + T + "</div></td>", n += '<td style="padding: 2px;padding-right: 8px;vertical-align: middle;"><div style="margin-bottom: -2px; cursor: pointer;"><span title="' + new ItemPopup(d).getXHTML().escapeHTML() + '" data-item-id="' + l[0].item_id + '" style="width: 220px;text-overflow: ellipsis;white-space: nowrap;overflow: hidden;display: inline-block; color: ' + R + ';">' + d.name + '</span><span style="display: inline-block;overflow: hidden;"> &nbsp;(x' + l[0].item_count + ")</span></div>" + f + "</td>", n += '<td title="' + l[0].auction_end_date.getFormattedTimeString4Timestamp() + '" style="text-align: center;padding: 2px; padding-right: 8px;cursor: pointer;"><div>' + TWIRlang.market_watcher.time_left + "</div><div>" + TWIR.msToTime(l[0].auction_ends_in) + "</div></td>", n += '<td title="' + (u ? u.escapeHTML() : "") + '" style="text-align: center;padding: 2px;cursor: pointer;"><div>' + I + '</div><div style="color: ' + R + ';">$' + TWIR.replSum(h) + "</div></td>", n += '<td style="vertical-align: middle;"><div onclick="' + y + '" style="margin-left: 10px;cursor: pointer;"><img src="/images/icons/bid.png" title="' + ("trader" != l[0].spec ? TWIRlang.market_watcher.bid_now : TWIRlang.market_watcher.buy_trader) + '" /> </div></td>', n += "</tr>"
+                                W = l[0].spec && "undervalued" == l[0].spec ? '<img src="' + TWIR.images.underprice + '" style="position: absolute; right: 0px; bottom: 0px;"/>' : l[0].spec && "trader" == l[0].spec ? '<img src="' + TWIR.images.trader + '" style="position: absolute; right: 0px; bottom: 0px;"/>' : "";
+                            n += '<tr style="border-spacing: 1px !important;border-radius: 3px;border-bottom: ' + w + ';"><td style="vertical-align: middle;"><div style="position: relative; height: 29px; width: 35px;"><img data-item-id="' + l[0].item_id + '" style="cursor: pointer;" title="' + new ItemPopup(m).getXHTML().escapeHTML() + '" src="' + m.image + '"; height="29"; width="29"></img>' + W + "</div></td>", n += '<td style="padding: 2px;padding-right: 8px;vertical-align: middle;"><div style="margin-bottom: -2px; cursor: pointer;"><span title="' + new ItemPopup(m).getXHTML().escapeHTML() + '" data-item-id="' + l[0].item_id + '" style="width: 220px;text-overflow: ellipsis;white-space: nowrap;overflow: hidden;display: inline-block; color: ' + k + ';">' + m.name + '</span><span style="display: inline-block;overflow: hidden;"> &nbsp;(x' + l[0].item_count + ")</span></div>" + f + "</td>", n += '<td title="' + l[0].auction_end_date.getFormattedTimeString4Timestamp() + '" style="text-align: center;padding: 2px; padding-right: 8px;cursor: pointer;"><div>' + TWIRlang.market_watcher.time_left + "</div><div>" + TWIR.msToTime(l[0].auction_ends_in) + "</div></td>", n += '<td title="' + (u ? u.escapeHTML() : "") + '" style="text-align: center;padding: 2px;cursor: pointer;"><div>' + h + '</div><div style="color: ' + k + ';">$' + TWIR.replSum(I) + "</div></td>", n += '<td style="vertical-align: middle;"><div onclick="' + y + '" style="margin-left: 10px;cursor: pointer;"><img src="/images/icons/bid.png" title="' + ("trader" != l[0].spec ? TWIRlang.market_watcher.bid_now : TWIRlang.market_watcher.buy_trader) + '" /> </div></td>', n += "</tr>"
                         }
                         return n += "</tbody></table>"
                     }
@@ -3038,7 +2909,8 @@
                             top: "25px",
                             left: "5px",
                             position: "absolute",
-                            "background-color": "rgb(48, 21, 6)"
+                            filter: "drop-shadow(rgb(48, 21, 6) 2px 3px 3px)",
+                            "-webkit-filter": "drop-shadow(rgb(48, 21, 6) 2px 3px 3px)"
                         });
                         else var l = $('<div style="text-shadow:black -1px 0 1px,black 0 1px 1px,black 1px 0 1px,black 0 -1px 1px;line-height:15px;font-size:10px;font-weight:700;text-align:center;position:absolute;width:21px;z-index:2;background:url(/images/interface/friendsbar/level_bg.png);height:15px;left:2px; top: 28px; color:white;">' + TWIR.replSum(Object.keys(e).length) + "</div>");
                         $(".extra", TWIR.marketWatcher.OnGoing.element).empty().append(l)
@@ -3052,9 +2924,9 @@
                         ChatWindow.open(c, !0);
                         var A = TWIRlang.market_watcher.seen + '&nbsp;<a href="javascript:void(TWIR.marketWatcher.setMarketAlert.open(&quot;watched&quot;))">[' + Object.keys(e).length + "]</a>.",
                             g = Chat.Formatter.formatMessage(Chat.Formatter.formatText(A, !0), "&nbsp;<b>" + TWIRlang.market_watcher.add_name + ":</b>", Date.now(), !0, "from_system"),
-                            m = Chat.Formatter.formatMessage(Chat.Formatter.formatText(TWIRlang.market_watcher.underpriced_found + "!", !0), "&nbsp;<b>" + TWIRlang.market_watcher.add_name + ":</b>", Date.now(), !0, "from_system"),
-                            d = Chat.Resource.Manager.getRooms();
-                        for (var u in d) d[u].addMessage(g), !0 === i && d[u].addMessage(m)
+                            d = Chat.Formatter.formatMessage(Chat.Formatter.formatText(TWIRlang.market_watcher.underpriced_found + "!", !0), "&nbsp;<b>" + TWIRlang.market_watcher.add_name + ":</b>", Date.now(), !0, "from_system"),
+                            m = Chat.Resource.Manager.getRooms();
+                        for (var u in m) m[u].addMessage(g), !0 === i && m[u].addMessage(d)
                     }
                     r !== n && (o && null !== TWIR.marketWatcher.OnGoing && TWIR.marketWatcher.OnGoing.highlightBorder(!0), TWIR.marketWatcher.lastAlert = e), o && !TWIR.storage.get("mw_alert_playsound") && TWIR.marketWatcher.notify()
                 }
@@ -3079,19 +2951,19 @@
                 c = 0,
                 A = 0,
                 g = 0,
-                m = 0,
                 d = 0,
+                m = 0,
                 u = 0,
-                I = 0,
                 h = 0,
-                R = 0,
+                I = 0,
                 k = 0,
+                R = 0,
                 b = 0,
                 w = 0,
                 f = 0,
                 y = 0,
-                T = 0,
                 W = 0,
+                T = 0,
                 x = 0,
                 v = 0,
                 V = 0,
@@ -3105,19 +2977,19 @@
                 j = 0,
                 q = 0,
                 Q = 0,
-                F = 0,
                 Y = 0,
+                F = 0,
                 G = 0,
                 O = 0,
                 J = 0,
                 D = 0,
                 H = 0,
                 Z = 0,
-                P = 0,
-                N = 0;
+                N = 0,
+                P = 0;
             for (var z in e) {
                 if (e[z]) var L = e[z].obj;
-                switch ("shot" === L.sub_type ? (M += 1, U += e[z].count) : "hand" === L.sub_type && (B += 1, S += e[z].count), "yield" !== L.type && null !== L.set && (m += 1, d += e[z].count), "yield" !== L.type && "recipe" !== L.type && e[z].count > s.item_count && (s = {
+                switch ("shot" === L.sub_type ? (M += 1, U += e[z].count) : "hand" === L.sub_type && (B += 1, S += e[z].count), "yield" !== L.type && null !== L.set && (d += 1, m += e[z].count), "yield" !== L.type && "recipe" !== L.type && e[z].count > s.item_count && (s = {
                     item_id: L.item_base_id,
                     item_count: e[z].count
                 }), L.type) {
@@ -3131,7 +3003,7 @@
                         p += 1, c += e[z].count, q += 1, Q += e[z].count;
                         break;
                     case "head":
-                        p += 1, c += e[z].count, F += 1, Y += e[z].count;
+                        p += 1, c += e[z].count, Y += 1, F += e[z].count;
                         break;
                     case "neck":
                         p += 1, c += e[z].count, G += 1, O += e[z].count;
@@ -3146,7 +3018,7 @@
                         p += 1, c += e[z].count;
                         break;
                     case "left_arm":
-                        p += 1, c += e[z].count, P += 1, N += e[z].count;
+                        p += 1, c += e[z].count, N += 1, P += e[z].count;
                         break;
                     case "yield":
                         A += 1, g += e[z].count, e[z].count > l.item_count && (l = {
@@ -3155,14 +3027,14 @@
                         });
                         break;
                     case "recipe":
-                        u += 1, I += e[z].count
+                        u += 1, h += e[z].count
                 }
             }
-            for (var X = 0; X < t.length; X++) h += 1, R += t[X].count;
-            for (var _ = 0; _ < a.length; _++) k += 1, b += a[_].count;
+            for (var X = 0; X < t.length; X++) I += 1, k += t[X].count;
+            for (var _ = 0; _ < a.length; _++) R += 1, b += a[_].count;
             for (var $ = 0; $ < i.length; $++) "recipe" !== i[$].obj.type && (w += 1, f += i[$].count);
-            for (var ee = 0; ee < r.length; ee++) y += 1, T += r[ee].count;
-            for (var te = 0; te < n.length; te++) W += 1, x += n[te].count;
+            for (var ee = 0; ee < r.length; ee++) y += 1, W += r[ee].count;
+            for (var te = 0; te < n.length; te++) T += 1, x += n[te].count;
             for (var ae = 0; ae < o.length; ae++) v += 1, V += o[ae].count;
             return TWIR.storage.stats.cache.count = {
                 objects_count: p,
@@ -3170,18 +3042,18 @@
                 products_count: A,
                 products_total_count: g,
                 recipes_count: u,
-                recipes_total_count: I,
-                setitems_count: m,
-                setitems_total_count: d,
-                useable_count: h,
-                useable_total_count: R,
-                buff_count: k,
+                recipes_total_count: h,
+                setitems_count: d,
+                setitems_total_count: m,
+                useable_count: I,
+                useable_total_count: k,
+                buff_count: R,
                 buff_total_count: b,
                 craft_count: w,
                 craft_total_count: f,
                 bonus_count: y,
-                bonus_total_count: T,
-                work_count: W,
+                bonus_total_count: W,
+                work_count: T,
                 work_total_count: x,
                 quest_count: v,
                 quest_total_count: V,
@@ -3195,16 +3067,16 @@
                 body_total_count: j,
                 foot_count: q,
                 foot_total_count: Q,
-                head_count: F,
-                head_total_count: Y,
+                head_count: Y,
+                head_total_count: F,
                 neck_count: G,
                 neck_total_count: O,
                 pants_count: J,
                 pants_total_count: D,
                 animal_count: H,
                 animal_total_count: Z,
-                left_arm_count: P,
-                left_arm_total_count: N
+                left_arm_count: N,
+                left_arm_total_count: P
             }, TWIR.storage.stats.cache.max_count = {
                 objects_max_total_count: s,
                 products_max_total_count: l
@@ -3223,13 +3095,13 @@
                 c = 0,
                 A = 0,
                 g = 0,
-                m = 0,
                 d = 0,
+                m = 0,
                 u = 0,
-                I = 0,
                 h = 0,
-                R = 0,
+                I = 0,
                 k = 0,
+                R = 0,
                 b = 0,
                 w = {
                     item_id: 0,
@@ -3243,32 +3115,32 @@
                     item_id: 0,
                     item_price: 0
                 },
-                T = {
+                W = {
                     item_id: 0,
                     item_price: 0
                 },
-                W = Bag.items_by_id,
+                T = Bag.items_by_id,
                 x = Wear.wear;
             for (var v in x) {
                 if (x[v]) var V = x[v].obj.item_id;
                 p += $.isNumeric(ItemManager.get(V, !0).price) ? 1 * ItemManager.get(V, !0).price : 0, c += $.isNumeric(ItemManager.get(V, !0).sell_price) ? 1 * ItemManager.get(V, !0).sell_price : 0
             }
-            for (var B in W) W[B] && (e += $.isNumeric(ItemManager.get(B, !0).price) ? ItemManager.get(B, !0).price * W[B].count : 0), t += $.isNumeric(ItemManager.get(B, !0).sell_price) ? ItemManager.get(B, !0).sell_price * W[B].count : 0, 1 == W[B].count && (s += $.isNumeric(ItemManager.get(B, !0).price) ? 1 * ItemManager.get(B, !0).price : 0, l += $.isNumeric(ItemManager.get(B, !0).sell_price) ? 1 * ItemManager.get(B, !0).sell_price : 0);
+            for (var B in T) T[B] && (e += $.isNumeric(ItemManager.get(B, !0).price) ? ItemManager.get(B, !0).price * T[B].count : 0), t += $.isNumeric(ItemManager.get(B, !0).sell_price) ? ItemManager.get(B, !0).sell_price * T[B].count : 0, 1 == T[B].count && (s += $.isNumeric(ItemManager.get(B, !0).price) ? 1 * ItemManager.get(B, !0).price : 0, l += $.isNumeric(ItemManager.get(B, !0).sell_price) ? 1 * ItemManager.get(B, !0).sell_price : 0);
             for (var S in TWIR.storage.popups.marketBest) TWIR.storage.popups.marketBest[S] && !0 === TWIR.storage.popups.marketBest[S].owned && (a += TWIR.storage.popups.marketBest[S].price_sum);
-            for (var M in W) {
-                if (W[M]) var U = W[M].obj;
+            for (var M in T) {
+                if (T[M]) var U = T[M].obj;
                 switch (U.type) {
                     case "yield":
-                        n += $.isNumeric(ItemManager.get(M, !0).price) ? ItemManager.get(M, !0).price : 0, o += $.isNumeric(ItemManager.get(M, !0).sell_price) ? ItemManager.get(M, !0).sell_price : 0, A += $.isNumeric(ItemManager.get(M, !0).price) ? ItemManager.get(M, !0).price * W[M].count : 0, g += $.isNumeric(ItemManager.get(M, !0).sell_price) ? ItemManager.get(M, !0).sell_price * W[M].count : 0, U.price > f.item_price ? f = {
+                        n += $.isNumeric(ItemManager.get(M, !0).price) ? ItemManager.get(M, !0).price : 0, o += $.isNumeric(ItemManager.get(M, !0).sell_price) ? ItemManager.get(M, !0).sell_price : 0, A += $.isNumeric(ItemManager.get(M, !0).price) ? ItemManager.get(M, !0).price * T[M].count : 0, g += $.isNumeric(ItemManager.get(M, !0).sell_price) ? ItemManager.get(M, !0).sell_price * T[M].count : 0, U.price > f.item_price ? f = {
                             item_id: U.item_base_id,
                             item_price: U.price
-                        } : U.sell_price > T.item_price && (T = {
+                        } : U.sell_price > W.item_price && (W = {
                             item_id: U.item_base_id,
                             item_price: U.sell_price
                         });
                         break;
                     case "recipe":
-                        u += $.isNumeric(ItemManager.get(M, !0).price) ? ItemManager.get(M, !0).price * W[M].count : 0, I += $.isNumeric(ItemManager.get(M, !0).sell_price) ? ItemManager.get(M, !0).sell_price * W[M].count : 0;
+                        u += $.isNumeric(ItemManager.get(M, !0).price) ? ItemManager.get(M, !0).price * T[M].count : 0, h += $.isNumeric(ItemManager.get(M, !0).sell_price) ? ItemManager.get(M, !0).sell_price * T[M].count : 0;
                         break;
                     case "belt":
                     case "body":
@@ -3279,7 +3151,7 @@
                     case "animal":
                     case "right_arm":
                     case "left_arm":
-                        i += $.isNumeric(ItemManager.get(M, !0).price) ? ItemManager.get(M, !0).price : 0, r += $.isNumeric(ItemManager.get(M, !0).sell_price) ? ItemManager.get(M, !0).sell_price : 0, m += $.isNumeric(ItemManager.get(M, !0).price) ? ItemManager.get(M, !0).price * W[M].count : 0, d += $.isNumeric(ItemManager.get(M, !0).sell_price) ? ItemManager.get(M, !0).sell_price * W[M].count : 0, U.price > w.item_price ? w = {
+                        i += $.isNumeric(ItemManager.get(M, !0).price) ? ItemManager.get(M, !0).price : 0, r += $.isNumeric(ItemManager.get(M, !0).sell_price) ? ItemManager.get(M, !0).sell_price : 0, d += $.isNumeric(ItemManager.get(M, !0).price) ? ItemManager.get(M, !0).price * T[M].count : 0, m += $.isNumeric(ItemManager.get(M, !0).sell_price) ? ItemManager.get(M, !0).sell_price * T[M].count : 0, U.price > w.item_price ? w = {
                             item_id: U.item_base_id,
                             item_price: U.price
                         } : U.sell_price > y.item_price && (y = {
@@ -3287,7 +3159,7 @@
                             item_price: U.sell_price
                         })
                 }
-                "yield" !== U.type && W[M].count > 1 && (k += $.isNumeric(ItemManager.get(M, !0).price) ? ItemManager.get(M, !0).price * W[M].count : 0, b += $.isNumeric(ItemManager.get(M, !0).sell_price) ? ItemManager.get(M, !0).sell_price * W[M].count : 0), "yield" !== U.type && !0 === U.dropable && (h += $.isNumeric(ItemManager.get(M, !0).price) ? ItemManager.get(M, !0).price * W[M].count : 0, R += $.isNumeric(ItemManager.get(M, !0).sell_price) ? ItemManager.get(M, !0).sell_price * W[M].count : 0)
+                "yield" !== U.type && T[M].count > 1 && (R += $.isNumeric(ItemManager.get(M, !0).price) ? ItemManager.get(M, !0).price * T[M].count : 0, b += $.isNumeric(ItemManager.get(M, !0).sell_price) ? ItemManager.get(M, !0).sell_price * T[M].count : 0), "yield" !== U.type && !0 === U.dropable && (I += $.isNumeric(ItemManager.get(M, !0).price) ? ItemManager.get(M, !0).price * T[M].count : 0, k += $.isNumeric(ItemManager.get(M, !0).sell_price) ? ItemManager.get(M, !0).sell_price * T[M].count : 0)
             }
             return i = Math.round(i / TWIR.storage.stats.cache.count.objects_count), r = Math.round(r / TWIR.storage.stats.cache.count.objects_count), n = Math.round(n / TWIR.storage.stats.cache.count.products_count), o = Math.round(o / TWIR.storage.stats.cache.count.products_count), TWIR.storage.stats.cache.value = {
                 inventory_buy_price: e,
@@ -3303,18 +3175,18 @@
                 wear_sell_price: c,
                 products_buy_price: A,
                 products_sell_price: g,
-                objects_buy_price: m,
-                objects_sell_price: d,
+                objects_buy_price: d,
+                objects_sell_price: m,
                 recipe_buy_price: u,
-                recipe_sell_price: I,
-                droppable_buy_price: h,
-                droppable_sell_price: R,
-                duplicates_buy_price: k,
+                recipe_sell_price: h,
+                droppable_buy_price: I,
+                droppable_sell_price: k,
+                duplicates_buy_price: R,
                 duplicates_sell_price: b
             }, TWIR.storage.stats.cache.max_price = {
                 products_max_buy_price: f,
                 objects_max_buy_price: w,
-                products_max_sell_price: T,
+                products_max_sell_price: W,
                 objects_max_sell_price: y
             }
         }, TWIR.pps = {
@@ -3399,13 +3271,13 @@
                         }),
                         A = c[~~(c.length * Math.random())] || [],
                         g = ItemManager.get(A ? A.id : 0, !0),
-                        m = {};
-                    if (m = TWIR.marketMap.calcCoord4Worldmap([r.posx, r.posy])) {
-                        var d = p.length === l.length ? TWIR.images.currency.dollars : g.image,
+                        d = {};
+                    if (d = TWIR.marketMap.calcCoord4Worldmap([r.posx, r.posy])) {
+                        var m = p.length === l.length ? TWIR.images.currency.dollars : g.image,
                             u = "javascript:void(TWIR.marketMap.onClick(arguments, " + JSON.stringify(r).escapeHTML() + "))";
-                        a.push($('<img onclick="' + u + '" title="' + n + '" src="' + d + '" style="cursor: pointer; position: absolute;width:' + (p.length === l.length ? "16px" : "22px") + ';height: auto;-webkit-filter: drop-shadow(rgb(34, 34, 34) 2px 3px 3px);filter: drop-shadow(rgb(34, 34, 34) 2px 3px 3px);" />').css({
-                            left: m.x + t.left + "px",
-                            top: m.y + t.top + "px"
+                        a.push($('<img onclick="' + u + '" title="' + n + '" src="' + m + '" style="cursor: pointer; position: absolute;width:' + (p.length === l.length ? "16px" : "22px") + ';height: auto;-webkit-filter: drop-shadow(rgb(34, 34, 34) 2px 3px 3px);filter: drop-shadow(rgb(48, 21, 6) 2px 3px 3px);" />').css({
+                            left: d.x + t.left + "px",
+                            top: d.y + t.top + "px"
                         }))
                     }
                 }
@@ -3446,25 +3318,15 @@
             }
         }, TWIR.makeMarketMenu = function(e) {
             try {
-                var t = (new west.gui.Selectbox).setHeader(TWIRlang.menulink.market),
-                    a = 0;
-
-                function i(e) {
-                    if (e.length > a) {
-                        var i = 7.5 * (a = e.length) + 160,
-                            r = TWIRlang.menulink.premium_bids.length + TWIRlang.menulink.premium_offers.length + 60,
-                            n = 2 * i < r ? r / 2 : i;
-                        t.setWidth(n <= 275 ? n : 275)
-                    }
-                }
+                var t = (new west.gui.Selectbox).setHeader(TWIRlang.menulink.market);
                 if (!1 === $.isEmptyObject(TWIR.storage.market)) {
-                    var r = Object.keys(TWIR.storage.market).sort(function(e, t) {
+                    var a = Object.keys(TWIR.storage.market).sort(function(e, t) {
                         return TWIR.storage.market[e].distance - TWIR.storage.market[t].distance
                     }).reduce(function(e, t, a) {
                         return e[a] = TWIR.storage.market[t], e
                     }, {});
 
-                    function n(e) {
+                    function i(e) {
                         switch (e[0]) {
                             case 3:
                                 Guidepost.show(e[1].id, e[1].posx, e[1].posy, "town");
@@ -3487,17 +3349,22 @@
                                 }, fetch("fetch_town_offers"), fetch("fetch_town_bids")
                         }
                     }
-                    for (var o in t.addItem(["premium_bids"], ' <img src="' + TWIR.images.currency.nuggets + '" height="16px width="auto" style="left: 5px;top: 5px;"/><span style="margin-left: 15px;color: #5e321a; text-overflow: ellipsis;white-space: nowrap;overflow: hidden;word-wrap: break-word; margin-top: 2px; max-width: 200px;display: inline-block;">' + TWIRlang.menulink.premium_bids + "</span>", TWIRlang.menulink.premium_bids), t.addItem(["premium_offers"], ' <img src="' + TWIR.images.currency.nuggets + '" height="16px width="auto" style="left: 5px;top: 5px;"/><span style="margin-left: 15px;color: #5e321a; text-overflow: ellipsis;white-space: nowrap;overflow: hidden;word-wrap: break-word; margin-top: 2px; max-width: 200px;display: inline-block;">' + TWIRlang.menulink.premium_offers + "</span>", TWIRlang.menulink.premium_offers).addEmpty(), t.addItem(["map"], ' <img src="/images/icons/welt.png" height="16px width="auto" style="left: 5px;top: 5px;"/><span style="margin-left: 15px;color: #5e321a; text-overflow: ellipsis;white-space: nowrap;overflow: hidden;word-wrap: break-word; margin-top: 2px; max-width: 200px;display: inline-block;">' + TWIRlang.menulink.market_map + "</span>", TWIRlang.menulink.market_map).addEmpty(), r) {
-                        var s = r[o],
-                            l = "",
-                            p = 0,
-                            c = 0;
-                        for (var A in l += "<div class=&quot;popup_yield&quot; style=&quot;display: block;max-width: 396px;&quot;>", s.items) {
-                            "offer_sold" === s.items[A].type ? c += s.items[A].money : "offer_sold" !== s.items[A].type && (p += s.items[A].count), Object.keys(s.items).length;
-                            var g = ItemManager.get(A, !0);
-                            l += "<div class=&quot;popup_yield_image&quot; style=&quot;margin-right: 1px;margin-bottom: 1px;display: inline-block;&quot;><div class=&quot;item&quot;><span class=&quot;count&quot; style=&quot;display:block;top:30px;left:1px&quot;>" + TWIR.replSum(s.items[A].count) + "</span><img src=&quot;" + g.image + "&quot; alt=&quot;" + g.name + "&quot; width=&quot;43&quot; height=&quot;43&quot; /></div>", "offer_sold" === s.items[A].type && (l += "<span style=&quot;font-size: 11px;text-align: center;display: block;&quot;>$" + TWIR.replSum(s.items[A].money) + "</span>"), l += "</div>"
+                    for (var r in t.addItem(["premium_bids"], ' <img src="' + TWIR.images.currency.nuggets + '" height="16px width="auto" style="left: 5px;top: 5px;"/><span style="margin-left: 15px;color: #5e321a; text-overflow: ellipsis;white-space: nowrap;overflow: hidden;word-wrap: break-word; margin-top: 2px; max-width: 200px;display: inline-block;">' + TWIRlang.menulink.premium_bids + "</span>", TWIRlang.menulink.premium_bids), t.addItem(["premium_offers"], ' <img src="' + TWIR.images.currency.nuggets + '" height="16px width="auto" style="left: 5px;top: 5px;"/><span style="margin-left: 15px;color: #5e321a; text-overflow: ellipsis;white-space: nowrap;overflow: hidden;word-wrap: break-word; margin-top: 2px; max-width: 200px;display: inline-block;">' + TWIRlang.menulink.premium_offers + "</span>", TWIRlang.menulink.premium_offers).addEmpty(), t.addItem(["map"], ' <img src="/images/icons/welt.png" height="16px width="auto" style="left: 5px;top: 5px;"/><span style="margin-left: 15px;color: #5e321a; text-overflow: ellipsis;white-space: nowrap;overflow: hidden;word-wrap: break-word; margin-top: 2px; max-width: 200px;display: inline-block;">' + TWIRlang.menulink.market_map + "</span>", TWIRlang.menulink.market_map).addEmpty(), a) {
+                        var n = a[r],
+                            o = "",
+                            s = 0,
+                            l = 0;
+                        for (var p in o += "<div class=&quot;popup_yield&quot; style=&quot;display: block;max-width: 396px;&quot;>", n.items) {
+                            "offer_sold" === n.items[p].type ? l += n.items[p].money : "offer_sold" !== n.items[p].type && (s += n.items[p].count), Object.keys(n.items).length;
+                            var c = ItemManager.get(p, !0);
+                            o += "<div class=&quot;popup_yield_image&quot; style=&quot;margin-right: 1px;margin-bottom: 1px;display: inline-block;&quot;><div class=&quot;item&quot;><span class=&quot;count&quot; style=&quot;display:block;top:30px;left:1px&quot;>" + TWIR.replSum(n.items[p].count) + "</span><img src=&quot;" + c.image + "&quot; alt=&quot;" + c.name + "&quot; width=&quot;43&quot; height=&quot;43&quot; /></div>", "offer_sold" === n.items[p].type && (o += "<span style=&quot;font-size: 11px;text-align: center;display: block;&quot;>$" + TWIR.replSum(n.items[p].money) + "</span>"), o += "</div>"
                         }
-                        l += "</div>", i(s.name), t.addItem(0, '<img src="/images/map/minimap/icons/miniicon_market_items.png" style="left: 5px;top: 8px;"/><span title="' + ("<div>" + s.name + "</div><div>" + TWIRlang.informative.distance + ":&nbsp;" + s.distance.formatDuration() + "</div>").escapeHTML() + '" style="margin-left: 15px;color: #5e321a; text-overflow: ellipsis;white-space: nowrap;overflow: hidden;word-wrap: break-word; margin-top: 2px; max-width: 170px;display: inline-block;">' + s.name + '</span><span title="' + l + '" style="display: inline-block;margin-top: 3px;color: #5e321a;position: relative;float: right;font-size: 12px;">&#124;&nbsp;' + (0 != c ? "$" + TWIR.replSum(c) + (0 != p ? ",&nbsp;" : "") : "") + (0 != p ? TWIR.replSum(p) + "&nbsp;" + TWIRlang.tooltips.items : "") + "</span>", (new west.gui.Selectbox).setHeader(s.name.cutIt(16)).setWidth(180).addItem([1, s], '<span style="color: #5e321a;">' + TWIRlang.menulink.window_open + "</span>").addItem([2, s], '<span style="color: #5e321a;">' + TWIRlang.menulink.map_show + "</span>").addItem([3, s], '<span style="color: #5e321a;">' + TWIRlang.menulink.walk + "</span>").addListener(n, this))
+                        o += "</div>", t.addItem(0, '<img src="/images/map/minimap/icons/miniicon_market_items.png" style="left: 5px;top: 8px;"/><span title="' + ("<div>" + n.name + "</div><div>" + TWIRlang.informative.distance + ":&nbsp;" + n.distance.formatDuration() + "</div>").escapeHTML() + '" style="margin-left: 15px;color: #5e321a; text-overflow: ellipsis;white-space: nowrap;overflow: hidden;word-wrap: break-word; margin-top: 2px; max-width: 170px;display: inline-block;">' + n.name + '</span><span title="' + o + '" style="display: inline-block;margin-top: 3px;color: #5e321a;position: relative;float: right;font-size: 12px;">&#124;&nbsp;' + (0 != l ? "$" + TWIR.replSum(l) + (0 != s ? ",&nbsp;" : "") : "") + (0 != s ? TWIR.replSum(s) + "&nbsp;" + TWIRlang.tooltips.items : "") + "</span>", (new west.gui.Selectbox).setHeader(n.name.cutIt(16)).setWidth(180).addItem([1, n], '<span style="color: #5e321a;">' + TWIRlang.menulink.window_open + "</span>").addItem([2, n], '<span style="color: #5e321a;">' + TWIRlang.menulink.map_show + "</span>").addItem([3, n], '<span style="color: #5e321a;">' + TWIRlang.menulink.walk + "</span>").addListener(i, this))
+                    }
+                    for (var A = 0, g = 0; g < t.items.length; g++) {
+                        var d = t.items[g].node.text(),
+                            m = 7.5 * d.length;
+                        m > A && (t.setWidth(m <= 300 ? m : 300), A = m)
                     }
                     return t.addListener(function(e) {
                         var t = e[0];
@@ -3520,18 +3387,9 @@
         }, TWIR.makeSleepMenu = function(e) {
             try {
                 var t = (new west.gui.Selectbox).setHeader(TWIRlang.menulink.sleep),
-                    a = 0;
-
-                function i(e) {
-                    if (e.length > a) {
-                        var i = 7.5 * (a = e.length) + 120;
-                        TWIRlang.menulink.nearest.length, TWIRlang.menulink.nearest_five.length;
-                        t.setWidth(i <= 275 ? i : 275)
-                    }
-                }
-                var r = ["cubby", "bedroom", "hotel_room", "apartment", "luxurious_apartment"];
+                    a = ["cubby", "bedroom", "hotel_room", "apartment", "luxurious_apartment"];
                 if (Object.keys(TWIR.storage.towns).length > 0) {
-                    var n = Object.keys(TWIR.storage.towns).sort(function(e, t) {
+                    var i = Object.keys(TWIR.storage.towns).sort(function(e, t) {
                         return TWIR.storage.towns[e].distance - TWIR.storage.towns[t].distance
                     }).reduce(function(e, t, a) {
                         return e[a] = TWIR.storage.towns[t], e
@@ -3546,39 +3404,44 @@
                         });
                         TWIR.storage.sleep[e].distance = t
                     });
-                    var o = Object.keys(TWIR.storage.sleep).sort(function(e, t) {
+                    var r = Object.keys(TWIR.storage.sleep).sort(function(e, t) {
                         return TWIR.storage.sleep[e].distance - TWIR.storage.sleep[t].distance
                     }).reduce(function(e, t, a) {
                         return e[a] = TWIR.storage.sleep[t], e
                     }, {});
-                    for (var s in o) {
-                        var l = "star" + (o[s].stage - 1) + ".png";
-                        if (i(o[s].name), o[s].stage > 0 && "fort" === o[s].type) {
-                            if (void 0 !== o[s].fort_type) var p = Character.forts.some(function(e) {
-                                return e.name === o[s].name
-                            }) ? "/images/map/minimap/icons/miniicon_own_forts-" + o[s].fort_type + ".png?2" : "/images/map/minimap/icons/miniicon_alliance_forts-" + o[s].fort_type + ".png?2";
-                            else var p = Character.forts.some(function(e) {
-                                return e.name === o[s].name
+                    for (var n in r) {
+                        var o = "star" + (r[n].stage - 1) + ".png";
+                        if (r[n].stage > 0 && "fort" === r[n].type) {
+                            if (void 0 !== r[n].fort_type) var s = Character.forts.some(function(e) {
+                                return e.name === r[n].name
+                            }) ? "/images/map/minimap/icons/miniicon_own_forts-" + r[n].fort_type + ".png?2" : "/images/map/minimap/icons/miniicon_alliance_forts-" + r[n].fort_type + ".png?2";
+                            else var s = Character.forts.some(function(e) {
+                                return e.name === r[n].name
                             }) ? "/images/map/minimap/icons/miniicon_own_forts.png?2" : "/images/map/minimap/icons/miniicon_alliance_forts.png?2";
-                            t.addItem(["fort", o[s].id, o[s].posx, o[s].posy], '<img src="' + p + '" style="left: 5px;top: 8px;"/><span style="margin-left: 15px;color: #5e321a; text-overflow: ellipsis;white-space: nowrap;overflow: hidden;word-wrap: break-word; margin-top: 2px; max-width: 170px;display: inline-block;">' + o[s].name + '</span><span style="display: inline-block;margin-top: 3px;color: #5e321a;position: relative;float: right;font-size: 12px;">&#124;&nbsp;Lvl&nbsp;' + o[s].stage + "</span>", '<span style="display: inline-block;"><img src="/images/hotel_stars/' + l + '" height="33" width="auto"/></span><span style="display: inline-block;vertical-align: middle;margin-left: 2px;"><div>' + o[s].stage_name + "</div><div>" + o[s].name + "</div></span><br><div>" + TWIRlang.informative.distance + ":&nbsp;" + o[s].distance.formatDuration() + "</div>")
-                        } else o[s].stage > 0 && "town" === o[s].type && t.addItem(["homeTown", o[s].id, o[s].stage], '<img src="/images/map/minimap/icons/miniicon_own_town.png?2" style="left: 3px;top: 5px;"/><span style="margin-left: 15px;color: #5e321a; text-overflow: ellipsis;white-space: nowrap;overflow: hidden;word-wrap: break-word; margin-top: 2px; max-width: 170px;display: inline-block;">' + o[s].name + '</span><span style="display: inline-block;margin-top: 3px;color: #5e321a;position: relative;float: right;font-size: 12px;">&#124;&nbsp;Lvl&nbsp;' + o[s].stage + "</span>", '<span style="display: inline-block;"><img src="/images/hotel_stars/' + l + '" height="33" width="auto"/></span><span style="display: inline-block;vertical-align: middle;margin-left: 2px;"><div>' + o[s].stage_name + "</div><div>" + o[s].name + "</div></span><br><div>" + TWIRlang.informative.distance + ":&nbsp;" + o[s].distance.formatDuration() + "</div>")
+                            t.addItem(["fort", r[n].id, r[n].posx, r[n].posy], '<img src="' + s + '" style="left: 5px;top: 8px;"/><span style="margin-left: 15px;color: #5e321a; text-overflow: ellipsis;white-space: nowrap;overflow: hidden;word-wrap: break-word; margin-top: 2px; max-width: 170px;display: inline-block;">' + r[n].name + '</span><span style="display: inline-block;margin-top: 3px;color: #5e321a;position: relative;float: right;font-size: 12px;">&#124;&nbsp;Lvl&nbsp;' + r[n].stage + "</span>", '<span style="display: inline-block;"><img src="/images/hotel_stars/' + o + '" height="33" width="auto"/></span><span style="display: inline-block;vertical-align: middle;margin-left: 2px;"><div>' + r[n].stage_name + "</div><div>" + r[n].name + "</div></span><br><div>" + TWIRlang.informative.distance + ":&nbsp;" + r[n].distance.formatDuration() + "</div>")
+                        } else r[n].stage > 0 && "town" === r[n].type && t.addItem(["homeTown", r[n].id, r[n].stage], '<img src="/images/map/minimap/icons/miniicon_own_town.png?2" style="left: 3px;top: 5px;"/><span style="margin-left: 15px;color: #5e321a; text-overflow: ellipsis;white-space: nowrap;overflow: hidden;word-wrap: break-word; margin-top: 2px; max-width: 170px;display: inline-block;">' + r[n].name + '</span><span style="display: inline-block;margin-top: 3px;color: #5e321a;position: relative;float: right;font-size: 12px;">&#124;&nbsp;Lvl&nbsp;' + r[n].stage + "</span>", '<span style="display: inline-block;"><img src="/images/hotel_stars/' + o + '" height="33" width="auto"/></span><span style="display: inline-block;vertical-align: middle;margin-left: 2px;"><div>' + r[n].stage_name + "</div><div>" + r[n].name + "</div></span><br><div>" + TWIRlang.informative.distance + ":&nbsp;" + r[n].distance.formatDuration() + "</div>")
                     }
+                }
+                for (var l = 0, p = 0; p < t.items.length; p++) {
+                    var c = t.items[p].node.text(),
+                        A = 7.5 * c.length + 60;
+                    A > l && (t.setWidth(A <= 300 ? A : 300), l = A)
                 }
                 return t.addListener(function(e) {
                     var t = e[0],
-                        a = 0,
-                        i = Object.keys(n);
+                        r = 0,
+                        n = Object.keys(i);
 
                     function o(e) {
-                        var t = i[a];
+                        var t = n[r];
                         Ajax.remoteCallMode("building_hotel", "get_data", {
-                            town_id: n[t].town_id
+                            town_id: i[t].town_id
                         }, function(s) {
-                            if (!(!1 === s.error && i.length > 0)) return new UserMessage(s.msg).show();
+                            if (!(!1 === s.error && n.length > 0)) return new UserMessage(s.msg).show();
                             var l = s.waytime,
                                 p = l.split(":"),
                                 c = 60 * +p[0] * 60 + 60 * +p[1] + +p[2];
-                            return s.hotel_level >= e && c <= 3600 ? TaskQueue.add(new TaskSleep(n[t].town_id, r[s.hotel_level - 1])) : c > 3600 ? new UserMessage(TWIRlang.informative.error_hotel + "!").show() : a < i.length - 1 ? (a++, void setTimeout(function() {
+                            return s.hotel_level >= e && c <= 3600 ? TaskQueue.add(new TaskSleep(i[t].town_id, a[s.hotel_level - 1])) : c > 3600 ? new UserMessage(TWIRlang.informative.error_hotel + "!").show() : r < n.length - 1 ? (r++, void setTimeout(function() {
                                 o(e)
                             }, Math.floor(1501 * Math.random() + 1500))) : new UserMessage(TWIRlang.informative.error_hotel + "!").show()
                         })
@@ -3592,7 +3455,7 @@
                             break;
                         case "homeTown":
                             try {
-                                TaskQueue.add(new TaskSleep(e[1], r[e[2] - 1]))
+                                TaskQueue.add(new TaskSleep(e[1], a[e[2] - 1]))
                             } catch (e) {
                                 return new UserMessage(TWIRlang.informative.error_hotel + "!").show()
                             }
@@ -3691,17 +3554,9 @@
             try {
                 if (Object.keys(TWIR.storage.NPC).length > 0) {
                     var t = (new west.gui.Selectbox).setHeader(TWIRlang.menulink.npc),
-                        a = 0;
+                        a = {};
 
                     function i(e) {
-                        if (e.length > a) {
-                            var i = 7.5 * (a = e.length) + 35 + (TWIR.npcLoaded ? 60 : 0);
-                            t.setWidth(i <= 275 ? i : 275)
-                        }
-                    }
-                    var r = {};
-
-                    function n(e) {
                         var t = e[1];
                         switch (e[0]) {
                             case 3:
@@ -3720,23 +3575,28 @@
                                 QuestEmployerWindow.showEmployer(t.key, t.posx, t.posy)
                         }
                     }
-                    for (var o in Object.keys(TWIR.storage.NPC).sort(function(e, t) {
+                    for (var r in Object.keys(TWIR.storage.NPC).sort(function(e, t) {
                             return e = TWIR.replUml(e), t = TWIR.replUml(t), e > t ? 1 : -1
                         }).forEach(function(e) {
-                            r[e] = TWIR.storage.NPC[e]
-                        }), r)
-                        for (var s = r[o], l = 0; l < s.length; l++) {
-                            var p = s[l],
-                                c = s[l].quests || {},
-                                A = ('<span style="display: inline-block;"><img src="/images/quest/employer/' + s[l].key + '.png" height="33" width="auto" style="border-radius: 5px;"/></span><span style="display: inline-block;vertical-align: middle;margin-left: 2px;"><div>' + o + "</div></span><br><div>" + TWIRlang.informative.distance + ":&nbsp;" + Map.calcWayTime(TWIR.lastPos(), {
-                                    x: p.posx,
-                                    y: p.posy
+                            a[e] = TWIR.storage.NPC[e]
+                        }), a)
+                        for (var n = a[r], o = 0; o < n.length; o++) {
+                            var s = n[o],
+                                l = n[o].quests || {},
+                                p = ('<span style="display: inline-block;"><img src="/images/quest/employer/' + n[o].key + '.png" height="33" width="auto" style="border-radius: 5px;"/></span><span style="display: inline-block;vertical-align: middle;margin-left: 2px;"><div>' + r + "</div></span><br><div>" + TWIRlang.informative.distance + ":&nbsp;" + Map.calcWayTime(TWIR.lastPos(), {
+                                    x: s.posx,
+                                    y: s.posy
                                 }).formatDuration() + "</div>").escapeHTML(),
-                                g = '<div style="max-width:250px"><span class="teaser_headline"></span>';
-                            g += '<div class="teaser_content">', 0 != c.p4 && (g += '<span><img style="margin-right: 2px;margin-bottom: 2px;" class="tw2gui-iconset tw2gui-icon-exclamation-priority-4" src="/images/tw2gui/pixel-vfl3z5WfW.gif"><span style="vertical-align: middle;">' + c.p4 + "x</span></span>"), 0 != c.p4f && (g += '<span><img style="margin-right: 2px;margin-bottom: 2px;" class="tw2gui-iconset tw2gui-icon-question-priority-4" src="/images/tw2gui/pixel-vfl3z5WfW.gif"><span style="vertical-align: middle;">' + c.p4f + "x</span></span>"), 0 != c.p3 && (g += '<span><img style="margin-right: 2px;margin-bottom: 2px;" class="tw2gui-iconset tw2gui-icon-exclamation-priority-3" src="/images/tw2gui/pixel-vfl3z5WfW.gif"><span style="vertical-align: middle;">' + c.p3 + "x</span></span>"), 0 != c.p3f && (g += '<span><img style="margin-right: 2px;margin-bottom: 2px;" class="tw2gui-iconset tw2gui-icon-question-priority-3" src="/images/tw2gui/pixel-vfl3z5WfW.gif"><span style="vertical-align: middle;">' + c.p3f + "x</span></span>"), 0 != c.p2 && (g += '<span><img style="margin-right: 2px;margin-bottom: 2px;" class="tw2gui-iconset tw2gui-icon-exclamation-priority-2" src="/images/tw2gui/pixel-vfl3z5WfW.gif"><span style="vertical-align: middle;">' + c.p2 + "x</span></span>"), 0 != c.p2f && (g += '<span><img style="margin-right: 2px;margin-bottom: 2px;" class="tw2gui-iconset tw2gui-icon-question-priority-2" src="/images/tw2gui/pixel-vfl3z5WfW.gif"><span style="vertical-align: middle;">' + c.p2f + "x</span></span>"), 0 != c.p1 && (g += '<span><img style="margin-right: 2px;margin-bottom: 2px;" class="tw2gui-iconset tw2gui-icon-exclamation-priority-1" src="/images/tw2gui/pixel-vfl3z5WfW.gif"><span style="vertical-align: middle;">' + c.p1 + "x</span></span>"), 0 != c.p1f && (g += '<span><img style="margin-right: 2px;margin-bottom: 2px;" class="tw2gui-iconset tw2gui-icon-question-priority-1"; src="/images/tw2gui/pixel-vfl3z5WfW.gif"><span style="vertical-align: middle;">' + c.p1f + "x</span></span>"), g += "</div></div>", (TWIR.npcLoaded && null == s[l].quests || 0 == c.tot) && (g = "");
-                            var m = TWIR.npcLoaded && null != s[l].quests && 0 != c.tot ? '<span title="' + g.escapeHTML() + '" style="display: inline-block;margin-top: 3px;color: #5e321a;position: relative;float: right;font-size: 12px;">|&nbsp;' + c.tot + "&nbsp;" + TWIRlang.tooltips.quests + "</span>" : "";
-                            t.addItem(0, '<img src="/images/quest/employer/' + s[l].key + '.png" height="22px;" width="auto" style="left: 2px;border-radius: 5px;""><span title= "' + A + '"style="margin-left: 20px;color: #5e321a; text-overflow: ellipsis;white-space: nowrap;overflow: hidden;word-wrap: break-word; margin-top: 2px; max-width: ' + (TWIR.npcLoaded && null != s[l].quests && 0 != c.tot ? "150px" : "250px") + ';display: inline-block;">' + o + "</span>" + m, (new west.gui.Selectbox).setHeader(o.cutIt(16)).setWidth(180).addItem([1, s[l]], '<span style="color: #5e321a;">' + TWIRlang.menulink.window_open + "</span>").addItem([2, s[l]], '<span style="color: #5e321a;">' + TWIRlang.menulink.map_show + "</span>").addItem([3, s[l]], '<span style="color: #5e321a;">' + TWIRlang.menulink.walk + "</span>").addListener(n, this)), i(o)
+                                c = '<div style="max-width:250px"><span class="teaser_headline"></span>';
+                            c += '<div class="teaser_content">', 0 != l.p4 && (c += '<span><img style="margin-right: 2px;margin-bottom: 2px;" class="tw2gui-iconset tw2gui-icon-exclamation-priority-4" src="/images/tw2gui/pixel-vfl3z5WfW.gif"><span style="vertical-align: middle;">' + l.p4 + "x</span></span>"), 0 != l.p4f && (c += '<span><img style="margin-right: 2px;margin-bottom: 2px;" class="tw2gui-iconset tw2gui-icon-question-priority-4" src="/images/tw2gui/pixel-vfl3z5WfW.gif"><span style="vertical-align: middle;">' + l.p4f + "x</span></span>"), 0 != l.p3 && (c += '<span><img style="margin-right: 2px;margin-bottom: 2px;" class="tw2gui-iconset tw2gui-icon-exclamation-priority-3" src="/images/tw2gui/pixel-vfl3z5WfW.gif"><span style="vertical-align: middle;">' + l.p3 + "x</span></span>"), 0 != l.p3f && (c += '<span><img style="margin-right: 2px;margin-bottom: 2px;" class="tw2gui-iconset tw2gui-icon-question-priority-3" src="/images/tw2gui/pixel-vfl3z5WfW.gif"><span style="vertical-align: middle;">' + l.p3f + "x</span></span>"), 0 != l.p2 && (c += '<span><img style="margin-right: 2px;margin-bottom: 2px;" class="tw2gui-iconset tw2gui-icon-exclamation-priority-2" src="/images/tw2gui/pixel-vfl3z5WfW.gif"><span style="vertical-align: middle;">' + l.p2 + "x</span></span>"), 0 != l.p2f && (c += '<span><img style="margin-right: 2px;margin-bottom: 2px;" class="tw2gui-iconset tw2gui-icon-question-priority-2" src="/images/tw2gui/pixel-vfl3z5WfW.gif"><span style="vertical-align: middle;">' + l.p2f + "x</span></span>"), 0 != l.p1 && (c += '<span><img style="margin-right: 2px;margin-bottom: 2px;" class="tw2gui-iconset tw2gui-icon-exclamation-priority-1" src="/images/tw2gui/pixel-vfl3z5WfW.gif"><span style="vertical-align: middle;">' + l.p1 + "x</span></span>"), 0 != l.p1f && (c += '<span><img style="margin-right: 2px;margin-bottom: 2px;" class="tw2gui-iconset tw2gui-icon-question-priority-1"; src="/images/tw2gui/pixel-vfl3z5WfW.gif"><span style="vertical-align: middle;">' + l.p1f + "x</span></span>"), c += "</div></div>", (TWIR.npcLoaded && null == n[o].quests || 0 == l.tot) && (c = "");
+                            var A = TWIR.npcLoaded && null != n[o].quests && 0 != l.tot ? '<span title="' + c.escapeHTML() + '" style="display: inline-block;margin-top: 3px;color: #5e321a;position: relative;float: right;font-size: 12px;">|&nbsp;' + l.tot + "&nbsp;" + TWIRlang.tooltips.quests + "</span>" : "";
+                            t.addItem(0, '<img src="/images/quest/employer/' + n[o].key + '.png" height="22px;" width="auto" style="left: 2px;border-radius: 5px;""><span title= "' + p + '"style="margin-left: 20px;color: #5e321a; text-overflow: ellipsis;white-space: nowrap;overflow: hidden;word-wrap: break-word; margin-top: 2px; max-width: ' + (TWIR.npcLoaded && null != n[o].quests && 0 != l.tot ? "150px" : "250px") + ';display: inline-block;">' + r + "</span>" + A, (new west.gui.Selectbox).setHeader(r.cutIt(16)).setWidth(180).addItem([1, n[o]], '<span style="color: #5e321a;">' + TWIRlang.menulink.window_open + "</span>").addItem([2, n[o]], '<span style="color: #5e321a;">' + TWIRlang.menulink.map_show + "</span>").addItem([3, n[o]], '<span style="color: #5e321a;">' + TWIRlang.menulink.walk + "</span>").addListener(i, this))
                         }
+                    for (var g = 0, d = 0; d < t.items.length; d++) {
+                        var m = t.items[d].node.text(),
+                            u = 7.5 * m.length + 35 + (TWIR.npcLoaded ? 60 : 0);
+                        u > g && (t.setWidth(u <= 300 ? u : 300), g = u)
+                    }
                     return t.show(e), $(".tw2gui_selectbox_content").find(".tw2gui-icon-arrowright").remove()
                 }
                 return new UserMessage(TWIRlang.informative.error_npc + "!").show()
@@ -3753,30 +3613,27 @@
                     return e[i] = t[a], e
                 }, {});
                 else i = t;
-                var r, n = new west.gui.Selectbox("twir_over_box").setHeader(TWIRlang.inventory[a]).addClass("twir_over_box"),
-                    o = 0;
-
-                function s(e) {
-                    if (e.length > o) {
-                        var t = 7.5 * (o = e.length) + 100;
-                        n.setWidth(t <= 285 ? t : 285)
+                var r, n = new west.gui.Selectbox("twir_over_box").setHeader(TWIRlang.inventory[a]).addClass("twir_over_box");
+                for (var o in i) {
+                    var s = i[o].items,
+                        l = Bag.getItemsByItemIds(s);
+                    if (l.length > 0) {
+                        r = l.length > 0 ? l[~~(l.length * Math.random())].obj.image : TWIR.images.none;
+                        l.length > 0 && l.length;
+                        var p = 0;
+                        for (var c of s) {
+                            var A = Bag.getItemCount(c);
+                            A && (p += A)
+                        }
+                        var g = i[o].name.replace(/"/g, "&quot;").replace("*", "").replace("#", ""),
+                            d = "<span>" + g + "</span>";
+                        n.addItem(o, '<img title="' + d + '" style="left: 5px; display: inline-block;" src="' + r + '" height="20" width="auto"></img><span title="' + d + '" style="margin-top: 2px;word-wrap: break-word;max-width: 200px;display: inline-block;margin-left: 20px; text-overflow:ellipsis; white-space:nowrap; overflow:hidden;color: #5e321a;">' + i[o].name.replace("*", "").replace("#", "") + '</span><span title="' + TWIRlang.stats.count_text + '" style="display: inline-block;margin-top: 3px;color: #5e321a;position: relative;float: right;font-size: 12px;">&#124;&nbsp;' + TWIR.replSum(p) + "&nbsp;" + TWIRlang.tooltips.items_short + "</span>")
                     }
                 }
-                for (var l in i) {
-                    var p = i[l].items,
-                        c = Bag.getItemsByItemIds(p);
-                    if (s(i[l].name), c.length > 0) {
-                        r = c.length > 0 ? c[~~(c.length * Math.random())].obj.image : TWIR.images.none;
-                        c.length > 0 && c.length;
-                        var A = 0;
-                        for (var g of p) {
-                            var m = Bag.getItemCount(g);
-                            m && (A += m)
-                        }
-                        var d = i[l].name.replace(/"/g, "&quot;").replace("*", "").replace("#", ""),
-                            u = "<span>" + d + "</span>";
-                        n.addItem(l, '<img title="' + u + '" style="left: 5px; display: inline-block;" src="' + r + '" height="20" width="auto"></img><span title="' + u + '" style="margin-top: 2px;word-wrap: break-word;max-width: 200px;display: inline-block;margin-left: 20px; text-overflow:ellipsis; white-space:nowrap; overflow:hidden;color: #5e321a;">' + i[l].name.replace("*", "").replace("#", "") + '</span><span title="' + TWIRlang.stats.count_text + '" style="display: inline-block;margin-top: 3px;color: #5e321a;position: relative;float: right;font-size: 12px;">&#124;&nbsp;' + TWIR.replSum(A) + "&nbsp;" + TWIRlang.tooltips.items_short + "</span>")
-                    }
+                for (var m = 0, u = 0; u < n.items.length; u++) {
+                    var h = n.items[u].node.text(),
+                        I = 7.5 * h.length + 50;
+                    I > m && (n.setWidth(I <= 300 ? I : 300), m = I)
                 }
                 switch (n.addListener(function(e) {
                     var t = i[e].items,
@@ -3874,10 +3731,10 @@
                     } catch (e) {}
                 }, Inventory.twir_firstLoad = Inventory.twir_firstLoad || Inventory.firstLoad;
                 var oldFL = Inventory.twir_firstLoad.toString();
-                oldFL = oldFL.replace(/Inventory\.guiElements\.searchClearButton\=new west\.gui\.Icon\('abort','(.*?)'\);/, ""), oldFL = oldFL.replace(/Inventory\.guiElements\.searchSubmitButton\=new west\.gui\.Iconbutton\(new west\.gui\.Icon\('search'\),Inventory\.search\);/, "");
-                var upButton = /Inventory\.guiElements\.upgradeButton\=new west\.gui\.Button\('(.*?)',west\.window\.item_upgrade\.open,west\.window\.item_upgrade,null\)\.addClass\('upgrade_items'\);/,
-                    upButtonString = upButton.exec(oldFL)[1];
-                return oldFL = oldFL.replace(upButton, "Inventory.guiElements.upgradeButton=new west.gui.Iconbutton(TWIR.images.upgradeicon, west.window.item_upgrade.open, west.window.item_upgrade, null, null).setTitle(upTitle).addClass('upgrade_items');"), oldFL = oldFL.replace(/Inventory\.guiElements\.searchShowButton\=new west\.gui\.Iconbutton\(new west\.gui\.Icon\('search'\),function\(\)\{Inventory\.showCategory\('set'\);\}\)\.addClass\('open_search'\);/, "Inventory.guiElements.searchShowButton=new west.gui.Iconbutton(new west.gui.Icon('search'),function(){TWIR.Inventory.showSearch();}).addClass('open_search').addClass('twir_searchButton');"), oldFL = oldFL.replace(/Inventory\.window\.appendToContentPane\(\$filters,\$\("\<div id\='bag'\>\<\/div\>"\),\$\("\<div class\='bag_navigation hidden'\>\<\/div\>"\)\.append\(\$\("\<div class\='bag_pages'\>\<\/div\>"\),\$\("\<div class\='bag_next bag_control'\>\<\/div\>"\),\$\("\<div class\='bag_previous bag_control'\>\<\/div\>"\)\),\$\("\<div class\='instant_wear_container'\>\<\/div\>"\)\.append\(Inventory\.guiElements\.instantWearButton\.getMainDiv\(\)\),\$\("\<div class\='search_container'\>\<\/div\>"\)\.append\(Inventory\.guiElements\.searchTextfield\.getMainDiv\(\)\.on\('keypress',function\(event\)\{if\(event\.keyCode\=\=13\)\{Inventory\.search\(\);\}\}\),Inventory\.guiElements\.searchSubmitButton\.getMainDiv\(\),Inventory\.guiElements\.searchClearButton\.getMainDiv\(\)\.on\('click',Inventory\.clearSearch\.bind\(Inventory,true\)\)\),\$\('\<div class\="actions"\>\<\/div\>'\)\.append\(Inventory\.guiElements\.upgradeButton\.getMainDiv\(\),Inventory\.guiElements\.searchShowButton\.getMainDiv\(\)\)\);/, "Inventory.guiElements.scrollPane=new west.gui.Scrollpane().appendContent($(\"<div id='bag'></div>\"));Inventory.window.appendToContentPane($filters,$(\"<div id='twir_content_pane' style='width: 700px!important;height: 355px!important;overflow: hidden; position: absolute;top: 100px;'></div>\").append(Inventory.guiElements.scrollPane.getMainDiv()),$(\"<div class='instant_wear_container'></div>\").append(Inventory.guiElements.instantWearButton.getMainDiv()),$('<div class=\"actions\"></div>').append(Inventory.guiElements.upgradeButton.getMainDiv(),Inventory.guiElements.searchShowButton.getMainDiv()));"), eval("Inventory.firstLoad=(function(){ var upTitle=upButtonString; return " + oldFL + "})();"), Inventory.addItemsByCategory = function(e) {
+                oldFL = oldFL.replace(/Inventory\.guiElements\.searchClearButton\s{0,1}\=\s{0,1}new west\.gui\.Icon\('abort',(.*?)\);/, ""), oldFL = oldFL.replace(/Inventory\.guiElements\.searchSubmitButton\s{0,1}\=\s{0,1}new west\.gui\.Iconbutton\(new west\.gui\.Icon\('search'\),\s{0,1}Inventory\.search\);/, "");
+                var upButton = /Inventory\.guiElements\.upgradeButton\s{0,1}\=\s{0,1}new west\.gui\.Button\((.*?),\s{0,1}west\.window\.item_upgrade\.open,\s{0,1}west\.window\.item_upgrade,\s{0,1}null\)\.addClass\('upgrade_items'\);/,
+                    upButtonString = upButton.exec(oldFL);
+                return upButtonString && upButtonString[1] && (upButtonString = upButtonString[1]), upButtonString = upButtonString.match(/'(.*?)'/) && upButtonString.match(/'(.*?)'/)[1] ? upButtonString.match(/'(.*?)'/)[1] : "???", oldFL = oldFL.replace(upButton, "Inventory.guiElements.upgradeButton=new west.gui.Iconbutton(TWIR.images.upgradeicon, west.window.item_upgrade.open, west.window.item_upgrade, null, null).setTitle(upTitle).addClass('upgrade_items');"), oldFL = oldFL.replace(/Inventory\.guiElements\.searchShowButton\s{0,1}\=\s{0,1}new west\.gui\.Iconbutton\(new west\.gui\.Icon\('search'\),\s{0,1}function\(\)\s{0,1}\{/, "Inventory.guiElements.searchShowButton=new west.gui.Iconbutton(new west.gui.Icon('search'),function(){").replace(/Inventory\.showCategory\('set'\);/, "TWIR.Inventory.showSearch();").replace(/\.addClass\('open_search'\)/, ".addClass('open_search').addClass('twir_searchButton')"), oldFL = oldFL.replace(/Inventory\.window\.appendToContentPane\([\w\W]*Inventory\.DOM\s{0,1}\=\s{0,1}Inventory\.window\.\$\('div\.tw2gui_window_content_pane'\);/, "Inventory.guiElements.scrollPane=new west.gui.Scrollpane().appendContent($(\"<div id='bag'></div>\"));Inventory.window.appendToContentPane($filters,$(\"<div id='twir_content_pane' style='width: 700px!important;height: 355px!important;overflow: hidden; position: absolute;top: 100px;'></div>\").append(Inventory.guiElements.scrollPane.getMainDiv()),$(\"<div class='instant_wear_container'></div>\").append(Inventory.guiElements.instantWearButton.getMainDiv()),$('<div class=\"actions\"></div>').append(Inventory.guiElements.upgradeButton.getMainDiv(),Inventory.guiElements.searchShowButton.getMainDiv()));Inventory.DOM=Inventory.window.$('div.tw2gui_window_content_pane');"), eval("Inventory.firstLoad=(function(){ var upTitle=upButtonString; return " + oldFL + "})();"), Inventory.addItemsByCategory = function(e) {
                     Inventory.window.showLoader();
                     for (var t = Inventory.getCategoryTypes(e), a = 0, i = t.length, r = []; a < i; a++) r = r.concat(Bag.getItemsIdsByType(t[a]));
                     var n = Bag.getItemsByItemIds(r);
@@ -3945,40 +3802,42 @@
                     }
                     a || void 0 === Inventory.guiElements.scrollPane || Inventory.guiElements.scrollPane.verticalBar.move(0, !1, !0), Inventory.category = e, Inventory.page = 1
                 }, Inventory.update = function() {
-                    wman.getById(Inventory.uid) && (TWIR.fillFilters(), Inventory.addItems(Inventory.category, Inventory.page, !0), Inventory.updateFilters())
+                    wman.getById(Inventory.uid) && (TWIR.initItems(), Inventory.addItems(Inventory.category, Inventory.page, !0), Inventory.updateFilters())
                 }, Inventory.addItemDivToInv = function(e) {
                     e.appendTo($("#bag", Inventory.DOM)).getImgEl().off("click").click(function(t) {
                         Inventory.clickHandler(e.getId(), t)
                     }).data("itemId", e.getId()).setDraggable(Inventory.announceDragStart, Inventory.announceDragStop)
                 }, Inventory.twir_updateFilters = Inventory.twir_updateFilters || Inventory.updateFilters, Inventory.updateFilters = function() {
-                    Inventory.twir_updateFilters.apply(this, arguments), TWIR.storage.setList.ownedSetItems.length < 1 ? $(TWIR.Inventory.data.setsButton).addClass("inactive") : $(TWIR.Inventory.data.setsButton).removeClass("inactive");
-                    for (var e = 0; e < TWIR.storage.inventory.addedCategories.length; e++) TWIR.storage.stats.cache.count[TWIR.storage.inventory.addedCategories[e] + "_count"] < 1 ? ($(".filter_" + TWIR.storage.inventory.addedCategories[e]).addClass("no-items"), $(".filter_" + TWIR.storage.inventory.addedCategories[e]).unbind("mouseenter"), $(".filter_" + TWIR.storage.inventory.addedCategories[e]).unbind("mouseleave")) : ($(".filter_" + TWIR.storage.inventory.addedCategories[e]).removeClass("no-items"), $(".filter_" + TWIR.storage.inventory.addedCategories[e]).mouseenter(function() {
+                    Inventory.twir_updateFilters.apply(this, arguments);
+                    var e = west.item.Calculator.filterUnavailableSets(west.storage.ItemSetManager.getAll());
+                    e.length < 1 ? $(TWIR.Inventory.data.setsButton).addClass("inactive") : $(TWIR.Inventory.data.setsButton).removeClass("inactive");
+                    for (var t = 0; t < TWIR.storage.inventory.addedCategories.length; t++) TWIR.storage.stats.cache.count[TWIR.storage.inventory.addedCategories[t] + "_count"] < 1 ? ($(".filter_" + TWIR.storage.inventory.addedCategories[t]).addClass("no-items"), $(".filter_" + TWIR.storage.inventory.addedCategories[t]).unbind("mouseenter"), $(".filter_" + TWIR.storage.inventory.addedCategories[t]).unbind("mouseleave")) : ($(".filter_" + TWIR.storage.inventory.addedCategories[t]).removeClass("no-items"), $(".filter_" + TWIR.storage.inventory.addedCategories[t]).mouseenter(function() {
                         $(this).css({
                             filter: "opacity(100%)",
                             "-webkit-filter": "opacity(100%)"
                         })
-                    }), $(".filter_" + TWIR.storage.inventory.addedCategories[e]).mouseleave(function() {
+                    }), $(".filter_" + TWIR.storage.inventory.addedCategories[t]).mouseleave(function() {
                         $(this).css({
                             filter: "opacity(75%)",
                             "-webkit-filter": "opacity(75%)"
                         })
                     }));
-                    for (var t = 0; t < Inventory.availableCategories.length; t++) Bag.getItemsByType(Inventory.availableCategories[t]).length < 1 && "new" !== Inventory.availableCategories[t] ? ($(".inventory .filters .filter_" + Inventory.availableCategories[t]).unbind("mouseenter"), $(".inventory .filters .filter_" + Inventory.availableCategories[t]).unbind("mouseleave"), $(".inventory .filters .filter_" + Inventory.availableCategories[t] + ".active").unbind("mouseenter"), $(".inventory .filters .filter_" + Inventory.availableCategories[t] + ".active").unbind("mouseleave")) : ($(".inventory .filters .filter_" + Inventory.availableCategories[t]).mouseenter(function() {
+                    for (var a = 0; a < Inventory.availableCategories.length; a++) Bag.getItemsByType(Inventory.availableCategories[a]).length < 1 && "new" !== Inventory.availableCategories[a] ? ($(".inventory .filters .filter_" + Inventory.availableCategories[a]).unbind("mouseenter"), $(".inventory .filters .filter_" + Inventory.availableCategories[a]).unbind("mouseleave"), $(".inventory .filters .filter_" + Inventory.availableCategories[a] + ".active").unbind("mouseenter"), $(".inventory .filters .filter_" + Inventory.availableCategories[a] + ".active").unbind("mouseleave")) : ($(".inventory .filters .filter_" + Inventory.availableCategories[a]).mouseenter(function() {
                         $(this).css({
                             filter: "opacity(100%)",
                             "-webkit-filter": "opacity(100%)"
                         })
-                    }), $(".inventory .filters .filter_" + Inventory.availableCategories[t]).mouseleave(function() {
+                    }), $(".inventory .filters .filter_" + Inventory.availableCategories[a]).mouseleave(function() {
                         $(this).css({
                             filter: "opacity(75%)",
                             "-webkit-filter": "opacity(75%)"
                         })
-                    }), $(".inventory .filters .filter_" + Inventory.availableCategories[t] + ".active").mouseenter(function() {
+                    }), $(".inventory .filters .filter_" + Inventory.availableCategories[a] + ".active").mouseenter(function() {
                         $(this).css({
                             filter: "opacity(100%)",
                             "-webkit-filter": "opacity(100%)"
                         })
-                    }), $(".inventory .filters .filter_" + Inventory.availableCategories[t] + ".active").mouseleave(function() {
+                    }), $(".inventory .filters .filter_" + Inventory.availableCategories[a] + ".active").mouseleave(function() {
                         $(this).css({
                             filter: "opacity(75%)",
                             "-webkit-filter": "opacity(75%)"
@@ -4111,8 +3970,23 @@
                 return TWIR.sortName(e, name), e
             },
             getSearchKeywords: function() {
-                var e = [];
-                return e.push("allitems", "setitems", "yield", "recipe"), "en" !== TWIR.lang ? e.push(TWIRlang.inventory.useable.toLowerCase(), TWIRlang.inventory.buffs.toLowerCase(), TWIRlang.inventory.crafting.toLowerCase()) : e.push("useable", "buffs", "crafting"), e.push("valentine", "easter", "independence", "oktoberfest", "dotd", "xmas"), e
+                var e = [],
+                    t = ["allitems", "setitems", "yield", "recipe"].map(function(e) {
+                        return [e, TWIRlang.organizing[e]]
+                    }).sort(function(e, t) {
+                        return e[1].localeCompare(t[1])
+                    }),
+                    a = ["useable", "buffs", "crafting"].map(function(e) {
+                        return [e, TWIRlang.inventory[e]]
+                    }).sort(function(e, t) {
+                        return e[1].localeCompare(t[1])
+                    }),
+                    i = ["valentine", "easter", "independence", "oktoberfest", "dotd", "xmas"].map(function(e) {
+                        return [e, $.isArray(TWIRlang.keyWords[e]) ? TWIRlang.keyWords[e][0] : TWIRlang.keyWords[e]]
+                    }).sort(function(e, t) {
+                        return e[1].localeCompare(t[1])
+                    });
+                return e = e.concat(t, a, i)
             },
             getSearchTypes() {
                 for (var e = [], t = 0; t < Inventory.availableCategories.length; t++) "new" !== Inventory.availableCategories[t] && e.push({
@@ -4136,7 +4010,7 @@
                     }), null !== TWIR.Inventory.data.invSearchVal && i.setValue(TWIR.Inventory.data.invSearchVal);
                     var r = (new west.gui.Combobox).setWidth(45);
                     kbItems = TWIR.Inventory.getSearchKeywords(), r.addItem(1, "&#8226;&#8226;&#8226;");
-                    for (var n = 0; n < kbItems.length; n++) r.addItem(kbItems[n], kbItems[n]);
+                    for (var n = 0; n < kbItems.length; n++) r.addItem(kbItems[n][0], kbItems[n][1]);
                     r.select(1), r.addListener(function(e) {
                         if (1 !== e) {
                             var t = function(e) {
@@ -4155,7 +4029,7 @@
                     });
                     var o = (new west.gui.Combobox).setWidth(45);
                     bItems = TWIR.Inventory.getBonusKeywords(), o.addItem(1, "&#8226;&#8226;&#8226;");
-                    for (var s = 0; s < bItems.length; s++) o.addItem(bItems[s], bItems[s]);
+                    for (var s = 0; s < bItems.length; s++) o.addItem(bItems[s][0], bItems[s][1]);
                     o.select(1), o.addListener(function(e) {
                         if (1 !== e) {
                             switch (e) {
@@ -4197,7 +4071,7 @@
                         c = new west.gui.Checkbox(TWIRlang.organizing.invert, ""),
                         A = new west.gui.Combobox;
                     A.addItem("none", TWIRlang.informative.any);
-                    for (var g = TWIR.Inventory.getFiltBox(), m = 0; m < g.length; m++) A.addItem(g[m].filter, g[m].name);
+                    for (var g = TWIR.Inventory.getFiltBox(), d = 0; d < g.length; d++) A.addItem(g[d].filter, g[d].name);
                     A.select(TWIR.Inventory.data.filter[0]), A.addListener(function(e) {
                         var t = $("#inventory_search").val();
                         TWIR.Inventory.data.filter[0] = e, "" === t && $("#inventory_search").val("allitems"), Inventory.search()
@@ -4205,10 +4079,10 @@
                         var e = $("#inventory_search").val();
                         TWIR.Inventory.data.filter[1] = c.isSelected(), "" === e && $("#inventory_search").val("allitems"), Inventory.search()
                     }), c.setSelected(TWIR.Inventory.data.filter[1], !0);
-                    var d = (new west.gui.Combobox).setWidth(90);
-                    d.addItem("none", TWIRlang.informative.any);
-                    for (var u = TWIR.Inventory.getSearchTypes(), I = 0; I < u.length; I++) d.addItem(u[I].type, u[I].name);
-                    d.select(TWIR.Inventory.data.searchType), d.addListener(function(e) {
+                    var m = (new west.gui.Combobox).setWidth(90);
+                    m.addItem("none", TWIRlang.informative.any);
+                    for (var u = TWIR.Inventory.getSearchTypes(), h = 0; h < u.length; h++) m.addItem(u[h].type, u[h].name);
+                    m.select(TWIR.Inventory.data.searchType), m.addListener(function(e) {
                         var t = $("#inventory_search").val();
                         TWIR.Inventory.data.searchType = e, "" === t && $("#inventory_search").val("allitems"), Inventory.search()
                     }), $("<td/>").append(A.getMainDiv().css({
@@ -4216,38 +4090,38 @@
                         "margin-left": "20px"
                     })).appendTo(p), $("<td/>").append(c.getMainDiv().css({
                         "margin-right": "25px"
-                    })).appendTo(p), $("<td/>").append(d.getMainDiv().css({
+                    })).appendTo(p), $("<td/>").append(m.getMainDiv().css({
                         "margin-right": "10px"
                     })).appendTo(p), $('<table style="margin-bottom: 10px;margin-left: auto;margin-right: auto;"/>').append(a, p).appendTo(e), e.append("<hr>");
-                    var h = $('<div style="margin-top: 15px; display: none;"/>'),
-                        R = $("<div/>"),
-                        k = $('<span style="cursor: pointer;">' + TWIRlang.organizing.sort_by + ":&nbsp;</span>"),
+                    var I = $('<div style="margin-top: 15px; display: none;"/>'),
+                        k = $("<div/>"),
+                        R = $('<span style="cursor: pointer;">' + TWIRlang.organizing.sort_by + ":&nbsp;</span>"),
                         b = $('<img src="' + TWIR.images.arrow + '" width="13" style="margin-left: 2px;"/>');
-                    k.append(b), R.append(k.on("click", function() {
-                        h.toggle(), $(b).toggleClass("twir_flip")
-                    })), e.append(R);
+                    R.append(b), k.append(R.on("click", function() {
+                        I.toggle(), $(b).toggleClass("twir_flip")
+                    })), e.append(k);
                     var w = new west.gui.Checkbox(TWIRlang.organizing.save_permanent, "");
                     void 0 !== localStorage && localStorage.twir_sort ? w.setSelected(!0, !0) : void 0 === localStorage && w.setEnabled(!1);
-                    for (var f = new west.gui.Combobox, y = TWIR.Inventory.getSortBox(), T = 0; T < y.length; T++) f.addItem(y[T].sort, y[T].name);
+                    for (var f = new west.gui.Combobox, y = TWIR.Inventory.getSortBox(), W = 0; W < y.length; W++) f.addItem(y[W].sort, y[W].name);
                     f.select(TWIR.Inventory.data.order[0]);
-                    var W = (new west.gui.Combobox).setWidth(90);
-                    W.addItem("asc", TWIRlang.organizing.sort_up), W.addItem("desc", TWIRlang.organizing.sort_down), W.select(TWIR.Inventory.data.order[1]), w.setCallback(function() {
+                    var T = (new west.gui.Combobox).setWidth(90);
+                    T.addItem("asc", TWIRlang.organizing.sort_up), T.addItem("desc", TWIRlang.organizing.sort_down), T.select(TWIR.Inventory.data.order[1]), w.setCallback(function() {
                         w.isSelected() && void 0 !== localStorage ? localStorage.twir_sort = JSON.stringify(TWIR.Inventory.data.order) : w.isSelected() || void 0 === localStorage ? (new UserMessage(TWIRlang.informative.storage_error + "!", UserMessage.TYPE_ERROR).show(), w.setEnabled(!1)) : localStorage.removeItem("twir_sort")
                     }), f.addListener(function(e) {
                         TWIR.Inventory.data.order[0] = e, Inventory.update(), w.isSelected() && void 0 !== localStorage ? localStorage.twir_sort = JSON.stringify(TWIR.Inventory.data.order) : w.isSelected() || void 0 === localStorage ? (new UserMessage(TWIRlang.informative.storage_error + "!", UserMessage.TYPE_ERROR).show(), w.setEnabled(!1)) : localStorage.removeItem("twir_sort")
-                    }), W.addListener(function(e) {
+                    }), T.addListener(function(e) {
                         TWIR.Inventory.data.order[1] = e, Inventory.update(), w.isSelected() && void 0 !== localStorage ? localStorage.twir_sort = JSON.stringify(TWIR.Inventory.data.order) : w.isSelected() || void 0 === localStorage ? (new UserMessage(TWIRlang.informative.storage_error + "!", UserMessage.TYPE_ERROR).show(), w.setEnabled(!1)) : localStorage.removeItem("twir_sort")
-                    }), h.append(f.getMainDiv().css({
+                    }), I.append(f.getMainDiv().css({
                         "margin-right": "10px"
-                    })).append(W.getMainDiv().css({
+                    })).append(T.getMainDiv().css({
                         "margin-right": "10px"
                     })).append(w.getMainDiv().css({
                         "margin-right": "10px"
-                    })), e.append(h);
-                    var x = new west.gui.Dialog("", e).setDraggable(!0).setBlockGame(!1).setPosition("40%", Map.height / 4).setId("twir_as").addButton(TWIRlang.informative.hide, function() {
-                        TWIR.storage.get("inv_searchwindow_remember_search") || TWIR.Inventory.as_reset()
-                    }).show();
-                    x.setTitle('<span style="margin-top: 4px; font-size: 16pt;">' + TWIRlang.inventory.search + '</span><a id="twir_as_stats" title="' + TWIRlang.stats.stats + '" style="background: url(' + TWIR.images.statsIcon + ') no-repeat;position: relative;text-align: center;display: inline-block;margin-left: 10px;width: 16px;height: 16px;cursor: help;"></a>'), i.focus()
+                    })), e.append(I);
+                    var x = new west.gui.Dialog("", e).setDraggable(!0).setBlockGame(!1).setPosition("20%", Map.height / 4).setId("twir_as").show();
+                    x.setTitle('<span style="margin-top: 4px; font-size: 16pt;">' + TWIRlang.inventory.search + '</span><a id="twir_as_stats" title="' + TWIRlang.stats.stats + '" style="background: url(' + TWIR.images.statsIcon + ') no-repeat;position: relative;text-align: center;display: inline-block;margin-left: 10px;width: 16px;height: 16px;cursor: help;"></a>'), x.getMainDiv().find(".tw2gui_inner_window_title").append($('<div title="' + TWIRlang.informative.hide + '" class="tw2gui_window_buttons_close" style="position: absolute;right: 6px;top: 8px;"></div>').click(function() {
+                        TWIR.storage.get("inv_searchwindow_remember_search") || TWIR.Inventory.as_reset(), x.hide()
+                    })), i.focus()
                 } catch (e) {
                     TWIR.bugHunt(e)
                 }
@@ -4384,23 +4258,39 @@
             },
             setsButton: function() {
                 try {
-                    null == TWIR.Inventory.data.setsButton && (TWIR.Inventory.data.setsButton = new west.gui.Iconbutton(new west.gui.Icon("shirt")).addClass("twir_setsButton").setTitle(TWIRlang.inventory.sets).getMainDiv()), $(".actions", Inventory.DOM).append(TWIR.Inventory.data.setsButton), $(".twir_setsButton").css("cssText", "position: absolute !important;right: 5px; display: inline-block;"), $(TWIR.Inventory.data.setsButton).on("click", function(e) {
-                        for (var t = Bag.getItemsByItemIds(TWIR.storage.setList.ownedSetItems), a = [], i = 0; i < t.length; i++) {
-                            var r = west.storage.ItemSetManager.get(t[i].obj.set);
-                            a.push({
-                                name: r.name,
-                                set: t[i].obj.set,
-                                max: r.items.length,
-                                type: TWIR.Inventory.getSetsType(r.items),
-                                items: r.items
-                            })
+                    null == TWIR.Inventory.data.setsButton && (TWIR.Inventory.data.setsButton = new west.gui.Iconbutton(new west.gui.Icon("shirt")).addClass("twir_setsButton").getMainDiv()), $(".actions", Inventory.DOM).append(TWIR.Inventory.data.setsButton), $(".twir_setsButton").css("cssText", "position: absolute !important;right: 5px; display: inline-block;");
+                    var e = new west.gui.Selectbox;
+                    e.addItem(1, '<span style="color: #5e321a; display: inline-block; margin-left: 5px;">' + TWIRlang.inventory.sets + "</span>"), e.addItem(2, '<span style="color: #5e321a; display: inline-block; margin-left: 5px;">' + TWIRlang.calc.add_name + "</span>");
+                    for (var t = 0, a = 0; a < e.items.length; a++) {
+                        var i = e.items[a].node.text(),
+                            r = 7.5 * i.length + 25;
+                        r > t && (e.setWidth(r <= 300 ? r : 300), t = r)
+                    }
+                    e.addListener(function(e) {
+                        switch (e) {
+                            case 1:
+                                for (var t = west.item.Calculator.filterUnavailableSets(west.storage.ItemSetManager.getAll()), a = [], i = 0; i < t.length; i++) {
+                                    var r = west.storage.ItemSetManager.get(t[i].key);
+                                    a.push({
+                                        name: r.name,
+                                        set: t[i].key,
+                                        max: r.items.length,
+                                        type: TWIR.Inventory.getSetsType(r.items),
+                                        items: r.items
+                                    })
+                                }
+                                var n = a.reduce(function(e, t) {
+                                    return e.some(function(e) {
+                                        return e.set === t.set && e.type === t.type
+                                    }) || e.push(t), e
+                                }, []);
+                                TWIR.Inventory.makeSetsSelect(n);
+                                break;
+                            case 2:
+                                TWIR.calc.show()
                         }
-                        var n = a.reduce(function(e, t) {
-                            return e.some(function(e) {
-                                return e.set === t.set && e.type === t.type
-                            }) || e.push(t), e
-                        }, []);
-                        TWIR.Inventory.makeSetsSelect(n)
+                    }), $(TWIR.Inventory.data.setsButton).on("click", function(t) {
+                        e.show(t)
                     })
                 } catch (e) {
                     TWIR.bugHunt(e)
@@ -4408,14 +4298,16 @@
             },
             getSetsType: function(e) {
                 try {
-                    var t = Bag.getItemsByItemIds(TWIR.makeEmUp(e)),
+                    var t = e.map(function(e) {
+                            return ItemManager.get(1e3 * Number(e))
+                        }),
                         a = e.length;
                     return t.filter(function(e) {
-                        return "right_arm" === e.obj.type || "left_arm" === e.obj.type
+                        return "right_arm" === e.type || "left_arm" === e.type
                     }).length > 0 && a <= 4 ? "weapons" : t.filter(function(e) {
-                        return ("yield" === e.obj.type || "animal" === e.obj.type) && "fireworker_set" !== e.obj.set
+                        return ("yield" === e.type || "animal" === e.type) && "fireworker_set" !== e.set
                     }).length > 0 && a <= 2 ? "ride" : 0 === t.filter(function(e) {
-                        return "right_arm" === e.obj.type || "left_arm" === e.obj.type || "yield" === e.obj.type || "animal" === e.obj.type
+                        return "right_arm" === e.type || "left_arm" === e.type || "yield" === e.type || "animal" === e.type
                     }).length && 6 === a ? "clothes" : "other"
                 } catch (e) {}
             },
@@ -4441,35 +4333,35 @@
                     var A = TWIR.Inventory.getSetsImages(t, "clothes");
                     if (3 == A.length) {
                         var g = $('<img src="' + A[0] + '" style="width: 40px; height: auto;position: absolute;left: -5px; top: 5px;"/>'),
-                            m = $('<img src="' + A[1] + '" style="width: 30px;height: auto;position: absolute;right: -3px;top: -2px;"/>'),
-                            d = $('<img src="' + A[2] + '" style="width: 30px;height: auto;position: absolute;right: -3px;bottom: -2px;"/>');
-                        c.append(g, m, d)
+                            d = $('<img src="' + A[1] + '" style="width: 30px;height: auto;position: absolute;right: -3px;top: -2px;"/>'),
+                            m = $('<img src="' + A[2] + '" style="width: 30px;height: auto;position: absolute;right: -3px;bottom: -2px;"/>');
+                        c.append(g, d, m)
                     } else {
                         var u = $('<img src="/images/items/unknown.png" style="width: 45px;height: auto;position: absolute;left: 3px;top: 3px;"/>');
                         c.append(u)
                     }
-                    var I = $("#twir_sets_ride");
-                    I.empty();
-                    var h = TWIR.Inventory.getSetsImages(t, "ride");
-                    if (2 == h.length) {
-                        var R = $('<img src="' + h[0] + '" style="width: 40px; height: auto;position: absolute;left: -5px; top: 2px;"/>'),
-                            k = $('<img src="' + h[1] + '" style="width: 40px; height: auto;position: absolute;right: -5px; bottom: 0px;"/>');
-                        I.append(R, k)
-                    } else if (1 == h.length) {
-                        var b = $('<img src="' + h[0] + '" style="width: 40px;height: auto;position: absolute;left: 5px;top: 5px;"/>');
-                        I.append(b)
+                    var h = $("#twir_sets_ride");
+                    h.empty();
+                    var I = TWIR.Inventory.getSetsImages(t, "ride");
+                    if (2 == I.length) {
+                        var k = $('<img src="' + I[0] + '" style="width: 40px; height: auto;position: absolute;left: -5px; top: 2px;"/>'),
+                            R = $('<img src="' + I[1] + '" style="width: 40px; height: auto;position: absolute;right: -5px; bottom: 0px;"/>');
+                        h.append(k, R)
+                    } else if (1 == I.length) {
+                        var b = $('<img src="' + I[0] + '" style="width: 40px;height: auto;position: absolute;left: 5px;top: 5px;"/>');
+                        h.append(b)
                     } else {
                         var w = $('<img src="/images/items/unknown.png" style="width: 45px;height: auto;position: absolute;left: 3px;top: 3px;"/>');
-                        I.append(w)
+                        h.append(w)
                     }
                     var f = $("#twir_sets_other");
                     f.empty();
                     var y = TWIR.Inventory.getSetsImages(t, "other");
                     if (3 == y.length) {
-                        var T = $('<img src="' + y[0] + '" style="width: 40px; height: auto;position: absolute;left: -5px; top: 5px;"/>'),
-                            W = $('<img src="' + y[1] + '" style="width: 30px;height: auto;position: absolute;right: -3px;top: -2px;"/>'),
+                        var W = $('<img src="' + y[0] + '" style="width: 40px; height: auto;position: absolute;left: -5px; top: 5px;"/>'),
+                            T = $('<img src="' + y[1] + '" style="width: 30px;height: auto;position: absolute;right: -3px;top: -2px;"/>'),
                             x = $('<img src="' + y[2] + '" style="width: 30px;height: auto;position: absolute;right: -3px;bottom: -2px;"/>');
-                        f.append(T, W, x)
+                        f.append(W, T, x)
                     } else if (1 == y.length) {
                         var v = $('<img src="' + y[0] + '" style="width: 40px;height: auto;position: absolute;left: 5px;top: 5px;"/>');
                         f.append(v)
@@ -4518,44 +4410,61 @@
                             var g = n.find(function(e) {
                                     return "body" === e.type
                                 }),
-                                m = n.find(function(e) {
+                                d = n.find(function(e) {
                                     return "head" === e.type
                                 }),
-                                d = n.find(function(e) {
+                                m = n.find(function(e) {
                                     return "foot" === e.type
                                 });
-                            g && a.push(g.image), m && a.push(m.image), d && a.push(d.image);
+                            g && a.push(g.image), d && a.push(d.image), m && a.push(m.image);
                             break;
                         case "other":
                             var g = n.find(function(e) {
                                     return "body" === e.type
                                 }),
-                                m = n.find(function(e) {
+                                d = n.find(function(e) {
                                     return "head" === e.type
                                 }),
-                                d = n.find(function(e) {
+                                m = n.find(function(e) {
                                     return "foot" === e.type
                                 }),
                                 u = n.find(function(e) {
                                     return "animal" === e.type
                                 }),
-                                I = n.find(function(e) {
+                                h = n.find(function(e) {
                                     return "right_arm" === e.type
                                 }),
-                                h = n.find(function(e) {
+                                I = n.find(function(e) {
                                     return "left_arm" === e.type
                                 }),
-                                R = n.find(function(e) {
+                                k = n.find(function(e) {
                                     return "yield" === e.type
                                 });
-                            R && r.length < 6 ? a.push(R.image) : (g && a.push(g.image), m && a.push(m.image), !m && h && a.push(h.image), h && "set_sleeper" === h.set ? a.push(h.image) : u ? a.push(u.image) : R ? a.push(R.image) : I ? a.push(I.image) : d && a.push(d.image))
+                            k && r.length < 6 ? a.push(k.image) : (g && a.push(g.image), d && a.push(d.image), !d && I && a.push(I.image), I && "set_sleeper" === I.set ? a.push(I.image) : u ? a.push(u.image) : k ? a.push(k.image) : h ? a.push(h.image) : m && a.push(m.image))
                     }
                     return a
                 } catch (e) {}
             },
             getBonusKeywords: function() {
-                var e = [];
-                return e.push("experience", "dollar", "drop", "luck", "job", "resistance", "damage", "offense", "defense", "speed", "regen", "pray"), e
+                var e = {
+                        experience: "experience",
+                        dollar: "dollar",
+                        drop: "drop",
+                        luck: "luck",
+                        job: "job",
+                        resistance: "fort_resistance",
+                        damage: "fort_damage_sector",
+                        offense: "fort_offense",
+                        defense: "fort_defense",
+                        speed: "speed",
+                        regen: "regen",
+                        pray: "pray"
+                    },
+                    t = [];
+                for (var a in e) t.push([a, TWIRlang.calc[e[a]]]);
+                return t.sort(function(e, t) {
+                    return e[1].localeCompare(t[1])
+                }), t
             },
             makeSetsSelect: function(e) {
                 try {
@@ -4632,7 +4541,7 @@
                     });
                     var A = (new west.gui.Combobox).setWidth(45);
                     bItems = TWIR.Inventory.getBonusKeywords(), A.addItem(1, "&#8226;&#8226;&#8226;");
-                    for (var g = 0; g < bItems.length; g++) A.addItem(bItems[g], bItems[g]);
+                    for (var g = 0; g < bItems.length; g++) A.addItem(bItems[g][0], bItems[g][1]);
                     A.select(1), A.addListener(function(e) {
                         if (1 !== e) {
                             switch (e) {
@@ -4659,44 +4568,44 @@
                             p(), A.select(1)
                         }
                     });
-                    var m = $("<tr/>");
+                    var d = $("<tr/>");
                     $("<td/>").append(new west.gui.Icon("search", "").getMainDiv(), c.getMainDiv(), new west.gui.Icon("abort", "").getMainDiv().css({
                         "margin-left": "2px",
                         cursor: "pointer"
                     }).on("click", function() {
                         c.setValue(""), TWIR.Inventory.data.searchVal = null, TWIR.Inventory.updateSetsHtml(e)
-                    })).appendTo(m), $("<td/>").append(A.getMainDiv().css({
+                    })).appendTo(d), $("<td/>").append(A.getMainDiv().css({
                         "margin-left": "20px"
-                    })).appendTo(m), $('<table style="margin-bottom: 5px;margin-left: auto;margin-right: auto;"/>').append(a, m).appendTo(t);
-                    var d = $('<div style="margin-top: 10px;"/>'),
+                    })).appendTo(d), $('<table style="margin-bottom: 5px;margin-left: auto;margin-right: auto;"/>').append(a, d).appendTo(t);
+                    var m = $('<div style="margin-top: 10px;"/>'),
                         u = new west.gui.Combobox;
                     u.addItem("all", TWIRlang.informative.any);
-                    var I = [];
-                    for (var h in TWIRlang.keyWords) {
-                        var R = Array.isArray(TWIRlang.keyWords[h]) ? TWIRlang.keyWords[h][0] : TWIRlang.keyWords[h],
-                            k = "independance" === h ? "independence" : h;
-                        I.push({
-                            name: R,
-                            key: k
+                    var h = [];
+                    for (var I in TWIRlang.keyWords) {
+                        var k = Array.isArray(TWIRlang.keyWords[I]) ? TWIRlang.keyWords[I][0] : TWIRlang.keyWords[I],
+                            R = "independance" === I ? "independence" : I;
+                        h.push({
+                            name: k,
+                            key: R
                         })
                     }
-                    TWIR.sortName(I, name);
-                    for (var b = 0; b < I.length; b++) {
-                        var w = '<span style="vertical-align: middle;display: inline-block;margin-bottom: 2px;margin-right: 2px;"><img src="' + TWIR.images.gameEvents[I[b].key] + '" height="16" width="auto"/></span>';
-                        u.addItem(I[b].key, w + I[b].name)
+                    TWIR.sortName(h, name);
+                    for (var b = 0; b < h.length; b++) {
+                        var w = '<span style="vertical-align: middle;display: inline-block;margin-bottom: 2px;margin-right: 2px;"><img src="' + TWIR.images.gameEvents[h[b].key] + '" height="16" width="auto"/></span>';
+                        u.addItem(h[b].key, w + h[b].name)
                     }
                     u.addItem("none", TWIRlang.informative.none), u.addListener(function(t) {
                         TWIR.Inventory.data.eventVal = t, TWIR.Inventory.updateSetsHtml(e)
-                    }), d.append("<span>" + TWIRlang.inventory.event + ":&nbsp;</span>", u.getMainDiv().css({
+                    }), m.append("<span>" + TWIRlang.inventory.event + ":&nbsp;</span>", u.getMainDiv().css({
                         "margin-right": "10px"
-                    })), t.append(d);
-                    var f = new west.gui.Dialog(TWIRlang.inventory.sets, t).setDraggable(!0).setId("twir_sm").setBlockGame(!1).setPosition("40%", Map.height / 4).addButton(TWIRlang.informative.hide, function() {
-                        TWIR.storage.get("inv_setwindow_remember_search") || TWIR.Inventory.ss_reset()
-                    }).show();
+                    })), t.append(m);
+                    var f = new west.gui.Dialog(TWIRlang.inventory.sets, t).setDraggable(!0).setId("twir_sm").setBlockGame(!1).setPosition("20%", Map.height / 4).show();
                     $(".tw2gui_inner_window_title", f.getMainDiv()).find(".textart_title").css({
                         "margin-top": "4px",
                         "font-size": "16pt"
-                    }), c.focus(), TWIR.Inventory.updateSetsHtml(e)
+                    }), f.getMainDiv().find(".tw2gui_inner_window_title").append($('<div title="' + TWIRlang.informative.hide + '" class="tw2gui_window_buttons_close" style="position: absolute;right: 6px;top: 8px;"></div>').click(function() {
+                        TWIR.storage.get("inv_setwindow_remember_search") || TWIR.Inventory.ss_reset(), f.hide()
+                    })), c.focus(), TWIR.Inventory.updateSetsHtml(e)
                 } catch (e) {
                     TWIR.bugHunt(e)
                 }
@@ -4829,22 +4738,36 @@
                     return TWIR.sortName(e, name), e
                 }
             },
-            itemShowcase: function(e) {
-                function t(t) {
-                    for (var a, i, r = Bag.getItemsByItemIds(TWIR.makeEmUp(e)), n = 0; n < r.length; n++) {
-                        var o = r[n].obj;
-                        o.type === t && (!a || o.item_level > a.item_level) && (a = o)
+            itemShowcase: function(e, t) {
+                function a(a) {
+                    var i, r, n, o = (t ? Bag.getItemsByItemIds(e) : Bag.getItemsByItemIds(TWIR.makeEmUp(e))) || [],
+                        s = [];
+                    if (e && e.length)
+                        for (var l in Wear.wear) e.includes(t ? Wear.wear[l].getId() : Wear.wear[l].getItemBaseId()) && s.push(Wear.wear[l]);
+                    for (var p = 0; p < o.length; p++) {
+                        var c = o[p].obj;
+                        c.type === a && (!i || c.item_level > i.obj.item_level) && (i = o[p])
                     }
-                    return a && (i = "right_arm" === a.type || "left_arm" === a.type ? a.wear_image : a.image), a ? {
-                        img: i,
-                        lvl: a.item_level
-                    } : {
-                        img: "/images/inventory/default/" + t + "_blank.png",
+                    for (var A = 0; A < s.length; A++) {
+                        var c = s[A].obj;
+                        c.type === a && (!r || c.item_level > r.obj.item_level) && (r = s[A])
+                    }
+                    if ((i || r) && (n = '<img title="' + new ItemPopup(ItemManager.get(i ? i.getId() : r.getId()), {
+                            character: {
+                                level: Character.level
+                            }
+                        }).getXHTML().escapeHTML() + '" style="position: relative;' + ("right_arm" === a || "left_arm" === a ? "max-height: 58px" : "max-height: 38px") + ";width: auto;margin: auto;display: block;" + (i ? "opacity: 1" : "opacity: 0.6") + ';" src="' + (i ? "left_arm" === a || "right_arm" === a ? i.obj.wear_image : i.obj.image : "left_arm" === a || "right_arm" === a ? r.obj.wear_image : r.obj.image) + '"/>'), i || r) return {
+                        img: n,
+                        lvl: i ? i.obj.item_level : r.obj.item_level
+                    };
+                    var g = "right_arm" === a || "left_arm" === a ? '<img style="position: relative;max-height: 58px;width: auto;margin: auto;display: block;" src="/images/inventory/default/' + a + '_blank.png" />' : '<img style="position: relative;max-height: 38px;width: auto;margin: auto;display: block;" src="/images/inventory/default/' + a + '_blank.png" />';
+                    return {
+                        img: g,
                         lvl: 0
                     }
                 }
-                var a = "";
-                return a += '<div style="padding: 1px;border: 1px solid #996b39;border-color: rgba(110,57,0,0.5);"><div style="height: 124px; width: 166px;position: relative;border-radius: 3px;border: 1px solid #804000;border-spacing: 1px;background-color: #d4ba91 !important;">', a += '<div class="item" style="position:absolute;left: 84px;height: 40px;width: 40px;background: none;"><img style="position: absolute;height: 40px;width: 40px;" src="/images/inventory/foot_head_animal.png" ><img style="position: relative;max-height: 38px;width: auto;margin: auto;display: block;" src="' + t("neck").img + '" >' + (0 !== t("neck").lvl ? '<span class="item_level">' + t("neck").lvl + "</span>" : "") + "</div>", a += '<div class="item" style="position:absolute;left: 42px;height: 40px;width: 40px;background: none;"><img style="position: absolute;height: 40px;width: 40px;" src="/images/inventory/foot_head_animal.png" ><img style="position: relative;max-height: 38px;width: auto;margin: auto;display: block;" src="' + t("head").img + '" >' + (0 !== t("head").lvl ? '<span class="item_level">' + t("head").lvl + "</span>" : "") + "</div>", a += '<div class="item" style="position:absolute;top: 20px;height: 60px;width: 40px;background: none;"><img style="position: absolute;height: 60px;width: 40px;" src="/images/inventory/foot_head_animal.png" ><img style="position: relative;max-height: 60px;width: auto;margin: auto;display: block;" src="' + t("right_arm").img + '" >' + (0 !== t("right_arm").lvl ? '<span class="item_level">' + t("right_arm").lvl + "</span>" : "") + "</div>", a += '<div class="item" style="position:absolute;left: 42px;top: 42px;height: 40px;width: 40px;background: none;"><img style="position: absolute;height: 40px;width: 40px;" src="/images/inventory/foot_head_animal.png" ><img style="position: relative;max-height: 38px;width: auto;margin: auto;display: block;" src="' + t("body").img + '" >' + (0 !== t("body").lvl ? '<span class="item_level">' + t("body").lvl + "</span>" : "") + "</div>", a += '<div class="item" style="position:absolute;right: 0px;top: 20px;height: 60px;width: 40px;background: none;"><img style="position: absolute;height: 60px;width: 40px;" src="/images/inventory/foot_head_animal.png" ><img style="position: relative;max-height: 60px;width: auto;margin: auto;display: block;" src="' + t("left_arm").img + '" >' + (0 !== t("left_arm").lvl ? '<span class="item_level">' + t("left_arm").lvl + "</span>" : "") + "</div>", a += '<div class="item" style="position:absolute;bottom: 0px;height: 40px;width: 40px;background: none;"><img style="position: absolute;height: 40px;width: 40px;" src="/images/inventory/foot_head_animal.png" ><img style="position: relative;max-height: 38px;width: auto;margin: auto;display: block;" src="' + t("animal").img + '" >' + (0 !== t("animal").lvl ? '<span class="item_level">' + t("animal").lvl + "</span>" : "") + "</div>", a += '<div class="item" style="position:absolute;left: 42px;bottom: 0px;height: 40px;width: 40px;background: none;"><img style="position: absolute;height: 40px;width: 40px;" src="/images/inventory/foot_head_animal.png" ><img style="position: relative;max-height: 38px;width: auto;margin: auto;display: block;" src="' + t("pants").img + '" >' + (0 !== t("pants").lvl ? '<span class="item_level">' + t("pants").lvl + "</span>" : "") + "</div>", a += '<div class="item" style="position:absolute;left: 84px;top: 42px;height: 40px;width: 40px;background: none;"><img style="position: absolute;height: 40px;width: 40px;" src="/images/inventory/foot_head_animal.png" ><img style="position: relative;max-height: 38px;width: auto;margin: auto;display: block;" src="' + t("belt").img + '" >' + (0 !== t("belt").lvl ? '<span class="item_level">' + t("belt").lvl + "</span>" : "") + "</div>", a += '<div class="item" style="position:absolute;right: 0px;bottom: 0px;height: 40px;width: 40px;background: none;"><img style="position: absolute;height: 40px;width: 40px;" src="/images/inventory/foot_head_animal.png" ><img style="position: relative;max-height: 38px;width: auto;margin: auto;display: block;" src="' + t("yield").img + '" >' + (0 !== t("yield").lvl ? '<span class="item_level">' + t("yield").lvl + "</span>" : "") + "</div>", a += '<div class="item" style="position:absolute;left: 84px;bottom: 0px;height: 40px;width: 40px;background: none;"><img style="position: absolute;height: 40px;width: 40px;" src="/images/inventory/foot_head_animal.png" ><img style="position: relative;max-height: 38px;width: auto;margin: auto;display: block;" src="' + t("foot").img + '" >' + (0 !== t("foot").lvl ? '<span class="item_level">' + t("foot").lvl + "</span>" : "") + "</div>", (a += "</div></div>").escapeHTML()
+                var i = "";
+                return i += '<div style="padding: 1px;border: 1px solid #996b39;border-color: rgba(110,57,0,0.5);"><div style="height: 124px; width: 166px;position: relative;border-radius: 3px;border: 1px solid #804000;border-spacing: 1px;background-color: #d4ba91 !important;">', i += '<div class="item" style="position:absolute;left: 84px;height: 40px;width: 40px;background: none;"><img style="position: absolute;height: 40px;width: 40px;" src="/images/inventory/foot_head_animal.png" >' + a("neck").img + (0 !== a("neck").lvl ? '<span class="item_level">' + a("neck").lvl + "</span>" : "") + "</div>", i += '<div class="item" style="position:absolute;left: 42px;height: 40px;width: 40px;background: none;"><img style="position: absolute;height: 40px;width: 40px;" src="/images/inventory/foot_head_animal.png" >' + a("head").img + (0 !== a("head").lvl ? '<span class="item_level">' + a("head").lvl + "</span>" : "") + "</div>", i += '<div class="item" style="position:absolute;top: 20px;height: 60px;width: 40px;background: none;"><img style="position: absolute;height: 60px;width: 40px;" src="/images/inventory/foot_head_animal.png" >' + a("right_arm").img + (0 !== a("right_arm").lvl ? '<span class="item_level">' + a("right_arm").lvl + "</span>" : "") + "</div>", i += '<div class="item" style="position:absolute;left: 42px;top: 42px;height: 40px;width: 40px;background: none;"><img style="position: absolute;height: 40px;width: 40px;" src="/images/inventory/foot_head_animal.png" >' + a("body").img + (0 !== a("body").lvl ? '<span class="item_level">' + a("body").lvl + "</span>" : "") + "</div>", i += '<div class="item" style="position:absolute;right: 0px;top: 20px;height: 60px;width: 40px;background: none;"><img style="position: absolute;height: 60px;width: 40px;" src="/images/inventory/foot_head_animal.png" >' + a("left_arm").img + (0 !== a("left_arm").lvl ? '<span class="item_level">' + a("left_arm").lvl + "</span>" : "") + "</div>", i += '<div class="item" style="position:absolute;bottom: 0px;height: 40px;width: 40px;background: none;"><img style="position: absolute;height: 40px;width: 40px;" src="/images/inventory/foot_head_animal.png" >' + a("animal").img + (0 !== a("animal").lvl ? '<span class="item_level">' + a("animal").lvl + "</span>" : "") + "</div>", i += '<div class="item" style="position:absolute;left: 42px;bottom: 0px;height: 40px;width: 40px;background: none;"><img style="position: absolute;height: 40px;width: 40px;" src="/images/inventory/foot_head_animal.png" >' + a("pants").img + (0 !== a("pants").lvl ? '<span class="item_level">' + a("pants").lvl + "</span>" : "") + "</div>", i += '<div class="item" style="position:absolute;left: 84px;top: 42px;height: 40px;width: 40px;background: none;"><img style="position: absolute;height: 40px;width: 40px;" src="/images/inventory/foot_head_animal.png" >' + a("belt").img + (0 !== a("belt").lvl ? '<span class="item_level">' + a("belt").lvl + "</span>" : "") + "</div>", i += '<div class="item" style="position:absolute;right: 0px;bottom: 0px;height: 40px;width: 40px;background: none;"><img style="position: absolute;height: 40px;width: 40px;" src="/images/inventory/foot_head_animal.png" >' + a("yield").img + (0 !== a("yield").lvl ? '<span class="item_level">' + a("yield").lvl + "</span>" : "") + "</div>", i += '<div class="item" style="position:absolute;left: 84px;bottom: 0px;height: 40px;width: 40px;background: none;"><img style="position: absolute;height: 40px;width: 40px;" src="/images/inventory/foot_head_animal.png" >' + a("foot").img + (0 !== a("foot").lvl ? '<span class="item_level">' + a("foot").lvl + "</span>" : "") + "</div>", (i += "</div></div>").escapeHTML()
             },
             makeSetsMenu: function(e, t, a) {
                 var t = t.filter(function(e) {
@@ -4856,41 +4779,36 @@
                     if (isDefined(west.storage.ItemSetManager) && 0 != t.length) {
                         var n = new west.item.BonusExtractor(Character);
                         t = TWIR.Inventory.getSetMenuSorted(t);
-                        var o = [],
-                            s = 0;
-
-                        function l(e) {
-                            if (e.length > s) {
-                                var t = 7.5 * (s = e.length) + 100;
-                                r.setWidth(t <= 350 ? t : 350)
-                            }
-                        }
-                        for (var p = 0; p < t.length; p++) {
-                            var c = west.storage.ItemSetManager.get(t[p].set),
-                                A = Bag.getItemsByItemIds(TWIR.makeEmUp(c.items)),
-                                g = TWIR.Inventory.data.searchVal,
-                                m = TWIR.Inventory.data.eventVal,
-                                d = "all" === m || (!("all" === m || !TWIR.storage.setList.eventIcons[c.key] || TWIR.storage.setList.eventIcons[c.key][0] !== m) || "none" === m && !TWIR.storage.setList.eventIcons[c.key]);
-                            if (-1 === o.indexOf(c.name) && d && (null === g || TWIR.Inventory.getSetsSearch(c))) {
-                                o.push(c.name);
-                                var u = A.length > 0 ? A[~~(A.length * Math.random())].obj.image : TWIR.images.none,
-                                    I = A.map(function(e) {
-                                        return e.obj.item_base_id
+                        for (var o = [], s = 0; s < t.length; s++) {
+                            var l = west.storage.ItemSetManager.get(t[s].set),
+                                p = Bag.getItemsByItemIds(TWIR.makeEmUp(l.items));
+                            for (var c in Wear.wear) l.items.includes(Wear.wear[c].getItemBaseId()) && p.push(Wear.wear[c]);
+                            var A = TWIR.Inventory.data.searchVal,
+                                g = TWIR.Inventory.data.eventVal,
+                                d = "all" === g || (!("all" === g || !TWIR.storage.setList.eventIcons[l.key] || TWIR.storage.setList.eventIcons[l.key][0] !== g) || "none" === g && !TWIR.storage.setList.eventIcons[l.key]);
+                            if (-1 === o.indexOf(l.name) && d && (null === A || TWIR.Inventory.getSetsSearch(l))) {
+                                o.push(l.name);
+                                var m = p.length > 0 ? p[~~(p.length * Math.random())].obj.image : TWIR.images.none,
+                                    u = p.map(function(e) {
+                                        return e.getItemBaseId()
                                     }),
-                                    h = I.reduce(function(e, t) {
+                                    h = u.reduce(function(e, t) {
                                         return e.indexOf(t) < 0 && e.push(t), e
                                     }, []),
-                                    R = c.items.filter(function(e) {
-                                        return !I.includes(e)
+                                    I = l.items.filter(function(e) {
+                                        return !u.includes(e)
                                     }),
-                                    k = R.length ? "(" + h.length + "/" + c.items.length + ")" : "(" + c.items.length + ")";
-                                R.length ? 0 : 1;
-                                for (var b = R.length ? "#8b4513" : "#800080", w = R.length ? "#5e321a" : "#800080", f = R.length && 1 === A.length && c.items.length >= 4 ? .5 : 1, y = TWIR.storage.setList.eventIcons[c.key], T = TWIR.storage.setList.eventIcons[c.key] ? TWIR.images.gameEvents[y[0]] : "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7", W = TWIR.storage.setList.eventIcons[c.key] ? "(" + y[1] + ")" : "", x = TWIR.storage.setList.eventIcons[c.key] && !Array.isArray(TWIRlang.keyWords[y[0]]) ? TWIRlang.keyWords[y[0]] : TWIR.storage.setList.eventIcons[c.key] && Array.isArray(TWIRlang.keyWords[y[0]]) ? TWIRlang.keyWords[y[0]][0] : "", v = [], V = [], B = 0; B < A.length; B++) v.push(A[B].obj.item_base_id), "right_arm" === A[B].obj.type && V.push(A[B].obj.item_base_id);
-                                for (var S = $.grep(c.items, function(e) {
-                                        return $.inArray(e, v) < 0
-                                    }), M = S.length > 0 ? "<div style=&quot;color: #8b4513;margin-bottom: 10px;&quot;>" + TWIRlang.tooltips.missing_items + "&nbsp;(" + TWIRlang.invent.toLowerCase() + "):</div>" : "", U = 0; U < S.length; U++) M += S.length > 0 ? "<div><img style=&quot;-webkit-filter: grayscale(100%);filter: grayscale(100%);display: inline-block;position: relative;margin-right: 2px;margin-bottom: 2px;&quot; src=&quot;" + ItemManager.getByBaseId(S[U]).image + "&quot; height=&quot;16&quot; width=&quot;auto&quot;></img><span style=&quot;color: #666;display: inline-block;&quot;>" + ItemManager.getByBaseId(S[U]).name + "</span></div>" : "";
-                                var C = c.getMergedStages(v.length);
-                                (C = 2 !== V.length ? c.getMergedStages(v.length) : c.getMergedStages(v.length - 1)).sort(function(e, t) {
+                                    k = I.length ? "(" + h.length + "/" + l.items.length + ")" : "(" + l.items.length + ")";
+                                I.length ? 0 : 1;
+                                for (var R = I.length ? "#8b4513" : "#800080", b = I.length ? "#5e321a" : "#800080", w = I.length && 1 === p.length && l.items.length >= 4 ? .5 : 1, f = TWIR.storage.setList.eventIcons[l.key], y = TWIR.storage.setList.eventIcons[l.key] ? TWIR.images.gameEvents[f[0]] : "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7", W = TWIR.storage.setList.eventIcons[l.key] ? "(" + f[1] + ")" : "", T = TWIR.storage.setList.eventIcons[l.key] && !Array.isArray(TWIRlang.keyWords[f[0]]) ? TWIRlang.keyWords[f[0]] : TWIR.storage.setList.eventIcons[l.key] && Array.isArray(TWIRlang.keyWords[f[0]]) ? TWIRlang.keyWords[f[0]][0] : "", x = [], v = [], V = 0; V < p.length; V++) x.push(p[V].getItemBaseId()), "right_arm" === p[V].obj.type && v.push(p[V].getItemBaseId());
+                                for (var B = l.items.filter(function(e) {
+                                        if (!x.includes(e)) return e
+                                    }), S = B.length > 0 ? '<div style="color: #8b4513;margin-bottom: 10px;">' + TWIRlang.tooltips.missing_items + ":</div>" : "", M = 0; M < B.length; M++) {
+                                    var U = ItemManager.get(1e3 * B[M]);
+                                    S += B.length > 0 ? '<div><img style="-webkit-filter: grayscale(100%);filter: grayscale(100%);display: inline-block;position: relative;margin-right: 2px;margin-bottom: 2px;" src="' + U.image + '" height="16" width="auto"></img><span style="color: #666;display: inline-block;">' + U.name + "&nbsp;(ID:&nbsp;" + U.getId() + ")</span></div>" : ""
+                                }
+                                var C = l.getMergedStages(x.length);
+                                (C = 2 !== v.length ? l.getMergedStages(x.length) : l.getMergedStages(x.length - 1)).sort(function(e, t) {
                                     var a = function(e, t) {
                                             return (e.bonus ? e.bonus.type : e.type) == t && (e.bonus ? e.bonus.name : e.name)
                                         },
@@ -4900,20 +4818,34 @@
                                         o = a(t, "skill");
                                     return i && r ? i < r ? -1 : 1 : i ? -1 : r ? 1 : n && o ? 0 : n ? -1 : o ? 1 : 0
                                 });
-                                for (var K = v.length > 0 && C.length > 0 ? "<div style=&quot;color: #8b4513;margin-bottom: 10px;&quot;>" + TWIRlang.tooltips.owned_items_bonus + ":&nbsp;</div>" : "", E = 0; E < C.length; E++) {
+                                for (var K = x.length > 0 && C.length > 0 ? '<div style="color: #8b4513;margin-bottom: 10px;">' + TWIRlang.tooltips.owned_items_bonus + ":&nbsp;</div>" : "", E = 0; E < C.length; E++) {
                                     var j = n.getDesc(C[E]).replace(/[0-9\%\+\.\,]/g, "").replace(/(\(|\)).*/g, "").trim(),
                                         q = n.getDesc(C[E]).replace(/[^0-9]/g, "").replace(/(\(|\)).*/g, "").trim(),
                                         Q = null !== i && j == i ? "blue" : "#666",
-                                        F = j.match(CharacterSkills.keyNames.health) && "soldier" === Character.charClass && Premium.hasBonus("character") ? 20 * q : j.match(CharacterSkills.keyNames.health) && "soldier" === Character.charClass ? 15 * q : j.match(CharacterSkills.keyNames.health) ? 10 * q : 0;
-                                    K += v.length > 0 && C[E] ? "<div style=&quot;color: " + Q + ";&quot;>" + n.getDesc(C[E]) + (0 != F ? "&nbsp;(" + F + "&nbsp;hp)" : "") + "</div>" : ""
+                                        Y = j.match(CharacterSkills.keyNames.health) && "soldier" === Character.charClass && Premium.hasBonus("character") ? 20 * q : j.match(CharacterSkills.keyNames.health) && "soldier" === Character.charClass ? 15 * q : j.match(CharacterSkills.keyNames.health) ? 10 * q : 0;
+                                    K += x.length > 0 && C[E] ? '<div style="color: ' + Q + ';">' + n.getDesc(C[E]) + (0 != Y ? "&nbsp;(" + Y + "&nbsp;hp)" : "") + "</div>" : ""
                                 }
-                                var Y = TWIR.storage.setList.eventIcons[c.key] ? "inline-block" : "none",
-                                    G = TWIR.storage.get("inv_setmenu_full_color") ? w : "#5e321a",
-                                    O = TWIR.storage.get("inv_setmenu_full_color") ? b : "#8b4513",
-                                    J = TWIR.storage.get("inv_setmenu_empty_opacity") ? f : 1,
-                                    D = c.name.escapeHTML();
-                                l(c.name), r.addItem(c.items, '<span title="' + K + '" style="display: inline-block; height: 20px; width: 32px;vertical-align: top;position: relative;"><img style="left: 0px; right: unset;opacity: ' + J + ';display: inline-block;" src="' + u + '" height="20" width="auto"></img><img title="' + x + "&nbsp;" + W + '" style="display: ' + Y + ';right: 0px;bottom: 0px;" src="' + T + '" height="16" width="auto"></img></span><span style="margin-top: 2px;word-wrap: break-word;max-width: 230px;display: inline-block;margin-left: 5px; text-overflow:ellipsis; white-space:nowrap; overflow:hidden;opacity: ' + J + ";color: " + G + ';vertical-align: middle;" title="' + TWIR.Inventory.itemShowcase(c.items) + '">' + D + '</span><span title="' + M + '" style="display: inline-block;margin-top: 3px;color: ' + O + ";position: relative;font-size: 12px;font-style: italic;float: right;opacity: " + J + ';">' + k + "</span>")
+                                var F = TWIR.storage.setList.eventIcons[l.key] ? "inline-block" : "none",
+                                    G = TWIR.storage.get("inv_setmenu_full_color") ? b : "#5e321a",
+                                    O = TWIR.storage.get("inv_setmenu_full_color") ? R : "#8b4513",
+                                    J = TWIR.storage.get("inv_setmenu_empty_opacity") ? w : 1,
+                                    D = l.name.escapeHTML(),
+                                    H = $("<div></div>");
+                                H.append($('<span title="' + K.escapeHTML() + '" style="display: inline-block; height: 20px; width: 32px;vertical-align: top;position: relative;"><img style="left: 0px; right: unset;opacity: ' + J + ';display: inline-block;" src="' + m + '" height="20" width="auto"></img><img title="' + T.escapeHTML() + "&nbsp;" + W + '" style="display: ' + F + ';right: 0px;bottom: 0px;" src="' + y + '" height="16" width="auto"></img></span>')), H.append($('<span style="margin-top: 2px;word-wrap: break-word;max-width: 230px;display: inline-block;margin-left: 5px; text-overflow:ellipsis; white-space:nowrap; overflow:hidden;opacity: ' + J + ";color: " + G + ';vertical-align: middle;">' + D + "</span>").data("items", l.items.join(",")).mouseenter(function() {
+                                    $(this).hasClass("hasMousePopup") || $(this).addMousePopup(TWIR.Inventory.itemShowcase($(this).data("items").split(",").map(function(e) {
+                                        return Number(e)
+                                    })).unescapeHTML())
+                                })), H.append($('<span title="' + S.escapeHTML() + '" style="display: inline-block;margin-top: 3px;color: ' + O + ";position: relative;font-size: 12px;font-style: italic;float: right;opacity: " + J + ';">' + k + "</span>")), r.items.push({
+                                    value: l.items,
+                                    node: H,
+                                    title: void 0
+                                }), r._build()
                             }
+                        }
+                        for (var Z = 0, N = 0; N < r.items.length; N++) {
+                            var P = r.items[N].node.text(),
+                                z = 7.5 * P.length + 100;
+                            z > Z && (r.setWidth(z <= 350 ? z : 350), Z = z)
                         }
                         r.addListener(function(e) {
                             var t = Bag.getItemsByItemIds(TWIR.makeEmUp(e));
@@ -5073,6 +5005,983 @@
                     var t = Bag.getItemsByItemIds(TWIR.storage.inventory.bonus);
                     if (0 < t.length) return TWIR.Inventory.data.title = [TWIRlang.inventory.equipment, TWIRlang.inventory.equipment], Inventory.addItems("bonus", 1, !1)
                 }), Inventory.window.hideLoader()
+            },
+            wear: function(e, t, a) {
+                var i = Bag.getItemByItemId(t);
+                e.shiftKey || Wear.carry(i)
+            }
+        }, TWIR.calc = {
+            groups: {
+                group1: {
+                    skills: {
+                        fort_offense: {
+                            img: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4wgbEiYnkhoZggAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAIaElEQVRYw8WXe3BU1R3HP+c+dje7m2wSzOZpSAwkEIggSdSKYFtB1E6Zkfqo02lLLT5qX9RqZbQ+25mKaHXaSoc6yjRpx3HEsbU+6fjkISjEUAhogAQSE7J5bvbu+z5O/3BjVxqQOMxwZu7M3nN+5+7nfO/v/M73Cr5k21iFCI8juiPwBxt53LD8ovm3ff8b1V6f+8GAP9XQH5LPP/bXV34DoB0XVwvcB8wAWoC/AWlAAZKADbC8EOW2XtwpBwkUAjcBK4CdwP1A/8mgfrnyimZVEy8tXewJFp3l47l/jlQBkwK5gWpgHrAU0ISChWSnlLRNBL04ilQF50rBBdLBA3wVqAd6AP1kytx98/JAIqW2zq4aDPpcYQ4d8OASpjkxrk0itQG43C6WeNzK11NpaaTS8g5gV1acsCXzPS5xv8+LFotLLZnCBmKAmIiZTCXd4/9zYYFRV1N6kAPtNoMjQUJG9TvZQKpLx2PbBBWFpoBfCLdbJIqmKT63Dod7HDOZksZkq831C++Ces09Oi7p6bOMtCl9kRhfkRJHURi2rP+9ZoC1a753q8C+fkFNG6FjUcZH8gklqrvB+dlnQIrCtbouzve4mVtWrBQvXegqaZ6nu2xL8taONF29jpLJEw2wJhYK5HlcgoY6laYGnXhSera3mU1vbEudPTQmjzmO+NC25W4p2QTw2D03NKUt5dE5Fe+RiA4xNOBnVMxPSOFa9XjLP/o/A8rzidUNdVr9RY26b95sTcysUigrVmnvMGU4IonFpRe4CjgKvJ2ZdymwLBxxtMM9jrx8sZANdbo2u0YtXtysB9s77Iatu80LPuqy9kWictPv71lZYDuu1ulnHfB45EE+Ouwi7lqAlc79xbqnnn0zW3VNCPRcn6IuWegSSxbpjIw4DAw5sq3DcvYcsGQ8KV3AMqAP6AZygG8Di42YFNt2p+WCOSplQUF9jcaFjbrI9adp67AURaAC2Lb2xwL/4KxS/y4Odyqo/nkkzbLWB//UsuH4NFCTKWTYkBWF+aK8qlwlGncYGnHE1l2m2LrbGrMdjgB+oBSoBC4BvpZJ2IOWjawoVbwVJYricgsxPCrZ9EpKbt5ibg8bcuO6u1bOcmnmA7ODb/JJj0HcrsNwnduBbV3zxva9yf8DAobTJjWmKedKpCYlDAxJ3mu3xMEjzodSshHwAc1AHTAXyAdeB1o0FVdBnlJVNE1xp1JSvPO+yeYtZrT7E/uF5Uuad1SWlz5bX7bdHR3txYidTdRz4YhlWivuWvf37sk2igokJcRjcZnfNyCnd/U4+n8+sunsdsywITdLyYbMa2oG8jIJHQKeBF5UVWamTc4LjUjfvk6bHe1W5PBR61+K4tr0nauWPXpOcH91jr2HwVABMe9imbbcq9asbf33ieqUBqSkw1vhiDT3dtp9ezvtmSB90uEIkrcQFCEJZm9fwAFKgGLLYm/fgHzt2KBZJYSI2I782LJ48d6ffuvaYG6oqUD/gJ4uHTuwCNPKX3/nQ08+c7LCOVEYLcfhbQFtqbSsyChhAAXAD4DrMq+pP6NqCbAK8DkOLznIR7DxCiFHVYWxO2666vKCgPxRRd67HDlkoeZfQkKp2KxrqdVfdMZp3U1CVO+SEiCVlhFgf2asAlgOXA0UA5uB1szxshK4OLPbwpn+finRm8+trS7I962t9G/h0P5xNH89UWr7hZ1c9fMHnra+EMhyoKtJiHMyUFllfxrQkFFmC7C+1svrnXEEkMjk1SxgJuAv0xH9JvkXNTc8epZ7f0n7B0cJFJSjeRuTqWTyh2vWtvaeiovQ2lNSjCYntQ9R4GPgTWCzKtgxMyDsoEfaO8fYZkmqJFwEdAIxn4py3bJF1wY8g1f2HtzD2LhCXtV8ULx3r1m74bVTtTXix2ejRdI4rSGci/MRW8OT24a6PIR0wHEgX4Ndkc/HXTGnsqa2ecZWT2xniZOIEayag+ltfOGuh1tWTMVnadtGkHETWaKi7ItAQIXxjOHSBSKgwbCJ/DhyYn9zTYknGKgpf0KJ7QvGxmOUlpdieuft6RsYWjVV46cdS+HEbTA/PTk/swy5KkJIxLCJc7IH1OYoQVE/55Ectf9SY2RQKQ76sHMbjaHB8VueaHnVmDJQ6PP2U04AGfbnTvcTFdVp1efPv7mgMHp9bKxXy/OpiLz5DITlvetbXu7I8kan3JSsXZVtqJRM8cu+V44zX4GFjbMWz50RWCNjRzW35uArqsewip5b3/Lys1nPnJpCWX8wAZGtlJr1W8vyQq6GusqSpoYZD8dDO7wukhQWVxBVzmnb0PrKnZmqLk/F7E+mkMiCEFlwWuZSsvrcE555+dLzf6dH26uN0DC2WoBW2Bze19lzazKVjmU+DOysBU5ZoeNXM3HvZMFIPs19c80tV692mz3LmxsFyboK2nrKTCOp3rj53Q87MyBWlkpTauoJ+idgsi8bsH9964qFuoxsrCkKqWXTZzOaCFgyp+ZX9z/+zNOZT6VUBvxLAWlTnWDb3BjQ+1xevY/QkRHCRqFUvdNdnKamTHWClKLL0YqshBFjdDxGRTl6gbtv3hkDeugvz983MOo+8Pr2UkZTZWi6IJoOdJ0xoPt+cvWsuJGcMTJqY8Q0pJJP2nb3nTEgy3ZuTIwN5syaruPN8RNJBEzbFrvPCNDtN1ypDQ+Fvzktx6AkqDKeKNk0EK6cL6XTfrqAprTLLMu+IjI4PPOyRW56Q+DY6v7bf/vUfk5jm5JC6bRzQ45mUFnhZ2BYoiiKi9PcpgQUjSXKIuk4nT3j9AymSaVS9hkF8uVoO/2F1dbzW9J8Mi4Rgumrv3uZcjqB1KkE7+o48urC82pf1t35B3N83qjf6zlk28729/d2WacL6L9gdLSJMCaLUAAAAABJRU5ErkJggg=="
+                        },
+                        fort_defense: {
+                            img: "data:image/png;base64,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"
+                        },
+                        fort_damage_sector: {
+                            img: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYxIDY0LjE0MDk0OSwgMjAxMC8xMi8wNy0xMDo1NzowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNS4xIFdpbmRvd3MiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6QzU1RkQ1MTM1QzA0MTFFMUFEQjZBQ0NFOUE1MjAwRjIiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6QzU1RkQ1MTQ1QzA0MTFFMUFEQjZBQ0NFOUE1MjAwRjIiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpDNTVGRDUxMTVDMDQxMUUxQURCNkFDQ0U5QTUyMDBGMiIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpDNTVGRDUxMjVDMDQxMUUxQURCNkFDQ0U5QTUyMDBGMiIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PrkglxEAAAljSURBVHjaxFd7jFxV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"
+                        },
+                        fort_resistance: {
+                            img: "data:image/png;base64,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"
+                        },
+                        health: {
+                            img: "data:image/png;base64,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"
+                        }
+                    },
+                    para: {
+                        attack: {
+                            img: "/images/fort/battle/button_attack.png"
+                        },
+                        defense: {
+                            img: "/images/fort/battle/button_defend.png"
+                        }
+                    }
+                },
+                group2: {
+                    skills: {
+                        ms: {
+                            img: "/images/items/animal/quarter.png"
+                        },
+                        regen: {
+                            img: "data:image/png;base64,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"
+                        },
+                        pray: {
+                            img: "data:image/png;base64,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"
+                        }
+                    }
+                },
+                group3: {
+                    skills: {
+                        job: {
+                            img: "/images/items/yield/sledgehammer.png"
+                        },
+                        experience: {
+                            img: "/images/interface/exp_star.png"
+                        },
+                        dollar: {
+                            img: "/images/interface/dollar.png"
+                        },
+                        luck: {
+                            img: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAnCAMAAABKdvqKAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAJtUExURQAAAHekIQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIKsJZG2UwAAAAMEAQAAAHyoK5i8W7nUe6nJaAECAazKbgEBAHmnK5m9QICsLH+qJHGhH3unIqPEZgEBAafIb3enJXuoJqXFYZ3BTgAAAK/NcWubHKbHbGqZKHylPZG5SZ3AWXSjKJ3BU57BYZe9SJzBSQAAAAAAAGqcGrTRfAAAAAAAAG2eHgIDAWaUHY21NoqyRXShM4OsQrXSdHCPNoewKgAAALXSeZG5QqbCeQAAAF+NGgAAAAAAAHSjH63LcwMDAmaYGVuNF1yMGVaIFqLDWYuzTpS6PYSvOWx+S4u0PX2lOJm9UIqyLYSuJ4WvLbDPeoGSXwAAAJe6YImzO6/Oe2WYHKbFdAAAAAEBAAMEAaPFbpqzcwEBAFR3IluLGFmLFn6qNWiSKICeU4myMXWiKK7NbJm/V5zAXgICAZe7Upe9WAkKB5e6YnuOWW98VztFK1h3KC8zJ6bGclduMnKjIH2pKafHdQMEAS00IENbIUhiIVaAHW+gKXiOTXSXOGWNKIGtNYufZ4GaUw8SC5m9XGJ+MYiZbD9MKqvKboyrWJi+XIixPnSJTZO6SV2LG5C4QYGiRYiiW215Vp3AZBodFaHCaUlRPldfSDdFIWJ3OKvLdSIpFqjJcwAAABUaDZarcDlJHUJVJGaYGWiDNQgJBlV1JSEpEkRgHzE6JXOSPIanUXecQCAmFRIXChsiEbDOe4CbUpK5SFNfPZi+V1djQ5queWdyVI23QYWWaEhOPSMmHpmvcnuoJIeyN3SPQBkbFU1VQHiWPnSqJ4miYh1iahcAAADPdFJOUwDVUisNEhYDAQfV0wQcH9TU1dU11TnV1dXV1dXUP8bV1dXUMtXU0tTU1dXT1dTU1QoPz80lGNRc0tXU1NTVw9WR1dRsJ9VIGdXQa8nVuMPV1NXU0tTF1NTVy6e/hMjOv9WGQqp6n2x2xanQ09TJ08jV0dJ/yrw+pZROVbFAuGuivpJkY4O/ndDUy8vOYtO/y89Vnc6/jKt5q43LjXxkx2e5PWZnwqNUuiJbt6jPtJGff3qWh8nV0qqpl5NqucycqpxCs6ZHMIvKtLmItKrIu27FJVIAAAOnSURBVDjL1dT1d1oHFAdwePAMTbDhkKAJkELwEEgCAYKlcW3cXUiIu1RS99R1pd6u7dxd/6c9tnMIbPwB2/fHez7n3vPkXhzuPxEYRVEKTDHEl895PCcXZVQDCiOZGOin0cwgGF/2fNrS0tK15SuHMlCYSP3hm4WFZRlB1P+ww2g0dnw9ALAJfoz+w8Xv9ndtbHTds97e6DBmZ2cbO777sf/cXROIpvZEUH/M0/dILH7U9+bXFmMZBssC4pWHXZ7vMZna0EC42ScOyOUB8ZOXK4G/oFJ5QbzS1y+i6lMhJLpxR8mSy+Us8W9PAk6ns4ylZLFYyjuXFgmGFIjGgflbQgaLNclStrZekDudcqFQyWAIb83dlIFpkzfPt00LGViEba1ixuQkQ6fTCYW6trl7KRDRU2NX5s5kZeUkcqa1TZeTk/V3ZuetKaNRiHnyy9np6fz8/MOH82fGxqayyFXkRC5+FQVMxCQkmhYuzU5NJZi2gVw1VkuuKi6qeneq9ovTPVGg/KAjyPzs6oxWq21o0GrziorVHxar1cdqa4+dIs9cnL/NNiehOXbjakNubm5BHhYMOhwOdXFRAVbJnfn8OmA6gKIr3xYcOlSQ5y5qr9lTO1SqkZo6N1bBatcu97KTEGKvXr7mdrvravbq3x4/MapSOUbqqt9LpLquvtSXhAbC+9d/bm9v3zvucrkmjh7ljKroI/YEq7bX1JcCSaj3M7de/P7Lgweu+uZmukbDUdk4HO643W4f59InUiBFT2Nboy+X1pvHxxu5HDpH49XQOVw6ncvlaFxHug++DIVI6w6+WG9ubGwsIXHpEomtky7BS6V8y+jZj4Ky1N8RYt9fWy8pKWkikbhSiUQR5kulPB5e8ex0KRBPh6trPzU1kXiCJh4G+d5OvIAkwFsGe4JMMA0yV9cmBAI8X8Dj8aT4Cm+YX4GvsISWoj6aPhVib2j/eWGhQoE1IvHwfG+406JQhCLbAMGQul2wnsq+vz8UGbTx8SSSoMLiHQ7bbKHn+49laSuDtQTjMevrT3pOKPh4bKTtWWVlJDL06jHTn7aEOARGDVSZb/PI01AhltBOz+7uB9tbPgL0rwsAU/RgnAn0nh+KRJaelva+Hoq8YdPADEcFa6qHyrutA73RgSDQbd0ZrtwmoEiG44NDsIenEtgiUYxpMtMGBsPDu4tUOOM9QyioAYTMEEhEYSg4ONz5xyso8+VDEJiCBUawkcTNHc3ZjwkI7n+TPwEvEOsqcj0FJgAAAABJRU5ErkJggg=="
+                        },
+                        drop: {
+                            img: "data:image/png;base64,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"
+                        }
+                    }
+                },
+                group4: {
+                    skills: {}
+                },
+                group5: {
+                    skills: {}
+                }
+            },
+            preset: {},
+            result: [],
+            showcased: {},
+            weapon: "shot",
+            guiElements: {},
+            onWearChange: function() {
+                EventHandler.listen("wear_changed", function() {
+                    return TWIR.calc.updateShowCase(), EventHandler.ONE_TIME_EVENT
+                })
+            },
+            updateShowCase: function(e, t) {
+                var a = TWIR.calc.guiElements.showCaseDiv,
+                    i = TWIR.calc.showcased;
+                a.empty();
+                var r = $.isEmptyObject(e) ? $.isEmptyObject(i) ? [] : TWIR.calc.getUsedItems(i) : TWIR.calc.getUsedItems(e),
+                    n = TWIR.calc.showCase(r);
+                a.append(n), TWIR.calc.showcased = e || (i || {}), TWIR.calc.updateSkills(), TWIR.calc.updateResults(), "function" == typeof t && t()
+            },
+            calcBonuses: function(e) {
+                var t = {
+                    charClass: Character.charClass,
+                    premium: Premium.hasBonus("character"),
+                    level: Character.level,
+                    skills: {
+                        health: CharacterSkills.getSkill("health").points,
+                        leadership: CharacterSkills.getSkill("leadership").points,
+                        pitfall: CharacterSkills.getSkill("pitfall").points,
+                        hide: CharacterSkills.getSkill("hide").points,
+                        dodge: CharacterSkills.getSkill("dodge").points,
+                        aim: CharacterSkills.getSkill("aim").points,
+                        ride: CharacterSkills.getSkill("ride").points
+                    },
+                    damage: [0, 0],
+                    other: {
+                        speed: 0,
+                        ms: 0,
+                        pray: 0,
+                        regen: 0
+                    },
+                    fort: {
+                        fort_offense: 0,
+                        fort_defense: 0,
+                        fort_resistance: 0,
+                        fort_damage_sector: 0
+                    }
+                };
+                for (var a in t.damage = e.dmg, e.other) "undefined" !== t.other[a] && (t.other[a] += e.other[a]);
+                for (var r in e.fort) "undefined" !== t.fort[r] && (t.fort[r] += e.fort[r]);
+                for (var n in e.skills) "undefined" !== t.skills[n] && (t.skills[n] += e.skills[n]);
+                if (e.attributes)
+                    for (var o in e.attributes) {
+                        var s = CharacterSkills.getSkillKeys4Attribute(o);
+                        for (i = 0; i < s.length; i++) "undefined" !== t.skills[s[i]] && (t.skills[s[i]] += e.attributes[o])
+                    }
+
+                function l(e, t) {
+                    return Math.round(e * Math.pow(10, t)) / Math.pow(10, t)
+                }
+                var p = Math.pow(t.skills.pitfall, .6),
+                    c = Math.pow(t.skills.hide, .6),
+                    A = Math.pow(t.skills.dodge, .5),
+                    g = Math.pow(t.skills.aim, .5),
+                    d = t.fort.fort_offense,
+                    m = t.fort.fort_defense,
+                    u = t.fort.fort_resistance,
+                    h = t.fort.fort_damage_sector,
+                    I = "duelist" === t.charClass ? t.premium ? 1.2 : 1.1 : 1,
+                    k = t.damage,
+                    R = "worker" == t.charClass ? t.premium ? 1.4 : 1.2 : 1,
+                    b = t.skills.leadership,
+                    w = Math.pow(b * ("soldier" == t.charClass ? t.premium ? 1.5 : 1.25 : 1), .5),
+                    f = 90 + t.skills.health * ("soldier" == t.charClass ? t.premium ? 20 : 15 : 10) + 10 * t.level,
+                    y = {
+                        attack: {
+                            hit: l((25 + w + g + c + d) * R, 2),
+                            dodge: l((10 + w + A + c + m) * R, 2),
+                            resistance: l(300 * t.skills.hide / f + u, 2)
+                        },
+                        defense: {
+                            hit: l((25 + w + g + p + d) * R, 2),
+                            dodge: l((10 + w + A + p + m) * R, 2),
+                            resistance: l(300 * t.skills.pitfall / f + u, 2)
+                        },
+                        health: f,
+                        damage: [Math.round(Number(k[0]) + h + (Number(k[0]) + h) * b / f), Math.round(Number(k[1]) + h + (Number(k[1]) + h) * b / f)],
+                        speed: Math.round((100 + (t.other.ms || 0) + t.skills.ride) * (1 + (t.other.speed || 0) / 100) * I)
+                    };
+                return y
+            },
+            updateResults: function() {
+                var e = TWIR.calc.guiElements.resultShowcase;
+                if (e) {
+                    e.empty();
+                    var t = TWIR.calc.result;
+                    if (t.length)
+                        for (var a = TWIR.calc.getUsedItems(TWIR.calc.showcased), i = 0, r = 0; r < t.length; r++)
+                            if (t[r].tmp > i && (i = t[r].tmp), !(t[r].tmp < i / 3 * 2 || r >= 15)) {
+                                var n = TWIR.calc.getUsedItems(t[r]),
+                                    o = n.every(function(e, t) {
+                                        return e === a[t]
+                                    }),
+                                    s = $('<div style="width: 490px;height: 20px;font-family: Arial,Verdana,sans-serif;font-weight: bold;color: rgb(58,46,16);line-height: 22px;">' + TWIRlang.calc.equipment_number.replace("$1", "#" + (r + 1)) + "</div>").data("index", r),
+                                    l = $(p(n, o, r)).data("index", r);
+                                e.append(s, l), o || (s.on("click", function() {
+                                    $(this).prop("disabled", !0), TWIR.calc.updateShowCase(t[$("div#twir_bw_" + $(this).data("index")).data("index")], function() {
+                                        $(this).prop("disabled", !1)
+                                    })
+                                }), s.css({
+                                    cursor: "pointer"
+                                }), s.mouseenter(function() {
+                                    $("div#twir_bw_" + $(this).data("index")).css({
+                                        background: "rgba(166, 109, 22, 0.34)"
+                                    })
+                                }).mouseleave(function() {
+                                    $("div#twir_bw_" + $(this).data("index")).css({
+                                        background: "rgba(127, 111, 85, 0.7)"
+                                    })
+                                }))
+                            }
+                }
+
+                function p(e, t, a) {
+                    var i = $('<div id="twir_bw_' + a + '" style="width: 490px;height: 54px;background:' + (t ? "rgba(166, 109, 22, 0.34)" : "rgba(127, 111, 85, 0.7)") + ';margin-top: 4px; margin-bottom: 14px;padding-left: 2px;"></div>');
+                    return i.append(TWIR.calc.showCase(e, !0)), i
+                }
+            },
+            updateSkills: function() {
+                var e = TWIR.calc.guiElements.skillShowcase;
+                if (e) {
+                    e.empty();
+                    var t = TWIR.calc.showcased;
+                    if (!$.isEmptyObject(t)) {
+                        var a = TWIR.calc.exportFullBonus(t, !0);
+                        for (var i in a.attribute) e.append(l("group5", i, a.attribute[i], p(i, a)));
+                        for (var r in a.skill) e.append(l("group4", r, a.skill[r], p(r, a)));
+                        for (var n in a.fortbattle) e.append(l("group1", n, a.fortbattle[n], p(n, a)));
+                        for (var o in a.job_bonus) e.append(l("group3", o, a.job_bonus[o], p(o, a)));
+                        for (var s in "all" in a.job && e.append(l("group3", "job", a.job.all, p("job", a))), a.other_bonus) "ms" !== s && ("speed" !== s ? e.append(l("group2", s, a.other_bonus[s], p(s, a))) : e.append(l("group2", "ms", a.other_bonus[s], p(s, a))))
+                    }
+                }
+
+                function l(e, t, a, i) {
+                    var r = TWIR.calc.groups[e].skills[t],
+                        n = $('<div style="width: 44px;height: 66px;position: relative;background: rgba(127, 111, 85, 0.7);display: inline-block;margin-top: 5px;margin-right: 5px;"></div>');
+                    return n.append('<img title="' + i + '" src="' + (r ? r.img : "/images/items/unknown.png") + '" style="position: absolute; ' + (CharacterSkills.allSkillKeys.includes(t) ? "top: 11px; width: 44px; right: 0;" : "width: 36px; left: 3px;right: 4px;top: 5px;") + '"/>'), n.append('<div style="background: url(/images/tw2gui/pagebar/bg.png);width: 44px;height: 20px;position: absolute;line-height: 20px;font-size: 13px;bottom: 0;color: #FFE7B1;text-align: center;">' + (a || 0) + (["dollar", "experience", "luck", "drop", "regen", "ms"].includes(t) ? "%" : "") + "</div>"), n
+                }
+
+                function p(e, t) {
+                    var a = "",
+                        i = {
+                            skills: t.skill,
+                            attributes: t.attribute,
+                            fort: t.fortbattle,
+                            other: t.other_bonus,
+                            dmg: t.damage
+                        },
+                        r = TWIR.calc.calcBonuses(i);
+                    switch (e) {
+                        case "speed":
+                            a += '<div style="font-weight: bold;">' + TWIRlang.calc.speed + ":</div>", a += "<div>" + TWIRlang.calc.bonuses + ":&nbsp;" + (t.other_bonus.speed || 0) + "%</div>", a += "<div>" + TWIRlang.calc.total + ":&nbsp;" + r.speed + "%&nbsp;(" + TWIRlang.calc.plus_buffs + ")</div>";
+                            break;
+                        case "fort_offense":
+                            a += '<div style="font-weight: bold;">' + TWIRlang.calc.fort_offense + ":</div>", a += "<div>" + TWIRlang.calc.bonuses + ":&nbsp;" + (t.fortbattle.fort_offense || 0) + "</div>", a += "<div>" + TWIRlang.calc.total + ":</div>", a += "<div>" + TWIRlang.calc.attack + ":&nbsp;" + r.attack.hit + "&nbsp;(" + TWIRlang.calc.plus_buffs + ")</div>", a += "<div>" + TWIRlang.calc.defense + ":&nbsp;" + r.defense.hit + "&nbsp;(" + TWIRlang.calc.plus_buffs + ")</div>";
+                            break;
+                        case "fort_defense":
+                            a += '<div style="font-weight: bold;">' + TWIRlang.calc.fort_defense + ":</div>", a += "<div>" + TWIRlang.calc.bonuses + ":&nbsp;" + (t.fortbattle.fort_defense || 0) + "</div>", a += "<div>" + TWIRlang.calc.total + ":</div>", a += "<div>" + TWIRlang.calc.attack + ":&nbsp;" + r.attack.dodge + "&nbsp;(" + TWIRlang.calc.plus_buffs + ")</div>", a += "<div>" + TWIRlang.calc.defense + ":&nbsp;" + r.defense.dodge + "&nbsp;(" + TWIRlang.calc.plus_buffs + ")</div>";
+                            break;
+                        case "fort_resistance":
+                            a += '<div style="font-weight: bold;">' + TWIRlang.calc.fort_resistance + ":</div>", a += "<div>" + TWIRlang.calc.bonuses + ":&nbsp;" + (t.fortbattle.fort_resistance || 0) + "</div>", a += "<div>" + TWIRlang.calc.total + ":</div>", a += "<div>" + TWIRlang.calc.attack + ":&nbsp;" + r.attack.resistance + "&nbsp;(" + TWIRlang.calc.plus_buffs + ")</div>", a += "<div>" + TWIRlang.calc.defense + ":&nbsp;" + r.defense.resistance + "&nbsp;(" + TWIRlang.calc.plus_buffs + ")</div>";
+                            break;
+                        case "fort_damage_sector":
+                            a += '<div style="font-weight: bold;">' + TWIRlang.calc.fort_damage_sector + ":</div>", a += "<div>" + TWIRlang.calc.bonuses + ":&nbsp;" + (t.fortbattle.fort_damage_sector || 0) + "</div>", a += "<div>" + TWIRlang.calc.total + ":&nbsp;" + r.damage[0] + "&nbsp;-&nbsp;" + r.damage[1] + "&nbsp;(" + TWIRlang.calc.plus_buffs + ")</div>";
+                            break;
+                        case "health":
+                            a += '<div style="font-weight: bold;">' + TWIRlang.calc.health + ":</div>", a += "<div>" + TWIRlang.calc.bonuses + ":&nbsp;" + (Number(t.skill.health || 0) + Number(t.attribute.strength || 0)) + "</div>", a += "<div>" + TWIRlang.calc.total + ":&nbsp;" + r.health + "hp&nbsp;(" + TWIRlang.calc.plus_buffs + ")</div>";
+                            break;
+                        default:
+                            a += '<div style="font-weight: bold;">' + (CharacterSkills.keyNames[e] ? CharacterSkills.keyNames[e] : TWIRlang.calc[e] ? TWIRlang.calc[e] : "???") + "</div>"
+                    }
+                    return a.escapeHTML()
+                }
+            },
+            show: function() {
+                if (!$("#twir_bw").length) {
+                    var e = TWIR.calc.groups,
+                        t = {
+                            skills: {},
+                            para: void 0
+                        };
+                    TWIR.calc.result = [], TWIR.calc.showcased = {};
+                    var a = $('<div style="width: 540px; height: 325px;"></div>');
+                    TWIR.calc.guiElements.showCaseDiv = $('<div style="height: 184px; width: 246px;position: relative;border-radius: 3px;border-spacing: 1px;background: url(/images/interface/wood_texture_dark.jpg) no-repeat;"></div>'), TWIR.calc.updateShowCase({}), a.append($('<div id="twir_bw_showcase" style="padding: 1px;position: absolute;right: 15px;top: 25px;"/>').append(TWIR.calc.guiElements.showCaseDiv));
+                    var i = $('<div style="position: absolute; left:305px; top:27px; z-index: 1;opacity: 0.5;background: url(/images/inventory/foot_head_animal.png) center no-repeat;border-radius: 2px;"/>').mouseenter(function() {
+                        $(this).css({
+                            opacity: "1"
+                        })
+                    }).mouseleave(function() {
+                        $(this).css({
+                            opacity: "0.5"
+                        })
+                    });
+                    i.append($('<img style="cursor:pointer;" src="' + ("shot" === TWIR.calc.weapon ? TWIR.images.w_switch_2 : TWIR.images.w_switch_1) + '" title="' + TWIRlang.calc.switch_w + '" height="24">').click(function() {
+                            TWIR.calc.weapon = "shot" === TWIR.calc.weapon ? "hand" : "shot", $(this).attr("src", "shot" === TWIR.calc.weapon ? TWIR.images.w_switch_2 : TWIR.images.w_switch_1)
+                        })), a.append(i),
+                        function() {
+                            if ($.isEmptyObject(e.group4.skills))
+                                for (var t = 0; t < CharacterSkills.allSkillKeys.length; t++) {
+                                    var a = CharacterSkills.allSkillKeys[t];
+                                    e.group4.skills[a] = {
+                                        title: CharacterSkills.keyNames[a],
+                                        img: "/images/window/skills/skillicon_" + a + ".png"
+                                    }
+                                }
+                            if ($.isEmptyObject(e.group5.skills))
+                                for (var i = 0; i < CharacterSkills.allAttrKeys.length; i++) {
+                                    var a = CharacterSkills.allAttrKeys[i];
+                                    e.group5.skills[a] = {
+                                        title: CharacterSkills.keyNames[a],
+                                        img: "/images/window/skills/circle_" + a + ".png"
+                                    }
+                                }
+                        }();
+                    var r = $('<div style="width: 260px; position: absolute; left: 5px; top: 25px;"></div>'),
+                        n = $('<div style="margin-top: 2px;"></div>'),
+                        o = new west.gui.Accordion("twir_bw_g1", TWIRlang.calc.fb, "twir_bw_bonuses"),
+                        s = $('<div style="margin-top: 2px;"></div>');
+                    for (var l in e.group1.para) {
+                        var p = $('<div title="' + TWIRlang.calc[l] + '" style="display:inline-block;width: 50px; height: 56px; margin-right: 2px;margin-bottom: 2px;position: relative;">' + S(l, 37, "group1", "para", !0) + "</div>").appendTo(s);
+                        e.group1.para[l].selector = new west.gui.Checkbox("", "twir_para_group1").setRadiobutton().setValue(l).setCallback(function(e) {
+                            K(e, this.getValue())
+                        }).appendTo(p), e.group1.para[l].selector.component = "Checkbox", e.group1.para[l].selector.getMainDiv().css({
+                            width: "20px",
+                            height: "20px",
+                            position: "absolute",
+                            left: "2px",
+                            display: "block",
+                            bottom: "4px"
+                        })
+                    }
+                    var c = $('<div style="margin-top: 2px;"></div>');
+                    for (var A in e.group1.skills) {
+                        var p = $('<div title="' + TWIRlang.calc[A] + '" class="twir_bestWear_choose" style="display:inline-block;width: 50px; height: 50px; margin-right: 2px;margin-bottom: 2px;position: relative;">' + S(A, 32, "group1", "skills", !0) + '<div style="background: url(' + TWIR.images.skill_universal + ');background-size: cover;position: absolute;height: 48px;width: 48px;display: block;top: 2px;left: 1px;"></div></div>').data("selector", A).mouseenter(function() {
+                            e.group1.skills[$(this).data("selector")].selector.getMainDiv().show()
+                        }).mouseleave(function() {
+                            e.group1.skills[$(this).data("selector")].selector.getMainDiv().hide()
+                        }).appendTo(c);
+                        $('<div id="twir_' + A + '_displayValue" style="position: absolute;width: 23px;height: 15px;left: 3px;bottom: 2px;color: #FFF;font-size: 11px;font-weight: bold;text-align: center;text-shadow: #000 1px 1px 1px;">0</div>').appendTo(p);
+                        e.group1.skills[A].selector = new west.gui.Plusminusfield(A, 0, 0, 5, 0, U, U, U).setWidth(40).appendTo(p), e.group1.skills[A].selector.component = "Plusminusfield";
+                        var g = e.group1.skills[A].selector.getMainDiv();
+                        g.css({
+                            width: "40px",
+                            position: "absolute",
+                            top: "0",
+                            left: "6px",
+                            display: "none"
+                        }), g.find("span.displayValue").css({
+                            display: "none"
+                        }), g.find("span.butMinus").css({
+                            position: "absolute",
+                            left: "0px",
+                            bottom: "2px",
+                            cursor: "pointer"
+                        }), g.find("span.butPlus").css({
+                            position: "absolute",
+                            right: "0px",
+                            bottom: "2px",
+                            cursor: "pointer"
+                        })
+                    }
+                    n.append(s, c), o.setContent(n), $(o.getMainDiv()[0]).click(function(e) {
+                        C()
+                    });
+                    var d = $('<div style="margin-top: 2px;"></div>'),
+                        m = new west.gui.Accordion("twir_bw_g2", TWIRlang.calc.ob, "twir_bw_bonuses"),
+                        u = $('<div style="margin-top: 2px;"></div>');
+                    for (var h in e.group2.skills) {
+                        var p = $('<div title="' + TWIRlang.calc[h] + '" class="twir_bestWear_choose" style="display:inline-block;width: 50px; height: 56px; margin-right: 2px;margin-bottom: 2px;position: relative;">' + S(h, 36, "group2", "skills", !0) + '<div style="background: url(' + TWIR.images.skill_universal_nocount + ');background-size: cover;position: absolute;height: 48px;width: 48px;display: block;top: 2px;left: 1px;"></div></div>').appendTo(u);
+                        e.group2.skills[h].selector = new west.gui.Checkbox("", "twir_skills_group2").setRadiobutton().setValue(h).setCallback(function(e) {
+                            E(e, this.getValue())
+                        }).appendTo(p), e.group2.skills[h].selector.component = "Checkbox", e.group2.skills[h].selector.getMainDiv().css({
+                            width: "20px",
+                            height: "20px",
+                            position: "absolute",
+                            left: "2px",
+                            display: "block",
+                            bottom: "4px"
+                        })
+                    }
+                    d.append(u), m.setContent(d), $(m.getMainDiv()[0]).click(function(e) {
+                        C()
+                    });
+                    var I = $('<div style="margin-top: 2px;"></div>'),
+                        k = new west.gui.Accordion("twir_bw_g3", TWIRlang.calc.js, "twir_bw_bonuses"),
+                        R = $('<div style="margin-top: 2px;"></div>');
+                    for (var b in e.group3.skills) {
+                        var p = $('<div title="' + TWIRlang.calc[b] + '" class="twir_bestWear_choose" style="display:inline-block;width: 50px; height: 50px; margin-right: 2px;margin-bottom: 2px;position: relative;">' + S(b, 34, "group3", "skills", !0) + '<div style="background: url(' + TWIR.images.skill_universal + ');background-size: cover;position: absolute;height: 48px;width: 48px;display: block;top: 2px;left: 1px;"></div></div>').data("selector", b).mouseenter(function() {
+                            e.group3.skills[$(this).data("selector")].selector.getMainDiv().show()
+                        }).mouseleave(function() {
+                            e.group3.skills[$(this).data("selector")].selector.getMainDiv().hide()
+                        }).appendTo(R);
+                        $('<div id="twir_' + b + '_displayValue" style="position: absolute;width: 23px;height: 15px;left: 3px;bottom: 2px;color: #FFF;font-size: 11px;font-weight: bold;text-align: center;text-shadow: #000 1px 1px 1px;">0</div>').appendTo(p);
+                        e.group3.skills[b].selector = new west.gui.Plusminusfield(b, 0, 0, 5, 0, U, U, U).setWidth(40).appendTo(p), e.group3.skills[b].selector.component = "Plusminusfield";
+                        var g = e.group3.skills[b].selector.getMainDiv();
+                        g.css({
+                            width: "40px",
+                            position: "absolute",
+                            top: "0",
+                            left: "6px",
+                            display: "none"
+                        }), g.find("span.displayValue").css({
+                            display: "none"
+                        }), g.find("span.butMinus").css({
+                            position: "absolute",
+                            left: "0px",
+                            bottom: "2px",
+                            cursor: "pointer"
+                        }), g.find("span.butPlus").css({
+                            position: "absolute",
+                            right: "0px",
+                            bottom: "2px",
+                            cursor: "pointer"
+                        })
+                    }
+                    var w = $('<div style="margin-top: 2px;"></div>');
+                    for (var f in e.group4.skills) {
+                        var p = $('<div title="' + e.group4.skills[f].title + '" class="twir_bestWear_choose" style="display:inline-block;width: 50px; height: 50px; margin-right: 2px;margin-bottom: 2px;position: relative;">' + M(f) + "</div>").data("selector", f).mouseenter(function() {
+                            e.group4.skills[$(this).data("selector")].selector.getMainDiv().show()
+                        }).mouseleave(function() {
+                            e.group4.skills[$(this).data("selector")].selector.getMainDiv().hide()
+                        }).appendTo(w);
+                        $('<div id="twir_' + f + '_displayValue" style="position: absolute;width: 23px;height: 15px;left: 3px;bottom: 2px;color: #FFF;font-size: 11px;font-weight: bold;text-align: center;text-shadow: #000 1px 1px 1px;">0</div>').appendTo(p);
+                        e.group4.skills[f].selector = new west.gui.Plusminusfield(f, 0, 0, 5, 0, U, U, U).setWidth(40).appendTo(p), e.group4.skills[f].selector.component = "Plusminusfield";
+                        var g = e.group4.skills[f].selector.getMainDiv();
+                        g.css({
+                            width: "40px",
+                            position: "absolute",
+                            top: "0",
+                            left: "6px",
+                            display: "none"
+                        }), g.find("span.displayValue").css({
+                            display: "none"
+                        }), g.find("span.butMinus").css({
+                            position: "absolute",
+                            left: "0px",
+                            bottom: "2px",
+                            cursor: "pointer"
+                        }), g.find("span.butPlus").css({
+                            position: "absolute",
+                            right: "0px",
+                            bottom: "2px",
+                            cursor: "pointer"
+                        })
+                    }
+                    I.append(R, w), k.setContent(I), $(k.getMainDiv()[0]).click(function(e) {
+                        C()
+                    }), r.append(o.getMainDiv()), r.append(k.getMainDiv()), r.append(m.getMainDiv()), a.append(r);
+                    var y = $('<div style="width: 252px;position: absolute;right: 15px;bottom: 65px;"></div>'),
+                        W = $('<div style="width: 252px;position: absolute;right: 15px;top: 5px;text-align: center;"><hr></div>');
+                    W.append($('<img title="' + TWIRlang.calc.result_menu_title + '" src="' + TWIR.images.arrow + '" width="13" style="float: right; cursor: pointer;"/>').click(function(e) {
+                        TWIR.calc.guiElements.boxwrap_results.slideToggle("fast");
+                        var t = TWIR.calc.guiElements.boxwrap_skills.css("z-index");
+                        TWIR.calc.guiElements.boxwrap_results.css({
+                            "z-index": Number(t) + 1
+                        })
+                    })), W.append(new west.gui.Icon("charclass").getMainDiv().css({
+                        float: "right",
+                        cursor: "pointer",
+                        "margin-top": "-5px",
+                        "margin-right": "2px"
+                    }).attr("title", TWIRlang.calc.bonus_count_title).click(function(e) {
+                        TWIR.calc.guiElements.boxwrap_skills.slideToggle("fast");
+                        var t = TWIR.calc.guiElements.boxwrap_results.css("z-index");
+                        TWIR.calc.guiElements.boxwrap_skills.css({
+                            "z-index": Number(t) + 1
+                        })
+                    })), TWIR.calc.guiElements.skillShowcase = $("<div/>");
+                    var T = (new west.gui.Groupframe).appendToContentPane($('<div style="width: 505px;height: 280px;text-align: center;"></div>').append((new west.gui.Scrollpane).appendContent($(TWIR.calc.guiElements.skillShowcase)).getMainDiv()));
+                    TWIR.calc.guiElements.boxwrap_skills = $('<div style="display: none; position: absolute;right: 5px;top: 19px;z-index: 3;"></div>'), $(T.getMainDiv()).appendTo(TWIR.calc.guiElements.boxwrap_skills), TWIR.calc.guiElements.resultShowcase = $("<div/>");
+                    var x = (new west.gui.Groupframe).appendToContentPane($('<div style="width: 505px;height: 280px;text-align: center;"></div>').append((new west.gui.Scrollpane).appendContent($(TWIR.calc.guiElements.resultShowcase)).getMainDiv()));
+                    TWIR.calc.guiElements.boxwrap_results = $('<div style="display: none; position: absolute;right: 5px;top: 19px;z-index: 3;"></div>'), $(x.getMainDiv()).appendTo(TWIR.calc.guiElements.boxwrap_results);
+                    var v = new west.gui.Button(TWIRlang.calc.find_eq, function(e) {
+                            $.isEmptyObject(t.skills) && "ms" !== t.para || (e.disable(), setTimeout(function() {
+                                TWIR.calc.calcBest(t.skills, t.para, function() {
+                                    e.enable();
+                                    var t = TWIR.calc.result.length ? TWIR.calc.result[0] : {};
+                                    TWIR.calc.updateShowCase(t)
+                                })
+                            }, 1e3)), TWIR.calc.preset = t
+                        }),
+                        V = new west.gui.Iconbutton(new west.gui.Icon("search", TWIRlang.calc.show_inv), function(e) {
+                            var t = TWIR.calc.showcased;
+                            if (!$.isEmptyObject(t)) {
+                                wman.getById(Inventory.uid) || Wear.open();
+                                var a = Bag.getItemsByItemIds(TWIR.calc.getUsedItems(t));
+                                Inventory.showCustomItems(a), TWIR.calc.updateShowCase(t)
+                            }
+                        });
+                    y.append($(V.getMainDiv()).css({
+                        float: "right"
+                    }), $(v.getMainDiv()).css({
+                        float: "right"
+                    })), a.append(TWIR.calc.guiElements.boxwrap_skills, TWIR.calc.guiElements.boxwrap_results, W, y);
+                    var B = new west.gui.Dialog("", a).setDraggable(!0).setBlockGame(!1).setPosition("20%", Map.height / 4).setId("twir_bw").show();
+                    B.setTitle('<span style="margin-top: 4px; font-size: 16pt;">' + TWIRlang.calc.add_name + " (beta)</span>"), B.getMainDiv().find(".tw2gui_inner_window_title").append($('<div title="' + TWIRlang.informative.hide + '" class="tw2gui_window_buttons_close" style="position: absolute;right: 6px;top: 8px;"></div>').click(function() {
+                        B.hide()
+                    }))
+                }
+
+                function S(t, a, i, r, n) {
+                    var o = e[i][r][t];
+                    return o ? '<img style="margin: auto;display: block; ' + (n ? "margin-top: 5px;" : "") + '" src="' + o.img + '" width="' + a + '"/>' : ""
+                }
+
+                function M(t) {
+                    var a = e.group4.skills[t];
+                    return a ? '<div style="display: block;height: 39px;background: url(' + a.img + ');width: 39px;background-size: 60px auto;background-position: center;position: absolute;top: 4px;left: 7px;border-radius: 6px;"></div><div style="background: url(' + TWIR.images.skill_universal + ');background-size: cover;position: absolute;height: 48px;width: 48px;display: block;top: 2px;left: 1px;"></div>' : ""
+                }
+
+                function U(e, a, i) {
+                    var r = i || e.data.obj,
+                        n = r.id,
+                        o = 1;
+                    if ($(e.currentTarget).hasClass("butPlus") || a > 0) {
+                        if (r.current_value + 1 > r.max_value) return !1
+                    } else {
+                        if (r.current_value - 1 < r.min_value) return !1;
+                        o = -1
+                    }
+                    return r.current_value += o, 0 === r.current_value ? delete t.skills[n] : t.skills[n] = r.current_value, $(".twir_bestWear_choose #" + n + " span.displayValue").text(r.current_value), $(".twir_bestWear_choose #twir_" + n + "_displayValue").text(r.current_value), !0
+                }
+
+                function C() {
+                    t = {
+                        skills: {},
+                        para: void 0
+                    }, TWIR.calc.preset = t;
+                    var e = TWIR.calc.groups;
+                    for (var a in e) {
+                        if (e[a].skills)
+                            for (var i in e[a].skills)
+                                if (e[a].skills[i].selector) {
+                                    var r = e[a].skills[i].selector;
+                                    "Plusminusfield" === r.component ? (r.setValue(0), $(".twir_bestWear_choose #" + r.id + " span.displayValue").text(r.current_value), $(".twir_bestWear_choose #twir_" + r.id + "_displayValue").text(r.current_value), r.toggleMinus(), r.togglePlus()) : "Checkbox" === r.component && r.isSelected() && r.reset()
+                                } if (e[a].para)
+                            for (var n in e[a].para)
+                                if (e[a].para[n].selector) {
+                                    var o = e[a].para[n].selector;
+                                    "Checkbox" === o.component && o.isSelected() && o.reset()
+                                }
+                    }
+                }
+
+                function K(e, a) {
+                    t.para = a
+                }
+
+                function E(e, a) {
+                    "ms" === a ? (t.para = a, t.skills = {}) : (t.para = void 0, t.skills = {}, t.skills[a] = 1)
+                }
+            },
+            getUsedItems: function(e) {
+                var t = e.items.slice(0);
+                for (n = 0; n < e.sets.length; n++) t.push.apply(t, e.sets[n].getItems());
+                for (var a, i, r = [], n = 0; n < t.length; n++)(a = Bag.getItemByItemId(t[n])) ? !(i = Wear.get(a.getType())) || i && (i.getItemBaseId() !== a.getItemBaseId() || i.getItemLevel() < a.getItemLevel()) ? r.push(a.getId()) : r.push(i.getId()) : r.push(t[n]);
+                return r
+            },
+            showCase: function(e, t) {
+                function a(a) {
+                    var i, r, n, o = Bag.getItemsByItemIds(e) || [],
+                        s = [];
+                    if (e && e.length)
+                        for (var l in Wear.wear) e.includes(Wear.wear[l].getId()) && s.push(Wear.wear[l]);
+                    for (var p = 0; p < o.length; p++) {
+                        var c = o[p].obj;
+                        c.type === a && (!i || c.item_level > i.obj.item_level) && (i = o[p])
+                    }
+                    for (var A = 0; A < s.length; A++) {
+                        var c = s[A].obj;
+                        c.type === a && (!r || c.item_level > r.obj.item_level) && (r = s[A])
+                    }
+                    var g = i ? "javascript:void(TWIR.Inventory.wear(event, " + i.obj.item_id + ", this), TWIR.calc.onWearChange())" : "javascript:void(0)";
+                    if ((i || r) && (n = '<img onclick="' + g + '"' + (i ? 'data-item-id="' + i.obj.item_id + '" ' : "") + ' title="' + new ItemPopup(ItemManager.get(i ? i.getId() : r.getId()), {
+                            character: {
+                                level: Character.level
+                            }
+                        }).getXHTML().escapeHTML() + '" style="position: relative;' + ("right_arm" === a || "left_arm" === a ? t ? "max-height: 40px" : "max-height: 90px" : t ? "max-height: 40px" : "max-height: 56px") + ";width: auto;margin: auto;display: block;" + (i ? "opacity: 1" : "opacity: 0.6") + ';" src="' + (i ? "left_arm" === a || "right_arm" === a ? i.obj.wear_image : i.obj.image : "left_arm" === a || "right_arm" === a ? r.obj.wear_image : r.obj.image) + '"/>'), i || r) return {
+                        img: n,
+                        lvl: i ? i.obj.item_level : r.obj.item_level
+                    };
+                    var d = '<img style="position: relative;' + ("right_arm" === a || "left_arm" === a ? t ? "max-height: 40px" : "max-height: 90px" : t ? "max-height: 40px" : "max-height: 58px") + ';width: auto;margin: auto;display: block;" src="/images/inventory/default/' + a + '_blank.png" />';
+                    return {
+                        img: d,
+                        lvl: 0
+                    }
+                }
+                var i = "";
+                return i += '<div class="item" style="' + (t ? "width: 44px;height: 44px;position: relative;background: none;display: inline-block;margin-top: 5px;margin-right: 5px;" : "position:absolute;left: 62px;height: 60px;width: 60px;background: none;") + '"><img style="position: absolute;' + (t ? "height: 44px;width: 44px;left: 0;top: 0;" : "height: 60px;width: 60px;left: 0;top: 0;") + '" src="/images/inventory/foot_head_animal.png" >' + a("head").img + (0 !== a("head").lvl ? '<span class="item_level">' + a("head").lvl + "</span>" : "") + "</div>", i += '<div class="item" style="' + (t ? "width: 44px;height: 44px;position: relative;background: none;display: inline-block;margin-top: 5px;margin-right: 5px;" : "position:absolute;left: 124px;height: 60px;width: 60px;background: none;") + '"><img style="position: absolute;' + (t ? "height: 44px;width: 44px;left: 0;top: 0;" : "height: 60px;width: 60px;left: 0;top: 0;") + '" src="/images/inventory/foot_head_animal.png" >' + a("neck").img + (0 !== a("neck").lvl ? '<span class="item_level">' + a("neck").lvl + "</span>" : "") + "</div>", i += '<div class="item" style="' + (t ? "width: 44px;height: 44px;position: relative;background: none;display: inline-block;margin-top: 5px;margin-right: 5px;" : "position:absolute;left: 62px;top: 62px;height: 60px;width: 60px;background: none;") + '"><img style="position: absolute;' + (t ? "height: 44px;width: 44px;left: 0;top: 0;" : "height: 60px;width: 60px;left: 0;top: 0;") + '" src="/images/inventory/foot_head_animal.png" >' + a("body").img + (0 !== a("body").lvl ? '<span class="item_level">' + a("body").lvl + "</span>" : "") + "</div>", i += '<div class="item" style="' + (t ? "width: 44px;height: 44px;position: relative;background: none;display: inline-block;margin-top: 5px;margin-right: 5px;" : "position:absolute;left: 62px;bottom: 0px;height: 60px;width: 60px;background: none;") + '"><img style="position: absolute;' + (t ? "height: 44px;width: 44px;left: 0;top: 0;" : "height: 60px;width: 60px;left: 0;top: 0;") + '" src="/images/inventory/foot_head_animal.png" >' + a("pants").img + (0 !== a("pants").lvl ? '<span class="item_level">' + a("pants").lvl + "</span>" : "") + "</div>", i += '<div class="item" style="' + (t ? "width: 44px;height: 44px;position: relative;background: none;display: inline-block;margin-top: 5px;margin-right: 5px;" : "position:absolute;left: 124px;top: 62px;height: 60px;width: 60px;background: none;") + '"><img style="position: absolute;' + (t ? "height: 44px;width: 44px;left: 0;top: 0;" : "height: 60px;width: 60px;left: 0;top: 0;") + '" src="/images/inventory/foot_head_animal.png" >' + a("belt").img + (0 !== a("belt").lvl ? '<span class="item_level">' + a("belt").lvl + "</span>" : "") + "</div>", i += '<div class="item" style="' + (t ? "width: 44px;height: 44px;position: relative;background: none;display: inline-block;margin-top: 5px;margin-right: 5px;" : "position:absolute;left: 124px;bottom: 0px;height: 60px;width: 60px;background: none;") + '"><img style="position: absolute;' + (t ? "height: 44px;width: 44px;left: 0;top: 0;" : "height: 60px;width: 60px;left: 0;top: 0;") + '" src="/images/inventory/foot_head_animal.png" >' + a("foot").img + (0 !== a("foot").lvl ? '<span class="item_level">' + a("foot").lvl + "</span>" : "") + "</div>", i += '<div class="item" style="' + (t ? "width: 44px;height: 44px;position: relative;background: none;display: inline-block;margin-top: 5px;margin-right: 5px;" : "position:absolute;top: 20px;height: 100px;width: 60px;background: none;") + '"><img style="position: absolute;' + (t ? "height: 44px;width: 44px;left: 0;top: 0;" : "height: 100px;width: 60px;left: 0;top: 0;") + '" src="/images/inventory/foot_head_animal.png" >' + a("right_arm").img + (0 !== a("right_arm").lvl ? '<span class="item_level">' + a("right_arm").lvl + "</span>" : "") + "</div>", i += '<div class="item" style="' + (t ? "width: 44px;height: 44px;position: relative;background: none;display: inline-block;margin-top: 5px;margin-right: 5px;" : "position:absolute;right: 0px;top: 20px;height: 100px;width: 60px;background: none;") + '"><img style="position: absolute;' + (t ? "height: 44px;width: 44px;left: 0;top: 0;" : "height: 100px;width: 60px;left: 0;top: 0;") + '" src="/images/inventory/foot_head_animal.png" >' + a("left_arm").img + (0 !== a("left_arm").lvl ? '<span class="item_level">' + a("left_arm").lvl + "</span>" : "") + "</div>", i += '<div class="item" style="' + (t ? "width: 44px;height: 44px;position: relative;background: none;display: inline-block;margin-top: 5px;margin-right: 5px;" : "position:absolute;bottom: 0px;height: 60px;width: 60px;background: none;") + '"><img style="position: absolute;' + (t ? "height: 44px;width: 44px;left: 0;top: 0;" : "height: 60px;width: 60px;left: 0;top: 0;") + '" src="/images/inventory/foot_head_animal.png" >' + a("animal").img + (0 !== a("animal").lvl ? '<span class="item_level">' + a("animal").lvl + "</span>" : "") + "</div>", i += '<div class="item" style="' + (t ? "width: 44px;height: 44px;position: relative;background: none;display: inline-block;margin-top: 5px;margin-right: 5px;" : "position:absolute;right: 0px;bottom: 0px;height: 60px;width: 60px;background: none;") + '"><img style="position: absolute;' + (t ? "height: 44px;width: 44px;left: 0;top: 0;" : "height: 60px;width: 60px;left: 0;top: 0;") + '" src="/images/inventory/foot_head_animal.png" >' + a("yield").img + (0 !== a("yield").lvl ? '<span class="item_level">' + a("yield").lvl + "</span>" : "") + "</div>"
+            },
+            getValue: function(e, t, a, i) {
+                var r, n, o, s, l, p = i ? {} : 0,
+                    c = {},
+                    A = {},
+                    g = "twir_" + (a || "") + JSON.stringify(e);
+                if (t._memo[g]) return t._memo[g];
+                if ([185147e3, 185148e3, 185149e3, 18515e4, 185151e3, 185152e3, 41999e3, 50106e3, 48999e3].includes(t.getId())) return p;
+                var d = {};
+                for (r in e) e[r] && (attr = CharacterSkills.getAttributeKey4Skill(r), c[attr] = (c[attr] || 0) + 1);
+                for (attr in t.bonus.attributes)
+                    if (c[attr])
+                        for (n = CharacterSkills.getSkillKeys4Attribute(attr), o = 0; o < n.length; o++) e[n[o]] && (A[n[o]] = t.bonus.attributes[attr]);
+                if (t.hasItemBonus())
+                    for (s = new west.item.BonusExtractor(Character, t.getItemLevel()), o = 0; o < t.bonus.item.length; o++) {
+                        l = s.getAffectedSkills(t.bonus.item[o]);
+                        var m = TWIR.calc.getAdditionalBonus(t.bonus.item[o], t.getItemLevel());
+                        for (r in l) d[r] || (d[r] = 0), d[r] += l[r], r in e && (i ? p[r] = (p[r] || 0) + e[r] * l[r] : p += e[r] * l[r]);
+                        for (special in m) special in e && (special in l || (i ? p[special] = (p[special] || 0) + e[special] * m[special] : p += e[special] * m[special]));
+                        i || (p += TWIR.calc.getPointAddition(t.bonus.item[o]))
+                    }
+                if (t instanceof west.item.Weapon) {
+                    var u = t.getDamage(Character),
+                        h = (u.min + u.max) / 2;
+                    "right_arm" === t.type && (d.duel_dmg = h), "left_arm" === t.type && (d.fort_dmg = [u.min, u.max])
+                }
+                for (r in e)(t.bonus.skills[r] || A[r]) && (i ? p[r] = (p[r] || 0) + e[r] * ((t.bonus.skills[r] || 0) + (A[r] || 0)) : p += e[r] * ((t.bonus.skills[r] || 0) + (A[r] || 0))), i ? p[r] = (p[r] || 0) + e[r] * TWIR.calc.calcByFormula(r, d, a) : p += e[r] * TWIR.calc.calcByFormula(r, d, a), t.speed && "ride" === r && "ms" === a && (i ? p[r] = (p[r] || 0) + Math.round(Character.defaultSpeed / (Character.defaultSpeed * t.speed) * 100 - 100) : p += Math.round(Character.defaultSpeed / (Character.defaultSpeed * t.speed) * 100 - 100));
+                return t.usebonus && t.action && (p = i ? {} : 0), t._memo[g] = p, p
+            },
+            calcByFormula: function(e, t, a) {
+                var i = 0,
+                    r = {
+                        skills: t,
+                        dmg: t.fort_dmg || [0, 0]
+                    },
+                    n = TWIR.calc.calcBonuses(r);
+                switch (e) {
+                    case "fort_resistance":
+                        var o = "attack" === a ? "defense" === a ? n.attack.resistance : n.defense.resistance : (n.attack.resistance + n.defense.resistance) / 2;
+                        i += isNaN(o) ? 0 : o;
+                        break;
+                    case "fort_damage_sector":
+                        var o = (n.damage[0] + n.damage[1]) / 2;
+                        i += isNaN(o) ? 0 : o;
+                        break;
+                    case "fort_offense":
+                        var o = "attack" === a ? "defense" === a ? n.attack.hit : n.defense.hit : (n.attack.hit + n.defense.hit) / 2;
+                        i += isNaN(o) ? 0 : o;
+                        break;
+                    case "fort_defense":
+                        var o = "attack" === a ? "defense" === a ? n.attack.dodge : n.defense.dodge : (n.attack.dodge + n.defense.dodge) / 2;
+                        i += isNaN(o) ? 0 : o
+                }
+                return i
+            },
+            calcSpeed: function(e) {
+                var t = (100 + e[0] + CharacterSkills.getSkill("ride").points) * (1 + e[1] / 100);
+                return e[0] || e[1] || (t = 0), t
+            },
+            getValue4Set: function(e, t, a, i) {
+                var r = 0,
+                    n = 0,
+                    o = 0;
+                if ("ms" === a) {
+                    var s = TWIR.calc.getSetValue({
+                        speed: 1,
+                        ride: 1
+                    }, t, a, !0);
+                    n += s.speed || 0, o += s.ride || 0
+                } else r += TWIR.calc.getSetValue(e, t, a);
+                var l = t.items;
+                i && (l = TWIR.makeEmUp(l, !0));
+                for (var p = 0; p < l.length; p++)
+                    if ("ms" === a) {
+                        var c = TWIR.calc.getValue({
+                            speed: 1,
+                            ride: 1
+                        }, ItemManager.get(l[p]), a, !0);
+                        n += c.speed || 0, o += c.ride || 0
+                    } else r += TWIR.calc.getValue(e, ItemManager.get(l[p]), a);
+                return "ms" === a && (r = TWIR.calc.calcSpeed([o, n])), r
+            },
+            getSetValue: function(e, t, a, i) {
+                var r, n, o, s, l = i ? {} : 0,
+                    p = t.getMergedStages(),
+                    c = {},
+                    A = "twir_" + (a || "") + JSON.stringify(e);
+                if (t._memo[A]) return t._memo[A];
+                for (o = new west.item.BonusExtractor(Character), n = 0; n < p.length; n++) {
+                    s = o.getAffectedSkills(p[n]);
+                    var g = TWIR.calc.getAdditionalBonus(p[n], null);
+                    for (r in s) c[r] || (c[r] = 0), c[r] += s[r], r in e && (i ? l[r] = (l[r] || 0) + e[r] * s[r] : l += e[r] * s[r]);
+                    for (special in g) special in e && (special in s || (i ? l[special] = (l[special] || 0) + e[special] * g[special] : l += e[special] * g[special]));
+                    i || (l += TWIR.calc.getPointAddition(p[n]))
+                }
+                for (r in e) i ? l[r] = (l[r] || 0) + e[r] * TWIR.calc.calcByFormula(r, c, a) : l += e[r] * TWIR.calc.calcByFormula(r, c, a);
+                return t._memo[A] = l, l
+            },
+            getValue4Container: function(e, t, a) {
+                var i, r = 0,
+                    n = 0,
+                    o = 0,
+                    s = t.getItems();
+                for (i = 0; i < s.length; i++)
+                    if ("ms" === a) {
+                        var l = TWIR.calc.getValue({
+                            speed: 1,
+                            ride: 1
+                        }, ItemManager.get(s[i]), a, !0);
+                        n += l.speed || 0, o += l.ride || 0
+                    } else r += TWIR.calc.getValue(e, ItemManager.get(s[i]), a);
+                if ("ms" === a) {
+                    var p = TWIR.calc.getSetValue4Container(e, t, a);
+                    n += p[1], o += p[0]
+                } else r += TWIR.calc.getSetValue4Container(e, t, a);
+                return "ms" === a ? [o, n] : r
+            },
+            getSetValue4Container: function(e, t, a) {
+                var i, r = 0,
+                    n = 0,
+                    o = 0;
+                for (i = 0; i < t.sets.length; i++)
+                    if ("ms" === a) {
+                        var s = TWIR.calc.getSetValue({
+                            speed: 1,
+                            ride: 1
+                        }, t.sets[i], a, !0);
+                        n += s.speed || 0, o += s.ride || 0
+                    } else r += TWIR.calc.getSetValue(e, t.sets[i], a);
+                return "ms" === a ? [o, n] : r
+            },
+            exportFullBonus: function(e, t) {
+                if (!$.isEmptyObject(e)) {
+                    if (e._twir_mergedBonus) return e._twir_mergedBonus;
+                    var a = {
+                            attribute: {},
+                            skill: {},
+                            job: {},
+                            job_bonus: {},
+                            other_bonus: {},
+                            fortbattle: {},
+                            damage: []
+                        },
+                        i = new west.item.BonusExtractor(Character);
+                    if (t) {
+                        for (var r = 0; r < e.sets.length; r++) {
+                            for (var n = e.sets[r].getMergedStages(), o = 0; o < n.length; o++) {
+                                var s = n[o];
+                                A(s, s.value)
+                            }
+                            for (var l = 0; l < e.sets[r].items.length; l++) g(ItemManager.get(e.sets[r].items[l]), a)
+                        }
+                        for (var p = 0; p < e.items.length; p++) g(ItemManager.get(e.items[p]), a)
+                    } else {
+                        for (var n = e.getMergedStages(), o = 0; o < n.length; o++) {
+                            var s = n[o];
+                            A(s, s.value)
+                        }
+                        for (var l = 0; l < e.items.length; l++) g(ItemManager.get(1e3 * e.items[l]), a)
+                    }
+                    return e._twir_mergedBonus = a, a
+                }
+
+                function c(e) {
+                    var t = 0;
+                    return Object && Object.keys ? t = Object.keys(e).length : jQuery.each(e, function() {
+                        t++
+                    }), t
+                }
+
+                function A(e, t) {
+                    switch (e.type) {
+                        case "skill":
+                        case "attribute":
+                            a[e.type][e.name] = (a[e.type][e.name] || 0) + t;
+                            break;
+                        case "fortbattle":
+                            a[e.type]["fort_" + e.name + (e.isSector ? "_sector" : "")] = (a[e.type]["fort_" + e.name + (e.isSector ? "_sector" : "")] || 0) + t;
+                            break;
+                        case "job":
+                            a.job[e.job] = (a.job[e.job] || 0) + t;
+                            break;
+                        case "pray":
+                            a.other_bonus[e.type] = (a.other_bonus[e.type] || 0) + t;
+                            break;
+                        case "luck":
+                        case "experience":
+                        case "dollar":
+                        case "drop":
+                            a.job_bonus[e.type] = (a.job_bonus[e.type] || 0) + Math.round(100 * t);
+                            break;
+                        case "speed":
+                        case "regen":
+                            a.other_bonus[e.type] = (a.other_bonus[e.type] || 0) + Math.round(100 * t);
+                            break;
+                        case "character":
+                            A(e.bonus, i.getCharacterItemValue(e));
+                            break;
+                        default:
+                            window.DEBUG && console.log("ItemSet: unknown bonus to merge: ", e.type)
+                    }
+                }
+
+                function g(e, t) {
+                    var a = Character.level;
+                    if (i = new west.item.BonusExtractor({
+                            level: a
+                        }, e.getItemLevel()), e.speed && (t.other_bonus.ms = (t.other_bonus.ms || 0) + Math.round(1 / e.speed * 100 - 100)), e instanceof west.item.Weapon && "left_arm" === e.type) {
+                        var r = e.getDamage(Character);
+                        t.damage[0] = r.min, t.damage[1] = r.max
+                    }
+                    if ("object" == typeof e.bonus.attributes && c(e.bonus.attributes) > 0)
+                        for (var n in e.bonus.attributes) e.bonus.attributes[n] && (t.attribute[n] = (t.attribute[n] || 0) + e.bonus.attributes[n]);
+                    if ("object" == typeof e.bonus.skills && c(e.bonus.skills) > 0)
+                        for (var n in e.bonus.skills) e.bonus.skills[n] && (t.skill[n] = (t.skill[n] || 0) + e.bonus.skills[n]);
+                    if (e.bonus.item.length)
+                        for (n = 0; n < e.bonus.item.length; n++) {
+                            var t = i.getExportValue(e.bonus.item[n]);
+                            e instanceof west.item.Weapon && "damage" === t.key || A(e.bonus.item[n], e.bonus.item[n].value)
+                        }
+                }
+            },
+            getAdditionalBonus: function(e, t) {
+                var a = new west.item.BonusExtractor(Character, t);
+                switch ("character" === e.type ? (value = a.getCharacterItemValue(e), (e = e.bonus).type in a.keyDescMapping && (value = Math.round(100 * value))) : e.type in a.keyDescMapping ? (value = a.getValue(e), value = Math.round(100 * value)) : value = a.getValue(e), e.type) {
+                    case "fortbattle":
+                        key = "fort_" + e.name + (e.isSector ? "_sector" : "");
+                        break;
+                    case "job":
+                        key = e.type + (e.job && "all" === e.job ? "" : "_" + e.job);
+                        break;
+                    default:
+                        key = e.type
+                }
+                return {
+                    [key]: value
+                }
+            },
+            getPointAddition: function(e, t, a) {
+                return "character" == e.type && "level" == e.key ? TWIR.calc.getPointAddition(e.bonus, function(t) {
+                    return TWIR.calc.getRoundedValue(t * Character.level, e.roundingMethod)
+                }.bind(this), e.roundingMethod) : 0
+            },
+            getRoundedValue: function(e, t) {
+                switch (t) {
+                    case "round":
+                        return Math.round(e);
+                    case "ceil":
+                        return Math.ceil(e);
+                    case "floatceil":
+                        return Math.ceil(100 * e) / 100;
+                    case "floor":
+                        return Math.floor(e);
+                    default:
+                        return e
+                }
+            },
+            calcBest: function(e, t, a) {
+                var i = TWIR.calc.getBestSet(e, t);
+                return TWIR.calc.result = i, a(), i
+            },
+            getBestSet: function(e, t) {
+                var a, i, r, n, o, s, l = 0;
+                for (s = west.item.Calculator.filterUnavailableSets(west.storage.ItemSetManager.getAll()), a = TWIR.calc.getBestItems(e, t), i = new west.item.ItemSetContainer, n = 0; n < a.length; n++) i.addItem(a[n].getId());
+                for (r = TWIR.calc.createSubsets(s, a, e, t), r = TWIR.calc.filterUneffectiveSets(r, e, t), (r = west.item.Calculator.fillEmptySlots(west.item.Calculator.combineSets(r), a)).push(i), n = 0; n < r.length; n++) {
+                    if ("ms" === t) {
+                        var p = TWIR.calc.getValue4Container(e, r[n], t);
+                        o = TWIR.calc.calcSpeed([p[0], p[1]])
+                    } else o = TWIR.calc.getValue4Container(e, r[n], t);
+                    r[n].tmp = o, o > l && (l = o, r[n])
+                }
+                var c = r.sort(function(e, t) {
+                    return t.tmp - e.tmp
+                });
+                return c
+            },
+            filterUneffectiveSets: function(e, t, a) {
+                var i, r, n, o, s = [],
+                    l = {},
+                    p = 0,
+                    c = 0;
+                for (i = 0; i < e.length; i++) {
+                    if ("ms" === a) {
+                        var A = TWIR.calc.getSetValue({
+                            speed: 1,
+                            ride: 1
+                        }, e[i], a, !0);
+                        p = A.speed || 0, c = A.ride || 0, n = TWIR.calc.calcSpeed([c, p])
+                    } else n = TWIR.calc.getSetValue(t, e[i], a);
+                    n < 1 || (r = JSON.stringify(e[i].getUsedSlots().sort()), l[r] ? (o = TWIR.calc.getValue4Set(t, e[i], a), TWIR.calc.getValue4Set(t, l[r], a) < o && (l[r] = e[i])) : l[r] = e[i])
+                }
+                for (i in l) s.push(l[i]);
+                return s
+            },
+            filterWeapons: function(e) {
+                for (var t, a = [], i = 0; i < e.length; i++) {
+                    var r = ItemManager.get(e[i]);
+                    "right_arm" === r.type && a.push(e[i]), "right_arm" === r.type && r.sub_type !== TWIR.calc.weapon && (t = e[i])
+                }
+                return !a.length || a.length < 2 ? e : e.filter(function(e) {
+                    return e !== t
+                })
+            },
+            createSubsets: function(e, t, a, i) {
+                var r, n, o, s, l, p, c, A = [];
+                for (r = 0; r < e.length; r++)
+                    for (n = e[r], o = n.items.length; o > 0; o--)
+                        if (n.bonus.hasOwnProperty(o)) {
+                            var g = TWIR.calc.filterWeapons(n.items);
+                            for (s = TWIR.calc.createCombinations(g, o), l = 0, p = s.length; l < p; l++) TWIR.calc.itemsCombineable(s[l]) && (c = new west.item.ItemSet({
+                                key: n.key,
+                                items: s[l],
+                                bonus: n.bonus
+                            }), TWIR.calc.beatsBestItems(c, t, a, i) && A.push(c))
+                        } return A
+            },
+            beatsBestItems: function(e, t, a, i) {
+                var r, n = e.getUsedSlots(),
+                    o = 0,
+                    s = 0,
+                    l = 0;
+                for (r = 0; r < t.length; r++)
+                    if (-1 !== n.indexOf(t[r].getType()))
+                        if ("ms" === i) {
+                            var p = TWIR.calc.getValue({
+                                speed: 1,
+                                ride: 1
+                            }, t[r], i, !0);
+                            s += p.speed || 0, l += p.ride || 0
+                        } else o += TWIR.calc.getValue(a, t[r], i);
+                return "ms" === i && (o = TWIR.calc.calcSpeed([l, s])), TWIR.calc.getValue4Set(a, e, i) > o
+            },
+            itemsCombineable: function(e) {
+                var t, a, i = {};
+                for (t = 0; t < e.length; t++) {
+                    if (a = ItemManager.get(e[t]).type, !0 === i[a]) return !1;
+                    i[a] = !0
+                }
+                return !0
+            },
+            createCombinations: function(e, t) {
+                var a, i, r, n, o;
+                if (t > e.length || t <= 0) return [];
+                if (t == e.length) return [e];
+                if (1 == t) {
+                    for (r = [], a = 0; a < e.length; a++) r.push([e[a]]);
+                    return r
+                }
+                for (r = [], a = 0; a < e.length - t + 1; a++)
+                    for (n = e.slice(a, a + 1), o = TWIR.calc.createCombinations(e.slice(a + 1), t - 1), i = 0; i < o.length; i++) r.push(n.concat(o[i]));
+                return r
+            },
+            getBestItems: function(e, t) {
+                var a = {},
+                    i = [],
+                    r = 0,
+                    n = Bag.getItemsIdsByBaseItemIds();
+                return west.common.forEach(n, function(i, n) {
+                    var o = ItemManager.get(i[0]),
+                        s = o.getType(),
+                        l = 0,
+                        p = 0;
+                    if ("ms" === t) {
+                        var c = TWIR.calc.getValue({
+                            speed: 1,
+                            ride: 1
+                        }, o, t, !0);
+                        l = c.speed || 0, p = c.ride || 0, r = p
+                    } else r = TWIR.calc.getValue(e, o, t);
+                    a[s] = a[s] || [], r && o.wearable() && a[s].push({
+                        item: o,
+                        id: o.getId(),
+                        base_id: n,
+                        value: r,
+                        speed: l
+                    })
+                }), west.common.forEach(a, function(r, n) {
+                    var o = Wear.get(n),
+                        s = 0;
+                    if (o) {
+                        if (o = ItemManager.get(o.getId()), wear_rideBoni = 0, wear_speedBoni = 0, "ms" === t) {
+                            var l = TWIR.calc.getValue({
+                                speed: 1,
+                                ride: 1
+                            }, o, t, !0);
+                            wear_speedBoni = l.speed || 0, wear_rideBoni = l.ride || 0, s = wear_rideBoni
+                        } else s = TWIR.calc.getValue(e, o, t);
+                        r.push({
+                            item: o,
+                            id: o.getId(),
+                            base_id: o.getItemBaseId(),
+                            value: s,
+                            speed: wear_speedBoni
+                        })
+                    }
+                    if (a[n] = r.sort(function(e, a) {
+                            return "ms" === t ? e.value || e.speed ? a.value || a.speed ? a.speed - e.speed || a.value - e.value : -1 : 1 : a.value - e.value
+                        }), a[n].length) {
+                        var p = a[n][0];
+                        if ("right_arm" === n) {
+                            var c = a[n].filter(function(e) {
+                                return e.value === p.value && e.item.sub_type === TWIR.calc.weapon
+                            });
+                            i.push(c.length ? c[0].item : p.item)
+                        } else i.push(p.item)
+                    }
+                }), i
             }
         }, TWIR.Updater = function() {
             try {
@@ -5080,7 +5989,7 @@
                     setTimeout(function() {
                         var e = new RegExp("^.*" + TWIRlang.update_message + "(.*)$", "i"),
                             t = 0 != Character.homeTown.town_id ? Chat.Resource.Manager.getRoom("room_town_" + Character.homeTown.town_id) : Chat.Resource.Manager.getGeneralRoom();
-                        if (scriptUpdate.TWIR > TWIR.version && -1 === t.history.findIndex(function(t) {
+                        if (TWIR.version !== scriptUpdate.TWIR && -1 === t.history.findIndex(function(t) {
                                 return e.test(t)
                             })) {
                             var t = 0 != Character.homeTown.town_id ? Chat.Resource.Manager.getRoom("room_town_" + Character.homeTown.town_id) : Chat.Resource.Manager.getGeneralRoom(),
