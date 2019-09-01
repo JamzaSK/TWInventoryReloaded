@@ -377,6 +377,7 @@
         "bonus_count_title": "Bonuses from items and sets",
         "result_menu_title": "Other combinations",
         "equipment_number": "Equipment $1",
-        "show_inv": "Show in the inventory"
+        "show_inv": "Search in the inventory",
+        "switch_w": "Switch weapon"
     }
 }
