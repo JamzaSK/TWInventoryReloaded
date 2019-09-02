@@ -372,7 +372,7 @@
         "fort_damage_sector": "Damage",
         "fort_resistance": "Resistance",
         "speed": "Speed",
-        "total": "Total",
+        "total": "Total bonus",
         "bonuses": "Bonuses",
         "plus_buffs": "+ buffs",
         "add_name": "Dressing helper",
