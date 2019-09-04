@@ -258,7 +258,8 @@
         "ml_show": "Ďalšie tlačidlá v ľavom používateľskom rozhraní",
         "chat_smart": "Inteligentnejší chat (rozpoznávanie adresy URL)",
         "mw_status": "Zobraziť správu o priebehu skenu trhu",
-        "inv_menu_size": "Maximálny počet riadkov vo výberovom menu"
+        "inv_menu_size": "Maximálny počet riadkov vo výberovom menu",
+        "pop_char_level": "Always show bonus value (per level) on your character level"
     },
     "keyWords": {
         "xmas": [
