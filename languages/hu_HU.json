@@ -258,7 +258,8 @@
         "ml_show": "További gombok a bal oldali felhasználói felületen",
         "chat_smart": "Okosabb chat (URL felismerés)",
         "mw_status": "Piac vizsgálat üzenet mutatása",
-        "inv_menu_size": "Maximal number of rows in a select menu"
+        "inv_menu_size": "Maximal number of rows in a select menu",
+        "pop_char_level": "Always show bonus value (per level) on your character level"
     },
     "keyWords": {
         "xmas": [
