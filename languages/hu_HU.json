@@ -257,7 +257,8 @@
         "fb_count": "Mutassa az aktív erődharcok számát",
         "ml_show": "További gombok a bal oldali felhasználói felületen",
         "chat_smart": "Okosabb chat (URL felismerés)",
-        "mw_status": "Piac vizsgálat üzenet mutatása"
+        "mw_status": "Piac vizsgálat üzenet mutatása",
+        "inv_menu_size": "Maximal number of rows in a select menu"
     },
     "keyWords": {
         "xmas": [
