@@ -258,7 +258,8 @@
         "ml_show": "Dodatkowe przyciski po lewo interfejsu",
         "chat_smart": "Mądrzejszy czat (rozpoznawanie linków)",
         "mw_status": "Pokaż komunikat o postępie skanowania marketu",
-        "inv_menu_size": "Maximal number of rows in a select menu"
+        "inv_menu_size": "Maximal number of rows in a select menu",
+        "pop_char_level": "Always show bonus value (per level) on your character level"
     },
     "keyWords": {
         "xmas": [
