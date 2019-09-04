@@ -257,7 +257,8 @@
         "fb_count": "Mostrar número batallas fuertes actvas",
         "ml_show": "Botones adicionales en izquierda de IU",
         "chat_smart": "Chat más inteligente (reconocimiento de URL)",
-        "mw_status": "Mostrar mensaje de progreso escaneo de mercado"
+        "mw_status": "Mostrar mensaje de progreso escaneo de mercado",
+        "inv_menu_size": "Maximal number of rows in a select menu"
     },
     "keyWords": {
         "xmas": [
