@@ -258,7 +258,8 @@
         "ml_show": "Linkes Menü erweitern",
         "chat_smart": "Links im Chat umwandeln",
         "mw_status": "Markt-Scanstatus zeigen",
-        "inv_menu_size": "Maximal number of rows in a select menu"
+        "inv_menu_size": "Maximal number of rows in a select menu",
+        "pop_char_level": "Always show bonus value (per level) on your character level"
     },
     "keyWords": {
         "xmas": [
