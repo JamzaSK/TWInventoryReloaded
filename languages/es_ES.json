@@ -258,7 +258,8 @@
         "ml_show": "Botones adicionales en izquierda de IU",
         "chat_smart": "Chat más inteligente (reconocimiento de URL)",
         "mw_status": "Mostrar mensaje de progreso escaneo de mercado",
-        "inv_menu_size": "Maximal number of rows in a select menu"
+        "inv_menu_size": "Maximal number of rows in a select menu",
+        "pop_char_level": "Always show bonus value (per level) on your character level"
     },
     "keyWords": {
         "xmas": [
