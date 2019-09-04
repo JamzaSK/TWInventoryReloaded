@@ -257,7 +257,8 @@
         "fb_count": "Mostra il numero delle battaglie ai forti disponibili",
         "ml_show": "Pulsanti aggiuntivi nell'interfaccia a sinistra",
         "chat_smart": "Chat più funzionale (riconoscimento link)",
-        "mw_status": "Mostra il messaggio di progresso scansione del mercato"
+        "mw_status": "Mostra il messaggio di progresso scansione del mercato",
+        "inv_menu_size": "Maximal number of rows in a select menu"
     },
     "keyWords": {
         "xmas": [
