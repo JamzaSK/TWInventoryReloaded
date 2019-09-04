@@ -257,7 +257,8 @@
         "fb_count": "Zobrazit počet aktivních bitev",
         "ml_show": "Další tlačítka v levém uživatelském rozhraní",
         "chat_smart": "Chytřejší chat (rozpoznávání URL)",
-        "mw_status": "Zobrazit zprávu o průběhu skenu trhu"
+        "mw_status": "Zobrazit zprávu o průběhu skenu trhu",
+        "inv_menu_size": "Maximální počet řádků ve výběrovem menu"
     },
     "keyWords": {
         "xmas": [
@@ -356,7 +357,7 @@
         "pray": "Modlení",
         "dollar": "Příjem",
         "luck": "Štěstí",
-        "drop": "Drop produktu",
+        "drop": "Nález produktu",
         "attack": "Útočník",
         "defense": "Obránce",
         "health": "HP",
