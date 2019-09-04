@@ -257,7 +257,8 @@
         "fb_count": "Zeige Anzahl aktiver Fortkämpfe",
         "ml_show": "Linkes Menü erweitern",
         "chat_smart": "Links im Chat umwandeln",
-        "mw_status": "Markt-Scanstatus zeigen"
+        "mw_status": "Markt-Scanstatus zeigen",
+        "inv_menu_size": "Maximal number of rows in a select menu"
     },
     "keyWords": {
         "xmas": [
