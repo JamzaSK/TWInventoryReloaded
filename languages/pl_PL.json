@@ -257,7 +257,8 @@
         "fb_count": "Pokaż liczbę aktywnych bitew o fort\n",
         "ml_show": "Dodatkowe przyciski po lewo interfejsu",
         "chat_smart": "Mądrzejszy czat (rozpoznawanie linków)",
-        "mw_status": "Pokaż komunikat o postępie skanowania marketu"
+        "mw_status": "Pokaż komunikat o postępie skanowania marketu",
+        "inv_menu_size": "Maximal number of rows in a select menu"
     },
     "keyWords": {
         "xmas": [
