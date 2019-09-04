@@ -257,7 +257,8 @@
         "fb_count": "Show number of active fort battles",
         "ml_show": "Additional buttons in left UI",
         "chat_smart": "Smarter chat (URL recognition)",
-        "mw_status": "Show market scan progress message"
+        "mw_status": "Show market scan progress message",
+        "inv_menu_size": "Maximal number of rows in a select menu"
     },
     "keyWords": {
         "xmas": [
