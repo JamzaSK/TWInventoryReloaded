@@ -63,8 +63,8 @@
         "subcat": "Podkategoria",
         "property": "Właściwości przedmiotu",
         "item_type": "Typ",
-        "combined": "Ulepszone",
-        "regen": "Regeneracja"
+        "regen": "Regeneracja",
+        "custom": "Custom"
     },
     "tooltips": {
         "jobdrop": "Znalezione w pracy",
@@ -387,6 +387,10 @@
         "result_menu_title": "Inne kombinacje",
         "equipment_number": "Ekwipunek",
         "show_inv": "Szukaj w ekwipunku",
-        "switch_w": "Zmień broń"
+        "switch_w": "Zmień broń",
+        "save": "Save to custom sets",
+        "new_set": "New set",
+        "name": "Name",
+        "unnamed": "Unnamed"
     }
 }
