@@ -63,8 +63,8 @@
         "subcat": "Podkategórie",
         "property": "Vlastnosti",
         "item_type": "Typ",
-        "combined": "Kombinované",
-        "regen": "Regenerácia"
+        "regen": "Regenerácia",
+        "custom": "Custom"
     },
     "tooltips": {
         "jobdrop": "Dá sa nájsť pri práci",
@@ -382,6 +382,10 @@
         "result_menu_title": "Ostatné kombinácie",
         "equipment_number": "vybavenie $1",
         "show_inv": "Vyhľadať v inventári",
-        "switch_w": "Zmeniť zbraň"
+        "switch_w": "Zmeniť zbraň",
+        "save": "Save to custom sets",
+        "new_set": "New set",
+        "name": "Name",
+        "unnamed": "Unnamed"
     }
 }
