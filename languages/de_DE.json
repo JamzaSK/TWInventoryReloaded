@@ -63,8 +63,8 @@
         "subcat": "Unterkategorie",
         "property": "Eigenschaft",
         "item_type": "Slot",
-        "combined": "Kombiniert",
-        "regen": "Regeneration"
+        "regen": "Regeneration",
+        "custom": "Custom"
     },
     "tooltips": {
         "jobdrop": "Findbar",
@@ -380,6 +380,10 @@
         "result_menu_title": "Andere Kombination",
         "equipment_number": "Ausrüstung $1",
         "show_inv": "Im Inventar zeigen",
-        "switch_w": "Waffe wechseln"
+        "switch_w": "Waffe wechseln",
+        "save": "Save to custom sets",
+        "new_set": "New set",
+        "name": "Name",
+        "unnamed": "Unnamed"
     }
 }
