@@ -63,8 +63,8 @@
         "subcat": "Sottocategoria",
         "property": "Proprietà oggetto",
         "item_type": "Tipologia",
-        "combined": "Combinato",
-        "regen": "Rigenerazione"
+        "regen": "Rigenerazione",
+        "custom": "Custom"
     },
     "tooltips": {
         "jobdrop": "Trovabile lavorando",
@@ -258,8 +258,8 @@
         "ml_show": "Pulsanti aggiuntivi nell'interfaccia a sinistra",
         "chat_smart": "Chat più funzionale (riconoscimento link)",
         "mw_status": "Mostra il messaggio di progresso scansione del mercato",
-        "inv_menu_size": "Maximal number of rows in a select menu",
-        "pop_char_level": "Always show bonus value (per level) on your character level"
+        "inv_menu_size": "Numero massimo di righe nel menù selezione",
+        "pop_char_level": "Mostra sempre il valore dei bonus (per livello) sul tuo livello personaggio"
     },
     "keyWords": {
         "xmas": [
@@ -386,6 +386,10 @@
         "result_menu_title": "Altre combinazioni",
         "equipment_number": "Equipaggiamento $1",
         "show_inv": "Mostra in inventario",
-        "switch_w": "Arma contusione\\sparo"
+        "switch_w": "Arma contusione\\sparo",
+        "save": "Save to custom sets",
+        "new_set": "New set",
+        "name": "Name",
+        "unnamed": "Unnamed"
     }
 }
