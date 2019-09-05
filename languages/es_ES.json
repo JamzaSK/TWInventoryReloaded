@@ -63,8 +63,8 @@
         "subcat": "Subcategoría",
         "property": "Artículo poseído",
         "item_type": "Tipo",
-        "combined": "combinado",
-        "regen": "Regeneración"
+        "regen": "Regeneración",
+        "custom": "Custom"
     },
     "tooltips": {
         "jobdrop": "Obtenibles desde trabajo",
@@ -133,7 +133,7 @@
         "msg_ali_lead": "Líderes de alianza",
         "msg_world": "Todo el mundo",
         "allitems": "Todos artículos",
-        "setitems": "Fijar artículos",
+        "setitems": "Artículos de conjuntos",
         "yield": "Productos",
         "recipe": "Recetas"
     },
@@ -258,8 +258,8 @@
         "ml_show": "Botones adicionales en izquierda de IU",
         "chat_smart": "Chat más inteligente (reconocimiento de URL)",
         "mw_status": "Mostrar mensaje de progreso escaneo de mercado",
-        "inv_menu_size": "Maximal number of rows in a select menu",
-        "pop_char_level": "Always show bonus value (per level) on your character level"
+        "inv_menu_size": "Número máximo de filas en un menú de selección.",
+        "pop_char_level": "Mostrar siempre el valor de bonificación (por nivel) en tu nivel de personaje"
     },
     "keyWords": {
         "xmas": [
@@ -381,6 +381,10 @@
         "result_menu_title": "Otras combinaciones",
         "equipment_number": "Equipo $1",
         "show_inv": "Buscar en inventario",
-        "switch_w": "Cambiar arma"
+        "switch_w": "Cambiar arma",
+        "save": "Save to custom sets",
+        "new_set": "New set",
+        "name": "Name",
+        "unnamed": "Unnamed"
     }
 }
