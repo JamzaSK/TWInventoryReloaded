@@ -63,8 +63,8 @@
         "subcat": "Alkategória",
         "property": "Tárgy tulajdonsága",
         "item_type": "Típus",
-        "combined": "Kombinált",
-        "regen": "Regeneráció"
+        "regen": "Regeneráció",
+        "custom": "Custom"
     },
     "tooltips": {
         "jobdrop": "Munkából található",
@@ -380,6 +380,10 @@
         "result_menu_title": "Más kombinációk",
         "equipment_number": "Felszerelés $1",
         "show_inv": "Keresés a felszerelésben",
-        "switch_w": "Fegyverváltás"
+        "switch_w": "Fegyverváltás",
+        "save": "Save to custom sets",
+        "new_set": "New set",
+        "name": "Name",
+        "unnamed": "Unnamed"
     }
 }
