@@ -63,8 +63,8 @@
         "subcat": "Υποκατηγορία",
         "property": "Ιδιότητα Αντικειμένου",
         "item_type": "Τύπος",
-        "combined": "combined",
-        "regen": "Regeneration"
+        "regen": "Regeneration",
+        "custom": "Custom"
     },
     "tooltips": {
         "jobdrop": "Από την εργασία",
@@ -382,6 +382,10 @@
         "result_menu_title": "Other combinations",
         "equipment_number": "Equipment $1",
         "show_inv": "Search in the inventory",
-        "switch_w": "Switch weapon"
+        "switch_w": "Switch weapon",
+        "save": "Save to custom sets",
+        "new_set": "New set",
+        "name": "Name",
+        "unnamed": "Unnamed"
     }
 }
