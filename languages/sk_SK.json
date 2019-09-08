@@ -64,7 +64,7 @@
         "property": "Vlastnosti",
         "item_type": "Typ",
         "regen": "Regenerácia",
-        "custom": "Custom"
+        "custom": "Vlastné"
     },
     "tooltips": {
         "jobdrop": "Dá sa nájsť pri práci",
@@ -259,7 +259,7 @@
         "chat_smart": "Inteligentnejší chat (rozpoznávanie adresy URL)",
         "mw_status": "Zobraziť správu o priebehu skenu trhu",
         "inv_menu_size": "Maximálny počet riadkov vo výberovom menu",
-        "pop_char_level": "Always show bonus value (per level) on your character level"
+        "pop_char_level": "Zobraziť hodnotu bonusu (na úroveň) na úrovni charakteru"
     },
     "keyWords": {
         "xmas": [
@@ -383,10 +383,12 @@
         "equipment_number": "vybavenie $1",
         "show_inv": "Vyhľadať v inventári",
         "switch_w": "Zmeniť zbraň",
-        "save": "Save to custom sets",
-        "new_set": "New set",
-        "name": "Name",
-        "unnamed": "Unnamed",
-        "current_eq": "Current equipment"
+        "save": "Uložiť do vlastných sád",
+        "new_set": "Nový set",
+        "name": "Názov",
+        "unnamed": "Nepomenovaný set",
+        "current_eq": "Aktuálne vybavenie",
+        "bonus_items_title": "Bonusy z itemov",
+        "bonus_set_title": "Bonusy z itemov a setu"
     }
 }
