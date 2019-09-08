@@ -64,7 +64,7 @@
         "property": "Właściwości przedmiotu",
         "item_type": "Typ",
         "regen": "Regeneracja",
-        "custom": "Custom"
+        "custom": "Niestandardowe"
     },
     "tooltips": {
         "jobdrop": "Znalezione w pracy",
@@ -258,8 +258,8 @@
         "ml_show": "Dodatkowe przyciski po lewo interfejsu",
         "chat_smart": "Mądrzejszy czat (rozpoznawanie linków)",
         "mw_status": "Pokaż komunikat o postępie skanowania marketu",
-        "inv_menu_size": "Maximal number of rows in a select menu",
-        "pop_char_level": "Always show bonus value (per level) on your character level"
+        "inv_menu_size": "Maksymalna liczba rzędów w menu wyboru",
+        "pop_char_level": "Zawsze pokazuj wartości bonusów (na poziom) wg. twojego poziomu"
     },
     "keyWords": {
         "xmas": [
@@ -388,9 +388,10 @@
         "equipment_number": "Ekwipunek",
         "show_inv": "Szukaj w ekwipunku",
         "switch_w": "Zmień broń",
-        "save": "Save to custom sets",
-        "new_set": "New set",
-        "name": "Name",
-        "unnamed": "Unnamed"
+        "save": "Zapisz do niestandardowych zestawów",
+        "new_set": "Nowy zestaw",
+        "name": "Nazwa",
+        "unnamed": "Nienazwany",
+        "current_eq": "Current equipment"
     }
 }
