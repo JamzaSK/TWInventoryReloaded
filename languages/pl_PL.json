@@ -392,6 +392,8 @@
         "new_set": "Nowy zestaw",
         "name": "Nazwa",
         "unnamed": "Nienazwany",
-        "current_eq": "Current equipment"
+        "current_eq": "Current equipment",
+        "bonus_items_title": "Bonuses from items",
+        "bonus_set_title": "Bonuses from items and set"
     }
 }
