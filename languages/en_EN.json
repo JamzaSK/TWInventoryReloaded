@@ -374,19 +374,21 @@
         "fort_damage_sector": "Damage",
         "fort_resistance": "Resistance",
         "speed": "Speed",
-        "total": "Total bonus",
+        "total": "Total",
         "bonuses": "Bonuses",
         "plus_buffs": "+ buffs",
         "add_name": "Dressing helper",
         "bonus_count_title": "Bonuses from items and sets",
         "result_menu_title": "Other combinations",
         "equipment_number": "Equipment $1",
-        "show_inv": "Search in the inventory",
+        "show_inv": "Show in the inventory",
         "switch_w": "Switch weapon",
         "save": "Save to custom sets",
         "new_set": "New set",
         "name": "Name",
         "unnamed": "Unnamed",
-        "current_eq": "Current equipment"
+        "current_eq": "Current equipment",
+        "bonus_items_title": "Bonuses from items",
+        "bonus_set_title": "Bonuses from items and set"
     }
 }
