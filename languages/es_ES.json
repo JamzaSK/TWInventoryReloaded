@@ -385,6 +385,7 @@
         "save": "Save to custom sets",
         "new_set": "New set",
         "name": "Name",
-        "unnamed": "Unnamed"
+        "unnamed": "Unnamed",
+        "current_eq": "Current equipment"
     }
 }
