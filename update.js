@@ -1,5 +1,5 @@
 var scriptUpdate={
-    TWIR: '2.167',
+    TWIR: '2.168',
     TWIRrev: '12',
-    TWIRNew: 'Hotfix for calculator (fortbattle attack and defense)'
+    TWIRNew: 'Russian translation - thanks to Luntik, added Custom sets, option to change the number of rows in the selection menu, option to always display bonuses (per level) on your level'
 };
