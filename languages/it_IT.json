@@ -258,7 +258,7 @@
         "ml_show": "Pulsanti aggiuntivi nell'interfaccia a sinistra",
         "chat_smart": "Chat più funzionale (riconoscimento link)",
         "mw_status": "Mostra il messaggio di progresso scansione del mercato",
-        "inv_menu_size": "Numero massimo di righe nel menù selezione",
+        "inv_menu_size": "Numero massimo di righe nei menù a tendina",
         "pop_char_level": "Mostra sempre il valore dei bonus (per livello) sul tuo livello personaggio"
     },
     "keyWords": {
@@ -392,7 +392,7 @@
         "name": "Nome",
         "unnamed": "Senza nome",
         "current_eq": "Equipaggiamento attuale",
-        "bonus_items_title": "Bonuses from items",
-        "bonus_set_title": "Bonuses from items and set"
+        "bonus_items_title": "Bonus da oggetti",
+        "bonus_set_title": "Bonus da oggetti e da set"
     }
 }
