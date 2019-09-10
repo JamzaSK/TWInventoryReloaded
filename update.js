@@ -1,5 +1,5 @@
 var scriptUpdate={
-    TWIR: '2.168',
+    TWIR: '2.169',
     TWIRrev: '12',
-    TWIRNew: 'Russian translation - thanks to Luntik, added Custom sets, option to change the number of rows for the selection menu in your inventory, option to always display bonuses (per level) on your level'
+    TWIRNew: 'Custom sets removed due to breaking rules.'
 };
