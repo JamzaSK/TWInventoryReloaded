@@ -5521,9 +5521,7 @@
                 Inventory.showCustomItems(a), TWIR.calc.updateShowCase(t)
               }
             });
-          y.append($(saveButton.getMainDiv()).css({
-            float: "right"
-          }), $(V.getMainDiv()).css({
+          y.append($(V.getMainDiv()).css({
             float: "right"
           }), $(v.getMainDiv()).css({
             float: "right"
