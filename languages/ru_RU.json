@@ -381,11 +381,6 @@
         "equipment_number": "$1 оборудование\n",
         "show_inv": "Поиск инвентаря",
         "switch_w": "Сменить оружие",
-        "save": "сохранять",
-        "new_set": "новый set",
-        "name": "название",
-        "unnamed": "неназванный",
-        "current_eq": "aктуальное снаряжение",
         "bonus_items_title": "бонус items поиск",
         "bonus_set_title": "бонус set поиск"
     }
