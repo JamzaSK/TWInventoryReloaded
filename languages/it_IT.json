@@ -387,11 +387,6 @@
         "equipment_number": "Equipaggiamento $1",
         "show_inv": "Mostra in inventario",
         "switch_w": "Arma contusione\\sparo",
-        "save": "Salva nei set personali",
-        "new_set": "Nuovo set",
-        "name": "Nome",
-        "unnamed": "Senza nome",
-        "current_eq": "Equipaggiamento attuale",
         "bonus_items_title": "Bonus da oggetti",
         "bonus_set_title": "Bonus da oggetti e da set"
     }
