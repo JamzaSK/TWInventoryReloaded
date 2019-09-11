@@ -383,11 +383,6 @@
         "equipment_number": "Vybavení $1",
         "show_inv": "Vyhledat v inventáři",
         "switch_w": "Změnit zbraň",
-        "save": "Uložit do vlastních sad",
-        "new_set": "Nový set",
-        "name": "Název",
-        "unnamed": "Nepojmenovaná sada",
-        "current_eq": "Aktuální vybavení",
         "bonus_items_title": "Bonusy z itemů",
         "bonus_set_title": "Bonusy z itemů a setu"
     }
