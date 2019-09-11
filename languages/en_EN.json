@@ -383,11 +383,6 @@
         "equipment_number": "Equipment $1",
         "show_inv": "Show in the inventory",
         "switch_w": "Switch weapon",
-        "save": "Save to custom sets",
-        "new_set": "New set",
-        "name": "Name",
-        "unnamed": "Unnamed",
-        "current_eq": "Current equipment",
         "bonus_items_title": "Bonuses from items",
         "bonus_set_title": "Bonuses from items and set"
     }
