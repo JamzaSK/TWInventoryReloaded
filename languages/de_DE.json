@@ -381,11 +381,6 @@
         "equipment_number": "Ausrüstung $1",
         "show_inv": "Im Inventar zeigen",
         "switch_w": "Waffe wechseln",
-        "save": "Save to custom sets",
-        "new_set": "New set",
-        "name": "Name",
-        "unnamed": "Unnamed",
-        "current_eq": "Current equipment",
         "bonus_items_title": "Bonuses from items",
         "bonus_set_title": "Bonuses from items and set"
     }
