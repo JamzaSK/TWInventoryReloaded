@@ -64,7 +64,7 @@
         "property": "Artículo poseído",
         "item_type": "Tipo",
         "regen": "Regeneración",
-        "custom": "Custom"
+        "custom": "Personalizado"
     },
     "tooltips": {
         "jobdrop": "Obtenibles desde trabajo",
@@ -382,12 +382,7 @@
         "equipment_number": "Equipo $1",
         "show_inv": "Buscar en inventario",
         "switch_w": "Cambiar arma",
-        "save": "Save to custom sets",
-        "new_set": "New set",
-        "name": "Name",
-        "unnamed": "Unnamed",
-        "current_eq": "Current equipment",
-        "bonus_items_title": "Bonuses from items",
-        "bonus_set_title": "Bonuses from items and set"
+        "bonus_items_title": "Bonificaciones de artículos",
+        "bonus_set_title": "Bonificaciones de artículos y conjunto"
     }
 }
