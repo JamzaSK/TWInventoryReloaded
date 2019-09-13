@@ -3417,8 +3417,8 @@
           }
           for (var g = 0, A = 0; A < t.items.length; A++) {
             var d = t.items[A].node.text(),
-              m = 7.5 * d.length;
-            m > g && (t.setWidth(m <= 300 ? m : 300), g = m)
+              m = 10 * d.length;
+            m > g && (t.setWidth(m <= 300 && m >= 240 ? m : m <= 240 ? 240 : 300), g = m)
           }
           return t.addListener(function(e) {
             var t = e[0];
@@ -5506,10 +5506,10 @@
           TWIR.calc.guiElements.boxwrap_results = $('<div style="display: none; position: absolute;right: 5px;top: 19px;z-index: 3;"></div>'), $(x.getMainDiv()).appendTo(TWIR.calc.guiElements.boxwrap_results);
           var v = new west.gui.Button(TWIRlang.calc.find_eq, function(e) {
               $.isEmptyObject(t.skills) && "ms" !== t.para || (e.disable(), setTimeout(function() {
-                TWIR.calc.calcBest(t.skills, t.para, function() {
+                TWIR.calc.calcBest(t.skills, t.para, function(t) {
                   e.enable();
-                  var t = TWIR.calc.result.length ? TWIR.calc.result[0] : {};
-                  TWIR.calc.updateShowCase(t)
+                  var a = TWIR.calc.result.length ? TWIR.calc.result[0] : {};
+                  TWIR.calc.updateShowCase(a)
                 })
               }, 1e3)), TWIR.calc.preset = t
             }),
@@ -5903,7 +5903,7 @@
       },
       calcBest: function(e, t, a) {
         var i = TWIR.calc.getBestSet(e, t);
-        return TWIR.calc.result = i, a(), i
+        return TWIR.calc.result = i, a(i), i
       },
       getBestSet: function(e, t) {
         var a, i, n, r, o, s, l = 0;
@@ -6066,7 +6066,7 @@
               t = 0 != Character.homeTown.town_id ? Chat.Resource.Manager.getRoom("room_town_" + Character.homeTown.town_id) : Chat.Resource.Manager.getGeneralRoom();
             if (TWIR.version !== scriptUpdate.TWIR && -1 === t.history.findIndex(function(t) {
                 return e.test(t)
-              }) && Character.name !== TWIR.author) {
+              })) {
               var t = 0 != Character.homeTown.town_id ? Chat.Resource.Manager.getRoom("room_town_" + Character.homeTown.town_id) : Chat.Resource.Manager.getGeneralRoom(),
                 a = TWIRlang.update_message + "&nbsp;<b>" + TWIRlang.download + ':&nbsp;</b> <a target="_blank" href="' + TWIR.updateAds + '">[' + TWIRlang.ads + '] </a>&nbsp;|&nbsp;<a href="' + TWIR.downloadUrl + '">[' + TWIRlang.no_ads + "].</a><br> /555" + TWIRlang.changes + ":&nbsp;" + scriptUpdate.TWIRNew;
               ChatWindow.open(t, !0);
