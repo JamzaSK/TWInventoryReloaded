@@ -86,7 +86,8 @@
         "average": "Media",
         "average_since": "Media $1 giorni",
         "each": "ciascuno",
-        "quests": "missioni"
+        "quests": "missioni",
+        "collection": "Needed to complete a collections"
     },
     "organizing": {
         "invert_text": "Mostra/Nascondi oggetti diversi basati sul filtro selezionato",
