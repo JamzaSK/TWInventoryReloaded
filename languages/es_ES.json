@@ -86,7 +86,8 @@
         "average": "Promedio",
         "average_since": "Promedio $1 días",
         "each": "cada",
-        "quests": "búsquedas"
+        "quests": "búsquedas",
+        "collection": "Needed to complete a collections"
     },
     "organizing": {
         "invert_text": "Mostrar / Ocultar diferentes elementos basados en un filtro seleccionado",
