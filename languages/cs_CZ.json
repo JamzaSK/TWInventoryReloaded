@@ -86,7 +86,8 @@
         "average": "Průměr",
         "average_since": "Průměr za $1 dní",
         "each": "kus",
-        "quests": "úkolů"
+        "quests": "úkolů",
+        "collection": "Needed to complete a collections"
     },
     "organizing": {
         "invert_text": "Zobrazit / Skrýt předměty podle vybraného filtru",
