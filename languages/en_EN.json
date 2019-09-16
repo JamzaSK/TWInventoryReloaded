@@ -86,7 +86,8 @@
         "average": "Average",
         "average_since": "Average $1 days",
         "each": "each",
-        "quests": "quests"
+        "quests": "quests",
+        "collection": "Needed to complete a collections"
     },
     "organizing": {
         "invert_text": "Show/Hide different items based on a filter selected",
