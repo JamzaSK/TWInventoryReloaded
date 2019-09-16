@@ -86,7 +86,8 @@
         "average": "Średnia",
         "average_since": "Średnia $1 dnia",
         "each": "każdy",
-        "quests": "zadania"
+        "quests": "zadania",
+        "collection": "Needed to complete a collections"
     },
     "organizing": {
         "invert_text": "Pokaż/Ukryj przedmioty pasujące do filtra",
