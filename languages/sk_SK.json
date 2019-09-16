@@ -86,7 +86,8 @@
         "average": "Priemer",
         "average_since": "Priemer za $1 dní",
         "each": "kus",
-        "quests": "úloh"
+        "quests": "úloh",
+        "collection": "Needed to complete a collections"
     },
     "organizing": {
         "invert_text": "Zobraziť/Skryť predmety podľa vybraného filtera",
