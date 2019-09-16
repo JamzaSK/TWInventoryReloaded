@@ -64,7 +64,7 @@
         "property": "Eigenschaft",
         "item_type": "Slot",
         "regen": "Regeneration",
-        "custom": "Custom"
+        "custom": "Eigene"
     },
     "tooltips": {
         "jobdrop": "Findbar",
@@ -86,7 +86,8 @@
         "average": "Durchschnitt",
         "average_since": "Durchschnittlich $1 Tage",
         "each": "1",
-        "quests": "Quests"
+        "quests": "Quests",
+        "collection": "Needed to complete a collections"
     },
     "organizing": {
         "invert_text": "Zeige/Verstecke Items durch Auswählen der Filter",
@@ -258,8 +259,8 @@
         "ml_show": "Linkes Menü erweitern",
         "chat_smart": "Links im Chat umwandeln",
         "mw_status": "Markt-Scanstatus zeigen",
-        "inv_menu_size": "Maximal number of rows in a select menu",
-        "pop_char_level": "Always show bonus value (per level) on your character level"
+        "inv_menu_size": "Maximale Anzahl Zeilen im Dropdown-Menü (Set-Suche)",
+        "pop_char_level": "(pro Stufe)-Boni immer auf deine Stufe umrechnen"
     },
     "keyWords": {
         "xmas": [
@@ -381,7 +382,7 @@
         "equipment_number": "Ausrüstung $1",
         "show_inv": "Im Inventar zeigen",
         "switch_w": "Waffe wechseln",
-        "bonus_items_title": "Bonuses from items",
-        "bonus_set_title": "Bonuses from items and set"
+        "bonus_items_title": "Item-Boni",
+        "bonus_set_title": "Item- und Setboni"
     }
 }
