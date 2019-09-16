@@ -86,7 +86,8 @@
         "average": "Átlagos",
         "average_since": "Átlagosan $1 nap",
         "each": "minden",
-        "quests": "küldetés"
+        "quests": "küldetés",
+        "collection": "Needed to complete a collections"
     },
     "organizing": {
         "invert_text": "Különböző tárgyak megjelenítése / elrejtése a kiválasztott szűrő alapján",
