@@ -86,7 +86,8 @@
         "average": "En moyenne",
         "average_since": "En moyenne $1 jours",
         "each": "l'unité",
-        "quests": "quests"
+        "quests": "quests",
+        "collection": "Needed to complete a collections"
     },
     "organizing": {
         "invert_text": "Afficher/masquer différents items selon le filtre sélectionné",
