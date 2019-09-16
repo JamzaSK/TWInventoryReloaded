@@ -86,7 +86,8 @@
         "average": "приблизительно (В среднем)",
         "average_since": "В среднем за $1 день",
         "each": "штука (шт)",
-        "quests": "задача"
+        "quests": "задача",
+        "collection": "Needed to complete a collections"
     },
     "organizing": {
         "invert_text": "Показать / Скрыть предметы по выбранному фильтру",
