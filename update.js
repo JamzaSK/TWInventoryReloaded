@@ -1,5 +1,5 @@
 var scriptUpdate={
-    TWIR: '2.169',
+    TWIR: '2.170',
     TWIRrev: '12',
-    TWIRNew: 'Custom sets removed due to breaking rules.'
+    TWIRNew: 'Reduced number of calls during fort battles'
 };
