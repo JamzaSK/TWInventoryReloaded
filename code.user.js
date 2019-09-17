@@ -19,7 +19,7 @@
 // @description:ru Лучший инвентарь и инструменты для The West!
 
 // @author Jamza (CZ14)
-// @version 2.169
+// @version 2.170
 // @license GPL-3.0
 
 // @include https://*.the-west.*/game.php*
@@ -68,7 +68,7 @@
   var script = document.createElement("script");
   script.setAttribute("type", "application/javascript"), script.textContent = "(" + function() {
     TWIRlang = {}, TWIR = {
-      version: "2.169",
+      version: "2.170",
       name: "TW Inventory Reloaded",
       author: "Jamza",
       minGame: "2.04",
@@ -633,13 +633,18 @@
           TWIR.checkMarket(function() {
             TWIR.menulink()
           })
-        }), TWIR.betterBattleTopic(), TWIR.travelButton(), TWIR.battleShortcuts.init(), TWIR.otherEnhacements.init(), setInterval(TWIR.otherEnhacements.addBattleCount, Math.floor(Math.random() * (3e5 + 1) + 3e5)), TWIR.calc.addBaseSkills(), TWIR.console("TWIR version " + TWIR.version + " by Jamza SUCCESSFULLY LOADED.", "green")
+        }), TWIR.betterBattleTopic(), TWIR.travelButton(), TWIR.battleShortcuts.init(), TWIR.otherEnhacements.init(), setInterval(TWIR.otherEnhacements.addBattleCount, Math.floor(Math.random() * (3e5 + 1) + 3e5)), TWIR.calc.addBaseSkills(), TWIR.Inventory.initCol(), TWIR.console("TWIR version " + TWIR.version + " by Jamza SUCCESSFULLY LOADED.", "green")
       } catch (e) {
         TWIR.bugHunt(e)
       } else setTimeout(TWIR.init, 100)
     }, TWIR.otherEnhacements = {
       init: function() {
-        TWIR.otherEnhacements.addAllToAddressbook(), TWIR.otherEnhacements.addAliToTownWindow(), TWIR.otherEnhacements.fixJobNumbers(), TWIR.otherEnhacements.addBattleCount(), TWIR.otherEnhacements.addBestClothes4Build(), TWIR.otherEnhacements.addMsgToFb(), TWIR.otherEnhacements.sendMsgAli(), TWIR.otherEnhacements.afterBattleMsg(), TWIR.otherEnhacements.bonusToProfile()
+        TWIR.otherEnhacements.addAllToAddressbook(), TWIR.otherEnhacements.addAliToTownWindow(), TWIR.otherEnhacements.fixJobNumbers(), TWIR.otherEnhacements.addBattleCount(), TWIR.otherEnhacements.addBestClothes4Build(), TWIR.otherEnhacements.addMsgToFb(), TWIR.otherEnhacements.sendMsgAli(), TWIR.otherEnhacements.afterBattleMsg(), TWIR.otherEnhacements.bonusToProfile(), TWIR.otherEnhacements.betterReports()
+      },
+      betterReports: function() {
+        MessagesWindow.Report.twir_updateContent = MessagesWindow.Report.twir_updateContent || MessagesWindow.Report.updateContent, MessagesWindow.Report.updateContent = function(e) {
+          MessagesWindow.Report.twir_updateContent.apply(this, arguments), console.log(e)
+        }
       },
       bonusToProfile: function() {
         PlayerProfileMain.twir_setWear = PlayerProfileMain.twir_setWear || PlayerProfileMain.setWear, PlayerProfileMain.setWear = function(e, t) {
@@ -1043,6 +1048,8 @@
             o = TWIR.battleShortcuts.formatStatus(n, a),
             s = TWIR.battleShortcuts.formatPlayerRank() ? TWIR.battleShortcuts.formatPlayerRank() : "";
           return t = t.replace(/\<div class\="recruitlist_avatar"\>/, '<div class="recruitlist_avatar" onclick="' + r + '" style="cursor: pointer"> <div style="position: absolute;z-index: 100;left: 16px;">' + (TWIR.storage.get("fb_online_status") ? o : "") + (TWIR.storage.get("fb_ranks") ? s : "") + "</div>")
+        }, FortBattleWindow.twir_cache = {
+          resistance: {}
         }, FortBattleWindow.twir_changeCellPopupText = FortBattleWindow.twir_changeCellPopupText || FortBattleWindow.changeCellPopupText, FortBattleWindow.changeCellPopupText = function(e) {
           var t = this,
             a = e || t.popup.idx,
@@ -1052,21 +1059,26 @@
             var n = i.westPlayerId,
               r = t.fortId,
               o = !(i.team > 0);
-            Ajax.remoteCallMode("fort_battlepage", "getPlayerDatasheet", {
-              fort_id: r,
-              playerId: n,
-              isDefender: o
-            }, function(e) {
-              var a = Chat.Resource.Manager.getClient("client_" + n),
+            ! function(e) {
+              if (FortBattleWindow.twir_cache.resistance[n]) return void e();
+              Ajax.remoteCallMode("fort_battlepage", "getPlayerDatasheet", {
+                fort_id: r,
+                playerId: n,
+                isDefender: o
+              }, function(t) {
+                FortBattleWindow.twir_cache.resistance[n] = t.resistance, console.log(t), e()
+              })
+            }(function() {
+              var e = FortBattleWindow.twir_cache.resistance[n],
+                a = Chat.Resource.Manager.getClient("client_" + n),
                 o = a ? a.statusId : 0,
-                l = e.resistance,
-                p = TWIR.battleShortcuts.formatStatus(o, n),
-                c = TWIR.battleShortcuts.formatPlayerRank(n, r) ? TWIR.battleShortcuts.formatPlayerRank(n, r) : "",
-                g = '<td><img src="%1" /></td><td>&nbsp;%2&nbsp;</td>',
-                A = "<div style='margin-left: 10px;'><table cellpadding=0 cellspacing=0><tr>" + (0 != i.bonusinfo.offense ? s(g, "/images/fort/battle/attacker_secondary.png", i.bonusinfo.offense || 0) : "") + (0 != i.bonusinfo.defense ? s(g, "/images/fort/battle/defender_secondary.png", i.bonusinfo.defense || 0) : "") + (0 != i.bonusinfo.leadbonus ? s(g, "/images/fort/battle/leadsupport.png", i.bonusinfo.leadbonus || 0) : "") + (0 != l ? s(g, "/images/fort/battle/resistance.png", l || 0) : "") + "</tr></table></div>";
-              A += '<table style="margin:0;padding:0;font-size:8pt"><tr style="font-size:8pt;height:20px;font-weight:bold;">', A += '<td style="vertical-align: middle;"><div style="font-size:13px; font-family: georgia, times new roman, serif; font-weight: bold;">' + i.name + '&nbsp;</div></td><td style="vertical-align: middle;">' + (TWIR.storage.get("fb_online_status") ? p : "") + '&nbsp;</td><td style="vertical-align: middle;">' + (TWIR.storage.get("fb_ranks") ? c : "") + "</td>";
-              var d = i.health / i.healthmax * 84 + "px";
-              A += '<td style="vertical-align: middle;"><div style="background: url(/images/character_bars/bars.png) right top;width: 100px;height: 14px;display: inline-block;padding: 2px;margin: 5px;font-size: 8pt;text-align: left"><div style="background: url(/images/character_bars/filler.png);width: ' + d + ';height: 14px;margin-top: 2px;padding: 0;margin: 0;position: absolute;"></div><div style="position: absolute;color: white;width: 85px;text-align: center;">' + i.health + " / " + i.healthmax + "</div></div></td>", A += "</tr></table>", A += '<div style="text-align: center"><span style="background: url(/images/fort/battle/report_icons.png) no-repeat;background-position: 0 -51px;height: 16px;width: 16px; display: inline-block;vertical-align: middle;"/>&nbsp;<span style="font-weight: bold; font-size: 11px;">' + i.causeddamage + "</span></div>", t.popup.setXHTML(A)
+                l = TWIR.battleShortcuts.formatStatus(o, n),
+                p = TWIR.battleShortcuts.formatPlayerRank(n, r) ? TWIR.battleShortcuts.formatPlayerRank(n, r) : "",
+                c = '<td><img src="%1" /></td><td>&nbsp;%2&nbsp;</td>',
+                g = "<div style='margin-left: 10px;'><table cellpadding=0 cellspacing=0><tr>" + (0 != i.bonusinfo.offense ? s(c, "/images/fort/battle/attacker_secondary.png", i.bonusinfo.offense || 0) : "") + (0 != i.bonusinfo.defense ? s(c, "/images/fort/battle/defender_secondary.png", i.bonusinfo.defense || 0) : "") + (0 != i.bonusinfo.leadbonus ? s(c, "/images/fort/battle/leadsupport.png", i.bonusinfo.leadbonus || 0) : "") + (0 != e ? s(c, "/images/fort/battle/resistance.png", e || 0) : "") + "</tr></table></div>";
+              g += '<table style="margin:0;padding:0;font-size:8pt"><tr style="font-size:8pt;height:20px;font-weight:bold;">', g += '<td style="vertical-align: middle;"><div style="font-size:13px; font-family: georgia, times new roman, serif; font-weight: bold;">' + i.name + '&nbsp;</div></td><td style="vertical-align: middle;">' + (TWIR.storage.get("fb_online_status") ? l : "") + '&nbsp;</td><td style="vertical-align: middle;">' + (TWIR.storage.get("fb_ranks") ? p : "") + "</td>";
+              var A = i.health / i.healthmax * 84 + "px";
+              g += '<td style="vertical-align: middle;"><div style="background: url(/images/character_bars/bars.png) right top;width: 100px;height: 14px;display: inline-block;padding: 2px;margin: 5px;font-size: 8pt;text-align: left"><div style="background: url(/images/character_bars/filler.png);width: ' + A + ';height: 14px;margin-top: 2px;padding: 0;margin: 0;position: absolute;"></div><div style="position: absolute;color: white;width: 85px;text-align: center;">' + i.health + " / " + i.healthmax + "</div></div></td>", g += "</tr></table>", g += '<div style="text-align: center"><span style="background: url(/images/fort/battle/report_icons.png) no-repeat;background-position: 0 -51px;height: 16px;width: 16px; display: inline-block;vertical-align: middle;"/>&nbsp;<span style="font-weight: bold; font-size: 11px;">' + i.causeddamage + "</span></div>", t.popup.setXHTML(g)
             })
           } else t.popup.kill()
         }
@@ -1142,10 +1154,10 @@
             }
             break;
           case o.test(e):
-            var R = o.exec(e);
-            if (R && R[1] && e.length === R[0].length) {
-              var b = '<div class="twir_embed-container"><iframe src="https://www.facebook.com/plugins/video.php?href=' + encodeURIComponent(R[0]) + '&show_text=0&width=280&height=157" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allowFullScreen="true"></iframe></div>';
-              return e = e.replace(R[0], b)
+            var b = o.exec(e);
+            if (b && b[1] && e.length === b[0].length) {
+              var R = '<div class="twir_embed-container"><iframe src="https://www.facebook.com/plugins/video.php?href=' + encodeURIComponent(b[0]) + '&show_text=0&width=280&height=157" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allowFullScreen="true"></iframe></div>';
+              return e = e.replace(b[0], R)
             }
             break;
           case l.test(e):
@@ -1518,18 +1530,18 @@
               t = t.replace(/<ul\s+class="inventory_popup_effect_list">[\S\s]*?<\/ul>/gi, '<ul class="inventory_popup_effect_list" style="max-width: 240px;display: block;min-width: 170px;white-space: unset!important;"> ' + A + " </ul>")
             }!1 === this.item_obj.auctionable && !0 === this.item_obj.upgradeable ? t = t.replace(/(invPopup_foot")(>)/g, '$1 style="display:block;text-align: center;font-size: 13px!important;"><p class="tw_red">' + TWIRlang.tooltips.not_auctionable + '</p><p class="tw_green">' + TWIRlang.tooltips.upgradeable + "</p>") : !1 === this.item_obj.auctionable ? t = t.replace(/(invPopup_foot")(>)/g, '$1 style="display:block;text-align: center;font-size: 13px!important;"> <p class="tw_red">' + TWIRlang.tooltips.not_auctionable + "</p>") : !0 === this.item_obj.upgradeable && (t = t.replace(/(invPopup_foot")(>)/g, '$1 style="display:block;text-align: center;font-size: 13px!important;"> <p class="tw_green">' + TWIRlang.tooltips.upgradeable + "</p>")), !0 === this.item_obj.auctionable && (t = t.replace(/(<br>)(<p\s+class="inventory_popup_auctionable tw_green">[\S\s]*?<\/p>)/gi, "$2")), !1 === this.item_obj.upgradeable && (t = t.replace(/(<br>)(<p\s+class="inventory_popup_notupgradeable tw_red">[\S\s]*?<\/p>)/gi, "$2")), !1 === this.item_obj.sellable && (t = t.replace(/invPopup_notsellable"/g, '$& style="text-align: center;color: #900;font-style: normal!important;font-size: 13px!important;display: block!important;"')), t = (t = (t = (t = (t = (t = (t = (t = t.replace(/inventory_popup_label tw_green"/g, '$& style="max-width: 220px;display: block;min-width: 170px;white-space: unset!important;padding-top: 4px;margin-left: 5px;margin-right: 5px;"')).replace(/inventory_popup_label"/g, '$& style="max-width: 220px;display: block;min-width: 170px;white-space: unset!important;padding-top: 4px;margin-left: auto;margin-right: auto;"')).replace(/inventory_popup_bonus_skills"/g, '$& style="max-width: 200px;display: block;min-width: 170px;white-space: unset!important;margin-left: 10px;"')).replace(/(<br>)(<span\s+class="inventory_popup_requirement_text">[\S\s]*?<\/span>)/gi, "$2 <br>")).replace(/<br><p\s+class="inventory_alreadyown">[\S\s]*?<\/p>/gi, "")).replace(/<div\s+class="inventory_popup_prices">[\S\s]*?<\/div>/gi, "$& <br> ")).replace(/<span\s+class="inventory_popup_character_sex">[\S\s]*?<\/span>/gi, "$& <br>")).replace(/<span\s+class="inventory_popup_character_sex text_red">[\S\s]*?<\/span>/gi, "$& <br>");
             var k = TWIR.storage.popups.marketBest[this.item_obj.short] && TWIR.storage.popups.marketBest[this.item_obj.short].avg >= 1e4 ? TWIR.replSum(TWIR.storage.popups.marketBest[this.item_obj.short].avg) : TWIR.storage.popups.marketBest[this.item_obj.short] ? TWIR.storage.popups.marketBest[this.item_obj.short].avg.toFixed(0) : 0,
-              R = TWIR.storage.popups.marketBest[this.item_obj.short] && TWIR.storage.get("pop_market_price") ? '<div style="margin-top: 5px;"><span class="tw2gui-iconset tw2gui-icon-world" style="display: inline-block; vertical-align: top;"/>&nbsp;&#36;' + k + "</div>" : "";
+              b = TWIR.storage.popups.marketBest[this.item_obj.short] && TWIR.storage.get("pop_market_price") ? '<div style="margin-top: 5px;"><span class="tw2gui-iconset tw2gui-icon-world" style="display: inline-block; vertical-align: top;"/>&nbsp;&#36;' + k + "</div>" : "";
             if (TWIR.storage.popups.shop_prices[this.item_obj.short] && TWIR.storage.get("pop_ups_price")) {
-              var b = 1 === this.item_obj.item_level ? 3 : 2 === this.item_obj.item_level ? 9 : 3 === this.item_obj.item_level ? 27 : 4 === this.item_obj.item_level ? 81 : 5 === this.item_obj.item_level ? 243 : 1,
-                w = 3 === TWIR.storage.popups.shop_prices[this.item_obj.short].currency ? '<span style="display: inline-block;position: relative;top: 3px;background: url(' + TWIR.images.currency.bonds_nuggets + ') no-repeat;width: 16px;height: 16px;"></span><span>&nbsp;' + (TWIR.storage.get("pop_short_currency") ? TWIR.replSum(TWIR.storage.popups.shop_prices[this.item_obj.short].price_bonds * b, !0) : TWIR.storage.popups.shop_prices[this.item_obj.short].price_bonds * b) + "</span>" : 2 === TWIR.storage.popups.shop_prices[this.item_obj.short].currency ? '<span style="display: inline-block;position: relative;top: 3px;background: url(' + TWIR.images.currency.nuggets + ') no-repeat;width: 16px;height: 16px;"></span><span>&nbsp;' + (TWIR.storage.get("pop_short_currency") ? TWIR.replSum(TWIR.storage.popups.shop_prices[this.item_obj.short].price_nuggets * b, !0) : TWIR.storage.popups.shop_prices[this.item_obj.short].price_nuggets * b) + "</span>" : 1 === TWIR.storage.popups.shop_prices[this.item_obj.short].currency ? '<span style="display: inline-block;position: relative;top: 3px;background: url(' + TWIR.images.currency.bonds + ') no-repeat;width: 16px;height: 16px;"></span><span>&nbsp;' + (TWIR.storage.get("pop_short_currency") ? TWIR.replSum(TWIR.storage.popups.shop_prices[this.item_obj.short].price_bonds * b, !0) : TWIR.storage.popups.shop_prices[this.item_obj.short].price_bonds * b) + "</span>" : 8 === TWIR.storage.popups.shop_prices[this.item_obj.short].currency ? '<span style="display: inline-block;position: relative;top: 3px;background: url(' + TWIR.images.currency.veteran + ') no-repeat;width: 16px;height: 16px;"></span><span>&nbsp;' + (TWIR.storage.get("pop_short_currency") ? TWIR.replSum(TWIR.storage.popups.shop_prices[this.item_obj.short].price_veteran * b, !0) : TWIR.storage.popups.shop_prices[this.item_obj.short].price_veteran * b) + "</span>" : 7 === TWIR.storage.popups.shop_prices[this.item_obj.short].currency ? '<span style="display: inline-block;position: relative;top: 3px;background: url(' + TWIR.images.currency.bonds_nuggets + ') no-repeat;width: 16px;height: 16px;"></span><span>&nbsp;' + (TWIR.storage.get("pop_short_currency") ? TWIR.replSum(TWIR.storage.popups.shop_prices[this.item_obj.short].price_nuggets * b, !0) : TWIR.storage.popups.shop_prices[this.item_obj.short].price_nuggets * b) + '</span><span style="display: inline-block;position: relative;top: 3px;background: url(' + TWIR.images.currency.dollars + ') no-repeat;width: 16px;height: 16px;margin-left: 5px;"/><span>&nbsp;&#36;' + TWIR.replSum(TWIR.storage.popups.shop_prices[this.item_obj.short].price_dollar * b) + "</span>" : "",
+              var R = 1 === this.item_obj.item_level ? 3 : 2 === this.item_obj.item_level ? 9 : 3 === this.item_obj.item_level ? 27 : 4 === this.item_obj.item_level ? 81 : 5 === this.item_obj.item_level ? 243 : 1,
+                w = 3 === TWIR.storage.popups.shop_prices[this.item_obj.short].currency ? '<span style="display: inline-block;position: relative;top: 3px;background: url(' + TWIR.images.currency.bonds_nuggets + ') no-repeat;width: 16px;height: 16px;"></span><span>&nbsp;' + (TWIR.storage.get("pop_short_currency") ? TWIR.replSum(TWIR.storage.popups.shop_prices[this.item_obj.short].price_bonds * R, !0) : TWIR.storage.popups.shop_prices[this.item_obj.short].price_bonds * R) + "</span>" : 2 === TWIR.storage.popups.shop_prices[this.item_obj.short].currency ? '<span style="display: inline-block;position: relative;top: 3px;background: url(' + TWIR.images.currency.nuggets + ') no-repeat;width: 16px;height: 16px;"></span><span>&nbsp;' + (TWIR.storage.get("pop_short_currency") ? TWIR.replSum(TWIR.storage.popups.shop_prices[this.item_obj.short].price_nuggets * R, !0) : TWIR.storage.popups.shop_prices[this.item_obj.short].price_nuggets * R) + "</span>" : 1 === TWIR.storage.popups.shop_prices[this.item_obj.short].currency ? '<span style="display: inline-block;position: relative;top: 3px;background: url(' + TWIR.images.currency.bonds + ') no-repeat;width: 16px;height: 16px;"></span><span>&nbsp;' + (TWIR.storage.get("pop_short_currency") ? TWIR.replSum(TWIR.storage.popups.shop_prices[this.item_obj.short].price_bonds * R, !0) : TWIR.storage.popups.shop_prices[this.item_obj.short].price_bonds * R) + "</span>" : 8 === TWIR.storage.popups.shop_prices[this.item_obj.short].currency ? '<span style="display: inline-block;position: relative;top: 3px;background: url(' + TWIR.images.currency.veteran + ') no-repeat;width: 16px;height: 16px;"></span><span>&nbsp;' + (TWIR.storage.get("pop_short_currency") ? TWIR.replSum(TWIR.storage.popups.shop_prices[this.item_obj.short].price_veteran * R, !0) : TWIR.storage.popups.shop_prices[this.item_obj.short].price_veteran * R) + "</span>" : 7 === TWIR.storage.popups.shop_prices[this.item_obj.short].currency ? '<span style="display: inline-block;position: relative;top: 3px;background: url(' + TWIR.images.currency.bonds_nuggets + ') no-repeat;width: 16px;height: 16px;"></span><span>&nbsp;' + (TWIR.storage.get("pop_short_currency") ? TWIR.replSum(TWIR.storage.popups.shop_prices[this.item_obj.short].price_nuggets * R, !0) : TWIR.storage.popups.shop_prices[this.item_obj.short].price_nuggets * R) + '</span><span style="display: inline-block;position: relative;top: 3px;background: url(' + TWIR.images.currency.dollars + ') no-repeat;width: 16px;height: 16px;margin-left: 5px;"/><span>&nbsp;&#36;' + TWIR.replSum(TWIR.storage.popups.shop_prices[this.item_obj.short].price_dollar * R) + "</span>" : "",
                 f = null !== TWIR.storage.popups.shop_prices[this.item_obj.short].limited_time ? '<span style="color: #666;">&nbsp;(' + TWIR.msToTime((new Date(1e3 * TWIR.storage.popups.shop_prices[this.item_obj.short].limited_time).getTime() - (new Date).getTime()) / 1e3) + ")</span>" : "",
                 y = 0 != TWIR.storage.popups.shop_prices[this.item_obj.short].reduced_value ? '<span style="color: #666;">&nbsp;/-' + TWIR.storage.popups.shop_prices[this.item_obj.short].reduced_value + "%</span>" : "";
-              t = t.replace(/(<div\s+class="inventory_popup_prices">[\S\s]*?)(<\/div>)/gi, "$1" + R + '<div class="twir_other_popup_prices">&nbsp;' + w + y + f + "</div> $2")
+              t = t.replace(/(<div\s+class="inventory_popup_prices">[\S\s]*?)(<\/div>)/gi, "$1" + b + '<div class="twir_other_popup_prices">&nbsp;' + w + y + f + "</div> $2")
             } else if (TWIR.storage.popups.shop_limited_prices[this.item_obj.short] && TWIR.storage.get("pop_ups_price")) {
-              var b = 1 === this.item_obj.item_level ? 3 : 2 === this.item_obj.item_level ? 9 : 3 === this.item_obj.item_level ? 27 : 4 === this.item_obj.item_level ? 81 : 5 === this.item_obj.item_level ? 243 : 1,
-                w = 3 === TWIR.storage.popups.shop_limited_prices[this.item_obj.short].currency ? '<span style="display: inline-block;position: relative;top: 3px;background: url(' + TWIR.images.currency.bonds_nuggets + ') no-repeat;width: 16px;height: 16px;"></span><span>&nbsp;' + (TWIR.storage.get("pop_short_currency") ? TWIR.replSum(TWIR.storage.popups.shop_limited_prices[this.item_obj.short].price_bonds * b, !0) : TWIR.storage.popups.shop_limited_prices[this.item_obj.short].price_bonds * b) + "</span>" : 2 === TWIR.storage.popups.shop_limited_prices[this.item_obj.short].currency ? '<span style="display: inline-block;position: relative;top: 3px;background: url(' + TWIR.images.currency.nuggets + ') no-repeat;width: 16px;height: 16px;"></span><span>&nbsp;' + (TWIR.storage.get("pop_short_currency") ? TWIR.replSum(TWIR.storage.popups.shop_limited_prices[this.item_obj.short].price_nuggets * b, !0) : TWIR.storage.popups.shop_limited_prices[this.item_obj.short].price_nuggets * b) + "</span>" : 1 === TWIR.storage.popups.shop_limited_prices[this.item_obj.short].currency ? '<span style="display: inline-block;position: relative;top: 3px;background: url(' + TWIR.images.currency.bonds + ') no-repeat;width: 16px;height: 16px;"></span><span>&nbsp;' + (TWIR.storage.get("pop_short_currency") ? TWIR.replSum(TWIR.storage.popups.shop_limited_prices[this.item_obj.short].price_bonds * b, !0) : TWIR.storage.popups.shop_limited_prices[this.item_obj.short].price_bonds * b) + "</span>" : 8 === TWIR.storage.popups.shop_limited_prices[this.item_obj.short].currency ? '<span style="display: inline-block;position: relative;top: 3px;background: url(' + TWIR.images.currency.veteran + ') no-repeat;width: 16px;height: 16px;"></span><span>&nbsp;' + (TWIR.storage.get("pop_short_currency") ? TWIR.replSum(TWIR.storage.popups.shop_limited_prices[this.item_obj.short].price_veteran * b, !0) : TWIR.storage.popups.shop_limited_prices[this.item_obj.short].price_veteran * b) + "</span>" : 7 === TWIR.storage.popups.shop_limited_prices[this.item_obj.short].currency ? '<span style="display: inline-block;position: relative;top: 3px;background: url(' + TWIR.images.currency.bonds_nuggets + ') no-repeat;width: 16px;height: 16px;"></span><span>&nbsp;' + (TWIR.storage.get("pop_short_currency") ? TWIR.replSum(TWIR.storage.popups.shop_limited_prices[this.item_obj.short].price_nuggets * b, !0) : TWIR.storage.popups.shop_limited_prices[this.item_obj.short].price_nuggets * b) + '</span><span style="display: inline-block;position: relative;top: 3px;background: url(' + TWIR.images.currency.dollars + ') no-repeat;width: 16px;height: 16px;margin-left: 5px;"/><span>&nbsp;&#36;' + TWIR.replSum(TWIR.storage.popups.shop_limited_prices[this.item_obj.short].price_dollar * b) + "</span>" : "";
-              t = t.replace(/(<div\s+class="inventory_popup_prices">[\S\s]*?)(<\/div>)/gi, "$1" + R + '<div class="twir_popup_limited_prices">&nbsp;' + w + "</div> $2")
-            } else t = t.replace(/(<div\s+class="inventory_popup_prices">[\S\s]*?)(<\/div>)/gi, "$1" + R + "$2");
+              var R = 1 === this.item_obj.item_level ? 3 : 2 === this.item_obj.item_level ? 9 : 3 === this.item_obj.item_level ? 27 : 4 === this.item_obj.item_level ? 81 : 5 === this.item_obj.item_level ? 243 : 1,
+                w = 3 === TWIR.storage.popups.shop_limited_prices[this.item_obj.short].currency ? '<span style="display: inline-block;position: relative;top: 3px;background: url(' + TWIR.images.currency.bonds_nuggets + ') no-repeat;width: 16px;height: 16px;"></span><span>&nbsp;' + (TWIR.storage.get("pop_short_currency") ? TWIR.replSum(TWIR.storage.popups.shop_limited_prices[this.item_obj.short].price_bonds * R, !0) : TWIR.storage.popups.shop_limited_prices[this.item_obj.short].price_bonds * R) + "</span>" : 2 === TWIR.storage.popups.shop_limited_prices[this.item_obj.short].currency ? '<span style="display: inline-block;position: relative;top: 3px;background: url(' + TWIR.images.currency.nuggets + ') no-repeat;width: 16px;height: 16px;"></span><span>&nbsp;' + (TWIR.storage.get("pop_short_currency") ? TWIR.replSum(TWIR.storage.popups.shop_limited_prices[this.item_obj.short].price_nuggets * R, !0) : TWIR.storage.popups.shop_limited_prices[this.item_obj.short].price_nuggets * R) + "</span>" : 1 === TWIR.storage.popups.shop_limited_prices[this.item_obj.short].currency ? '<span style="display: inline-block;position: relative;top: 3px;background: url(' + TWIR.images.currency.bonds + ') no-repeat;width: 16px;height: 16px;"></span><span>&nbsp;' + (TWIR.storage.get("pop_short_currency") ? TWIR.replSum(TWIR.storage.popups.shop_limited_prices[this.item_obj.short].price_bonds * R, !0) : TWIR.storage.popups.shop_limited_prices[this.item_obj.short].price_bonds * R) + "</span>" : 8 === TWIR.storage.popups.shop_limited_prices[this.item_obj.short].currency ? '<span style="display: inline-block;position: relative;top: 3px;background: url(' + TWIR.images.currency.veteran + ') no-repeat;width: 16px;height: 16px;"></span><span>&nbsp;' + (TWIR.storage.get("pop_short_currency") ? TWIR.replSum(TWIR.storage.popups.shop_limited_prices[this.item_obj.short].price_veteran * R, !0) : TWIR.storage.popups.shop_limited_prices[this.item_obj.short].price_veteran * R) + "</span>" : 7 === TWIR.storage.popups.shop_limited_prices[this.item_obj.short].currency ? '<span style="display: inline-block;position: relative;top: 3px;background: url(' + TWIR.images.currency.bonds_nuggets + ') no-repeat;width: 16px;height: 16px;"></span><span>&nbsp;' + (TWIR.storage.get("pop_short_currency") ? TWIR.replSum(TWIR.storage.popups.shop_limited_prices[this.item_obj.short].price_nuggets * R, !0) : TWIR.storage.popups.shop_limited_prices[this.item_obj.short].price_nuggets * R) + '</span><span style="display: inline-block;position: relative;top: 3px;background: url(' + TWIR.images.currency.dollars + ') no-repeat;width: 16px;height: 16px;margin-left: 5px;"/><span>&nbsp;&#36;' + TWIR.replSum(TWIR.storage.popups.shop_limited_prices[this.item_obj.short].price_dollar * R) + "</span>" : "";
+              t = t.replace(/(<div\s+class="inventory_popup_prices">[\S\s]*?)(<\/div>)/gi, "$1" + b + '<div class="twir_popup_limited_prices">&nbsp;' + w + "</div> $2")
+            } else t = t.replace(/(<div\s+class="inventory_popup_prices">[\S\s]*?)(<\/div>)/gi, "$1" + b + "$2");
             if (TWIR.storage.get("pop_trader") && null !== this.item_obj.traderlevel && this.item_obj.traderlevel <= 20) switch (this.item_obj.type) {
               case "belt":
               case "body":
@@ -1577,21 +1589,21 @@
                 for (var Q = 0; Q < TWIR.storage.popups.crafting[this.item_obj.item_id].resources.length; Q++) C += '<td style="vertical-align: middle!important;padding: ' + (U > 5 ? "2px" : "5px") + ';border: 1px solid #996b39;border-color: rgba(110,57,0,0.5);background-color: #d4ba91 !important;background-image: none !important;color: #5e321a !important;font-size: 14px;border-collapse: separate !important;border-spacing: 1px !important;"><span>x' + TWIR.storage.popups.crafting[this.item_obj.item_id].resources[Q].count + "</span></td>";
                 C += "</tr></tbody></table></td></tr></tbody></table></div>"
               }
-              var Y = ItemManager.getByBaseId(TWIR.storage.popups.crafting[this.item_obj.item_id].recipe, !0).min_level >= 50;
-              TWIR.storage.get("pop_recipe_table") && Y && (C += '<div class="twir_better_popup" style="text-align:center;margin: 0 auto;display: table;"><table style="display: table !important;border-collapse: separate !important;border-spacing: 1px !important;border-radius: 3px;border: 1px solid #804000;"><tbody><tr><td style="vertical-align: middle!important;padding: 5px;border: 1px solid #996b39;border-color: rgba(110,57,0,0.5);background-color: #d4ba91 !important;background-image: none !important;color: #5e321a !important;font-size: 16px;border-collapse: separate !important;border-spacing: 1px !important;"><img style="width: 30px;height: 30px;" src="' + ItemManager.getByBaseId(TWIR.storage.popups.crafting[this.item_obj.item_id].recipe).image + '"/></td><td style="vertical-align: middle!important;padding: 5px;border: 1px solid #996b39;border-color: rgba(110,57,0,0.5);background-color: #d4ba91 !important;background-image: none !important;color: #5e321a !important;font-style: italic;font-size: 8pt;border-collapse: separate !important;border-spacing: 1px !important;width: 125px;"><span>' + ItemManager.getByBaseId(TWIR.storage.popups.crafting[this.item_obj.item_id].recipe).name + "&nbsp;(" + ItemManager.getByBaseId(TWIR.storage.popups.crafting[this.item_obj.item_id].recipe).min_level + ")</span></td></tr></tbody></table></div>"), t += C
+              var F = ItemManager.getByBaseId(TWIR.storage.popups.crafting[this.item_obj.item_id].recipe, !0).min_level >= 50;
+              TWIR.storage.get("pop_recipe_table") && F && (C += '<div class="twir_better_popup" style="text-align:center;margin: 0 auto;display: table;"><table style="display: table !important;border-collapse: separate !important;border-spacing: 1px !important;border-radius: 3px;border: 1px solid #804000;"><tbody><tr><td style="vertical-align: middle!important;padding: 5px;border: 1px solid #996b39;border-color: rgba(110,57,0,0.5);background-color: #d4ba91 !important;background-image: none !important;color: #5e321a !important;font-size: 16px;border-collapse: separate !important;border-spacing: 1px !important;"><img style="width: 30px;height: 30px;" src="' + ItemManager.getByBaseId(TWIR.storage.popups.crafting[this.item_obj.item_id].recipe).image + '"/></td><td style="vertical-align: middle!important;padding: 5px;border: 1px solid #996b39;border-color: rgba(110,57,0,0.5);background-color: #d4ba91 !important;background-image: none !important;color: #5e321a !important;font-style: italic;font-size: 8pt;border-collapse: separate !important;border-spacing: 1px !important;width: 125px;"><span>' + ItemManager.getByBaseId(TWIR.storage.popups.crafting[this.item_obj.item_id].recipe).name + "&nbsp;(" + ItemManager.getByBaseId(TWIR.storage.popups.crafting[this.item_obj.item_id].recipe).min_level + ")</span></td></tr></tbody></table></div>"), t += C
             }
             if ("mapdrop" === this.item_obj.spec_type && "none" === this.item_obj.usetype && TWIR.storage.get("pop_job_table")) {
-              var F = JobList.getJobsByItemId(this.item_obj.item_id);
+              var Y = JobList.getJobsByItemId(this.item_obj.item_id);
               t += '<br><div style="color: #8b4513; text-align: center;margin-bottom: 2px;">' + TWIRlang.tooltips.jobdrop + ":</div>";
-              for (var G = '<div class="twir_better_popup" style="text-align:center;margin: 0 auto;display: table;"><table style="display: table !important;border-collapse: separate !important;border-spacing: 1px !important;border-radius: 3px;border: 1px solid #804000;"><tbody>', O = 0; O < F.length; O++) {
+              for (var G = '<div class="twir_better_popup" style="text-align:center;margin: 0 auto;display: table;"><table style="display: table !important;border-collapse: separate !important;border-spacing: 1px !important;border-radius: 3px;border: 1px solid #804000;"><tbody>', O = 0; O < Y.length; O++) {
                 var J = 0,
                   D = 0;
-                if ($.isEmptyObject(JobsModel.Beans) || null == JobsModel.Beans[F[O].id].basis.long.yields[0]) J = Math.ceil(600 * F[O].yields[this.item_obj.item_id].prop), D = 0;
-                else if (!$.isEmptyObject(JobsModel.Beans) && void 0 !== JobsModel.Beans[F[O].id].basis.long.yields[0])
-                  for (var H = 0; H < JobsModel.Beans[F[O].id].basis.long.yields.length; H++) JobsModel.Beans[F[O].id].basis.long.yields[H].itemid === this.item_obj.item_id && (J = JobsModel.Beans[F[O].id].basis.long.yields[H].prop, D = JobsModel.Beans[F[O].id].basis.long.yields[H].probBonus);
+                if ($.isEmptyObject(JobsModel.Beans) || null == JobsModel.Beans[Y[O].id].basis.long.yields[0]) J = Math.ceil(600 * Y[O].yields[this.item_obj.item_id].prop), D = 0;
+                else if (!$.isEmptyObject(JobsModel.Beans) && void 0 !== JobsModel.Beans[Y[O].id].basis.long.yields[0])
+                  for (var H = 0; H < JobsModel.Beans[Y[O].id].basis.long.yields.length; H++) JobsModel.Beans[Y[O].id].basis.long.yields[H].itemid === this.item_obj.item_id && (J = JobsModel.Beans[Y[O].id].basis.long.yields[H].prop, D = JobsModel.Beans[Y[O].id].basis.long.yields[H].probBonus);
                 var Z = J + D,
                   N = $.isEmptyObject(JobsModel.Beans) || 0 == Z ? "" : "&nbsp;(" + Z.toFixed(0) + "&nbsp;%)";
-                F[O] && (G += '<tr><td style="vertical-align: middle!important;padding: 5px;border: 1px solid #996b39;border-color: rgba(110,57,0,0.5);background-color: #d4ba91 !important;background-image: none !important;color: #5e321a !important;font-size: 16px;border-collapse: separate !important;border-spacing: 1px !important;"><img style="width: 30px;height: 30px;" src="/images/jobs/' + F[O].shortname + '.png"/></td><td style="vertical-align: middle!important;padding: 5px;border: 1px solid #996b39;border-color: rgba(110,57,0,0.5);background-color: #d4ba91 !important;background-image: none !important;color: #5e321a !important;font-style: italic;font-size: 8pt;border-collapse: separate !important;border-spacing: 1px !important;width: 125px;"><span>' + F[O].name + N + "</span></td></tr>")
+                Y[O] && (G += '<tr><td style="vertical-align: middle!important;padding: 5px;border: 1px solid #996b39;border-color: rgba(110,57,0,0.5);background-color: #d4ba91 !important;background-image: none !important;color: #5e321a !important;font-size: 16px;border-collapse: separate !important;border-spacing: 1px !important;"><img style="width: 30px;height: 30px;" src="/images/jobs/' + Y[O].shortname + '.png"/></td><td style="vertical-align: middle!important;padding: 5px;border: 1px solid #996b39;border-color: rgba(110,57,0,0.5);background-color: #d4ba91 !important;background-image: none !important;color: #5e321a !important;font-style: italic;font-size: 8pt;border-collapse: separate !important;border-spacing: 1px !important;width: 125px;"><span>' + Y[O].name + N + "</span></td></tr>")
               }
               t += G += "</tbody></table></div>"
             }
@@ -1658,10 +1670,10 @@
                   for (var Ie = 0; Ie < le.length; Ie++)
                     if (se[he].skill === le[Ie].skill) {
                       var ke = se[he].value.indexOf("%") > -1 && le[Ie].value.indexOf("%") > -1,
-                        Re = parseFloat(se[he].value) - parseFloat(le[Ie].value);
+                        be = parseFloat(se[he].value) - parseFloat(le[Ie].value);
                       ue.push({
                         skill: se[he].skill,
-                        diff: ke ? Re + "%" : Re,
+                        diff: ke ? be + "%" : be,
                         value: se[he].value
                       })
                     } ue.find(function(e) {
@@ -1672,12 +1684,12 @@
                     value: se[he].value
                   })
                 }
-                for (var be = 0; be < le.length; be++) ue.find(function(e) {
-                  return e.skill === le[be].skill
+                for (var Re = 0; Re < le.length; Re++) ue.find(function(e) {
+                  return e.skill === le[Re].skill
                 }) || ue.push({
-                  skill: le[be].skill,
+                  skill: le[Re].skill,
                   diff: "red",
-                  value: le[be].value
+                  value: le[Re].value
                 });
                 for (var we = 0; we < ue.length; we++)
                   if ("red" !== ue[we].diff) {
@@ -1878,7 +1890,7 @@
         }
         var I = TWIR.storage.inventory.buffs = {},
           k = [],
-          R = {
+          b = {
             energy: h("energy"),
             health: h("health"),
             work_motivation: h("work_motivation"),
@@ -1894,7 +1906,7 @@
             xp: h(["xp", "xp_bottle"]),
             regen: h("regen")
           };
-        $.each(R, function(e, t) {
+        $.each(b, function(e, t) {
           I[e] = {
             name: TWIRlang.inventory[e],
             items: t
@@ -1902,7 +1914,7 @@
             return k.indexOf(e) < 0
           }))
         });
-        var b = TWIR.storage.inventory.use = {},
+        var R = TWIR.storage.inventory.use = {},
           w = [],
           f = {
             events: h(["event_1", "event_2", "event_3", "event_4", "event_5"]),
@@ -1913,7 +1925,7 @@
             avatar_part: h("avatar")
           };
         $.each(f, function(e, t) {
-          b[e] = {
+          R[e] = {
             name: TWIRlang.inventory[e],
             items: t
           }, w = w.concat(t.filter(function(e) {
@@ -1944,7 +1956,7 @@
           V = TWIR.storage.inventory.use_all.concat(TWIR.storage.inventory.buffs_all).concat(TWIR.storage.inventory.crafting_all).concat(x).concat(v);
         s = $.grep(t, function(e) {
           return $.inArray(e, V) < 0
-        }), b.others = {
+        }), R.others = {
           name: "#" + TWIRlang.inventory.others,
           items: s
         }
@@ -2705,11 +2717,11 @@
                       });
                       TWIR.marketWatcher.marketMain[k].date = o
                     } else TWIR.marketWatcher.marketMain.push(h);
-                    var R = [],
-                      b = l.find(function(e) {
+                    var b = [],
+                      R = l.find(function(e) {
                         return e.item_id === A[d].item_id || e.item_id === u.set
                       });
-                    if (void 0 === b && ("yield" !== u.type || null !== u.set || TWIR.storage.inventory.collectibles.indexOf(u.item_base_id) >= 0 || TWIR.storage.inventory.bonus.indexOf(u.item_base_id) >= 0) && TWIR.marketWatcher.isUndervalued(A[d].item_id, A[d].max_price, A[d].auction_price)) {
+                    if (void 0 === R && ("yield" !== u.type || null !== u.set || TWIR.storage.inventory.collectibles.indexOf(u.item_base_id) >= 0 || TWIR.storage.inventory.bonus.indexOf(u.item_base_id) >= 0) && TWIR.marketWatcher.isUndervalued(A[d].item_id, A[d].max_price, A[d].auction_price)) {
                       var w = {
                         type: u.type,
                         auction_ends_in: A[d].auction_ends_in,
@@ -2726,7 +2738,7 @@
                         posy: A[d].market_town_y,
                         spec: "undervalued"
                       };
-                      R.push(w)
+                      b.push(w)
                     }
                     if (TWIR.storage.get("mw_collections") && TWIR.marketWatcher.missing.includes(u.name) && !1 === TWIR.marketWatcher.getBuyed(A[d].item_id)) {
                       var f = {
@@ -2751,9 +2763,9 @@
                         return e.offer_id === A[d].market_offer_id
                       }) || TWIR.marketWatcher.wtb_missing[u.short].push(f))
                     }
-                    if (void 0 !== b) {
+                    if (void 0 !== R) {
                       TWIR.storage.popups.marketBest, TWIR.storage.popups.marketBestJunk;
-                      if (null !== A[d].max_price && A[d].max_price <= b.item_price || null === A[d].max_price || 0 === b.item_price) {
+                      if (null !== A[d].max_price && A[d].max_price <= R.item_price || null === A[d].max_price || 0 === R.item_price) {
                         TWIR.storage.get("mw_status") && e.status(s(TWIRlang.market_watcher.progress_found + ": " + u.name));
                         var y = {
                           type: u.type,
@@ -2781,8 +2793,8 @@
                   } setTimeout(function() {
                   if (!0 === g.msg.next) t++, c();
                   else {
-                    if (R && R.length > 0 && TWIR.storage.get("mw_underpriced_alert")) {
-                      var o = R[Math.floor(Math.random() * R.length)],
+                    if (b && b.length > 0 && TWIR.storage.get("mw_underpriced_alert")) {
+                      var o = b[Math.floor(Math.random() * b.length)],
                         s = ItemManager.get(o.item_id, !0),
                         p = TWIR.marketWatcher.wtb;
                       TWIR.marketWatcher.wtb = {
@@ -2807,11 +2819,11 @@
                     var I = TWIR.marketWatcher.marketMain,
                       k = TWIR.marketWatcher.marketOther;
                     if (void 0 !== localStorage) {
-                      var b = TWIR.minMarketData(I),
+                      var R = TWIR.minMarketData(I),
                         w = TWIR.minMarketData(k),
                         f = TWIR.marketWatcher.wtb;
                       try {
-                        "undefined" != typeof InstallTrigger ? (localStorage.twir_marketData = TWIR.LZ.compressToUTF16(JSON.stringify(b)), localStorage.twir_marketDataJunk = TWIR.LZ.compressToUTF16(JSON.stringify(w)), localStorage.twir_marketDataTemp = TWIR.LZ.compressToUTF16(JSON.stringify(f))) : (localStorage.twir_marketData = TWIR.LZ.compress(JSON.stringify(b)), localStorage.twir_marketDataJunk = TWIR.LZ.compress(JSON.stringify(w)), localStorage.twir_marketDataTemp = TWIR.LZ.compress(JSON.stringify(f)))
+                        "undefined" != typeof InstallTrigger ? (localStorage.twir_marketData = TWIR.LZ.compressToUTF16(JSON.stringify(R)), localStorage.twir_marketDataJunk = TWIR.LZ.compressToUTF16(JSON.stringify(w)), localStorage.twir_marketDataTemp = TWIR.LZ.compressToUTF16(JSON.stringify(f))) : (localStorage.twir_marketData = TWIR.LZ.compress(JSON.stringify(R)), localStorage.twir_marketDataJunk = TWIR.LZ.compress(JSON.stringify(w)), localStorage.twir_marketDataTemp = TWIR.LZ.compress(JSON.stringify(f)))
                       } catch (e) {
                         e == QUOTA_EXCEEDED_ERR && TWIR.console("TWIR/ market database is full!", "red")
                       }
@@ -2901,13 +2913,13 @@
                 h = null !== l[0].max_price ? TWIRlang.market_watcher.price : TWIRlang.market_watcher.bid,
                 I = null !== l[0].max_price ? l[0].max_price / l[0].item_count : l[0].auction_price / l[0].item_count,
                 k = l[0].spec && "trader" == l[0].spec ? "blue" : TWIR.storage.popups.marketBest[m.short] && I <= TWIR.storage.popups.marketBest[m.short].price_sum / TWIR.storage.popups.marketBest[m.short].offer_count && TWIR.storage.popups.marketBest[m.short].offer_count > 2 ? "#070" : TWIR.storage.popups.marketBest[m.short] && TWIR.storage.popups.marketBest[m.short].offer_max.price <= I && TWIR.storage.popups.marketBest[m.short].offer_count > 2 && l[0].seller_name != TWIR.author ? "#900" : "unset",
-                R = Map.calcWayTime(TWIR.lastPos(), {
+                b = Map.calcWayTime(TWIR.lastPos(), {
                   x: l[0].posx,
                   y: l[0].posy
                 }),
-                b = "<div>@" + l[0].seller_name + (l[0].market_town ? "&nbsp;(" + l[0].market_town + ")" : "") + "</div><div>" + TWIRlang.informative.distance + ":&nbsp;" + R.formatDuration() + "</div>",
+                R = "<div>@" + l[0].seller_name + (l[0].market_town ? "&nbsp;(" + l[0].market_town + ")" : "") + "</div><div>" + TWIRlang.informative.distance + ":&nbsp;" + b.formatDuration() + "</div>",
                 w = s !== o.length - 1 || 9 === s ? "1px solid rgba(140,92,20,0.65)" : "none",
-                f = l.length > 1 ? '<div style="font-style: italic;margin-left: 10px;color: #666;cursor: pointer;"><span title="' + b.escapeHTML() + '">@' + l[0].seller_name.cutIt(14) + '</span>&nbsp;<span title="' + p.escapeHTML() + '">' + TWIRlang.market_watcher.offer_count.replace("$1", l.length - 1) + "</span></div>" : '<div style="color: #666;margin-left: 10px;cursor: pointer;"><span title="' + b.escapeHTML() + '">@' + l[0].seller_name + "</span></div>",
+                f = l.length > 1 ? '<div style="font-style: italic;margin-left: 10px;color: #666;cursor: pointer;"><span title="' + R.escapeHTML() + '">@' + l[0].seller_name.cutIt(14) + '</span>&nbsp;<span title="' + p.escapeHTML() + '">' + TWIRlang.market_watcher.offer_count.replace("$1", l.length - 1) + "</span></div>" : '<div style="color: #666;margin-left: 10px;cursor: pointer;"><span title="' + R.escapeHTML() + '">@' + l[0].seller_name + "</span></div>",
                 y = "trader" != l[0].spec ? "TWIR.marketWatcher.searchMarket(" + l[0].item_id + ")" : "west.window.shop.open(&quot;wear_window&quot;).showCategory(&quot;trader&quot;)",
                 T = l[0].spec && "undervalued" == l[0].spec ? '<img src="' + TWIR.images.underprice + '" style="position: absolute; right: 0px; bottom: 0px;"/>' : l[0].spec && "trader" == l[0].spec ? '<img src="' + TWIR.images.trader + '" style="position: absolute; right: 0px; bottom: 0px;"/>' : "";
               r += '<tr style="border-spacing: 1px !important;border-radius: 3px;border-bottom: ' + w + ';"><td style="vertical-align: middle;"><div style="position: relative; height: 29px; width: 35px;"><img data-item-id="' + l[0].item_id + '" style="cursor: pointer;" title="' + new ItemPopup(m).getXHTML().escapeHTML() + '" src="' + m.image + '"; height="29"; width="29"></img>' + T + "</div></td>", r += '<td style="padding: 2px;padding-right: 8px;vertical-align: middle;"><div style="margin-bottom: -2px; cursor: pointer;"><span title="' + new ItemPopup(m).getXHTML().escapeHTML() + '" data-item-id="' + l[0].item_id + '" style="width: 220px;text-overflow: ellipsis;white-space: nowrap;overflow: hidden;display: inline-block; color: ' + k + ';">' + m.name + '</span><span style="display: inline-block;overflow: hidden;"> &nbsp;(x' + l[0].item_count + ")</span></div>" + f + "</td>", r += '<td title="' + l[0].auction_end_date.getFormattedTimeString4Timestamp() + '" style="text-align: center;padding: 2px; padding-right: 8px;cursor: pointer;"><div>' + TWIRlang.market_watcher.time_left + "</div><div>" + TWIR.msToTime(l[0].auction_ends_in) + "</div></td>", r += '<td title="' + (u ? u.escapeHTML() : "") + '" style="text-align: center;padding: 2px;cursor: pointer;"><div>' + h + '</div><div style="color: ' + k + ';">$' + TWIR.replSum(I) + "</div></td>", r += '<td style="vertical-align: middle;"><div onclick="' + y + '" style="margin-left: 10px;cursor: pointer;"><img src="/images/icons/bid.png" title="' + ("trader" != l[0].spec ? TWIRlang.market_watcher.bid_now : TWIRlang.market_watcher.buy_trader) + '" /> </div></td>', r += "</tr>"
@@ -3011,8 +3023,8 @@
         h = 0,
         I = 0,
         k = 0,
-        R = 0,
         b = 0,
+        R = 0,
         w = 0,
         f = 0,
         y = 0,
@@ -3031,8 +3043,8 @@
         j = 0,
         q = 0,
         Q = 0,
-        Y = 0,
         F = 0,
+        Y = 0,
         G = 0,
         O = 0,
         J = 0,
@@ -3057,7 +3069,7 @@
             p += 1, c += e[z].count, q += 1, Q += e[z].count;
             break;
           case "head":
-            p += 1, c += e[z].count, Y += 1, F += e[z].count;
+            p += 1, c += e[z].count, F += 1, Y += e[z].count;
             break;
           case "neck":
             p += 1, c += e[z].count, G += 1, O += e[z].count;
@@ -3085,7 +3097,7 @@
         }
       }
       for (var X = 0; X < t.length; X++) I += 1, k += t[X].count;
-      for (var _ = 0; _ < a.length; _++) R += 1, b += a[_].count;
+      for (var _ = 0; _ < a.length; _++) b += 1, R += a[_].count;
       for (var $ = 0; $ < i.length; $++) "recipe" !== i[$].obj.type && (w += 1, f += i[$].count);
       for (var ee = 0; ee < n.length; ee++) y += 1, T += n[ee].count;
       for (var te = 0; te < r.length; te++) W += 1, x += r[te].count;
@@ -3101,8 +3113,8 @@
         setitems_total_count: m,
         useable_count: I,
         useable_total_count: k,
-        buff_count: R,
-        buff_total_count: b,
+        buff_count: b,
+        buff_total_count: R,
         craft_count: w,
         craft_total_count: f,
         bonus_count: y,
@@ -3121,8 +3133,8 @@
         body_total_count: j,
         foot_count: q,
         foot_total_count: Q,
-        head_count: Y,
-        head_total_count: F,
+        head_count: F,
+        head_total_count: Y,
         neck_count: G,
         neck_total_count: O,
         pants_count: J,
@@ -3155,8 +3167,8 @@
         h = 0,
         I = 0,
         k = 0,
-        R = 0,
         b = 0,
+        R = 0,
         w = {
           item_id: 0,
           item_price: 0
@@ -3213,7 +3225,7 @@
               item_price: U.sell_price
             })
         }
-        "yield" !== U.type && W[M].count > 1 && (R += $.isNumeric(ItemManager.get(M, !0).price) ? ItemManager.get(M, !0).price * W[M].count : 0, b += $.isNumeric(ItemManager.get(M, !0).sell_price) ? ItemManager.get(M, !0).sell_price * W[M].count : 0), "yield" !== U.type && !0 === U.dropable && (I += $.isNumeric(ItemManager.get(M, !0).price) ? ItemManager.get(M, !0).price * W[M].count : 0, k += $.isNumeric(ItemManager.get(M, !0).sell_price) ? ItemManager.get(M, !0).sell_price * W[M].count : 0)
+        "yield" !== U.type && W[M].count > 1 && (b += $.isNumeric(ItemManager.get(M, !0).price) ? ItemManager.get(M, !0).price * W[M].count : 0, R += $.isNumeric(ItemManager.get(M, !0).sell_price) ? ItemManager.get(M, !0).sell_price * W[M].count : 0), "yield" !== U.type && !0 === U.dropable && (I += $.isNumeric(ItemManager.get(M, !0).price) ? ItemManager.get(M, !0).price * W[M].count : 0, k += $.isNumeric(ItemManager.get(M, !0).sell_price) ? ItemManager.get(M, !0).sell_price * W[M].count : 0)
       }
       return i = Math.round(i / TWIR.storage.stats.cache.count.objects_count), n = Math.round(n / TWIR.storage.stats.cache.count.objects_count), r = Math.round(r / TWIR.storage.stats.cache.count.products_count), o = Math.round(o / TWIR.storage.stats.cache.count.products_count), TWIR.storage.stats.cache.value = {
         inventory_buy_price: e,
@@ -3235,8 +3247,8 @@
         recipe_sell_price: h,
         droppable_buy_price: I,
         droppable_sell_price: k,
-        duplicates_buy_price: R,
-        duplicates_sell_price: b
+        duplicates_buy_price: b,
+        duplicates_sell_price: R
       }, TWIR.storage.stats.cache.max_price = {
         products_max_buy_price: f,
         objects_max_buy_price: w,
@@ -3372,15 +3384,16 @@
       }
     }, TWIR.makeMarketMenu = function(e) {
       try {
-        var t = (new west.gui.Selectbox).setHeader(TWIRlang.menulink.market);
-        if (!1 === $.isEmptyObject(TWIR.storage.market)) {
-          var a = Object.keys(TWIR.storage.market).sort(function(e, t) {
-            return TWIR.storage.market[e].distance - TWIR.storage.market[t].distance
-          }).reduce(function(e, t, a) {
-            return e[a] = TWIR.storage.market[t], e
+        var t = (new west.gui.Selectbox).setHeader(TWIRlang.menulink.market),
+          a = TWIR.storage.market;
+        if (!1 === $.isEmptyObject(a)) {
+          var i = Object.keys(a).sort(function(e, t) {
+            return a[e].distance - a[t].distance
+          }).reduce(function(e, t, i) {
+            return e[i] = a[t], e
           }, {});
 
-          function i(e) {
+          function n(e) {
             switch (e[0]) {
               case 3:
                 Guidepost.show(e[1].id, e[1].posx, e[1].posy, "town");
@@ -3403,22 +3416,22 @@
                 }, fetch("fetch_town_offers"), fetch("fetch_town_bids")
             }
           }
-          for (var n in t.addItem(["premium_bids"], ' <img src="' + TWIR.images.currency.nuggets + '" height="16px width="auto" style="left: 5px;top: 5px;"/><span style="margin-left: 15px;color: #5e321a; text-overflow: ellipsis;white-space: nowrap;overflow: hidden;word-wrap: break-word; margin-top: 2px; max-width: 200px;display: inline-block;">' + TWIRlang.menulink.premium_bids + "</span>", TWIRlang.menulink.premium_bids), t.addItem(["premium_offers"], ' <img src="' + TWIR.images.currency.nuggets + '" height="16px width="auto" style="left: 5px;top: 5px;"/><span style="margin-left: 15px;color: #5e321a; text-overflow: ellipsis;white-space: nowrap;overflow: hidden;word-wrap: break-word; margin-top: 2px; max-width: 200px;display: inline-block;">' + TWIRlang.menulink.premium_offers + "</span>", TWIRlang.menulink.premium_offers).addEmpty(), t.addItem(["map"], ' <img src="/images/icons/welt.png" height="16px width="auto" style="left: 5px;top: 5px;"/><span style="margin-left: 15px;color: #5e321a; text-overflow: ellipsis;white-space: nowrap;overflow: hidden;word-wrap: break-word; margin-top: 2px; max-width: 200px;display: inline-block;">' + TWIRlang.menulink.market_map + "</span>", TWIRlang.menulink.market_map).addEmpty(), a) {
-            var r = a[n],
-              o = "",
-              s = 0,
-              l = 0;
-            for (var p in o += "<div class=&quot;popup_yield&quot; style=&quot;display: block;max-width: 396px;&quot;>", r.items) {
-              "offer_sold" === r.items[p].type ? l += r.items[p].money : "offer_sold" !== r.items[p].type && (s += r.items[p].count), Object.keys(r.items).length;
-              var c = ItemManager.get(p, !0);
-              o += "<div class=&quot;popup_yield_image&quot; style=&quot;margin-right: 1px;margin-bottom: 1px;display: inline-block;&quot;><div class=&quot;item&quot;><span class=&quot;count&quot; style=&quot;display:block;top:30px;left:1px&quot;>" + TWIR.replSum(r.items[p].count) + "</span><img src=&quot;" + c.image + "&quot; alt=&quot;" + c.name + "&quot; width=&quot;43&quot; height=&quot;43&quot; /></div>", "offer_sold" === r.items[p].type && (o += "<span style=&quot;font-size: 11px;text-align: center;display: block;&quot;>$" + TWIR.replSum(r.items[p].money) + "</span>"), o += "</div>"
+          for (var r in t.addItem(["premium_bids"], ' <img src="' + TWIR.images.currency.nuggets + '" height="16px width="auto" style="left: 5px;top: 5px;"/><span style="margin-left: 15px;color: #5e321a; text-overflow: ellipsis;white-space: nowrap;overflow: hidden;word-wrap: break-word; margin-top: 2px; max-width: 200px;display: inline-block;">' + TWIRlang.menulink.premium_bids + "</span>", TWIRlang.menulink.premium_bids), t.addItem(["premium_offers"], ' <img src="' + TWIR.images.currency.nuggets + '" height="16px width="auto" style="left: 5px;top: 5px;"/><span style="margin-left: 15px;color: #5e321a; text-overflow: ellipsis;white-space: nowrap;overflow: hidden;word-wrap: break-word; margin-top: 2px; max-width: 200px;display: inline-block;">' + TWIRlang.menulink.premium_offers + "</span>", TWIRlang.menulink.premium_offers).addEmpty(), t.addItem(["map"], ' <img src="/images/icons/welt.png" height="16px width="auto" style="left: 5px;top: 5px;"/><span style="margin-left: 15px;color: #5e321a; text-overflow: ellipsis;white-space: nowrap;overflow: hidden;word-wrap: break-word; margin-top: 2px; max-width: 200px;display: inline-block;">' + TWIRlang.menulink.market_map + "</span>", TWIRlang.menulink.market_map).addEmpty(), i) {
+            var o = i[r],
+              s = "",
+              l = 0,
+              p = 0;
+            for (var c in s += "<div class=&quot;popup_yield&quot; style=&quot;display: block;max-width: 396px;&quot;>", o.items) {
+              "offer_sold" === o.items[c].type ? p += o.items[c].money : "offer_sold" !== o.items[c].type && (l += o.items[c].count), Object.keys(o.items).length;
+              var g = ItemManager.get(c, !0);
+              s += "<div class=&quot;popup_yield_image&quot; style=&quot;margin-right: 1px;margin-bottom: 1px;display: inline-block;&quot;><div class=&quot;item&quot;><span class=&quot;count&quot; style=&quot;display:block;top:30px;left:1px&quot;>" + TWIR.replSum(o.items[c].count) + "</span><img src=&quot;" + g.image + "&quot; alt=&quot;" + g.name + "&quot; width=&quot;43&quot; height=&quot;43&quot; /></div>", "offer_sold" === o.items[c].type && (s += "<span style=&quot;font-size: 11px;text-align: center;display: block;&quot;>$" + TWIR.replSum(o.items[c].money) + "</span>"), s += "</div>"
             }
-            o += "</div>", t.addItem(0, '<img src="/images/map/minimap/icons/miniicon_market_items.png" style="left: 5px;top: 8px;"/><span title="' + ("<div>" + r.name + "</div><div>" + TWIRlang.informative.distance + ":&nbsp;" + r.distance.formatDuration() + "</div>").escapeHTML() + '" style="margin-left: 15px;color: #5e321a; text-overflow: ellipsis;white-space: nowrap;overflow: hidden;word-wrap: break-word; margin-top: 2px; max-width: 170px;display: inline-block;">' + r.name + '</span><span title="' + o + '" style="display: inline-block;margin-top: 3px;color: #5e321a;position: relative;float: right;font-size: 12px;">&#124;&nbsp;' + (0 != l ? "$" + TWIR.replSum(l) + (0 != s ? ",&nbsp;" : "") : "") + (0 != s ? TWIR.replSum(s) + "&nbsp;" + TWIRlang.tooltips.items : "") + "</span>", (new west.gui.Selectbox).setHeader(r.name.cutIt(16)).setWidth(180).addItem([1, r], '<span style="color: #5e321a;">' + TWIRlang.menulink.window_open + "</span>").addItem([2, r], '<span style="color: #5e321a;">' + TWIRlang.menulink.map_show + "</span>").addItem([3, r], '<span style="color: #5e321a;">' + TWIRlang.menulink.walk + "</span>").addListener(i, this))
+            s += "</div>", t.addItem(0, '<img src="/images/map/minimap/icons/miniicon_market_items.png" style="left: 5px;top: 8px;"/><span title="' + ("<div>" + o.name + "</div><div>" + TWIRlang.informative.distance + ":&nbsp;" + o.distance.formatDuration() + "</div>").escapeHTML() + '" style="margin-left: 15px;color: #5e321a; text-overflow: ellipsis;white-space: nowrap;overflow: hidden;word-wrap: break-word; margin-top: 2px; max-width: 170px;display: inline-block;">' + o.name + '</span><span title="' + s + '" style="display: inline-block;margin-top: 3px;color: #5e321a;position: relative;float: right;font-size: 12px;">&#124;&nbsp;' + (0 != p ? "$" + TWIR.replSum(p) + (0 != l ? ",&nbsp;" : "") : "") + (0 != l ? TWIR.replSum(l) + "&nbsp;" + TWIRlang.tooltips.items : "") + "</span>", (new west.gui.Selectbox).setHeader(o.name.cutIt(16)).setWidth(180).addItem([1, o], '<span style="color: #5e321a;">' + TWIRlang.menulink.window_open + "</span>").addItem([2, o], '<span style="color: #5e321a;">' + TWIRlang.menulink.map_show + "</span>").addItem([3, o], '<span style="color: #5e321a;">' + TWIRlang.menulink.walk + "</span>").addListener(n, this))
           }
-          for (var g = 0, A = 0; A < t.items.length; A++) {
-            var d = t.items[A].node.text(),
-              m = 10 * d.length;
-            m > g && (t.setWidth(m <= 300 && m >= 240 ? m : m <= 240 ? 240 : 300), g = m)
+          for (var A = 0, d = 0; d < t.items.length; d++) {
+            var m = t.items[d].node.text(),
+              u = 10 * m.length;
+            u > A && (t.setWidth(u <= 300 && u >= 240 ? u : u <= 240 ? 240 : 300), A = u)
           }
           return t.addListener(function(e) {
             var t = e[0];
@@ -3737,36 +3750,48 @@
             $(this).css("background-position", "-25px 0px")
           }).mouseleave(function() {
             $(this).css("background-position", "0px 0px")
-          }).click(function(e) {
-            TWIR.checkMap(function() {
+          }).on("click", function(e) {
+            var t = $(this);
+            t.prop("disabled") || (t.prop("disabled", !0), setTimeout(function() {
+              t.prop("disabled", !1)
+            }, 1e3), TWIR.checkMap(function() {
               TWIR.makeSleepMenu(e)
-            })
+            }))
           });
           var n = $('<div id="twir_charlink_market" class="twir_charlink-link" title="' + TWIRlang.menulink.market + '" style="background: url(' + TWIR.images.menulink.market + ') no-repeat 0px 0px transparent; top: 28px;left: 6px;background-position: 0px 0px;"></div>').appendTo(t);
           n.mouseenter(function() {
             $(this).css("background-position", "-25px 0px")
           }).mouseleave(function() {
             $(this).css("background-position", "0px 0px")
-          }).click(function(e) {
-            TWIR.checkMarket(function() {
+          }).on("click", function(e) {
+            var t = $(this);
+            t.prop("disabled") || (t.prop("disabled", !0), setTimeout(function() {
+              t.prop("disabled", !1)
+            }, 1e3), TWIR.checkMarket(function() {
               TWIR.makeMarketMenu(e)
-            })
+            }))
           });
           var r = $('<div class="twir_charlink-link" title="' + TWIRlang.menulink.npc + '" style="background: url(' + TWIR.images.menulink.npc + ') no-repeat 0px 0px transparent; top: 55px;left: 6px;background-position: 0px 0px;"></div>').appendTo(t);
           r.mouseenter(function() {
             $(this).css("background-position", "-25px 0px")
           }).mouseleave(function() {
             $(this).css("background-position", "0px 0px")
-          }).click(function(e) {
-            TWIR.checkMap(function() {
+          }).on("click", function(e) {
+            var t = $(this);
+            t.prop("disabled") || (t.prop("disabled", !0), setTimeout(function() {
+              t.prop("disabled", !1)
+            }, 1e3), TWIR.checkMap(function() {
               TWIR.makeNPCMenu(e)
-            })
+            }))
           })
         } catch (e) {}
       }
     }, TWIR.Inventory = {
       init: function() {
         TWIR.Inventory.addCategories(), TWIR.Inventory.addCss(), TWIR.Inventory.setsButton(), TWIR.Inventory.betterSearch()
+      },
+      initCol: function() {
+        TWIR.Inventory.injectItemTrader(), TWIR.Inventory.injectTrader()
       },
       data: {
         lastItems: [],
@@ -3947,6 +3972,29 @@
           "background-size": "30px 30px"
         });
         return $(".inventory .open_search").css("cssText", "position: absolute !important;right: 41px; display: inline-block;"), this
+      },
+      injectItemTrader: function() {
+        west.game.shop.item.view.prototype.twir_Collections = function(e) {
+          var t = this.getModel(),
+            a = $.trim(t.getName()),
+            i = Number(t.getId());
+          if (e.find(".twir_collectible").remove(), TWIR.marketWatcher.missing.includes(a) && !1 === TWIR.marketWatcher.getBuyed(i)) {
+            var n = '<img class="tw2gui-iconset tw2gui-icon-achievement twir_collectible" src="/images/tw2gui/pixel-vfl3z5WfW.gif" title="' + TWIRlang.tooltips.collection + '" style="position:absolute;top:10px;right:10px;padding:0px;border:0px;margin:0px;" />';
+            return $(n)
+          }
+          return ""
+        };
+        var modifiedFunc = west.game.shop.item.view.prototype.render.toString();
+        modifiedFunc = modifiedFunc.toString().replace("return $item;", "$item.append(that.twir_Collections($item)); return $item;"), eval("west.game.shop.item.view.prototype.render=" + modifiedFunc)
+      },
+      injectTrader: function() {
+        tw2widget.TraderItem.prototype.twir_Collections = function() {
+          var e = $.trim(this.obj.name),
+            t = Number(this.obj.item_id);
+          return this.divMain.find(".twir_collectible").remove(), TWIR.marketWatcher.missing.includes(e) && !1 === TWIR.marketWatcher.getBuyed(t) && this.divMain.append('<img class="tw2gui-iconset tw2gui-icon-achievement twir_collectible" src="/images/tw2gui/pixel-vfl3z5WfW.gif" title="' + TWIRlang.tooltips.collection + '" style="position:absolute;top:0px;right:0px;padding:0px;border:0px;margin:0px;" />'), this.divMain
+        };
+        var modifiedFunc = tw2widget.TraderItem.prototype.getMainDiv.toString();
+        modifiedFunc = modifiedFunc.replace("return this.divMain;", "this.divMain = this.twir_Collections(); return this.divMain;"), eval("tw2widget['TraderItem'].prototype.getMainDiv =" + modifiedFunc)
       },
       betterSearch: function() {
         Inventory.search = function(e) {
@@ -4159,10 +4207,10 @@
           })).appendTo(p), $('<table style="margin-bottom: 10px;margin-left: auto;margin-right: auto;"/>').append(a, p).appendTo(e), e.append("<hr>");
           var I = $('<div style="margin-top: 15px; display: none;"/>'),
             k = $("<div/>"),
-            R = $('<span style="cursor: pointer;">' + TWIRlang.organizing.sort_by + ":&nbsp;</span>"),
-            b = $('<img src="' + TWIR.images.arrow + '" width="13" style="margin-left: 2px;"/>');
-          R.append(b), k.append(R.on("click", function() {
-            I.toggle(), $(b).toggleClass("twir_flip")
+            b = $('<span style="cursor: pointer;">' + TWIRlang.organizing.sort_by + ":&nbsp;</span>"),
+            R = $('<img src="' + TWIR.images.arrow + '" width="13" style="margin-left: 2px;"/>');
+          b.append(R), k.append(b.on("click", function() {
+            I.toggle(), $(R).toggleClass("twir_flip")
           })), e.append(k);
           var w = new west.gui.Checkbox(TWIRlang.organizing.save_permanent, "");
           void 0 !== localStorage && localStorage.twir_sort ? w.setSelected(!0, !0) : void 0 === localStorage && w.setEnabled(!1);
@@ -4415,9 +4463,9 @@
           I.empty();
           var k = TWIR.Inventory.getSetsImages(t, "ride");
           if (2 == k.length) {
-            var R = $('<img src="' + k[0] + '" style="width: 40px; height: auto;position: absolute;left: -5px; top: 2px;"/>'),
-              b = $('<img src="' + k[1] + '" style="width: 40px; height: auto;position: absolute;right: -5px; bottom: 0px;"/>');
-            I.append(R, b)
+            var b = $('<img src="' + k[0] + '" style="width: 40px; height: auto;position: absolute;left: -5px; top: 2px;"/>'),
+              R = $('<img src="' + k[1] + '" style="width: 40px; height: auto;position: absolute;right: -5px; bottom: 0px;"/>');
+            I.append(b, R)
           } else if (1 == k.length) {
             var w = $('<img src="' + k[0] + '" style="width: 40px;height: auto;position: absolute;left: 5px;top: 5px;"/>');
             I.append(w)
@@ -4653,9 +4701,9 @@
             })
           }
           TWIR.sortName(u, name);
-          for (var R = 0; R < u.length; R++) {
-            var b = '<span style="vertical-align: middle;display: inline-block;margin-bottom: 2px;margin-right: 2px;"><img src="' + TWIR.images.gameEvents[u[R].key] + '" height="16" width="auto"/></span>';
-            m.addItem(u[R].key, b + u[R].name)
+          for (var b = 0; b < u.length; b++) {
+            var R = '<span style="vertical-align: middle;display: inline-block;margin-bottom: 2px;margin-right: 2px;"><img src="' + TWIR.images.gameEvents[u[b].key] + '" height="16" width="auto"/></span>';
+            m.addItem(u[b].key, R + u[b].name)
           }
           m.addItem("none", TWIRlang.informative.none), m.addListener(function(t) {
             TWIR.Inventory.data.eventVal = t, TWIR.Inventory.updateSetsHtml(e)
@@ -5200,24 +5248,24 @@
           h = a.fort.fort_resistance,
           I = a.fort.fort_damage_sector,
           k = "duelist" === a.charClass ? a.premium ? 1.2 : 1.1 : 1,
-          R = a.damage,
-          b = "worker" == a.charClass ? a.premium ? 1.4 : 1.2 : 1,
+          b = a.damage,
+          R = "worker" == a.charClass ? a.premium ? 1.4 : 1.2 : 1,
           w = a.skills.leadership,
           f = Math.pow(w * ("soldier" == a.charClass ? a.premium ? 1.5 : 1.25 : 1), .5),
           y = 90 + a.skills.health * ("soldier" == a.charClass ? a.premium ? 20 : 15 : 10) + 10 * a.level,
           T = {
             attack: {
-              hit: p((25 + f + d + g + m) * b, 2),
-              dodge: p((10 + f + A + g + u) * b, 2),
+              hit: p((25 + f + d + g + m) * R, 2),
+              dodge: p((10 + f + A + g + u) * R, 2),
               resistance: p(300 * a.skills.hide / y + h, 2)
             },
             defense: {
-              hit: p((25 + f + d + c + m) * b, 2),
-              dodge: p((10 + f + A + c + u) * b, 2),
+              hit: p((25 + f + d + c + m) * R, 2),
+              dodge: p((10 + f + A + c + u) * R, 2),
               resistance: p(300 * a.skills.pitfall / y + h, 2)
             },
             health: y,
-            damage: [Math.round(Number(R[0]) + I + (Number(R[0]) + I) * w / y), Math.round(Number(R[1]) + I + (Number(R[1]) + I) * w / y)],
+            damage: [Math.round(Number(b[0]) + I + (Number(b[0]) + I) * w / y), Math.round(Number(b[1]) + I + (Number(b[1]) + I) * w / y)],
             speed: Math.round((100 + (a.other.ms || 0) + a.skills.ride) * (1 + (a.other.speed || 0) / 100) * k)
           };
         return T
@@ -5417,16 +5465,16 @@
           });
           var I = $('<div style="margin-top: 2px;"></div>'),
             k = new west.gui.Accordion("twir_bw_g3", TWIRlang.calc.js, "twir_bw_bonuses"),
-            R = $('<div style="margin-top: 2px;"></div>');
-          for (var b in e.group3.skills) {
-            var p = $('<div title="' + TWIRlang.calc[b] + '" class="twir_bestWear_choose" style="display:inline-block;width: 50px; height: 50px; margin-right: 2px;margin-bottom: 2px;position: relative;">' + S(b, 34, "group3", "skills", !0) + '<div style="background: url(' + TWIR.images.skill_universal + ');background-size: cover;position: absolute;height: 48px;width: 48px;display: block;top: 2px;left: 1px;"></div></div>').data("selector", b).mouseenter(function() {
+            b = $('<div style="margin-top: 2px;"></div>');
+          for (var R in e.group3.skills) {
+            var p = $('<div title="' + TWIRlang.calc[R] + '" class="twir_bestWear_choose" style="display:inline-block;width: 50px; height: 50px; margin-right: 2px;margin-bottom: 2px;position: relative;">' + S(R, 34, "group3", "skills", !0) + '<div style="background: url(' + TWIR.images.skill_universal + ');background-size: cover;position: absolute;height: 48px;width: 48px;display: block;top: 2px;left: 1px;"></div></div>').data("selector", R).mouseenter(function() {
               e.group3.skills[$(this).data("selector")].selector.getMainDiv().show()
             }).mouseleave(function() {
               e.group3.skills[$(this).data("selector")].selector.getMainDiv().hide()
-            }).appendTo(R);
-            $('<div id="twir_' + b + '_displayValue" style="position: absolute;width: 23px;height: 15px;left: 3px;bottom: 2px;color: #FFF;font-size: 11px;font-weight: bold;text-align: center;text-shadow: #000 1px 1px 1px;">0</div>').appendTo(p);
-            e.group3.skills[b].selector = new west.gui.Plusminusfield(b, 0, 0, 5, 0, U, U, U).setWidth(40).appendTo(p), e.group3.skills[b].selector.component = "Plusminusfield";
-            var A = e.group3.skills[b].selector.getMainDiv();
+            }).appendTo(b);
+            $('<div id="twir_' + R + '_displayValue" style="position: absolute;width: 23px;height: 15px;left: 3px;bottom: 2px;color: #FFF;font-size: 11px;font-weight: bold;text-align: center;text-shadow: #000 1px 1px 1px;">0</div>').appendTo(p);
+            e.group3.skills[R].selector = new west.gui.Plusminusfield(R, 0, 0, 5, 0, U, U, U).setWidth(40).appendTo(p), e.group3.skills[R].selector.component = "Plusminusfield";
+            var A = e.group3.skills[R].selector.getMainDiv();
             A.css({
               width: "40px",
               position: "absolute",
@@ -5477,7 +5525,7 @@
               cursor: "pointer"
             })
           }
-          I.append(R, w), k.setContent(I), $(k.getMainDiv()[0]).click(function(e) {
+          I.append(b, w), k.setContent(I), $(k.getMainDiv()[0]).click(function(e) {
             C()
           }), n.append(o.getMainDiv()), n.append(k.getMainDiv()), n.append(m.getMainDiv()), a.append(n);
           var y = $('<div style="width: 252px;position: absolute;right: 15px;bottom: 65px;"></div>'),
