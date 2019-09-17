@@ -992,9 +992,7 @@
         }
       }
     }, TWIR.battleShortcuts = {
-      init: function() {
-        TWIR.battleShortcuts.getLiveData(), TWIR.battleShortcuts.addInfo()
-      },
+      init: function() {},
       formatStatus: function(e, t) {
         var a = Chat.Formatter.getStatus(e);
         return '<span class="client_status ' + t + '_status" title="' + a.label + '"><img src="/images/chat/status_' + a.icon + '.png?3"/></span>'
