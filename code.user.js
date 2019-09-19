@@ -19,7 +19,7 @@
 // @description:ru Лучший инвентарь и инструменты для The West!
 
 // @author Jamza (CZ14)
-// @version 2.170
+// @version 2.171
 // @license GPL-3.0
 
 // @include https://*.the-west.*/game.php*
@@ -68,7 +68,7 @@
   var script = document.createElement("script");
   script.setAttribute("type", "application/javascript"), script.textContent = "(" + function() {
     TWIRlang = {}, TWIR = {
-      version: "2.170",
+      version: "2.171",
       name: "TW Inventory Reloaded",
       author: "Jamza",
       minGame: "2.04",
@@ -992,7 +992,9 @@
         }
       }
     }, TWIR.battleShortcuts = {
-      init: function() {},
+      init: function() {
+        TWIR.battleShortcuts.getLiveData(), TWIR.battleShortcuts.addInfo()
+      },
       formatStatus: function(e, t) {
         var a = Chat.Formatter.getStatus(e);
         return '<span class="client_status ' + t + '_status" title="' + a.label + '"><img src="/images/chat/status_' + a.icon + '.png?3"/></span>'
@@ -1046,39 +1048,23 @@
             o = TWIR.battleShortcuts.formatStatus(n, a),
             s = TWIR.battleShortcuts.formatPlayerRank() ? TWIR.battleShortcuts.formatPlayerRank() : "";
           return t = t.replace(/\<div class\="recruitlist_avatar"\>/, '<div class="recruitlist_avatar" onclick="' + r + '" style="cursor: pointer"> <div style="position: absolute;z-index: 100;left: 16px;">' + (TWIR.storage.get("fb_online_status") ? o : "") + (TWIR.storage.get("fb_ranks") ? s : "") + "</div>")
-        }, FortBattleWindow.twir_cache = {
-          resistance: {}
         }, FortBattleWindow.twir_changeCellPopupText = FortBattleWindow.twir_changeCellPopupText || FortBattleWindow.changeCellPopupText, FortBattleWindow.changeCellPopupText = function(e) {
-          var t = this,
-            a = e || t.popup.idx,
-            i = t.charactersByPos[a];
-          if (i) {
-            t.popup.idx = a;
-            var n = i.westPlayerId,
-              r = t.fortId,
-              o = !(i.team > 0);
-            ! function(e) {
-              if (FortBattleWindow.twir_cache.resistance[n]) return void e();
-              Ajax.remoteCallMode("fort_battlepage", "getPlayerDatasheet", {
-                fort_id: r,
-                playerId: n,
-                isDefender: o
-              }, function(t) {
-                FortBattleWindow.twir_cache.resistance[n] = t.resistance, console.log(t), e()
-              })
-            }(function() {
-              var e = FortBattleWindow.twir_cache.resistance[n],
-                a = Chat.Resource.Manager.getClient("client_" + n),
-                o = a ? a.statusId : 0,
-                l = TWIR.battleShortcuts.formatStatus(o, n),
-                p = TWIR.battleShortcuts.formatPlayerRank(n, r) ? TWIR.battleShortcuts.formatPlayerRank(n, r) : "",
-                c = '<td><img src="%1" /></td><td>&nbsp;%2&nbsp;</td>',
-                g = "<div style='margin-left: 10px;'><table cellpadding=0 cellspacing=0><tr>" + (0 != i.bonusinfo.offense ? s(c, "/images/fort/battle/attacker_secondary.png", i.bonusinfo.offense || 0) : "") + (0 != i.bonusinfo.defense ? s(c, "/images/fort/battle/defender_secondary.png", i.bonusinfo.defense || 0) : "") + (0 != i.bonusinfo.leadbonus ? s(c, "/images/fort/battle/leadsupport.png", i.bonusinfo.leadbonus || 0) : "") + (0 != e ? s(c, "/images/fort/battle/resistance.png", e || 0) : "") + "</tr></table></div>";
-              g += '<table style="margin:0;padding:0;font-size:8pt"><tr style="font-size:8pt;height:20px;font-weight:bold;">', g += '<td style="vertical-align: middle;"><div style="font-size:13px; font-family: georgia, times new roman, serif; font-weight: bold;">' + i.name + '&nbsp;</div></td><td style="vertical-align: middle;">' + (TWIR.storage.get("fb_online_status") ? l : "") + '&nbsp;</td><td style="vertical-align: middle;">' + (TWIR.storage.get("fb_ranks") ? p : "") + "</td>";
-              var A = i.health / i.healthmax * 84 + "px";
-              g += '<td style="vertical-align: middle;"><div style="background: url(/images/character_bars/bars.png) right top;width: 100px;height: 14px;display: inline-block;padding: 2px;margin: 5px;font-size: 8pt;text-align: left"><div style="background: url(/images/character_bars/filler.png);width: ' + A + ';height: 14px;margin-top: 2px;padding: 0;margin: 0;position: absolute;"></div><div style="position: absolute;color: white;width: 85px;text-align: center;">' + i.health + " / " + i.healthmax + "</div></div></td>", g += "</tr></table>", g += '<div style="text-align: center"><span style="background: url(/images/fort/battle/report_icons.png) no-repeat;background-position: 0 -51px;height: 16px;width: 16px; display: inline-block;vertical-align: middle;"/>&nbsp;<span style="font-weight: bold; font-size: 11px;">' + i.causeddamage + "</span></div>", t.popup.setXHTML(g)
-            })
-          } else t.popup.kill()
+          var t = e || this.popup.idx,
+            a = this.charactersByPos[t];
+          if (a) {
+            this.popup.idx = t;
+            var i = a.westPlayerId,
+              n = this.fortId,
+              r = (a.team, Chat.Resource.Manager.getClient("client_" + i)),
+              o = r ? r.statusId : 0,
+              l = TWIR.battleShortcuts.formatStatus(o, i),
+              p = TWIR.battleShortcuts.formatPlayerRank(i, n) ? TWIR.battleShortcuts.formatPlayerRank(i, n) : "",
+              c = '<td><img src="%1" /></td><td>&nbsp;%2&nbsp;</td>',
+              g = "<div style='margin-left: 10px;'><table cellpadding=0 cellspacing=0><tr>" + (0 != a.bonusinfo.offense ? s(c, "/images/fort/battle/attacker_secondary.png", a.bonusinfo.offense || 0) : "") + (0 != a.bonusinfo.defense ? s(c, "/images/fort/battle/defender_secondary.png", a.bonusinfo.defense || 0) : "") + (0 != a.bonusinfo.leadbonus ? s(c, "/images/fort/battle/leadsupport.png", a.bonusinfo.leadbonus || 0) : "") + "</tr></table></div>";
+            g += '<table style="margin:0;padding:0;font-size:8pt"><tr style="font-size:8pt;height:20px;font-weight:bold;">', g += '<td style="vertical-align: middle;"><div style="font-size:13px; font-family: georgia, times new roman, serif; font-weight: bold;">' + a.name + '&nbsp;</div></td><td style="vertical-align: middle;">' + (TWIR.storage.get("fb_online_status") ? l : "") + '&nbsp;</td><td style="vertical-align: middle;">' + (TWIR.storage.get("fb_ranks") ? p : "") + "</td>";
+            var A = a.health / a.healthmax * 84 + "px";
+            g += '<td style="vertical-align: middle;"><div style="background: url(/images/character_bars/bars.png) right top;width: 100px;height: 14px;display: inline-block;padding: 2px;margin: 5px;font-size: 8pt;text-align: left"><div style="background: url(/images/character_bars/filler.png);width: ' + A + ';height: 14px;margin-top: 2px;padding: 0;margin: 0;position: absolute;"></div><div style="position: absolute;color: white;width: 85px;text-align: center;">' + a.health + " / " + a.healthmax + "</div></div></td>", g += "</tr></table>", g += '<div style="text-align: center"><span style="background: url(/images/fort/battle/report_icons.png) no-repeat;background-position: 0 -51px;height: 16px;width: 16px; display: inline-block;vertical-align: middle;"/>&nbsp;<span style="font-weight: bold; font-size: 11px;">' + a.causeddamage + "</span></div>", this.popup.setXHTML(g)
+          } else this.popup.kill()
         }
       }
     }, TWIR.travelButton = function() {
