@@ -1,5 +1,5 @@
 var scriptUpdate={
-    TWIR: '2.170',
+    TWIR: '2.171',
     TWIRrev: '12',
-    TWIRNew: 'Reduced number of calls during fort battles'
+    TWIRNew: 'Fortbattle features fully fixed and allowed again'
 };
