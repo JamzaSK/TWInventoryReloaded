@@ -1,5 +1,4 @@
-(function (window) {
-window.TWIR.newCalc = {
+TWIR.newCalc = {
 	calcBest: function(skills, para, callback) {
 		var sets = TWIR.newCalc.getBestSet(skills, para);
 		TWIR.newCalc.result = sets;
@@ -724,4 +723,3 @@ window.TWIR.newCalc = {
 		return r;
 	},
 };
-})(window);
