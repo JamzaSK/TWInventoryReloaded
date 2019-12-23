@@ -1,7 +1,8 @@
-TWIR.newCalc = {
+(function (window) {
+TWIR_newCalc = {
 	calcBest: function(skills, para, callback) {
-		var sets = TWIR.newCalc.getBestSet(skills, para);
-		TWIR.newCalc.result = sets;
+		var sets = this.getBestSet(skills, para);
+		this.result = sets;
 		callback(sets);
 		return sets;
 	},
@@ -32,26 +33,26 @@ TWIR.newCalc = {
 		var bestItems, bestItemsContainer, sets, i, best, points = 0,
 			tmp, availableSets;
 		availableSets = west.item.Calculator.filterUnavailableSets(west.storage.ItemSetManager.getAll()); //2.main WEST
-		bestItems = TWIR.newCalc.getBestItems(skills, para); // 3.
+		bestItems = this.getBestItems(skills, para); // 3.
 		bestItemsContainer = new west.item.ItemSetContainer;
 		for (i = 0; i < bestItems.length; i++) bestItemsContainer.addItem(bestItems[i].getId());
-		sets = TWIR.newCalc.createSubsets(availableSets, bestItems, skills, para); // 4.
+		sets = this.createSubsets(availableSets, bestItems, skills, para); // 4.
 		if (window.__limitclothcalc && sets.length > 500) {
-			sets = TWIR.newCalc.createSubsets(availableSets, bestItems, skills, para, true);
+			sets = this.createSubsets(availableSets, bestItems, skills, para, true);
 			console && console.log('using approximation...');
 		}
-		sets = TWIR.newCalc.filterUneffectiveSets(sets, skills, para); //5.
+		sets = this.filterUneffectiveSets(sets, skills, para); //5.
 		sets = west.item.Calculator.fillEmptySlots(west.item.Calculator.combineSets(sets), bestItems);
 		sets.push(bestItemsContainer);
 		for (i = 0; i < sets.length; i++) {
-			sets[i] = TWIR.newCalc.itemsToSets(sets[i]);
+			sets[i] = this.itemsToSets(sets[i]);
 			switch (para) {
 				case "ms":
-					var tmpArr = TWIR.newCalc.getValue4Container(skills, sets[i], para);
-					tmp = TWIR.newCalc.calcSpeed([tmpArr[0], tmpArr[1]]);
+					var tmpArr = this.getValue4Container(skills, sets[i], para);
+					tmp = this.calcSpeed([tmpArr[0], tmpArr[1]]);
 					break;
 				default:
-					tmp = TWIR.newCalc.getValue4Container(skills, sets[i], para);
+					tmp = this.getValue4Container(skills, sets[i], para);
 					break;
 			}
 			sets[i]["tmp"] = tmp;
@@ -239,8 +240,8 @@ TWIR.newCalc = {
 	},
 	getPointAddition: function(bonus, _valueModifier, _roundingMethod) {
 		if (bonus.type == 'character' && bonus.key == 'level') {
-			return TWIR.newCalc.getPointAddition(bonus.bonus, function(val) {
-				return TWIR.newCalc.getRoundedValue(val * Character.level, bonus.roundingMethod);
+			return this.getPointAddition(bonus.bonus, function(val) {
+				return this.getRoundedValue(val * Character.level, bonus.roundingMethod);
 			}.bind(this), bonus.roundingMethod);
 		}
 		return 0;
@@ -283,7 +284,7 @@ TWIR.newCalc = {
 			bonusExtractor = new west.item.BonusExtractor(Character, item.getItemLevel());
 			for (i = 0; i < item.bonus.item.length; i++) {
 				affectedSkills = bonusExtractor.getAffectedSkills(item.bonus.item[i]);
-				var specialSkills = TWIR.newCalc.getAdditionalBonus(item.bonus.item[i], item.getItemLevel());
+				var specialSkills = this.getAdditionalBonus(item.bonus.item[i], item.getItemLevel());
 				for (skill in affectedSkills) {
 					//exported bonuses
 					if (!bonuses[skill]) bonuses[skill] = 0;
@@ -298,7 +299,7 @@ TWIR.newCalc = {
 					if (object) value[special] = (value[special] || 0) + (skills[special] * specialSkills[special]);
 					else value += skills[special] * specialSkills[special];
 				}
-				if (!object) value += TWIR.newCalc.getPointAddition(item.bonus.item[i]); //potrebujem to???
+				if (!object) value += this.getPointAddition(item.bonus.item[i]); //potrebujem to???
 			}
 		}
 		//dmg zbrane
@@ -313,8 +314,8 @@ TWIR.newCalc = {
 				if (object) value[skill] = (value[skill] || 0) + (skills[skill] * ((item.bonus.skills[skill] || 0) + (skillAddition[skill] || 0)));
 				else value += skills[skill] * ((item.bonus.skills[skill] || 0) + (skillAddition[skill] || 0));
 			}
-			//if (object) value[skill] = (value[skill] || 0) + (skills[skill] * TWIR.newCalc.calcByFormula(skill, bonuses, para));
-			//else value += skills[skill] * TWIR.newCalc.calcByFormula(skill, bonuses, para);
+			//if (object) value[skill] = (value[skill] || 0) + (skills[skill] * this.calcByFormula(skill, bonuses, para));
+			//else value += skills[skill] * this.calcByFormula(skill, bonuses, para);
 			//speed zo zvierata?
 			if (item.speed && skill === "ride" && para === "ms") {
 				if (object) value[skill] = (value[skill] || 0) + Math.round(Character.defaultSpeed / (Character.defaultSpeed * item.speed) * 100 - 100);
@@ -338,7 +339,7 @@ TWIR.newCalc = {
 			rideBoni = 0;
 		switch (para) {
 			case "ms":
-				var setValues = TWIR.newCalc.getSetValue({
+				var setValues = this.getSetValue({
 					"speed": 1,
 					"ride": 1
 				}, set, para, true);
@@ -346,7 +347,7 @@ TWIR.newCalc = {
 				rideBoni += (setValues.ride || 0);
 				break;
 			default:
-				boni += TWIR.newCalc.getSetValue(skills, set, para);
+				boni += this.getSetValue(skills, set, para);
 				break;
 		}
 		var usedSetItems = set.items;
@@ -354,16 +355,16 @@ TWIR.newCalc = {
 		for (var i = 0; i < usedSetItems.length; i++) {
 			switch (para) {
 				case "ms":
-					var itemValues = TWIR.newCalc.getValue({
+					var itemValues = this.getValue({
 						"speed": 1,
 						"ride": 1
 					}, ItemManager.get(usedSetItems[i]), para, true);
 					speedBoni += (itemValues.speed || 0);
 					rideBoni += (itemValues.ride || 0);
-					if (i == (usedSetItems.length - 1)) return TWIR.newCalc.calcSpeed([rideBoni, speedBoni]); //end of array
+					if (i == (usedSetItems.length - 1)) return this.calcSpeed([rideBoni, speedBoni]); //end of array
 					break;
 				default:
-					boni += TWIR.newCalc.getValue(skills, ItemManager.get(usedSetItems[i]), para);
+					boni += this.getValue(skills, ItemManager.get(usedSetItems[i]), para);
 					if (i == (usedSetItems.length - 1)) return boni; //end of array
 					break;
 			}
@@ -377,7 +378,7 @@ TWIR.newCalc = {
 		bonusExtractor = new west.item.BonusExtractor(Character);
 		for (i = 0; i < mergedStages.length; i++) {
 			affectedSkills = bonusExtractor.getAffectedSkills(mergedStages[i]);
-			var specialSkills = TWIR.newCalc.getAdditionalBonus(mergedStages[i], null);
+			var specialSkills = this.getAdditionalBonus(mergedStages[i], null);
 			for (skill in affectedSkills) {
 				//exported bonuses
 				if (!bonuses[skill]) bonuses[skill] = 0;
@@ -392,11 +393,11 @@ TWIR.newCalc = {
 				if (object) value[special] = (value[special] || 0) + (skills[special] * specialSkills[special]);
 				else value += skills[special] * specialSkills[special];
 			}
-			if (!object) value += TWIR.newCalc.getPointAddition(mergedStages[i]);
+			if (!object) value += this.getPointAddition(mergedStages[i]);
 		}
 		for (skill in skills) {
-			//if (object) value[skill] = (value[skill] || 0) + (skills[skill] * TWIR.newCalc.calcByFormula(skill, bonuses, para));
-			//else value += skills[skill] * TWIR.newCalc.calcByFormula(skill, bonuses, para);
+			//if (object) value[skill] = (value[skill] || 0) + (skills[skill] * this.calcByFormula(skill, bonuses, para));
+			//else value += skills[skill] * this.calcByFormula(skill, bonuses, para);
 		}
 		return value;
 	},
@@ -408,7 +409,7 @@ TWIR.newCalc = {
 		for (i = 0; i < items.length; i++) {
 			switch (para) {
 				case "ms":
-					var getVal = TWIR.newCalc.getValue({
+					var getVal = this.getValue({
 						"speed": 1,
 						"ride": 1
 					}, ItemManager.get(items[i]), para, true);
@@ -416,19 +417,19 @@ TWIR.newCalc = {
 					rideBoni += (getVal.ride || 0);
 					break;
 				default:
-					boni += TWIR.newCalc.getValue(skills, ItemManager.get(items[i]), para);
+					boni += this.getValue(skills, ItemManager.get(items[i]), para);
 					break;
 			}
 		}
 		switch (para) {
 			case "ms":
-				var arrBoni = TWIR.newCalc.getSetValue4Container(skills, set, para);
+				var arrBoni = this.getSetValue4Container(skills, set, para);
 				speedBoni += arrBoni[1];
 				rideBoni += arrBoni[0];
 				return [rideBoni, speedBoni];
 				break;
 			default:
-				boni += TWIR.newCalc.getSetValue4Container(skills, set, para);
+				boni += this.getSetValue4Container(skills, set, para);
 				return boni;
 				break;
 		}
@@ -441,7 +442,7 @@ TWIR.newCalc = {
 		for (i = 0; i < container.sets.length; i++) {
 			switch (para) {
 				case "ms":
-					var getVal = TWIR.newCalc.getSetValue({
+					var getVal = this.getSetValue({
 						"speed": 1,
 						"ride": 1
 					}, container.sets[i], para, true);
@@ -450,7 +451,7 @@ TWIR.newCalc = {
 					if (i == (container.sets.length - 1)) return [rideBoni, speedBoni]; //posledny item v loope = return
 					break;
 				default:
-					boni += TWIR.newCalc.getSetValue(skills, container.sets[i], para);
+					boni += this.getSetValue(skills, container.sets[i], para);
 					if (i == (container.sets.length - 1)) return boni; //posledny item v loope = return
 					break;
 			}
@@ -498,7 +499,7 @@ TWIR.newCalc = {
 			//SINGLE ITEM VALUE
 			switch (para) {
 				case "ms":
-					var getItemVal = TWIR.newCalc.getValue({
+					var getItemVal = this.getValue({
 						"speed": 1,
 						"ride": 1
 					}, item, para, true);
@@ -507,7 +508,7 @@ TWIR.newCalc = {
 					value = rideBoni;
 					break;
 				default:
-					value = TWIR.newCalc.getValue(skills, item, para); //1
+					value = this.getValue(skills, item, para); //1
 					break;
 			}
 			best_items[type] = best_items[type] || [];
@@ -530,7 +531,7 @@ TWIR.newCalc = {
 					wear_speedBoni = 0;
 				switch (para) {
 					case "ms":
-						var getWearVal = TWIR.newCalc.getValue({
+						var getWearVal = this.getValue({
 							"speed": 1,
 							"ride": 1
 						}, wear_item, para, true);
@@ -539,7 +540,7 @@ TWIR.newCalc = {
 						wear_value = wear_rideBoni;
 						break;
 					default:
-						wear_value = TWIR.newCalc.getValue(skills, wear_item, para); //2
+						wear_value = this.getValue(skills, wear_item, para); //2
 						break;
 				}
 				items.push({
@@ -586,7 +587,7 @@ TWIR.newCalc = {
 			if (setSlots.indexOf(bestItems[i].getType()) === -1) continue;
 			switch (para) {
 				case "ms":
-					var getVal = TWIR.newCalc.getValue({
+					var getVal = this.getValue({
 						"speed": 1,
 						"ride": 1
 					}, bestItems[i], para, true);
@@ -594,16 +595,16 @@ TWIR.newCalc = {
 					rideBoni += (getVal.ride || 0);
 					break;
 				default:
-					bestItemsPoints += TWIR.newCalc.getValue(skills, bestItems[i], para); //item value
+					bestItemsPoints += this.getValue(skills, bestItems[i], para); //item value
 					break;
 			}
 		}
 		switch (para) {
 			case "ms":
-				bestItemsPoints = TWIR.newCalc.calcSpeed([rideBoni, speedBoni]);
+				bestItemsPoints = this.calcSpeed([rideBoni, speedBoni]);
 				break;
 		}
-		return TWIR.newCalc.getValue4Set(skills, set, para) > bestItemsPoints; //set value
+		return this.getValue4Set(skills, set, para) > bestItemsPoints; //set value
 	},
 	itemsCombineable: function(items) {
 		var slots = {},
@@ -633,7 +634,7 @@ TWIR.newCalc = {
 		combs = [];
 		for (i = 0; i < items.length - k + 1; i++) {
 			head = items.slice(i, i + 1);
-			tailcombs = TWIR.newCalc.createCombinations(items.slice(i + 1), k - 1);
+			tailcombs = this.createCombinations(items.slice(i + 1), k - 1);
 			for (j = 0; j < tailcombs.length; j++) {
 				combs.push(head.concat(tailcombs[j]));
 			}
@@ -643,7 +644,7 @@ TWIR.newCalc = {
 	sortSetItems: function(skills, set, para) {
 		var get = ItemManager.get;
 		set.items.sort(function(a, b) {
-			return TWIR.newCalc.getValue(skills, get(b), para) - TWIR.newCalc.getValue(skills, get(a), para);
+			return this.getValue(skills, get(b), para) - this.getValue(skills, get(a), para);
 		});
 	},
 	weapon: "shot", //UPRAVIT
@@ -654,7 +655,7 @@ TWIR.newCalc = {
 		for (var a = 0; a < items.length; a++) {
 			var getItem = ItemManager.get(items[a]);
 			if (getItem.type === "right_arm") weapons.push(items[a]);
-			if (getItem.type === "right_arm" && getItem.sub_type !== TWIR.newCalc.weapon) toDelete = items[a];
+			if (getItem.type === "right_arm" && getItem.sub_type !== this.weapon) toDelete = items[a];
 		}
 		if (!weapons.length || weapons.length < 2) return items;
 		tailcombs = items.filter(function(id) {
@@ -667,20 +668,20 @@ TWIR.newCalc = {
 			set, j, permutations, k, l, tmpSet;
 		for (i = 0; i < fullSets.length; i++) {
 			set = fullSets[i];
-			if (useApproximation && para !== "ms") TWIR.newCalc.sortSetItems(skills, set, para);
+			if (useApproximation && para !== "ms") this.sortSetItems(skills, set, para);
 			for (j = set.items.length; j > 0; j--) {
 				if (!set.bonus.hasOwnProperty(j)) continue;
-				var filtered = TWIR.newCalc.filterWeapons(set.items);
+				var filtered = this.filterWeapons(set.items);
 				if (useApproximation && para !== "ms") permutations = [set.items.slice(0, j)];
-				else permutations = TWIR.newCalc.createCombinations(filtered, j);
+				else permutations = this.createCombinations(filtered, j);
 				for (k = 0, l = permutations.length; k < l; k++) {
-					if (!TWIR.newCalc.itemsCombineable(permutations[k])) continue;
+					if (!this.itemsCombineable(permutations[k])) continue;
 					tmpSet = new west.item.ItemSet({
 						key: set.key,
 						items: permutations[k],
 						bonus: set.bonus
 					});
-					if (!TWIR.newCalc.beatsBestItems(tmpSet, bestItems, skills, para)) continue;
+					if (!this.beatsBestItems(tmpSet, bestItems, skills, para)) continue;
 					sets.push(tmpSet);
 				}
 			}
@@ -696,16 +697,16 @@ TWIR.newCalc = {
 		for (i = 0; i < sets.length; i++) {
 			switch (para) {
 				case "ms":
-					var getVal = TWIR.newCalc.getSetValue({
+					var getVal = this.getSetValue({
 						"speed": 1,
 						"ride": 1
 					}, sets[i], para, true);
 					speedBoni = (getVal.speed || 0);
 					rideBoni = (getVal.ride || 0);
-					setValue = TWIR.newCalc.calcSpeed([rideBoni, speedBoni]);
+					setValue = this.calcSpeed([rideBoni, speedBoni]);
 					break;
 				default:
-					setValue = TWIR.newCalc.getSetValue(skills, sets[i], para);
+					setValue = this.getSetValue(skills, sets[i], para);
 					break;
 			}
 			if (setValue < 1) continue;
@@ -713,8 +714,8 @@ TWIR.newCalc = {
 			if (!bestBySlots[slots]) {
 				bestBySlots[slots] = sets[i];
 			} else {
-				value = TWIR.newCalc.getValue4Set(skills, sets[i], para);
-				if (TWIR.newCalc.getValue4Set(skills, bestBySlots[slots], para) < value) bestBySlots[slots] = sets[i];
+				value = this.getValue4Set(skills, sets[i], para);
+				if (this.getValue4Set(skills, bestBySlots[slots], para) < value) bestBySlots[slots] = sets[i];
 			}
 		}
 		for (i in bestBySlots) {
@@ -723,3 +724,4 @@ TWIR.newCalc = {
 		return r;
 	},
 };
+})(window);
