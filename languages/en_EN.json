@@ -206,7 +206,9 @@
         "progress_page": "Getting page",
         "progress_title": "Scanning market",
         "progress_found": "Seen",
-        "remove_all": "Remove all"
+        "remove_all": "Remove all",
+        "bidder": "High bidder",
+        "no_bids": "No bids"
     },
     "features": {
         "preferences": "Preferences",
@@ -327,9 +329,9 @@
         "hours": "$1 hours ago",
         "minutes": "$1 minutes ago",
         "seconds": "$1 seconds ago",
-        "valid_id": "$1 is not a valid item/set ID",
+        "valid_id": "The input selection made ($1) was not valid",
         "valid_auctionable": "Item $1 is not auctionable item",
-        "valid_defined": "Item/set $1 is already watched",
+        "valid_defined": "The input selection made ($1) is already in use",
         "valid_max": "You cannot watch more than 250 items",
         "error_wait": "Please wait untill scan is completed",
         "error_other": "An error has occurred, please open console for details",
