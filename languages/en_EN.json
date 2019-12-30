@@ -209,7 +209,8 @@
         "remove_all": "Remove all",
         "curr_bid": "current bid",
         "max_bid": "Bid per item",
-        "max_buyout": "Buy per item"
+        "max_buyout": "Buy per item",
+        "no_bids": "No bids"
     },
     "features": {
         "preferences": "Preferences",
