@@ -185,7 +185,7 @@
         "add_item": "watch",
         "offer_count": "and $1 other listings",
         "time_left": "time left",
-        "price": "price",
+        "price": "buyout",
         "max_price": "Max price",
         "item_id": "Item/set ID",
         "bid": "bid",
@@ -207,8 +207,9 @@
         "progress_title": "Scanning market",
         "progress_found": "Seen",
         "remove_all": "Remove all",
-        "bidder": "High bidder",
-        "no_bids": "No bids"
+        "curr_bid": "current bid",
+        "max_bid": "Bid per item",
+        "max_buyout": "Buy per item"
     },
     "features": {
         "preferences": "Preferences",
