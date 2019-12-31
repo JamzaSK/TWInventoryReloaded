@@ -182,11 +182,11 @@
         "add_name": "Market Watcher",
         "seen": "some of the watched items has been seen",
         "seen_more": "and $1 other watched items",
-        "add_item": "watch",
+        "add_item": "add item",
         "offer_count": "and $1 other listings",
         "time_left": "time left",
         "price": "buyout",
-        "max_price": "Max price",
+        "max_price": "Buy each",
         "item_id": "Item/set ID",
         "bid": "bid",
         "max_hv": "percent of market value",
@@ -209,8 +209,12 @@
         "remove_all": "Remove all",
         "curr_bid": "current bid",
         "max_bid": "Bid per item",
-        "max_buyout": "Buy per item",
-        "no_bids": "No bids"
+        "max_buyout": "Price per item",
+        "no_bids": "No bids",
+        "no_select": "No item selected",
+        "settings_watch": "Watch",
+        "settings_bids": "Allow Bids",
+        "settings_buy": "Allow Buyouts"
     },
     "features": {
         "preferences": "Preferences",
