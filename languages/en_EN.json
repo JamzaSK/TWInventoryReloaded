@@ -208,13 +208,16 @@
         "progress_found": "Seen",
         "remove_all": "Remove all",
         "curr_bid": "current bid",
-        "max_bid": "Bid per item",
         "max_buyout": "Price per item",
         "no_bids": "No bids",
         "no_select": "No item selected",
-        "settings_watch": "Watch",
+        "settings_watch": "Scan",
         "settings_bids": "Allow Bids",
-        "settings_buy": "Allow Buyouts"
+        "settings_buy": "Allow Buyouts",
+        "search": "Item name",
+        "watching": "Watching",
+        "buffs": "Buffs",
+        "browse": "Browse auctions"
     },
     "features": {
         "preferences": "Preferences",
