@@ -87,7 +87,8 @@
         "average_since": "В среднем за $1 день",
         "each": "штука (шт)",
         "quests": "задача",
-        "collection": "Needed to complete a collections"
+        "collection": "Needed to complete a collections",
+        "uniq_sellers": "$1 unique sellers"
     },
     "organizing": {
         "invert_text": "Показать / Скрыть предметы по выбранному фильтру",
@@ -205,7 +206,18 @@
         "progress_page": "Показ страницы",
         "progress_title": "Сканирование рынка",
         "progress_found": "видеть, смотреть",
-        "remove_all": "Удалить все"
+        "remove_all": "Удалить все",
+        "curr_bid": "current bid",
+        "max_buyout": "Price per item",
+        "no_bids": "No bids",
+        "no_select": "No item selected",
+        "settings_watch": "Scan",
+        "settings_bids": "Allow Bids",
+        "settings_buy": "Allow Buyouts",
+        "search": "Item name",
+        "watching": "Watching",
+        "buffs": "Buffs",
+        "browse": "Browse auctions"
     },
     "features": {
         "preferences": "предпочтение",
