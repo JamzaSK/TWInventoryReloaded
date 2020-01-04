@@ -87,7 +87,8 @@
         "average_since": "Priemer za $1 dní",
         "each": "kus",
         "quests": "úloh",
-        "collection": "Needed to complete a collections"
+        "collection": "Potrebné do zbierky",
+        "uniq_sellers": "$1 predajcov"
     },
     "organizing": {
         "invert_text": "Zobraziť/Skryť predmety podľa vybraného filtera",
@@ -205,7 +206,18 @@
         "progress_page": "Zobrazujem stranu",
         "progress_title": "Skenovanie trhu",
         "progress_found": "Videné",
-        "remove_all": "Odobrať všetky"
+        "remove_all": "Odobrať všetky",
+        "curr_bid": "najvyššia ponuka",
+        "max_buyout": "Cena za kus",
+        "no_bids": "Žiadne ponuky",
+        "no_select": "Nič nie je vybrané",
+        "settings_watch": "Sledovať",
+        "settings_bids": "Dražobné ponuky",
+        "settings_buy": "Okamžité nákupy",
+        "search": "Meno predmetu",
+        "watching": "Sledované",
+        "buffs": "Posilnenia",
+        "browse": "Prezrieť aukcie"
     },
     "features": {
         "preferences": "Preferencie",
@@ -326,10 +338,10 @@
         "hours": "pred $1 hodinami",
         "minutes": "pred $1 minútami",
         "seconds": "pred $1 sekundami",
-        "valid_id": "$1 nie je platné ID predmetu/setu",
+        "valid_id": "Input ($1) nie je platný",
         "valid_auctionable": "Predmet $1 nie je dražiteľný",
-        "valid_defined": "Predmet/set $1 je už sledovaný",
-        "valid_max": "Nemôžeš sledovať viac ako 50 predmetov",
+        "valid_defined": "Vybraný predmet ($1) je už sledovaný",
+        "valid_max": "Nemôžeš sledovať viac ako 250 predmetov",
         "error_wait": "Prosím počkaj, kým sa scan trhu neskončí",
         "error_other": "Vyskytla sa chyba, prosím otvor konzolu pre podrobnosti",
         "distance": "Vzdialenosť",
