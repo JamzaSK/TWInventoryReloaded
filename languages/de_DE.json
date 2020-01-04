@@ -87,7 +87,8 @@
         "average_since": "Durchschnittlich $1 Tage",
         "each": "1",
         "quests": "Quests",
-        "collection": "Needed to complete a collections"
+        "collection": "Fehlt für eine Sammlung",
+        "uniq_sellers": "$1 unique sellers"
     },
     "organizing": {
         "invert_text": "Zeige/Verstecke Items durch Auswählen der Filter",
@@ -205,7 +206,18 @@
         "progress_page": "Lade Seite",
         "progress_title": "Scanne Markt",
         "progress_found": "Gesehen",
-        "remove_all": "Alle entfernen"
+        "remove_all": "Alle entfernen",
+        "curr_bid": "current bid",
+        "max_buyout": "Price per item",
+        "no_bids": "No bids",
+        "no_select": "No item selected",
+        "settings_watch": "Scan",
+        "settings_bids": "Allow Bids",
+        "settings_buy": "Allow Buyouts",
+        "search": "Item name",
+        "watching": "Watching",
+        "buffs": "Buffs",
+        "browse": "Browse auctions"
     },
     "features": {
         "preferences": "Einstellungen",
