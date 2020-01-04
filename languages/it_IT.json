@@ -87,7 +87,8 @@
         "average_since": "Media $1 giorni",
         "each": "ciascuno",
         "quests": "missioni",
-        "collection": "Needed to complete a collections"
+        "collection": "Necessario per completare una collezione",
+        "uniq_sellers": "$1 unique sellers"
     },
     "organizing": {
         "invert_text": "Mostra/Nascondi oggetti diversi basati sul filtro selezionato",
@@ -205,7 +206,18 @@
         "progress_page": "Ottenendo la pagina",
         "progress_title": "Scansionando il mercato",
         "progress_found": "Visto",
-        "remove_all": "Rimuovi tutto"
+        "remove_all": "Rimuovi tutto",
+        "curr_bid": "current bid",
+        "max_buyout": "Price per item",
+        "no_bids": "No bids",
+        "no_select": "No item selected",
+        "settings_watch": "Scan",
+        "settings_bids": "Allow Bids",
+        "settings_buy": "Allow Buyouts",
+        "search": "Item name",
+        "watching": "Watching",
+        "buffs": "Buffs",
+        "browse": "Browse auctions"
     },
     "features": {
         "preferences": "Preferenze",
