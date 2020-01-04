@@ -87,7 +87,8 @@
         "average_since": "Średnia $1 dnia",
         "each": "każdy",
         "quests": "zadania",
-        "collection": "Needed to complete a collections"
+        "collection": "Wymagane do ukończenia kolekcji\n\n",
+        "uniq_sellers": "$1 unikalnych sprzedających"
     },
     "organizing": {
         "invert_text": "Pokaż/Ukryj przedmioty pasujące do filtra",
@@ -205,7 +206,18 @@
         "progress_page": "Pobieranie danych",
         "progress_title": "Skanowanie marketu",
         "progress_found": "Widziany",
-        "remove_all": "Usuń wszystko"
+        "remove_all": "Usuń wszystko",
+        "curr_bid": "aktualna oferta",
+        "max_buyout": "Cena za sztukę",
+        "no_bids": "Brak ofert",
+        "no_select": "Nie wybrano przemiotu",
+        "settings_watch": "Obserwuj",
+        "settings_bids": "Pozwól na składanie ofert",
+        "settings_buy": "Pozwól na kupowanie",
+        "search": "Item name",
+        "watching": "Watching",
+        "buffs": "Buffs",
+        "browse": "Browse auctions"
     },
     "features": {
         "preferences": "Preferencje",
