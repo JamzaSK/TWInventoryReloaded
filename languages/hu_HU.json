@@ -87,7 +87,8 @@
         "average_since": "Átlagosan $1 nap",
         "each": "minden",
         "quests": "küldetés",
-        "collection": "Needed to complete a collections"
+        "collection": "Needed to complete a collections",
+        "uniq_sellers": "$1 unique sellers"
     },
     "organizing": {
         "invert_text": "Különböző tárgyak megjelenítése / elrejtése a kiválasztott szűrő alapján",
@@ -205,7 +206,18 @@
         "progress_page": "Oldal ellenőrzése",
         "progress_title": "Piac vizsgálata",
         "progress_found": "Látott",
-        "remove_all": "Mindent elvátovolít"
+        "remove_all": "Mindent elvátovolít",
+        "curr_bid": "current bid",
+        "max_buyout": "Price per item",
+        "no_bids": "No bids",
+        "no_select": "No item selected",
+        "settings_watch": "Scan",
+        "settings_bids": "Allow Bids",
+        "settings_buy": "Allow Buyouts",
+        "search": "Item name",
+        "watching": "Watching",
+        "buffs": "Buffs",
+        "browse": "Browse auctions"
     },
     "features": {
         "preferences": "Beállítások",
