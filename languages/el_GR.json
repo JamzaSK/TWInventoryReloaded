@@ -87,7 +87,8 @@
         "average_since": "Μέσος όρος σε $1 μέρα/ες",
         "each": "για κάθε",
         "quests": "Αποστολές",
-        "collection": "Needed to complete a collections"
+        "collection": "Χρειάζονται για να ολοκληρωθεί η συνταγή",
+        "uniq_sellers": "$1 unique sellers"
     },
     "organizing": {
         "invert_text": "Εμφάνιση/Απόκρυψη διαφορετικών αντικειμένων βάση ενός επιλεγμένου φίλτρου",
@@ -205,7 +206,18 @@
         "progress_page": "Λήψη σελίδας",
         "progress_title": "Σάρωση αγοράς",
         "progress_found": "Βρέθηκαν",
-        "remove_all": "Αφαίρεση όλων"
+        "remove_all": "Αφαίρεση όλων",
+        "curr_bid": "current bid",
+        "max_buyout": "Price per item",
+        "no_bids": "No bids",
+        "no_select": "No item selected",
+        "settings_watch": "Scan",
+        "settings_bids": "Allow Bids",
+        "settings_buy": "Allow Buyouts",
+        "search": "Item name",
+        "watching": "Watching",
+        "buffs": "Buffs",
+        "browse": "Browse auctions"
     },
     "features": {
         "preferences": "Προτιμήσεις",
