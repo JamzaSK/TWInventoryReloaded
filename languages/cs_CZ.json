@@ -186,7 +186,7 @@
         "offer_count": "a $1 dalších nabídek",
         "time_left": "platné",
         "price": "cena",
-        "max_price": "Max cena",
+        "max_price": "Strop",
         "item_id": "ID předmětu/setu",
         "bid": "nabídka",
         "max_hv": "percento tržní hodnoty",
