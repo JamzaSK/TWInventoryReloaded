@@ -88,7 +88,7 @@
         "each": "ciascuno",
         "quests": "missioni",
         "collection": "Necessario per completare una collezione",
-        "uniq_sellers": "$1 unique sellers"
+        "uniq_sellers": "$1 venditori unici"
     },
     "organizing": {
         "invert_text": "Mostra/Nascondi oggetti diversi basati sul filtro selezionato",
@@ -207,17 +207,17 @@
         "progress_title": "Scansionando il mercato",
         "progress_found": "Visto",
         "remove_all": "Rimuovi tutto",
-        "curr_bid": "current bid",
-        "max_buyout": "Price per item",
-        "no_bids": "No bids",
-        "no_select": "No item selected",
-        "settings_watch": "Scan",
-        "settings_bids": "Allow Bids",
-        "settings_buy": "Allow Buyouts",
-        "search": "Item name",
-        "watching": "Watching",
-        "buffs": "Buffs",
-        "browse": "Browse auctions"
+        "curr_bid": "offerta attuale",
+        "max_buyout": "Costo per oggetto",
+        "no_bids": "Nessuna asta",
+        "no_select": "Nessun oggetto selezionato",
+        "settings_watch": "Scansione",
+        "settings_bids": "Aste",
+        "settings_buy": "Acquisto immediato",
+        "search": "Nome oggetto",
+        "watching": "Osservati",
+        "buffs": "Potenziamenti",
+        "browse": "Naviga tra le aste"
     },
     "features": {
         "preferences": "Preferenze",
