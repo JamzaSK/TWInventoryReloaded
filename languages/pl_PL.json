@@ -211,13 +211,13 @@
         "max_buyout": "Cena za sztukę",
         "no_bids": "Brak ofert",
         "no_select": "Nie wybrano przemiotu",
-        "settings_watch": "Obserwuj",
+        "settings_watch": "Skanuj",
         "settings_bids": "Pozwól na składanie ofert",
         "settings_buy": "Pozwól na kupowanie",
-        "search": "Item name",
-        "watching": "Watching",
-        "buffs": "Buffs",
-        "browse": "Browse auctions"
+        "search": "Nazwa przedmiotu",
+        "watching": "Obserwowane",
+        "buffs": "Do użycia",
+        "browse": "Przeglądaj aukcje"
     },
     "features": {
         "preferences": "Preferencje",
