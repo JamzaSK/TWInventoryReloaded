@@ -1,5 +1,5 @@
 var scriptUpdate={
-    TWIR: '2.171',
+    TWIR: '2.180',
     TWIRrev: '12',
-    TWIRNew: 'Fortbattle features fully fixed and allowed again'
+    TWIRNew: 'Full changelog here: https://github.com/JamzaSK/TWInventoryReloaded/blob/master/changelog/2.180.md'
 };
