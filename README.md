@@ -48,7 +48,7 @@
 
 
 > Step 3:
-### Enjoy!! :-)
+### Enjoy!! :smiley:
 
 
 
