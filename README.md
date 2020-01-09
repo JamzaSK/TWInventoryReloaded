@@ -4,7 +4,7 @@
 
 
 
-## Features
+# Features
 * New scrollable inventory design
 * New inventory categories
 * Intelligent item search engine, sorting and filtering
