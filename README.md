@@ -15,7 +15,7 @@
 * An alternative to the standard auction browsing window
 * More info (during fort battles, in player profiles..)
 * Intelligent chat with URL recognition
-
+<br>
 
 
 # Donate
@@ -23,7 +23,7 @@
 **Your generous donation will help to continue to develop and improve this userscript!**
 
 <a target="_blank" rel="noopener noreferrer" href="https://jamzask.github.io/TWInventoryReloaded/icons/paypal.png"><img src="https://jamzask.github.io/TWInventoryReloaded/icons/paypal.png" alt="Paypal" style="max-width:100%;"></a> Paypal: <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=97jamza%40gmail.com&item_name=TW+Inventory+Reloaded&currency_code=EUR&source=url" rel="nofollow">Donate</a>
-
+<br>
 
 
 # Installation
@@ -65,14 +65,14 @@
 * **Polski (pl)** *by Wojcieszy*<br>
 * **Русский (ru)** *by Luntik*<br>
 * **Slovenčina (sk)**<br>
-
+<br>
 
 
 # Help us translate
 > If you'd like to help translate our userscript, sign up for a POEditor account and check out this project
 
-* <a href="https://poeditor.com/join/project/MwmzycR5vc" rel="nofollow">TWIR</a>
-
+* <a href="https://poeditor.com/join/project/MwmzycR5vc" rel="nofollow">TWIR on POEditor</a>
+<br>
 
 
 # Screenshots
@@ -88,3 +88,4 @@
 <img src="https://jamzask.github.io/TWInventoryReloaded/screenshots/Screenshot_9.png">
 <img src="https://jamzask.github.io/TWInventoryReloaded/screenshots/Screenshot_10.png">
  </p>
+<br>
