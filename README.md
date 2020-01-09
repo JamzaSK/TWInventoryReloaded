@@ -68,6 +68,13 @@
 
 
 
+# Help us translate
+> If you'd like to help translate our userscript, sign up for a POEditor account and check out this project
+
+* <a href="https://poeditor.com/join/project/MwmzycR5vc" rel="nofollow">TWIR</a>
+
+
+
 # Screenshots
 <p align="center">
 <img src="https://jamzask.github.io/TWInventoryReloaded/screenshots/Screenshot_1.png">
