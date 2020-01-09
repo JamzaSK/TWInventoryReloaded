@@ -44,7 +44,7 @@
 
 # Language support
 
-### English ###(en)<br>
+### English ### (en)
 **Čeština** (cs)<br>
 **Deutsch** (de) *by Tom Robert*<br>
 **Ελληνικά** (gr) *by Timemod Herkumo*<br>
