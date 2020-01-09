@@ -44,14 +44,14 @@
 
 ### Language support
 
-* *English (en)*
-* *Čeština (cs)*
-* *Deutsch (de)* by Tom Robert
-* *Ελληνικά (gr)* by Timemod Herkumo
-* *Español (es)* by pepe100
-* *Français (fr)* by Thathanka
-* *Magyar (hu)* by Aviendha
-* *Italiano (it)* by Billy-AR
-* *Polski (pl)* by Wojcieszy
-* *Русский (ru)* by Luntik
-* *Slovenčina (sk)* 
+*English (en)*
+*Čeština (cs)*
+*Deutsch (de)* >by Tom Robert
+*Ελληνικά (gr)* by Timemod Herkumo
+*Español (es)* by pepe100
+*Français (fr)* by Thathanka
+*Magyar (hu)* by Aviendha
+*Italiano (it)* by Billy-AR
+*Polski (pl)* by Wojcieszy
+*Русский (ru)* by Luntik
+*Slovenčina (sk)* 
