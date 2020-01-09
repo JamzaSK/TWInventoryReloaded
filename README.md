@@ -43,9 +43,9 @@
 * <a href="http://greasyfork.org/scripts/373294-tw-inventory-reloaded/code/TW%20Inventory%20Reloaded.user.js" rel="nofollow">Install</a> <em>from github.com</em>
 
 ### Language support
-
-- *English (en)*
-- *Čeština (cs)*
+<p><em>
+*English (en)*
+*Čeština (cs)*
 *Deutsch (de)* >by Tom Robert
 *Ελληνικά (gr)* by Timemod Herkumo
 *Español (es)* by pepe100
@@ -55,3 +55,4 @@
 *Polski (pl)* by Wojcieszy
 *Русский (ru)* by Luntik
 *Slovenčina (sk)* 
+ </em></p>
