@@ -9,7 +9,9 @@
 * New inventory categories
 * Intelligent item search engine, sorting and filtering
 * Better item tooltips with aditional informations
+
 * Market Scanning that allows you to track items and their prices
 * An alternative to the standard auction browsing window
+
 * More info (during fort battles, in player profiles..)
 * Intelligent chat with URL recognition
