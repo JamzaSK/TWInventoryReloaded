@@ -1,10 +1,11 @@
-<p align="center"><img src="https://jamzask.github.io/TWInventoryReloaded/menu/twir_biglogo.png"></img></p>
+<p align="center"><img src="https://jamzask.github.io/TWInventoryReloaded/icons/twir_biglogo.png"></img></p>
 
 <p><a href="https://github.com/JamzaSK/TWInventoryReloaded/"><img src="https://jamzask.github.io/TWInventoryReloaded/icons/github_circle_32.png" alt=""></a><a href="https://poeditor.com/join/project/MwmzycR5vc" rel="nofollow"><img src="https://jamzask.github.io/TWInventoryReloaded/icons/poeditor_circle_32.png" alt=""></a><a href="https://github.com/JamzaSK/TWInventoryReloaded/#donate"><img src="https://jamzask.github.io/TWInventoryReloaded/icons/donate_circle_32.png" alt=""></a></p>
 
 
 
 # Features
+
 * New scrollable inventory design
 * New inventory categories
 * Intelligent item search engine, sorting and filtering
@@ -18,6 +19,7 @@
 
 
 # Donate
+
 **Your generous donation will help to continue to develop and improve this userscript!**
 
 <a target="_blank" rel="noopener noreferrer" href="https://jamzask.github.io/TWInventoryReloaded/icons/paypal.png"><img src="https://jamzask.github.io/TWInventoryReloaded/icons/paypal.png" alt="Paypal" style="max-width:100%;"></a> Paypal: <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=97jamza%40gmail.com&item_name=TW+Inventory+Reloaded&currency_code=EUR&source=url" rel="nofollow">Donate</a>
@@ -27,6 +29,7 @@
 # Installation
 
 ### ScriptManager
+
 * <a target="_blank" rel="noopener noreferrer" href="https://jamzask.github.io/TWInventoryReloaded/icons/firefox.png"><img src="https://jamzask.github.io/TWInventoryReloaded/icons/firefox.png" alt="" style="max-width:100%;"></a> <a href="https://addons.mozilla.org/firefox/addon/greasemonkey/" rel="nofollow">Greasemonkey</a> or <a href="https://addons.mozilla.org/firefox/addon/tampermonkey/" rel="nofollow">Tampermonkey</a></li>
 * <a target="_blank" rel="noopener noreferrer" href="https://jamzask.github.io/TWInventoryReloaded/icons/chrome.png"><img src="https://jamzask.github.io/TWInventoryReloaded/icons/chrome.png" alt="" style="max-width:100%;"></a> <a href="https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo" rel="nofollow">Tampermonkey</a>
 * <a target="_blank" rel="noopener noreferrer" href="https://jamzask.github.io/TWInventoryReloaded/icons/opera.png"><img src="https://jamzask.github.io/TWInventoryReloaded/icons/opera.png" alt="" style="max-width:100%;"></a> <a href="https://addons.opera.com/extensions/details/tampermonkey-beta/" rel="nofollow">Tampermonkey</a>
@@ -35,5 +38,20 @@
 > Now you are now ready to install userscripts.
 
 ### Userscript
+
 * <a href="https://greasyfork.org/scripts/373294-tw-inventory-reloaded/code/TW%20Inventory%20Reloaded.user.js" rel="nofollow">Install</a> <em>from greasyfork.org</em>
 * <a href="http://greasyfork.org/scripts/373294-tw-inventory-reloaded/code/TW%20Inventory%20Reloaded.user.js" rel="nofollow">Install</a> <em>from github.com</em>
+
+### Language support
+
+* **English (en)**
+* **Čeština (cs)**
+* **Deutsch (de)** by Tom Robert
+* **Ελληνικά (gr)** by Timemod Herkumo
+* **Español (es)** by pepe100
+* **Français (fr)** by Thathanka
+* **Magyar (hu)** by Aviendha
+* **Italiano (it)** by Billy-AR
+* **Polski (pl)** by Wojcieszy
+* **Русский (ru)** by Luntik
+* **Slovenčina (sk)** 
