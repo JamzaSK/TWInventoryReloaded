@@ -46,7 +46,7 @@
 
 *English (en)*<br>
 *Čeština (cs)*<br>
-*Deutsch (de)* >by Tom Robert<br>
+*Deutsch (de)* > by Tom Robert<br>
 *Ελληνικά (gr)* by Timemod Herkumo<br>
 *Español (es)* by pepe100<br>
 *Français (fr)* by Thathanka<br>
