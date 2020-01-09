@@ -43,16 +43,15 @@
 * <a href="http://greasyfork.org/scripts/373294-tw-inventory-reloaded/code/TW%20Inventory%20Reloaded.user.js" rel="nofollow">Install</a> <em>from github.com</em>
 
 ### Language support
-<p>
-**English (en)**<br>
-**Čeština (cs)**<br>
-**Deutsch (de)** by Tom Robert<br>
-**Ελληνικά (gr)** by Timemod Herkumo<br>
-**Español (es)** by pepe100<br>
-**Français (fr)** by Thathanka<br>
-**Magyar (hu)** by Aviendha<br>
-**Italiano (it)** by Billy-AR<br>
-**Polski (pl)** by Wojcieszy<br>
-**Русский (ru)** by Luntik<br>
-**Slovenčina (sk)**<br> 
-</p>
+
+*English (en)*<br>
+*Čeština (cs)*<br>
+*Deutsch (de)* >by Tom Robert<br>
+*Ελληνικά (gr)* by Timemod Herkumo<br>
+*Español (es)* by pepe100<br>
+*Français (fr)* by Thathanka<br>
+*Magyar (hu)* by Aviendha<br>
+*Italiano (it)* by Billy-AR<br>
+*Polski (pl)* by Wojcieszy<br>
+*Русский (ru)* by Luntik<br>
+*Slovenčina (sk)*<br> 
