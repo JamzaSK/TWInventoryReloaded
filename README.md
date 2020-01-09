@@ -55,3 +55,17 @@
 * **Polski (pl)** *by Wojcieszy*<br>
 * **Русский (ru)** *by Luntik*<br>
 * **Slovenčina (sk)**<br>
+
+# Screenshots
+<p align="center">
+<img src="https://jamzask.github.io/TWInventoryReloaded/screenshots/Screenshot_1.png">
+<img src="https://jamzask.github.io/TWInventoryReloaded/screenshots/Screenshot_2.png">
+<img src="https://jamzask.github.io/TWInventoryReloaded/screenshots/Screenshot_3.png">
+<img src="https://jamzask.github.io/TWInventoryReloaded/screenshots/Screenshot_4.png">
+<img src="https://jamzask.github.io/TWInventoryReloaded/screenshots/Screenshot_5.png">
+<img src="https://jamzask.github.io/TWInventoryReloaded/screenshots/Screenshot_8.png">
+<img src="https://jamzask.github.io/TWInventoryReloaded/screenshots/Screenshot_6.png">
+<img src="https://jamzask.github.io/TWInventoryReloaded/screenshots/Screenshot_7.png">
+<img src="https://jamzask.github.io/TWInventoryReloaded/screenshots/Screenshot_9.png">
+<img src="https://jamzask.github.io/TWInventoryReloaded/screenshots/Screenshot_10.png">
+ </p>
