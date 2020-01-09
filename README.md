@@ -28,6 +28,7 @@
 
 # Installation
 
+> Step 1:
 ### ScriptManager
 
 * <a target="_blank" rel="noopener noreferrer" href="https://jamzask.github.io/TWInventoryReloaded/icons/firefox.png"><img src="https://jamzask.github.io/TWInventoryReloaded/icons/firefox.png" alt="" style="max-width:100%;"></a> <a href="https://addons.mozilla.org/firefox/addon/greasemonkey/" rel="nofollow">Greasemonkey</a> or <a href="https://addons.mozilla.org/firefox/addon/tampermonkey/" rel="nofollow">Tampermonkey</a></li>
@@ -37,6 +38,7 @@
 * <a target="_blank" rel="noopener noreferrer" href="https://jamzask.github.io/TWInventoryReloaded/icons/msedge.png"><img src="https://jamzask.github.io/TWInventoryReloaded/icons/msedge.png" alt="" style="max-width:100%;"></a> <a href="https://www.microsoft.com/store/p/tampermonkey/9nblggh5162s" rel="nofollow">Tampermonkey</a> (Not supported/ tested)
 > Now you are now ready to install userscripts.
 
+> Step 2:
 ### Userscript
 
 * <a href="https://greasyfork.org/scripts/373294-tw-inventory-reloaded/code/TW%20Inventory%20Reloaded.user.js" rel="nofollow">Install</a> <em>from greasyfork.org</em>
