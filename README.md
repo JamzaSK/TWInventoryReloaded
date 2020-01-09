@@ -42,9 +42,9 @@
 * <a href="https://greasyfork.org/scripts/373294-tw-inventory-reloaded/code/TW%20Inventory%20Reloaded.user.js" rel="nofollow">Install</a> <em>from greasyfork.org</em>
 * <a href="http://greasyfork.org/scripts/373294-tw-inventory-reloaded/code/TW%20Inventory%20Reloaded.user.js" rel="nofollow">Install</a> <em>from github.com</em>
 
-### Language support
+# Language support
 
-**English** (en)<br>
+## English** (en)<br>
 **Čeština** (cs)<br>
 **Deutsch** (de) *by Tom Robert*<br>
 **Ελληνικά** (gr) *by Timemod Herkumo*<br>
