@@ -46,13 +46,20 @@
 
 * **English (en)**<br>
 * **Čeština (cs)**<br>
-* **Deutsch (de)** *
+* **Deutsch (de)**
 > by Tom Robert
-* **Ελληνικά (gr)** *by Timemod Herkumo<br>
-* **Español (es)** *by pepe100<br>
-* **Français (fr)** *by Thathanka<br>
-* **Magyar (hu)** *by Aviendha<br>
-* **Italiano (it)** *by Billy-AR<br>
-* **Polski (pl)** *by Wojcieszy<br>
-* **Русский (ru)** *by Luntik<br>
+* **Ελληνικά (gr)** 
+> by Timemod Herkumo
+* **Español (es)** 
+> by pepe100
+* **Français (fr) 
+> by Thathanka
+* **Magyar (hu)** 
+> by Aviendha
+* **Italiano (it)**
+> by Billy-AR
+* **Polski (pl)** 
+> by Wojcieszy
+* **Русский (ru)** 
+> by Luntik
 * **Slovenčina (sk)**<br> 
