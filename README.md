@@ -50,7 +50,7 @@
 * **Ελληνικά (gr)** *by Timemod Herkumo*<br>
 * **Español (es)** *by pepe100*<br>
 * **Français (fr)** *by Thathanka*<br>
-* **Magyar (hu)** *by Aviendha<br>
+* **Magyar (hu)** *by Aviendha*<br>
 * **Italiano (it)** *by Billy-AR*<br>
 * **Polski (pl)** *by Wojcieszy*<br>
 * **Русский (ru)** *by Luntik*<br>
