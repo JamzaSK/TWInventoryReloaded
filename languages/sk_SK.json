@@ -217,7 +217,11 @@
         "search": "Meno predmetu",
         "watching": "Sledované",
         "buffs": "Posilnenia",
-        "browse": "Prezrieť aukcie"
+        "browse": "Prezrieť aukcie",
+        "seen_alert": "$1 has been seen for $2 from $3",
+        "bids_alert": "Someone else placed a bid higher than your on $1",
+        "bid_val_alert": "Highest bid is now $1",
+        "open_bids": "Open bids"
     },
     "features": {
         "preferences": "Preferencie",
@@ -398,5 +402,6 @@
         "switch_w": "Zmeniť zbraň",
         "bonus_items_title": "Bonusy z itemov",
         "bonus_set_title": "Bonusy z itemov a setu"
-    }
+    },
+    "update_changelog": "HERE's Changelog"
 }
