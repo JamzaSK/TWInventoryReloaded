@@ -89,3 +89,53 @@
 <img src="https://jamzask.github.io/TWInventoryReloaded/screenshots/Screenshot_10.png">
  </p>
 <br>
+
+
+# License
+* <a href="http://www.gnu.org/licenses/gpl-3.0.txt" rel="nofollow">GNU General Public License V3</a>
+<br>
+
+# Tags
+
+* The West
+* The-West
+* The West scripts
+* The West script
+* The West userscripts
+* The West Inventory
+* The West tools
+* The West tooltips
+* The West calc
+* The West crafting
+* The West NPC locator
+* The West NPC locations
+* The West Equipment
+* The West Equipments
+* The West collections
+* The West achievements
+* The West adventures
+* The West quest
+* The West quests
+* The West forts
+* The West fort battles
+* The West jobs
+* The West duels
+* The West tombola
+* The West ranks
+* The West calculator
+* The West net
+* The West beta
+* TW scripts
+* TW userscripts
+* TW Inventory
+* The West Items
+* The West sets
+* The West set
+* The West set items
+* The West items
+* The West buffs
+* The West menu
+* The West Event
+* The West market
+* The West market script
+* Market Watcher
