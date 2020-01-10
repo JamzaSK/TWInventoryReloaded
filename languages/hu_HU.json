@@ -64,7 +64,7 @@
         "property": "Tárgy tulajdonsága",
         "item_type": "Típus",
         "regen": "Regeneráció",
-        "custom": "Custom"
+        "custom": "Egyedi"
     },
     "tooltips": {
         "jobdrop": "Munkából található",
@@ -87,8 +87,8 @@
         "average_since": "Átlagosan $1 nap",
         "each": "minden",
         "quests": "küldetés",
-        "collection": "Needed to complete a collections",
-        "uniq_sellers": "$1 unique sellers"
+        "collection": "Szükséges egy gyűjteményhez",
+        "uniq_sellers": "$1 egyedi eladók"
     },
     "organizing": {
         "invert_text": "Különböző tárgyak megjelenítése / elrejtése a kiválasztott szűrő alapján",
@@ -207,17 +207,21 @@
         "progress_title": "Piac vizsgálata",
         "progress_found": "Látott",
         "remove_all": "Mindent elvátovolít",
-        "curr_bid": "current bid",
-        "max_buyout": "Price per item",
-        "no_bids": "No bids",
-        "no_select": "No item selected",
-        "settings_watch": "Scan",
-        "settings_bids": "Allow Bids",
-        "settings_buy": "Allow Buyouts",
-        "search": "Item name",
-        "watching": "Watching",
-        "buffs": "Buffs",
-        "browse": "Browse auctions"
+        "curr_bid": "Jelenlegi ajánlat",
+        "max_buyout": "Darabár",
+        "no_bids": "Nincs ajánlat",
+        "no_select": "Nincs kiválasztva semmi",
+        "settings_watch": "Keresés",
+        "settings_bids": "Ajánlatok elfogadása",
+        "settings_buy": "Felvásárlás elfogadása",
+        "search": "Tárgynév",
+        "watching": "Figyelés",
+        "buffs": "Buffok",
+        "browse": "Böngészés az aukciók között",
+        "seen_alert": "$1 has been seen for $2 from $3",
+        "bids_alert": "Someone else placed a bid higher than your on $1",
+        "bid_val_alert": "Highest bid is now $1",
+        "open_bids": "Open bids"
     },
     "features": {
         "preferences": "Beállítások",
@@ -271,8 +275,8 @@
         "ml_show": "További gombok a bal oldali felhasználói felületen",
         "chat_smart": "Okosabb chat (URL felismerés)",
         "mw_status": "Piac vizsgálat üzenet mutatása",
-        "inv_menu_size": "Maximal number of rows in a select menu",
-        "pop_char_level": "Always show bonus value (per level) on your character level"
+        "inv_menu_size": "A sorok maximális száma a kiválasztott menüben",
+        "pop_char_level": "Mindig mutassa a bónusz értékét (szintenként) a karaktered szintjéhez"
     },
     "keyWords": {
         "xmas": [
@@ -394,7 +398,8 @@
         "equipment_number": "Felszerelés $1",
         "show_inv": "Keresés a felszerelésben",
         "switch_w": "Fegyverváltás",
-        "bonus_items_title": "Bonuses from items",
-        "bonus_set_title": "Bonuses from items and set"
-    }
+        "bonus_items_title": "Bónuszok a tárgyakból",
+        "bonus_set_title": "Bónuszok a tárgyakból és szettekből"
+    },
+    "update_changelog": "HERE's Changelog"
 }
