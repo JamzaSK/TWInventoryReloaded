@@ -217,7 +217,11 @@
         "search": "Nazwa przedmiotu",
         "watching": "Obserwowane",
         "buffs": "Do użycia",
-        "browse": "Przeglądaj aukcje"
+        "browse": "Przeglądaj aukcje",
+        "seen_alert": "$1 has been seen for $2 from $3",
+        "bids_alert": "Someone else placed a bid higher than your on $1",
+        "bid_val_alert": "Highest bid is now $1",
+        "open_bids": "Open bids"
     },
     "features": {
         "preferences": "Preferencje",
@@ -403,5 +407,6 @@
         "switch_w": "Zmień broń",
         "bonus_items_title": "Bonusy z przedmiotów",
         "bonus_set_title": "Bonusy z przedmiotów i zestawu"
-    }
+    },
+    "update_changelog": "HERE's Changelog"
 }
