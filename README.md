@@ -97,12 +97,16 @@
 
 # Tags
 
+* TWIR
+* TWIR script
+* Inventory Reloaded
 * The West
 * The-West
 * The West scripts
 * The West script
 * The West userscripts
 * The West Inventory
+* The West bigger inventory
 * The West tools
 * The West tooltips
 * The West calc
@@ -110,11 +114,9 @@
 * The West NPC locator
 * The West NPC locations
 * The West Equipment
-* The West Equipments
 * The West collections
 * The West achievements
 * The West adventures
-* The West quest
 * The West quests
 * The West forts
 * The West fort battles
@@ -130,7 +132,6 @@
 * TW Inventory
 * The West Items
 * The West sets
-* The West set
 * The West set items
 * The West items
 * The West buffs
