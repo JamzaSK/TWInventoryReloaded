@@ -401,5 +401,6 @@
         "bonus_items_title": "бонус items поиск",
         "bonus_set_title": "бонус set поиск"
     },
-    "update_changelog": "HERE's Changelog"
+    "update_changelog": "HERE's Changelog",
+    "donate_text_2": "If you like this script and wish it's kept working or wish new features to be added, please consider a $donation$"
 }
