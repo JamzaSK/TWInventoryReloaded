@@ -217,7 +217,11 @@
         "search": "Item name",
         "watching": "Watching",
         "buffs": "Buffs",
-        "browse": "Browse auctions"
+        "browse": "Browse auctions",
+        "seen_alert": "$1 has been seen for $2 from $3",
+        "bids_alert": "Someone else placed a bid higher than your on $1",
+        "bid_val_alert": "Highest bid is now $1",
+        "open_bids": "Open bids"
     },
     "features": {
         "preferences": "Préférences",
@@ -398,5 +402,6 @@
         "switch_w": "Switch weapon",
         "bonus_items_title": "Bonuses from items",
         "bonus_set_title": "Bonuses from items and set"
-    }
+    },
+    "update_changelog": "HERE's Changelog"
 }
