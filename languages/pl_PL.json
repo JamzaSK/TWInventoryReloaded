@@ -196,7 +196,6 @@
         "watched_items": "Tylko obserwowane",
         "nothing": "Nic",
         "bid_now": "Pokaż na targu",
-        "underpriced_found": "Znaleziono niedrogi przedmiot który może chcesz kupić",
         "watched": "Obserwowane przedmioty",
         "collections": "Kolekcje",
         "last_scan": "Ostatni skan",
@@ -218,10 +217,10 @@
         "watching": "Obserwowane",
         "buffs": "Do użycia",
         "browse": "Przeglądaj aukcje",
-        "seen_alert": "$1 has been seen for $2 from $3",
-        "bids_alert": "Someone else placed a bid higher than your on $1",
-        "bid_val_alert": "Highest bid is now $1",
-        "open_bids": "Open bids"
+        "seen_alert": "$item był widziany u gracza $player za $dollars",
+        "bid_val_alert": "Najwyższa oferta to teraz $1",
+        "open_bids": "Otwarte oferty",
+        "bids_alert": "Ktoś inny przebił cię w aukcji o $1"
     },
     "features": {
         "preferences": "Preferencje",
@@ -408,6 +407,6 @@
         "bonus_items_title": "Bonusy z przedmiotów",
         "bonus_set_title": "Bonusy z przedmiotów i zestawu"
     },
-    "update_changelog": "HERE's Changelog",
-    "donate_text_2": "If you like this script and wish it's kept working or wish new features to be added, please consider a $donation$"
+    "update_changelog": "Lista zmian",
+    "donate_text_2": "Jeżeli lubisz ten skrypt i chcesz aby się dalej rozwijał pomyśl proszę o $donation$"
 }
