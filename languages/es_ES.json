@@ -88,7 +88,7 @@
         "each": "cada",
         "quests": "búsquedas",
         "collection": "Necesario para completar una colección",
-        "uniq_sellers": "$1 unique sellers"
+        "uniq_sellers": "$1 vendedores únicos"
     },
     "organizing": {
         "invert_text": "Mostrar / Ocultar diferentes elementos basados en un filtro seleccionado",
@@ -196,7 +196,6 @@
         "watched_items": "Solo vigilados",
         "nothing": "Nada",
         "bid_now": "Encontrar en el mercado",
-        "underpriced_found": "artículo encontrado por debajo del precio deseado para comprar",
         "watched": "Artículos vigilados",
         "collections": "Colecciones",
         "last_scan": "Último escaneo",
@@ -207,21 +206,21 @@
         "progress_title": "Escaneando mercado",
         "progress_found": "Visto",
         "remove_all": "Eliminar todo",
-        "curr_bid": "current bid",
-        "max_buyout": "Price per item",
-        "no_bids": "No bids",
-        "no_select": "No item selected",
-        "settings_watch": "Scan",
-        "settings_bids": "Allow Bids",
-        "settings_buy": "Allow Buyouts",
-        "search": "Item name",
-        "watching": "Watching",
+        "curr_bid": "oferta actual",
+        "max_buyout": "Precio por artículo",
+        "no_bids": "Sin ofertas",
+        "no_select": "Ningún artículo seleccionado",
+        "settings_watch": "Escanear",
+        "settings_bids": "Permitir Ofertas",
+        "settings_buy": "Permitir Compras",
+        "search": "Nombre artículo",
+        "watching": "Investigando",
         "buffs": "Buffs",
-        "browse": "Browse auctions",
-        "seen_alert": "$1 has been seen for $2 from $3",
-        "bids_alert": "Someone else placed a bid higher than your on $1",
-        "bid_val_alert": "Highest bid is now $1",
-        "open_bids": "Open bids"
+        "browse": "Buscar subastas",
+        "seen_alert": "$item ha sido visto de $player por $dollars",
+        "bid_val_alert": "La oferta más alta ahora es de $1",
+        "open_bids": "Ofertas abiertas",
+        "bids_alert": "Alguien más hizo una oferta más alta que la tuya en $1"
     },
     "features": {
         "preferences": "Preferencias",
@@ -402,6 +401,6 @@
         "bonus_items_title": "Bonificaciones de artículos",
         "bonus_set_title": "Bonificaciones de artículos y conjunto"
     },
-    "update_changelog": "HERE's Changelog",
-    "donate_text_2": "If you like this script and wish it's kept working or wish new features to be added, please consider a $donation$"
+    "update_changelog": "Aquí está el Registro de cambios",
+    "donate_text_2": "Si le gusta este script y desea que siga funcionando o desea que se agreguen nuevas funciones, por favor considere hacer una $donación$"
 }
