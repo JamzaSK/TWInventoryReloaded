@@ -196,7 +196,6 @@
         "watched_items": "Vybrané",
         "nothing": "Nic",
         "bid_now": "Zobrazit na trhu",
-        "underpriced_found": "byl nalezen podhodnocený předmět",
         "watched": "Sledované předměty",
         "collections": "Sbírky",
         "last_scan": "Poslední scan",
@@ -218,10 +217,10 @@
         "watching": "Sledováno",
         "buffs": "Posílení",
         "browse": "Prochádzet aukce",
-        "seen_alert": "$1 has been seen for $2 from $3",
-        "bids_alert": "Someone else placed a bid higher than your on $1",
+        "seen_alert": "$item has been seen from $player for $dollars",
         "bid_val_alert": "Highest bid is now $1",
-        "open_bids": "Open bids"
+        "open_bids": "Open bids",
+        "bids_alert": "Someone else placed a bid higher than your on $1"
     },
     "features": {
         "preferences": "Preference",
