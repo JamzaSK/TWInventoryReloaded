@@ -196,7 +196,6 @@
         "watched_items": "выбраный",
         "nothing": "ничего",
         "bid_now": "Посмотреть рынок",
-        "underpriced_found": "найден недооцененный предмет",
         "watched": "Отслеживаемые предметы",
         "collections": "Коллекции",
         "last_scan": "Последний скан",
@@ -218,10 +217,10 @@
         "watching": "наблюда́емый",
         "buffs": "укрепление",
         "browse": "Просмотр аукционов",
-        "seen_alert": "$1 has been seen for $2 from $3",
-        "bids_alert": "Someone else placed a bid higher than your on $1",
+        "seen_alert": "$item has been seen from $player for $dollars",
         "bid_val_alert": "Highest bid is now $1",
-        "open_bids": "Open bids"
+        "open_bids": "Open bids",
+        "bids_alert": "Someone else placed a bid higher than your on $1"
     },
     "features": {
         "preferences": "предпочтение",
