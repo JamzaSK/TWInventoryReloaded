@@ -405,7 +405,8 @@
         "show_inv": "Szukaj w ekwipunku",
         "switch_w": "Zmień broń",
         "bonus_items_title": "Bonusy z przedmiotów",
-        "bonus_set_title": "Bonusy z przedmiotów i zestawu"
+        "bonus_set_title": "Bonusy z przedmiotów i zestawu",
+        "fort_damage": "Damage"
     },
     "update_changelog": "Lista zmian",
     "donate_text_2": "Jeżeli lubisz ten skrypt i chcesz aby się dalej rozwijał pomyśl proszę o $donation$"
