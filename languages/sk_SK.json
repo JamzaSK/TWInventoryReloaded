@@ -400,7 +400,8 @@
         "show_inv": "Vyhľadať v inventári",
         "switch_w": "Zmeniť zbraň",
         "bonus_items_title": "Bonusy z itemov",
-        "bonus_set_title": "Bonusy z itemov a setu"
+        "bonus_set_title": "Bonusy z itemov a setu",
+        "fort_damage": "Damage"
     },
     "update_changelog": "HERE's Changelog",
     "donate_text_2": "If you like this script and wish it's kept working or wish new features to be added, please consider a $donation$"
