@@ -399,7 +399,8 @@
         "switch_w": "Fegyverváltás",
         "bonus_items_title": "Bónuszok a tárgyakból",
         "bonus_set_title": "Bónuszok a tárgyakból és szettekből",
-        "fort_damage": "Damage"
+        "fort_damage": "Damage",
+        "fort_hp": "HP"
     },
     "update_changelog": "ITT a változásnapló",
     "donate_text_2": "Ha tetszik ez a script, és szeretnéd, hogy továbbra is működjön és új funkciók kerüljenek bele, kérlek küld egy kis $adományt$"
