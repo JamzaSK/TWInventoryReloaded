@@ -401,7 +401,8 @@
         "switch_w": "Switch weapon",
         "bonus_items_title": "Bonuses from items",
         "bonus_set_title": "Bonuses from items and set",
-        "fort_damage": "Damage"
+        "fort_damage": "Damage",
+        "fort_hp": "HP"
     },
     "update_changelog": "HERE's Changelog",
     "donate_text_2": "If you like this script and wish it's kept working or wish new features to be added, please consider a $donation$"
