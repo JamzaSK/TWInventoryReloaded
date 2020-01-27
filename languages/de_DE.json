@@ -399,7 +399,8 @@
         "switch_w": "Waffe wechseln",
         "bonus_items_title": "Item-Boni",
         "bonus_set_title": "Item- und Setboni",
-        "fort_damage": "Damage"
+        "fort_damage": "Damage",
+        "fort_hp": "HP"
     },
     "update_changelog": "Changelog",
     "donate_text_2": "Wenn dir das Script gefällt und es weiterhin verbessert werden soll, überlege dir eine $donation$."
