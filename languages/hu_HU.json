@@ -405,7 +405,8 @@
         "fort_damage": "Damage",
         "fort_hp": "HP",
         "combo_count": "$1 of $2",
-        "level": "Level"
+        "level": "Level",
+        "construct": "Construction"
     },
     "update_changelog": "ITT a változásnapló",
     "donate_text_2": "Ha tetszik ez a script, és szeretnéd, hogy továbbra is működjön és új funkciók kerüljenek bele, kérlek küld egy kis $adományt$"
