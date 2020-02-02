@@ -365,7 +365,10 @@
         "joined": "Zusammen",
         "missing_pos": "Nicht am Fort",
         "missing_ali": "Abwesende Spieler",
-        "hide": "Schliessen"
+        "hide": "Schliessen",
+        "next": "Next",
+        "enabled": "Enabled",
+        "disabled": "Disabled"
     },
     "calc": {
         "regen": "Regeneration",
@@ -399,8 +402,10 @@
         "switch_w": "Waffe wechseln",
         "bonus_items_title": "Item-Boni",
         "bonus_set_title": "Item- und Setboni",
-        "fort_damage": "Damage",
-        "fort_hp": "HP"
+        "fort_damage": "Schaden",
+        "fort_hp": "LP",
+        "combo_count": "$1 of $2",
+        "level": "Level"
     },
     "update_changelog": "Changelog",
     "donate_text_2": "Wenn dir das Script gefällt und es weiterhin verbessert werden soll, überlege dir eine $donation$."
