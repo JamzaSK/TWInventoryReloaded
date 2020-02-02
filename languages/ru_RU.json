@@ -365,7 +365,10 @@
         "joined": "подключиться",
         "missing_pos": "Вне крепости",
         "missing_ali": "безучастный, посторонний, не принявший участия",
-        "hide": "спрятать, скрывать"
+        "hide": "спрятать, скрывать",
+        "next": "Next",
+        "enabled": "Enabled",
+        "disabled": "Disabled"
     },
     "calc": {
         "regen": "регенерация",
@@ -400,7 +403,9 @@
         "bonus_items_title": "бонус items поиск",
         "bonus_set_title": "бонус set поиск",
         "fort_damage": "Damage",
-        "fort_hp": "HP"
+        "fort_hp": "HP",
+        "combo_count": "$1 of $2",
+        "level": "Level"
     },
     "update_changelog": "HERE's Changelog",
     "donate_text_2": "If you like this script and wish it's kept working or wish new features to be added, please consider a $donation$"
