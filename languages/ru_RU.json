@@ -405,7 +405,8 @@
         "fort_damage": "Damage",
         "fort_hp": "HP",
         "combo_count": "$1 of $2",
-        "level": "Level"
+        "level": "Level",
+        "construct": "Construction"
     },
     "update_changelog": "HERE's Changelog",
     "donate_text_2": "If you like this script and wish it's kept working or wish new features to be added, please consider a $donation$"
