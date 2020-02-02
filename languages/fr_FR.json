@@ -367,7 +367,10 @@
         "joined": "Joined",
         "missing_pos": "Not at the fort",
         "missing_ali": "Absent players",
-        "hide": "Hide"
+        "hide": "Hide",
+        "next": "Next",
+        "enabled": "Enabled",
+        "disabled": "Disabled"
     },
     "calc": {
         "regen": "Regeneration",
@@ -396,13 +399,15 @@
         "add_name": "Dressing helper",
         "bonus_count_title": "Bonuses from items and sets",
         "result_menu_title": "Other combinations",
-        "equipment_number": "Equipment $1",
+        "equipment_number": "Combo $1",
         "show_inv": "Show in the inventory",
         "switch_w": "Switch weapon",
         "bonus_items_title": "Bonuses from items",
         "bonus_set_title": "Bonuses from items and set",
         "fort_damage": "Damage",
-        "fort_hp": "HP"
+        "fort_hp": "HP",
+        "combo_count": "$1 of $2",
+        "level": "Level"
     },
     "update_changelog": "HERE's Changelog",
     "donate_text_2": "If you like this script and wish it's kept working or wish new features to be added, please consider a $donation$"
