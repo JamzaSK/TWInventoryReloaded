@@ -367,9 +367,9 @@
         "missing_pos": "No en el fuerte",
         "missing_ali": "Jugadores ausentes",
         "hide": "Esconder",
-        "next": "Next",
-        "enabled": "Enabled",
-        "disabled": "Disabled"
+        "next": "Próximo",
+        "enabled": "Habilitado",
+        "disabled": "Deshabilitado"
     },
     "calc": {
         "regen": "Regeneración",
@@ -403,11 +403,11 @@
         "switch_w": "Cambiar arma",
         "bonus_items_title": "Bonificaciones de artículos",
         "bonus_set_title": "Bonificaciones de artículos y conjunto",
-        "fort_damage": "Damage",
-        "fort_hp": "HP",
-        "combo_count": "$1 of $2",
-        "level": "Level",
-        "construct": "Construction"
+        "fort_damage": "Daño",
+        "fort_hp": "PS",
+        "combo_count": "$1 de $2",
+        "level": "Mivel",
+        "construct": "Construcción"
     },
     "update_changelog": "Aquí está el Registro de cambios",
     "donate_text_2": "Si le gusta este script y desea que siga funcionando o desea que se agreguen nuevas funciones, por favor considere hacer una $donación$"
