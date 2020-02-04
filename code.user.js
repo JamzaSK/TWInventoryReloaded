@@ -52,7 +52,7 @@
 
     You have received a copy of the GNU General Public License
     along with this program.
-*/
+*/	
 
 ! function(fn)
 {
@@ -8532,8 +8532,9 @@
                 {
                   var t = 0 != Character.homeTown.town_id ? Chat.Resource.Manager.getRoom("room_town_" + Character.homeTown.town_id) : Chat
                     .Resource.Manager.getGeneralRoom(),
-                    i = '<a target="_blank" href="https://github.com/JamzaSK/TWInventoryReloaded/blob/master/changelog/' + scriptUpdate.TWIR +
-                    '.md">[' + TWIRlang.update_changelog + "] </a>",
+                    i = !0 === scriptUpdate.changelog ?
+                    '<a target="_blank" href="https://github.com/JamzaSK/TWInventoryReloaded/blob/master/changelog/' + scriptUpdate.TWIR +
+                    '.md">[' + TWIRlang.update_changelog + "] </a>" : TWIRlang.changes + ":&nbsp;" + scriptUpdate.TWIRNew,
                     a = TWIRlang.donate_text_2.replace(/\$(.*?)\$/,
                       '<a href="javascript:void(TWIR.menu.open(&quot;Donate&quot;))">$1</a>.&nbsp;' + TWIRlang.tyty + "!"),
                     n = TWIRlang.update_message + "&nbsp;<b>" + TWIRlang.download + ':&nbsp;</b> <a target="_blank" href="' + TWIR.updateAds +
