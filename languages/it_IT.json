@@ -372,9 +372,9 @@
         "missing_pos": "Non al forte",
         "missing_ali": "Giocatori assenti",
         "hide": "Nascondi",
-        "next": "Next",
-        "enabled": "Enabled",
-        "disabled": "Disabled"
+        "next": "Avanti",
+        "enabled": "Abilitato",
+        "disabled": "Disabilitato"
     },
     "calc": {
         "regen": "Rigenerazione",
@@ -410,9 +410,9 @@
         "bonus_set_title": "Bonus da oggetti e da set",
         "fort_damage": "Danno",
         "fort_hp": "PV",
-        "combo_count": "$1 of $2",
-        "level": "Level",
-        "construct": "Construction"
+        "combo_count": "$1 di $2",
+        "level": "Livello",
+        "construct": "Costruzione"
     },
     "update_changelog": "QUI il changelog",
     "donate_text_2": "Se ti piace lo script e desideri che continui il suo sviluppo o desideri che altre funzionalità vengano aggiunte, per favore considera una $donazione$"
