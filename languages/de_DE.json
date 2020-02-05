@@ -288,7 +288,8 @@
         "map_show": "Zentrieren",
         "window_open": "Fenster öffnen",
         "walk": "Hingehen",
-        "market_map": "Marktkarte"
+        "market_map": "Marktkarte",
+        "quest_update": "Show quests"
     },
     "ranking": {
         "add_name": "Ranglisten-Leiste",
