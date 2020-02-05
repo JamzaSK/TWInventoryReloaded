@@ -290,7 +290,8 @@
         "map_show": "Centrovat pozici",
         "window_open": "Otevřít okno",
         "walk": "Jít tam",
-        "market_map": "Mapa trhu"
+        "market_map": "Mapa trhu",
+        "quest_update": "Show quests"
     },
     "ranking": {
         "add_name": "Rank panel",
