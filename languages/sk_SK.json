@@ -390,7 +390,7 @@
         "combo_count": "$1 z $2",
         "level": "Úroveň",
         "construct": "Výstavba",
-        "speed": "Speed"
+        "speed": "Rýchlosť"
     },
     "update_changelog": "Tu je Changelog",
     "donate_text_2": "Ak sa vám tento skript páči a prajete si, aby sa pokračovalo v jeho vývoji, alebo si prajete, aby sa pridávali nové funkcie, zvážte prosím jeho $podporu$"
