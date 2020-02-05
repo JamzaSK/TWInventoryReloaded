@@ -294,7 +294,8 @@
         "map_show": "Centra la posizione",
         "window_open": "Apri finestra",
         "walk": "Spostati a",
-        "market_map": "Mappa mercato"
+        "market_map": "Mappa mercato",
+        "quest_update": "Show quests"
     },
     "ranking": {
         "add_name": "Barra classifiche",
