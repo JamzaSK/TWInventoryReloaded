@@ -290,7 +290,8 @@
         "map_show": "Center position",
         "window_open": "Open window",
         "walk": "Go there",
-        "market_map": "Market map"
+        "market_map": "Market map",
+        "quest_update": "Show quests"
     },
     "ranking": {
         "add_name": "Barre de classement",
