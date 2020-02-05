@@ -362,7 +362,7 @@
         "next": "Avanti",
         "enabled": "Abilitato",
         "disabled": "Disabilitato",
-        "stop": "Stop"
+        "cancel": "Cancel"
     },
     "calc": {
         "regen": "Rigenerazione",
