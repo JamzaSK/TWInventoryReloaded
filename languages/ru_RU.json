@@ -288,7 +288,8 @@
         "map_show": "Центральное положение",
         "window_open": "Открытое окно",
         "walk": "Идти туда",
-        "market_map": "Карта рынка"
+        "market_map": "Карта рынка",
+        "quest_update": "Show quests"
     },
     "ranking": {
         "add_name": "Ранг панель",
