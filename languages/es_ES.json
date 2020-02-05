@@ -356,7 +356,8 @@
         "hide": "Esconder",
         "next": "Próximo",
         "enabled": "Habilitado",
-        "disabled": "Deshabilitado"
+        "disabled": "Deshabilitado",
+        "stop": "Stop"
     },
     "calc": {
         "regen": "Regeneración",
@@ -396,6 +397,7 @@
     "event_helper": {
         "already_sent": "$event_curr sent to $1 of $2 friends",
         "sent_mg": "Sent to $1",
-        "all_sent": "$event_curr were sent"
+        "all_sent": "$event_curr were sent",
+        "send": "Send"
     }
 }
