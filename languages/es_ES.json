@@ -289,7 +289,8 @@
         "map_show": "Central posición",
         "window_open": "Abrir ventana",
         "walk": "Ir allí",
-        "market_map": "Mapa mercado"
+        "market_map": "Mapa mercado",
+        "quest_update": "Show quests"
     },
     "ranking": {
         "add_name": "Barra rango",
