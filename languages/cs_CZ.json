@@ -393,5 +393,10 @@
         "speed": "Rychlost"
     },
     "update_changelog": "Tu je changelog",
-    "donate_text_2": "Pokud se vám tento skript líbí a přejete si, aby se na něm pracovalo, nebo si přejete přidávat nové funkce, zvažte prosím jeho $podporu$"
+    "donate_text_2": "Pokud se vám tento skript líbí a přejete si, aby se na něm pracovalo, nebo si přejete přidávat nové funkce, zvažte prosím jeho $podporu$",
+    "event_helper": {
+        "already_sent": "$event_curr sent to $1 of $2 friends",
+        "sent_mg": "Sent to $1",
+        "all_sent": "$event_curr were sent"
+    }
 }
