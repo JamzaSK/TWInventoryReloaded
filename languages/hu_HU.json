@@ -288,7 +288,8 @@
         "map_show": "Pozíció megjelenítése",
         "window_open": "Ablak megnyitása",
         "walk": "Menj ide: ",
-        "market_map": "Piactérkép"
+        "market_map": "Piactérkép",
+        "quest_update": "Show quests"
     },
     "ranking": {
         "add_name": "Rangsor",
