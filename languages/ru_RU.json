@@ -355,7 +355,8 @@
         "hide": "спрятать, скрывать",
         "next": "Next",
         "enabled": "Enabled",
-        "disabled": "Disabled"
+        "disabled": "Disabled",
+        "stop": "Stop"
     },
     "calc": {
         "regen": "регенерация",
@@ -395,6 +396,7 @@
     "event_helper": {
         "already_sent": "$event_curr sent to $1 of $2 friends",
         "sent_mg": "Sent to $1",
-        "all_sent": "$event_curr were sent"
+        "all_sent": "$event_curr were sent",
+        "send": "Send"
     }
 }
