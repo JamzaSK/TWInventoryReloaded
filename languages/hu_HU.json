@@ -356,7 +356,7 @@
         "next": "Next",
         "enabled": "Enabled",
         "disabled": "Disabled",
-        "stop": "Stop"
+        "cancel": "Cancel"
     },
     "calc": {
         "regen": "Regeneráció",
