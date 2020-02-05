@@ -290,7 +290,8 @@
         "map_show": "Κεντράρισμα",
         "window_open": "Άνοιξε το παράθυρο",
         "walk": "Πήγαινε εκεί",
-        "market_map": "Χάρτης αγοράς"
+        "market_map": "Χάρτης αγοράς",
+        "quest_update": "Show quests"
     },
     "ranking": {
         "add_name": "Μπάρα κατάταξης",
