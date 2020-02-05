@@ -361,7 +361,8 @@
         "hide": "Nascondi",
         "next": "Avanti",
         "enabled": "Abilitato",
-        "disabled": "Disabilitato"
+        "disabled": "Disabilitato",
+        "stop": "Stop"
     },
     "calc": {
         "regen": "Rigenerazione",
@@ -401,6 +402,7 @@
     "event_helper": {
         "already_sent": "$event_curr sent to $1 of $2 friends",
         "sent_mg": "Sent to $1",
-        "all_sent": "$event_curr were sent"
+        "all_sent": "$event_curr were sent",
+        "send": "Send"
     }
 }
