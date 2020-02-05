@@ -358,7 +358,7 @@
         "next": "Ďalšie",
         "enabled": "Povolené",
         "disabled": "Pozastavené",
-        "stop": "Stop"
+        "cancel": "Cancel"
     },
     "calc": {
         "regen": "Regenerácia",
