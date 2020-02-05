@@ -295,7 +295,8 @@
         "map_show": "Scentruj mapę",
         "window_open": "Otwórz okno",
         "walk": "Idź do",
-        "market_map": "Mapa targu"
+        "market_map": "Mapa targu",
+        "quest_update": "Show quests"
     },
     "ranking": {
         "add_name": "Pasek rankingu",
