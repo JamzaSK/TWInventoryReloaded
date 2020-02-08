@@ -291,7 +291,7 @@
         "window_open": "Otevřít okno",
         "walk": "Jít tam",
         "market_map": "Mapa trhu",
-        "quest_update": "Show quests"
+        "quest_update": "Zobrazit úkoly"
     },
     "ranking": {
         "add_name": "Rank panel",
@@ -358,7 +358,7 @@
         "next": "Další",
         "enabled": "Povoleno",
         "disabled": "Pozastaveno",
-        "cancel": "Cancel"
+        "cancel": "Zrušit"
     },
     "calc": {
         "regen": "Regenerace",
@@ -396,15 +396,15 @@
     "update_changelog": "Tu je changelog",
     "donate_text_2": "Pokud se vám tento skript líbí a přejete si, aby se na něm pracovalo, nebo si přejete přidávat nové funkce, zvažte prosím jeho $podporu$",
     "event_helper": {
-        "already_sent": "$event_curr sent to $1 of $2 friends",
-        "sent_mg": "Sent to $1",
-        "all_sent": "$event_curr were sent",
-        "send": "Send"
+        "already_sent": "$event_curr posláno $1 z $2 přátel",
+        "sent_mg": "Posláno příteli $1",
+        "all_sent": "$event_curr byla poslána",
+        "send": "Poslat"
     },
     "opener": {
-        "loot_text": "You got",
-        "open_btn": "Open",
-        "open_question": "How many of these do you want to open?",
-        "open_joke": "Really? Oh God, gimme a break!"
+        "loot_text": "Dostali jste",
+        "open_btn": "Otevřít",
+        "open_question": "Kolik chcete otevřít?",
+        "open_joke": "To ses posral? Tolik?"
     }
 }
