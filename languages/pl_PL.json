@@ -262,7 +262,8 @@
         "chat_smart": "Mądrzejszy czat (rozpoznawanie linków)",
         "mw_status": "Pokaż komunikat o postępie skanowania marketu",
         "inv_menu_size": "Maksymalna liczba rzędów w menu wyboru",
-        "pop_char_level": "Zawsze pokazuj wartości bonusów (na poziom) wg. twojego poziomu"
+        "pop_char_level": "Zawsze pokazuj wartości bonusów (na poziom) wg. twojego poziomu",
+        "inv_cld_reminder": "Remind me to use items that have a long cooldowns"
     },
     "keyWords": {
         "xmas": [
@@ -411,5 +412,8 @@
         "open_btn": "Open",
         "open_question": "How many of these do you want to open?",
         "open_joke": "Really? Oh God, gimme a break!"
+    },
+    "reminder": {
+        "remind_msg": "Items ready to be used"
     }
 }
