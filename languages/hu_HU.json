@@ -262,7 +262,8 @@
         "chat_smart": "Okosabb chat (URL felismerés)",
         "mw_status": "Piac vizsgálat üzenet mutatása",
         "inv_menu_size": "A sorok maximális száma a kiválasztott menüben",
-        "pop_char_level": "Mindig mutassa a bónusz értékét (szintenként) a karaktered szintjéhez"
+        "pop_char_level": "Mindig mutassa a bónusz értékét (szintenként) a karaktered szintjéhez",
+        "inv_cld_reminder": "Remind me to use items that have a long cooldowns"
     },
     "keyWords": {
         "xmas": [
@@ -404,5 +405,8 @@
         "open_btn": "Open",
         "open_question": "How many of these do you want to open?",
         "open_joke": "Really? Oh God, gimme a break!"
+    },
+    "reminder": {
+        "remind_msg": "Items ready to be used"
     }
 }
