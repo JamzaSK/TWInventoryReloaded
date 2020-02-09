@@ -262,7 +262,8 @@
         "chat_smart": "Умный чат (распознавание URL)",
         "mw_status": "Показать отчет о ходе сканирования рынка",
         "inv_menu_size": "Максимальное количество строк в меню выбора",
-        "pop_char_level": "Показать значение бонуса (за уровень) на уровне персонажа"
+        "pop_char_level": "Показать значение бонуса (за уровень) на уровне персонажа",
+        "inv_cld_reminder": "Remind me to use items that have a long cooldowns"
     },
     "keyWords": {
         "xmas": [
@@ -404,5 +405,8 @@
         "open_btn": "Open",
         "open_question": "How many of these do you want to open?",
         "open_joke": "Really? Oh God, gimme a break!"
+    },
+    "reminder": {
+        "remind_msg": "Items ready to be used"
     }
 }
