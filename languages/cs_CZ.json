@@ -262,7 +262,8 @@
         "chat_smart": "Chytřejší chat (rozpoznávání URL)",
         "mw_status": "Zobrazit zprávu o průběhu skenu trhu",
         "inv_menu_size": "Maximální počet řádků ve výběrovem menu",
-        "pop_char_level": "Zobrazit hodnotu bonusu (na úroveň) na úrovni postavy"
+        "pop_char_level": "Zobrazit hodnotu bonusu (na úroveň) na úrovni postavy",
+        "inv_cld_reminder": "Remind me to use items that have a long cooldowns"
     },
     "keyWords": {
         "xmas": [
@@ -406,5 +407,8 @@
         "open_btn": "Otevřít",
         "open_question": "Kolik chcete otevřít?",
         "open_joke": "To ses posral? Tolik?"
+    },
+    "reminder": {
+        "remind_msg": "Předměty připravené k použití"
     }
 }
