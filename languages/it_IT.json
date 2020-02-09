@@ -262,7 +262,8 @@
         "chat_smart": "Chat più funzionale (riconoscimento link)",
         "mw_status": "Mostra il messaggio di progresso scansione del mercato",
         "inv_menu_size": "Numero massimo di righe nei menù a tendina",
-        "pop_char_level": "Mostra sempre il valore dei bonus (per livello) sul tuo livello personaggio"
+        "pop_char_level": "Mostra sempre il valore dei bonus (per livello) sul tuo livello personaggio",
+        "inv_cld_reminder": "Remind me to use items that have a long cooldowns"
     },
     "keyWords": {
         "xmas": [
@@ -400,15 +401,18 @@
     "update_changelog": "QUI il changelog",
     "donate_text_2": "Se ti piace lo script e desideri che continui il suo sviluppo o desideri che altre funzionalità vengano aggiunte, per favore considera una $donazione$",
     "event_helper": {
-        "already_sent": "$event_curr inviati a $1 di %2 amici",
+        "already_sent": "$event_curr inviati a $1 di $2 amici",
         "sent_mg": "Inviati a $1",
         "all_sent": "$event_curr inviati",
         "send": "Invia"
     },
     "opener": {
-        "loot_text": "You got",
-        "open_btn": "Open",
-        "open_question": "How many of these do you want to open?",
-        "open_joke": "Really? Oh God, gimme a break!"
+        "loot_text": "Ottieni",
+        "open_btn": "Apri",
+        "open_question": "Quanti ne vuoi aprire?",
+        "open_joke": "Davvero? Accidenti, fammi riposare!"
+    },
+    "reminder": {
+        "remind_msg": "Items ready to be used"
     }
 }
