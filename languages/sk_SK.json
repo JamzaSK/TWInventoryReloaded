@@ -262,7 +262,8 @@
         "chat_smart": "Inteligentnejší chat (rozpoznávanie adresy URL)",
         "mw_status": "Zobraziť správu o priebehu skenu trhu",
         "inv_menu_size": "Maximálny počet riadkov vo výberovom menu",
-        "pop_char_level": "Zobraziť hodnotu bonusu (na úroveň) na úrovni charakteru"
+        "pop_char_level": "Zobraziť hodnotu bonusu (na úroveň) na úrovni charakteru",
+        "inv_cld_reminder": "Remind me to use items that have a long cooldowns"
     },
     "keyWords": {
         "xmas": [
@@ -406,5 +407,8 @@
         "open_btn": "Otvoriť",
         "open_question": "Koľko ich chcete otvoriť?",
         "open_joke": "Vážne? Toľko? Ok, no.."
+    },
+    "reminder": {
+        "remind_msg": "Predmety pripravené na použitie"
     }
 }
