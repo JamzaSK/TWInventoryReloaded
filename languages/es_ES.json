@@ -262,7 +262,8 @@
         "chat_smart": "Chat más inteligente (reconocimiento de URL)",
         "mw_status": "Mostrar mensaje de progreso escaneo de mercado",
         "inv_menu_size": "Número máximo de filas en un menú de selección.",
-        "pop_char_level": "Mostrar siempre el valor de bonificación (por nivel) en tu nivel de personaje"
+        "pop_char_level": "Mostrar siempre el valor de bonificación (por nivel) en tu nivel de personaje",
+        "inv_cld_reminder": "Remind me to use items that have a long cooldowns"
     },
     "keyWords": {
         "xmas": [
@@ -405,5 +406,8 @@
         "open_btn": "Open",
         "open_question": "How many of these do you want to open?",
         "open_joke": "Really? Oh God, gimme a break!"
+    },
+    "reminder": {
+        "remind_msg": "Items ready to be used"
     }
 }
