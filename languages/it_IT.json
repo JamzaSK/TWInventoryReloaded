@@ -263,7 +263,7 @@
         "mw_status": "Mostra il messaggio di progresso scansione del mercato",
         "inv_menu_size": "Numero massimo di righe nei menù a tendina",
         "pop_char_level": "Mostra sempre il valore dei bonus (per livello) sul tuo livello personaggio",
-        "inv_cld_reminder": "Remind me that I have to use items that have a long cooldowns"
+        "inv_cld_reminder": "Ricordami che devo utilizzare oggetti aventi conti alla rovescia lunghi"
     },
     "keyWords": {
         "xmas": [
@@ -404,7 +404,7 @@
         "already_sent": "$event_curr inviati a $1 di $2 amici",
         "all_sent": "$event_curr inviati",
         "send": "Invia",
-        "sent_msg": "Sent to friend $1"
+        "sent_msg": "Invia all'amico $1"
     },
     "opener": {
         "loot_text": "Ottieni",
@@ -413,6 +413,6 @@
         "open_joke": "Davvero? Accidenti, fammi riposare!"
     },
     "reminder": {
-        "remind_msg": "Items ready to be used"
+        "remind_msg": "Disponibili oggetti da usare"
     }
 }
