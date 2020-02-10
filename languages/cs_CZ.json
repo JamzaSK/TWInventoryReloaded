@@ -263,7 +263,7 @@
         "mw_status": "Zobrazit zprávu o průběhu skenu trhu",
         "inv_menu_size": "Maximální počet řádků ve výběrovem menu",
         "pop_char_level": "Zobrazit hodnotu bonusu (na úroveň) na úrovni postavy",
-        "inv_cld_reminder": "Remind me to use items that have a long cooldowns"
+        "inv_cld_reminder": "Připomenout mi, že mám použít předměty, které mají dlouhé cooldowny"
     },
     "keyWords": {
         "xmas": [
@@ -398,9 +398,9 @@
     "donate_text_2": "Pokud se vám tento skript líbí a přejete si, aby se na něm pracovalo, nebo si přejete přidávat nové funkce, zvažte prosím jeho $podporu$",
     "event_helper": {
         "already_sent": "$event_curr posláno $1 z $2 přátel",
-        "sent_mg": "Posláno příteli $1",
         "all_sent": "$event_curr byla poslána",
-        "send": "Poslat"
+        "send": "Poslat",
+        "sent_msg": "Posláno příteli $1"
     },
     "opener": {
         "loot_text": "Dostali jste",
