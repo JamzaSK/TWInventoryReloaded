@@ -1,6 +1,6 @@
 var scriptUpdate={
-    TWIR: '2.181',
+    TWIR: '2.182',
     TWIRrev: '12',
-    TWIRNew: 'Full changelog here: https://github.com/JamzaSK/TWInventoryReloaded/blob/master/changelog/2.181.md',
+    TWIRNew: '',
     changelog: true
 };
