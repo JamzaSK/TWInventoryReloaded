@@ -205,7 +205,7 @@
         "watching": "Figyelés",
         "buffs": "Buffok",
         "browse": "Böngészés az aukciók között",
-        "seen_alert": "$tárgy $dollárért lett felkínálva tőle: $játékos",
+        "seen_alert": "$item $dollars lett felkínálva tőle: $player",
         "bid_val_alert": "A legmagasabb ajánlat jelenleg $1",
         "open_bids": "Nyitott ajánlatok",
         "bids_alert": "Valaki magasabb ajánlatot adott nálad: $1"
