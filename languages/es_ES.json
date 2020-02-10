@@ -263,7 +263,7 @@
         "mw_status": "Mostrar mensaje de progreso escaneo de mercado",
         "inv_menu_size": "Número máximo de filas en un menú de selección.",
         "pop_char_level": "Mostrar siempre el valor de bonificación (por nivel) en tu nivel de personaje",
-        "inv_cld_reminder": "Remind me that I have to use items that have a long cooldowns"
+        "inv_cld_reminder": "Recuérdame que tengo que usar artículos con largos tiempos de reutilización."
     },
     "keyWords": {
         "xmas": [
@@ -358,7 +358,7 @@
         "next": "Próximo",
         "enabled": "Habilitado",
         "disabled": "Deshabilitado",
-        "cancel": "Cancel"
+        "cancel": "Cancelar"
     },
     "calc": {
         "regen": "Regeneración",
@@ -396,18 +396,18 @@
     "update_changelog": "Aquí está el Registro de cambios",
     "donate_text_2": "Si le gusta este script y desea que siga funcionando o desea que se agreguen nuevas funciones, por favor considere hacer una $donación$",
     "event_helper": {
-        "already_sent": "$event:curr enviar a $1 de $2 amigos",
-        "all_sent": "$event:curr fueron enviados",
+        "already_sent": "$event_curr enviar a $1 de $2 amigos",
+        "all_sent": "$event_curr fueron enviados",
         "send": "Enviar",
-        "sent_msg": "Sent to friend $1"
+        "sent_msg": "Enviado a amigo $1"
     },
     "opener": {
-        "loot_text": "You got",
-        "open_btn": "Open",
-        "open_question": "How many of these do you want to open?",
-        "open_joke": "Really? Oh God, gimme a break!"
+        "loot_text": "Obtienes",
+        "open_btn": "Abrir",
+        "open_question": "¿Cuántos de éstos quieres abrir?",
+        "open_joke": "¿En serio? ¡Oh Dios, dame un respiro!"
     },
     "reminder": {
-        "remind_msg": "Items ready to be used"
+        "remind_msg": "Artículos listos para ser usados"
     }
 }
