@@ -15,6 +15,10 @@
 * An alternative to the standard auction browsing window
 * More info (during fort battles, in player profiles..)
 * Intelligent chat with URL recognition
+* Mass telegrams
+* Mass opening - SHIFT + click on the item in your inventory
+* Mass sending of the event currency during supported events
+* Collect reminder for items that have a long cooldowns
 <br>
 
 
@@ -86,6 +90,8 @@
 <img src="https://jamzask.github.io/TWInventoryReloaded/screenshots/Screenshot_6.png">
 <img src="https://jamzask.github.io/TWInventoryReloaded/screenshots/Screenshot_7.png">
 <img src="https://jamzask.github.io/TWInventoryReloaded/screenshots/Screenshot_9.png">
+<img src="https://jamzask.github.io/TWInventoryReloaded/screenshots/Screenshot_11.png">
+<img src="https://jamzask.github.io/TWInventoryReloaded/screenshots/Screenshot_12.png">
 <img src="https://jamzask.github.io/TWInventoryReloaded/screenshots/Screenshot_10.png">
  </p>
 <br>
