@@ -348,7 +348,7 @@
           init: function()
           {
             this.cleanUp(), this.updateFeat(), this.getMarketData(), this.getMarketWhitelist(), this.getLimitedPrices(), this.getEventIcons(), this
-              .getValidMarketList(), TWIR.marketPrice.init(), localStorage.twir_customSets && localStorage.removeItem("twir_customSets")
+              .getValidMarketList(), TWIR.marketPrice.init()
           },
           NPC:
           {},
@@ -494,8 +494,9 @@
           {
             if (localStorage)
             {
-              var e = ["twir_fb", "twir_checkTimer", "twir_inventory", "twir_lastWatch", "twir_marketDataTemp", "twir_menulink", "twir_mw_keep",
-                "twir_mw_scan", "twir_orderCache", "twir_popup", "twir_profiles", "twir_sortBy", "inventory", "orderCache", "orderCacheTWIR", "popup"
+              var e = ["twir_customSets", "twir_fb", "twir_checkTimer", "twir_inventory", "twir_lastWatch", "twir_marketDataTemp", "twir_menulink",
+                "twir_mw_keep", "twir_mw_scan", "twir_orderCache", "twir_popup", "twir_profiles", "twir_sortBy", "inventory", "orderCache",
+                "orderCacheTWIR", "popup"
               ];
               for (var t in localStorage) localStorage.hasOwnProperty(t) && (-1 != t.indexOf("_betteritems") || e.includes(t)) && localStorage.removeItem(
                 t);
@@ -5023,7 +5024,7 @@
               t[i.short] && !t[i.short].some(function(e)
               {
                 return "trader" === e.spec
-              }) ? t[i.short].unshift(e) : t[i.short] && (t[i.short] = [], t[i.short].push(e))
+              }) ? t[i.short].unshift(e) : t[i.short] || (t[i.short] = [], t[i.short].push(e))
             }
 
             function r(e, t)
@@ -5104,7 +5105,7 @@
                                 c = e.getWatched(r[s].item_id),
                                 A = new Date(1e3 * r[s].auction_end_date).getTime() - new Date(1e3 * Game.getServerTime()).getTime();
                               r[s].auction_ends_in = A / 1e3, r[s].posx = Character.position.x, r[s].posy = Character.position.y, e.missing
-                                .indexOf(p.name) >= 0 && n(r[s], e.wtb_missing), c && n(r[s], e.wtb)
+                                .includes(p.name) && n(r[s], e.wtb_missing), c && n(r[s], e.wtb)
                             }
                           if (e.marketItems = TWIR.recycleData(e.marketItems), e.marketProducts = TWIR.recycleData(e.marketProducts), void 0 !==
                             localStorage)
