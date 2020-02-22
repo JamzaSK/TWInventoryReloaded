@@ -205,10 +205,7 @@
         "watching": "Sledováno",
         "buffs": "Posílení",
         "browse": "Prochádzet aukce",
-        "seen_alert": "Předmět $item byl viděn za $dollars od hráče $player",
-        "bid_val_alert": "Nejvyšší nabídka je nyní $1",
-        "open_bids": "Otevřené aukce",
-        "bids_alert": "Někdo jiný přihodil více na předmět $1"
+        "seen_alert": "Předmět $item byl viděn za $dollars od hráče $player"
     },
     "features": {
         "preferences": "Preference",
@@ -392,12 +389,13 @@
         "combo_count": "$1 z $2",
         "level": "Úroveň",
         "construct": "Konstrukce",
-        "speed": "Rychlost"
+        "speed": "Rychlost",
+        "wearable_only": "Wearable only"
     },
     "update_changelog": "Tu je changelog",
     "donate_text_2": "Pokud se vám tento skript líbí a přejete si, aby se na něm pracovalo, nebo si přejete přidávat nové funkce, zvažte prosím jeho $podporu$",
     "event_helper": {
-        "already_sent": "$event_curr byla poslána $1 z $2 přátel",
+        "already_sent": "$event_curr poslané $1 z $2 přátel",
         "all_sent": "$event_curr byla poslána",
         "send": "Poslat",
         "sent_msg": "Posláno příteli $1"
@@ -410,5 +408,13 @@
     },
     "reminder": {
         "remind_msg": "Předměty připravené k použití"
+    },
+    "combo_comparison": {
+        "add_name": "Combo Comparison",
+        "hint": "Add / Drop items here to get started!",
+        "full_bonus": "Full bonus",
+        "item_bonus": "Bonus from items",
+        "set_bonus": "Bonus from sets",
+        "compare": "Compare"
     }
 }
