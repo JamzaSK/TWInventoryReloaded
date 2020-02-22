@@ -389,7 +389,8 @@
         "level": "Nivel",
         "construct": "Construcción",
         "speed": "Velocidad",
-        "wearable_only": "Wearable only"
+        "wearable_only": "Wearable only",
+        "sector": "sector"
     },
     "update_changelog": "Aquí está el Registro de cambios",
     "donate_text_2": "Si le gusta este script y desea que siga funcionando o desea que se agreguen nuevas funciones, por favor considere hacer una $donación$",
