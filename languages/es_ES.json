@@ -260,7 +260,8 @@
         "mw_status": "Mostrar mensaje de progreso escaneo de mercado",
         "inv_menu_size": "Número máximo de filas en un menú de selección.",
         "pop_char_level": "Mostrar siempre el valor de bonificación (por nivel) en tu nivel de personaje",
-        "inv_cld_reminder": "Recuérdame que tengo que usar artículos con largos tiempos de reutilización."
+        "inv_cld_reminder": "Recuérdame que tengo que usar artículos con largos tiempos de reutilización.",
+        "inv_cld_reminder_playsound": "Mute reminder sound"
     },
     "keyWords": {
         "xmas": [
