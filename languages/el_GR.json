@@ -260,7 +260,8 @@
         "mw_status": "Εμφάνιση προόδου σάρωσης αγοράς σε μήνυμα",
         "inv_menu_size": "Μέγιστος αριθμός γραμμών σε ένα επιλεγμένο μενού",
         "pop_char_level": "Να εμφανίζετε πάντα η αξία μπόνους (ανά επίπεδο) στο επίπεδο χαρακτήρα μου",
-        "inv_cld_reminder": "Remind me that I have to use items that have a long cooldowns"
+        "inv_cld_reminder": "Remind me that I have to use items that have a long cooldowns",
+        "inv_cld_reminder_playsound": "Mute reminder sound"
     },
     "keyWords": {
         "xmas": [
