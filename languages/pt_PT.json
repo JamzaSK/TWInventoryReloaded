@@ -260,7 +260,8 @@
         "mw_status": "Mostrar mensagem de progresso da pesquisa do mercado",
         "inv_menu_size": "Número máximo de filas no menu de seleção",
         "pop_char_level": "Mostar sempre nível de bónus (por nível) no nível da personagem",
-        "inv_cld_reminder": "Lembrar-me que tenho de usar com largos tempo de reutilização"
+        "inv_cld_reminder": "Lembrar-me que tenho de usar com largos tempo de reutilização",
+        "inv_cld_reminder_playsound": "Mute reminder sound"
     },
     "keyWords": {
         "xmas": [
