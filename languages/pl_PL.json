@@ -385,7 +385,7 @@
         "add_name": "Pomocnik ubierania się",
         "bonus_count_title": "Bonusy z przedmiotów i setów",
         "result_menu_title": "Inne kombinacje",
-        "equipment_number": "Ekwipunek",
+        "equipment_number": "Ekwipunek $1",
         "show_inv": "Szukaj w ekwipunku",
         "switch_w": "Zmień broń",
         "bonus_items_title": "Bonusy z przedmiotów",
@@ -397,7 +397,7 @@
         "construct": "Budowanie",
         "speed": "Prędkość",
         "wearable_only": "Możliwe do założenia",
-        "sector": "sector"
+        "sector": "do sektora"
     },
     "update_changelog": "Lista zmian",
     "donate_text_2": "Jeżeli lubisz ten skrypt i chcesz aby dalej się rozwijał pomyśl proszę o $donation$",
