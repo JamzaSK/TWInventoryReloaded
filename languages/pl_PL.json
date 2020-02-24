@@ -261,7 +261,7 @@
         "inv_menu_size": "Maksymalna liczba rzędów w menu wyboru",
         "pop_char_level": "Zawsze pokazuj wartości bonusów (na poziom) wg. twojego poziomu",
         "inv_cld_reminder": "Przypomnij mi o używaniu przedmiotów z długim czasem odnawiania",
-        "inv_cld_reminder_playsound": "Mute reminder sound"
+        "inv_cld_reminder_playsound": "Wycisz dźwięk powiadomień"
     },
     "keyWords": {
         "xmas": [
@@ -396,7 +396,7 @@
         "level": "Poziom",
         "construct": "Budowanie",
         "speed": "Prędkość",
-        "wearable_only": "Wearable only",
+        "wearable_only": "Możliwe do założenia",
         "sector": "sector"
     },
     "update_changelog": "Lista zmian",
@@ -418,10 +418,10 @@
     },
     "combo_comparison": {
         "add_name": "Combo Comparison",
-        "hint": "Add / Drop items here to get started!",
-        "full_bonus": "Full bonus",
-        "item_bonus": "Bonus from items",
-        "set_bonus": "Bonus from sets",
-        "compare": "Compare"
+        "hint": "Dodaj/Przeciągnij przedmioty tutaj żeby zacząć",
+        "full_bonus": "Pełen bonus",
+        "item_bonus": "Bonus z przedmiotów",
+        "set_bonus": "Bonus z zestawu",
+        "compare": "Porównaj"
     }
 }
