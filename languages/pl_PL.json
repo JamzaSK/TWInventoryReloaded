@@ -260,7 +260,8 @@
         "mw_status": "Pokaż komunikat o postępie skanowania marketu",
         "inv_menu_size": "Maksymalna liczba rzędów w menu wyboru",
         "pop_char_level": "Zawsze pokazuj wartości bonusów (na poziom) wg. twojego poziomu",
-        "inv_cld_reminder": "Przypomnij mi o używaniu przedmiotów z długim czasem odnawiania"
+        "inv_cld_reminder": "Przypomnij mi o używaniu przedmiotów z długim czasem odnawiania",
+        "inv_cld_reminder_playsound": "Mute reminder sound"
     },
     "keyWords": {
         "xmas": [
