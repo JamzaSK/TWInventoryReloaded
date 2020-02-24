@@ -66,6 +66,7 @@
 * **Français (fr)** *by Thathanka*<br>
 * **Magyar (hu)** *by Aviendha*<br>
 * **Italiano (it)** *by Billy-AR*<br>
+* **Português (pt)** *by jccwest*<br>
 * **Polski (pl)** *by Wojcieszy*<br>
 * **Русский (ru)** *by Luntik*<br>
 * **Slovenčina (sk)**<br>
