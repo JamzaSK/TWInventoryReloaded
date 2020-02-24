@@ -261,7 +261,7 @@
         "inv_menu_size": "Maksymalna liczba rzędów w menu wyboru",
         "pop_char_level": "Zawsze pokazuj wartości bonusów (na poziom) wg. twojego poziomu",
         "inv_cld_reminder": "Przypomnij mi o używaniu przedmiotów z długim czasem odnawiania",
-        "inv_cld_reminder_playsound": "Wycisz dźwięk powiadomień"
+        "inv_cld_reminder_playsound": "Wycisz dźwięk powiadomień o użyciu przedmiotów"
     },
     "keyWords": {
         "xmas": [
@@ -417,9 +417,9 @@
         "remind_msg": "Przedmioty gotowe do użycia"
     },
     "combo_comparison": {
-        "add_name": "Combo Comparison",
+        "add_name": "Porównanie kombinacji",
         "hint": "Dodaj/Przeciągnij przedmioty tutaj żeby zacząć",
-        "full_bonus": "Pełen bonus",
+        "full_bonus": "Pełne bonusy",
         "item_bonus": "Bonus z przedmiotów",
         "set_bonus": "Bonus z zestawu",
         "compare": "Porównaj"
