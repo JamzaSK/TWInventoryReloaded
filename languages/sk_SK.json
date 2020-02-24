@@ -260,7 +260,8 @@
         "mw_status": "Zobraziť správu o priebehu skenu trhu",
         "inv_menu_size": "Maximálny počet riadkov vo výberovom menu",
         "pop_char_level": "Zobraziť hodnotu bonusu (na úroveň) na úrovni charakteru",
-        "inv_cld_reminder": "Pripomenúť mi, že mám použiť predmety, ktoré majú dlhé cooldowny"
+        "inv_cld_reminder": "Pripomenúť mi, že mám použiť predmety, ktoré majú dlhé cooldowny",
+        "inv_cld_reminder_playsound": "Stlmiť zvukové upozornenie u reminderu"
     },
     "keyWords": {
         "xmas": [
@@ -379,7 +380,7 @@
         "add_name": "Pomocník obliekania",
         "bonus_count_title": "Bonusy z itemov a setov",
         "result_menu_title": "Ostatné kombinácie",
-        "equipment_number": "vybavenie $1",
+        "equipment_number": "Vybavenie $1",
         "show_inv": "Vyhľadať v inventári",
         "switch_w": "Zmeniť zbraň",
         "bonus_items_title": "Bonusy z itemov",
@@ -390,8 +391,8 @@
         "level": "Úroveň",
         "construct": "Výstavba",
         "speed": "Rýchlosť",
-        "wearable_only": "Wearable only",
-        "sector": "sector"
+        "wearable_only": "Možné obliecť",
+        "sector": "sektor"
     },
     "update_changelog": "Tu je Changelog",
     "donate_text_2": "Ak sa vám tento skript páči a prajete si, aby sa pokračovalo v jeho vývoji, alebo si prajete, aby sa pridávali nové funkcie, zvážte prosím jeho $podporu$",
@@ -411,11 +412,11 @@
         "remind_msg": "Predmety pripravené na použitie"
     },
     "combo_comparison": {
-        "add_name": "Combo Comparison",
-        "hint": "Add / Drop items here to get started!",
-        "full_bonus": "Full bonus",
-        "item_bonus": "Bonus from items",
-        "set_bonus": "Bonus from sets",
-        "compare": "Compare"
+        "add_name": "Porovnanie vybavenia",
+        "hint": "Pridaj / Dropni itemy sem",
+        "full_bonus": "Kompletný bonus",
+        "item_bonus": "Bonus z itemov",
+        "set_bonus": "Bonus zo setov",
+        "compare": "Porovnať"
     }
 }
