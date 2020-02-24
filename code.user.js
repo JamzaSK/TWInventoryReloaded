@@ -53,7 +53,7 @@
     You have received a copy of the GNU General Public License
     along with this program.
 */	
-	
+
 ! function(fn)
 {
   var script = document.createElement("script");
@@ -1418,7 +1418,7 @@
                             i = e.count;
                           r[e.item_id] ? (i += r[e.item_id].count, r[e.item_id].count = i, r[e.item_id].itm.setCount(i)) : (r[e.item_id] = {}, r[e
                               .item_id].count = i, r[e.item_id].itm = new tw2widget.InventoryItem(t), r[e.item_id].itm.setCount(i)
-                            .setShowcompare(!1), r[e.item_id].itm.getImgEl().attr("title", new ItemPopup(t,
+                            .setShowcompare(!1), r[e.item_id].itm.getMainDiv().attr("title", new ItemPopup(t,
                             {
                               twir_partial_bonus: !1
                             }).getXHTML()), a.updateLoot(r[e.item_id].getMainDiv(), Object.keys(r).length)), a.updateCounters(o)
@@ -1531,7 +1531,7 @@
             var t = Bag.getItemByItemId(e);
             this.itemEl || (this.itemEl = {});
             var i = this.itemEl[t.getId()] = new tw2widget.InventoryItem(t.obj);
-            return i.initDisplay(), i.setCount(t.count).setInvId(t.inv_id).setShowcompare(!1), i.getImgEl().attr("title", new ItemPopup(t.obj,
+            return i.initDisplay(), i.setCount(t.count).setInvId(t.inv_id).setShowcompare(!1), i.getMainDiv().attr("title", new ItemPopup(t.obj,
             {
               twir_partial_bonus: !1
             }).getXHTML()), i.getMainDiv().click(function(e)
@@ -8399,7 +8399,7 @@
             {
               var a = this[e][i][1],
                 n = ItemManager.get(this[e][i][0]);
-              a.find(".tw_item").attr("title", new ItemPopup(n,
+              a.attr("title", new ItemPopup(n,
               {
                 character:
                 {
@@ -8866,7 +8866,7 @@
             {
               var o = ItemManager.get(e[n]),
                 r = new tw2widget.InventoryItem(o).setShowcompare(!1);
-              r.getImgEl().attr("title", new ItemPopup(o,
+              r.getMainDiv().attr("title", new ItemPopup(o,
               {
                 character:
                 {
