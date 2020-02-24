@@ -260,7 +260,8 @@
         "mw_status": "Mostra il messaggio di progresso scansione del mercato",
         "inv_menu_size": "Numero massimo di righe nei menù a tendina",
         "pop_char_level": "Mostra sempre il valore dei bonus (per livello) sul tuo livello personaggio",
-        "inv_cld_reminder": "Ricordami che devo utilizzare oggetti aventi conti alla rovescia lunghi"
+        "inv_cld_reminder": "Ricordami che devo utilizzare oggetti aventi conti alla rovescia lunghi",
+        "inv_cld_reminder_playsound": "Mute reminder sound"
     },
     "keyWords": {
         "xmas": [
