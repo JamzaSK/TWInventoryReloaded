@@ -260,7 +260,8 @@
         "mw_status": "Markt-Scanstatus zeigen",
         "inv_menu_size": "Maximale Anzahl Zeilen im Dropdown-Menü (Set-Suche)",
         "pop_char_level": "(pro Stufe)-Boni immer auf deine Stufe umrechnen",
-        "inv_cld_reminder": "Remind me that I have to use items that have a long cooldowns"
+        "inv_cld_reminder": "Remind me that I have to use items that have a long cooldowns",
+        "inv_cld_reminder_playsound": "Mute reminder sound"
     },
     "keyWords": {
         "xmas": [
