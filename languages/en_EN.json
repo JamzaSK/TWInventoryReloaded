@@ -260,7 +260,8 @@
         "mw_status": "Show market scan progress message",
         "inv_menu_size": "Maximal number of rows in a select menu",
         "pop_char_level": "Always show bonus value (per level) on your character level",
-        "inv_cld_reminder": "Remind me that I have to use items that have a long cooldowns"
+        "inv_cld_reminder": "Remind me that I have to use items that have a long cooldowns",
+        "inv_cld_reminder_playsound": "Mute reminder sound"
     },
     "keyWords": {
         "xmas": [
