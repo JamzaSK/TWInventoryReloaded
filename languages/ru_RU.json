@@ -260,7 +260,8 @@
         "mw_status": "Показать отчет о ходе сканирования рынка",
         "inv_menu_size": "Максимальное количество строк в меню выбора",
         "pop_char_level": "Показать значение бонуса (за уровень) на уровне персонажа",
-        "inv_cld_reminder": "Напомни мне использовать предметы, у которых долгие cooldowny"
+        "inv_cld_reminder": "Напомни мне использовать предметы, у которых долгие cooldowny",
+        "inv_cld_reminder_playsound": "Mute reminder sound"
     },
     "keyWords": {
         "xmas": [
