@@ -52,7 +52,7 @@
 
     You have received a copy of the GNU General Public License
     along with this program.
-*/	
+*/
 
 ! function(fn)
 {
@@ -1421,7 +1421,7 @@
                             .setShowcompare(!1), r[e.item_id].itm.getMainDiv().attr("title", new ItemPopup(t,
                             {
                               twir_partial_bonus: !1
-                            }).getXHTML()), a.updateLoot(r[e.item_id].getMainDiv(), Object.keys(r).length)), a.updateCounters(o)
+                            }).getXHTML()), a.updateLoot(r[e.item_id].itm.getMainDiv(), Object.keys(r).length)), a.updateCounters(o)
                         })
                     }
                   }
