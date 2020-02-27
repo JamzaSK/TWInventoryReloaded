@@ -73,11 +73,9 @@
 <br>
 
 
-# Help us translate
-> If you'd like to help translate our userscript, sign up for a POEditor account and check out this project
+# Translation
 
-* <a href="https://poeditor.com/join/project/MwmzycR5vc" rel="nofollow">TWIR on POEditor</a>
-<br>
+* Improve or suggest a translation <a href="https://poeditor.com/join/project/MwmzycR5vc" rel="nofollow">here</a>.
 
 
 # Screenshots
