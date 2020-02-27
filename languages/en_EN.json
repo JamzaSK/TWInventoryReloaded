@@ -221,7 +221,7 @@
         "inv_setwindow_remember_search": "Remember search settings in the set window",
         "inv_searchwindow_remember_search": "Remember search settings in the search window",
         "pop_item_id": "Show the item ID",
-        "pop_display_event": "Show event icon related to this item",
+        "pop_display_event": "Show event icon and name related to this item",
         "pop_owned_counts": "Show number of items you own",
         "pop_job_table": "Show name of job where you can find this product",
         "pop_crafting_recipe": "Show required resources for this product",
@@ -244,7 +244,6 @@
         "ml_market_collector": "Add a button to show the Market Collector menu",
         "ml_sleep": "Add a button to show the Sleep menu",
         "ml_npc": "Add a button to show the Quest givers menu",
-        "prof_rank_bar": "Show actual ranks of player in their profile",
         "prof_craft_points": "Show crafting points in the player profile",
         "fb_topic": "Add a chat topic in the battle preparation window",
         "fb_travel_button": "Add a travel button in the fort battles window",
@@ -275,7 +274,8 @@
             "Dia de los Muertos"
         ],
         "easter": "Easter",
-        "oktoberfest": "Octoberfest"
+        "oktoberfest": "Octoberfest",
+        "sale": "Sale"
     },
     "menulink": {
         "add_name": "Menulink bar",
@@ -291,29 +291,6 @@
         "walk": "Go there",
         "market_map": "Market map",
         "quest_update": "Show quests"
-    },
-    "ranking": {
-        "add_name": "Rank bar",
-        "rank": "Rank",
-        "duels": "Duels",
-        "won": "Won",
-        "lost": "Lost",
-        "diff": "Difference",
-        "fb": "Fort Battles",
-        "dd": "Damage dealt",
-        "taken": "Hits taken",
-        "dodges": "Dodges",
-        "crafting": "Crafting",
-        "learnt": "Learnt",
-        "points": "Points",
-        "crafted": "Crafted",
-        "construction": "Construction",
-        "fair": "Travelling fair",
-        "stage_ups": "Levels increased",
-        "mpi": "Adventures",
-        "ko": "KOs",
-        "games": "Games",
-        "rg": "Rage quits"
     },
     "informative": {
         "error404": "No items found",
