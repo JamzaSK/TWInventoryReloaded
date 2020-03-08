@@ -2,7 +2,7 @@
 
 <p><a href="https://github.com/JamzaSK/TWInventoryReloaded/"><img src="https://jamzask.github.io/TWInventoryReloaded/icons/github_circle_32.png" alt=""></a>
  <a href="https://poeditor.com/join/project/MwmzycR5vc" rel="nofollow"><img src="https://jamzask.github.io/TWInventoryReloaded/icons/poeditor_circle_32.png" alt=""></a>
-<a href="https://www.buymeacoffee.com/Jamza"><img src="https://jamzask.github.io/TWInventoryReloaded/icons/coffee_circle_32.png" alt="" </a>
+<a href="https://www.buymeacoffee.com/Jamza" rel="nofollow"><img src="https://jamzask.github.io/TWInventoryReloaded/icons/coffee_circle_32.png" alt=""></a>
  <a href="https://github.com/JamzaSK/TWInventoryReloaded/#donate"><img src="https://jamzask.github.io/TWInventoryReloaded/icons/donate_circle_32.png" alt=""></a></p>
 
 
