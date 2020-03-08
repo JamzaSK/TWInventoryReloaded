@@ -64,7 +64,8 @@
         "property": "Propriété",
         "item_type": "Type",
         "regen": "Regeneration",
-        "custom": "Custom"
+        "custom": "Custom",
+        "set_window": "Set List"
     },
     "tooltips": {
         "jobdrop": "Peut être trouvé en travaillant",
@@ -216,9 +217,6 @@
     "feat_strings": {
         "inv_window_title": "Afficher la catégorie active dans le titre",
         "inv_window_minititle": "Afficher la catégorie active dans le mini titre",
-        "inv_setmenu_full_color": "Sets complets en couleur dans la liste des sets",
-        "inv_setmenu_empty_opacity": "Afficher les sets où un seul item est possédé en transparent dans la liste des sets",
-        "inv_setwindow_remember_search": "Mémoriser mes paramètres de recherche dans la liste des sets",
         "inv_searchwindow_remember_search": "Mémoriser mes paramètres de recherche dans l'inventaire",
         "pop_item_id": "Afficher l'id de l'item",
         "pop_display_event": "Afficher l'événement associé à l'item",
@@ -244,7 +242,6 @@
         "ml_market_collector": "Raccourci pour collecter au marché",
         "ml_sleep": "Raccourci pour dormir",
         "ml_npc": "Raccourci vers les donneurs de quêtes",
-        "prof_rank_bar": "Afficher les classements des joueurs dans leur profil",
         "prof_craft_points": "Afficher les points d'artisanat des joueurs dans leur profil",
         "fb_topic": "Afficher le sujet du tchat dans la fenêtre de préparation à la bataille",
         "fb_travel_button": "Afficher un raccourci pour se rendre au fort",
@@ -275,7 +272,8 @@
             "Jour des Morts"
         ],
         "easter": "Pâques",
-        "oktoberfest": "Oktoberfest"
+        "oktoberfest": "Oktoberfest",
+        "sale": "Sale"
     },
     "menulink": {
         "add_name": "Barre de liens",
@@ -291,29 +289,6 @@
         "walk": "Go there",
         "market_map": "Market map",
         "quest_update": "Show quests"
-    },
-    "ranking": {
-        "add_name": "Barre de classement",
-        "rank": "Classement",
-        "duels": "Duels",
-        "won": "Gagnés",
-        "lost": "Perdus",
-        "diff": "Différence",
-        "fb": "Batailles de fort",
-        "dd": "Dégâts causés",
-        "taken": "Coups reçus",
-        "dodges": "Tirs évités",
-        "crafting": "Artisanat",
-        "learnt": "Recettes apprises",
-        "points": "Points",
-        "crafted": "Objets fabriqués",
-        "construction": "Points de construction",
-        "fair": "Fête foraine",
-        "stage_ups": "Niveaux de bâtiments",
-        "mpi": "Aventures",
-        "ko": "KOs",
-        "games": "Parties",
-        "rg": "Rage-quits"
     },
     "informative": {
         "error404": "Aucun item de ce type trouvé",
