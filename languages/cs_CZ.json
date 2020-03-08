@@ -64,7 +64,8 @@
         "property": "Vlastnosti",
         "item_type": "Typ",
         "regen": "Regenerace",
-        "custom": "Vlastní"
+        "custom": "Vlastní",
+        "set_window": "Seznam setů"
     },
     "tooltips": {
         "jobdrop": "Lze najít při práci",
@@ -216,12 +217,9 @@
     "feat_strings": {
         "inv_window_title": "Zobrazit název kategorie v názvu okna",
         "inv_window_minititle": "Zobrazit název kategorie v taskbaru",
-        "inv_setmenu_full_color": "Změnit barvu kompletních setů v set menu",
-        "inv_setmenu_empty_opacity": "Zobrazit sety s malým množstvím vlastněných předmětů transparentní",
-        "inv_setwindow_remember_search": "Zapamatovat nastavení v okně setů",
         "inv_searchwindow_remember_search": "Zapamatovat nastavení v okně vyhledávaní",
         "pop_item_id": "Zobrazit ID u každého předmětu",
-        "pop_display_event": "Zobrazit ikonu eventu související s týmto předmětem",
+        "pop_display_event": "Zobrazit event související s týmto předmětem",
         "pop_owned_counts": "Zobrazit počet vlastněných předmětů",
         "pop_job_table": "Zobrazit názvy prací, ve kterých lze získat tento produkt",
         "pop_crafting_recipe": "Zobrazit potřebné materiály pro tento produkt",
@@ -244,7 +242,6 @@
         "ml_market_collector": "Přidat tlačítko pro zobrazení nabídky Přehled trhu",
         "ml_sleep": "Přidat tlačítko pro zobrazení nabídky Najít postel",
         "ml_npc": "Přidat tlačítko pro zobrazení nabídky Najít zadavatele",
-        "prof_rank_bar": "Zobrazit aktuální pozici v žebříčku v profilu daného hráče",
         "prof_craft_points": "Zobrazit počet řemeslných bodů v profilu daného hráče",
         "fb_topic": "Zobrazit topic chatu v okně přípravy bitvy",
         "fb_travel_button": "Přidat tlačítko cestování do pevnosti v okně bitev",
@@ -275,7 +272,8 @@
             "Den mrtvých"
         ],
         "easter": "Velikonoce",
-        "oktoberfest": "Oktoberfest"
+        "oktoberfest": "Oktoberfest",
+        "sale": "Prodejní akce"
     },
     "menulink": {
         "add_name": "Menulink panel",
@@ -291,29 +289,6 @@
         "walk": "Jít tam",
         "market_map": "Mapa trhu",
         "quest_update": "Zobrazit úkoly"
-    },
-    "ranking": {
-        "add_name": "Rank panel",
-        "rank": "Pozice",
-        "duels": "Duely",
-        "won": "Výhry",
-        "lost": "Prohry",
-        "diff": "Rozdíl",
-        "fb": "Bitvy o pevnosti",
-        "dd": "Způsobené škody",
-        "taken": "Obdržené zásahy",
-        "dodges": "Úhyby",
-        "crafting": "Řemeslo",
-        "learnt": "Naučeno",
-        "points": "Body",
-        "crafted": "Vyrobeno",
-        "construction": "Výstavba",
-        "fair": "Kočovný cirkus",
-        "stage_ups": "Úrovne budov",
-        "mpi": "Dobrodružství",
-        "ko": "KO nepřátel",
-        "games": "Odehráno",
-        "rg": "Rage quity"
     },
     "informative": {
         "error404": "Nebyly nalezeny žádné předměty",
