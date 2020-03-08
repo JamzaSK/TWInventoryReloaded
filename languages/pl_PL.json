@@ -65,7 +65,7 @@
         "item_type": "Typ",
         "regen": "Regeneracja",
         "custom": "Niestandardowe",
-        "set_window": "Set List"
+        "set_window": "Lista setów"
     },
     "tooltips": {
         "jobdrop": "Znalezione w pracy",
@@ -278,7 +278,7 @@
         ],
         "easter": "Wielkanoc",
         "oktoberfest": "Oktoberfest",
-        "sale": "Sale"
+        "sale": "Wyprzedaż"
     },
     "menulink": {
         "add_name": "Szybkie menu",
@@ -398,5 +398,6 @@
         "item_bonus": "Bonus z przedmiotów",
         "set_bonus": "Bonus z zestawu",
         "compare": "Porównaj"
-    }
+    },
+    "script_desc": "Better Inventory and Tools for The West!"
 }
