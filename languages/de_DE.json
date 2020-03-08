@@ -64,7 +64,8 @@
         "property": "Eigenschaft",
         "item_type": "Slot",
         "regen": "Regeneration",
-        "custom": "Eigene"
+        "custom": "Eigene",
+        "set_window": "Set List"
     },
     "tooltips": {
         "jobdrop": "Findbar",
@@ -216,9 +217,6 @@
     "feat_strings": {
         "inv_window_title": "Zeige Kategorie im Fenstertitel",
         "inv_window_minititle": "Zeige Kategorie in der Fensterleiste",
-        "inv_setmenu_full_color": "Komplette Sets einfärben (Set-Suche)",
-        "inv_setmenu_empty_opacity": "Sets mit wenigen Items einfärben (Set-Suche)",
-        "inv_setwindow_remember_search": "Sucheinstellung merken (Set-Suche)",
         "inv_searchwindow_remember_search": "Sucheinstellung merken (Inventar-Suche)",
         "pop_item_id": "Zeige Item-ID",
         "pop_display_event": "Zeige Event-Icon",
@@ -244,7 +242,6 @@
         "ml_market_collector": "MarketCollector aktivieren",
         "ml_sleep": "SleepMenu aktivieren",
         "ml_npc": "NPC locator aktivieren",
-        "prof_rank_bar": "Zeige Rang im Profil",
         "prof_craft_points": "Zeige Handwerkspunkte im Profil",
         "fb_topic": "Chat-Topic im FK-Vorbereitungsfenster zeigen",
         "fb_travel_button": "Sofortreise zum FK-Fenster hinzufügen",
@@ -273,7 +270,8 @@
             "Tag der Toten"
         ],
         "easter": "Ostern",
-        "oktoberfest": "Oktoberfest"
+        "oktoberfest": "Oktoberfest",
+        "sale": "Sale"
     },
     "menulink": {
         "add_name": "Shortcut-Menü",
@@ -289,29 +287,6 @@
         "walk": "Hingehen",
         "market_map": "Marktkarte",
         "quest_update": "Show quests"
-    },
-    "ranking": {
-        "add_name": "Ranglisten-Leiste",
-        "rank": "Rang",
-        "duels": "Duelle",
-        "won": "Gewonnen",
-        "lost": "Verloren",
-        "diff": "Unterschied",
-        "fb": "Fortkämpfe",
-        "dd": "Schaden gemacht",
-        "taken": "Eingesteckte Treffer",
-        "dodges": "Schüssen ausgewichen",
-        "crafting": "Handwerk",
-        "learnt": "Gelrnte Rezepte",
-        "points": "Handwerkspunkte",
-        "crafted": "Hergestellt",
-        "construction": "Ausbau",
-        "fair": "Wanderzirkus",
-        "stage_ups": "Abgeschlossene Stufen",
-        "mpi": "Abenteuer",
-        "ko": "KOs",
-        "games": "Spiele",
-        "rg": "Spiel verlassen"
     },
     "informative": {
         "error404": "Keine Gegenstände dieser Art gefunden.",
