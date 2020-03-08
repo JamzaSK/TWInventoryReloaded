@@ -391,5 +391,6 @@
         "item_bonus": "Bónusz a tárgyakból",
         "set_bonus": "Bónusz a szettekből",
         "compare": "Összehasonlít"
-    }
+    },
+    "script_desc": "Better Inventory and Tools for The West!"
 }
