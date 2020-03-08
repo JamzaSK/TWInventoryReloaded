@@ -64,7 +64,8 @@
         "property": "Tárgy tulajdonsága",
         "item_type": "Típus",
         "regen": "Regeneráció",
-        "custom": "Egyedi"
+        "custom": "Egyedi",
+        "set_window": "Set List"
     },
     "tooltips": {
         "jobdrop": "Munkából található",
@@ -216,9 +217,6 @@
     "feat_strings": {
         "inv_window_title": "Mutasd a kategóriát az ablak címsorában",
         "inv_window_minititle": "Mutasd a kategóriát a tálcán",
-        "inv_setmenu_full_color": "Változzon meg a színe a komplett szett neveknek a szett menüben",
-        "inv_setmenu_empty_opacity": "A kevés elemmel rendelkező szettek neve legyen átlátszó a szett menüben",
-        "inv_setwindow_remember_search": "Jegyezze meg a keresési beállításokat a szett ablakban",
         "inv_searchwindow_remember_search": "Jegyezze meg a keresési beállításokat a kereső ablakban",
         "pop_item_id": "Mutasd a tárgy ID-t",
         "pop_display_event": "Az elemhez kapcsolódó esemény ikon megjelenítése",
@@ -244,7 +242,6 @@
         "ml_market_collector": "Hozzon létre egy gombot a Piaci gyűjteményekhez",
         "ml_sleep": "Hozzon létre egy gombot az Alvás menühöz",
         "ml_npc": "Hozzon létre egy gombot a Kalandosztókhoz",
-        "prof_rank_bar": "Mutasd a játékosok aktuális rangját a profiljukon",
         "prof_craft_points": "Mutasd a játékosok szakmapontját a profiljukon",
         "fb_topic": "Mutasd a cset topicot az erődharc előnézeti ablakban",
         "fb_travel_button": "Utazás gomb hozzáadása az erődharc ablakhoz",
@@ -273,7 +270,8 @@
             "Halottak Napja"
         ],
         "easter": "Húsvét",
-        "oktoberfest": "Októberfeszt"
+        "oktoberfest": "Októberfeszt",
+        "sale": "Sale"
     },
     "menulink": {
         "add_name": "Menülink sáv",
@@ -289,29 +287,6 @@
         "walk": "Menj ide: ",
         "market_map": "Piactérkép",
         "quest_update": "Mutasd a küldetéseket"
-    },
-    "ranking": {
-        "add_name": "Rangsor",
-        "rank": "Rang",
-        "duels": "Párbaj",
-        "won": "Győzelem",
-        "lost": "Vereség",
-        "diff": "Különbség",
-        "fb": "Erődharc",
-        "dd": "Sebzés",
-        "taken": "Találat",
-        "dodges": "Kitérés",
-        "crafting": "Szakma",
-        "learnt": "Megtanult",
-        "points": "Pontok",
-        "crafted": "Gyártott",
-        "construction": "Építés",
-        "fair": "Utazó vásár",
-        "stage_ups": "A szintek megemelkedtek",
-        "mpi": "Kalandok",
-        "ko": "KO-k",
-        "games": "Játékok",
-        "rg": "Hirtelen felindulásból elkövetett kilépés"
     },
     "informative": {
         "error404": "Nem található termék",
