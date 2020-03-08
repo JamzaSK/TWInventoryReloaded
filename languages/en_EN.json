@@ -64,7 +64,8 @@
         "property": "Item property",
         "item_type": "Type",
         "regen": "Regeneration",
-        "custom": "Custom"
+        "custom": "Custom",
+        "set_window": "Set List"
     },
     "tooltips": {
         "jobdrop": "Droppable from job",
@@ -214,12 +215,9 @@
         "other": "Other preferences"
     },
     "feat_strings": {
-        "inv_window_title": "Show category in window title",
-        "inv_window_minititle": "Show category in the taskbar",
-        "inv_setmenu_full_color": "Change color for completed sets in the set menu",
-        "inv_setmenu_empty_opacity": "Make sets with a low number of owned items transparent in the set menu",
-        "inv_setwindow_remember_search": "Remember search settings in the set window",
-        "inv_searchwindow_remember_search": "Remember search settings in the search window",
+        "inv_window_title": "Display category name as a window title",
+        "inv_window_minititle": "Display category name in the taskbar",
+        "inv_searchwindow_remember_search": "Remember last search",
         "pop_item_id": "Show the item ID",
         "pop_display_event": "Show event icon and name related to this item",
         "pop_owned_counts": "Show number of items you own",
