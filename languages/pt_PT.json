@@ -64,7 +64,8 @@
         "property": "Item property",
         "item_type": "Tipo",
         "regen": "Regeneração",
-        "custom": "Personalizados"
+        "custom": "Personalizados",
+        "set_window": "Set List"
     },
     "tooltips": {
         "jobdrop": "Sair em trabalhos",
@@ -216,9 +217,6 @@
     "feat_strings": {
         "inv_window_title": "Mostrar categoria no título da janela",
         "inv_window_minititle": "Mostrar categoria na barra de tarefas",
-        "inv_setmenu_full_color": "Mudar a cor de conjuntos completos no menus de conjuntos",
-        "inv_setmenu_empty_opacity": "Colocar os conjuntos com baixo número de itens possuidos a transparente no menu de conjuntos",
-        "inv_setwindow_remember_search": "Lembrar filtros de pesquisa da janela dos conjuntos",
         "inv_searchwindow_remember_search": "Lembrar filtros de pesquisa na janela de pesquisa",
         "pop_item_id": "Mostrar o item ID",
         "pop_display_event": "Mostrar o icone do envento relacionado com este item",
@@ -244,7 +242,6 @@
         "ml_market_collector": "Adicionar um botão para mostrar o menu Coletor de Mercado",
         "ml_sleep": "Adicionar um botão para mostrar o menu Dormir",
         "ml_npc": "Adicionar um botão para mostrar o menu Dador de missões",
-        "prof_rank_bar": "Mostrar o nível do jogador no perfil",
         "prof_craft_points": "Mostrar pontos de ofício no perfil do jogador",
         "fb_topic": "Adicionar um tópico no chat da batalha na janela de preparação",
         "fb_travel_button": "Adicionar um botaõ de viagem na janela das batalhas de forte",
@@ -275,7 +272,8 @@
             "Dia de los Muertos"
         ],
         "easter": "Páscoa",
-        "oktoberfest": "Octoberfest"
+        "oktoberfest": "Octoberfest",
+        "sale": "Sale"
     },
     "menulink": {
         "add_name": " Barra do menu",
@@ -291,29 +289,6 @@
         "walk": "Ir para lá",
         "market_map": "Mapa do mercado",
         "quest_update": "Mostrar aventuras"
-    },
-    "ranking": {
-        "add_name": "Barra de nível",
-        "rank": "Nível",
-        "duels": "Duelos",
-        "won": "Ganho",
-        "lost": "Perdido",
-        "diff": "Differença",
-        "fb": "Batalhas de forte",
-        "dd": "Dano infringido",
-        "taken": "Tiros recebidos",
-        "dodges": "Tiros falhados",
-        "crafting": "Ofício",
-        "learnt": "Aprendido",
-        "points": "Pontos",
-        "crafted": "Elaborados",
-        "construction": "Construção",
-        "fair": "Feira ambulante",
-        "stage_ups": "Níveis aumentados",
-        "mpi": "Aventuras",
-        "ko": "KOs",
-        "games": "Jogos",
-        "rg": "Abandonos"
     },
     "informative": {
         "error404": "Nenum item encontrado",
