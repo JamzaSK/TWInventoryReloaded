@@ -64,7 +64,8 @@
         "property": "Artículo poseído",
         "item_type": "Tipo",
         "regen": "Regeneración",
-        "custom": "Personalizado"
+        "custom": "Personalizado",
+        "set_window": "Set List"
     },
     "tooltips": {
         "jobdrop": "Obtenibles desde trabajo",
@@ -216,9 +217,6 @@
     "feat_strings": {
         "inv_window_title": "Mostrar categoría en título de ventana",
         "inv_window_minititle": "Mostrar categoría en barra tareas",
-        "inv_setmenu_full_color": "Cambiar el color de los conjuntos completados en el menú de conjuntos.",
-        "inv_setmenu_empty_opacity": "Hacer que los conjuntos con un número bajo de elementos poseídos sean transparentes en el menú de conjuntos.",
-        "inv_setwindow_remember_search": "Recordar los ajustes de búsqueda en la ventana de configuración",
         "inv_searchwindow_remember_search": "Recordar los ajustes de búsqueda en la ventana de búsqueda",
         "pop_item_id": "Mostrar la Id del artículo",
         "pop_display_event": "Mostrar icono de evento relacionado con este artículo.",
@@ -244,7 +242,6 @@
         "ml_market_collector": "Agregar un botón para mostrar el menú Colector de Mercado",
         "ml_sleep": "Agregar un botón para mostrar el menú de dormir",
         "ml_npc": "Agregar un botón para mostrar el menú de dadores de misiones",
-        "prof_rank_bar": "Mostrar rangos reales en el perfil del jugador",
         "prof_craft_points": "Mostrar puntos de elaboración en el perfil del jugador",
         "fb_topic": "Agregar un tema de chat en la ventana de preparación de batalla",
         "fb_travel_button": "Agregar un botón de viaje en la ventana de Batallas de Fuerte",
@@ -274,7 +271,8 @@
             "Día de los Muertos"
         ],
         "easter": "Pascua",
-        "oktoberfest": "Oktoberfest"
+        "oktoberfest": "Oktoberfest",
+        "sale": "Sale"
     },
     "menulink": {
         "add_name": "Barra del Menú enlaces",
@@ -290,29 +288,6 @@
         "walk": "Ir allí",
         "market_map": "Mapa mercado",
         "quest_update": "Mostrar búsquedas"
-    },
-    "ranking": {
-        "add_name": "Barra rango",
-        "rank": "Rango",
-        "duels": "Duelos",
-        "won": "Ganados",
-        "lost": "Perdidos",
-        "diff": "Diferencia",
-        "fb": "Batallas de Fuertes",
-        "dd": "Daño infligido",
-        "taken": "Aciertos recibidos",
-        "dodges": "Eludidos",
-        "crafting": "Elaboración",
-        "learnt": "Aprendida",
-        "points": "Puntos",
-        "crafted": "Elaborados",
-        "construction": "Construcción",
-        "fair": "Feria ambulante",
-        "stage_ups": "Niveles subidos",
-        "mpi": "Aventuras",
-        "ko": "KOs",
-        "games": "Juegos",
-        "rg": "Abandonos"
     },
     "informative": {
         "error404": "Artículos no encontrados",
