@@ -397,5 +397,6 @@
         "item_bonus": "Bonus from items",
         "set_bonus": "Bonus from sets",
         "compare": "Compare"
-    }
+    },
+    "script_desc": "Better Inventory and Tools for The West!"
 }
