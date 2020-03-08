@@ -64,7 +64,8 @@
         "property": "Proprietà oggetto",
         "item_type": "Tipologia",
         "regen": "Rigenerazione",
-        "custom": "Personali"
+        "custom": "Personali",
+        "set_window": "Set List"
     },
     "tooltips": {
         "jobdrop": "Trovabile lavorando",
@@ -216,9 +217,6 @@
     "feat_strings": {
         "inv_window_title": "Nome della categoria selezionata come titolo finestra",
         "inv_window_minititle": "Nome della categoria selezionata come titolo della finestra in basso",
-        "inv_setmenu_full_color": "Cambia il colore per i set completati nel menu set",
-        "inv_setmenu_empty_opacity": "Rendi trasparenti nel menu dei set quei set con un numero basso di oggetti posseduti",
-        "inv_setwindow_remember_search": "Ricorda le impostazioni di ricerca nella finestra dei set",
         "inv_searchwindow_remember_search": "Ricorda le impostazioni di ricerca nella finestra di ricerca",
         "pop_item_id": "Mostra l'ID dell'oggetto",
         "pop_display_event": "Mostra l'icona dell'evento relativo all'oggetto",
@@ -244,7 +242,6 @@
         "ml_market_collector": "Mostra l'icona del menu di riscossione mercato",
         "ml_sleep": "Mostra l'icona del menu di menu di dormite",
         "ml_npc": "Mostra l'icona del menu dei mandanti missione",
-        "prof_rank_bar": "Mostra il rango attuale nei profili dei giocatori",
         "prof_craft_points": "Mostra i punti professione nel profilo dei giocatori",
         "fb_topic": "Aggiungi il topic chat nella finestra di preparazione battaglia",
         "fb_travel_button": "Aggiungi un pulsante di spostamento nella finestra delle battaglie",
@@ -279,7 +276,8 @@
             "Morti"
         ],
         "easter": "Pasqua",
-        "oktoberfest": "Oktoberfest"
+        "oktoberfest": "Oktoberfest",
+        "sale": "Sale"
     },
     "menulink": {
         "add_name": "Barra collegamenti",
@@ -295,29 +293,6 @@
         "walk": "Spostati a",
         "market_map": "Mappa mercato",
         "quest_update": "Mostra\\aggiorna missioni"
-    },
-    "ranking": {
-        "add_name": "Barra classifiche",
-        "rank": "Posizione",
-        "duels": "Duelli",
-        "won": "Vinti",
-        "lost": "Persi",
-        "diff": "Differenza",
-        "fb": "Battaglie ai forti",
-        "dd": "Danno inflitto",
-        "taken": "Colpi subiti",
-        "dodges": "Schivate",
-        "crafting": "Professione",
-        "learnt": "Imparate",
-        "points": "Punti",
-        "crafted": "Prodotti",
-        "construction": "Ampliamenti",
-        "fair": "Fiera itinerante",
-        "stage_ups": "Livelli aumentati",
-        "mpi": "Avventure",
-        "ko": "Svenimenti",
-        "games": "Partite",
-        "rg": "Abbandoni"
     },
     "informative": {
         "error404": "Nessun oggetto di questo tipo è stato trovato",
