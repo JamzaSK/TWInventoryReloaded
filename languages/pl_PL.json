@@ -64,7 +64,8 @@
         "property": "Właściwości przedmiotu",
         "item_type": "Typ",
         "regen": "Regeneracja",
-        "custom": "Niestandardowe"
+        "custom": "Niestandardowe",
+        "set_window": "Set List"
     },
     "tooltips": {
         "jobdrop": "Znalezione w pracy",
@@ -216,9 +217,6 @@
     "feat_strings": {
         "inv_window_title": "Pokaż kategorię w tytule okna",
         "inv_window_minititle": "Pokaż kategorię w pasku zadań",
-        "inv_setmenu_full_color": "Zmień kolor dla kompletnego zestawu w liście setów",
-        "inv_setmenu_empty_opacity": "Zestawy niekompletne, z małą liczbą przedmiotów oznacz jako przezroczyste w liście setów",
-        "inv_setwindow_remember_search": "Zapamiętaj opcje wyszukiwania w oknie zestawów",
         "inv_searchwindow_remember_search": "Zapamiętaj opcje wyszukiwania w oknie wyszukiwania",
         "pop_item_id": "Pokaż ID przedmiotów",
         "pop_display_event": "Pokaż ikonę eventu powiązanego z przedmiotem",
@@ -244,7 +242,6 @@
         "ml_market_collector": "Dodaj przycisk do pokazania menu targu",
         "ml_sleep": "Dodaj przycisk do pokazania menu hotelu",
         "ml_npc": "Dodaj przycisk do pokazania menu NPC",
-        "prof_rank_bar": "Pokaż aktualną pozycję w rankingu gracza",
         "prof_craft_points": "Pokaż punkty rzemiosła gracza",
         "fb_topic": "Dodaj temat czatu w oknie przygotowania do bitwy",
         "fb_travel_button": "Dodaj przycisk szybkiej podróży w oknie bitew o fort",
@@ -280,7 +277,8 @@
             ""
         ],
         "easter": "Wielkanoc",
-        "oktoberfest": "Oktoberfest"
+        "oktoberfest": "Oktoberfest",
+        "sale": "Sale"
     },
     "menulink": {
         "add_name": "Szybkie menu",
@@ -296,29 +294,6 @@
         "walk": "Idź do",
         "market_map": "Mapa targu",
         "quest_update": "Pokaż zadania"
-    },
-    "ranking": {
-        "add_name": "Pasek rankingu",
-        "rank": "Ranking",
-        "duels": "Pojedynki",
-        "won": "Wygrane",
-        "lost": "Przegrane",
-        "diff": "Różnica",
-        "fb": "Bitwy fortowe",
-        "dd": "Zadane obrażenia",
-        "taken": "Przyjęte obrażenia",
-        "dodges": "Uniki",
-        "crafting": "Rzemiosło",
-        "learnt": "Nauczone przepisy",
-        "points": "Punkty",
-        "crafted": "Wytworzone",
-        "construction": "Punkty budowy",
-        "fair": "Cyrk wędrowny",
-        "stage_ups": "Podniesione poziomy budynków",
-        "mpi": "Przygody",
-        "ko": "KO",
-        "games": "Gry",
-        "rg": "Porzucone"
     },
     "informative": {
         "error404": "Nie znaleziono przedmiotu tego typu",
