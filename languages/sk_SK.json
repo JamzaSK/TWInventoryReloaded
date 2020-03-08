@@ -64,7 +64,8 @@
         "property": "Vlastnosti",
         "item_type": "Typ",
         "regen": "Regenerácia",
-        "custom": "Vlastné"
+        "custom": "Vlastné",
+        "set_window": "Zoznam setov"
     },
     "tooltips": {
         "jobdrop": "Dá sa nájsť pri práci",
@@ -216,12 +217,9 @@
     "feat_strings": {
         "inv_window_title": "Zobraziť názov kategórie v názvu okna",
         "inv_window_minititle": "Zobraziť názov kategórie v taskbaru",
-        "inv_setmenu_full_color": "Zmeniť farbu kompletných setov v set menu",
-        "inv_setmenu_empty_opacity": "Zobraziť sety s malým množstvom vlastnených predmetov transparentné",
-        "inv_setwindow_remember_search": "Zapamätať nastavenia v okne setov",
         "inv_searchwindow_remember_search": "Zamamätať nastavenia v okne vyhľadávania",
         "pop_item_id": "Zobraziť ID u každého predmetu",
-        "pop_display_event": "Zobraziť ikonku eventu súvisiacu s týmto predmetom",
+        "pop_display_event": "Zobraziť event súvisiaci s týmto predmetom",
         "pop_owned_counts": "Zobraziť počet vlastnených predmetov",
         "pop_job_table": "Zobraziť názvy prác, v ktorých ide získať tento produkt",
         "pop_crafting_recipe": "Zobraziť potrebné materiály pre tento produkt",
@@ -244,7 +242,6 @@
         "ml_market_collector": "Pridať tlačítko pre zobrazenie ponuky Prehľad trhu",
         "ml_sleep": "Pridať tlačítko pre zobrazenie ponuky Nájdi posteľ",
         "ml_npc": "Pridať tlačítko pre zobrazenie ponuky Nájdi zadávateľa",
-        "prof_rank_bar": "Zobraziť aktuálne pozície v rebríčku v profilu daného hráča",
         "prof_craft_points": "Zobraziť počet remeselných bodov v profilu daného hráča",
         "fb_topic": "Zobraziť topic chatu v okne prípravy boja",
         "fb_travel_button": "Pridať tlačítko pre cestovanie k pevnosti v okne bojov",
@@ -275,7 +272,8 @@
             "Dia de los Muertos"
         ],
         "easter": "Veľká noc",
-        "oktoberfest": "Októberfest"
+        "oktoberfest": "Októberfest",
+        "sale": "Predajná akcia"
     },
     "menulink": {
         "add_name": "Menulink panel",
@@ -291,29 +289,6 @@
         "walk": "Ísť tam",
         "market_map": "Mapa trhu",
         "quest_update": "Zobraziť úlohy"
-    },
-    "ranking": {
-        "add_name": "Rank panel",
-        "rank": "Pozícia",
-        "duels": "Duely",
-        "won": "Výhry",
-        "lost": "Prehry",
-        "diff": "Rozdiel",
-        "fb": "Boje o pevnosti",
-        "dd": "Spôsobené poškodenie",
-        "taken": "Obdržané zásahy",
-        "dodges": "Úhyby",
-        "crafting": "Remeslo",
-        "learnt": "Naučené",
-        "points": "Body",
-        "crafted": "Vyrobené",
-        "construction": "Výstavba",
-        "fair": "Cirkus",
-        "stage_ups": "Stupne",
-        "mpi": "Dobrodružstvá",
-        "ko": "KO nepriateľov",
-        "games": "Odohrané",
-        "rg": "Rage quity"
     },
     "informative": {
         "error404": "Neboli nájdené žiadne itemy",
