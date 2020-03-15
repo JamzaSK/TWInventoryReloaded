@@ -1,4 +1,4 @@
-<p align="center"><img src="https://jamzask.github.io/TWInventoryReloaded/menu/twir_biglogo.png"></img></p>
+<p align="center"><img src="https://jamzask.github.io/TWInventoryReloaded/menu/twir_biglogo.png"/></p>
 
 <p><a href="https://github.com/JamzaSK/TWInventoryReloaded/"><img src="https://jamzask.github.io/TWInventoryReloaded/icons/github_circle_32.png" alt=""></a>
  <a href="https://poeditor.com/join/project/MwmzycR5vc" target="_blank" rel="nofollow"><img src="https://jamzask.github.io/TWInventoryReloaded/icons/poeditor_circle_32.png" alt=""></a>
