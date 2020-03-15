@@ -55,7 +55,7 @@
 
 
 > Step 3:
-### Enjoy!! :smiley:
+### Enjoy!! 
 <br>
 
 
