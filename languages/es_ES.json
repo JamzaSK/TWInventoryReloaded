@@ -64,7 +64,7 @@
         "item_type": "Tipo",
         "regen": "Regeneración",
         "custom": "Personalizado",
-        "set_window": "Set List"
+        "set_window": "Establecer lista"
     },
     "tooltips": {
         "jobdrop": "Obtenibles desde trabajo",
@@ -88,7 +88,7 @@
         "quests": "búsquedas",
         "collection": "Necesario para completar una colección",
         "uniq_sellers": "$1 vendedores únicos",
-        "job_danger": "Danger"
+        "job_danger": "Peligro"
     },
     "organizing": {
         "invert_text": "Mostrar / Ocultar diferentes elementos basados en un filtro seleccionado",
@@ -245,9 +245,9 @@
         "inv_menu_size": "Número máximo de filas en un menú de selección.",
         "pop_char_level": "Mostrar siempre el valor de bonificación (por nivel) en tu nivel de personaje",
         "inv_cld_reminder": "Recuérdame que tengo que usar artículos con largos tiempos de reutilización.",
-        "inv_cld_reminder_playsound": "Mute reminder sound",
-        "pop_quest_tooltip": "Add requirements to complete the quest and its reward to the quest popup",
-        "pop_job_tooltip": "Improve job popup"
+        "inv_cld_reminder_playsound": "Enmudecer sonido recordatorio",
+        "pop_quest_tooltip": "Agreguar requisitos para completar la búsqueda y su recompensa a la ventana emergente de búsqueda",
+        "pop_job_tooltip": "Mejorar ventana emergente de trabajo"
     },
     "keyWords": {
         "xmas": [
@@ -261,7 +261,7 @@
         ],
         "easter": "Pascua",
         "oktoberfest": "Oktoberfest",
-        "sale": "Sale"
+        "sale": "Venta"
     },
     "menulink": {
         "add_name": "Barra del Menú enlaces",
@@ -346,7 +346,7 @@
         "level": "Nivel",
         "construct": "Construcción",
         "speed": "Velocidad",
-        "wearable_only": "Wearable only",
+        "wearable_only": "Solo ponible",
         "sector": "sector"
     },
     "update_changelog": "Aquí está el Registro de cambios",
@@ -367,12 +367,12 @@
         "remind_msg": "Artículos listos para ser usados"
     },
     "combo_comparison": {
-        "add_name": "Combo Comparison",
-        "hint": "Add / Drop items here to get started!",
-        "full_bonus": "Full bonus",
-        "item_bonus": "Bonus from items",
-        "set_bonus": "Bonus from sets",
-        "compare": "Compare"
+        "add_name": "Comparación combinada",
+        "hint": "¡Agregue / suelte elementos aquí para comenzar!",
+        "full_bonus": "Bonificación completa",
+        "item_bonus": "Bonus de artículos",
+        "set_bonus": "Bonus de conjunto",
+        "compare": "Comparar"
     },
-    "script_desc": "Better Inventory and Tools for The West!"
+    "script_desc": "¡Mejor inventario y herramientas para Occidente!"
 }
