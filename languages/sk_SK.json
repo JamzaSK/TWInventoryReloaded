@@ -64,7 +64,8 @@
         "item_type": "Typ",
         "regen": "Regenerácia",
         "custom": "Vlastné",
-        "set_window": "Zoznam setov"
+        "set_window": "Zoznam setov",
+        "item_use": "Použiť"
     },
     "tooltips": {
         "jobdrop": "Dá sa nájsť pri práci",
@@ -88,7 +89,8 @@
         "quests": "úloh",
         "collection": "Potrebné do zbierky",
         "uniq_sellers": "$1 predajcov",
-        "job_danger": "Nebezpečenstvo"
+        "job_danger": "Nebezpečenstvo",
+        "open_title": "Otvoriť $1 a zobraziť na mape"
     },
     "organizing": {
         "invert_text": "Zobraziť/Skryť predmety podľa vybraného filtera",
@@ -265,19 +267,16 @@
         "sale": "Predajná akcia"
     },
     "menulink": {
-        "add_name": "Menulink panel",
         "market": "Prehľad trhu",
         "npc": "Nájdi zadávateľa",
         "nearest": "Najbližší hotel",
         "nearest_five": "Najbližší 5 hv. hotel",
         "sleep": "Nájdi posteľ",
-        "premium_bids": "Vyzdvihnúť nákupné ponuky",
-        "premium_offers": "Vyzdvihnúť predajné ponuky",
         "map_show": "Centrovať pozíciu",
         "window_open": "Otvoriť okno",
         "walk": "Ísť tam",
         "market_map": "Mapa trhu",
-        "quest_update": "Zobraziť úlohy"
+        "quest_update": "Načítať/ Znovu načítať všetky úlohy"
     },
     "informative": {
         "error404": "Neboli nájdené žiadne itemy",
@@ -297,7 +296,7 @@
         "distance": "Vzdialenosť",
         "error_hotel": "Nebola nájdená žiadna hotelová izba",
         "error_npc": "Nebol nájdený žiadny zadávateľ úloh",
-        "error_market": "Neboli nájdené žiadne ukončené aukcie",
+        "error_market": "Z trhu nie je čo vyzdvihnúť",
         "travel_fort": "Presunúť sa k pevnosti",
         "never": "Nikdy",
         "any": "Nezáleží",
@@ -313,7 +312,8 @@
         "next": "Ďalšie",
         "enabled": "Povolené",
         "disabled": "Pozastavené",
-        "cancel": "Zrušiť"
+        "cancel": "Zrušiť",
+        "quest_update": "Aktuálne úlohy boli načítané"
     },
     "calc": {
         "regen": "Regenerácia",
@@ -348,7 +348,8 @@
         "construct": "Výstavba",
         "speed": "Rýchlosť",
         "wearable_only": "Možné obliecť",
-        "sector": "sektor"
+        "sector": "sektor",
+        "switch_speed_btn": "Obliecť Speed Set"
     },
     "update_changelog": "Tu je Changelog",
     "donate_text_2": "Ak sa vám tento skript páči a prajete si, aby sa pokračovalo v jeho vývoji, alebo si prajete, aby sa pridávali nové funkcie, zvážte prosím jeho $podporu$",
