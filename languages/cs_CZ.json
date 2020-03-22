@@ -64,7 +64,8 @@
         "item_type": "Typ",
         "regen": "Regenerace",
         "custom": "Vlastní",
-        "set_window": "Seznam setů"
+        "set_window": "Seznam setů",
+        "item_use": "Použít"
     },
     "tooltips": {
         "jobdrop": "Lze najít při práci",
@@ -88,7 +89,8 @@
         "quests": "úkolů",
         "collection": "Potřebné do sbírky",
         "uniq_sellers": "$1 prodejců",
-        "job_danger": "Nebezpečí"
+        "job_danger": "Nebezpečí",
+        "open_title": "Otevřít $1 a centrovat na mapě"
     },
     "organizing": {
         "invert_text": "Zobrazit / Skrýt předměty podle vybraného filtru",
@@ -265,19 +267,16 @@
         "sale": "Prodejní akce"
     },
     "menulink": {
-        "add_name": "Menulink panel",
         "market": "Přehled trhu",
         "npc": "Najít zadavatele",
         "nearest": "Nejbližší hotel",
         "nearest_five": "Nejbližší 5 hv. hotel",
         "sleep": "Najít postel",
-        "premium_bids": "Vyzvednout všechny nákupní nabídky",
-        "premium_offers": "Vyzvednout všechny prodejní nabídky",
         "map_show": "Centrovat pozici",
         "window_open": "Otevřít okno",
         "walk": "Jít tam",
         "market_map": "Mapa trhu",
-        "quest_update": "Zobrazit úkoly"
+        "quest_update": "Načíst/ Znovu načíst všechny úkoly"
     },
     "informative": {
         "error404": "Nebyly nalezeny žádné předměty",
@@ -297,7 +296,7 @@
         "distance": "Vzdálenost",
         "error_hotel": "Nebyl nalezen žádný hotelový pokoj",
         "error_npc": "Nebyl nalezen žádný zadavatel úkolů",
-        "error_market": "Nebyla nalezena žádná ukončená aukce",
+        "error_market": "Z trhu není co vyzvednout",
         "travel_fort": "Přesunout se k pevnosti",
         "never": "Nikdy",
         "any": "Jakýkoli",
@@ -313,7 +312,8 @@
         "next": "Další",
         "enabled": "Povoleno",
         "disabled": "Pozastaveno",
-        "cancel": "Zrušit"
+        "cancel": "Zrušit",
+        "quest_update": "Aktuální úkoly byly načteny"
     },
     "calc": {
         "regen": "Regenerace",
@@ -348,7 +348,8 @@
         "construct": "Konstrukce",
         "speed": "Rychlost",
         "wearable_only": "Nositelné",
-        "sector": "sektor"
+        "sector": "sektor",
+        "switch_speed_btn": "Obléct Speed Set"
     },
     "update_changelog": "Tu je changelog",
     "donate_text_2": "Pokud se vám tento skript líbí a přejete si, aby se na něm pracovalo, nebo si přejete přidávat nové funkce, zvažte prosím jeho $podporu$",
