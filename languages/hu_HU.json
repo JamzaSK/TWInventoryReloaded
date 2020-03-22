@@ -64,7 +64,8 @@
         "item_type": "Típus",
         "regen": "Regeneráció",
         "custom": "Egyedi",
-        "set_window": "Set List"
+        "set_window": "Set List",
+        "item_use": "Use"
     },
     "tooltips": {
         "jobdrop": "Munkából található",
@@ -88,7 +89,8 @@
         "quests": "küldetés",
         "collection": "Szükséges egy gyűjteményhez",
         "uniq_sellers": "$1 egyedi eladók",
-        "job_danger": "Danger"
+        "job_danger": "Danger",
+        "open_title": "Open $1 and center it on map"
     },
     "organizing": {
         "invert_text": "Különböző tárgyak megjelenítése / elrejtése a kiválasztott szűrő alapján",
@@ -263,14 +265,11 @@
         "sale": "Sale"
     },
     "menulink": {
-        "add_name": "Menülink sáv",
         "market": "Piaci gyűjtő",
         "npc": "Kalandosztó",
         "nearest": "Legközelebbi hotel",
         "nearest_five": "Legközelebbi 5 csillagos hotel",
         "sleep": "Keress egy ágyat",
-        "premium_bids": "Gyűjts be minden eladást",
-        "premium_offers": "Gyűjts be minden vételt",
         "map_show": "Pozíció megjelenítése",
         "window_open": "Ablak megnyitása",
         "walk": "Menj ide: ",
@@ -311,7 +310,8 @@
         "next": "Következő",
         "enabled": "Engedélyezve",
         "disabled": "Tiltva",
-        "cancel": "Megszakít"
+        "cancel": "Megszakít",
+        "quest_update": "Current quests loaded"
     },
     "calc": {
         "regen": "Regeneráció",
@@ -346,7 +346,8 @@
         "construct": "Építés",
         "speed": "Sebesség",
         "wearable_only": "Csak a hordhatók",
-        "sector": "szektor"
+        "sector": "szektor",
+        "switch_speed_btn": "Use Speed Set"
     },
     "update_changelog": "ITT a változásnapló",
     "donate_text_2": "Ha tetszik ez a script, és szeretnéd, hogy továbbra is működjön és új funkciók kerüljenek bele, kérlek küld egy kis $adományt$",
