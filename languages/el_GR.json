@@ -64,7 +64,8 @@
         "item_type": "Τύπος",
         "regen": "Αναγένηση",
         "custom": "Custom",
-        "set_window": "Λίστα Σετ"
+        "set_window": "Λίστα Σετ",
+        "item_use": "Use"
     },
     "tooltips": {
         "jobdrop": "Από την εργασία",
@@ -88,7 +89,8 @@
         "quests": "Αποστολές",
         "collection": "Χρειάζονται για να ολοκληρωθεί η συλλογή",
         "uniq_sellers": "$1 διαφορετικοί πωλητές",
-        "job_danger": "Κίνδυνος"
+        "job_danger": "Κίνδυνος",
+        "open_title": "Open $1 and center it on map"
     },
     "organizing": {
         "invert_text": "Εμφάνιση/Απόκρυψη αντικειμένων βάση ενός επιλεγμένου φίλτρου",
@@ -263,14 +265,11 @@
         "sale": "Πώληση"
     },
     "menulink": {
-        "add_name": "Συντομεύσεις",
         "market": "Συλλέκτης αγορών",
         "npc": "Δότες αποστολών",
         "nearest": "Κοντινότερο ξενοδοχείο",
         "nearest_five": "Κοντινότερο Διαμέρισμα πολυτελείας",
         "sleep": "Ύπνος",
-        "premium_bids": "Συλλέξτε όλες τις αγορές σας",
-        "premium_offers": "Συλλέξτε όλες τις προσφορές σας",
         "map_show": "Κεντράρισμα",
         "window_open": "Άνοιξε το παράθυρο",
         "walk": "Πήγαινε εκεί",
@@ -311,7 +310,8 @@
         "next": "Επόμενο",
         "enabled": "Ενεργό",
         "disabled": "Ανενεργό",
-        "cancel": "Ακύρωση"
+        "cancel": "Ακύρωση",
+        "quest_update": "Current quests loaded"
     },
     "calc": {
         "regen": "Αναγένηση",
@@ -346,7 +346,8 @@
         "construct": "Κατασκευή",
         "speed": "Ταχύτητα",
         "wearable_only": "Χρησιμοπ/σιμα",
-        "sector": "τομέας"
+        "sector": "τομέας",
+        "switch_speed_btn": "Use Speed Set"
     },
     "update_changelog": "ΑΥΤΕΣ είναι οι διορθώσεις",
     "donate_text_2": "Αν σας αρέσει το σκριπτ και επιθυμείτε να προστεθούν νέες λειτουργίες ή να μας ενισχύσετε, μπορείτε να κάνετε δωρεά $donation$",
