@@ -64,7 +64,8 @@
         "item_type": "Tipo",
         "regen": "Regeneración",
         "custom": "Personalizado",
-        "set_window": "Establecer lista"
+        "set_window": "Establecer lista",
+        "item_use": "Use"
     },
     "tooltips": {
         "jobdrop": "Obtenibles desde trabajo",
@@ -88,7 +89,8 @@
         "quests": "búsquedas",
         "collection": "Necesario para completar una colección",
         "uniq_sellers": "$1 vendedores únicos",
-        "job_danger": "Peligro"
+        "job_danger": "Peligro",
+        "open_title": "Open $1 and center it on map"
     },
     "organizing": {
         "invert_text": "Mostrar / Ocultar diferentes elementos basados en un filtro seleccionado",
@@ -264,14 +266,11 @@
         "sale": "Venta"
     },
     "menulink": {
-        "add_name": "Barra del Menú enlaces",
         "market": "Colector de Mercado",
         "npc": "Dadores de búsquedas",
         "nearest": "Hotel más cercano",
         "nearest_five": "Hotel de 5 estrellas más cercano",
         "sleep": "Encontrar una cama",
-        "premium_bids": "Recoger todas las pujas",
-        "premium_offers": "Recoger todas las ofertas",
         "map_show": "Central posición",
         "window_open": "Abrir ventana",
         "walk": "Ir allí",
@@ -312,7 +311,8 @@
         "next": "Próximo",
         "enabled": "Habilitado",
         "disabled": "Deshabilitado",
-        "cancel": "Cancelar"
+        "cancel": "Cancelar",
+        "quest_update": "Current quests loaded"
     },
     "calc": {
         "regen": "Regeneración",
@@ -347,7 +347,8 @@
         "construct": "Construcción",
         "speed": "Velocidad",
         "wearable_only": "Solo ponible",
-        "sector": "sector"
+        "sector": "sector",
+        "switch_speed_btn": "Use Speed Set"
     },
     "update_changelog": "Aquí está el Registro de cambios",
     "donate_text_2": "Si le gusta este script y desea que siga funcionando o desea que se agreguen nuevas funciones, por favor considere hacer una $donación$",
