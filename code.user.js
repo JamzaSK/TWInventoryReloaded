@@ -60,7 +60,7 @@
         " is installed twice. You will have to uninstall older version for the script to work properly!</br></b></div>", west.gui.Dialog.SYS_WARNING)
       .addButton("OK").show() : (TWIRlang = {}, TWIR = {
         version: "2.187",
-        revision: "13",
+        revision: "14",
         name: "TW Inventory Reloaded",
         author: "Jamza",
         minGame: "2.04",
@@ -4858,16 +4858,16 @@
               this.gui.table.appendRow().appendToCell(-1, "twir_mw_idx", a + 1);
               var s = "set" === A[a].type ? n.items[~~(n.items.length * Math.random())] : 0,
                 g = ItemManager.get(1e3 * s, !0);
-              this.gui.table.appendToCell(-1, "twir_mw_item", "<img " + o + ' style="cursor: pointer;" title="' + (this.categories.includes(A[a].type) ||
-                  "item" === A[a].type ? new ItemPopup(n,
-                  {
-                    twir_partial_bonus: !1
-                  }).getXHTML().escapeHTML() : A[a].type && "set" === A[a].type ? TWIR.enhancedPopups.set_showcase(n.items, !1, !0) : n.name) +
-                '" src="' + (this.categories.includes(A[a].type) ? n.image : A[a].type && "buff" === A[a].type ? ItemManager.get(t[A[a].item_id].image)
-                  .image : A[a].type && "set" === A[a].type ? g.image : "") + '"; height="29"; width="29"></img>'), this.gui.table.appendToCell(-1,
-                "twir_mw_name", r), A[a].item_price ? this.gui.table.appendToCell(-1, "twir_mw_price", "$" + (A[a].item_price >= 1e5 ? TWIR.replSum(A[a]
-                .item_price) : A[a].item_price)) : this.gui.table.appendToCell(-1, "twir_mw_price", "-"), A[a].auto && this.gui.table.appendToCell(-1,
-                "twir_mw_ab", '<span title="' + TWIR.replSum(A[a].auto) + '">y</span>');
+              console.log(n), this.gui.table.appendToCell(-1, "twir_mw_item", "<img " + o + ' style="cursor: pointer;" title="' + (this.categories
+                    .includes(A[a].type) || "item" === A[a].type ? new ItemPopup(n,
+                    {
+                      twir_partial_bonus: !1
+                    }).getXHTML().escapeHTML() : A[a].type && "set" === A[a].type ? TWIR.enhancedPopups.set_showcase(n.items, !1, !0) : n.name) +
+                  '" src="' + (this.categories.includes(A[a].type) || "item" === A[a].type ? n.image : "buff" === A[a].type ? ItemManager.get(t[A[a]
+                    .item_id].image).image : "set" === A[a].type ? g.image : "/images/tw2gui/pixel-vfl3z5WfW.gif") + '" height="29"; width="29"></img>'),
+                this.gui.table.appendToCell(-1, "twir_mw_name", r), A[a].item_price ? this.gui.table.appendToCell(-1, "twir_mw_price", "$" + (A[a]
+                  .item_price >= 1e5 ? TWIR.replSum(A[a].item_price) : A[a].item_price)) : this.gui.table.appendToCell(-1, "twir_mw_price", "-"), A[a]
+                .auto && this.gui.table.appendToCell(-1, "twir_mw_ab", '<span title="' + TWIR.replSum(A[a].auto) + '">y</span>');
               var l = new west.gui.Icon("abort").getMainDiv().css(
               {
                 "margin-bottom": "2px",
@@ -4911,7 +4911,7 @@
           watchItem: function(e)
           {
             var t;
-            0 !== e.val && (t = this.gui.field_price ? parseInt(this.gui.field_price.getValue()) : 0, this.isValidItem(e, !0) && (this.mwl.push(
+            0 !== e.val && (t = this.gui.field_price && parseInt(this.gui.field_price.getValue()) || 0, this.isValidItem(e, !0) && (this.mwl.push(
             {
               item_id: e.val,
               item_price: t,
@@ -4928,21 +4928,21 @@
             }
             else new UserMessage(TWIRlang.informative.error_wait + ".", UserMessage.TYPE_ERROR).show()
           },
-          importDialog: function()
+          importDialog: function(e)
           {
-            var e = this;
+            var t = this;
             if (!$("#twir_mw_import.tw2gui_dialog").is(":visible"))
             {
-              var t = $('<div style="text-align: center;"/>'),
-                i = (new west.gui.Textfield).setPlaceholder("[item=xxx] [item=xxx] ..").setWidth(265);
-              t.append("<span>" + TWIRlang.market_watcher.import+"</span>", i.getMainDiv());
-              var A = $(
+              var i = $('<div style="text-align: center;"/>'),
+                A = (new west.gui.Textfield).setPlaceholder("[item=xxx] [item=xxx] ..").setWidth(265);
+              i.append("<span>" + TWIRlang.market_watcher.import+"</span>", A.getMainDiv());
+              var a = $(
                 '<span><input type="text" class="input_layout" readonly="readonly" style="text-align: center;resize: horizontal;" size="35" name="report_bbcode" value="' +
-                sharehtml + '" onclick="this.select();" /></span>');
-              t.append("<br><br>", '<span style="margin-right: 5px;">' + TWIRlang.market_watcher.export+"</span>", A), new west.gui.Dialog("", t)
+                e + '" onclick="this.select();" /></span>');
+              i.append("<br><br>", '<span style="margin-right: 5px;">' + TWIRlang.market_watcher.export+"</span>", a), new west.gui.Dialog("", i)
                 .setDraggable(!0).setBlockGame(!1).setId("twir_mw_import").addButton("ok", function()
                 {
-                  "" != i.getValue() && e.doImport(i.getValue())
+                  "" != A.getValue() && t.doImport(A.getValue())
                 }).addButton(TWIRlang.informative.hide).show()
             }
           },
@@ -4953,7 +4953,11 @@
             {
               i = i.replace(/&shy;/g, "");
               var a = parseInt(i);
-              a -= a % 1e3, t.isValidItem(a, !1) && t.mwl.push(
+              a -= a % 1e3, t.isValidItem(
+              {
+                val: a,
+                type: "item"
+              }, !1) && t.mwl.push(
               {
                 item_id: a,
                 item_price: 0,
