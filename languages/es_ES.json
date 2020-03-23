@@ -65,7 +65,7 @@
         "regen": "Regeneración",
         "custom": "Personalizado",
         "set_window": "Establecer lista",
-        "item_use": "Use"
+        "item_use": "Usar"
     },
     "tooltips": {
         "jobdrop": "Obtenibles desde trabajo",
@@ -90,7 +90,7 @@
         "collection": "Necesario para completar una colección",
         "uniq_sellers": "$1 vendedores únicos",
         "job_danger": "Peligro",
-        "open_title": "Open $1 and center it on map"
+        "open_title": "Abrir $1 y lo centra en el mapa"
     },
     "organizing": {
         "invert_text": "Mostrar / Ocultar diferentes elementos basados en un filtro seleccionado",
@@ -312,7 +312,7 @@
         "enabled": "Habilitado",
         "disabled": "Deshabilitado",
         "cancel": "Cancelar",
-        "quest_update": "Current quests loaded"
+        "quest_update": "Búsquedas actuales cargadas"
     },
     "calc": {
         "regen": "Regeneración",
@@ -348,7 +348,7 @@
         "speed": "Velocidad",
         "wearable_only": "Solo ponible",
         "sector": "sector",
-        "switch_speed_btn": "Use Speed Set"
+        "switch_speed_btn": "Usar Conjunto de Velocidad"
     },
     "update_changelog": "Aquí está el Registro de cambios",
     "donate_text_2": "Si le gusta este script y desea que siga funcionando o desea que se agreguen nuevas funciones, por favor considere hacer una $donación$",
