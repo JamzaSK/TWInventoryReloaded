@@ -64,8 +64,8 @@
         "item_type": "Slot",
         "regen": "Regeneration",
         "custom": "Eigene",
-        "set_window": "Set List",
-        "item_use": "Use"
+        "set_window": "Set-Liste",
+        "item_use": "Verbrauchen"
     },
     "tooltips": {
         "jobdrop": "Findbar",
@@ -89,8 +89,8 @@
         "quests": "Quests",
         "collection": "Fehlt für eine Sammlung",
         "uniq_sellers": "$1 verschiedene Anbieter",
-        "job_danger": "Danger",
-        "open_title": "Open $1 and center it on map"
+        "job_danger": "Gefahr",
+        "open_title": "Öffne und zentriere $1 auf der Karte"
     },
     "organizing": {
         "invert_text": "Zeige/Verstecke Items durch Auswählen der Filter",
@@ -246,10 +246,10 @@
         "mw_status": "Markt-Scanstatus zeigen",
         "inv_menu_size": "Maximale Anzahl Zeilen im Dropdown-Menü (Set-Suche)",
         "pop_char_level": "(pro Stufe)-Boni immer auf deine Stufe umrechnen",
-        "inv_cld_reminder": "Remind me that I have to use items that have a long cooldowns",
-        "inv_cld_reminder_playsound": "Mute reminder sound",
-        "pop_quest_tooltip": "Add requirements to complete the quest and its reward to the quest popup",
-        "pop_job_tooltip": "Improve job popup"
+        "inv_cld_reminder": "Melde, wenn der Countdown bestimmter Beutel abgelaufen ist",
+        "inv_cld_reminder_playsound": "Erinnerungston stummschalten",
+        "pop_quest_tooltip": "Zeige Anforderungen und Belohnungen im Pop-Up der Quests",
+        "pop_job_tooltip": "Verbessere das Pop-Up der Arbeiten"
     },
     "keyWords": {
         "xmas": [
@@ -310,8 +310,8 @@
         "next": "Nächste",
         "enabled": "Aktiviert",
         "disabled": "Deaktiviert",
-        "cancel": "Cancel",
-        "quest_update": "Current quests loaded"
+        "cancel": "Abbrechen",
+        "quest_update": "Aktuelle Quests geladen"
     },
     "calc": {
         "regen": "Regeneration",
@@ -342,37 +342,37 @@
         "fort_damage": "Schaden",
         "fort_hp": "LP",
         "combo_count": "$1 von $2",
-        "level": "Level",
-        "construct": "Construction",
+        "level": "Stufe",
+        "construct": "Ausbau",
         "speed": "Geschwindigkeit",
-        "wearable_only": "Wearable only",
-        "sector": "sector",
-        "switch_speed_btn": "Use Speed Set"
+        "wearable_only": "Nur Anziehbare",
+        "sector": "Sektor",
+        "switch_speed_btn": "Geschwindigkeit-Set"
     },
     "update_changelog": "Changelog",
     "donate_text_2": "Wenn dir das Script gefällt und es weiterhin verbessert werden soll, überlege dir eine $donation$.",
     "event_helper": {
-        "already_sent": "$event_curr sent to $1 of $2 friends",
-        "all_sent": "$event_curr were sent to all friends",
-        "send": "Send",
-        "sent_msg": "Sent to friend $1"
+        "already_sent": "$event_curr an $1 von $2 Freunden gesendet",
+        "all_sent": "$event_curr an alle Freunde gesendet",
+        "send": "Senden",
+        "sent_msg": "An $1 gesendet"
     },
     "opener": {
-        "loot_text": "You got",
-        "open_btn": "Open",
-        "open_question": "How many of these do you want to open?",
-        "open_joke": "Really? Oh God, gimme a break!"
+        "loot_text": "Du bekommst",
+        "open_btn": "Öffnen",
+        "open_question": "Wie viele möchtest du öffnen?",
+        "open_joke": "Wirklich? Oh Gott, da muss ich mich hinsetzen."
     },
     "reminder": {
-        "remind_msg": "Ready to collect"
+        "remind_msg": "Jetzt einsammeln"
     },
     "combo_comparison": {
-        "add_name": "Combo Comparison",
-        "hint": "Add / Drop items here to get started!",
-        "full_bonus": "Full bonus",
-        "item_bonus": "Bonus from items",
-        "set_bonus": "Bonus from sets",
-        "compare": "Compare"
+        "add_name": "Kombo-Vergleich",
+        "hint": "Ziehe Items hierher um zu starten.",
+        "full_bonus": "Gesamter Bonus",
+        "item_bonus": "Bonus der Items",
+        "set_bonus": "Bonus der Sets",
+        "compare": "Vergleichen"
     },
-    "script_desc": "Better Inventory and Tools for The West!"
+    "script_desc": "Verbessertes Inventar und Tools für The West!"
 }
