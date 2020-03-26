@@ -65,7 +65,7 @@
         "regen": "Regeneracja",
         "custom": "Niestandardowe",
         "set_window": "Lista setów",
-        "item_use": "Use"
+        "item_use": "Użyj"
     },
     "tooltips": {
         "jobdrop": "Znalezione w pracy",
@@ -89,7 +89,7 @@
         "quests": "zadania",
         "collection": "Wymagane do ukończenia kolekcji\n\n",
         "uniq_sellers": "$1 unikalnych sprzedających",
-        "job_danger": "Danger",
+        "job_danger": "Szansa na zranienie",
         "open_title": "Open $1 and center it on map"
     },
     "organizing": {
@@ -354,7 +354,7 @@
         "speed": "Prędkość",
         "wearable_only": "Możliwe do założenia",
         "sector": "do sektora",
-        "switch_speed_btn": "Use Speed Set"
+        "switch_speed_btn": "Użyj zestawu do biegania"
     },
     "update_changelog": "Lista zmian",
     "donate_text_2": "Jeżeli lubisz ten skrypt i chcesz aby dalej się rozwijał pomyśl proszę o $donation$",
