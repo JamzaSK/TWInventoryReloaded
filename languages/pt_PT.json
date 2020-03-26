@@ -200,7 +200,7 @@
         "watching": "Observando",
         "buffs": "Buffs",
         "browse": "Pesquisar leilões",
-        "seen_alert": "$item foi visto por $player por $dollars"
+        "seen_alert": "$1 foi visto por $2"
     },
     "features": {
         "preferences": "Preferências",
