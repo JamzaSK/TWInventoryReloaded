@@ -2965,70 +2965,68 @@
                 var e = "",
                   t = ItemPopup.twir_getXHTML.call(this),
                   i = !!$(".mpi-ui").length;
-                if ((t = t.replace(/<br><span class="inventory_popup_requirement_text(.*?)>$/, function(t)
-                  {
-                    return e = t, "<br>"
-                  }).replace('<div class="invPopup_body">', "").replace('inventory_popup"',
-                    'invPopup_body $& style="max-width:550px!important;min-width: 130px!important;padding-left: 10px!important;"><table><td style="min-width: 200px; max-width: 275px;"'
-                    ).replace(/bonus_attr tw_green"/g, '$& style="max-width:220px;min-width:150px;display:block;"').replace(
-                    '<br><br><div class="item_set_bonus">', e +
-                    '</td><td><div style="display: inline-block;background: url(/images/window/wof/prizes_sep.jpg);width: 25px;height: 270px;margin: 15px 0;"/></td><td style="min-width: 200px; max-width: 275px;">'
-                    )).includes(e) || (t += e), t = (t = t.replace(/invPopup_head"/g,
-                    '$& style="max-height: 140px!important; height: auto!important;"')).replace(/(<p)(>)/g,
-                    '$1 class="inventory_popup_type" style="max-width: 250px!important;margin-left: auto;margin-right: auto;color: #007777;">'), TWIR
-                  .storage.get("pop_owned_counts"))
+                (t = t.replace(/<br><span class="inventory_popup_requirement_text(.*?)>$/, function(t)
                 {
-                  var A = Wear.get(this.item_obj.type) && Wear.get(this.item_obj.type).getId() == this.item_obj.item_id ? 1 : 0;
-                  t = t.replace('<div class="inventory_popup_icon">',
-                    '$&<div class="item"><span class="count" style="display:block;top:74px;left:3px">' + TWIR.replSum(Bag.getItemCount(this.item_obj
-                      .item_id) + A) + "</span></div>")
-                }
-                TWIR.storage.get("pop_item_id") && (t = t.replace(/\<div\>\<img src\="(.*?)\/images\/fort\/battle\/divider\.png" alt\=""\>\<\/div\>/,
+                  return e = t, "<br>"
+                }).replace('<div class="invPopup_body">', "").replace('inventory_popup"',
+                  'invPopup_body $& style="max-width:550px!important;min-width: 130px!important;padding-left: 10px!important;"><table><td style="min-width: 200px; max-width: 275px;"'
+                  ).replace(/bonus_attr tw_green"/g, '$& style="max-width:220px;min-width:150px;display:block;"').replace(
+                  '<br><br><div class="item_set_bonus">', e +
+                  '</td><td><div style="display: inline-block;background: url(/images/window/wof/prizes_sep.jpg);width: 25px;height: 270px;margin: 15px 0;"/></td><td style="min-width: 200px; max-width: 275px;">'
+                  )).includes(e) || (t += e), t = (t = t.replace(/invPopup_head"/g, '$& style="max-height: 140px!important; height: auto!important;"'))
+                  .replace(/(<p)(>)/g,
+                    '$1 class="inventory_popup_type" style="max-width: 250px!important;margin-left: auto;margin-right: auto;color: #007777;">');
+                var s = Wear.get(this.item_obj.type) && Wear.get(this.item_obj.type).getId() == this.item_obj.item_id ? 1 : 0;
+                t = t.replace(/(<div\s+class\="inventory_popup_icon")(>)/, "$1 " + (TWIR.isJokeTime() && void 0 !== this.options.twir_joke_rotate ?
+                  'style="transform: rotate(' + this.options.twir_joke_rotate + 'deg);"' : "") + "$2" + (TWIR.storage.get("pop_owned_counts") ?
+                  '<div class="item"><span class="count" style="display:block;top:74px;left:3px">' + TWIR.replSum(Bag.getItemCount(this.item_obj
+                    .item_id) + s) + "</span></div>" : "")), TWIR.storage.get("pop_item_id") && (t = t.replace(
+                  /\<div\>\<img src\="(.*?)\/images\/fort\/battle\/divider\.png" alt\=""\>\<\/div\>/,
                   '<div class="twir_id" style="margin-top: 2px;color: blue;text-align: center;font-size: 12px;">[item=<b>' + this.item_obj.item_id +
                   '</b>]</div> <div style="text-align: center;"><img src="/images/fort/battle/divider.png" ></div>'));
-                var a = !!TWIR.storage.get("pop_display_event") && TWIR.storage.set_n_event[this.item_obj.set],
-                  n = a ? "block" : "none",
-                  o = a ? TWIR.images.game_event[a[0]] : "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
-                  r = a ? ($.isArray(TWIRlang.keyWords[a[0]]) ? TWIRlang.keyWords[a[0]][0] : TWIRlang.keyWords[a[0]]) + "&nbsp;" + a[1] : "";
-                if (t = t.replace(/(<p\s+class="inventory_popup_type">)([\S\s]*?<\/p>)/gi, '<div style="text-align: center; display: ' + n +
-                    ';color: #804000;font-weight: bold;"><img src="' + o +
+                var r = !!TWIR.storage.get("pop_display_event") && TWIR.storage.set_n_event[this.item_obj.set],
+                  o = r ? "block" : "none",
+                  a = r ? TWIR.images.game_event[r[0]] : "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+                  p = r ? ($.isArray(TWIRlang.keyWords[r[0]]) ? TWIRlang.keyWords[r[0]][0] : TWIRlang.keyWords[r[0]]) + "&nbsp;" + r[1] : "";
+                if (t = t.replace(/(<p\s+class="inventory_popup_type">)([\S\s]*?<\/p>)/gi, '<div style="text-align: center; display: ' + o +
+                    ';color: #804000;font-weight: bold;"><img src="' + a +
                     '" height="16" width="auto"></img><span style="margin-right: 10px;position: relative;font-size: 11px;font-style: italic;vertical-align: middle;">' +
-                    r +
+                    p +
                     '</span></div> <p class="inventory_popup_type" style="max-width: 250px!important;margin-left: auto;margin-right: auto;margin-top: 5px;"> $2'
                     ), this.item_obj.description.length && (t = t.replace(this.item_obj.description, '<span style="color: #007777;">' + this.item_obj
                     .description + "</span>")), this.item_obj instanceof west.item.Weapon && TWIR.storage.get("pop_avg_dmg"))
                 {
-                  var s = this.item_obj.getDamage(this.options.character),
-                    g = Math.floor((s.min + s.max) / 2);
-                  t = t.replace('-<span class="current_value">' + s.max + "</span>", '$&<span style="color: #084f29;">&nbsp;(' + g + ")</span>")
+                  var n = this.item_obj.getDamage(this.options.character),
+                    l = Math.floor((n.min + n.max) / 2);
+                  t = t.replace('-<span class="current_value">' + n.max + "</span>", '$&<span style="color: #084f29;">&nbsp;(' + l + ")</span>")
                 }
                 if (this.item_obj.usebonus && "recipe" !== this.item_obj.type && TWIR.storage.get("pop_bonus_calc"))
                 {
-                  for (var l = TWIR.usebonus.keys.energy, p = TWIR.usebonus.keys.health, I = "", c = 0; c < this.item_obj.usebonus.length; c++)
-                    if (this.item_obj.usebonus[c].match(l))
+                  for (var c = TWIR.usebonus.keys.energy, m = TWIR.usebonus.keys.health, d = "", b = 0; b < this.item_obj.usebonus.length; b++)
+                    if (this.item_obj.usebonus[b].match(c))
                     {
-                      var d = this.item_obj.usebonus[c].replace(/[^0-9.]/g, "").replace(/(\(|\)).*/g, "").trim();
-                      if (d < 100)
+                      var g = this.item_obj.usebonus[b].replace(/[^0-9.]/g, "").replace(/(\(|\)).*/g, "").trim();
+                      if (g < 100)
                       {
-                        var C = Math.floor(d / 100 * Character.maxEnergy);
-                        I += "<li>" + this.item_obj.usebonus[c] + "&nbsp;(+" + C + ")</li>"
+                        var _ = Math.floor(g / 100 * Character.maxEnergy);
+                        d += "<li>" + this.item_obj.usebonus[b] + "&nbsp;(+" + _ + ")</li>"
                       }
-                      else I += "<li>" + this.item_obj.usebonus[c] + "</li>"
+                      else d += "<li>" + this.item_obj.usebonus[b] + "</li>"
                     }
-                  else if (this.item_obj.usebonus[c].match(p))
+                  else if (this.item_obj.usebonus[b].match(m))
                   {
-                    var u = this.item_obj.usebonus[c].replace(/[^0-9.]/g, "").replace(/(\(|\)).*/g, "").trim();
-                    if (u < 100)
+                    var h = this.item_obj.usebonus[b].replace(/[^0-9.]/g, "").replace(/(\(|\)).*/g, "").trim();
+                    if (h < 100)
                     {
-                      var m = Math.floor(u / 100 * Character.maxHealth);
-                      I += "<li>" + this.item_obj.usebonus[c] + "&nbsp;(+" + m + ")</li>"
+                      var u = Math.floor(h / 100 * Character.maxHealth);
+                      d += "<li>" + this.item_obj.usebonus[b] + "&nbsp;(+" + u + ")</li>"
                     }
-                    else I += "<li>" + this.item_obj.usebonus[c] + "</li>"
+                    else d += "<li>" + this.item_obj.usebonus[b] + "</li>"
                   }
-                  else I += "<li>" + this.item_obj.usebonus[c] + "</li>";
+                  else d += "<li>" + this.item_obj.usebonus[b] + "</li>";
                   t = t.replace(/<ul\s+class="inventory_popup_effect_list">[\S\s]*?<\/ul>/gi,
                     '<ul class="inventory_popup_effect_list" style="max-width: 240px;display: block;min-width: 170px;white-space: unset!important;"> ' +
-                    I + " </ul>")
+                    d + " </ul>")
                 }!1 === this.item_obj.auctionable && !0 === this.item_obj.upgradeable ? t = t.replace(/(invPopup_foot")(>)/g,
                     '$1 style="display:block;text-align: center;font-size: 13px!important;"><p class="tw_red">' + TWIRlang.tooltips.not_auctionable +
                     '</p><p class="tw_green">' + TWIRlang.tooltips.upgradeable + "</p>") : !1 === this.item_obj.auctionable ? t = t.replace(
@@ -3050,72 +3048,71 @@
                     /<br><p\s+class="inventory_alreadyown">[\S\s]*?<\/p>/gi, "")).replace(/<div\s+class="inventory_popup_prices">[\S\s]*?<\/div>/gi,
                     "$& <br> ")).replace(/<span\s+class="inventory_popup_character_sex">[\S\s]*?<\/span>/gi, "$& <br>")).replace(
                     /<span\s+class="inventory_popup_character_sex text_red">[\S\s]*?<\/span>/gi, "$& <br>");
-                var h = TWIR.storage.popups.marketPrice,
-                  w = TWIR.storage.popups.shop_prices,
-                  b = TWIR.storage.popups.shop_limited_prices,
-                  f = TWIR.storage.popups.crafting,
-                  R = h[this.item_obj.short] && h[this.item_obj.short].weight >= 1e4 ? TWIR.replSum(h[this.item_obj.short].weight) : h[this.item_obj
-                    .short] ? h[this.item_obj.short].weight.toFixed(0) : 0,
-                  k = h[this.item_obj.short] && TWIR.storage.get("pop_market_price") ?
+                var y = TWIR.storage.popups.marketPrice,
+                  v = TWIR.storage.popups.shop_prices,
+                  x = TWIR.storage.popups.shop_limited_prices,
+                  j = TWIR.storage.popups.crafting,
+                  f = y[this.item_obj.short] && y[this.item_obj.short].weight >= 1e4 ? TWIR.replSum(y[this.item_obj.short].weight) : y[this.item_obj
+                    .short] ? y[this.item_obj.short].weight.toFixed(0) : 0,
+                  I = y[this.item_obj.short] && TWIR.storage.get("pop_market_price") ?
                   '<div style="margin-top: 5px;"><span class="tw2gui-iconset tw2gui-icon-world" style="display: inline-block; vertical-align: top;"/>&nbsp;&#36;' +
-                  R + "</div>" : "";
-                if (w[this.item_obj.short] && TWIR.storage.get("pop_ups_price"))
+                  f + "</div>" : "";
+                if (v[this.item_obj.short] && TWIR.storage.get("pop_ups_price"))
                 {
-                  var v = 1 === this.item_obj.item_level ? 3 : 2 === this.item_obj.item_level ? 9 : 3 === this.item_obj.item_level ? 27 : 4 === this
+                  var w = 1 === this.item_obj.item_level ? 3 : 2 === this.item_obj.item_level ? 9 : 3 === this.item_obj.item_level ? 27 : 4 === this
                     .item_obj.item_level ? 81 : 5 === this.item_obj.item_level ? 243 : 1,
-                    y = 3 === w[this.item_obj.short].currency ? '<span style="display: inline-block;position: relative;top: 3px;background: url(' + TWIR
+                    T = 3 === v[this.item_obj.short].currency ? '<span style="display: inline-block;position: relative;top: 3px;background: url(' + TWIR
                     .images.game_currency.bonds_nuggets + ') no-repeat;width: 16px;height: 16px;"></span><span>&nbsp;' + (TWIR.storage.get(
-                      "pop_short_currency") ? TWIR.replSum(w[this.item_obj.short].price_bonds * v, !0) : w[this.item_obj.short].price_bonds * v) +
-                    "</span>" : 2 === w[this.item_obj.short].currency ?
+                      "pop_short_currency") ? TWIR.replSum(v[this.item_obj.short].price_bonds * w, !0) : v[this.item_obj.short].price_bonds * w) +
+                    "</span>" : 2 === v[this.item_obj.short].currency ?
                     '<span style="display: inline-block;position: relative;top: 3px;background: url(' + TWIR.images.game_currency.nuggets +
-                    ') no-repeat;width: 16px;height: 16px;"></span><span>&nbsp;' + (TWIR.storage.get("pop_short_currency") ? TWIR.replSum(w[this
-                      .item_obj.short].price_nuggets * v, !0) : w[this.item_obj.short].price_nuggets * v) + "</span>" : 1 === w[this.item_obj.short]
+                    ') no-repeat;width: 16px;height: 16px;"></span><span>&nbsp;' + (TWIR.storage.get("pop_short_currency") ? TWIR.replSum(v[this
+                      .item_obj.short].price_nuggets * w, !0) : v[this.item_obj.short].price_nuggets * w) + "</span>" : 1 === v[this.item_obj.short]
                     .currency ? '<span style="display: inline-block;position: relative;top: 3px;background: url(' + TWIR.images.game_currency.bonds +
-                    ') no-repeat;width: 16px;height: 16px;"></span><span>&nbsp;' + (TWIR.storage.get("pop_short_currency") ? TWIR.replSum(w[this
-                      .item_obj.short].price_bonds * v, !0) : w[this.item_obj.short].price_bonds * v) + "</span>" : 8 === w[this.item_obj.short]
+                    ') no-repeat;width: 16px;height: 16px;"></span><span>&nbsp;' + (TWIR.storage.get("pop_short_currency") ? TWIR.replSum(v[this
+                      .item_obj.short].price_bonds * w, !0) : v[this.item_obj.short].price_bonds * w) + "</span>" : 8 === v[this.item_obj.short]
                     .currency ? '<span style="display: inline-block;position: relative;top: 3px;background: url(' + TWIR.images.game_currency.veteran +
-                    ') no-repeat;width: 16px;height: 16px;"></span><span>&nbsp;' + (TWIR.storage.get("pop_short_currency") ? TWIR.replSum(w[this
-                      .item_obj.short].price_veteran * v, !0) : w[this.item_obj.short].price_veteran * v) + "</span>" : 7 === w[this.item_obj.short]
+                    ') no-repeat;width: 16px;height: 16px;"></span><span>&nbsp;' + (TWIR.storage.get("pop_short_currency") ? TWIR.replSum(v[this
+                      .item_obj.short].price_veteran * w, !0) : v[this.item_obj.short].price_veteran * w) + "</span>" : 7 === v[this.item_obj.short]
                     .currency ? '<span style="display: inline-block;position: relative;top: 3px;background: url(' + TWIR.images.game_currency
                     .bonds_nuggets + ') no-repeat;width: 16px;height: 16px;"></span><span>&nbsp;' + (TWIR.storage.get("pop_short_currency") ? TWIR
-                      .replSum(w[this.item_obj.short].price_nuggets * v, !0) : w[this.item_obj.short].price_nuggets * v) +
+                      .replSum(v[this.item_obj.short].price_nuggets * w, !0) : v[this.item_obj.short].price_nuggets * w) +
                     '</span><span style="display: inline-block;position: relative;top: 3px;background: url(' + TWIR.images.game_currency.dollars +
-                    ') no-repeat;width: 16px;height: 16px;margin-left: 5px;"/><span>&nbsp;&#36;' + TWIR.replSum(w[this.item_obj.short].price_dollar *
-                    v) + "</span>" : "",
-                    x = w[this.item_obj.short].limited_time ? '<span style="color: #666;">&nbsp;(' + TWIR.msToTime((new Date(1e3 * w[this.item_obj
+                    ') no-repeat;width: 16px;height: 16px;margin-left: 5px;"/><span>&nbsp;&#36;' + TWIR.replSum(v[this.item_obj.short].price_dollar *
+                    w) + "</span>" : "",
+                    k = v[this.item_obj.short].limited_time ? '<span style="color: #666;">&nbsp;(' + TWIR.msToTime((new Date(1e3 * v[this.item_obj
                       .short].limited_time).getTime() - new Date(1e3 * Game.getServerTime()).getTime()) / 1e3) + ")</span>" : "",
-                    B = w[this.item_obj.short].reduced_value ? '<span style="color: #666;">&nbsp;/-' + w[this.item_obj.short].reduced_value +
+                    W = v[this.item_obj.short].reduced_value ? '<span style="color: #666;">&nbsp;/-' + v[this.item_obj.short].reduced_value +
                     "%</span>" : "";
-                  t = t.replace(/(<div\s+class="inventory_popup_prices">[\S\s]*?)(<\/div>)/gi, "$1" + k +
-                    '<div class="twir_other_popup_prices">&nbsp;' + y + B + x + "</div> $2")
+                  t = t.replace(/(<div\s+class="inventory_popup_prices">[\S\s]*?)(<\/div>)/gi, "$1" + I +
+                    '<div class="twir_other_popup_prices">&nbsp;' + T + W + k + "</div> $2")
                 }
-                else if (b[this.item_obj.short] && TWIR.storage.get("pop_ups_price"))
+                else if (x[this.item_obj.short] && TWIR.storage.get("pop_ups_price"))
                 {
-                  var v = 1 === this.item_obj.item_level ? 3 : 2 === this.item_obj.item_level ? 9 : 3 === this.item_obj.item_level ? 27 : 4 === this
-                    .item_obj.item_level ? 81 : 5 === this.item_obj.item_level ? 243 : 1,
-                    y = 3 === b[this.item_obj.short].currency ? '<span style="display: inline-block;position: relative;top: 3px;background: url(' + TWIR
-                    .images.game_currency.bonds_nuggets + ') no-repeat;width: 16px;height: 16px;"></span><span>&nbsp;' + (TWIR.storage.get(
-                      "pop_short_currency") ? TWIR.replSum(b[this.item_obj.short].price_bonds * v, !0) : b[this.item_obj.short].price_bonds * v) +
-                    "</span>" : 2 === b[this.item_obj.short].currency ?
-                    '<span style="display: inline-block;position: relative;top: 3px;background: url(' + TWIR.images.game_currency.nuggets +
-                    ') no-repeat;width: 16px;height: 16px;"></span><span>&nbsp;' + (TWIR.storage.get("pop_short_currency") ? TWIR.replSum(b[this
-                      .item_obj.short].price_nuggets * v, !0) : b[this.item_obj.short].price_nuggets * v) + "</span>" : 1 === b[this.item_obj.short]
+                  w = 1 === this.item_obj.item_level ? 3 : 2 === this.item_obj.item_level ? 9 : 3 === this.item_obj.item_level ? 27 : 4 === this
+                    .item_obj.item_level ? 81 : 5 === this.item_obj.item_level ? 243 : 1, T = 3 === x[this.item_obj.short].currency ?
+                    '<span style="display: inline-block;position: relative;top: 3px;background: url(' + TWIR.images.game_currency.bonds_nuggets +
+                    ') no-repeat;width: 16px;height: 16px;"></span><span>&nbsp;' + (TWIR.storage.get("pop_short_currency") ? TWIR.replSum(x[this
+                      .item_obj.short].price_bonds * w, !0) : x[this.item_obj.short].price_bonds * w) + "</span>" : 2 === x[this.item_obj.short]
+                    .currency ? '<span style="display: inline-block;position: relative;top: 3px;background: url(' + TWIR.images.game_currency.nuggets +
+                    ') no-repeat;width: 16px;height: 16px;"></span><span>&nbsp;' + (TWIR.storage.get("pop_short_currency") ? TWIR.replSum(x[this
+                      .item_obj.short].price_nuggets * w, !0) : x[this.item_obj.short].price_nuggets * w) + "</span>" : 1 === x[this.item_obj.short]
                     .currency ? '<span style="display: inline-block;position: relative;top: 3px;background: url(' + TWIR.images.game_currency.bonds +
-                    ') no-repeat;width: 16px;height: 16px;"></span><span>&nbsp;' + (TWIR.storage.get("pop_short_currency") ? TWIR.replSum(b[this
-                      .item_obj.short].price_bonds * v, !0) : b[this.item_obj.short].price_bonds * v) + "</span>" : 8 === b[this.item_obj.short]
+                    ') no-repeat;width: 16px;height: 16px;"></span><span>&nbsp;' + (TWIR.storage.get("pop_short_currency") ? TWIR.replSum(x[this
+                      .item_obj.short].price_bonds * w, !0) : x[this.item_obj.short].price_bonds * w) + "</span>" : 8 === x[this.item_obj.short]
                     .currency ? '<span style="display: inline-block;position: relative;top: 3px;background: url(' + TWIR.images.game_currency.veteran +
-                    ') no-repeat;width: 16px;height: 16px;"></span><span>&nbsp;' + (TWIR.storage.get("pop_short_currency") ? TWIR.replSum(b[this
-                      .item_obj.short].price_veteran * v, !0) : b[this.item_obj.short].price_veteran * v) + "</span>" : 7 === b[this.item_obj.short]
+                    ') no-repeat;width: 16px;height: 16px;"></span><span>&nbsp;' + (TWIR.storage.get("pop_short_currency") ? TWIR.replSum(x[this
+                      .item_obj.short].price_veteran * w, !0) : x[this.item_obj.short].price_veteran * w) + "</span>" : 7 === x[this.item_obj.short]
                     .currency ? '<span style="display: inline-block;position: relative;top: 3px;background: url(' + TWIR.images.game_currency
                     .bonds_nuggets + ') no-repeat;width: 16px;height: 16px;"></span><span>&nbsp;' + (TWIR.storage.get("pop_short_currency") ? TWIR
-                      .replSum(b[this.item_obj.short].price_nuggets * v, !0) : b[this.item_obj.short].price_nuggets * v) +
+                      .replSum(x[this.item_obj.short].price_nuggets * w, !0) : x[this.item_obj.short].price_nuggets * w) +
                     '</span><span style="display: inline-block;position: relative;top: 3px;background: url(' + TWIR.images.game_currency.dollars +
-                    ') no-repeat;width: 16px;height: 16px;margin-left: 5px;"/><span>&nbsp;&#36;' + TWIR.replSum(b[this.item_obj.short].price_dollar *
-                    v) + "</span>" : "";
-                  t = t.replace(/(<div\s+class="inventory_popup_prices">[\S\s]*?)(<\/div>)/gi, "$1" + k +
-                    '<div class="twir_popup_limited_prices">&nbsp;' + y + "</div> $2")
+                    ') no-repeat;width: 16px;height: 16px;margin-left: 5px;"/><span>&nbsp;&#36;' + TWIR.replSum(x[this.item_obj.short].price_dollar *
+                    w) + "</span>" : "";
+                  t = t.replace(/(<div\s+class="inventory_popup_prices">[\S\s]*?)(<\/div>)/gi, "$1" + I +
+                    '<div class="twir_popup_limited_prices">&nbsp;' + T + "</div> $2")
                 }
-                else t = t.replace(/(<div\s+class="inventory_popup_prices">[\S\s]*?)(<\/div>)/gi, "$1" + k + "$2");
+                else t = t.replace(/(<div\s+class="inventory_popup_prices">[\S\s]*?)(<\/div>)/gi, "$1" + I + "$2");
                 if (TWIR.storage.get("pop_trader") && null !== this.item_obj.traderlevel && this.item_obj.traderlevel <= 20) switch (this.item_obj.type)
                 {
                   case "belt":
@@ -3142,108 +3139,105 @@
                 }
                 if (!this.item_obj.sellable && this.item_obj.auctionable && TWIR.storage.get("pop_min_market_price"))
                 {
-                  var V = "";
-                  if (0 != this.item_obj.sell_price)
-                  {
-                    var M = TWIR.storage.get("pop_short_currency") ? TWIR.replSum(this.item_obj.sell_price, !0) : this.item_obj.sell_price;
-                    V = '<span class="inventory_popup_trader_price_sell"><span class="invPopup_sellicon"/>&nbsp;$' + M + "</span>"
-                  }
-                  var T = TWIR.storage.get("pop_short_currency") ? TWIR.replSum(this.item_obj.price / 2 * (this.options.traderCharge || 1)) : this
+                  var R = "";
+                  if (0 != this.item_obj.sell_price) R = '<span class="inventory_popup_trader_price_sell"><span class="invPopup_sellicon"/>&nbsp;$' + (
+                    TWIR.storage.get("pop_short_currency") ? TWIR.replSum(this.item_obj.sell_price, !0) : this.item_obj.sell_price) + "</span>";
+                  var S = TWIR.storage.get("pop_short_currency") ? TWIR.replSum(this.item_obj.price / 2 * (this.options.traderCharge || 1)) : this
                     .item_obj.price / 2 * (this.options.traderCharge || 1);
                   t = t.replace(/(inventory_popup_prices")(>)/g,
                     '$1 style="margin-bottom: 5px;"> <span class="inventory_popup_trader_price_buy"><span class="tw2gui-iconset tw2gui-icon-friends" style="display: inline-block; vertical-align: top;"/>&nbsp;&#36;' +
-                    T + "</span>" + V)
+                    S + "</span>" + R)
                 }
                 if (TWIR.storage.get("pop_short_currency") && (null !== this.item_obj.price && this.item_obj.price >= 1e4 && (t = t.replace("&nbsp;$" +
                     this.item_obj.price * (this.options.traderCharge || 1), "&nbsp;&#36;" + TWIR.replSum(this.item_obj.price * (this.options
                       .traderCharge || 1), !0))), 0 != this.item_obj.sell_price && this.item_obj.price >= 1e4 && (t = t.replace("&nbsp;$" + this
-                    .item_obj.sell_price, "&nbsp;&#36;" + TWIR.replSum(this.item_obj.sell_price, !0)))), "crafting" == this.item_obj.spec_type && f[this
+                    .item_obj.sell_price, "&nbsp;&#36;" + TWIR.replSum(this.item_obj.sell_price, !0)))), "crafting" == this.item_obj.spec_type && j[this
                     .item_obj.item_id])
                 {
-                  for (var W = 2147483647, S = 0; S < f[this.item_obj.item_id].resources.length; S++)
+                  for (var M = 2147483647, B = 0; B < j[this.item_obj.item_id].resources.length; B++)
                   {
-                    var E = Bag.getItemByItemId(f[this.item_obj.item_id].resources[S].item);
-                    if (void 0 !== E && E.count >= f[this.item_obj.item_id].resources[S].count)
+                    var A = Bag.getItemByItemId(j[this.item_obj.item_id].resources[B].item);
+                    if (void 0 !== A && A.count >= j[this.item_obj.item_id].resources[B].count)
                     {
-                      var Q = Math.floor(E.count / f[this.item_obj.item_id].resources[S].count);
-                      W = Q < W ? Q : W
+                      var P = Math.floor(A.count / j[this.item_obj.item_id].resources[B].count);
+                      M = P < M ? P : M
                     }
-                    else W = 0
+                    else M = 0
                   }
                   if (TWIR.storage.get("pop_crafting_recipe"))
                   {
-                    var U = Character.professionId == f[this.item_obj.item_id].profsymbol && Character.professionSkill >= ItemManager.getByBaseId(f[this
-                      .item_obj.item_id].recipe).min_level ? "#070" : "#8b4513";
-                    t += '<br><div style="color: ' + U + '; text-align: center;margin-bottom: 2px;">' + TWIRlang.tooltips.craftable + (0 != W ?
-                      "&nbsp;(" + TWIR.replSum(W) + ")" : "") + ":</div>";
-                    for (var K = f[this.item_obj.item_id].resources.length, j =
+                    t += '<br><div style="color: ' + (Character.professionId == j[this.item_obj.item_id].profsymbol && Character.professionSkill >=
+                        ItemManager.getByBaseId(j[this.item_obj.item_id].recipe).min_level ? "#070" : "#8b4513") +
+                      '; text-align: center;margin-bottom: 2px;">' + TWIRlang.tooltips.craftable + (0 != M ? "&nbsp;(" + TWIR.replSum(M) + ")" : "") +
+                      ":</div>";
+                    for (var z = j[this.item_obj.item_id].resources.length, C =
                         '<div class="twir_better_popup" style="text-align:center;margin: 0 auto;display: table;"><table style="display: table !important;border-collapse: separate !important;border-spacing: 1px !important;border-radius: 3px;border: 1px solid #804000;"><tbody><tr><td style="padding:' +
-                        (K > 5 ? "1px" : "5px") +
+                        (z > 5 ? "1px" : "5px") +
                         ';border: 1px solid #996b39;border-color: rgba(110,57,0,0.5);background-color: #d4ba91 !important;background-image: none !important;color: #5e321a !important;font-size: 16px;border-collapse: separate !important;border-spacing: 1px !important;vertical-align: middle!important;"><img src="/images/crafting/profsymbol_' +
-                        f[this.item_obj.item_id].profsymbol + '_small.png"></td><td style="padding: ' + (K > 5 ? "2px" : "5px") +
+                        j[this.item_obj.item_id].profsymbol + '_small.png"></td><td style="padding: ' + (z > 5 ? "2px" : "5px") +
                         ';border: 1px solid #996b39;border-color: rgba(110,57,0,0.5);background-color: #d4ba91 !important;background-image: none !important;color: #5e321a !important;font-size: 16px;border-collapse: separate !important;border-spacing: 1px !important;"><table style="display: table !important;border-collapse: separate !important;border-spacing: 1px !important;border-radius: 3px;border: 1px solid #804000;"><tbody><tr>',
-                        Y = 0; Y < f[this.item_obj.item_id].resources.length; Y++)
+                        L = 0; L < j[this.item_obj.item_id].resources.length; L++)
                     {
-                      var G = Bag.getItemByItemId(f[this.item_obj.item_id].resources[Y].item),
-                        F = void 0 !== G ? G.count : 0,
-                        q = F < f[this.item_obj.item_id].resources[Y].count ? "#900!important" : "#5e321a!important";
-                      j += '<td style="vertical-align: middle!important;padding: ' + (K > 5 ? "2px" : "5px") +
+                      var D = Bag.getItemByItemId(j[this.item_obj.item_id].resources[L].item),
+                        J = void 0 !== D ? D.count : 0,
+                        H = J < j[this.item_obj.item_id].resources[L].count ? "#900!important" : "#5e321a!important";
+                      C += '<td style="vertical-align: middle!important;padding: ' + (z > 5 ? "2px" : "5px") +
                         ';border: 1px solid #996b39;border-color: rgba(110,57,0,0.5);background-color: #d4ba91 !important;background-image: none !important;color: #5e321a ;font-size: 16px;border-collapse: separate !important;border-spacing: 1px !important;"><img style="width:30px;height:30px;" src="' +
-                        ItemManager.get(f[this.item_obj.item_id].resources[Y].item, !0).image + '"><div style="font-size:8pt;">(<span style="color: ' +
-                        q + ';">' + TWIR.replSum(F) + "</span>)</div></td>"
+                        ItemManager.get(j[this.item_obj.item_id].resources[L].item, !0).image + '"><div style="font-size:8pt;">(<span style="color: ' +
+                        H + ';">' + TWIR.replSum(J) + "</span>)</div></td>"
                     }
-                    j += "</tr><tr>";
-                    for (var D = 0; D < f[this.item_obj.item_id].resources.length; D++) j += '<td style="vertical-align: middle!important;padding: ' + (
-                        K > 5 ? "2px" : "5px") +
+                    C += "</tr><tr>";
+                    for (var X = 0; X < j[this.item_obj.item_id].resources.length; X++) C += '<td style="vertical-align: middle!important;padding: ' + (
+                        z > 5 ? "2px" : "5px") +
                       ';border: 1px solid #996b39;border-color: rgba(110,57,0,0.5);background-color: #d4ba91 !important;background-image: none !important;color: #5e321a !important;font-size: 14px;border-collapse: separate !important;border-spacing: 1px !important;"><span>x' +
-                      f[this.item_obj.item_id].resources[D].count + "</span></td>";
-                    j += "</tr></tbody></table></td></tr></tbody></table></div>"
+                      j[this.item_obj.item_id].resources[X].count + "</span></td>";
+                    C += "</tr></tbody></table></td></tr></tbody></table></div>"
                   }
-                  var O = ItemManager.getByBaseId(f[this.item_obj.item_id].recipe, !0).min_level >= 50;
-                  TWIR.storage.get("pop_recipe_table") && O && (j +=
+                  var E = ItemManager.getByBaseId(j[this.item_obj.item_id].recipe, !0).min_level >= 50;
+                  TWIR.storage.get("pop_recipe_table") && E && (C +=
                     '<div class="twir_better_popup" style="text-align:center;margin: 0 auto;display: table;"><table style="display: table !important;border-collapse: separate !important;border-spacing: 1px !important;border-radius: 3px;border: 1px solid #804000;"><tbody><tr><td style="vertical-align: middle!important;padding: 5px;border: 1px solid #996b39;border-color: rgba(110,57,0,0.5);background-color: #d4ba91 !important;background-image: none !important;color: #5e321a !important;font-size: 16px;border-collapse: separate !important;border-spacing: 1px !important;"><img style="width: 30px;height: 30px;" src="' +
-                    ItemManager.getByBaseId(f[this.item_obj.item_id].recipe).image +
+                    ItemManager.getByBaseId(j[this.item_obj.item_id].recipe).image +
                     '"/></td><td style="vertical-align: middle!important;padding: 5px;border: 1px solid #996b39;border-color: rgba(110,57,0,0.5);background-color: #d4ba91 !important;background-image: none !important;color: #5e321a !important;font-style: italic;font-size: 8pt;border-collapse: separate !important;border-spacing: 1px !important;width: 125px;"><span>' +
-                    ItemManager.getByBaseId(f[this.item_obj.item_id].recipe).name + "&nbsp;(" + ItemManager.getByBaseId(f[this.item_obj.item_id]
-                      .recipe).min_level + ")</span></td></tr></tbody></table></div>"), t += j
+                    ItemManager.getByBaseId(j[this.item_obj.item_id].recipe).name + "&nbsp;(" + ItemManager.getByBaseId(j[this.item_obj.item_id]
+                      .recipe).min_level + ")</span></td></tr></tbody></table></div>"), t += C
                 }
                 if ("mapdrop" === this.item_obj.spec_type && "none" === this.item_obj.usetype && TWIR.storage.get("pop_job_table"))
                 {
-                  var J = JobList.getJobsByItemId(this.item_obj.item_id);
+                  var F = JobList.getJobsByItemId(this.item_obj.item_id);
                   t += '<br><div style="color: #8b4513; text-align: center;margin-bottom: 2px;">' + TWIRlang.tooltips.jobdrop + ":</div>";
-                  for (var Z =
+                  for (var O =
                       '<div class="twir_better_popup" style="text-align:center;margin: 0 auto;display: table;"><table style="display: table !important;border-collapse: separate !important;border-spacing: 1px !important;border-radius: 3px;border: 1px solid #804000;"><tbody>',
-                      H = 0; H < J.length; H++)
+                      q = 0; q < F.length; q++)
                   {
-                    var N = 0,
-                      P = 0;
-                    if ($.isEmptyObject(JobsModel.Beans) || null == JobsModel.Beans[J[H].id].basis.long.yields[0]) N = Math.ceil(600 * J[H].yields[this
-                      .item_obj.item_id].prop), P = 0;
-                    else if (!$.isEmptyObject(JobsModel.Beans) && void 0 !== JobsModel.Beans[J[H].id].basis.long.yields[0])
-                      for (var z = 0; z < JobsModel.Beans[J[H].id].basis.long.yields.length; z++) JobsModel.Beans[J[H].id].basis.long.yields[z]
-                        .itemid === this.item_obj.item_id && (N = JobsModel.Beans[J[H].id].basis.long.yields[z].prop, P = JobsModel.Beans[J[H].id].basis
-                          .long.yields[z].probBonus);
-                    var L = N + P,
-                      X = $.isEmptyObject(JobsModel.Beans) || 0 == L ? "" : "&nbsp;(" + L.toFixed(0) + "&nbsp;%)";
-                    J[H] && (Z +=
+                    var G = 0,
+                      Q = 0;
+                    if ($.isEmptyObject(JobsModel.Beans) || null == JobsModel.Beans[F[q].id].basis.long.yields[0]) G = Math.ceil(600 * F[q].yields[this
+                      .item_obj.item_id].prop), Q = 0;
+                    else if (!$.isEmptyObject(JobsModel.Beans) && void 0 !== JobsModel.Beans[F[q].id].basis.long.yields[0])
+                      for (var K = 0; K < JobsModel.Beans[F[q].id].basis.long.yields.length; K++) JobsModel.Beans[F[q].id].basis.long.yields[K]
+                        .itemid === this.item_obj.item_id && (G = JobsModel.Beans[F[q].id].basis.long.yields[K].prop, Q = JobsModel.Beans[F[q].id].basis
+                          .long.yields[K].probBonus);
+                    var N = G + Q,
+                      U = $.isEmptyObject(JobsModel.Beans) || 0 == N ? "" : "&nbsp;(" + N.toFixed(0) + "&nbsp;%)";
+                    F[q] && (O +=
                       '<tr><td style="vertical-align: middle!important;padding: 5px;border: 1px solid #996b39;border-color: rgba(110,57,0,0.5);background-color: #d4ba91 !important;background-image: none !important;color: #5e321a !important;font-size: 16px;border-collapse: separate !important;border-spacing: 1px !important;"><img style="width: 30px;height: 30px;" src="/images/jobs/' +
-                      J[H].shortname +
+                      F[q].shortname +
                       '.png"/></td><td style="vertical-align: middle!important;padding: 5px;border: 1px solid #996b39;border-color: rgba(110,57,0,0.5);background-color: #d4ba91 !important;background-image: none !important;color: #5e321a !important;font-style: italic;font-size: 8pt;border-collapse: separate !important;border-spacing: 1px !important;width: 125px;"><span>' +
-                      J[H].name + X + "</span></td></tr>")
+                      F[q].name + U + "</span></td></tr>")
                   }
-                  t += Z += "</tbody></table></div>"
+                  t += O += "</tbody></table></div>"
                 }
-                if (null !== this.item_obj.set) var _ = west.storage.ItemSetManager.get(this.item_obj.set),
-                  ee = _.getWornItems().length,
-                  te = void 0 !== Wear.get(this.item_obj.type) ? Wear.get(this.item_obj.type).obj.set : null,
-                  ie = null !== te ? west.storage.ItemSetManager.get(te) : null,
-                  Ae = null !== te ? ie.getWornItems().length : 0;
-                if (TWIR.storage.get("pop_partial_bonus") && !1 !== this.options.twir_partial_bonus && null !== this.item_obj.set && 0 === ee && !1 ===
+                if (null !== this.item_obj.set) var V = west.storage.ItemSetManager.get(this.item_obj.set),
+                  Y = V.getWornItems().length,
+                  Z = void 0 !== Wear.get(this.item_obj.type) ? Wear.get(this.item_obj.type).obj.set : null,
+                  ee = null !== Z ? west.storage.ItemSetManager.get(Z) : null,
+                  te = null !== Z ? ee.getWornItems().length : 0;
+                if (TWIR.storage.get("pop_partial_bonus") && !1 !== this.options.twir_partial_bonus && null !== this.item_obj.set && 0 === Y && !1 ===
                   i && (t +=
                     '<td><div style="display: inline-block;background: url(/images/window/wof/prizes_sep.jpg);width: 25px;height: 270px;margin: 15px 0;"/></td><td class="twir_popup_pb" style="min-width: 200px;max-width: 275px;">'
                     ), null !== this.item_obj.set)
                 {
-                  function ae(e)
+                  function ie(e)
                   {
                     for (var t = 0; t < e.length; t++)
                     {
@@ -3252,129 +3246,129 @@
                     }
                     return !1
                   }
-                  var ne = 0;
-                  if (ne = 11 == _.items.length ? 10 : 3 == _.items.length && ae(_.items) ? 2 : 9 == _.items.length ? 8 : 6 == _.items.length ? 6 : _
-                    .items.length, null !== ie)
+                  var se = 0;
+                  if (se = 11 == V.items.length ? 10 : 3 == V.items.length && ie(V.items) ? 2 : 9 == V.items.length ? 8 : 6 == V.items.length ? 6 : V
+                    .items.length, null !== ee)
                   {
-                    11 == ie.items.length ? 10 : 3 == ie.items.length && ae(ie.items) ? 2 : 9 == ie.items.length ? 8 : 6 == ie.items.length ? 6 : ie
+                    11 == ee.items.length ? 10 : 3 == ee.items.length && ie(ee.items) ? 2 : 9 == ee.items.length ? 8 : 6 == ee.items.length ? 6 : ee
                       .items.length
                   }
-                  var oe = new west.item.BonusExtractor(Character);
-                  if (TWIR.storage.get("pop_partial_bonus") && !1 !== this.options.twir_partial_bonus && 0 == ee && !1 === i)
+                  var re = new west.item.BonusExtractor(Character);
+                  if (TWIR.storage.get("pop_partial_bonus") && !1 !== this.options.twir_partial_bonus && 0 == Y && !1 === i)
                   {
-                    var re = Ae > ne ? ne : 0 === Ae ? ne : Ae,
-                      se = '<br><div style="color: #8b4513; font-weight: bold;">(' + re + ") " + TWIRlang.tooltips.partial_items_bonus + ":</div>";
-                    se += '<div style="color: #666; margin-bottom: 5px;font-style: italic;">' + (null !== ie ? "&nbsp;>&nbsp;" + ie.name : "") +
-                      "</div>", se += '<ul class="twir_partial_bonus" style="max-width: 200px;display: block;min-width: 170px;margin-left: 10px;">';
-                    var ge = Ae > ne ? _.getMergedStages(ne) : 0 === Ae ? _.getMergedStages(ne) : _.getMergedStages(Ae),
-                      le = null !== ie && Ae > ne ? ie.getMergedStages(ne) : null !== ie ? ie.getMergedStages(Ae) : [];
-                    ge.sort(function(e, t)
+                    var oe = '<br><div style="color: #8b4513; font-weight: bold;">(' + (te > se ? se : 0 === te ? se : te) + ") " + TWIRlang.tooltips
+                      .partial_items_bonus + ":</div>";
+                    oe += '<div style="color: #666; margin-bottom: 5px;font-style: italic;">' + (null !== ee ? "&nbsp;>&nbsp;" + ee.name : "") +
+                      "</div>", oe += '<ul class="twir_partial_bonus" style="max-width: 200px;display: block;min-width: 170px;margin-left: 10px;">';
+                    var ae = te > se ? V.getMergedStages(se) : 0 === te ? V.getMergedStages(se) : V.getMergedStages(te),
+                      pe = null !== ee && te > se ? ee.getMergedStages(se) : null !== ee ? ee.getMergedStages(te) : [];
+                    ae.sort(function(e, t)
                     {
                       var i = function(e, t)
                         {
                           return (e.bonus ? e.bonus.type : e.type) == t && (e.bonus ? e.bonus.name : e.name)
                         },
-                        A = i(e, "attribute"),
-                        a = i(t, "attribute"),
-                        n = i(e, "skill"),
-                        o = i(t, "skill");
-                      return A && a ? A < a ? -1 : 1 : A ? -1 : a ? 1 : n && o ? 0 : n ? -1 : o ? 1 : 0
-                    }), le.sort(function(e, t)
+                        s = i(e, "attribute"),
+                        r = i(t, "attribute"),
+                        o = i(e, "skill"),
+                        a = i(t, "skill");
+                      return s && r ? s < r ? -1 : 1 : s ? -1 : r ? 1 : o && a ? 0 : o ? -1 : a ? 1 : 0
+                    }), pe.sort(function(e, t)
                     {
                       var i = function(e, t)
                         {
                           return (e.bonus ? e.bonus.type : e.type) == t && (e.bonus ? e.bonus.name : e.name)
                         },
-                        A = i(e, "attribute"),
-                        a = i(t, "attribute"),
-                        n = i(e, "skill"),
-                        o = i(t, "skill");
-                      return A && a ? A < a ? -1 : 1 : A ? -1 : a ? 1 : n && o ? 0 : n ? -1 : o ? 1 : 0
+                        s = i(e, "attribute"),
+                        r = i(t, "attribute"),
+                        o = i(e, "skill"),
+                        a = i(t, "skill");
+                      return s && r ? s < r ? -1 : 1 : s ? -1 : r ? 1 : o && a ? 0 : o ? -1 : a ? 1 : 0
                     });
-                    for (var pe = [], Ie = [], ce = 0; ce < ge.length; ce++)
+                    for (var ne = [], le = [], ce = 0; ce < ae.length; ce++)
                     {
-                      var de = void 0 !== oe.getDesc(ge[ce]) ? oe.getDesc(ge[ce]).replace(/[^0-9.\%]/g, "") : "",
-                        Ce = void 0 !== oe.getDesc(ge[ce]) ? oe.getDesc(ge[ce]).replace(/[0-9\%\+\.\,]/g, "").replace(/(\(|\)).*/g, "").trim() : "";
-                      pe.push(
+                      var me = void 0 !== re.getDesc(ae[ce]) ? re.getDesc(ae[ce]).replace(/[^0-9.\%]/g, "") : "",
+                        de = void 0 !== re.getDesc(ae[ce]) ? re.getDesc(ae[ce]).replace(/[0-9\%\+\.\,]/g, "").replace(/(\(|\)).*/g, "").trim() : "";
+                      ne.push(
                       {
-                        skill: Ce,
-                        value: de
-                      })
-                    }
-                    for (var ue = 0; ue < le.length; ue++)
-                    {
-                      var me = void 0 !== oe.getDesc(le[ue]) ? oe.getDesc(le[ue]).replace(/[^0-9.\%]/g, "") : "",
-                        he = void 0 !== oe.getDesc(le[ue]) ? oe.getDesc(le[ue]).replace(/[0-9\%\+\.\,]/g, "").replace(/(\(|\)).*/g, "").trim() : "";
-                      Ie.push(
-                      {
-                        skill: he,
+                        skill: de,
                         value: me
                       })
                     }
-                    for (var we = [], be = 0; be < pe.length; be++)
+                    for (var be = 0; be < pe.length; be++)
                     {
-                      for (var fe = 0; fe < Ie.length; fe++)
-                        if (pe[be].skill === Ie[fe].skill)
-                        {
-                          var Re = !(!pe[be].value.includes("%") || !Ie[fe].value.includes("%")),
-                            ke = parseFloat(pe[be].value) - parseFloat(Ie[fe].value);
-                          we.push(
-                          {
-                            skill: pe[be].skill,
-                            diff: Re ? ke + "%" : ke,
-                            value: pe[be].value
-                          })
-                        } we.find(function(e)
+                      var ge = void 0 !== re.getDesc(pe[be]) ? re.getDesc(pe[be]).replace(/[^0-9.\%]/g, "") : "",
+                        _e = void 0 !== re.getDesc(pe[be]) ? re.getDesc(pe[be]).replace(/[0-9\%\+\.\,]/g, "").replace(/(\(|\)).*/g, "").trim() : "";
+                      le.push(
                       {
-                        return e.skill === pe[be].skill
-                      }) || we.push(
-                      {
-                        skill: pe[be].skill,
-                        diff: null,
-                        value: pe[be].value
+                        skill: _e,
+                        value: ge
                       })
                     }
-                    for (var ve = 0; ve < Ie.length; ve++) we.find(function(e)
+                    for (var he = [], ue = 0; ue < ne.length; ue++)
                     {
-                      return e.skill === Ie[ve].skill
-                    }) || we.push(
-                    {
-                      skill: Ie[ve].skill,
-                      diff: "red",
-                      value: Ie[ve].value
-                    });
-                    for (var ye = 0; ye < we.length; ye++)
-                      if ("red" !== we[ye].diff)
+                      for (var ye = 0; ye < le.length; ye++)
+                        if (ne[ue].skill === le[ye].skill)
+                        {
+                          var ve = !(!ne[ue].value.includes("%") || !le[ye].value.includes("%")),
+                            xe = parseFloat(ne[ue].value) - parseFloat(le[ye].value);
+                          he.push(
+                          {
+                            skill: ne[ue].skill,
+                            diff: ve ? xe + "%" : xe,
+                            value: ne[ue].value
+                          })
+                        } he.find(function(e)
                       {
-                        var xe = null === we[ye].diff ? '&nbsp;(<span class="tw_green">+' + we[ye].value + "</span>)&nbsp;" : parseFloat(we[ye].diff) >
-                          0 ? '&nbsp;(<span class="tw_green">+' + we[ye].diff + "</span>)&nbsp;" : parseFloat(we[ye].diff) < 0 ?
-                          '&nbsp;(<span class="tw_red">' + we[ye].diff + "</span>)&nbsp;" : "&nbsp;",
-                          Be = 0 === we[ye].diff ? "color: #CC7722" : "color: #666";
-                        se += '<li style="' + Be + ';">' + we[ye].value + "&nbsp;" + we[ye].skill + xe + "</li>"
-                      } for (var Ve = 0; Ve < we.length; Ve++) "red" === we[Ve].diff && (se += '<li class="tw_red">-' + we[Ve].value + "&nbsp;" + we[Ve]
+                        return e.skill === ne[ue].skill
+                      }) || he.push(
+                      {
+                        skill: ne[ue].skill,
+                        diff: null,
+                        value: ne[ue].value
+                      })
+                    }
+                    for (var je = 0; je < le.length; je++) he.find(function(e)
+                    {
+                      return e.skill === le[je].skill
+                    }) || he.push(
+                    {
+                      skill: le[je].skill,
+                      diff: "red",
+                      value: le[je].value
+                    });
+                    for (var fe = 0; fe < he.length; fe++)
+                      if ("red" !== he[fe].diff)
+                      {
+                        var Ie = null === he[fe].diff ? '&nbsp;(<span class="tw_green">+' + he[fe].value + "</span>)&nbsp;" : parseFloat(he[fe].diff) >
+                          0 ? '&nbsp;(<span class="tw_green">+' + he[fe].diff + "</span>)&nbsp;" : parseFloat(he[fe].diff) < 0 ?
+                          '&nbsp;(<span class="tw_red">' + he[fe].diff + "</span>)&nbsp;" : "&nbsp;";
+                        oe += '<li style="' + (0 === he[fe].diff ? "color: #CC7722" : "color: #666") + ';">' + he[fe].value + "&nbsp;" + he[fe].skill +
+                          Ie + "</li>"
+                      } for (var we = 0; we < he.length; we++) "red" === he[we].diff && (oe += '<li class="tw_red">-' + he[we].value + "&nbsp;" + he[we]
                       .skill + "</li>");
-                    t += se += "</ul>"
+                    t += oe += "</ul>"
                   }
-                  var Me = ee > 0 ? "&nbsp;(" + ee + "/" + ne + ")" : "";
-                  if (ee > 0) t = t.replace('<span class="text_bold">' + _.name + ":</span>",
+                  var Te = Y > 0 ? "&nbsp;(" + Y + "/" + se + ")" : "";
+                  if (Y > 0) t = t.replace('<span class="text_bold">' + V.name + ":</span>",
                     '<span style="color: #800080 !important;font-weight: bold;max-width: 220px;display: block;text-align: center;margin-bottom: 5px;">' +
-                    _.name + Me + "</span>");
-                  else if (0 === ee)
+                    V.name + Te + "</span>");
+                  else if (0 === Y)
                     if (TWIR.storage.get("pop_partial_bonus") && !1 !== this.options.twir_partial_bonus && !1 === i)
                     {
-                      var Te =
+                      var ke =
                         '<span style="color: #800080 !important;font-weight: bold;max-width: 220px;display: block;text-align: center;margin-top: 15px;margin-bottom: 5px;">' +
-                        _.name + "</span>";
-                      t = t.replace('<span class="text_bold">' + _.name + ":</span>", ""), t += Te
+                        V.name + "</span>";
+                      t = t.replace('<span class="text_bold">' + V.name + ":</span>", ""), t += ke
                     }
-                  else t = t.replace('<span class="text_bold">' + _.name + ":</span>",
+                  else t = t.replace('<span class="text_bold">' + V.name + ":</span>",
                     '<span style="color: #800080 !important;font-weight: bold;max-width: 220px;display: block;text-align: center;margin-bottom: 5px;">' +
-                    _.name + "</span>");
-                  t = 0 === ee ? (t = t.replace(/<ul\s+class="inventory_popup_item_set_names">[\S\s]*?<\/ul>/gi, "")).replace(
+                    V.name + "</span>");
+                  t = 0 === Y ? (t = t.replace(/<ul\s+class="inventory_popup_item_set_names">[\S\s]*?<\/ul>/gi, "")).replace(
                     /<br><div\s+class="item_set_names">[\S\s]*?<\/div>/gi, "") : t.replace(/inventory_popup_item_set_names"/g,
                     '$& style="max-width: 200px;display: block;min-width: 170px;white-space: unset!important;margin-left: 10px;"')
                 }
-                return TWIR.storage.get("pop_partial_bonus") && !1 !== this.options.twir_partial_bonus && null !== this.item_obj.set && 0 === ee && !
+                return TWIR.storage.get("pop_partial_bonus") && !1 !== this.options.twir_partial_bonus && null !== this.item_obj.set && 0 === Y && !
                   1 === i && (t += "</td>"), t
               }
               catch (e)
@@ -4050,7 +4044,8 @@
                 for (var l in i)
                   for (var p = 0; p < i[l].length; p++)
                     for (var I = 0; I < s[l].length; I++) void 0 !== s[l] && void 0 !== s[l][I].quests && s[l][I].posx == i[l][p].posx && s[l][
-                      I].posy == i[l][p].posy && (i[l][p].quests = s[l][I].quests);
+                      I
+                    ].posy == i[l][p].posy && (i[l][p].quests = s[l][I].quests);
               TWIR.storage.NPC = i, void 0 !== e && e()
             })
           })
@@ -7393,14 +7388,17 @@
               transform: i
             })
           },
-          joke_rotate: function(e)
+          joke_rotate: function(t)
           {
-            var t = [-180, -90, 0, 90, 180],
-              i = t[[~~(t.length * Math.random())]];
-            return e.getMainDiv().css(
+            var e = [-180, -90, 0, 90, 180],
+              r = e[[~~(e.length * Math.random())]];
+            return t.getMainDiv().css(
             {
-              transform: "rotate(" + i + "deg)"
-            }), e
+              transform: "rotate(" + r + "deg)"
+            }), t.getImgEl().attr("title", new ItemPopup(ItemManager.get(t.getId()),
+            {
+              twir_joke_rotate: r
+            }).getXHTML()), t
           },
           injectItemTrader: function()
           {
