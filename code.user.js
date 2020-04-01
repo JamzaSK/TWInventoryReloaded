@@ -7388,17 +7388,26 @@
               transform: i
             })
           },
-          joke_rotate: function(t)
+          joke_rotate: function(e)
           {
-            var e = [-180, -90, 0, 90, 180],
-              r = e[[~~(e.length * Math.random())]];
-            return t.getMainDiv().css(
-            {
-              transform: "rotate(" + r + "deg)"
-            }), t.getImgEl().attr("title", new ItemPopup(ItemManager.get(t.getId()),
-            {
-              twir_joke_rotate: r
-            }).getXHTML()), t
+            var o = [-180, -90, 0, 90, 180],
+    r = o[[~~(o.length * Math.random())]];
+  return e.getMainDiv().css(
+  {
+    transform: "rotate(" + r + "deg)"
+  }), e.getMainDiv().addMousePopup(new ItemPopup(ItemManager.get(e.getId()),
+  {
+    show_buffs: e.showbuffs,
+    show_compare: e.showcompare,
+    show_alreadyown: e.showalreadyown,
+    traderCharge: e.traderCharge,
+    show_setboni: e.showsetboni,
+    character: e.character,
+    show_sell_price: !1 !== e.showSellPrice,
+    show_lifetime: e.lifetime,
+    show_cooldown: e.cooldown,
+    twir_joke_rotate: r
+  }).popup), e
           },
           injectItemTrader: function()
           {
