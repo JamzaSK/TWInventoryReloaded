@@ -378,14 +378,14 @@
     },
     "script_desc": "Lepší Inventár a nástroje pre The West!",
     "fortbattle": {
-        "add_name": "Fortbattle Dashboard",
-        "round": "Round",
-        "name": "Name",
-        "health": "Health points",
-        "damage_inflicted": "Damage inflicted",
-        "last_hit": "Last hit",
-        "target_name": "Target name",
-        "miss_shot": "MISS",
+        "add_name": "Boj - Dashboard",
+        "round": "Kolo",
+        "name": "Meno",
+        "health": "Body zdravia",
+        "damage_inflicted": "Spôsobené škody",
+        "last_hit": "Posledný zásah",
+        "target_name": "Trafený ciel",
+        "miss_shot": "VEDĽA",
         "ko_shot": "KO"
     }
 }
