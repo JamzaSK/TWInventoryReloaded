@@ -382,7 +382,7 @@
         "health": "Health points",
         "damage_inflicted": "Damage inflicted",
         "last_hit": "Last hit",
-        "target_name": "Target name",
+        "target_name": "Hit target",
         "miss_shot": "MISS",
         "ko_shot": "KO"
     }
