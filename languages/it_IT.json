@@ -380,5 +380,16 @@
         "set_bonus": "Bonus from sets",
         "compare": "Compare"
     },
-    "script_desc": "Better Inventory and Tools for The West!"
+    "script_desc": "Better Inventory and Tools for The West!",
+    "fortbattle": {
+        "add_name": "Fortbattle Dashboard",
+        "round": "Round",
+        "name": "Name",
+        "health": "Health points",
+        "damage_inflicted": "Damage inflicted",
+        "last_hit": "Last hit",
+        "target_name": "Target name",
+        "miss_shot": "MISS",
+        "ko_shot": "KO"
+    }
 }
