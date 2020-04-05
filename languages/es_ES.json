@@ -375,5 +375,16 @@
         "set_bonus": "Bonus de conjunto",
         "compare": "Comparar"
     },
-    "script_desc": "¡Mejor inventario y herramientas para Occidente!"
+    "script_desc": "¡Mejor inventario y herramientas para Occidente!",
+    "fortbattle": {
+        "add_name": "Fortbattle Dashboard",
+        "round": "Round",
+        "name": "Name",
+        "health": "Health points",
+        "damage_inflicted": "Damage inflicted",
+        "last_hit": "Last hit",
+        "target_name": "Target name",
+        "miss_shot": "MISS",
+        "ko_shot": "KO"
+    }
 }
