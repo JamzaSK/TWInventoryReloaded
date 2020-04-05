@@ -64,8 +64,8 @@
         "item_type": "Тип",
         "regen": "регенерация",
         "custom": "обычай",
-        "set_window": "Set List",
-        "item_use": "Use"
+        "set_window": "Список комплектов",
+        "item_use": "применить"
     },
     "tooltips": {
         "jobdrop": "Отстраняется от работы",
@@ -89,8 +89,8 @@
         "quests": "задача",
         "collection": "Необходим для завершения коллекции",
         "uniq_sellers": "$1 продавцов",
-        "job_danger": "Danger",
-        "open_title": "Open $1 and center it on map"
+        "job_danger": "опасность",
+        "open_title": "Откройте $ 1 и выровнать на карте"
     },
     "organizing": {
         "invert_text": "Показать / Скрыть предметы по выбранному фильтру",
@@ -247,9 +247,9 @@
         "inv_menu_size": "Максимальное количество строк в меню выбора",
         "pop_char_level": "Показать значение бонуса (за уровень) на уровне персонажа",
         "inv_cld_reminder": "Напомни мне использовать предметы, у которых долгие cooldowny",
-        "inv_cld_reminder_playsound": "Mute reminder sound",
-        "pop_quest_tooltip": "Add requirements to complete the quest and its reward to the quest popup",
-        "pop_job_tooltip": "Improve job popup"
+        "inv_cld_reminder_playsound": "Отключить звук для напоминания",
+        "pop_quest_tooltip": "Просматривайте запросы на выполнение задач и награды во всплывающем окне.",
+        "pop_job_tooltip": "Улучшение всплывающих окон для рабочих мест"
     },
     "keyWords": {
         "xmas": [
@@ -262,7 +262,7 @@
         ],
         "easter": "пасха",
         "oktoberfest": "Октоберфест",
-        "sale": "Sale"
+        "sale": "События продаж"
     },
     "menulink": {
         "market": "Обзор рынка",
@@ -311,7 +311,7 @@
         "enabled": "разрешено",
         "disabled": "приостановленно",
         "cancel": "отменить",
-        "quest_update": "Current quests loaded"
+        "quest_update": "Текущие задачи загружены"
     },
     "calc": {
         "regen": "регенерация",
@@ -345,9 +345,9 @@
         "level": "уровень",
         "construct": "структура",
         "speed": "скорость",
-        "wearable_only": "Wearable only",
-        "sector": "sector",
-        "switch_speed_btn": "Use Speed Set"
+        "wearable_only": "пригодный для носки",
+        "sector": "сектор",
+        "switch_speed_btn": "Надеть скоростной сэт"
     },
     "update_changelog": "список изменений",
     "donate_text_2": "Если вам нравится этот скрипт и вы хотите поработать над ним или хотите добавить новые функции, рассмотрите $пожертвование$",
@@ -367,12 +367,23 @@
         "remind_msg": " Предметы Готовы к использованию"
     },
     "combo_comparison": {
-        "add_name": "Combo Comparison",
-        "hint": "Add / Drop items here to get started!",
-        "full_bonus": "Full bonus",
-        "item_bonus": "Bonus from items",
-        "set_bonus": "Bonus from sets",
-        "compare": "Compare"
+        "add_name": "Сравнение оборудования",
+        "hint": "Добавить / удалить элементы здесь",
+        "full_bonus": "Полный бонус",
+        "item_bonus": "Бонус за предметы",
+        "set_bonus": "Бонус за комплект",
+        "compare": "сравнить"
     },
-    "script_desc": "Better Inventory and Tools for The West!"
+    "script_desc": "Лучший инвентарь и инструменты для The West!",
+    "fortbattle": {
+        "add_name": "Fortbattle Dashboard",
+        "round": "Round",
+        "name": "Name",
+        "health": "Health points",
+        "damage_inflicted": "Damage inflicted",
+        "last_hit": "Last hit",
+        "target_name": "Target name",
+        "miss_shot": "MISS",
+        "ko_shot": "KO"
+    }
 }
