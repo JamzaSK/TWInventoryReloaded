@@ -13,7 +13,7 @@
     "update_message": "Script has been updated! Please download the latest version.",
     "donate_title": "Support development",
     "donate_text": "If you want to help development, or simply show your appreciation, use one of the following ways",
-    "donate_paypal": "Buy Us a Coffee",
+    "donate_paypal": "Buy Me a Coffee",
     "tyty": "Thank you",
     "inventory": {
         "adventures": "Adventures",
@@ -378,7 +378,7 @@
     },
     "script_desc": "Better Inventory and Tools for The West!",
     "fortbattle": {
-        "add_name": "Fortbattle Dashboard",
+        "add_name": "Fortbattle - Dashboard",
         "round": "Round",
         "name": "Name",
         "health": "Health points",
