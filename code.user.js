@@ -1468,7 +1468,7 @@
                               o[l.type].itm = new tw2widget.reward.BondReward(p);
                               break;
                             case "ses":
-                              o[l.type].itm = new tw2widget.reward.BaseReward(l.name, l.amout, l.event + " twir_" + l.event)
+                              o[l.type].itm = new tw2widget.reward.BaseReward(l.name, l.amount, l.event + " twir_" + l.event)
                           }
                           o[l.type].itm.getMainDiv().css("height", "58px"), A.updateLoot(o[l.type].itm.getMainDiv(), Object.keys(o).length)
                         }
