@@ -22,6 +22,8 @@
 * Mass opening - SHIFT + click on the item in your inventory
 * Mass sending of the event currency during supported events
 * Collect reminder for items that have a long cooldowns
+* Live Scoreboard during fort battles
+* ...and many more!
 <br>
 
 
@@ -69,7 +71,7 @@
 * **Français (fr)** *by Thathanka*<br>
 * **Magyar (hu)** *by Aviendha*<br>
 * **Italiano (it)** *by Billy-AR*<br>
-* **Polski (pl)** *by Wojcieszy*<br>
+* **Polski (pl)** *by Wojcieszy, mxj*<br>
 * **Português (pt)** *by jccwest*<br>
 * **Русский (ru)** *by Luntik*<br>
 * **Slovenčina (sk)**<br>
@@ -128,6 +130,9 @@
 * The West quests
 * The West forts
 * The West fort battles
+* The West fortbattle tool
+* The West scoreboard
+* The West fortbattle script
 * The West jobs
 * The West duels
 * The West tombola
