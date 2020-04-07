@@ -60,7 +60,7 @@
         " is installed twice. You will have to uninstall older version for the script to work properly!</br></b></div>", west.gui.Dialog.SYS_WARNING)
       .addButton("OK").show() : (TWIRlang = {}, TWIR = {
         version: "2.188",
-        revision: "14",
+        revision: "15",
         name: "TW Inventory Reloaded",
         author: "Jamza",
         minGame: "2.04",
@@ -2370,8 +2370,8 @@
           getData: function()
           {
             var e = this;
-            FortBattleWindow.twir_handleRoundInfoSignal = FortBattleWindow.twir_handleRoundInfoSignal || FortBattleWindow.handleRoundInfoSignalOrigin ||
-              FortBattleWindow.handleRoundInfoSignal, FortBattleWindow.handleRoundInfoSignal = function(t)
+            FortBattleWindow.twir_handleRoundInfoSignal = FortBattleWindow.twir_handleRoundInfoSignal || FortBattleWindow.handleRoundInfoSignal,
+              FortBattleWindow.handleRoundInfoSignal = function(t)
               {
                 FortBattleWindow.twir_handleRoundInfoSignal.apply(this, arguments), e.handleRoundData(this.fortId, this.characters, t.charinfo, this)
               }, FortBattleWindow.twir_handlePlayerInfoSignal = FortBattleWindow.twir_handlePlayerInfoSignal || FortBattleWindow.handlePlayerInfoSignal,
@@ -2734,31 +2734,39 @@
             FortBattleWindow.twir_changeCellPopupText = FortBattleWindow.twir_changeCellPopupText || FortBattleWindow.changeCellPopupText,
               FortBattleWindow.changeCellPopupText = function(t)
               {
-                var i = t || this.popup.idx,
-                  A = this.charactersByPos[i];
-                if (A)
+                try
                 {
-                  this.popup.idx = i;
-                  var a = this.fortId,
-                    n = e.getLastRound(a),
-                    o = n.find(function(e)
-                    {
-                      return e.characterid === A.characterid
-                    }),
-                    r = Chat.Resource.Manager.getClient("client_" + o.westPlayerId),
-                    s = r ? r.statusId : 0,
-                    g = '<div style="margin-left: 10px;"><table cellpadding=0 cellspacing=0><tr>' + e.getBonusString(a, o.characterid) +
-                    "</tr></table></div>";
-                  g += '<table style="margin:0;padding:0;"><tr style="font-size:8pt;height:20px;font-weight:bold;">', g +=
-                    '<td style="vertical-align: middle;"><div style="font-size:13px; font-family: georgia, times new roman, serif; font-weight: bold;">' +
-                    o.name.cutIt(14) + '&nbsp;</div></td><td style="vertical-align: middle;">' + (TWIR.storage.get("fb_online_status") && o
-                      .westPlayerId !== Character.playerId ? e.formatStatus(s, o.westPlayerId) : "") + '&nbsp;</td><td style="vertical-align: middle;">' +
-                    (TWIR.storage.get("fb_ranks") ? e.formatRank(o.westPlayerId, a) : "") + "</td>", g += '<td style="vertical-align: middle;">' + e
-                    .formatHp(o.health, o.healthmax) + "</td>", g += "</tr></table>", g += '<div style="text-align: center"><span><img src="' + TWIR
-                    .images.fortbattle.dmg_blue + '"/></span>&nbsp;<span style="font-weight: bold; font-size: 11px; vertical-align: middle;">' +
-                    format_number(o.causeddamage) + "</span></div>", this.popup.setXHTML(g)
+                  var i = t || this.popup.idx,
+                    A = this.charactersByPos[i];
+                  if (A)
+                  {
+                    this.popup.idx = i;
+                    var a = this.fortId,
+                      n = e.getLastRound(a),
+                      o = n.find(function(e)
+                      {
+                        return e.characterid === A.characterid
+                      }),
+                      r = Chat.Resource.Manager.getClient("client_" + o.westPlayerId),
+                      s = r ? r.statusId : 0,
+                      g = '<div style="margin-left: 10px;"><table cellpadding=0 cellspacing=0><tr>' + e.getBonusString(a, o.characterid) +
+                      "</tr></table></div>";
+                    g += '<table style="margin:0;padding:0;"><tr style="font-size:8pt;height:20px;font-weight:bold;">', g +=
+                      '<td style="vertical-align: middle;"><div style="font-size:13px; font-family: georgia, times new roman, serif; font-weight: bold;">' +
+                      o.name.cutIt(14) + '&nbsp;</div></td><td style="vertical-align: middle;">' + (TWIR.storage.get("fb_online_status") && o
+                        .westPlayerId !== Character.playerId ? e.formatStatus(s, o.westPlayerId) : "") +
+                      '&nbsp;</td><td style="vertical-align: middle;">' + (TWIR.storage.get("fb_ranks") ? e.formatRank(o.westPlayerId, a) : "") + "</td>",
+                      g += '<td style="vertical-align: middle;">' + e.formatHp(o.health, o.healthmax) + "</td>", g += "</tr></table>", g +=
+                      '<div style="text-align: center"><span><img src="' + TWIR.images.fortbattle.dmg_blue +
+                      '"/></span>&nbsp;<span style="font-weight: bold; font-size: 11px; vertical-align: middle;">' + format_number(o.causeddamage) +
+                      "</span></div>", this.popup.setXHTML(g)
+                  }
+                  else this.popup.kill()
                 }
-                else this.popup.kill()
+                catch (e)
+                {
+                  FortBattleWindow.twir_changeCellPopupText.apply(this, arguments)
+                }
               }
           }
         },
@@ -4462,8 +4470,7 @@
                 for (var l in i)
                   for (var p = 0; p < i[l].length; p++)
                     for (var I = 0; I < s[l].length; I++) void 0 !== s[l] && void 0 !== s[l][I].quests && s[l][I].posx == i[l][p].posx && s[l][
-                      I
-                    ].posy == i[l][p].posy && (i[l][p].quests = s[l][I].quests);
+                      I].posy == i[l][p].posy && (i[l][p].quests = s[l][I].quests);
               TWIR.storage.NPC = i, void 0 !== e && e()
             })
           })
