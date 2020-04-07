@@ -388,7 +388,7 @@
             bonus: [],
             collectibles: [],
             buffs_all: [],
-            use_all: [],
+            useable_all: [],
             crafting_all: []
           },
           save: function(e, t, i)
@@ -4060,7 +4060,7 @@
               for (var i = 0; i < t.length; i++) k.includes(t[i]) || k.push(t[i])
             });
             var y = TWIR.storage.inventory.use = {},
-              x = TWIR.storage.inventory.use_all = [],
+              x = TWIR.storage.inventory.useable_all = [],
               B = {
                 events: f(["event_1", "event_2", "event_3", "event_4", "event_5"]),
                 premium: f("bonus_medal"),
@@ -4462,7 +4462,8 @@
                 for (var l in i)
                   for (var p = 0; p < i[l].length; p++)
                     for (var I = 0; I < s[l].length; I++) void 0 !== s[l] && void 0 !== s[l][I].quests && s[l][I].posx == i[l][p].posx && s[l][
-                      I].posy == i[l][p].posy && (i[l][p].quests = s[l][I].quests);
+                      I
+                    ].posy == i[l][p].posy && (i[l][p].quests = s[l][I].quests);
               TWIR.storage.NPC = i, void 0 !== e && e()
             })
           })
@@ -6253,7 +6254,7 @@
             this.count = {}, this.count_max = {};
             var e = this,
               t = Bag.items_by_id,
-              i = Bag.getItemsByItemIds(TWIR.storage.inventory.use_all),
+              i = Bag.getItemsByItemIds(TWIR.storage.inventory.useable_all),
               A = Bag.getItemsByItemIds(TWIR.storage.inventory.buffs_all),
               a = Bag.getItemsByItemIds(TWIR.storage.inventory.crafting_all),
               n = Bag.getItemsByItemIds(TWIR.storage.inventory.bonus),
@@ -6297,7 +6298,7 @@
                   s(l.type + "_count", 1), s(l.type + "_total", t[g].count)
               }
             }
-            for (var p = 0; p < i.length; p++) s("use_count", 1), s("use_total", i[p].count);
+            for (var p = 0; p < i.length; p++) s("useable_count", 1), s("useable_total", i[p].count);
             for (var I = 0; I < A.length; I++) s("buff_count", 1), s("buff_total", A[I].count);
             for (var c = 0; c < a.length; c++) "recipe" !== a[c].obj.type && (s("craft_count", 1), s("craft_total", a[c].count));
             for (var d = 0; d < n.length; d++) s("bonus_count", 1), s("bonus_total", n[d].count);
@@ -6964,7 +6965,7 @@
                 if (!C.buff_count) return;
                 break;
               case "useable":
-                if (!C.use_count) return
+                if (!C.useable_count) return
             }
             return o.show(e)
           }
@@ -7687,9 +7688,8 @@
                   i = Inventory.availableCategories,
                   A = Inventory.addedCategories;
                 e.length ? self.gui.setShowButton.enable() : self.gui.setShowButton.disable();
-                for (var a = 0; a < A.length; a++) t[A[a] + "_count"] < 1 ? ($(".filter_" + A[a]).addClass("no-items"), $(".filter_" + A[a]).unbind(
-                  "mouseenter"), $(".filter_" + A[a]).unbind("mouseleave")) : ($(".filter_" + A[a]).removeClass("no-items"), $(".filter_" + A[a])
-                  .mouseenter(function()
+                for (var a = 0; a < A.length; a++) t[A[a] + "_count"] ? ($(".filter_" + A[a]).removeClass("no-items"), $(".filter_" + A[a]).mouseenter(
+                  function()
                   {
                     $(this).css(
                     {
@@ -7697,13 +7697,13 @@
                       "-webkit-filter": "opacity(100%)"
                     })
                   }), $(".filter_" + A[a]).mouseleave(function()
+                {
+                  $(this).css(
                   {
-                    $(this).css(
-                    {
-                      filter: "opacity(75%)",
-                      "-webkit-filter": "opacity(75%)"
-                    })
-                  }));
+                    filter: "opacity(75%)",
+                    "-webkit-filter": "opacity(75%)"
+                  })
+                })) : ($(".filter_" + A[a]).addClass("no-items"), $(".filter_" + A[a]).unbind("mouseenter"), $(".filter_" + A[a]).unbind("mouseleave"));
                 for (var n = 0; n < i.length; n++) Bag.getItemsByType(i[n]).length < 1 && "new" !== i[n] ? ($(".inventory .filters .filter_" + i[n])
                   .unbind("mouseenter"), $(".inventory .filters .filter_" + i[n]).unbind("mouseleave"), $(".inventory .filters .filter_" + i[n] +
                     ".active").unbind("mouseenter"), $(".inventory .filters .filter_" + i[n] + ".active").unbind("mouseleave")) : ($(
@@ -8442,7 +8442,7 @@
                       break;
                     case "useable":
                     case TWIRlang.inventory.useable.toLowerCase():
-                      TWIR.storage.inventory.use_all.includes(s.item_id) && a.push(A);
+                      TWIR.storage.inventory.useable_all.includes(s.item_id) && a.push(A);
                       break;
                     case "crafting":
                     case TWIRlang.inventory.crafting.toLowerCase():
