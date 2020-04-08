@@ -384,6 +384,9 @@
         "last_hit": "Last hit",
         "target_name": "Hit target",
         "miss_shot": "MISS",
-        "ko_shot": "KO"
+        "ko_shot": "KO",
+        "damage_taken": "Damage taken",
+        "per_round": "per round",
+        "total": "total"
     }
 }
