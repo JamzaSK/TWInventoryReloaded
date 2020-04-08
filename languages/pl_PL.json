@@ -90,7 +90,7 @@
         "collection": "Wymagane do ukończenia kolekcji\n\n",
         "uniq_sellers": "$1 unikalnych sprzedających",
         "job_danger": "Szansa na zranienie",
-        "open_title": "Open $1 and center it on map"
+        "open_title": "Otwórz $1 i scentruj na mapie"
     },
     "organizing": {
         "invert_text": "Pokaż/Ukryj przedmioty pasujące do filtra",
@@ -248,8 +248,8 @@
         "pop_char_level": "Zawsze pokazuj wartości bonusów (na poziom) wg. twojego poziomu",
         "inv_cld_reminder": "Przypomnij mi o używaniu przedmiotów z długim czasem odnawiania",
         "inv_cld_reminder_playsound": "Wycisz dźwięk powiadomień o użyciu przedmiotów",
-        "pop_quest_tooltip": "Add requirements to complete the quest and its reward to the quest popup",
-        "pop_job_tooltip": "Improve job popup"
+        "pop_quest_tooltip": "Dodaj wymagania by skończyć zadanie i jego nagrodę do okienka",
+        "pop_job_tooltip": "Ulepszone okno pracy"
     },
     "keyWords": {
         "xmas": [
@@ -318,7 +318,7 @@
         "enabled": "Włączone",
         "disabled": "Wyłączone",
         "cancel": "Anuluj",
-        "quest_update": "Current quests loaded"
+        "quest_update": "Aktualnie załadowane zadania"
     },
     "calc": {
         "regen": "Regeneracja",
@@ -381,16 +381,19 @@
         "set_bonus": "Bonus z zestawu",
         "compare": "Porównaj"
     },
-    "script_desc": "Better Inventory and Tools for The West!",
+    "script_desc": "Lepsze ekwipunek i narzędzia do The-West!",
     "fortbattle": {
-        "add_name": "Fortbattle - Dashboard",
-        "round": "Round",
-        "name": "Name",
-        "health": "Health points",
-        "damage_inflicted": "Damage inflicted",
-        "last_hit": "Last hit",
-        "target_name": "Hit target",
-        "miss_shot": "MISS",
-        "ko_shot": "KO"
+        "add_name": "Okno bitwy o fort",
+        "round": "Runda",
+        "name": "Nick",
+        "health": "Punkty życia",
+        "damage_inflicted": "Zadane obrażenia",
+        "last_hit": "Ostatni strzał",
+        "target_name": "Cel",
+        "miss_shot": "Pudło",
+        "ko_shot": "Omdlenie",
+        "damage_taken": "Damage taken",
+        "per_round": "per round",
+        "total": "total"
     }
 }
