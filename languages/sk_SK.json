@@ -386,6 +386,9 @@
         "last_hit": "Posledný zásah",
         "target_name": "Trafený ciel",
         "miss_shot": "VEDĽA",
-        "ko_shot": "KO"
+        "ko_shot": "KO",
+        "damage_taken": "Damage taken",
+        "per_round": "per round",
+        "total": "total"
     }
 }
