@@ -2682,49 +2682,49 @@
                     "</span>").appendToThCell("head", "twir_score_target", TWIRlang.fortbattle.target_name, '<span class="twir_sort ' + ("<target" === t ?
                       "twir_sort->target" : "twir_sort-<target") + '" style="cursor: pointer;">' + TWIR.acronym(TWIRlang.fortbattle.target_name) +
                     "</span>"), a = this.sort_dashboard(e, t), n = 0, o = 0; o < a.length; o++)
-                if (!a[o].dead || (n++, !i.gui[e].hide_ko))
+              {
+                var r = i.getStatus(a[o].westPlayerId);
+                A.buildRow(null,
                 {
-                  var r = i.getStatus(a[o].westPlayerId);
-                  A.buildRow(null,
-                  {
-                    twir_score_info: a[o].dead ? '<span title="' + (a[o].killedby ? a[o].killedby : "") + '"><img src="' + TWIR.images.fortbattle.ko +
-                      '" height="20" width="auto"/></span>' : a[o].level + i.formatClass(a[o].characterclass) + i.formatRank(a[o].westPlayerId, e) + i
-                      .formatStatus(r, a[o].westPlayerId),
-                    twir_score_name: '<div class=" twir_player twir_player-' + a[o].characterid + " " + (0 === a[o].team ? "twir_blue_team" : 1 === a[
-                        o].team ? "twir_red_team" : "") + '" style="font-weight: bold; text-overflow: ellipsis; overflow: hidden;">' + a[o].name +
-                      "</div>",
-                    twir_score_health: i.formatHp(a[o].health, a[o].healthmax),
-                    twir_score_hppr: '<span class="' + (0 === a[o].team ? "twir_blue_team" : 1 === a[o].team ? "twir_red_team" : "") + '">' + (
-                      null !== a[o].hppr ? format_number(a[o].hppr) : "-") + "</span>",
-                    twir_score_causeddamage: '<span class="' + (0 === a[o].team ? "twir_blue_team" : 1 === a[o].team ? "twir_red_team" : "") + '">' +
-                      format_number(a[o].causeddamage) + "</span>",
-                    twir_score_shotdmg: '<span class="' + (0 === a[o].team ? "twir_blue_team" : 1 === a[o].team ? "twir_red_team" : "") +
-                      '" style="' + (a[o].ko || 0 === a[o].shotdmg && a[o].shotat ? "font-size: 12px;" : "") + (a[o].ko ? "font-weight: bold;" : "") +
-                      '">' + (a[o].ko ? TWIRlang.fortbattle.ko_shot : 0 === a[o].shotdmg && a[o].shotat ? TWIRlang.fortbattle.miss_shot :
-                        format_number(a[o].shotdmg)) + "</span>",
-                    twir_score_target: '<div class=" twir_player twir_player-' + (a[o].shotat ? a[o].shotat.characterid : 0) +
-                      '" style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;">' + (a[o].shotat ?
-                        '<span style="float: left; font-weighzt: bold;">&#10230;</span><span style="font-size: 12px; font-style: italic; padding-left: 2px;">' +
-                        a[o].shotat.name + "</span></div>" : "-") + "</div>"
-                  }, function(t)
-                  {
-                    for (var A = t.children(), n = 0; n < A.length; n++)(A.eq(n).hasClass("twir_score_name") || A.eq(n).hasClass(
-                      "twir_score_target")) && A.eq(n).find(".twir_player").mouseenter(function(t)
-                      {
-                        i.process_dashboard_action(t, e)
-                      }).mouseleave(function()
-                      {
-                        i.unhighlightCell(e)
-                      });
-                    return t.data(
+                  twir_score_info: a[o].dead ? '<span title="' + (a[o].killedby ? a[o].killedby : "") + '"><img src="' + TWIR.images.fortbattle.ko +
+                    '" height="20" width="auto"/></span>' : a[o].level + i.formatClass(a[o].characterclass) + i.formatRank(a[o].westPlayerId, e) + i
+                    .formatStatus(r, a[o].westPlayerId),
+                  twir_score_name: '<div class=" twir_player twir_player-' + a[o].characterid + " " + (0 === a[o].team ? "twir_blue_team" : 1 === a[o]
+                      .team ? "twir_red_team" : "") + '" style="font-weight: bold; text-overflow: ellipsis; overflow: hidden;">' + a[o].name +
+                    "</div>",
+                  twir_score_health: i.formatHp(a[o].health, a[o].healthmax),
+                  twir_score_hppr: '<span class="' + (0 === a[o].team ? "twir_blue_team" : 1 === a[o].team ? "twir_red_team" : "") + '">' + (null !==
+                    a[o].hppr ? format_number(a[o].hppr) : "-") + "</span>",
+                  twir_score_causeddamage: '<span class="' + (0 === a[o].team ? "twir_blue_team" : 1 === a[o].team ? "twir_red_team" : "") + '">' +
+                    format_number(a[o].causeddamage) + "</span>",
+                  twir_score_shotdmg: '<span class="' + (0 === a[o].team ? "twir_blue_team" : 1 === a[o].team ? "twir_red_team" : "") + '" style="' +
+                    (a[o].ko || 0 === a[o].shotdmg && a[o].shotat ? "font-size: 12px;" : "") + (a[o].ko ? "font-weight: bold;" : "") + '">' + (a[o]
+                      .ko ? TWIRlang.fortbattle.ko_shot : 0 === a[o].shotdmg && a[o].shotat ? TWIRlang.fortbattle.miss_shot : format_number(a[o]
+                        .shotdmg)) + "</span>",
+                  twir_score_target: '<div class=" twir_player twir_player-' + (a[o].shotat ? a[o].shotat.characterid : 0) +
+                    '" style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;">' + (a[o].shotat ?
+                      '<span style="float: left; font-weighzt: bold;">&#10230;</span><span style="font-size: 12px; font-style: italic; padding-left: 2px;">' +
+                      a[o].shotat.name + "</span></div>" : "-") + "</div>"
+                }, function(t)
+                {
+                  for (var A = t.children(), r = 0; r < A.length; r++)(A.eq(r).hasClass("twir_score_name") || A.eq(r).hasClass(
+                    "twir_score_target")) && A.eq(r).find(".twir_player").mouseenter(function(t)
                     {
-                      characterid: a[o].characterid,
-                      westPlayerId: a[o].westPlayerId,
-                      fortId: e,
-                      ko: a[o].dead
-                    }), a[o].dead && t.css("opacity", "0.6"), t
-                  })
-                } this.gui[e].table_div.append(A.getMainDiv().on("click", function(t)
+                      i.process_dashboard_action(t, e)
+                    }).mouseleave(function()
+                    {
+                      i.unhighlightCell(e)
+                    });
+                  return t.data(
+                  {
+                    characterid: a[o].characterid,
+                    westPlayerId: a[o].westPlayerId,
+                    fortId: e,
+                    ko: a[o].dead
+                  }), a[o].dead && (n++, t.css("opacity", "0.6"), i.gui[e].hide_ko && t.addClass("twir_hidden")), t
+                })
+              }
+              this.gui[e].table_div.append(A.getMainDiv().on("click", function(t)
               {
                 i.process_dashboard_action(t, e)
               }));
