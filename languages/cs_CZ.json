@@ -249,7 +249,8 @@
         "inv_cld_reminder": "Připomenout mi, že mám použít předměty, které mají dlouhé cooldowny",
         "inv_cld_reminder_playsound": "Ztlumit zvukové upozornění u reminderu",
         "pop_quest_tooltip": "Zobrazit požadavky na dokončení úkolu a jeho odměnu v pop-upu daného úkolu",
-        "pop_job_tooltip": "Vylepšit pop-up u prací"
+        "pop_job_tooltip": "Vylepšit pop-up u prací",
+        "fb_char_icons": "Ikony specifické pro danou třídu postavy v okně přípravy bitvy"
     },
     "keyWords": {
         "xmas": [
@@ -387,8 +388,8 @@
         "target_name": "Trefený cíl",
         "miss_shot": "VEDLE",
         "ko_shot": "KO",
-        "damage_taken": "Damage taken",
-        "per_round": "per round",
-        "total": "total"
+        "damage_taken": "Obdržené poškození",
+        "per_round": "za kolo",
+        "overall": "celkově"
     }
 }
