@@ -249,7 +249,8 @@
         "inv_cld_reminder": "Напомни мне использовать предметы, у которых долгие cooldowny",
         "inv_cld_reminder_playsound": "Отключить звук для напоминания",
         "pop_quest_tooltip": "Просматривайте запросы на выполнение задач и награды во всплывающем окне.",
-        "pop_job_tooltip": "Улучшение всплывающих окон для рабочих мест"
+        "pop_job_tooltip": "Улучшение всплывающих окон для рабочих мест",
+        "fb_char_icons": "Class specific icons in the fortbattle preparation window"
     },
     "keyWords": {
         "xmas": [
@@ -387,6 +388,6 @@
         "ko_shot": "KO",
         "damage_taken": "Damage taken",
         "per_round": "per round",
-        "total": "total"
+        "overall": "overall"
     }
 }
