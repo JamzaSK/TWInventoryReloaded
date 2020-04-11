@@ -249,7 +249,8 @@
         "inv_cld_reminder": "Recuérdame que tengo que usar artículos con largos tiempos de reutilización.",
         "inv_cld_reminder_playsound": "Enmudecer sonido recordatorio",
         "pop_quest_tooltip": "Agreguar requisitos para completar la búsqueda y su recompensa a la ventana emergente de búsqueda",
-        "pop_job_tooltip": "Mejorar ventana emergente de trabajo"
+        "pop_job_tooltip": "Mejorar ventana emergente de trabajo",
+        "fb_char_icons": "Class specific icons in the fortbattle preparation window"
     },
     "keyWords": {
         "xmas": [
@@ -388,6 +389,6 @@
         "ko_shot": "KO",
         "damage_taken": "Damage taken",
         "per_round": "per round",
-        "total": "total"
+        "overall": "overall"
     }
 }
