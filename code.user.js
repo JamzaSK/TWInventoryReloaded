@@ -2690,7 +2690,7 @@
                     '" height="20" width="auto"/></span>' : a[o].level + i.formatClass(a[o].characterclass) + i.formatRank(a[o].westPlayerId, e) + i
                     .formatStatus(r, a[o].westPlayerId),
                   twir_score_name: '<div class=" twir_player twir_player-' + a[o].characterid + " " + (0 === a[o].team ? "twir_blue_team" : 1 === a[o]
-                      .team ? "twir_red_team" : "") + '" style="font-weight: bold; text-overflow: ellipsis; overflow: hidden;">' + a[o].name +
+                      .team ? "twir_red_team" : "") + '" style="font-weight: bold; text-overflow: ellipsis; overflow: hidden; cursor: pointer;">' + a[o].name +
                     "</div>",
                   twir_score_health: i.formatHp(a[o].health, a[o].healthmax),
                   twir_score_hppr: '<span class="' + (0 === a[o].team ? "twir_blue_team" : 1 === a[o].team ? "twir_red_team" : "") + '">' + (null !==
