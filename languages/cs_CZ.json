@@ -388,7 +388,7 @@
         "target_name": "Trefený cíl",
         "miss_shot": "VEDLE",
         "ko_shot": "KO",
-        "damage_taken": "Obdržené poškození",
+        "damage_taken": "Obdržené škody",
         "per_round": "za kolo",
         "overall": "celkově"
     }
