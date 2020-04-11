@@ -249,7 +249,8 @@
         "inv_cld_reminder": "Lembrar-me que tenho de usar itens com tempos de reutilização demorados",
         "inv_cld_reminder_playsound": "Lembrete para silenciar",
         "pop_quest_tooltip": "Adicionar os requerimentos necessários para completar o trabalho e a sua recompensa no pop-up",
-        "pop_job_tooltip": "Melhoria de trabalho em pop-up"
+        "pop_job_tooltip": "Melhoria de trabalho em pop-up",
+        "fb_char_icons": "Class specific icons in the fortbattle preparation window"
     },
     "keyWords": {
         "xmas": [
@@ -389,6 +390,6 @@
         "ko_shot": "KO",
         "damage_taken": "Damage taken",
         "per_round": "per round",
-        "total": "total"
+        "overall": "overall"
     }
 }
