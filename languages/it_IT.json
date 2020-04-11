@@ -249,7 +249,8 @@
         "inv_cld_reminder": "Ricordami che devo utilizzare oggetti aventi conti alla rovescia lunghi",
         "inv_cld_reminder_playsound": "Mute reminder sound",
         "pop_quest_tooltip": "Add requirements to complete the quest and its reward to the quest popup",
-        "pop_job_tooltip": "Improve job popup"
+        "pop_job_tooltip": "Improve job popup",
+        "fb_char_icons": "Class specific icons in the fortbattle preparation window"
     },
     "keyWords": {
         "xmas": [
@@ -393,6 +394,6 @@
         "ko_shot": "KO",
         "damage_taken": "Damage taken",
         "per_round": "per round",
-        "total": "total"
+        "overall": "overall"
     }
 }
