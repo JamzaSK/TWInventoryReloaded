@@ -249,7 +249,8 @@
         "inv_cld_reminder": "Melde, wenn der Countdown bestimmter Beutel abgelaufen ist",
         "inv_cld_reminder_playsound": "Erinnerungston stummschalten",
         "pop_quest_tooltip": "Zeige Anforderungen und Belohnungen im Pop-Up der Quests",
-        "pop_job_tooltip": "Verbessere das Pop-Up der Arbeiten"
+        "pop_job_tooltip": "Verbessere das Pop-Up der Arbeiten",
+        "fb_char_icons": "Class specific icons in the fortbattle preparation window"
     },
     "keyWords": {
         "xmas": [
@@ -387,6 +388,6 @@
         "ko_shot": "KO",
         "damage_taken": "Damage taken",
         "per_round": "per round",
-        "total": "total"
+        "overall": "overall"
     }
 }
