@@ -249,7 +249,8 @@
         "inv_cld_reminder": "Przypomnij mi o używaniu przedmiotów z długim czasem odnawiania",
         "inv_cld_reminder_playsound": "Wycisz dźwięk powiadomień o użyciu przedmiotów",
         "pop_quest_tooltip": "Dodaj wymagania by skończyć zadanie i jego nagrodę do okienka",
-        "pop_job_tooltip": "Ulepszone okno pracy"
+        "pop_job_tooltip": "Ulepszone okno pracy",
+        "fb_char_icons": "Class specific icons in the fortbattle preparation window"
     },
     "keyWords": {
         "xmas": [
@@ -394,6 +395,6 @@
         "ko_shot": "Omdlenie",
         "damage_taken": "Damage taken",
         "per_round": "per round",
-        "total": "total"
+        "overall": "overall"
     }
 }
