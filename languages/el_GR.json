@@ -249,7 +249,8 @@
         "inv_cld_reminder": "Θύμισε μου όταν ένα αντικείμενο μπορεί να χρησιμοποιηθεί ξανά",
         "inv_cld_reminder_playsound": "Σίγαση ήχου υπενθύμισης",
         "pop_quest_tooltip": "Προσθέστε απαιτήσεις για την ολοκλήρωση και τις ανταμοιβές των αποστολών",
-        "pop_job_tooltip": "Βελτιώστε το αναδυόμενο παράθυρο εργασίας"
+        "pop_job_tooltip": "Βελτιώστε το αναδυόμενο παράθυρο εργασίας",
+        "fb_char_icons": "Class specific icons in the fortbattle preparation window"
     },
     "keyWords": {
         "xmas": [
@@ -387,6 +388,6 @@
         "ko_shot": "KO",
         "damage_taken": "Damage taken",
         "per_round": "per round",
-        "total": "total"
+        "overall": "overall"
     }
 }
