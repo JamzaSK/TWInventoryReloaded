@@ -139,7 +139,9 @@
         "allitems": "Όλα τα αντικείμενα",
         "setitems": "Αντικείμενα Σετ",
         "yield": "Προϊόντα",
-        "recipe": "Συνταγές"
+        "recipe": "Συνταγές",
+        "pin": "Pin it",
+        "unpin": "Unpin it"
     },
     "stats": {
         "stats": "Στατιστικά",
