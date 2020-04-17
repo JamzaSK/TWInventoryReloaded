@@ -139,7 +139,9 @@
         "allitems": "Všechny itemy",
         "setitems": "Setové itemy",
         "yield": "Produkty",
-        "recipe": "Recepty"
+        "recipe": "Recepty",
+        "pin": "Připnout",
+        "unpin": "Odepnout"
     },
     "stats": {
         "stats": "Statistiky",
