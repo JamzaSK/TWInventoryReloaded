@@ -139,7 +139,9 @@
         "allitems": "Tutti gli oggetti",
         "setitems": "Oggetti di set",
         "yield": "Prodotti",
-        "recipe": "Ricette"
+        "recipe": "Ricette",
+        "pin": "Pin it",
+        "unpin": "Unpin it"
     },
     "stats": {
         "stats": "Statistiche",
