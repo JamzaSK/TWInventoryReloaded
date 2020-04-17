@@ -139,7 +139,9 @@
         "allitems": "Todos artículos",
         "setitems": "Artículos de conjuntos",
         "yield": "Productos",
-        "recipe": "Recetas"
+        "recipe": "Recetas",
+        "pin": "Pin it",
+        "unpin": "Unpin it"
     },
     "stats": {
         "stats": "Estadísticas",
