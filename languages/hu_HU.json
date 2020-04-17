@@ -139,7 +139,9 @@
         "allitems": "Minden tárgy",
         "setitems": "Szettelemek",
         "yield": "Termékek",
-        "recipe": "Receptek"
+        "recipe": "Receptek",
+        "pin": "Pin it",
+        "unpin": "Unpin it"
     },
     "stats": {
         "stats": "Statisztikák",
