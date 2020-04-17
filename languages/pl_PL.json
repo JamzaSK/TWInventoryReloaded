@@ -5,7 +5,7 @@
     "script_version": "Wersja",
     "script_revision": "Zmiany",
     "changes": "Co nowego?",
-    "translator": "Przetłumaczył: Wojcieszy",
+    "translator": "Przetłumaczył: Wojcieszy, mxj",
     "language": "Język",
     "download": "Pobierz",
     "no_ads": "Bez reklam",
@@ -139,7 +139,9 @@
         "allitems": "Wszystkie przedmioty",
         "setitems": "Przedmioty setowe",
         "yield": "Produkty",
-        "recipe": "Przepisy"
+        "recipe": "Przepisy",
+        "pin": "Pin it",
+        "unpin": "Unpin it"
     },
     "stats": {
         "stats": "Statystyki",
