@@ -139,7 +139,9 @@
         "allitems": "Все предметы",
         "setitems": "набор предметов",
         "yield": "продукты",
-        "recipe": "рецепты"
+        "recipe": "рецепты",
+        "pin": "Pin it",
+        "unpin": "Unpin it"
     },
     "stats": {
         "stats": "статистика",
