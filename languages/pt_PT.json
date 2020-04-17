@@ -5,7 +5,7 @@
     "script_version": "Versão",
     "script_revision": "Revisão",
     "changes": "O que há de novo?",
-    "translator": "tradutor: jccwest",
+    "translator": "tradutor: jccwest, Tariik",
     "language": "Idioma",
     "download": "Transferir agora",
     "no_ads": "Sem anúncios",
@@ -139,7 +139,9 @@
         "allitems": "Todos os itens",
         "setitems": "Itens de conjunto",
         "yield": "Produtos",
-        "recipe": "Receitas"
+        "recipe": "Receitas",
+        "pin": "Pin it",
+        "unpin": "Unpin it"
     },
     "stats": {
         "stats": "Estatísticas",
