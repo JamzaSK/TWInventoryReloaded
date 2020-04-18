@@ -90,7 +90,8 @@
         "collection": "Necesare pentru a completa colecția",
         "uniq_sellers": "$1 vânzător unic",
         "job_danger": "\nPericol",
-        "open_title": "\nDeschide $1 și centrează-l pe hărțile încărcate"
+        "open_title": "\nDeschide $1 și centrează-l pe hărțile încărcate",
+        "opener_tooltip": "SHIFT+Click to mass open"
     },
     "organizing": {
         "invert_text": "Arată/Ascunde itemele conform cu filtrul selectat",
