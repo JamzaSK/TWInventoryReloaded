@@ -91,7 +91,7 @@
         "uniq_sellers": "$1 vendedor único",
         "job_danger": "Perigo",
         "open_title": "Abrir $1 e centrar no mapa",
-        "opener_tooltip": "SHIFT+Click to mass open"
+        "opener_tooltip": "SHIFT+Clique para abrir"
     },
     "organizing": {
         "invert_text": "Mostrar / ocultar itens diferentes com base no filtro selecionado",
@@ -141,8 +141,8 @@
         "setitems": "Itens de conjunto",
         "yield": "Produtos",
         "recipe": "Receitas",
-        "pin": "Pin it",
-        "unpin": "Unpin it"
+        "pin": "Fixar",
+        "unpin": "Soltar"
     },
     "stats": {
         "stats": "Estatísticas",
@@ -253,7 +253,7 @@
         "inv_cld_reminder_playsound": "Lembrete para silenciar",
         "pop_quest_tooltip": "Adicionar os requerimentos necessários para completar o trabalho e a sua recompensa no pop-up",
         "pop_job_tooltip": "Melhoria de trabalho em pop-up",
-        "fb_char_icons": "Class specific icons in the fortbattle preparation window"
+        "fb_char_icons": "Ícones específicos da classe na janela da batalhas fortes"
     },
     "keyWords": {
         "xmas": [
@@ -391,8 +391,8 @@
         "target_name": "Tiros certeiros",
         "miss_shot": "Tiros falhados",
         "ko_shot": "KO",
-        "damage_taken": "Damage taken",
-        "per_round": "per round",
-        "overall": "overall"
+        "damage_taken": "Danos causado",
+        "per_round": "Por ronda",
+        "overall": "Global "
     }
 }
