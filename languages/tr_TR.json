@@ -90,7 +90,8 @@
         "collection": "Koleksiyonu tamamlamak için gerekli",
         "uniq_sellers": "$1 benzersiz satıcılar",
         "job_danger": "tehlike",
-        "open_title": "$1 açın ve haritada ortalayın"
+        "open_title": "$1 açın ve haritada ortalayın",
+        "opener_tooltip": "SHIFT+Click to mass open"
     },
     "organizing": {
         "invert_text": "Seçilen filtreye göre Öğeleri Göster / Gizle",
