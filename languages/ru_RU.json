@@ -90,7 +90,8 @@
         "collection": "Необходим для завершения коллекции",
         "uniq_sellers": "$1 продавцов",
         "job_danger": "опасность",
-        "open_title": "Откройте $1 и выровнать на карте"
+        "open_title": "Откройте $1 и выровнать на карте",
+        "opener_tooltip": "SHIFT+Click to mass open"
     },
     "organizing": {
         "invert_text": "Показать / Скрыть предметы по выбранному фильтру",
