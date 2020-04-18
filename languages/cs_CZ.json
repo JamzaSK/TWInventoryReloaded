@@ -91,7 +91,7 @@
         "uniq_sellers": "$1 prodejců",
         "job_danger": "Nebezpečí",
         "open_title": "Otevřít $1 a centrovat na mapě",
-        "opener_tooltip": "SHIFT+Click to mass open"
+        "opener_tooltip": "SHIFT+Klik pro hromadné otevření"
     },
     "organizing": {
         "invert_text": "Zobrazit / Skrýt předměty podle vybraného filtru",
