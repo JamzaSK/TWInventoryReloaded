@@ -90,7 +90,8 @@
         "collection": "Necessário para concluir a colecção",
         "uniq_sellers": "$1 vendedor único",
         "job_danger": "Perigo",
-        "open_title": "Abrir $1 e centrar no mapa"
+        "open_title": "Abrir $1 e centrar no mapa",
+        "opener_tooltip": "SHIFT+Click to mass open"
     },
     "organizing": {
         "invert_text": "Mostrar / ocultar itens diferentes com base no filtro selecionado",
