@@ -90,7 +90,8 @@
         "collection": "Necessario per completare una collezione",
         "uniq_sellers": "$1 venditori unici",
         "job_danger": "Danger",
-        "open_title": "Open $1 and center it on map"
+        "open_title": "Open $1 and center it on map",
+        "opener_tooltip": "SHIFT+Click to mass open"
     },
     "organizing": {
         "invert_text": "Mostra/Nascondi oggetti diversi basati sul filtro selezionato",
