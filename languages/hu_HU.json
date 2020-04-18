@@ -90,7 +90,8 @@
         "collection": "Szükséges egy gyűjteményhez",
         "uniq_sellers": "$1 egyedi eladók",
         "job_danger": "Danger",
-        "open_title": "Open $1 and center it on map"
+        "open_title": "Open $1 and center it on map",
+        "opener_tooltip": "SHIFT+Click to mass open"
     },
     "organizing": {
         "invert_text": "Különböző tárgyak megjelenítése / elrejtése a kiválasztott szűrő alapján",
