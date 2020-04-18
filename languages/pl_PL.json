@@ -90,7 +90,8 @@
         "collection": "Wymagane do ukończenia kolekcji\n\n",
         "uniq_sellers": "$1 unikalnych sprzedających",
         "job_danger": "Szansa na zranienie",
-        "open_title": "Otwórz $1 i scentruj na mapie"
+        "open_title": "Otwórz $1 i scentruj na mapie",
+        "opener_tooltip": "SHIFT+Click to mass open"
     },
     "organizing": {
         "invert_text": "Pokaż/Ukryj przedmioty pasujące do filtra",
