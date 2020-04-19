@@ -91,7 +91,7 @@
         "uniq_sellers": "$1 benzersiz satıcılar",
         "job_danger": "tehlike",
         "open_title": "$1 açın ve haritada ortalayın",
-        "opener_tooltip": "SHIFT+Click to mass open"
+        "opener_tooltip": "Toplu açmak için Shift + Tıklayın"
     },
     "organizing": {
         "invert_text": "Seçilen filtreye göre Öğeleri Göster / Gizle",
@@ -141,8 +141,8 @@
         "setitems": "Set Eşyalar",
         "yield": "Ürünler",
         "recipe": "Tarifler",
-        "pin": "Pin it",
-        "unpin": "Unpin it"
+        "pin": "İğnele",
+        "unpin": "İğnelemeyi kaldır"
     },
     "stats": {
         "stats": "İstatistikler",
@@ -201,9 +201,9 @@
         "settings_bids": "Tekliflere İzin Ver",
         "settings_buy": "Satın Alma İşlemlerine İzin Ver",
         "watching": "İzleme",
-        "buffs": "Buffs",
+        "buffs": "Güçlendirmeler",
         "browse": "Açık artırmalara göz atın",
-        "seen_alert": "$1 has been seen on the market for $2"
+        "seen_alert": "$2 için piyasada $1 görüldü"
     },
     "features": {
         "preferences": "Ayarlar",
@@ -225,25 +225,25 @@
         "pop_ups_price": "UPS fiyatını göster",
         "pop_min_market_price": "Pazardaki en düşük fiyatı göster (satılabilir değilse)",
         "pop_avg_dmg": "Her silahın ortalama hasarını göster",
-        "pop_bonus_calc": "Show the value of the refilled energy or hp next to the percentage (useable products)",
+        "pop_bonus_calc": "Doldurulmuş enerjinin veya hp'nin yüzdenin yanındaki değerini göster (kullanılabilir ürünler)",
         "pop_trader": "Mağazanın adını ve satın alınabileceği minimum seviyesini gösterin",
         "mw_item_price_tooltip": "Eşyalar için piyasa fiyatını açılır pencerede göster",
         "mw_product_price_tooltip": "Ürünler için piyasa fiyatını açılır pencerede göster",
-        "mw_bbcode_tooltip": "Show Market price in the item BB-code",
+        "mw_bbcode_tooltip": "BB kodunda pazar fiyatını göster",
         "mw_wtb_chat_alert": "Sohbet mesajı ile bildirim alma",
         "mw_alert_playsound": "Uyarı sesini kapat",
         "ml_market_collector": "Sol tarafta \"Pazar toplayıcısı\" menüsünü göstermek için yeni bir düğme ekleyin",
         "ml_sleep": "Sol tarafta \"Uyku menüsü\" nü göstermek için yeni bir düğme ekleyin",
-        "ml_npc": "Add a new button to show the \"Quest givers\" menu on the left side",
+        "ml_npc": "Sol tarafta \"Görev verenler\" menüsünü göstermek için yeni bir düğme ekleyin",
         "prof_craft_points": "Oyuncu profilinde ustalık puanını göster",
-        "fb_topic": "Show chat topic in the battle preparation window",
-        "fb_travel_button": "Add a button to travel to the fort in the fort battles window",
-        "fb_online_status": "Add online status of player to the fort battle map's popup",
-        "fb_ranks": "Add player's rank to the fort battle map's popup",
+        "fb_topic": "Savaş hazırlığı penceresinde sohbet konusunu göster",
+        "fb_travel_button": "Kale savaşları penceresinde kaleye seyahat etmek için bir düğme ekleyin",
+        "fb_online_status": "Kale savaşı haritasının pop-up'ına çevrimiçi oyuncu durumu ekle",
+        "fb_ranks": "Kale savaşı haritasının pop-up'ına oyuncunun rütbesini ekle",
         "fb_ali_name": "Kasabaya genel bakışta İttifak adını göster",
-        "mw_clear_time": "Automatically delete data from the market scan if they are older than",
+        "mw_clear_time": "Daha eskiyse verileri pazar taramasından otomatik olarak sil",
         "mw_collections": "Koleksiyonları tamamlamak için gereken öğeleri izleyin",
-        "mw_trader": "Get notified when a trader is selling a watched item",
+        "mw_trader": "Bir oyuncu izlenen bir ürünü satarken bildirim alın",
         "fb_count": "Devam eden kale savaşlarının sayısını göster",
         "chat_smart": "Daha akıllı sohbet (URL tanıma)",
         "mw_status": "Pazar taraması sırasında İlerleme Mesajı göster",
@@ -269,7 +269,7 @@
         "sale": "Satış"
     },
     "menulink": {
-        "market": "Market Collector",
+        "market": "Market Koleksiyoneri",
         "npc": "Görev vericiler",
         "nearest": "En yakın otel",
         "nearest_five": "En yakın 5 yıldızlı otel",
@@ -345,7 +345,7 @@
         "bonus_set_title": "Eşyalardan ve setten bonuslar",
         "fort_damage": "Hasar",
         "fort_hp": "Hayat Puanı",
-        "combo_count": "$1 of $2",
+        "combo_count": "$1 den $2",
         "level": "Seviye",
         "construct": "İnşaat",
         "speed": "Hız",
@@ -356,10 +356,10 @@
     "update_changelog": "HERE'ın değişim günlüğü",
     "donate_text_2": "Bu komut dosyasını beğendiyseniz ve çalışmaya devam etmesini veya yeni özelliklerin eklenmesini istiyorsanız, lütfen $bağış$ yapmayı düşünün",
     "event_helper": {
-        "already_sent": "$event_curr sent to $1 of $2 friends",
-        "all_sent": "$event_curr were sent to all friends",
+        "already_sent": "$ event_curr $ 2 / $ 1 arkadaşa gönderildi",
+        "all_sent": "$ event_curr tüm arkadaşlara gönderildi",
         "send": "Gönder",
-        "sent_msg": "Sent to friend $1"
+        "sent_msg": "Arkadaşıma gönderildi $1"
     },
     "opener": {
         "loot_text": "Sende var",
@@ -388,7 +388,7 @@
         "last_hit": "son vuruş",
         "target_name": "İsabet",
         "miss_shot": "İsabetsiz atış",
-        "ko_shot": "KO",
+        "ko_shot": "Bayıldı",
         "damage_taken": "Alınan Hasar",
         "per_round": "Tuş başına",
         "overall": "Tümü"
