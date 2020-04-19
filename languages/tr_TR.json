@@ -269,7 +269,7 @@
         "sale": "Satış"
     },
     "menulink": {
-        "market": "Market Koleksiyoneri",
+        "market": "Pazar Koleksiyoneri",
         "npc": "Görev vericiler",
         "nearest": "En yakın otel",
         "nearest_five": "En yakın 5 yıldızlı otel",
@@ -356,8 +356,8 @@
     "update_changelog": "HERE'ın değişim günlüğü",
     "donate_text_2": "Bu komut dosyasını beğendiyseniz ve çalışmaya devam etmesini veya yeni özelliklerin eklenmesini istiyorsanız, lütfen $bağış$ yapmayı düşünün",
     "event_helper": {
-        "already_sent": "$ event_curr $ 2 / $ 1 arkadaşa gönderildi",
-        "all_sent": "$ event_curr tüm arkadaşlara gönderildi",
+        "already_sent": "$event_curr gönderildi.",
+        "all_sent": "$event_curr tüm arkadaşlara gönderildi",
         "send": "Gönder",
         "sent_msg": "Arkadaşıma gönderildi $1"
     },
