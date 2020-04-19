@@ -356,10 +356,10 @@
     "update_changelog": "HERE'ın değişim günlüğü",
     "donate_text_2": "Bu komut dosyasını beğendiyseniz ve çalışmaya devam etmesini veya yeni özelliklerin eklenmesini istiyorsanız, lütfen $bağış$ yapmayı düşünün",
     "event_helper": {
-        "already_sent": "$event_curr gönderildi.",
+        "already_sent": "$event_curr $2 arkadaştan $1 arkadaşa gönderildi",
         "all_sent": "$event_curr tüm arkadaşlara gönderildi",
         "send": "Gönder",
-        "sent_msg": "Arkadaşıma gönderildi $1"
+        "sent_msg": "Arkadaşına gönder $1"
     },
     "opener": {
         "loot_text": "Sende var",
@@ -371,7 +371,7 @@
         "remind_msg": "Toplamaya hazır"
     },
     "combo_comparison": {
-        "add_name": "Combo Comparison",
+        "add_name": "Kombo Karşılaştırma",
         "hint": "Başlamak için buraya öğe ekleyin/bırakın!",
         "full_bonus": "Tüm bonus",
         "item_bonus": "İtem bonusu",
