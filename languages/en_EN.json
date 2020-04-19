@@ -64,7 +64,7 @@
         "item_type": "Type",
         "regen": "Regeneration",
         "custom": "Custom",
-        "set_window": "Set List",
+        "set_window": "Item Sets",
         "item_use": "Use"
     },
     "tooltips": {
@@ -186,7 +186,7 @@
         "watched": "Watched items",
         "collections": "Collections",
         "last_scan": "Last scan",
-        "buy_trader": "Open mobile trader",
+        "buy_trader": "Open vendor trader",
         "import": "Import items",
         "export": "Export items",
         "progress_page": "Getting page",
