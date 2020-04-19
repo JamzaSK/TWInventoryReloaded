@@ -64,7 +64,7 @@
         "item_type": "Type",
         "regen": "Regeneration",
         "custom": "Custom",
-        "set_window": "Set List",
+        "set_window": "Item Sets",
         "item_use": "Use"
     },
     "tooltips": {
