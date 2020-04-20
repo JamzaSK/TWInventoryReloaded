@@ -66,12 +66,12 @@
 * **English (en)**<br>
 * **Čeština (cs)**<br>
 * **Deutsch (de)** *by Tom Robert*<br>
+* **Dutch (nl)** *by Mike, Jesse*<br>
 * **Ελληνικά (gr)** *by Timemod Herkumo*<br>
 * **Español (es)** *by pepe100*<br>
 * **Français (fr)** *by Thathanka*<br>
-* **Magyar (hu)** *by Aviendha*<br>
 * **Italiano (it)** *by Billy-AR*<br>
-* **Dutch (nl)** *by Mike, Jesse*<br>
+* **Magyar (hu)** *by Aviendha*<br>
 * **Polski (pl)** *by Wojcieszy, mxj*<br>
 * **Português (pt)** *by jccwest*<br>
 * **Română (ro)** *by Totalfs<br>
