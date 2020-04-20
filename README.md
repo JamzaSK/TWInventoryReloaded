@@ -71,10 +71,13 @@
 * **Français (fr)** *by Thathanka*<br>
 * **Magyar (hu)** *by Aviendha*<br>
 * **Italiano (it)** *by Billy-AR*<br>
+* **Dutch (nl)** *by Mike, Jesse*<br>
 * **Polski (pl)** *by Wojcieszy, mxj*<br>
 * **Português (pt)** *by jccwest*<br>
+* **Română (ro)** *by Totalfs<br>
 * **Русский (ru)** *by Luntik*<br>
 * **Slovenčina (sk)**<br>
+* **Türkçe (tr)** *by RezieaL*<br>
 <br>
 
 
