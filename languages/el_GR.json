@@ -91,7 +91,8 @@
         "uniq_sellers": "$1 διαφορετικοί πωλητές",
         "job_danger": "Κίνδυνος",
         "open_title": "Open $1 and center it on map",
-        "opener_tooltip": "SHIFT+Click to mass open"
+        "opener_tooltip": "SHIFT+Click to mass open",
+        "learnable_recipe": "Learnable recipe"
     },
     "organizing": {
         "invert_text": "Εμφάνιση/Απόκρυψη αντικειμένων βάση ενός επιλεγμένου φίλτρου",
@@ -253,7 +254,8 @@
         "inv_cld_reminder_playsound": "Σίγαση ήχου υπενθύμισης",
         "pop_quest_tooltip": "Προσθέστε απαιτήσεις για την ολοκλήρωση και τις ανταμοιβές των αποστολών",
         "pop_job_tooltip": "Βελτιώστε το αναδυόμενο παράθυρο εργασίας",
-        "fb_char_icons": "Class specific icons in the fortbattle preparation window"
+        "fb_char_icons": "Class specific icons in the fortbattle preparation window",
+        "mw_recipes": "Watch learnable recipes"
     },
     "keyWords": {
         "xmas": [
@@ -391,6 +393,8 @@
         "ko_shot": "KO",
         "damage_taken": "Damage taken",
         "per_round": "per round",
-        "overall": "overall"
+        "overall": "overall",
+        "hits_taken": "Hits taken",
+        "dodged_shots": "Dodged shots"
     }
 }
