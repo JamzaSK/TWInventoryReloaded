@@ -91,7 +91,8 @@
         "uniq_sellers": "$1 unikalnych sprzedających",
         "job_danger": "Szansa na zranienie",
         "open_title": "Otwórz $1 i scentruj na mapie",
-        "opener_tooltip": "SHIFT+Click to mass open"
+        "opener_tooltip": "SHIFT+Click to mass open",
+        "learnable_recipe": "Learnable recipe"
     },
     "organizing": {
         "invert_text": "Pokaż/Ukryj przedmioty pasujące do filtra",
@@ -253,7 +254,8 @@
         "inv_cld_reminder_playsound": "Wycisz dźwięk powiadomień o użyciu przedmiotów",
         "pop_quest_tooltip": "Dodaj wymagania by skończyć zadanie i jego nagrodę do okienka",
         "pop_job_tooltip": "Ulepszone okno pracy",
-        "fb_char_icons": "Ikony klasy postaci w przygotowaniach do bitwy o fort"
+        "fb_char_icons": "Ikony klasy postaci w przygotowaniach do bitwy o fort",
+        "mw_recipes": "Watch learnable recipes"
     },
     "keyWords": {
         "xmas": [
@@ -398,6 +400,8 @@
         "ko_shot": "Omdlenie",
         "damage_taken": "Otrzymane obrażenia",
         "per_round": "na rundę",
-        "overall": "ogólny"
+        "overall": "ogólny",
+        "hits_taken": "Hits taken",
+        "dodged_shots": "Dodged shots"
     }
 }
