@@ -91,7 +91,8 @@
         "uniq_sellers": "$1 unieke verkopers",
         "job_danger": "Gevaar",
         "open_title": "Open $1 en centreer op de kaart",
-        "opener_tooltip": "SHIFT+click om massa te openen"
+        "opener_tooltip": "SHIFT+click om massa te openen",
+        "learnable_recipe": "Learnable recipe"
     },
     "organizing": {
         "invert_text": "Laat zien / Verberg items volgens de geselecteerde filter",
@@ -253,7 +254,8 @@
         "inv_cld_reminder_playsound": "Zet reminder geluid uit",
         "pop_quest_tooltip": "Voeg benodigdheden om de quest af te ronden toe aan de popup",
         "pop_job_tooltip": "Verbeter arbeids popup",
-        "fb_char_icons": "klasse specifieke iconen in het fortgevecht venster"
+        "fb_char_icons": "klasse specifieke iconen in het fortgevecht venster",
+        "mw_recipes": "Watch learnable recipes"
     },
     "keyWords": {
         "xmas": [
@@ -391,6 +393,8 @@
         "ko_shot": "Knockout",
         "damage_taken": "Schade ontvangen",
         "per_round": "Per ronde",
-        "overall": "overall"
+        "overall": "overall",
+        "hits_taken": "Hits taken",
+        "dodged_shots": "Dodged shots"
     }
 }
