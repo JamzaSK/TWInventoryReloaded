@@ -91,7 +91,8 @@
         "uniq_sellers": "$1 vânzător unic",
         "job_danger": "\nPericol",
         "open_title": "\nDeschide $1 și centrează-l pe hărțile încărcate",
-        "opener_tooltip": "SHIFT+Click to mass open"
+        "opener_tooltip": "SHIFT+Click to mass open",
+        "learnable_recipe": "Learnable recipe"
     },
     "organizing": {
         "invert_text": "Arată/Ascunde itemele conform cu filtrul selectat",
@@ -253,7 +254,8 @@
         "inv_cld_reminder_playsound": "\nSunet mut de memento",
         "pop_quest_tooltip": "\nAdăugați cerințe pentru a finaliza misiunea și recompensa acesteia la fereastra pop-up",
         "pop_job_tooltip": "\nÎmbunătățirea ferestrei de locuri de muncă",
-        "fb_char_icons": "\nClasează pictograme specifice în fereastra de pregătire a fortbattle-ului"
+        "fb_char_icons": "\nClasează pictograme specifice în fereastra de pregătire a fortbattle-ului",
+        "mw_recipes": "Watch learnable recipes"
     },
     "keyWords": {
         "xmas": [
@@ -391,6 +393,8 @@
         "ko_shot": "Lovitura fatala",
         "damage_taken": "Daune produse",
         "per_round": "Pe runda",
-        "overall": "Per total"
+        "overall": "Per total",
+        "hits_taken": "Hits taken",
+        "dodged_shots": "Dodged shots"
     }
 }
