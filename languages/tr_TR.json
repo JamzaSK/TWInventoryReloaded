@@ -91,7 +91,8 @@
         "uniq_sellers": "$1 benzersiz satıcılar",
         "job_danger": "tehlike",
         "open_title": "$1 açın ve haritada ortalayın",
-        "opener_tooltip": "Toplu açmak için Shift + Tıklayın"
+        "opener_tooltip": "Toplu açmak için Shift + Tıklayın",
+        "learnable_recipe": "Learnable recipe"
     },
     "organizing": {
         "invert_text": "Seçilen filtreye göre Öğeleri Göster / Gizle",
@@ -253,7 +254,8 @@
         "inv_cld_reminder_playsound": "Hatırlatma sesini sustur",
         "pop_quest_tooltip": "Görevi tamamlamak için gereklilikleri ve görev açılır penceresine ödülünü ekleyin",
         "pop_job_tooltip": "İş penceresini açın",
-        "fb_char_icons": "Fortbattle hazırlık penceresinde sınıfa özel simgeler"
+        "fb_char_icons": "Fortbattle hazırlık penceresinde sınıfa özel simgeler",
+        "mw_recipes": "Watch learnable recipes"
     },
     "keyWords": {
         "xmas": [
@@ -391,6 +393,8 @@
         "ko_shot": "Bayıldı",
         "damage_taken": "Alınan Hasar",
         "per_round": "Tuş başına",
-        "overall": "Tümü"
+        "overall": "Tümü",
+        "hits_taken": "Hits taken",
+        "dodged_shots": "Dodged shots"
     }
 }
