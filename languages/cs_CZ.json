@@ -91,7 +91,8 @@
         "uniq_sellers": "$1 prodejců",
         "job_danger": "Nebezpečí",
         "open_title": "Otevřít $1 a centrovat na mapě",
-        "opener_tooltip": "SHIFT+Klik pro hromadné otevření"
+        "opener_tooltip": "SHIFT+Klik pro hromadné otevření",
+        "learnable_recipe": "Learnable recipe"
     },
     "organizing": {
         "invert_text": "Zobrazit / Skrýt předměty podle vybraného filtru",
@@ -253,7 +254,8 @@
         "inv_cld_reminder_playsound": "Ztlumit zvukové upozornění u reminderu",
         "pop_quest_tooltip": "Zobrazit požadavky na dokončení úkolu a jeho odměnu v pop-upu daného úkolu",
         "pop_job_tooltip": "Vylepšit pop-up u prací",
-        "fb_char_icons": "Ikony specifické pro danou třídu postavy v okně přípravy bitvy"
+        "fb_char_icons": "Ikony specifické pro danou třídu postavy v okně přípravy bitvy",
+        "mw_recipes": "Watch learnable recipes"
     },
     "keyWords": {
         "xmas": [
@@ -393,6 +395,8 @@
         "ko_shot": "KO",
         "damage_taken": "Obdržené škody",
         "per_round": "za kolo",
-        "overall": "celkově"
+        "overall": "celkově",
+        "hits_taken": "Hits taken",
+        "dodged_shots": "Dodged shots"
     }
 }
