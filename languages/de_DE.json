@@ -91,7 +91,8 @@
         "uniq_sellers": "$1 verschiedene Anbieter",
         "job_danger": "Gefahr",
         "open_title": "Öffne und zentriere $1 auf der Karte",
-        "opener_tooltip": "SHIFT+Click to mass open"
+        "opener_tooltip": "SHIFT+Click to mass open",
+        "learnable_recipe": "Learnable recipe"
     },
     "organizing": {
         "invert_text": "Zeige/Verstecke Items durch Auswählen der Filter",
@@ -253,7 +254,8 @@
         "inv_cld_reminder_playsound": "Erinnerungston stummschalten",
         "pop_quest_tooltip": "Zeige Anforderungen und Belohnungen im Pop-Up der Quests",
         "pop_job_tooltip": "Verbessere das Pop-Up der Arbeiten",
-        "fb_char_icons": "Class specific icons in the fortbattle preparation window"
+        "fb_char_icons": "Class specific icons in the fortbattle preparation window",
+        "mw_recipes": "Watch learnable recipes"
     },
     "keyWords": {
         "xmas": [
@@ -391,6 +393,8 @@
         "ko_shot": "KO",
         "damage_taken": "Damage taken",
         "per_round": "per round",
-        "overall": "overall"
+        "overall": "overall",
+        "hits_taken": "Hits taken",
+        "dodged_shots": "Dodged shots"
     }
 }
