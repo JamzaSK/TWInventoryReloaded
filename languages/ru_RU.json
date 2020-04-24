@@ -91,7 +91,8 @@
         "uniq_sellers": "$1 продавцов",
         "job_danger": "опасность",
         "open_title": "Откройте $1 и выровнать на карте",
-        "opener_tooltip": "SHIFT+Click to mass open"
+        "opener_tooltip": "SHIFT+Click to mass open",
+        "learnable_recipe": "Learnable recipe"
     },
     "organizing": {
         "invert_text": "Показать / Скрыть предметы по выбранному фильтру",
@@ -253,7 +254,8 @@
         "inv_cld_reminder_playsound": "Отключить звук для напоминания",
         "pop_quest_tooltip": "Просматривайте запросы на выполнение задач и награды во всплывающем окне.",
         "pop_job_tooltip": "Улучшение всплывающих окон для рабочих мест",
-        "fb_char_icons": "Class specific icons in the fortbattle preparation window"
+        "fb_char_icons": "Class specific icons in the fortbattle preparation window",
+        "mw_recipes": "Watch learnable recipes"
     },
     "keyWords": {
         "xmas": [
@@ -391,6 +393,8 @@
         "ko_shot": "KO",
         "damage_taken": "Damage taken",
         "per_round": "per round",
-        "overall": "overall"
+        "overall": "overall",
+        "hits_taken": "Hits taken",
+        "dodged_shots": "Dodged shots"
     }
 }
