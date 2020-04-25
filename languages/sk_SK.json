@@ -92,7 +92,7 @@
         "job_danger": "Nebezpečenstvo",
         "open_title": "Otvoriť $1 a zobraziť na mape",
         "opener_tooltip": "SHIFT+Klik pre hromadné otvorenie",
-        "learnable_recipe": "Learnable recipe"
+        "learnable_recipe": "Možné naučiť sa"
     },
     "organizing": {
         "invert_text": "Zobraziť/Skryť predmety podľa vybraného filtera",
@@ -255,7 +255,7 @@
         "pop_quest_tooltip": "Zobraziť požiadavky na dokončenie úlohy a odmenu z nej v pop-upu danej úlohy",
         "pop_job_tooltip": "Vylepšiť pop-up u prác",
         "fb_char_icons": "Ikony špecifické pre danú triedu postavy v okne prípravy boja",
-        "mw_recipes": "Watch learnable recipes"
+        "mw_recipes": "Sledovať recepty, ktoré sa dajú naučiť"
     },
     "keyWords": {
         "xmas": [
@@ -396,7 +396,7 @@
         "damage_taken": "Obdržané škody",
         "per_round": "za kolo",
         "overall": "celkovo",
-        "hits_taken": "Hits taken",
-        "dodged_shots": "Dodged shots"
+        "hits_taken": "Obdržané zásahy",
+        "dodged_shots": "Vyhnuté zásahy"
     }
 }
