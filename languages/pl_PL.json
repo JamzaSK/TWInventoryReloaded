@@ -402,6 +402,7 @@
         "per_round": "na rundę",
         "overall": "ogólny",
         "hits_taken": "Hits taken",
-        "dodged_shots": "Dodged shots"
+        "dodged_shots": "Dodged shots",
+        "crit": "Critical hit"
     }
 }
