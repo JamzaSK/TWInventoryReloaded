@@ -395,6 +395,7 @@
         "per_round": "Tuş başına",
         "overall": "Tümü",
         "hits_taken": "Hits taken",
-        "dodged_shots": "Dodged shots"
+        "dodged_shots": "Dodged shots",
+        "crit": "Critical hit"
     }
 }
