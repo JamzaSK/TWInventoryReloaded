@@ -397,6 +397,7 @@
         "per_round": "per round",
         "overall": "overall",
         "hits_taken": "Hits taken",
-        "dodged_shots": "Dodged shots"
+        "dodged_shots": "Dodged shots",
+        "crit": "Critical hit"
     }
 }
