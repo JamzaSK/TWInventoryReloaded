@@ -72,7 +72,7 @@
         " is installed twice. You will have to uninstall older version for the script to work properly!</br></b></div>", west.gui.Dialog.SYS_WARNING)
       .addButton("OK").show() : (TWIRlang = {}, TWIR = {
         version: "2.191",
-        revision: "16",
+        revision: "17",
         name: "TW Inventory Reloaded",
         author: "Jamza",
         minGame: "2.04",
@@ -2691,7 +2691,7 @@
                 }), 0 !== i[n].shotdmg ? A[i[n].shotat].ht = (A[i[n].shotat].ht || 0) + 1 : A[i[n].shotat].ds = (A[i[n].shotat].ds || 0) + 1, A[i[n]
                   .shotat].cache[t[n].characterid] = i[n].shotdmg;
                 var o = a.charactersByCharId[i[n].shotat];
-                o && 1 === t[n].characterclass && i[n].shotdmg >= o.healthmax / 100 * 10 + t[n].weapon_damage.damagemin && (A[i[n].shotat].crit = (A[i[n]
+                o && 1 === t[n].characterclass && i[n].shotdmg >= o.healthmax / 100 * 10 + t[n].damage.damagemin && (A[i[n].shotat].crit = (A[i[n]
                   .shotat].crit || 0) + 1)
               } return A
           },
