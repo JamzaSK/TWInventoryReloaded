@@ -91,8 +91,8 @@
         "uniq_sellers": "$1 vendedores únicos",
         "job_danger": "Peligro",
         "open_title": "Abrir $1 y lo centra en el mapa",
-        "opener_tooltip": "SHIFT+Click to mass open",
-        "learnable_recipe": "Learnable recipe"
+        "opener_tooltip": "SHIFT+Clic para abrir en masa",
+        "learnable_recipe": "Receta aprendible"
     },
     "organizing": {
         "invert_text": "Mostrar / Ocultar diferentes elementos basados en un filtro seleccionado",
@@ -142,8 +142,8 @@
         "setitems": "Artículos de conjuntos",
         "yield": "Productos",
         "recipe": "Recetas",
-        "pin": "Pin it",
-        "unpin": "Unpin it"
+        "pin": "Poner chicheta",
+        "unpin": "Quitar chincheta"
     },
     "stats": {
         "stats": "Estadísticas",
@@ -255,7 +255,7 @@
         "pop_quest_tooltip": "Agreguar requisitos para completar la búsqueda y su recompensa a la ventana emergente de búsqueda",
         "pop_job_tooltip": "Mejorar ventana emergente de trabajo",
         "fb_char_icons": "Iconos específicos de carácter en la ventana de preparación de nbatalla",
-        "mw_recipes": "Watch learnable recipes"
+        "mw_recipes": "Mirar recetas aprendibles"
     },
     "keyWords": {
         "xmas": [
@@ -395,7 +395,8 @@
         "damage_taken": "Daño recibido",
         "per_round": "por ronda",
         "overall": "total",
-        "hits_taken": "Hits taken",
-        "dodged_shots": "Dodged shots"
+        "hits_taken": "Aciertos recibidos",
+        "dodged_shots": "Disparos eludidos",
+        "crit": "Critical hit"
     }
 }
