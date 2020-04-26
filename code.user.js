@@ -2691,8 +2691,8 @@
                 }), 0 !== i[n].shotdmg ? A[i[n].shotat].ht = (A[i[n].shotat].ht || 0) + 1 : A[i[n].shotat].ds = (A[i[n].shotat].ds || 0) + 1, A[i[n]
                   .shotat].cache[t[n].characterid] = i[n].shotdmg;
                 var o = a.charactersByCharId[i[n].shotat];
-                o && 1 === t[n].characterclass && i[n].shotdmg >= o.healthmax / 100 * 10 + t[n].damage.damagemin && (A[i[n].shotat].crit = (A[i[n]
-                  .shotat].crit || 0) + 1)
+                o && 1 === t[n].characterclass && i[n].shotdmg >= o.healthmax / 100 * 10 + t[n].damage.damagemin && (A[i[n].shotat].crit = (A[i[n].shotat]
+                  .crit || 0) + 1)
               } return A
           },
           handleRoundData: function(e, t, i, a)
@@ -8072,7 +8072,7 @@
             return Inventory.firstLoad = function(e)
               {
                 Inventory.window = wman.open(Inventory.uid, null, "noreload").setTitle("TWIR - " + TWIRlang.invent).setMiniTitle("TWIR").setSize(740,
-                  506), Inventory.addEventListeners();
+                  507), Inventory.addEventListeners();
                 for (var i = $('<div class="filters"></div>'), a = 0, A = Inventory.availableCategories.length; a < A; ++a)
                 {
                   var n = Inventory.availableCategories[a];
@@ -8263,7 +8263,7 @@
           addStyle: function()
           {
             TWIR.addStyle(
-              ".instant_wear_container       { z-index: 9999;bottom: 0px!important;left: 425px!important; text-align: right!important; }.search_container    { z-index: 999!important;position: absolute!important;width: 210px;height: 49px;top: 14px!important;left: unset!important;right: 29px!important}.upgrade_items .textart_title      { color: #ffe7b100!important;margin-left: 0px!important;margin-right: 0px!important; }.inventory .actions .upgrade_items      { float: left!important;min-width: 16px!important;width: 16px!important;z-index: 999!important;position: relative!important;display: inline-block!important; }#bag .item.item_inventory    { margin-bottom: 0px!important;width: 60px!important;height: 58px!important;}#windows .inventory .filters    { height: 40px!important;width: auto!important;position: absolute!important;left: 1px!important;top: 54px!important;margin: unset!important;box-shadow: 0 0 20px inset;background-image: url(" +
+              ".instant_wear_container       { z-index: 9999;bottom: 0px!important;left: 425px!important; text-align: right!important; }#windows .inventory {min-width: 740px!important; height: 506px!important;}.search_container    { z-index: 999!important;position: absolute!important;width: 210px;height: 49px;top: 14px!important;left: unset!important;right: 29px!important}.upgrade_items .textart_title      { color: #ffe7b100!important;margin-left: 0px!important;margin-right: 0px!important; }.inventory .actions .upgrade_items      { float: left!important;min-width: 16px!important;width: 16px!important;z-index: 999!important;position: relative!important;display: inline-block!important; }#bag .item.item_inventory    { margin-bottom: 0px!important;width: 60px!important;height: 58px!important;}#windows .inventory .filters    { height: 40px!important;width: auto!important;position: absolute!important;left: 1px!important;top: 54px!important;margin: unset!important;box-shadow: 0 0 20px inset;background-image: url(" +
               TWIR.images.menubg +
               ");padding: 0px 5px 0px 5px; border-radius: 3px; border: 3px solid transparent;}#bag   { width: 671px!important;height: 100%!important;text-align: center!important;color: #4d392c!important;margin-left: 4px!important;overflow: hidden!important;padding-left: 3px;border-radius: 3px;padding-top: 3px;padding-bottom: 3px; box-shadow: 0 0 20px inset;background-image: url(" +
               TWIR.images.bagbg +
@@ -9046,8 +9046,8 @@
                 return t.indexOf(e) - t.indexOf(i)
               });
               var i = $(".twir_pinner", Inventory.DOM);
-              i.empty(), e.length ? ($(Inventory.window.divMain).css("width", "760px"), i.show()) : ($(Inventory.window.divMain).css("width", "740px"), i
-                .hide());
+              i.empty(), e.length ? ($("#windows .inventory").css("width", "760px"), i.show()) : ($("#windows .inventory").css("width", "740px"), i
+              .hide());
               for (var a = 0; a < e.length; a++)
               {
                 var A = TWIR.set_window.make_pin(e[a]);
