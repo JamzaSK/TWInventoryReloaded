@@ -397,6 +397,7 @@
         "per_round": "za kolo",
         "overall": "celkově",
         "hits_taken": "Obdržené zásahy",
-        "dodged_shots": "Vyhnuto zásahům"
+        "dodged_shots": "Vyhnuto zásahům",
+        "crit": "Kritický zásah"
     }
 }
