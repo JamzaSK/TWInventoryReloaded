@@ -397,6 +397,7 @@
         "per_round": "Por ronda",
         "overall": "Global",
         "hits_taken": "Acertos sofridos",
-        "dodged_shots": "Tiros desviados"
+        "dodged_shots": "Tiros desviados",
+        "crit": "Critical hit"
     }
 }
