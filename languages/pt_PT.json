@@ -220,7 +220,7 @@
         "pop_job_table": "Mostrar o nome do trabalho onde se pode encontrar este produto",
         "pop_crafting_recipe": "Mostrar recursos requeridos (produtos de ofício)",
         "pop_recipe_table": "Mostrar o nome da receita (produtos de ofício)",
-        "pop_partial_bonus": "Mostrar o bónus parcial do conjunto (baseado no número de items equipados)",
+        "pop_partial_bonus": "Mostrar o bónus parcial do conjunto (baseado no número de artigos equipados)",
         "pop_short_currency": "Encurtar trocas de mercado",
         "pop_market_price": "Mostrar o preço médio do mercado",
         "pop_ups_price": "Mostrar preço TUP",
@@ -398,6 +398,6 @@
         "overall": "Global",
         "hits_taken": "Acertos sofridos",
         "dodged_shots": "Tiros desviados",
-        "crit": "Critical hit"
+        "crit": "Tiro crítico"
     }
 }
