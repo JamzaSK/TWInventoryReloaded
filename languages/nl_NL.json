@@ -347,7 +347,7 @@
         "bonus_set_title": "Bonus van items en set",
         "fort_damage": "Schade",
         "fort_hp": "Levenspunten",
-        "combo_count": "$1 van 2$",
+        "combo_count": "$1 van $2",
         "level": "level",
         "construct": "Constructie",
         "speed": "snelheid",
