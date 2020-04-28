@@ -31,7 +31,7 @@
 // @description:tr The-west için daha iyi envanter ve araçlar!
 
 // @author Jamza (CZ14)
-// @version 2.191
+// @version 2.192
 // @license GPL-3.0 http://www.gnu.org/licenses/gpl-3.0.txt
 
 // @include http*://*.the-west.*/game.php*
@@ -71,7 +71,7 @@
     isDefined(window.TWIR) ? new west.gui.Dialog(TWIR.name, '<div class="txcenter"><b><br>The UserScript ' + TWIR.name +
         " is installed twice. You will have to uninstall older version for the script to work properly!</br></b></div>", west.gui.Dialog.SYS_WARNING)
       .addButton("OK").show() : (TWIRlang = {}, TWIR = {
-        version: "2.191",
+        version: "2.192",
         revision: "17",
         name: "TW Inventory Reloaded",
         author: "Jamza",
@@ -345,7 +345,7 @@
         },
         initScript: function()
         {
-          TWIR.storage.fetchLang(function()
+          isDefined(TheWestApi) ? TWIR.storage.fetchLang(function()
           {
             var e = TheWestApi.register("TWIR", TWIRlang.script_name, TWIR.minGame, TWIR.maxGame, TWIR.author, TWIR.website),
               t = (new west.gui.Scrollpane).appendContent(
@@ -367,7 +367,7 @@
                 new Date).isWinterTime() ?
               '<div style="position: absolute;top: -8px;left: -6px;"><img src="/images/items/head/wear/xmas_hat.png" style="height: 33px;transform: rotate(-15deg);"></div>' :
               "").append('<div class="menucontainer_bottom" />')), TWIR.beCompatible(), TWIR.init(), TWIR.Updater()
-          })
+          }) : setTimeout(TWIR.initScript, 100)
         },
         beCompatible: function()
         {
@@ -1181,8 +1181,7 @@
         },
         init: function()
         {
-          if (isDefined(jQuery) && isDefined(TheWestApi) && isDefined(Character) && ItemManager.isLoaded() && Bag.loaded && west.storage.ItemSetManager
-            ._initialized) try
+          if (isDefined(Character) && ItemManager.isLoaded() && Bag.loaded && west.storage.ItemSetManager._initialized && Chat.inited) try
           {
             TWIR.handler(), TWIR.storage.init(), TWIR.usebonus.getKeys(), TWIR.usebonus.getDesc(), TWIR.enhancedPlayerProfile(), TWIR.handleCopy(), TWIR
               .smarterChat(), TWIR.enhancedChatInfo(), TWIR.addPopup.init(), TWIR.enhancedPopups.init(), TWIR.fetchJobs(), TWIR.updateCrafting(), TWIR
@@ -3141,7 +3140,7 @@
                       o.name.cutIt(14) + "&nbsp;</div></td>", this.isSpectator || (r += '<td style="vertical-align: middle;">' + (TWIR.storage.getFeat(
                           "fb_online_status") && o.westPlayerId !== Character.playerId ? e.formatStatus(o.westPlayerId, o.isAllied) + "&nbsp;" : "") +
                         '</td><td style="vertical-align: middle;">' + (TWIR.storage.getFeat("fb_ranks") ? e.formatRank(o.westPlayerId, A) : "") + "</td>"
-                        ), r += '<td style="vertical-align: middle;">' + e.formatHp(o.health, o.healthmax) + "</td>", r += "</tr></table>", r +=
+                        ), r += '<td style="vertical-align: middle;">' + e.formatHp(a.health, a.healthmax) + "</td>", r += "</tr></table>", r +=
                       '<div style="text-align: center"><span><img src="' + TWIR.images.fortbattle.dmg_blue +
                       '"/></span>&nbsp;<span style="font-weight: bold; font-size: 11px; vertical-align: middle;">' + format_number(o.causeddamage) +
                       "</span></div>", this.popup.setXHTML(r)
@@ -4726,7 +4725,7 @@
         {
           var e = ["barracks_room1", "barracks_room2", "barracks_room3", "barracks_room4", "barracks_room5", "barracks_room6"],
             t = 0;
-          if (Character.forts.length > 0 && 0 === Character.homeTown.alliance_id)
+          if (Array.isArray(Character.forts) && Character.forts.length > 0 && 0 === Character.homeTown.alliance_id)
           {
             ! function i()
             {
