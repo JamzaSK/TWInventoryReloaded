@@ -238,7 +238,7 @@
         "ml_npc": "Add a new button to show the \"Quest givers\" menu on the left side",
         "prof_craft_points": "Show the crafting points in player profiles",
         "fb_topic": "Show chat topic in the battle preparation window",
-        "fb_travel_button": "Add a button to travel to the fort in the fort battles window",
+        "fb_travel_button": "Add a button to move to the fort in the fort battles window",
         "fb_online_status": "Add online status of player to the fort battle map's popup",
         "fb_ranks": "Add player's rank to the fort battle map's popup",
         "fb_ali_name": "Show Alliance name in the town overview",
@@ -303,7 +303,7 @@
         "error_hotel": "No hotel room found",
         "error_npc": "No employers found",
         "error_market": "There is nothing to pick up from the market",
-        "travel_fort": "Travel to fort",
+        "travel_fort": "Move to the fort",
         "never": "Never",
         "any": "Any",
         "none": "None",
@@ -398,6 +398,10 @@
         "overall": "overall",
         "hits_taken": "Hits taken",
         "dodged_shots": "Dodged shots",
-        "crit": "Critical hit"
+        "crit": "Critical hit",
+        "overview": "Overview",
+        "hits": "Hits",
+        "dodges": "Dodges",
+        "avg_dmg": "Average damage per hit"
     }
 }
