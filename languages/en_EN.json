@@ -402,6 +402,8 @@
         "overview": "Overview",
         "hits": "Hits",
         "dodges": "Dodges",
-        "avg_dmg": "Average damage per hit"
+        "avg_dmg": "Average damage per hit",
+        "wep_breakdown": "Weapons breakdown",
+        "avg_wep_dmg": "Average gun damage"
     }
 }
