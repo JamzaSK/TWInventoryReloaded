@@ -64,8 +64,8 @@
         "item_type": "Típus",
         "regen": "Regeneráció",
         "custom": "Egyedi",
-        "set_window": "Item Sets",
-        "item_use": "Use"
+        "set_window": "Szettek",
+        "item_use": "Használ"
     },
     "tooltips": {
         "jobdrop": "Munkából található",
@@ -89,10 +89,10 @@
         "quests": "küldetés",
         "collection": "Szükséges egy gyűjteményhez",
         "uniq_sellers": "$1 egyedi eladók",
-        "job_danger": "Danger",
-        "open_title": "Open $1 and center it on map",
-        "opener_tooltip": "SHIFT+Click to mass open",
-        "learnable_recipe": "Learnable recipe"
+        "job_danger": "Veszély",
+        "open_title": "$1 megnyitása és középre helyezése a térképen",
+        "opener_tooltip": "SHIFT+kattintás a tömeges kinyitáshoz",
+        "learnable_recipe": "Megtanulható receptek"
     },
     "organizing": {
         "invert_text": "Különböző tárgyak megjelenítése / elrejtése a kiválasztott szűrő alapján",
@@ -142,8 +142,8 @@
         "setitems": "Szettelemek",
         "yield": "Termékek",
         "recipe": "Receptek",
-        "pin": "Pin it",
-        "unpin": "Unpin it"
+        "pin": "Kitűzés",
+        "unpin": "Kitűzés megszüntetése"
     },
     "stats": {
         "stats": "Statisztikák",
@@ -251,11 +251,11 @@
         "inv_menu_size": "A sorok maximális száma a kiválasztott menüben",
         "pop_char_level": "Mindig mutassa a bónusz értékét (szintenként) a karaktered szintjéhez",
         "inv_cld_reminder": "Emlékeztess, amikor újra használhatom a hosszú lejáratú tárgyakat",
-        "inv_cld_reminder_playsound": "Mute reminder sound",
-        "pop_quest_tooltip": "Add requirements to complete the quest and its reward to the quest popup",
-        "pop_job_tooltip": "Improve job popup",
-        "fb_char_icons": "Class specific icons in the fortbattle preparation window",
-        "mw_recipes": "Watch learnable recipes"
+        "inv_cld_reminder_playsound": "Értesítő hangok némítása",
+        "pop_quest_tooltip": "Hozzáadásra kerültek a követelmények és jutalmak a küldetés popup-hoz",
+        "pop_job_tooltip": "Fejlesztett munka popup",
+        "fb_char_icons": "Kaszt szerinti ikonok az erődharc előnézeti ablakában",
+        "mw_recipes": "Figyeld a megtanulható recepteket"
     },
     "keyWords": {
         "xmas": [
@@ -268,7 +268,7 @@
         ],
         "easter": "Húsvét",
         "oktoberfest": "Októberfeszt",
-        "sale": "Sale"
+        "sale": "Eladás"
     },
     "menulink": {
         "market": "Piaci gyűjtő",
@@ -317,7 +317,7 @@
         "enabled": "Engedélyezve",
         "disabled": "Tiltva",
         "cancel": "Megszakít",
-        "quest_update": "Current quests loaded"
+        "quest_update": "Az aktuális küldetések betöltve"
     },
     "calc": {
         "regen": "Regeneráció",
@@ -353,7 +353,7 @@
         "speed": "Sebesség",
         "wearable_only": "Csak a hordhatók",
         "sector": "szektor",
-        "switch_speed_btn": "Use Speed Set"
+        "switch_speed_btn": "Gyorsszett használata"
     },
     "update_changelog": "ITT a változásnapló",
     "donate_text_2": "Ha tetszik ez a script, és szeretnéd, hogy továbbra is működjön és új funkciók kerüljenek bele, kérlek küld egy kis $adományt$",
@@ -380,28 +380,28 @@
         "set_bonus": "Bónusz a szettekből",
         "compare": "Összehasonlít"
     },
-    "script_desc": "Better Inventory and Tools for The West!",
+    "script_desc": "Jobb felszerelés és eszközök a The West-hez!",
     "fortbattle": {
-        "add_name": "TWIR Dashboard",
-        "round": "Round",
-        "name": "Name",
-        "health": "Health points",
-        "damage_inflicted": "Damage inflicted",
-        "last_hit": "Last hit",
-        "target_name": "Hit target",
-        "miss_shot": "MISS",
+        "add_name": "Fortbattle Tracker",
+        "round": "Kör",
+        "name": "Név",
+        "health": "Életerőpont",
+        "damage_inflicted": "Leadott sebzés",
+        "last_hit": "Utolsó találat",
+        "target_name": "Találat célpontja",
+        "miss_shot": "MELLÉ",
         "ko_shot": "KO",
-        "damage_taken": "Damage taken",
-        "per_round": "per round",
-        "overall": "overall",
-        "hits_taken": "Hits taken",
-        "dodged_shots": "Dodged shots",
-        "crit": "Critical hits",
-        "overview": "Overview",
-        "hits": "Hits",
-        "dodges": "Dodges",
-        "avg_dmg": "Average damage per hit",
-        "wep_breakdown": "Weapons breakdown",
-        "avg_wep_dmg": "Average gun damage"
+        "damage_taken": "Okozott sebzés",
+        "per_round": "körönként",
+        "overall": "összesen",
+        "hits_taken": "Adott találat",
+        "dodged_shots": "Lövés elől kitért",
+        "crit": "Kritikus találat",
+        "overview": "Összesítés",
+        "hits": "Találat",
+        "dodges": "Térés",
+        "avg_dmg": "Átlagos körönkénti sebzés",
+        "wep_breakdown": "Fegyverenkénti bontás",
+        "avg_wep_dmg": "Átlagos fegyversebzés"
     }
 }
