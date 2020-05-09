@@ -384,7 +384,7 @@
     },
     "script_desc": "Better Inventory and Tools for The West!",
     "fortbattle": {
-        "add_name": "TWIR Dashboard",
+        "add_name": "Fortbattle Tracker",
         "round": "Round",
         "name": "Name",
         "health": "Health points",
