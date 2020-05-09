@@ -81,7 +81,7 @@
         "listings": "listák",
         "items": "tárgyak",
         "items_short": "db",
-        "seen": "$1-szer megnézve",
+        "seen": "$1 -szer megnézve",
         "last_seen": "Utoljára megnézve",
         "average": "Átlagos",
         "average_since": "Átlagosan $1 nap",
@@ -204,7 +204,7 @@
         "watching": "Figyelés",
         "buffs": "Buffok",
         "browse": "Böngészés az aukciók között",
-        "seen_alert": "$item $dollars lett felkínálva tőle: $player"
+        "seen_alert": "$1 lett felkínálva tőle: $2"
     },
     "features": {
         "preferences": "Beállítások",
@@ -287,9 +287,9 @@
         "error": "Érvénytelen értékek",
         "sucess": "Sikeres csere",
         "storage_error": "Helyi tároló nem engedélyezett",
-        "years": "Éve",
+        "years": "$1 évvel ezelőtt",
         "year": "Év",
-        "months": "Hónapja",
+        "months": "$1 hónappal ezelőtt",
         "days": "$1 napok óta",
         "hours": "$1 órája",
         "minutes": "$1 perce",
@@ -396,6 +396,12 @@
         "overall": "overall",
         "hits_taken": "Hits taken",
         "dodged_shots": "Dodged shots",
-        "crit": "Critical hit"
+        "crit": "Critical hits",
+        "overview": "Overview",
+        "hits": "Hits",
+        "dodges": "Dodges",
+        "avg_dmg": "Average damage per hit",
+        "wep_breakdown": "Weapons breakdown",
+        "avg_wep_dmg": "Average gun damage"
     }
 }
