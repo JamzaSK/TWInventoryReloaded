@@ -318,7 +318,8 @@
         "enabled": "Habilitado",
         "disabled": "Deshabilitado",
         "cancel": "Cancelar",
-        "quest_update": "Búsquedas actuales cargadas"
+        "quest_update": "Búsquedas actuales cargadas",
+        "later": "Later"
     },
     "calc": {
         "regen": "Regeneración",
