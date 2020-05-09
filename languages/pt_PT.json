@@ -384,7 +384,7 @@
     },
     "script_desc": "Melhor inventário e ferramentas para o The West!",
     "fortbattle": {
-        "add_name": "Quadro de batalha TWIR",
+        "add_name": "Fortbattle Tracker",
         "round": "Ronda",
         "name": "Nome",
         "health": "Pontos de saúde",
