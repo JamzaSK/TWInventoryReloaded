@@ -382,7 +382,7 @@
     },
     "script_desc": "Betere inventaris en tools voor The West",
     "fortbattle": {
-        "add_name": "TWIR dashboard",
+        "add_name": "Fortbattle Tracker",
         "round": "Ronde",
         "name": "Naam",
         "health": "Levenspunten",
