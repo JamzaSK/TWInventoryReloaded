@@ -396,6 +396,12 @@
         "overall": "Per total",
         "hits_taken": "Hits taken",
         "dodged_shots": "Dodged shots",
-        "crit": "Critical hit"
+        "crit": "Critical hits",
+        "overview": "Overview",
+        "hits": "Hits",
+        "dodges": "Dodges",
+        "avg_dmg": "Average damage per hit",
+        "wep_breakdown": "Weapons breakdown",
+        "avg_wep_dmg": "Average gun damage"
     }
 }
