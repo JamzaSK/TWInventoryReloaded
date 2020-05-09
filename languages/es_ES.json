@@ -383,7 +383,7 @@
     },
     "script_desc": "¡Mejor inventario y herramientas para Occidente!",
     "fortbattle": {
-        "add_name": "Tablero TWIR",
+        "add_name": "Fortbattle Tracker",
         "round": "Ronda",
         "name": "Nombre",
         "health": "Puntos de Salud (Vida)",
