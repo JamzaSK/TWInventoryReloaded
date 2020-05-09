@@ -389,7 +389,7 @@
     },
     "script_desc": "Lepsze ekwipunek i narzędzia do The-West!",
     "fortbattle": {
-        "add_name": "Okno bitwy o fort",
+        "add_name": "Fortbattle Tracker",
         "round": "Runda",
         "name": "Nick",
         "health": "Punkty życia",
