@@ -398,6 +398,12 @@
         "overall": "Global",
         "hits_taken": "Acertos sofridos",
         "dodged_shots": "Tiros desviados",
-        "crit": "Tiro crítico"
+        "crit": "Tiro crítico",
+        "overview": "Visão geral",
+        "hits": "esquivos",
+        "dodges": "acerto",
+        "avg_dmg": "Dano médio por acerto",
+        "wep_breakdown": "Weapons breakdown",
+        "avg_wep_dmg": "Average gun damage"
     }
 }
