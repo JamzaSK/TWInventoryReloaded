@@ -22,7 +22,7 @@
 * Mass opening - SHIFT + click on the item in your inventory
 * Mass sending of the event currency during supported events
 * Collect reminder for items that have a long cooldowns
-* Live Scoreboard during fort battles
+* Useful stats for building your battle plan during fort battles
 * ...and many more!
 <br>
 
