@@ -382,7 +382,7 @@
     },
     "script_desc": "\nInventar și instrumente mai bune pentru The West",
     "fortbattle": {
-        "add_name": "Tabloul de bord TWIR",
+        "add_name": "Fortbattle Tracker",
         "round": "Runda",
         "name": "Nume",
         "health": "Puncte de viata",
