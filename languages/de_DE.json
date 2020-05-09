@@ -317,7 +317,8 @@
         "enabled": "Aktiviert",
         "disabled": "Deaktiviert",
         "cancel": "Abbrechen",
-        "quest_update": "Aktuelle Quests geladen"
+        "quest_update": "Aktuelle Quests geladen",
+        "later": "Later"
     },
     "calc": {
         "regen": "Regeneration",
