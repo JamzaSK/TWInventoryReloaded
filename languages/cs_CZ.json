@@ -384,7 +384,7 @@
     },
     "script_desc": "Lepší Inventář a nástroje pro The West!",
     "fortbattle": {
-        "add_name": "TWIR Dashboard",
+        "add_name": "Fortbattle Tracker",
         "round": "Kolo",
         "name": "Jméno",
         "health": "Body zdraví",
