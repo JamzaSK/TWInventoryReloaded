@@ -317,7 +317,8 @@
         "enabled": "Ingeschakeld",
         "disabled": "Uitgeschakeld",
         "cancel": "cancel",
-        "quest_update": "Huidige quests geladen"
+        "quest_update": "Huidige quests geladen",
+        "later": "Later"
     },
     "calc": {
         "regen": "Regeneratie",
