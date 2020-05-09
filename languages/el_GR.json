@@ -317,7 +317,8 @@
         "enabled": "Ενεργό",
         "disabled": "Ανενεργό",
         "cancel": "Ακύρωση",
-        "quest_update": "Current quests loaded"
+        "quest_update": "Current quests loaded",
+        "later": "Later"
     },
     "calc": {
         "regen": "Αναγένηση",
