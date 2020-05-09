@@ -382,7 +382,7 @@
     },
     "script_desc": "The-west için daha iyi envanter ve araçlar",
     "fortbattle": {
-        "add_name": "TWIR Kontrol Paneli",
+        "add_name": "Fortbattle Tracker",
         "round": "tur",
         "name": "isim",
         "health": "Hayat Puanı",
