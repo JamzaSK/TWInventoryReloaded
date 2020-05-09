@@ -319,7 +319,8 @@
         "enabled": "Povoleno",
         "disabled": "Pozastaveno",
         "cancel": "Zrušit",
-        "quest_update": "Aktuální úkoly byly načteny"
+        "quest_update": "Aktuální úkoly byly načteny",
+        "later": "Později"
     },
     "calc": {
         "regen": "Regenerace",
