@@ -319,7 +319,8 @@
         "enabled": "Activado",
         "disabled": "Desactivado",
         "cancel": "Cancelar",
-        "quest_update": "Aventuras carregadas actualmente"
+        "quest_update": "Aventuras carregadas actualmente",
+        "later": "Later"
     },
     "calc": {
         "regen": "Regeneração",
