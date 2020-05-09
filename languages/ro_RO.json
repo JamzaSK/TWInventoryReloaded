@@ -317,7 +317,8 @@
         "enabled": "Activat\n",
         "disabled": "Dezactivat",
         "cancel": "Renunta",
-        "quest_update": "\nCăutările curente au fost încărcate"
+        "quest_update": "\nCăutările curente au fost încărcate",
+        "later": "Later"
     },
     "calc": {
         "regen": "Regenerare",
