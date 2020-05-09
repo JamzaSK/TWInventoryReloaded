@@ -382,7 +382,7 @@
     },
     "script_desc": "Καλύτερα αποθέματα και εργαλεία για το The West!",
     "fortbattle": {
-        "add_name": "TWIR Dashboard",
+        "add_name": "Fortbattle Tracker",
         "round": "Round",
         "name": "Name",
         "health": "Health points",
