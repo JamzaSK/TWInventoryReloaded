@@ -317,7 +317,8 @@
         "enabled": "Etkin",
         "disabled": "Devre dışı",
         "cancel": "İptal",
-        "quest_update": "Mevcut görevler yüklendi"
+        "quest_update": "Mevcut görevler yüklendi",
+        "later": "Later"
     },
     "calc": {
         "regen": "Yenileme",
