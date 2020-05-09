@@ -398,6 +398,12 @@
         "overall": "celkovo",
         "hits_taken": "Obdržané zásahy",
         "dodged_shots": "Vyhnuté zásahy",
-        "crit": "Kritický zásah"
+        "crit": "Kritický zásah",
+        "overview": "Prehľad",
+        "hits": "Zásahy",
+        "dodges": "Úhyby",
+        "avg_dmg": "Priemerné poškodenie na zásah",
+        "wep_breakdown": "Rozpis zbraní",
+        "avg_wep_dmg": "Priemerné poškodenie zbrane"
     }
 }
