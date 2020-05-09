@@ -204,7 +204,7 @@
         "watching": "Osservati",
         "buffs": "Potenziamenti",
         "browse": "Naviga tra le aste",
-        "seen_alert": "$1 è stato visto per $2 da $3"
+        "seen_alert": "$1 è stato visto per $2"
     },
     "features": {
         "preferences": "Preferenze",
@@ -402,6 +402,12 @@
         "overall": "overall",
         "hits_taken": "Hits taken",
         "dodged_shots": "Dodged shots",
-        "crit": "Critical hit"
+        "crit": "Critical hits",
+        "overview": "Overview",
+        "hits": "Hits",
+        "dodges": "Dodges",
+        "avg_dmg": "Average damage per hit",
+        "wep_breakdown": "Weapons breakdown",
+        "avg_wep_dmg": "Average gun damage"
     }
 }
