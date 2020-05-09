@@ -319,7 +319,8 @@
         "enabled": "Enabled",
         "disabled": "Disabled",
         "cancel": "Cancel",
-        "quest_update": "Current quests loaded"
+        "quest_update": "Current quests loaded",
+        "later": "Later"
     },
     "calc": {
         "regen": "Regeneration",
