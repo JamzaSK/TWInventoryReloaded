@@ -317,7 +317,8 @@
         "enabled": "Engedélyezve",
         "disabled": "Tiltva",
         "cancel": "Megszakít",
-        "quest_update": "Az aktuális küldetések betöltve"
+        "quest_update": "Az aktuális küldetések betöltve",
+        "later": "Later"
     },
     "calc": {
         "regen": "Regeneráció",
