@@ -324,7 +324,8 @@
         "enabled": "Włączone",
         "disabled": "Wyłączone",
         "cancel": "Anuluj",
-        "quest_update": "Aktualnie załadowane zadania"
+        "quest_update": "Aktualnie załadowane zadania",
+        "later": "Later"
     },
     "calc": {
         "regen": "Regeneracja",
