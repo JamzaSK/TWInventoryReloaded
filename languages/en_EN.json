@@ -4,7 +4,7 @@
     "invent": "Inventory",
     "script_version": "Version",
     "script_revision": "Revision",
-    "changes": "What's new?",
+    "changes": "Whats new?",
     "translator": "translator: TWIR",
     "language": "Language",
     "download": "Download",
@@ -319,7 +319,8 @@
         "enabled": "Enabled",
         "disabled": "Disabled",
         "cancel": "Cancel",
-        "quest_update": "Current quests loaded"
+        "quest_update": "Current quests loaded",
+        "later": "Later"
     },
     "calc": {
         "regen": "Regeneration",
