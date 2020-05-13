@@ -320,7 +320,7 @@
         "disabled": "Desactivado",
         "cancel": "Cancelar",
         "quest_update": "Aventuras carregadas actualmente",
-        "later": "Later"
+        "later": "Mais tarde"
     },
     "calc": {
         "regen": "Regeneração",
@@ -404,7 +404,7 @@
         "hits": "esquivos",
         "dodges": "acerto",
         "avg_dmg": "Dano médio por acerto",
-        "wep_breakdown": "Weapons breakdown",
-        "avg_wep_dmg": "Average gun damage"
+        "wep_breakdown": "Divisão de armas",
+        "avg_wep_dmg": "\nDano médio da arma"
     }
 }
