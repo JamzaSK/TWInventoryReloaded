@@ -91,8 +91,8 @@
         "uniq_sellers": "$1 unikalnych sprzedających",
         "job_danger": "Szansa na zranienie",
         "open_title": "Otwórz $1 i scentruj na mapie",
-        "opener_tooltip": "SHIFT+Click to mass open",
-        "learnable_recipe": "Learnable recipe"
+        "opener_tooltip": "SHIFT+Kliknięcie by otworzyć wiele",
+        "learnable_recipe": "Możliwe do nauczenia przepisy"
     },
     "organizing": {
         "invert_text": "Pokaż/Ukryj przedmioty pasujące do filtra",
@@ -142,8 +142,8 @@
         "setitems": "Przedmioty setowe",
         "yield": "Produkty",
         "recipe": "Przepisy",
-        "pin": "Pin it",
-        "unpin": "Unpin it"
+        "pin": "Przypnij",
+        "unpin": "Odepnij"
     },
     "stats": {
         "stats": "Statystyki",
@@ -255,7 +255,7 @@
         "pop_quest_tooltip": "Dodaj wymagania by skończyć zadanie i jego nagrodę do okienka",
         "pop_job_tooltip": "Ulepszone okno pracy",
         "fb_char_icons": "Ikony klasy postaci w przygotowaniach do bitwy o fort",
-        "mw_recipes": "Watch learnable recipes"
+        "mw_recipes": "Obserwuj możliwe do nauczenia przepisy"
     },
     "keyWords": {
         "xmas": [
@@ -325,7 +325,7 @@
         "disabled": "Wyłączone",
         "cancel": "Anuluj",
         "quest_update": "Aktualnie załadowane zadania",
-        "later": "Later"
+        "later": "Później"
     },
     "calc": {
         "regen": "Regeneracja",
@@ -402,14 +402,14 @@
         "damage_taken": "Otrzymane obrażenia",
         "per_round": "na rundę",
         "overall": "ogólny",
-        "hits_taken": "Hits taken",
-        "dodged_shots": "Dodged shots",
-        "crit": "Critical hits",
-        "overview": "Overview",
-        "hits": "Hits",
-        "dodges": "Dodges",
-        "avg_dmg": "Average damage per hit",
-        "wep_breakdown": "Weapons breakdown",
-        "avg_wep_dmg": "Average gun damage"
+        "hits_taken": "Otrzymane trafienia",
+        "dodged_shots": "Uniknięte strzały",
+        "crit": "Ilość trafień krytycznych",
+        "overview": "Podgląd",
+        "hits": "Licznik trafień",
+        "dodges": "Chybione strzały",
+        "avg_dmg": "Średnie obrażenia zadane",
+        "wep_breakdown": "Podsumowanie broni",
+        "avg_wep_dmg": "Średnie obrażenia broni"
     }
 }
