@@ -319,7 +319,7 @@
         "disabled": "Deshabilitado",
         "cancel": "Cancelar",
         "quest_update": "Búsquedas actuales cargadas",
-        "later": "Later"
+        "later": "Más tarde"
     },
     "calc": {
         "regen": "Regeneración",
@@ -398,12 +398,12 @@
         "overall": "total",
         "hits_taken": "Aciertos recibidos",
         "dodged_shots": "Disparos eludidos",
-        "crit": "Critical hits",
-        "overview": "Overview",
-        "hits": "Hits",
-        "dodges": "Dodges",
-        "avg_dmg": "Average damage per hit",
-        "wep_breakdown": "Weapons breakdown",
-        "avg_wep_dmg": "Average gun damage"
+        "crit": "Críticos",
+        "overview": "Visión general",
+        "hits": "Aciertos",
+        "dodges": "Eludidos",
+        "avg_dmg": "Daño medio por acierto",
+        "wep_breakdown": "desglose de armas",
+        "avg_wep_dmg": "Daño medio armas"
     }
 }
