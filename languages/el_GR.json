@@ -143,7 +143,8 @@
         "yield": "Προϊόντα",
         "recipe": "Συνταγές",
         "pin": "Pin it",
-        "unpin": "Unpin it"
+        "unpin": "Unpin it",
+        "color_picker_title": "Pick a Color"
     },
     "stats": {
         "stats": "Στατιστικά",
@@ -318,7 +319,8 @@
         "disabled": "Ανενεργό",
         "cancel": "Ακύρωση",
         "quest_update": "Current quests loaded",
-        "later": "Later"
+        "later": "Later",
+        "reset": "Reset"
     },
     "calc": {
         "regen": "Αναγένηση",
