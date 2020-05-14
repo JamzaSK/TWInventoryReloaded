@@ -143,7 +143,8 @@
         "yield": "Produkty",
         "recipe": "Recepty",
         "pin": "Pripnúť",
-        "unpin": "Odopnúť"
+        "unpin": "Odopnúť",
+        "color_picker_title": "Pick a Color"
     },
     "stats": {
         "stats": "Štatistiky",
@@ -320,7 +321,8 @@
         "disabled": "Pozastavené",
         "cancel": "Zrušiť",
         "quest_update": "Aktuálne úlohy boli načítané",
-        "later": "Neskôr"
+        "later": "Neskôr",
+        "reset": "Reset"
     },
     "calc": {
         "regen": "Regenerácia",
