@@ -143,7 +143,8 @@
         "yield": "Produse",
         "recipe": "Retete",
         "pin": "Pin it",
-        "unpin": "Unpin it"
+        "unpin": "Unpin it",
+        "color_picker_title": "Pick a Color"
     },
     "stats": {
         "stats": "Statistici",
@@ -318,7 +319,8 @@
         "disabled": "Dezactivat",
         "cancel": "Renunta",
         "quest_update": "\nCăutările curente au fost încărcate",
-        "later": "Later"
+        "later": "Later",
+        "reset": "Reset"
     },
     "calc": {
         "regen": "Regenerare",
