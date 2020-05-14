@@ -143,7 +143,8 @@
         "yield": "Termékek",
         "recipe": "Receptek",
         "pin": "Kitűzés",
-        "unpin": "Kitűzés megszüntetése"
+        "unpin": "Kitűzés megszüntetése",
+        "color_picker_title": "Pick a Color"
     },
     "stats": {
         "stats": "Statisztikák",
@@ -318,7 +319,8 @@
         "disabled": "Tiltva",
         "cancel": "Megszakít",
         "quest_update": "Az aktuális küldetések betöltve",
-        "later": "Later"
+        "later": "Later",
+        "reset": "Reset"
     },
     "calc": {
         "regen": "Regeneráció",
