@@ -143,7 +143,8 @@
         "yield": "Productos",
         "recipe": "Recetas",
         "pin": "Poner chicheta",
-        "unpin": "Quitar chincheta"
+        "unpin": "Quitar chincheta",
+        "color_picker_title": "Pick a Color"
     },
     "stats": {
         "stats": "Estadísticas",
@@ -319,7 +320,8 @@
         "disabled": "Deshabilitado",
         "cancel": "Cancelar",
         "quest_update": "Búsquedas actuales cargadas",
-        "later": "Más tarde"
+        "later": "Más tarde",
+        "reset": "Reset"
     },
     "calc": {
         "regen": "Regeneración",
