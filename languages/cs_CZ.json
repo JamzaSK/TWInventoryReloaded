@@ -144,7 +144,7 @@
         "recipe": "Recepty",
         "pin": "Připnout",
         "unpin": "Odepnout",
-        "color_picker_title": "Pick a Color"
+        "color_picker_title": "Barva"
     },
     "stats": {
         "stats": "Statistiky",
@@ -322,7 +322,7 @@
         "cancel": "Zrušit",
         "quest_update": "Aktuální úkoly byly načteny",
         "later": "Později",
-        "reset": "Reset"
+        "reset": "Resetovat"
     },
     "calc": {
         "regen": "Regenerace",
