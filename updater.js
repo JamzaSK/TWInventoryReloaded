@@ -1,6 +1,6 @@
 TWIR_update = {
-	version: '2.194',
+	version: '2.195',
 	revision: '17',
-	changes: 'Bugfix',
+	changes: '- you can mark and track the player and his position in the fort battle via Tracker',
 	changelog: false
 };	
