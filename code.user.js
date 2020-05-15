@@ -3122,8 +3122,8 @@
           untrackPlayer: function(e, t)
           {
             this.isTracked(e, t) && (delete this.tracked_players[t][e], this.gui[t].table instanceof west.gui.Table && $.isEmptyObject(this
-                .tracked_players[t]) && this.gui[t].tracked_filter.parent().addClass("twir_hidden"), this.unhighlightPlayers(t), this
-              .highlightTrackedPlayers(t))
+              .tracked_players[t]) && (this.gui[t].tracked_filter.parent().addClass("twir_hidden"), this.gui[t].show_tracked && (this.gui[t]
+              .show_tracked = !1)), this.unhighlightPlayers(t), this.highlightTrackedPlayers(t))
           },
           getGroupIdx: function(e, t, i)
           {
