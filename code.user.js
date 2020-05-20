@@ -10663,12 +10663,13 @@
           },
           check: function()
           {
+            var e = this;
             try
             {
               $.getScript(TWIR.updateUrl, function()
               {
-                TWIR_update.version === TWIR.version && TWIR_update.revision === TWIR.revision || (this.announce(), clearInterval(this.interval))
-              }.bind(this))
+                TWIR_update.version === TWIR.version && TWIR_update.revision === TWIR.revision || (e.announce(), clearInterval(e.interval))
+              })
             }
             catch (e)
             {}
