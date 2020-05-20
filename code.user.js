@@ -72,7 +72,7 @@
         " is installed twice. You will have to uninstall older version for the script to work properly!</br></b></div>", west.gui.Dialog.SYS_WARNING)
       .addButton("OK").show() : (TWIRlang = {}, TWIR = {
         version: "2.195",
-        revision: "17",
+        revision: "18",
         name: "TW Inventory Reloaded",
         author: "Jamza",
         minGame: "2.04",
@@ -1149,14 +1149,28 @@
                 this.openDonate()
             }
           },
+          scrollTo: function(e)
+          {
+            var e = $("." + e, this.gui.window.divMain);
+            if (e.length)
+            {
+              var t = this.gui.scrollPane,
+                i = t.verticalBar,
+                a = $("div.tw2gui_scrollbar_pulley", i.divMain),
+                A = $("div.tw2gui_scrollbar_pulley_area", i.divMain);
+              A.height(), a.height(), e.position().top, t.getContentPane.height();
+              i.move(e[0].offsetTop, !0, !0)
+            }
+          },
           openFeat: function()
           {
             var e = this;
             try
             {
               this.gui.window.activateTab("twir_feat"), this.gui.window.clearContentPane();
-              var t = (new west.gui.Scrollpane).appendContent("<div/>"),
-                i = (new west.gui.Combobox).setWidth(165),
+              var t = this.gui.scrollPane = new west.gui.Scrollpane;
+              t.appendContent("<div/>");
+              var i = (new west.gui.Combobox).setWidth(165),
                 a = {};
               for (var A in Object.keys(TWIR.translations).sort().forEach(function(e)
                 {
@@ -1198,7 +1212,7 @@
                 })), t.appendContent(r), t.appendContent(
                   '<div style="font-weight: bold;margin-top: 8px;text-shadow: 2px 1px 2px #fae3ad;color: #5e321a;font-size: 16px;margin-bottom: 5px;">' +
                   TWIRlang.features.popup_tooltips + "</div>"), t.appendContent(s), t.appendContent(
-                  '<div style="font-weight: bold;margin-top: 8px;text-shadow: 2px 1px 2px #fae3ad;color: #5e321a;font-size: 16px;margin-bottom: 5px;">' +
+                  '<div class="twir_pref_mw" style="font-weight: bold;margin-top: 8px;text-shadow: 2px 1px 2px #fae3ad;color: #5e321a;font-size: 16px;margin-bottom: 5px;">' +
                   TWIRlang.market_watcher.add_name + "</div>"), t.appendContent("<span>" + TWIRlang.feat_strings.mw_clear_time + "</span>").appendContent(
                   c.getMainDiv().css(
                   {
@@ -3574,28 +3588,10 @@
         },
         smarterChat: function()
         {
-          var e;
           TWIR.storage.getFeat("chat_smart") && (TWIR.addStyle(
             ".twir_embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; width: 280px;margin: 15px; }.twir_embed-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }.twir_embed-container object { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }.twir_embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }"
-            ), e = Game.TextHandler.parse, Game.TextHandler.parse = function(t)
-          {
-            return t = (t = t.replace(/\[report=(\d+[0-9a-f]{10})\](.*?)\[\/report\]/g, function(e, t, i)
-            {
-              var a = t.escapeHTML();
-              return a.length < 11 ? e : '<a class="reportlink" href="javascript:void(parent.ReportWindow.open(' + a.substring(0, a.length -
-                10) + ",&quot;" + a.substring(a.length - 10, a.length) + '&quot;))">' + i + "</a>"
-            })).replace(/\[item=(.*?)\]/g, function(e, t, i)
-            {
-              t = t.replace(/&shy;/g, "");
-              var a = parseInt(t);
-              if (!a) return e;
-              var A = ItemManager.get(a, !0);
-              return A ? '<a href="javascript:void(0)" style="display: inline-block;" data-item-id="' + A.getId() +
-                '" class="bbcode itemlink" title="' + new ItemPopup(A).getXHTML().escapeHTML() + '">[' + (A.getItemLevel() ?
-                  '<span class="item_level"' + (A.isUpgradeable() ? "" : " fake") + '">' + A.getItemLevel() + "</span>" : "") + A.name
-                .escapeHTML() + "]</a>" : e
-            }), e(t)
-          }, Chat.Formatter.twir_formatText = Chat.Formatter.twir_formatText || Chat.Formatter.formatText, Chat.Formatter.formatText = function(e, t)
+            ), Chat.Formatter.twir_formatText = Chat.Formatter.twir_formatText || Chat.Formatter.formatText, Chat.Formatter.formatText = function(e,
+            t)
           {
             e = (t ? e : e.escapeHTML()).replace(/(\S{100})/g, "$1&shy;").replace(/(\s?\*[^\*]+\*\s?)/g, "<b>$1</b>");
             var i = new RegExp(/\b(?:([\w-]+:\/\/?|www[.])[^\s()<>]+(?:\([\w\d]+\)|([^.,?!:;<=>"\#$%&'()*+,\-\/@\\_{|}~\s]|\/)))/gi),
@@ -4356,8 +4352,7 @@
                 if (TWIR.storage.getFeat("pop_short_currency") && (null !== this.item_obj.price && this.item_obj.price >= 1e4 && (t = t.replace(
                     "&nbsp;$" + this.item_obj.price * (this.options.traderCharge || 1), "&nbsp;&#36;" + TWIR.replSum(this.item_obj.price * (this
                       .options.traderCharge || 1), !0))), 0 != this.item_obj.sell_price && this.item_obj.price >= 1e4 && (t = t.replace("&nbsp;$" +
-                    this.item_obj.sell_price, "&nbsp;&#36;" + TWIR.replSum(this.item_obj.sell_price, !0)))), "crafting" == this.item_obj.spec_type && f[
-                    this.item_obj.item_id])
+                    this.item_obj.sell_price, "&nbsp;&#36;" + TWIR.replSum(this.item_obj.sell_price, !0)))), f[this.item_obj.item_id])
                 {
                   for (var W = 2147483647, S = 0; S < f[this.item_obj.item_id].resources.length; S++)
                   {
@@ -6108,8 +6103,13 @@
             {
               var t = new west.gui.Dialog(void 0, void 0, west.gui.Dialog.SYS_QUESTION).addButton("ok", function()
               {
-                !0 !== e.checking ? (e.mwl = [], e.update_table(), e.save_changes()) : new UserMessage(TWIRlang.informative.error_wait + ".",
-                  UserMessage.TYPE_ERROR).show()
+                TWIR.waitFor(function()
+                {
+                  return !TWIR.marketWatcher.checking
+                }, function()
+                {
+                  e.mwl = [], e.update_table(), e.save_changes()
+                })
               }).addButton("cancel").show();
               t.setTitle('<span style="margin-top: 4px; font-size: 16pt;">' + TWIRlang.market_watcher.remove_all + "</span>")
             });
@@ -6138,12 +6138,15 @@
           },
           unwatchItem: function(e)
           {
-            if (!0 !== this.checking)
+            var t = this;
+            TWIR.waitFor(function()
             {
-              for (var t = 0; t < this.mwl.length; t++) this.mwl[t].item_id === e && this.mwl.splice(t, 1);
-              this.handleLastScrollPos(!0), this.update_table(), this.save_changes()
-            }
-            else new UserMessage(TWIRlang.informative.error_wait + ".", UserMessage.TYPE_ERROR).show()
+              return !TWIR.marketWatcher.checking
+            }, function()
+            {
+              for (var i = 0; i < t.mwl.length; i++) t.mwl[i].item_id === e && t.mwl.splice(i, 1);
+              t.handleLastScrollPos(!0), t.update_table(), t.save_changes()
+            })
           },
           importDialog: function(e)
           {
@@ -6450,12 +6453,10 @@
           {
             try
             {
-              if (this.OnGoing instanceof OnGoingPermanentEntry)
+              if (this.OnGoing instanceof OnGoingPermanentEntry && this.OnGoing.element.is(":visible"))
               {
                 var e = WestUi.NotiBar.getBar(this.OnGoing);
-                e.removeEntry(this.OnGoing);
-                for (var t = 0; t < e.list.length; t++) e.list[t].element.find(".twir_marketWatcher").length && e.list.splice(t, 1);
-                e.update()
+                e.removeEntry(this.OnGoing)
               }
             }
             catch (e)
@@ -6997,13 +6998,13 @@
               }, 0);
             if (!$.isEmptyObject(t) || !$.isEmptyObject(a))
             {
-              if (this.OnGoing || (this.OnGoing = new OnGoingPermanentEntry(function()
+              if (this.OnGoing = new OnGoingPermanentEntry(function()
                 {
                   !$.isEmptyObject(t) && Object.keys(t).length > Object.keys(i).length ? e.set_alert.open("watched") : $.isEmptyObject(i) ? !$
                     .isEmptyObject(a) && TWIR.storage.getFeat("mw_collections") ? e.set_alert.open("coll") : $.isEmptyObject(n) || e.set_alert.open(
                       "browse") : e.set_alert.open("buffs")
-                }, "<div>" + TWIRlang.market_watcher.add_name + "</div>", "twir_marketWatcher", !1)), WestUi.NotiBar.add(this.OnGoing), !$.isEmptyObject(
-                  t)) var s = $(
+                }, "<div>" + TWIRlang.market_watcher.add_name + "</div>", "twir_marketWatcher", !1), WestUi.NotiBar.add(this.OnGoing), !$.isEmptyObject(
+                t)) var s = $(
                 '<div style="text-shadow:black -1px 0 1px,black 0 1px 1px,black 1px 0 1px,black 0 -1px 1px;line-height:15px;font-size:10px;font-weight:700;text-align:center;position:absolute;width:21px;z-index:2;background:url(/images/interface/friendsbar/level_bg.png);height:15px;left:2px; top: 28px; color:white;">' +
                 TWIR.replSum(Object.keys(t).length) + "</div>");
               $(".extra", e.OnGoing.element).empty().append(s), TWIR.console("TWIR/: Found " + o + " offers matching your list (" + (o - r > -1 ? o - r :
