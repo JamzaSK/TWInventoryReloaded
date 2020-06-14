@@ -1,6 +1,6 @@
 TWIR_update = {
-	version: '2.195',
+	version: '2.196',
 	revision: '18',
-	changes: '- Bugfix',
-	changelog: false
+	changes: '',
+	changelog: true
 };	
