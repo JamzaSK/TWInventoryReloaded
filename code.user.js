@@ -72,7 +72,7 @@
         " is installed twice. You will have to uninstall older version for the script to work properly!</br></b></div>", west.gui.Dialog.SYS_WARNING)
       .addButton("OK").show() : (TWIRlang = {}, TWIR = {
         version: "2.196",
-        revision: "18",
+        revision: "19",
         name: "TW Inventory Reloaded",
         author: "Jamza",
         minGame: "2.04",
@@ -1174,28 +1174,29 @@
                 p = $('<table style="display: none;"/>'),
                 c = $("<div/>"),
                 I = $("<div/>"),
-                d = $("<div/>");
-              for (var h in TWIR.storage.features) h.match("inv_") ? (this.gui.check[h] = (new west.gui.Checkbox).setLabel(TWIRlang.feat_strings[h])
-                .setSelected(TWIR.storage.getFeat(h)).appendTo(l), l.append('<br><div style="height:5px;" />')) : h.match("pop_") ? (this.gui.check[h] =
-                (new west.gui.Checkbox).setLabel(TWIRlang.feat_strings[h]).setSelected(TWIR.storage.getFeat(h)).appendTo(c), c.append(
-                  '<br><div style="height:5px;" />')) : h.match("mw_") && "mw_clear_time" !== h ? (this.gui.check[h] = (new west.gui.Checkbox).setLabel(
-                "mw_enabled" === h ? s(TWIRlang.features.enable_addon, '"' + TWIRlang.market_watcher.add_name + '"') + " (" + Game.worldName + ")" :
-                TWIRlang.feat_strings[h]).setSelected(TWIR.storage.getFeat(h)).appendTo(I), I.append('<br><div style="height:5px;" />')) : (this.gui
-                .check[h] = (new west.gui.Checkbox).setLabel(TWIRlang.feat_strings[h]).setSelected(TWIR.storage.getFeat(h)).appendTo(d), d.append(
-                  '<br><div style="height:5px;" />'));
-              for (var u in e.gui.check) e.gui.check[u].divMain.click(function(e)
+                d = $("<div/>"),
+                h = ["inv_menu_size", "mw_clear_time", "mw_scan_limit"];
+              for (var u in TWIR.storage.features) h.includes(u) || (u.match("inv_") ? (this.gui.check[u] = (new west.gui.Checkbox).setLabel(TWIRlang
+                .feat_strings[u]).setSelected(TWIR.storage.getFeat(u)).appendTo(l), l.append('<br><div style="height:5px;" />')) : u.match("pop_") ? (
+                this.gui.check[u] = (new west.gui.Checkbox).setLabel(TWIRlang.feat_strings[u]).setSelected(TWIR.storage.getFeat(u)).appendTo(c), c
+                .append('<br><div style="height:5px;" />')) : u.match("mw_") ? (this.gui.check[u] = (new west.gui.Checkbox).setLabel("mw_enabled" ===
+                u ? s(TWIRlang.features.enable_addon, '"' + TWIRlang.market_watcher.add_name + '"') + " (" + Game.worldName + ")" : TWIRlang
+                .feat_strings[u]).setSelected(TWIR.storage.getFeat(u)).appendTo(I), I.append('<br><div style="height:5px;" />')) : (this.gui.check[
+                u] = (new west.gui.Checkbox).setLabel(TWIRlang.feat_strings[u]).setSelected(TWIR.storage.getFeat(u)).appendTo(d), d.append(
+                  '<br><div style="height:5px;" />')));
+              for (var m in e.gui.check) e.gui.check[m].divMain.click(function(e)
               {
                 var t = $(this).data("c");
                 t ? i -= 1 : i += 1, a(), $(this).data("c", !t)
               });
-              var m = (new west.gui.Combobox).setWidth(50);
-              m.addItem(2592e6, 2592e3.getTime2EndToken()), m.addItem(7776e6, 7776e3.getTime2EndToken()), m.addItem(15552e6, 15552e3.getTime2EndToken()),
-                m.addItem(31104e6, 31104e3.getTime2EndToken()), m.select(TWIR.storage.getFeat("mw_clear_time"));
-              for (var C = (new west.gui.Combobox).setWidth(50), w = 7; w <= 14; w++) C.addItem(w, w.toString());
-              C.select(TWIR.storage.getFeat("inv_menu_size"));
-              for (var b = (new west.gui.Combobox).setWidth(50), f = 0, v = 0; v < 10; v++) f += 10, b.addItem(f, f.toString());
-              for (var h in b.select(TWIR.storage.getFeat("mw_scan_limit")), l.prepend("<span>" + TWIRlang.feat_strings.inv_menu_size + "</span>", C
-                  .getMainDiv().css("margin-left", "10px")), TWIR.Inventory.sort_options) p.append(this.createSortRow(TWIR.Inventory.sort_options[h], h));
+              var C = (new west.gui.Combobox).setWidth(50);
+              C.addItem(2592e6, 2592e3.getTime2EndToken()), C.addItem(7776e6, 7776e3.getTime2EndToken()), C.addItem(15552e6, 15552e3.getTime2EndToken()),
+                C.addItem(31104e6, 31104e3.getTime2EndToken()), C.select(TWIR.storage.getFeat("mw_clear_time"));
+              for (var w = (new west.gui.Combobox).setWidth(50), b = 7; b <= 14; b++) w.addItem(b, b.toString());
+              w.select(TWIR.storage.getFeat("inv_menu_size"));
+              for (var f = (new west.gui.Combobox).setWidth(50), v = 0, y = 0; y < 10; y++) v += 10, f.addItem(v, v.toString());
+              for (var u in f.select(TWIR.storage.getFeat("mw_scan_limit")), l.prepend("<span>" + TWIRlang.feat_strings.inv_menu_size + "</span>", w
+                  .getMainDiv().css("margin-left", "10px")), TWIR.Inventory.sort_options) p.append(this.createSortRow(TWIR.Inventory.sort_options[u], u));
               t.appendContent(
                 '<div style="font-weight: bold;margin-top: 15px;text-shadow: 2px 1px 2px #fae3ad;color: #5e321a;font-size: 16px;margin-bottom: 10px;">' +
                 TWIRlang.features.inventory_menus + "</div>"), t.appendContent(l), t.appendContent($(
@@ -1210,10 +1211,10 @@
                 TWIRlang.features.popup_tooltips + "</div>"), t.appendContent(c), t.appendContent(
                 '<hr><div class="twir_pref_mw" style="font-weight: bold;margin-top: 15px;text-shadow: 2px 1px 2px #fae3ad;color: #5e321a;font-size: 16px;margin-bottom: 10px;">' +
                 TWIRlang.market_watcher.add_name + "</div>"), t.appendContent("<span>" + TWIRlang.feat_strings.mw_clear_time + "</span>").appendContent(
-                m.getMainDiv().css(
+                C.getMainDiv().css(
                 {
                   "margin-left": "10px"
-                })), t.appendContent("<br>"), t.appendContent("<span>" + TWIRlang.feat_strings.mw_scan_limit + "</span>").appendContent(b.getMainDiv()
+                })), t.appendContent("<br>"), t.appendContent("<span>" + TWIRlang.feat_strings.mw_scan_limit + "</span>").appendContent(f.getMainDiv()
                 .css(
                 {
                   "margin-left": "10px"
@@ -1226,13 +1227,13 @@
                 "margin-left": "20px",
                 width: "680px"
               });
-              var y = this.gui.save_btn = new west.gui.Button(TWIRlang.organizing.save, function()
+              var k = this.gui.save_btn = new west.gui.Button(TWIRlang.organizing.save, function()
               {
                 if (void 0 !== localStorage)
                 {
                   for (var t in e.gui.check) TWIR.storage.features[t] = e.gui.check[t].isSelected();
-                  if (localStorage.setItem("scriptsLang", n.getValue()), TWIR.storage.features.inv_menu_size = parseInt(C.getValue()), TWIR.storage
-                    .features.mw_clear_time = parseInt(m.getValue()), TWIR.storage.features.mw_scan_limit = parseInt(b.getValue()), localStorage
+                  if (localStorage.setItem("scriptsLang", n.getValue()), TWIR.storage.features.inv_menu_size = parseInt(w.getValue()), TWIR.storage
+                    .features.mw_clear_time = parseInt(C.getValue()), TWIR.storage.features.mw_scan_limit = parseInt(f.getValue()), localStorage
                     .setItem("twir_features", JSON.stringify(TWIR.storage.features)), TWIR.Inventory.sort_options = $.extend(
                     {}, e.sort_options_temp), TWIR.storage.save("twir_sort_options", e.sort_options_temp), i > 0)
                   {
@@ -1247,7 +1248,7 @@
                 else new UserMessage(TWIRlang.informative.storage_error + "!", UserMessage.TYPE_ERROR).show()
               });
               $(this.gui.window.getContentPane()).append(t.getMainDiv(), '<div style="position: absolute;left: 20px;bottom: 5px;font-size: 10px;">' + TWIR
-                .getStorage() + "</div>", $('<div style="position: absolute;right: 50px;bottom: -6px;"/>').append(y.getMainDiv())), $(this.gui.window
+                .getStorage() + "</div>", $('<div style="position: absolute;right: 50px;bottom: -6px;"/>').append(k.getMainDiv())), $(this.gui.window
                 .getContentPane()).hide().fadeIn()
             }
             catch (e)
