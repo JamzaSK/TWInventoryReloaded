@@ -61,14 +61,14 @@
         "custom": "Eigene",
         "set_window": "Set-Liste",
         "item_use": "Verbrauchen",
-        "bonus_items": "Bonus products",
-        "useable_items": "Useable",
-        "crafting_items": "Crafting",
+        "bonus_items": "Bonus-Produkte",
+        "useable_items": "Verbrauchbar",
+        "crafting_items": "Handwerk",
         "buffs_items": "Buffs",
-        "search_new": "Search Equipment For",
-        "search_title": "Equipment",
+        "search_new": "Suche",
+        "search_title": "Rucksack",
         "debuff": "Debuff",
-        "use_effect": "Usage effect"
+        "use_effect": "Effekt"
     },
     "tooltips": {
         "jobdrop": "Findbar",
@@ -94,10 +94,10 @@
         "uniq_sellers": "%1 verschiedene Anbieter",
         "job_danger": "Gefahr",
         "open_title": "Öffne und zentriere %1 auf der Karte",
-        "opener_tooltip": "SHIFT+Click to mass open",
-        "learnable_recipe": "Learnable recipe",
-        "seen_with_limit": "Seen %1 times and more..",
-        "most_offers": "Most selled by %1"
+        "opener_tooltip": "SHIFT+Klick für Multi-Öffnen",
+        "learnable_recipe": "Erlenbares Rezept",
+        "seen_with_limit": "%1 Mal gesehen",
+        "most_offers": "Meiste von %1 verkauft"
     },
     "organizing": {
         "none": "Keine",
@@ -138,17 +138,17 @@
         "setitems": "Set-Items",
         "yield": "Produkte",
         "recipe": "Rezepte",
-        "pin": "Pin it",
-        "unpin": "Unpin it",
-        "color_picker_title": "Pick a Color",
-        "exact": "Exact",
-        "wearable_only": "Usable by me",
-        "lvl_range": "Level Range",
-        "save": "Save",
-        "save_n_reload": "Save & reload",
-        "sort_damage": "Damage",
-        "sort_values": "Its values",
-        "exclude": "Exclude"
+        "pin": "Anpinnen",
+        "unpin": "Loslösen",
+        "color_picker_title": "Farbe wählen",
+        "exact": "Exakt",
+        "wearable_only": "Anziehbar",
+        "lvl_range": "Level-Bereich",
+        "save": "Speichern",
+        "save_n_reload": "Speichern & Neu laden",
+        "sort_damage": "Schaden",
+        "sort_values": "Value",
+        "exclude": "Ausgenommen"
     },
     "stats": {
         "stats": "Statistik",
@@ -200,24 +200,24 @@
         "no_select": "Kein Item ausgewählt",
         "buffs": "Buffs",
         "push_notification_text_single": "%tem wurde von %player für %dollars gesehen",
-        "threshold": "Threshold",
-        "below_threshold": "Below Threshold",
-        "above_threshold": "Above Threshold",
-        "bid_threshold": "Bid Threshold",
-        "buyout_threshold": "Buyout Threshold",
-        "filter_auctions": "Filter Auctions",
-        "seller_name": "Seller Name",
-        "town_name": "Town Name",
-        "cost_range": "Cost Range",
-        "push_notification_text": "There are %1 new offers on the market that match your watch list"
+        "threshold": "Grenzwert",
+        "below_threshold": "Unter Grenzwert",
+        "above_threshold": "Über Grenzwert",
+        "bid_threshold": "Gebot Grenzwert",
+        "buyout_threshold": "Sofortkauf Grenzwert",
+        "filter_auctions": "Auktionen filtern",
+        "seller_name": "Verkäufer-Name",
+        "town_name": "Stadtname",
+        "cost_range": "Kosten-Berich",
+        "push_notification_text": "Es hat %1 neue Angebote deiner verfolgten Items"
     },
     "features": {
         "preferences": "Einstellungen",
         "inventory_menus": "Inventar / Menü",
         "popup_tooltips": "Erweitertes Item-Popup",
         "other": "Weitere Einstellungen",
-        "enable_addon": "Enable %1 on this world",
-        "sort_inv": "Custom sort"
+        "enable_addon": "Aktiviere %1 in dieser Welt",
+        "sort_inv": "Benutzerdefinierte Sortierung"
     },
     "feat_strings": {
         "pop_item_id": "Zeige Item-ID",
@@ -259,11 +259,11 @@
         "inv_cld_reminder_playsound": "Erinnerungston stummschalten",
         "pop_quest_tooltip": "Zeige Anforderungen und Belohnungen im Pop-Up der Quests",
         "pop_job_tooltip": "Verbessere das Pop-Up der Arbeiten",
-        "fb_char_icons": "Class specific icons in the fortbattle preparation window",
-        "mw_recipes": "Watch learnable recipes",
-        "mw_buyouts_only": "Buyouts only",
-        "mw_push_notifications": "Enable push notifications",
-        "mw_scan_limit": "Maximal number of saved scans (per item) from a different players"
+        "fb_char_icons": "Charakterklasse-Icon im FK-Vorbereitungsfenster",
+        "mw_recipes": "Rezepte verfolgen",
+        "mw_buyouts_only": "Nur Sofortkauf",
+        "mw_push_notifications": "Benachrichtigungen erlauben",
+        "mw_scan_limit": "Maximum der gespeicherten Scans anderer Spieler"
     },
     "keyWords": {
         "xmas": [
@@ -323,9 +323,9 @@
         "next": "Nächste",
         "cancel": "Abbrechen",
         "quest_update": "Aktuelle Quests geladen",
-        "later": "Later",
-        "reset": "Reset",
-        "u_sure": "Are you sure?"
+        "later": "Später",
+        "reset": "Zurücksetzen",
+        "u_sure": "Sicher?"
     },
     "calc": {
         "regen": "Regeneration",
@@ -363,7 +363,7 @@
         "switch_speed_btn": "Geschwindigkeit-Set"
     },
     "update_changelog": "Changelog",
-    "donate_text_2": "Wenn dir das Script gefällt und es weiterhin verbessert werden soll, überlege dir eine %donation%.",
+    "donate_text_2": "Wenn dir das Script gefällt und es weiterhin verbessert werden soll, überlege dir eine Spende.",
     "event_helper": {
         "already_sent": "%event_curr an %1 von %2 Freunden gesendet",
         "all_sent": "%event_curr an alle Freunde gesendet",
@@ -389,26 +389,26 @@
     },
     "script_desc": "Verbessertes Inventar und Tools für The West!",
     "fortbattle": {
-        "add_name": "Fortbattle Tracker",
-        "round": "Round",
-        "name": "Player Name",
-        "health": "Health points",
-        "damage_inflicted": "Damage inflicted",
-        "last_hit": "Last hit",
-        "target_name": "Hit target",
-        "miss_shot": "MISS",
+        "add_name": "Fortkampf-Tracker",
+        "round": "Runde",
+        "name": "Spielername",
+        "health": "Lebenspunkte",
+        "damage_inflicted": "Schaden gemacht",
+        "last_hit": "Letzter Treffer",
+        "target_name": "Ziel",
+        "miss_shot": "Verfehlt",
         "ko_shot": "KO",
-        "damage_taken": "Damage taken",
-        "per_round": "per round",
-        "overall": "overall",
-        "hits_taken": "Hits taken",
-        "dodged_shots": "Dodged shots",
-        "crit": "Critical hits",
-        "overview": "Overview",
-        "hits": "Hits",
-        "dodges": "Dodges",
-        "avg_dmg": "Average damage per hit",
-        "wep_breakdown": "Weapons breakdown",
-        "avg_wep_dmg": "Average gun damage"
+        "damage_taken": "Eingesteckter Schaden",
+        "per_round": "pro Runde",
+        "overall": "zusammen",
+        "hits_taken": "Eingesteckte Treffer",
+        "dodged_shots": "Schüssen ausgewichen",
+        "crit": "Kritische Treffer",
+        "overview": "Übersicht",
+        "hits": "Treffer",
+        "dodges": "Ausweicher",
+        "avg_dmg": "Durschnittsschaden pro Treffer",
+        "wep_breakdown": "Waffen-Aufstellung",
+        "avg_wep_dmg": "Waffen-Durschnittsschaden"
     }
 }
