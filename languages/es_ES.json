@@ -61,14 +61,14 @@
         "custom": "Personalizado",
         "set_window": "Establecer lista",
         "item_use": "Usar",
-        "bonus_items": "Bonus products",
-        "useable_items": "Useable",
-        "crafting_items": "Crafting",
+        "bonus_items": "Bonus de productos",
+        "useable_items": "Utilizable",
+        "crafting_items": "Elaboración",
         "buffs_items": "Buffs",
-        "search_new": "Search Equipment For",
-        "search_title": "Equipment",
-        "debuff": "Debuff",
-        "use_effect": "Usage effect"
+        "search_new": "Buscar equipo para",
+        "search_title": "Mochila",
+        "debuff": "Quitar Buff",
+        "use_effect": "Efecto de uso"
     },
     "tooltips": {
         "jobdrop": "Obtenibles desde trabajo",
@@ -96,8 +96,8 @@
         "open_title": "Abrir %1 y lo centra en el mapa",
         "opener_tooltip": "SHIFT+Clic para abrir en masa",
         "learnable_recipe": "Receta aprendible",
-        "seen_with_limit": "Seen %1 times and more..",
-        "most_offers": "Most selled by %1"
+        "seen_with_limit": "Visto %1 veces y más...",
+        "most_offers": "Más vendido por %1"
     },
     "organizing": {
         "none": "Ninguno",
@@ -141,14 +141,14 @@
         "pin": "Poner chicheta",
         "unpin": "Quitar chincheta",
         "color_picker_title": "Elige un color",
-        "exact": "Exact",
-        "wearable_only": "Usable by me",
-        "lvl_range": "Level Range",
-        "save": "Save",
-        "save_n_reload": "Save & reload",
-        "sort_damage": "Damage",
-        "sort_values": "Its values",
-        "exclude": "Exclude"
+        "exact": "Exacto",
+        "wearable_only": "Utilizable por mí",
+        "lvl_range": "Rango de nivel",
+        "save": "Guardar",
+        "save_n_reload": "Guardar y recargar",
+        "sort_damage": "Daño",
+        "sort_values": "Sus valores",
+        "exclude": "Excluir"
     },
     "stats": {
         "stats": "Estadísticas",
@@ -200,24 +200,24 @@
         "no_select": "Ningún artículo seleccionado",
         "buffs": "Buffs",
         "push_notification_text_single": "%item ha sido visto de %player por %dollars",
-        "threshold": "Threshold",
-        "below_threshold": "Below Threshold",
-        "above_threshold": "Above Threshold",
-        "bid_threshold": "Bid Threshold",
-        "buyout_threshold": "Buyout Threshold",
-        "filter_auctions": "Filter Auctions",
-        "seller_name": "Seller Name",
-        "town_name": "Town Name",
-        "cost_range": "Cost Range",
-        "push_notification_text": "There are %1 new offers on the market that match your watch list"
+        "threshold": "Límite",
+        "below_threshold": "Límite Inferior",
+        "above_threshold": "Límite Superior",
+        "bid_threshold": "Límite de Oferta",
+        "buyout_threshold": "Límite de Compra",
+        "filter_auctions": "Filtro de Subasta",
+        "seller_name": "Nombre del Vendedor",
+        "town_name": "Nombre Ciudad",
+        "cost_range": "Rango de Coste",
+        "push_notification_text": "Hay %1 nuevas ofertas en el mercado que coinciden con su lista de seguimiento"
     },
     "features": {
         "preferences": "Preferencias",
         "inventory_menus": "Inventario / Menús",
         "popup_tooltips": "Consejos",
         "other": "Otras preferencias",
-        "enable_addon": "Enable %1 on this world",
-        "sort_inv": "Custom sort"
+        "enable_addon": "Habilitar %1 en este mundo",
+        "sort_inv": "Ordenación personalizada"
     },
     "feat_strings": {
         "pop_item_id": "Mostrar la Id del artículo",
@@ -261,9 +261,9 @@
         "pop_job_tooltip": "Mejorar ventana emergente de trabajo",
         "fb_char_icons": "Iconos específicos de carácter en la ventana de preparación de nbatalla",
         "mw_recipes": "Mirar recetas aprendibles",
-        "mw_buyouts_only": "Buyouts only",
-        "mw_push_notifications": "Enable push notifications",
-        "mw_scan_limit": "Maximal number of saved scans (per item) from a different players"
+        "mw_buyouts_only": "Solo compras",
+        "mw_push_notifications": "Habilitar notificaciones push",
+        "mw_scan_limit": "Número máximo de escaneos (por artículo) de jugadores diferentes"
     },
     "keyWords": {
         "xmas": [
@@ -326,7 +326,7 @@
         "quest_update": "Búsquedas actuales cargadas",
         "later": "Más tarde",
         "reset": "Reiniciar",
-        "u_sure": "Are you sure?"
+        "u_sure": "¿Estás seguro?"
     },
     "calc": {
         "regen": "Regeneración",
