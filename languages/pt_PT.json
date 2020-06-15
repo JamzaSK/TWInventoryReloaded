@@ -5,7 +5,7 @@
     "script_version": "Versão",
     "script_revision": "Revisão",
     "changes": "O que há de novo?",
-    "translator": "tradutor: jccwest, kimba",
+    "translator": "tradutor: jccwest, kimba, venozmat",
     "language": "Idioma",
     "download": "Transferir agora",
     "no_ads": "Sem anúncios",
@@ -20,7 +20,7 @@
         "labor_points": "Pontos de trabalho",
         "duels": "Duelos",
         "energy": "Energia",
-        "skills": "Pontos de hablidade",
+        "skills": "Pontos de habilidade",
         "fort_battles": "Batalha de forte",
         "speed": "Velocidade",
         "health": "Pontos de saúde",
@@ -67,8 +67,8 @@
         "buffs_items": "Buffs",
         "search_new": "Pesquisar equipamento para",
         "search_title": "Equipamento",
-        "debuff": "Debuff",
-        "use_effect": "Usage effect"
+        "debuff": "Decremento",
+        "use_effect": "Efeito de uso"
     },
     "tooltips": {
         "jobdrop": "Sai em trabalhos",
@@ -96,8 +96,8 @@
         "open_title": "Abrir %1 e centrar no mapa",
         "opener_tooltip": "SHIFT+Clique para abrir",
         "learnable_recipe": "Receita",
-        "seen_with_limit": "Seen %1 times and more..",
-        "most_offers": "Most selled by %1"
+        "seen_with_limit": "Visto %1 de vezes e mais..",
+        "most_offers": "Mais vendidos por %1"
     },
     "organizing": {
         "none": "Nenhum",
@@ -146,7 +146,7 @@
         "lvl_range": "Níveis",
         "save": "Salvar",
         "save_n_reload": "\nSalvar e recarregar",
-        "sort_damage": "Damage",
+        "sort_damage": "Dano",
         "sort_values": "Seus valores",
         "exclude": "Excluir"
     },
@@ -203,21 +203,21 @@
         "threshold": "Limite",
         "below_threshold": "Abaixo do Preço",
         "above_threshold": "Acima do Preço",
-        "bid_threshold": "Bid Threshold",
-        "buyout_threshold": "Buyout Threshold",
-        "filter_auctions": "Filter Auctions",
+        "bid_threshold": "Limite de lances",
+        "buyout_threshold": "Limite de compra",
+        "filter_auctions": "Filtra leilões",
         "seller_name": "Nome do Vendedor",
         "town_name": "Nome da cidade",
-        "cost_range": "Cost Range",
-        "push_notification_text": "There are %1 new offers on the market that match your watch list"
+        "cost_range": "Variação de custo",
+        "push_notification_text": "Existem %1 novas ofertas no mercado que estão marcados em sua lista de acompanhamento"
     },
     "features": {
         "preferences": "Preferências",
         "inventory_menus": "Inventários / Menus",
         "popup_tooltips": "Dicas",
         "other": "Outras preferências",
-        "enable_addon": "Enable %1 on this world",
-        "sort_inv": "Custom sort"
+        "enable_addon": "Ativar %1 nesse mundo",
+        "sort_inv": "Ordenar customizado"
     },
     "feat_strings": {
         "pop_item_id": "Mostrar ID do artigo",
@@ -261,9 +261,9 @@
         "pop_job_tooltip": "Melhoria de trabalho em pop-up",
         "fb_char_icons": "Ícones específicos da classe na janela da batalhas fortes",
         "mw_recipes": "Seguir receitas",
-        "mw_buyouts_only": "Buyouts only",
-        "mw_push_notifications": "Enable push notifications",
-        "mw_scan_limit": "Maximal number of saved scans (per item) from a different players"
+        "mw_buyouts_only": "Apenas compras",
+        "mw_push_notifications": "Activar notificações",
+        "mw_scan_limit": "Máximo de buscas salvas (por item) de diferentes jogadores"
     },
     "keyWords": {
         "xmas": [
@@ -327,7 +327,7 @@
         "quest_update": "Aventuras carregadas actualmente",
         "later": "Mais tarde",
         "reset": "Repôr",
-        "u_sure": "Are you sure?"
+        "u_sure": "Tens certeza?"
     },
     "calc": {
         "regen": "Regeneração",
