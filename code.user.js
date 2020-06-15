@@ -1930,8 +1930,8 @@
           },
           notify: function()
           {
-            if (TWIR._playable && !0 !== TWIR.storage.getFeat("inv_cld_reminder_playsound") && !("hidden" in document && !1 === document.hidden))
-            {
+            if (TWIR._playable && !0 !== TWIR.storage.getFeat("inv_cld_reminder_playsound") && !("hidden" in document && !1 === document.hidden && document
+                      .hasFocus())) {
               var e = TWIR.reminder_alert;
               e.addEventListener("ended", function()
               {
@@ -5284,7 +5284,8 @@
                 for (var l in i)
                   for (var p = 0; p < i[l].length; p++)
                     for (var c = 0; c < s[l].length; c++) void 0 !== s[l] && void 0 !== s[l][c].quests && s[l][c].posx == i[l][p].posx && s[l][
-                      c].posy == i[l][p].posy && (i[l][p].quests = s[l][c].quests);
+                      c
+                    ].posy == i[l][p].posy && (i[l][p].quests = s[l][c].quests);
               TWIR.storage.NPC = i, void 0 !== e && e()
             })
           })
@@ -7143,38 +7144,38 @@
               }
             }
           },
-          notify: function()
-          {
-            if (TWIR._playable && !0 !== TWIR.storage.getFeat("mw_alert_playsound") && !("hidden" in document && !1 === document.hidden && document
-                .hasFocus()))
-            {
-              var e = TWIR.mw_alert;
-              e.addEventListener("ended", function()
-              {
-                this.pause(), this.currentTime = 0
-              }), e.play()
-            }
+          notify: function () {
+              if (TWIR._playable && !0 !== TWIR.storage.getFeat("mw_alert_playsound") && !("hidden" in document && !1 === document.hidden && document
+                      .hasFocus())) {
+                  var e = TWIR.mw_alert;
+                  e.addEventListener("ended", function () {
+                      this.pause(),
+                      this.currentTime = 0
+                  }),
+                  e.play()
+              }
           },
-          pushNotify: function(e, t)
-          {
-            if (TWIR.storage.getFeat("mw_push_notifications") && !("hidden" in document && !1 === document.hidden && document.hasFocus()) && void 0 !==
-              window.Notification && "granted" === Notification.permission)
-            {
-              var i = new Notification(e,
-              {
-                body: t,
-                icon: TWIR.images.market_watcher_notification,
-                silent: !0
-              });
-              i.onclick = function()
-              {
-                window.focus()
-              }, $(window).one("focus", function()
-              {
-                i.close()
-              })
-            }
+          pushNotify: function (i, o) {
+              var n = this;
+              if (!1 !== TWIR.storage.getFeat("mw_push_notifications") && window.Notification && !("hidden" in document && !1 === document.hidden && document.hasFocus()))
+                  if ("granted" === Notification.permission) {
+                      var t = new Notification(i, {
+                              body: o,
+                              icon: TWIR.images.market_watcher_notification,
+                              silent: !0
+                          });
+                      t.onclick = function () {
+                          window.focus()
+                      },
+                      $(window).one("focus", function () {
+                          t.close()
+                      })
+                  } else
+                      "denied" !== Notification.permission && Notification.requestPermission(function (t) {
+                          n.pushNotify(i, o)
+                      })
           },
+
           showAlert: function()
           {
             var e = this;
@@ -9600,7 +9601,8 @@
                   var s = a.obj;
                   s.bonus.item;
                   if (o.length) TWIR.storage.set_n_event[s.set] && TWIR.storage.set_n_event[s.set][0] === t && TWIR.storage.set_n_event[s.set][
-                    1] === o && n.push(a);
+                    1
+                  ] === o && n.push(a);
                   else switch (t.toLowerCase())
                   {
                     case "allitems":
