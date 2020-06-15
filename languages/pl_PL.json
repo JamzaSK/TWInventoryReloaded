@@ -67,8 +67,8 @@
         "buffs_items": "Wzmocnienia",
         "search_new": "Przeszukaj ekwipunek po",
         "search_title": "Ekwipunek",
-        "debuff": "Debuff",
-        "use_effect": "Usage effect"
+        "debuff": "Osłabenie",
+        "use_effect": "Efekt użycia"
     },
     "tooltips": {
         "jobdrop": "Znalezione w pracy",
@@ -96,8 +96,8 @@
         "open_title": "Otwórz %1 i scentruj na mapie",
         "opener_tooltip": "SHIFT+Kliknięcie by otworzyć wiele",
         "learnable_recipe": "Możliwe do nauczenia przepisy",
-        "seen_with_limit": "Seen %1 times and more..",
-        "most_offers": "Most selled by %1"
+        "seen_with_limit": "Widziano %1 razy",
+        "most_offers": "Najwięcej ofert od %1"
     },
     "organizing": {
         "none": "Nic",
@@ -148,7 +148,7 @@
         "save_n_reload": "Zapisz i przeładuj",
         "sort_damage": "Obrażenia",
         "sort_values": "Jego wartości",
-        "exclude": "Exclude"
+        "exclude": "Wyklucz"
     },
     "stats": {
         "stats": "Statystyki",
@@ -208,8 +208,8 @@
         "filter_auctions": "Filtruj aukcje",
         "seller_name": "Nazwa sprzedającego",
         "town_name": "Nazwa miasta",
-        "cost_range": "Zasięg",
-        "push_notification_text": "There are %1 new offers on the market that match your watch list"
+        "cost_range": "Cena",
+        "push_notification_text": "Znaleziono %1 nowych ofert na rynku które pasują do twojej listy obserwowanych"
     },
     "features": {
         "preferences": "Preferencje",
@@ -262,8 +262,8 @@
         "fb_char_icons": "Ikony klasy postaci w przygotowaniach do bitwy o fort",
         "mw_recipes": "Obserwuj możliwe do nauczenia przepisy",
         "mw_buyouts_only": "Tylko \"kup teraz\"",
-        "mw_push_notifications": "Enable push notifications",
-        "mw_scan_limit": "Maximal number of saved scans (per item) from a different players"
+        "mw_push_notifications": "Włącz powiadomienia push",
+        "mw_scan_limit": "Maksymalna ilość zapisanych skanów(każdego przedmiotu) od innych graczy"
     },
     "keyWords": {
         "xmas": [
