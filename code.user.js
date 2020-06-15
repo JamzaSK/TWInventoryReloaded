@@ -31,7 +31,7 @@
 // @description:tr The-west için daha iyi envanter ve araçlar!
 
 // @author Jamza (CZ14)
-// @version 2.196
+// @version 2.197
 // @license GPL-3.0 http://www.gnu.org/licenses/gpl-3.0.txt
 
 // @include http*://*.the-west.*/game.php*
@@ -71,7 +71,7 @@
     isDefined(window.TWIR) ? new west.gui.Dialog(TWIR.name, '<div class="txcenter"><b><br>The UserScript ' + TWIR.name +
         " is installed twice. You will have to uninstall older version for the script to work properly!</br></b></div>", west.gui.Dialog.SYS_WARNING)
       .addButton("OK").show() : (TWIRlang = {}, TWIR = {
-        version: "2.196",
+        version: "2.197",
         revision: "19",
         name: "TW Inventory Reloaded",
         author: "Jamza",
@@ -84,8 +84,15 @@
         jobsUrl: "https://jamzask.github.io/TWInventoryReloaded/json/jobs_data.json",
         compressUrl: "https://jamzask.github.io/TWInventoryReloaded/js/lz-string.min.js",
         calcUrl: "https://jamzask.github.io/TWInventoryReloaded/js/calculator.min.js",
-        translations:
+        langs:
         {
+          br:
+          {
+            icon: "0 -1009px",
+            translate: "Português (pt-br)",
+            url: "https://raw.githubusercontent.com/jamzask/TWInventoryReloaded/master/languages/pt_BR.json",
+            translator: "tradutor: Venozmat"
+          },
           cs:
           {
             icon: "0 -785px",
@@ -93,40 +100,12 @@
             url: "https://raw.githubusercontent.com/jamzask/TWInventoryReloaded/master/languages/cs_CZ.json",
             translator: "překlad: TWIR"
           },
-          en:
+          de:
           {
-            icon: "0 -721px",
-            translate: "English (en)",
-            url: "https://raw.githubusercontent.com/jamzask/TWInventoryReloaded/master/languages/en_EN.json",
-            translator: "translator: TWIR"
-          },
-          sk:
-          {
-            icon: "0 -817px",
-            translate: "Slovenčina (sk)",
-            url: "https://raw.githubusercontent.com/jamzask/TWInventoryReloaded/master/languages/sk_SK.json",
-            translator: "preklad: TWIR"
-          },
-          pl:
-          {
-            icon: "0 -1201px",
-            translate: "Polski (pl)",
-            url: "https://raw.githubusercontent.com/jamzask/TWInventoryReloaded/master/languages/pl_PL.json",
-            translator: "Przetłumaczył: Wojcieszy, mxj"
-          },
-          es:
-          {
-            icon: "0 -1393px",
-            translate: "Español (es)",
-            url: "https://raw.githubusercontent.com/jamzask/TWInventoryReloaded/master/languages/es_ES.json",
-            translator: "traductor: pepe100"
-          },
-          it:
-          {
-            icon: "0 -1297px",
-            translate: "Italiano (it)",
-            url: "https://raw.githubusercontent.com/jamzask/TWInventoryReloaded/master/languages/it_IT.json",
-            translator: "Traduttore: Billy-AR"
+            icon: "0 -1105px",
+            translate: "Deutsch (de)",
+            url: "https://raw.githubusercontent.com/jamzask/TWInventoryReloaded/master/languages/de_DE.json",
+            translator: "Übersetzer: Tom Robert"
           },
           el:
           {
@@ -135,12 +114,19 @@
             url: "https://raw.githubusercontent.com/jamzask/TWInventoryReloaded/master/languages/el_GR.json",
             translator: "Μεταφραστής: Timemod Herkumo"
           },
-          de:
+          en:
           {
-            icon: "0 -1105px",
-            translate: "Deutsch (de)",
-            url: "https://raw.githubusercontent.com/jamzask/TWInventoryReloaded/master/languages/de_DE.json",
-            translator: "Übersetzer: Tom Robert"
+            icon: "0 -721px",
+            translate: "English (en)",
+            url: "https://raw.githubusercontent.com/jamzask/TWInventoryReloaded/master/languages/en_EN.json",
+            translator: "translator: TWIR"
+          },
+          es:
+          {
+            icon: "0 -1393px",
+            translate: "Español (es)",
+            url: "https://raw.githubusercontent.com/jamzask/TWInventoryReloaded/master/languages/es_ES.json",
+            translator: "traductor: pepe100"
           },
           fr:
           {
@@ -156,26 +142,33 @@
             url: "https://raw.githubusercontent.com/jamzask/TWInventoryReloaded/master/languages/hu_HU.json",
             translator: "fordító: Aviendha"
           },
-          ru:
+          it:
           {
-            icon: "0 -913px",
-            translate: "Русский (ru)",
-            url: "https://raw.githubusercontent.com/jamzask/TWInventoryReloaded/master/languages/ru_RU.json",
-            translator: "переводчик Luntik"
+            icon: "0 -1297px",
+            translate: "Italiano (it)",
+            url: "https://raw.githubusercontent.com/jamzask/TWInventoryReloaded/master/languages/it_IT.json",
+            translator: "Traduttore: Billy-AR"
+          },
+          nl:
+          {
+            icon: "0 -689px",
+            translate: "Dutch (nl)",
+            url: "https://raw.githubusercontent.com/jamzask/TWInventoryReloaded/master/languages/nl_NL.json",
+            translator: "vertaler: Mike, Jesse"
+          },
+          pl:
+          {
+            icon: "0 -1201px",
+            translate: "Polski (pl)",
+            url: "https://raw.githubusercontent.com/jamzask/TWInventoryReloaded/master/languages/pl_PL.json",
+            translator: "Przetłumaczył: Wojcieszy, mxj"
           },
           pt:
           {
             icon: "0 -849px",
             translate: "Português (pt)",
             url: "https://raw.githubusercontent.com/jamzask/TWInventoryReloaded/master/languages/pt_PT.json",
-            translator: "tradutor: jccwest, Tariik"
-          },
-          tr:
-          {
-            icon: "0 -1329px",
-            translate: "Türkçe (tr)",
-            url: "https://raw.githubusercontent.com/jamzask/TWInventoryReloaded/master/languages/tr_TR.json",
-            translator: "Çevirmen: RezieaL"
+            translator: "tradutor: jccwest, Tariik, Venozmat"
           },
           ro:
           {
@@ -184,12 +177,26 @@
             url: "https://raw.githubusercontent.com/jamzask/TWInventoryReloaded/master/languages/ro_RO.json",
             translator: "Traducator: Totalfs"
           },
-          nl:
+          ru:
           {
-            icon: "0 -689px",
-            translate: "Dutch (nl)",
-            url: "https://raw.githubusercontent.com/jamzask/TWInventoryReloaded/master/languages/nl_NL.json",
-            translator: "vertaler: Mike, Jesse"
+            icon: "0 -913px",
+            translate: "Русский (ru)",
+            url: "https://raw.githubusercontent.com/jamzask/TWInventoryReloaded/master/languages/ru_RU.json",
+            translator: "переводчик Luntik"
+          },
+          sk:
+          {
+            icon: "0 -817px",
+            translate: "Slovenčina (sk)",
+            url: "https://raw.githubusercontent.com/jamzask/TWInventoryReloaded/master/languages/sk_SK.json",
+            translator: "preklad: TWIR"
+          },
+          tr:
+          {
+            icon: "0 -1329px",
+            translate: "Türkçe (tr)",
+            url: "https://raw.githubusercontent.com/jamzask/TWInventoryReloaded/master/languages/tr_TR.json",
+            translator: "Çevirmen: RezieaL"
           }
         },
         mw_alert: new Audio(
@@ -345,7 +352,7 @@
         },
         initScript: function()
         {
-          isDefined(TheWestApi) ? TWIR.storage.fetchLang(function()
+          isDefined(TheWestApi) ? TWIR.storage.updateLang(function()
           {
             var e = TheWestApi.register("TWIR", TWIRlang.script_name, TWIR.minGame, TWIR.maxGame, TWIR.author, TWIR.website),
               t = (new west.gui.Scrollpane).appendContent(
@@ -442,19 +449,19 @@
             }
             else isDefined(a) && !1 === /[^\u0000-\u00ff]/.test(a) && (t ? sessionStorage.removeItem(e) : localStorage.removeItem(e))
           },
-          fetchLang: function(e)
+          updateLang: function(e)
           {
             var t = this,
-              i = TWIR.translations;
-            TWIR.lang = i[localStorage.getItem("scriptsLang")] ? localStorage.getItem("scriptsLang") : i[Game.locale.substr(0, 2)] ? Game.locale.substr(0,
-              2) : "en";
-            var a = this.fetch("twir_lang_" + TWIR.lang);
+              i = TWIR.langs,
+              a = [localStorage.getItem("scriptsLang"), Game.locale.substr(0, 2)];
+            TWIR.lang = i[a[0]] ? a[0] : "pt_BR" === Game.locale ? "br" : i[a[1]] ? a[1] : "en";
+            var n = this.fetch("twir_lang_" + TWIR.lang);
             $.getJSON(i[TWIR.lang].url).done(function(i)
             {
               TWIRlang = i, t.save("twir_lang_" + TWIR.lang, i), e && e()
-            }).fail(function(t, i, n)
+            }).fail(function(t, i, a)
             {
-              a ? (TWIRlang = a, e && e()) : TWIR.bugHunt(n)
+              n ? (TWIRlang = n, e && e()) : TWIR.bugHunt(a)
             })
           },
           loadCalc: function()
@@ -551,8 +558,8 @@
           },
           updateMarketData: function(e)
           {
-            var t = TWIR.storage.getFeat("mw_clear_time"),
-              i = TWIR.storage.getFeat("mw_scan_limit"),
+            var t = this.getFeat("mw_clear_time"),
+              i = this.getFeat("mw_scan_limit"),
               a = {},
               n = [];
             if (!e || !Array.isArray(e)) return n;
@@ -1150,39 +1157,41 @@
               this.sort_options_temp = $.extend(
               {}, TWIR.Inventory.sort_options);
               var n = (new west.gui.Combobox).setWidth(165),
-                o = {};
-              for (var A in Object.keys(TWIR.translations).sort().forEach(function(e)
-                {
-                  o[e] = TWIR.translations[e]
-                }), o) n.addItem(A, '<span title="' + o[A].translator +
+                o = [];
+              for (var A in TWIR.langs) o.push([A, TWIR.langs[A]]);
+              o.sort(function(e, t)
+              {
+                return e[1].translate.localeCompare(t[1].translate)
+              });
+              for (var r = 0; r < o.length; r++) n.addItem(o[r][0], '<span title="' + o[r][1].translator +
                 '" style="background: url(//portal-bar.innogamescdn.com/images/west-sprite_01.1541670091.png) no-repeat top left;height: 12px;padding-left: 25px;background-position:' +
-                o[A].icon + ';">' + o[A].translate + "</span>");
+                o[r][1].icon + ';">' + o[r][1].translate + "</span>");
               n.select(TWIR.lang), n.addListener(function(e)
               {
                 e !== TWIR.lang ? i += 1 : i -= 1, a()
               });
-              var r = $('<div style="width: 250px;position: absolute;right: 0px;top: 0px;"/>'),
-                g = $(
+              var g = $('<div style="width: 250px;position: absolute;right: 0px;top: 0px;"/>'),
+                l = $(
                   '<div style="font-weight: bold;margin-top: 5px;text-shadow: 2px 1px 2px #fae3ad;color: #5e321a;font-size: 16px;margin-bottom: 5px;">' +
                   TWIRlang.language + "</div>");
-              r.append((new west.gui.Groupframe).appendToContentPane(g, n.getMainDiv().css(
+              g.append((new west.gui.Groupframe).appendToContentPane(l, n.getMainDiv().css(
               {
                 "margin-bottom": "10px",
                 "margin-left": "10px"
-              })).getMainDiv()), t.getContentPane().append(r);
-              var l = $('<div style="max-width: 410px;"/>'),
-                p = $('<table style="display: none;"/>'),
-                c = $("<div/>"),
+              })).getMainDiv()), t.getContentPane().append(g);
+              var p = $('<div style="max-width: 410px;"/>'),
+                c = $('<table style="display: none;"/>'),
                 I = $("<div/>"),
                 d = $("<div/>"),
-                h = ["inv_menu_size", "mw_clear_time", "mw_scan_limit"];
-              for (var u in TWIR.storage.features) h.includes(u) || (u.match("inv_") ? (this.gui.check[u] = (new west.gui.Checkbox).setLabel(TWIRlang
-                .feat_strings[u]).setSelected(TWIR.storage.getFeat(u)).appendTo(l), l.append('<br><div style="height:5px;" />')) : u.match("pop_") ? (
-                this.gui.check[u] = (new west.gui.Checkbox).setLabel(TWIRlang.feat_strings[u]).setSelected(TWIR.storage.getFeat(u)).appendTo(c), c
-                .append('<br><div style="height:5px;" />')) : u.match("mw_") ? (this.gui.check[u] = (new west.gui.Checkbox).setLabel("mw_enabled" ===
-                u ? s(TWIRlang.features.enable_addon, '"' + TWIRlang.market_watcher.add_name + '"') + " (" + Game.worldName + ")" : TWIRlang
-                .feat_strings[u]).setSelected(TWIR.storage.getFeat(u)).appendTo(I), I.append('<br><div style="height:5px;" />')) : (this.gui.check[
-                u] = (new west.gui.Checkbox).setLabel(TWIRlang.feat_strings[u]).setSelected(TWIR.storage.getFeat(u)).appendTo(d), d.append(
+                h = $("<div/>"),
+                u = ["inv_menu_size", "mw_clear_time", "mw_scan_limit"];
+              for (var A in TWIR.storage.features) u.includes(A) || (A.match("inv_") ? (this.gui.check[A] = (new west.gui.Checkbox).setLabel(TWIRlang
+                .feat_strings[A]).setSelected(TWIR.storage.getFeat(A)).appendTo(p), p.append('<br><div style="height:5px;" />')) : A.match("pop_") ? (
+                this.gui.check[A] = (new west.gui.Checkbox).setLabel(TWIRlang.feat_strings[A]).setSelected(TWIR.storage.getFeat(A)).appendTo(I), I
+                .append('<br><div style="height:5px;" />')) : A.match("mw_") ? (this.gui.check[A] = (new west.gui.Checkbox).setLabel("mw_enabled" ===
+                A ? s(TWIRlang.features.enable_addon, '"' + TWIRlang.market_watcher.add_name + '"') + " (" + Game.worldName + ")" : TWIRlang
+                .feat_strings[A]).setSelected(TWIR.storage.getFeat(A)).appendTo(d), d.append('<br><div style="height:5px;" />')) : (this.gui.check[
+                A] = (new west.gui.Checkbox).setLabel(TWIRlang.feat_strings[A]).setSelected(TWIR.storage.getFeat(A)).appendTo(h), h.append(
                   '<br><div style="height:5px;" />')));
               for (var m in e.gui.check) e.gui.check[m].divMain.click(function(e)
               {
@@ -1195,20 +1204,20 @@
               for (var w = (new west.gui.Combobox).setWidth(50), b = 7; b <= 14; b++) w.addItem(b, b.toString());
               w.select(TWIR.storage.getFeat("inv_menu_size"));
               for (var f = (new west.gui.Combobox).setWidth(50), v = 0, y = 0; y < 10; y++) v += 10, f.addItem(v, v.toString());
-              for (var u in f.select(TWIR.storage.getFeat("mw_scan_limit")), l.prepend("<span>" + TWIRlang.feat_strings.inv_menu_size + "</span>", w
-                  .getMainDiv().css("margin-left", "10px")), TWIR.Inventory.sort_options) p.append(this.createSortRow(TWIR.Inventory.sort_options[u], u));
+              for (var A in f.select(TWIR.storage.getFeat("mw_scan_limit")), p.prepend("<span>" + TWIRlang.feat_strings.inv_menu_size + "</span>", w
+                  .getMainDiv().css("margin-left", "10px")), TWIR.Inventory.sort_options) c.append(this.createSortRow(TWIR.Inventory.sort_options[A], A));
               t.appendContent(
                 '<div style="font-weight: bold;margin-top: 15px;text-shadow: 2px 1px 2px #fae3ad;color: #5e321a;font-size: 16px;margin-bottom: 10px;">' +
-                TWIRlang.features.inventory_menus + "</div>"), t.appendContent(l), t.appendContent($(
+                TWIRlang.features.inventory_menus + "</div>"), t.appendContent(p), t.appendContent($(
                 '<div style="display: inline-block; font-weight: bold;margin-top: 15px;text-shadow: 2px 1px 2px #fae3ad;color: #5e321a;font-size: 16px;margin-bottom: 10px; cursor: pointer;">' +
                 TWIRlang.features.sort_inv + "</div>").append(
                 '<span style="display: inline-block; position: relative; bottom: 1px; margin-left: 5px;"><img src="' + TWIR.images.arrow +
                 '" width="13" style="margin-left: 2px;"/></span>').click(function()
               {
-                $(this).children("img").toggleClass("twir_flip"), p.toggle()
-              })), t.appendContent(p), t.appendContent(
+                $(this).children("img").toggleClass("twir_flip"), c.toggle()
+              })), t.appendContent(c), t.appendContent(
                 '<hr><div style="font-weight: bold;margin-top: 15px;text-shadow: 2px 1px 2px #fae3ad;color: #5e321a;font-size: 16px;margin-bottom: 10px;">' +
-                TWIRlang.features.popup_tooltips + "</div>"), t.appendContent(c), t.appendContent(
+                TWIRlang.features.popup_tooltips + "</div>"), t.appendContent(I), t.appendContent(
                 '<hr><div class="twir_pref_mw" style="font-weight: bold;margin-top: 15px;text-shadow: 2px 1px 2px #fae3ad;color: #5e321a;font-size: 16px;margin-bottom: 10px;">' +
                 TWIRlang.market_watcher.add_name + "</div>"), t.appendContent("<span>" + TWIRlang.feat_strings.mw_clear_time + "</span>").appendContent(
                 C.getMainDiv().css(
@@ -1218,9 +1227,9 @@
                 .css(
                 {
                   "margin-left": "10px"
-                })), t.appendContent("<br>"), t.appendContent(I), t.appendContent(
+                })), t.appendContent("<br>"), t.appendContent(d), t.appendContent(
                 '<hr><div style="font-weight: bold;margin-top: 15px;text-shadow: 2px 1px 2px #fae3ad;color: #5e321a;font-size: 16px;margin-bottom: 10px;">' +
-                TWIRlang.features.other + "</div>"), t.appendContent(d), t.appendContent("<br>"), $(t.getMainDiv()).css(
+                TWIRlang.features.other + "</div>"), t.appendContent(h), t.appendContent("<br>"), $(t.getMainDiv()).css(
               {
                 height: "310px",
                 "margin-top": "10px",
@@ -1237,7 +1246,7 @@
                     .setItem("twir_features", JSON.stringify(TWIR.storage.features)), TWIR.Inventory.sort_options = $.extend(
                     {}, e.sort_options_temp), TWIR.storage.save("twir_sort_options", e.sort_options_temp), i > 0)
                   {
-                    var a = TWIR.translations;
+                    var a = TWIR.langs;
                     $.getJSON(a[n.getValue()].url, function(e)
                     {
                       new UserMessage(e.informative.sucess, UserMessage.TYPE_SUCCESS).show()
@@ -1930,8 +1939,9 @@
           },
           notify: function()
           {
-            if (TWIR._playable && !0 !== TWIR.storage.getFeat("inv_cld_reminder_playsound") && !("hidden" in document && !1 === document.hidden && document
-                      .hasFocus())) {
+            if (TWIR._playable && !0 !== TWIR.storage.getFeat("inv_cld_reminder_playsound") && !("hidden" in document && !1 === document.hidden &&
+                document.hasFocus()))
+            {
               var e = TWIR.reminder_alert;
               e.addEventListener("ended", function()
               {
@@ -5284,8 +5294,7 @@
                 for (var l in i)
                   for (var p = 0; p < i[l].length; p++)
                     for (var c = 0; c < s[l].length; c++) void 0 !== s[l] && void 0 !== s[l][c].quests && s[l][c].posx == i[l][p].posx && s[l][
-                      c
-                    ].posy == i[l][p].posy && (i[l][p].quests = s[l][c].quests);
+                      c].posy == i[l][p].posy && (i[l][p].quests = s[l][c].quests);
               TWIR.storage.NPC = i, void 0 !== e && e()
             })
           })
@@ -7144,38 +7153,44 @@
               }
             }
           },
-          notify: function () {
-              if (TWIR._playable && !0 !== TWIR.storage.getFeat("mw_alert_playsound") && !("hidden" in document && !1 === document.hidden && document
-                      .hasFocus())) {
-                  var e = TWIR.mw_alert;
-                  e.addEventListener("ended", function () {
-                      this.pause(),
-                      this.currentTime = 0
-                  }),
-                  e.play()
+          notify: function()
+          {
+            if (TWIR._playable && !0 !== TWIR.storage.getFeat("mw_alert_playsound") && !("hidden" in document && !1 === document.hidden && document
+                .hasFocus()))
+            {
+              var e = TWIR.mw_alert;
+              e.addEventListener("ended", function()
+              {
+                this.pause(), this.currentTime = 0
+              }), e.play()
+            }
+          },
+          pushNotify: function(e, t)
+          {
+            var i = this;
+            if (!1 !== TWIR.storage.getFeat("mw_push_notifications") && window.Notification && !("hidden" in document && !1 === document.hidden &&
+                document.hasFocus()))
+              if ("granted" === Notification.permission)
+              {
+                var a = new Notification(e,
+                {
+                  body: t,
+                  icon: TWIR.images.market_watcher_notification,
+                  silent: !0
+                });
+                a.onclick = function()
+                {
+                  window.focus()
+                }, $(window).one("focus", function()
+                {
+                  a.close()
+                })
               }
+            else "denied" !== Notification.permission && Notification.requestPermission(function(a)
+            {
+              i.pushNotify(e, t)
+            })
           },
-          pushNotify: function (i, o) {
-              var n = this;
-              if (!1 !== TWIR.storage.getFeat("mw_push_notifications") && window.Notification && !("hidden" in document && !1 === document.hidden && document.hasFocus()))
-                  if ("granted" === Notification.permission) {
-                      var t = new Notification(i, {
-                              body: o,
-                              icon: TWIR.images.market_watcher_notification,
-                              silent: !0
-                          });
-                      t.onclick = function () {
-                          window.focus()
-                      },
-                      $(window).one("focus", function () {
-                          t.close()
-                      })
-                  } else
-                      "denied" !== Notification.permission && Notification.requestPermission(function (t) {
-                          n.pushNotify(i, o)
-                      })
-          },
-
           showAlert: function()
           {
             var e = this;
@@ -9601,8 +9616,7 @@
                   var s = a.obj;
                   s.bonus.item;
                   if (o.length) TWIR.storage.set_n_event[s.set] && TWIR.storage.set_n_event[s.set][0] === t && TWIR.storage.set_n_event[s.set][
-                    1
-                  ] === o && n.push(a);
+                    1] === o && n.push(a);
                   else switch (t.toLowerCase())
                   {
                     case "allitems":
