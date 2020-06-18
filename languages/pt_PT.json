@@ -64,7 +64,7 @@
         "bonus_items": "Bónus de Produtos",
         "useable_items": "Utilizável",
         "crafting_items": "Produzir",
-        "buffs_items": "Buffs",
+        "buffs_items": "Incrementos",
         "search_new": "Pesquisar equipamento para",
         "search_title": "Equipamento",
         "debuff": "Decremento",
@@ -83,12 +83,12 @@
         "maximal_price": "Máx.",
         "listings": "Listagens",
         "items": "Artigos",
-        "items_short": "pcs",
+        "items_short": "Peças",
         "seen": "Visto %1 vez",
         "last_seen": "Visto pela última vez",
         "average": "Média",
         "average_since": "Média %1 dias",
-        "each": "cada",
+        "each": "Cada",
         "quests": "Aventuras",
         "collection": "Necessário para concluir a colecção",
         "uniq_sellers": "%1 vendedor único",
@@ -141,13 +141,13 @@
         "pin": "Fixar",
         "unpin": "Desafixar",
         "color_picker_title": "Escolhe uma cor",
-        "exact": "Exato",
+        "exact": "Exacto",
         "wearable_only": "Utilizável por mim",
         "lvl_range": "Níveis",
-        "save": "Salvar",
-        "save_n_reload": "\nSalvar e recarregar",
+        "save": "Guardar",
+        "save_n_reload": "Guardar e recarregar",
         "sort_damage": "Dano",
-        "sort_values": "Seus valores",
+        "sort_values": "Valores própros",
         "exclude": "Excluir"
     },
     "stats": {
@@ -200,24 +200,24 @@
         "no_select": "Nenhum artigo seleccionado",
         "buffs": "Incrementos",
         "push_notification_text_single": "%1 foi visto por %2",
-        "threshold": "Limite",
-        "below_threshold": "Abaixo do Preço",
-        "above_threshold": "Acima do Preço",
-        "bid_threshold": "Limite de lances",
+        "threshold": "Preço limite",
+        "below_threshold": "Abaixo do preço limite",
+        "above_threshold": "Acima do preço limite",
+        "bid_threshold": "Limite de licitações",
         "buyout_threshold": "Limite de compra",
-        "filter_auctions": "Filtra leilões",
+        "filter_auctions": "Filtrar leilões",
         "seller_name": "Nome do Vendedor",
         "town_name": "Nome da cidade",
-        "cost_range": "Variação de custo",
-        "push_notification_text": "Existem %1 novas ofertas no mercado que estão marcados em sua lista de acompanhamento"
+        "cost_range": "Alcance de custo",
+        "push_notification_text": "Há %1 novas ofertas no mercado que estão marcadas na tua lista de acompanhamento"
     },
     "features": {
         "preferences": "Preferências",
         "inventory_menus": "Inventários / Menus",
         "popup_tooltips": "Dicas",
         "other": "Outras preferências",
-        "enable_addon": "Ativar %1 nesse mundo",
-        "sort_inv": "Ordenar customizado"
+        "enable_addon": "Activar %1 nesse mundo",
+        "sort_inv": "Ordem personalizada"
     },
     "feat_strings": {
         "pop_item_id": "Mostrar ID do artigo",
@@ -263,7 +263,7 @@
         "mw_recipes": "Seguir receitas",
         "mw_buyouts_only": "Apenas compras",
         "mw_push_notifications": "Activar notificações",
-        "mw_scan_limit": "Máximo de buscas salvas (por item) de diferentes jogadores"
+        "mw_scan_limit": "Máximo de buscas guardadas (por artigo) de diferentes jogadores"
     },
     "keyWords": {
         "xmas": [
@@ -288,7 +288,7 @@
         "sleep": "Encontrar uma cama",
         "map_show": "Posição central",
         "window_open": "Abrir janela",
-        "walk": "Ir para lá",
+        "walk": "Ir para",
         "market_map": "Mapa do mercado",
         "quest_update": "Carregar/Recarregar aventuras"
     },
@@ -315,19 +315,19 @@
         "any": "Qualquer",
         "none": "Nenhum",
         "enemy": "Jogadores inimigos",
-        "update_wait": "Espere , isto pode demorar um pouco",
+        "update_wait": "Espera , isto pode demorar um pouco",
         "fb_att": "Atacantes",
         "fb_def": "Defensores",
         "joined": "Inscrito",
         "missing_pos": "Não está no forte",
-        "missing_ali": "Jogador ausente",
+        "missing_ali": "Jogadores ausentes",
         "hide": "Esconder",
         "next": "Próximo",
         "cancel": "Cancelar",
         "quest_update": "Aventuras carregadas actualmente",
         "later": "Mais tarde",
         "reset": "Repôr",
-        "u_sure": "Tens certeza?"
+        "u_sure": "Tens a certeza?"
     },
     "calc": {
         "regen": "Regeneração",
@@ -391,9 +391,9 @@
     },
     "script_desc": "Melhor Inventário e Ferramentas para o The West!",
     "fortbattle": {
-        "add_name": "Fortbattle Tracker",
+        "add_name": "Pesquisa de Batalhas",
         "round": "Ronda",
-        "name": "Nome",
+        "name": "Nome do jogador",
         "health": "Pontos de saúde",
         "damage_inflicted": "Dano infligido",
         "last_hit": "Acerto mais recente",
