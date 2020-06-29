@@ -410,5 +410,11 @@
         "avg_dmg": "Átlagos körönkénti sebzés",
         "wep_breakdown": "Fegyverenkénti bontás",
         "avg_wep_dmg": "Átlagos fegyversebzés"
+    },
+    "bidder": {
+        "bidder_text": "%1 items for a maximum price of %2 dollars",
+        "bidder_question": "On how many of these do you want to bid on?",
+        "bidder_bid": "Start bidding",
+        "bidder_progress_msg": "Bidding %1 on %2"
     }
 }
