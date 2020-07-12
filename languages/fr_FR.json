@@ -375,7 +375,7 @@
     "opener": {
         "loot_text": "You got",
         "open_btn": "Open",
-        "open_question": "How many of these do you want to open?",
+        "open_question": "How many do you want to open?",
         "open_joke": "Really? Oh God, gimme a break!"
     },
     "reminder": {
