@@ -365,7 +365,7 @@
         "switch_speed_btn": "Usar conjunto de velocidade"
     },
     "update_changelog": "AQUI está o registo de mudanças",
-    "donate_text_2": "Se gostas deste script e desejas que se mantenha a funcionar ou que novas funções sejam adicionadas, por favor considera uma %Doação%",
+    "donate_text_2": "Se gostas deste script e desejas que se mantenha a funcionar ou que novas funções sejam adicionadas, por favor considera um %Donativo%",
     "event_helper": {
         "already_sent": "%event_curr enviado(s) a %1 de %2 amigos",
         "all_sent": "%event_curr foram enviados para todos os amigos",
@@ -411,12 +411,13 @@
         "dodges": "Esquivas",
         "avg_dmg": "Dano médio por acerto",
         "wep_breakdown": "Divisão de armas",
-        "avg_wep_dmg": "\nDano médio da arma"
+        "avg_wep_dmg": "\nDano médio da arma",
+        "damage_multiplier": "Damage Multiplier"
     },
     "bidder": {
-        "bidder_text": "%1 items for a maximum price of %2 dollars",
-        "bidder_question": "On how many of these do you want to bid on?",
-        "bidder_bid": "Start bidding",
-        "bidder_progress_msg": "Bidding %1 on %2"
+        "bidder_text": "%1 peças por %2 dollars",
+        "bidder_question": "Em quantas peças queres colocar uma licitação?",
+        "bidder_bid": "Começar a licitar",
+        "bidder_progress_msg": "A licitar %1 em %2"
     }
 }
