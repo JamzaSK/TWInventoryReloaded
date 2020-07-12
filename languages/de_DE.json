@@ -409,11 +409,12 @@
         "dodges": "Ausweicher",
         "avg_dmg": "Durschnittsschaden pro Treffer",
         "wep_breakdown": "Waffen-Aufstellung",
-        "avg_wep_dmg": "Waffen-Durschnittsschaden"
+        "avg_wep_dmg": "Waffen-Durschnittsschaden",
+        "damage_multiplier": "Damage Multiplier"
     },
     "bidder": {
-        "bidder_text": "%1 items for a maximum price of %2 dollars",
-        "bidder_question": "On how many of these do you want to bid on?",
+        "bidder_text": "%1 pieces for %2 dollars",
+        "bidder_question": "How many pieces do you want to bid on?",
         "bidder_bid": "Start bidding",
         "bidder_progress_msg": "Bidding %1 on %2"
     }
