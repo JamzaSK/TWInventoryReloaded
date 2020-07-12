@@ -74,7 +74,7 @@
 * **Magyar (hu)** *by Aviendha*<br>
 * **Polski (pl)** *by Wojcieszy, mxj*<br>
 * **Português (pt)** *by jccwest, Tariik, Venozmat*<br>
-* **Português (pt-br) *by Venozmat*<br>
+* **Português (pt-br)** *by Venozmat*<br>
 * **Română (ro)** *by Totalfs<br>
 * **Русский (ru)** *by Luntik*<br>
 * **Slovenčina (sk)**<br>
