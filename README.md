@@ -44,7 +44,7 @@
 * <a target="_blank" rel="noopener noreferrer" href="https://jamzask.github.io/TWInventoryReloaded/icons/chrome.png"><img src="https://jamzask.github.io/TWInventoryReloaded/icons/chrome.png" alt="" style="max-width:100%;"></a> <a href="https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo" rel="nofollow">Tampermonkey</a>
 * <a target="_blank" rel="noopener noreferrer" href="https://jamzask.github.io/TWInventoryReloaded/icons/opera.png"><img src="https://jamzask.github.io/TWInventoryReloaded/icons/opera.png" alt="" style="max-width:100%;"></a> <a href="https://addons.opera.com/extensions/details/tampermonkey-beta/" rel="nofollow">Tampermonkey</a>
 * <a target="_blank" rel="noopener noreferrer" href="https://jamzask.github.io/TWInventoryReloaded/icons/safari.png"><img src="https://jamzask.github.io/TWInventoryReloaded/icons/safari.png" alt="" style="max-width:100%;"></a> <a href="https://safari.tampermonkey.net/tampermonkey.safariextz" rel="nofollow">Tampermonkey</a> (Not supported/ tested)
-* <a target="_blank" rel="noopener noreferrer" href="https://jamzask.github.io/TWInventoryReloaded/icons/msedge.png"><img src="https://jamzask.github.io/TWInventoryReloaded/icons/msedge.png" alt="" style="max-width:100%;"></a> <a href="https://www.microsoft.com/store/p/tampermonkey/9nblggh5162s" rel="nofollow">Tampermonkey</a> (Not supported/ tested)
+* <a target="_blank" rel="noopener noreferrer" href="https://jamzask.github.io/TWInventoryReloaded/icons/msedge.png"><img src="https://jamzask.github.io/TWInventoryReloaded/icons/msedge.png" alt="" style="max-width:100%;"></a> <a href="https://www.tampermonkey.net/?ext=dhdg&browser=edge" rel="nofollow">Tampermonkey</a>
 
 
 
