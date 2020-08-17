@@ -96,7 +96,7 @@
         "open_title": "Abrir %1 e centrar no mapa",
         "opener_tooltip": "SHIFT+Clique para abrir",
         "learnable_recipe": "Receita",
-        "seen_with_limit": "Visto %1 de vezes e mais..",
+        "seen_with_limit": "Visto %1 vezes e mais..",
         "most_offers": "Mais vendidos por %1"
     },
     "organizing": {
@@ -209,15 +209,15 @@
         "seller_name": "Nome do Vendedor",
         "town_name": "Nome da cidade",
         "cost_range": "Alcance de custo",
-        "push_notification_text": "Há %1 novas ofertas no mercado que estão marcadas na tua lista de observação"
+        "push_notification_text": "Há %1 novas ofertas no mercado que correspondem à tua lista de observação"
     },
     "features": {
         "preferences": "Preferências",
         "inventory_menus": "Inventários / Menus",
         "popup_tooltips": "Dicas",
         "other": "Outras preferências",
-        "enable_addon": "Activar %1 nesse mundo",
-        "sort_inv": "Ordem personalizada"
+        "enable_addon": "Activar %1 neste mundo",
+        "sort_inv": "Escolha personalizada"
     },
     "feat_strings": {
         "pop_item_id": "Mostrar ID do artigo",
@@ -261,7 +261,7 @@
         "pop_job_tooltip": "Melhoria de trabalho em pop-up",
         "fb_char_icons": "Ícones específicos da classe na janela da batalhas fortes",
         "mw_recipes": "Seguir receitas",
-        "mw_buyouts_only": "Apenas compras",
+        "mw_buyouts_only": "Só compras",
         "mw_push_notifications": "Activar notificações",
         "mw_scan_limit": "Máximo de procuras guardadas (por artigo) de diferentes jogadores"
     },
@@ -318,7 +318,7 @@
         "update_wait": "Espera , isto pode demorar um pouco",
         "fb_att": "Atacantes",
         "fb_def": "Defensores",
-        "joined": "Inscrito",
+        "joined": "Inscritos",
         "missing_pos": "Não está no forte",
         "missing_ali": "Jogadores ausentes",
         "hide": "Esconder",
@@ -350,7 +350,7 @@
         "add_name": "Ajudante de vestuário",
         "bonus_count_title": "Bónus de artigos e conjuntos",
         "result_menu_title": "Outras combinações",
-        "equipment_number": "Eqipamento %1",
+        "equipment_number": "Combinação %1",
         "show_inv": "Mostrar no inventário",
         "switch_w": "Trocar arma",
         "bonus_items_title": "Bónus de artigos",
@@ -404,15 +404,15 @@
         "per_round": "Por ronda",
         "overall": "Global",
         "hits_taken": "Acertos sofridos",
-        "dodged_shots": "Tiros desviados",
+        "dodged_shots": "Tiros esquivados",
         "crit": "Tiros críticos",
         "overview": "Visão geral",
         "hits": "Acertos",
         "dodges": "Esquivas",
         "avg_dmg": "Dano médio por acerto",
-        "wep_breakdown": "Divisão de armas",
+        "wep_breakdown": "Descrição das armas",
         "avg_wep_dmg": "\nDano médio da arma",
-        "damage_multiplier": "Damage Multiplier"
+        "damage_multiplier": "Multiplicador de Dano"
     },
     "bidder": {
         "bidder_text": "%1 peças por %2 dollars",
