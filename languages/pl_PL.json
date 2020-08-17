@@ -417,7 +417,7 @@
         "avg_dmg": "Średnie obrażenia zadane",
         "wep_breakdown": "Podsumowanie broni",
         "avg_wep_dmg": "Średnie obrażenia broni",
-        "damage_multiplier": "Damage Multiplier"
+        "damage_multiplier": "Mnożnik obrażeń"
     },
     "bidder": {
         "bidder_text": "%1 sztuki po %2 dolary",
