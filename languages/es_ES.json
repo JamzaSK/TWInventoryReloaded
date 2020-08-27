@@ -257,13 +257,13 @@
         "pop_char_level": "Mostrar siempre el valor de bonificación (por nivel) en tu nivel de personaje",
         "inv_cld_reminder": "Recuérdame que tengo que usar artículos con largos tiempos de reutilización.",
         "inv_cld_reminder_playsound": "Enmudecer sonido recordatorio",
-        "pop_quest_tooltip": "Agreguar requisitos para completar la búsqueda y su recompensa a la ventana emergente de búsqueda",
         "pop_job_tooltip": "Mejorar ventana emergente de trabajo",
         "fb_char_icons": "Iconos específicos de carácter en la ventana de preparación de nbatalla",
         "mw_recipes": "Mirar recetas aprendibles",
         "mw_buyouts_only": "Solo compras",
         "mw_push_notifications": "Habilitar notificaciones push",
-        "mw_scan_limit": "Número máximo de escaneos (por artículo) de jugadores diferentes"
+        "mw_scan_limit": "Número máximo de escaneos (por artículo) de jugadores diferentes",
+        "quest_color": "Change the color of quests that I can complete"
     },
     "keyWords": {
         "xmas": [
@@ -326,7 +326,8 @@
         "quest_update": "Búsquedas actuales cargadas",
         "later": "Más tarde",
         "reset": "Reiniciar",
-        "u_sure": "¿Estás seguro?"
+        "u_sure": "¿Estás seguro?",
+        "processing": "Processing.."
     },
     "calc": {
         "regen": "Regeneración",
@@ -418,5 +419,8 @@
         "bidder_question": "¿En cuantas piezas quieres pujar?",
         "bidder_bid": "Comenzar la puja",
         "bidder_progress_msg": "Puja %1 de %2"
+    },
+    "trade_helper": {
+        "error_reward": "It is not possible without a selected reward!"
     }
 }
