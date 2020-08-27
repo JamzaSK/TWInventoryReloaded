@@ -257,13 +257,13 @@
         "pop_char_level": "Mostra sempre il valore dei bonus (per livello) sul tuo livello personaggio",
         "inv_cld_reminder": "Ricordami che devo utilizzare oggetti aventi conti alla rovescia lunghi",
         "inv_cld_reminder_playsound": "Mute reminder sound",
-        "pop_quest_tooltip": "Add requirements to complete the quest and its reward to the quest popup",
         "pop_job_tooltip": "Improve job popup",
         "fb_char_icons": "Class specific icons in the fortbattle preparation window",
         "mw_recipes": "Watch learnable recipes",
         "mw_buyouts_only": "Buyouts only",
         "mw_push_notifications": "Enable push notifications",
-        "mw_scan_limit": "Maximal number of saved scans (per item) from a different players"
+        "mw_scan_limit": "Maximal number of saved scans (per item) from a different players",
+        "quest_color": "Change the color of quests that I can complete"
     },
     "keyWords": {
         "xmas": [
@@ -331,7 +331,8 @@
         "quest_update": "Current quests loaded",
         "later": "Later",
         "reset": "Reset",
-        "u_sure": "Are you sure?"
+        "u_sure": "Are you sure?",
+        "processing": "Processing.."
     },
     "calc": {
         "regen": "Rigenerazione",
@@ -423,5 +424,8 @@
         "bidder_question": "How many pieces do you want to bid on?",
         "bidder_bid": "Start bidding",
         "bidder_progress_msg": "Bidding %1 on %2"
+    },
+    "trade_helper": {
+        "error_reward": "It is not possible without a selected reward!"
     }
 }
