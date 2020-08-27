@@ -257,13 +257,13 @@
         "pop_char_level": "(pro Stufe)-Boni immer auf deine Stufe umrechnen",
         "inv_cld_reminder": "Melde, wenn der Countdown bestimmter Beutel abgelaufen ist",
         "inv_cld_reminder_playsound": "Erinnerungston stummschalten",
-        "pop_quest_tooltip": "Zeige Anforderungen und Belohnungen im Pop-Up der Quests",
         "pop_job_tooltip": "Verbessere das Pop-Up der Arbeiten",
         "fb_char_icons": "Charakterklasse-Icon im FK-Vorbereitungsfenster",
         "mw_recipes": "Rezepte verfolgen",
         "mw_buyouts_only": "Nur Sofortkauf",
         "mw_push_notifications": "Benachrichtigungen erlauben",
-        "mw_scan_limit": "Maximum der gespeicherten Scans anderer Spieler"
+        "mw_scan_limit": "Maximum der gespeicherten Scans anderer Spieler",
+        "quest_color": "Change the color of quests that I can complete"
     },
     "keyWords": {
         "xmas": [
@@ -325,7 +325,8 @@
         "quest_update": "Aktuelle Quests geladen",
         "later": "Später",
         "reset": "Zurücksetzen",
-        "u_sure": "Sicher?"
+        "u_sure": "Sicher?",
+        "processing": "Processing.."
     },
     "calc": {
         "regen": "Regeneration",
@@ -417,5 +418,8 @@
         "bidder_question": "Auf wie viele Stücke möchtest du bieten?",
         "bidder_bid": "Bieten starten",
         "bidder_progress_msg": "%1 auf %2 bieten"
+    },
+    "trade_helper": {
+        "error_reward": "It is not possible without a selected reward!"
     }
 }
