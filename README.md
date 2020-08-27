@@ -20,7 +20,6 @@
 * Intelligent chat with URL recognition
 * Mass telegrams
 * Mass opening - SHIFT + click on the item in your inventory
-* Mass sending of the event currency during supported events
 * Collect reminder for items that have a long cooldowns
 * Useful stats for building your battle plan during fort battles
 * ...and many more!
