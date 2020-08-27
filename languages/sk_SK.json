@@ -257,13 +257,13 @@
         "pop_char_level": "Zobraziť hodnotu bonusu (na úroveň) na úrovni charakteru",
         "inv_cld_reminder": "Pripomenúť mi, že mám použiť predmety, ktoré majú dlhé cooldowny",
         "inv_cld_reminder_playsound": "Stlmiť zvukové upozornenie u reminderu",
-        "pop_quest_tooltip": "Zobraziť požiadavky na dokončenie úlohy a odmenu z nej v pop-upu danej úlohy",
         "pop_job_tooltip": "Vylepšiť pop-up u prác",
         "fb_char_icons": "Ikony špecifické pre danú triedu postavy v okne prípravy boja",
         "mw_recipes": "Sledovať recepty, ktoré sa dajú naučiť",
         "mw_buyouts_only": "Len okamžitý nákup",
         "mw_push_notifications": "Povoliť \"push\" notifikácie",
-        "mw_scan_limit": "Maximálny počet uložených skenov (na predmet) od rôznych hráčov"
+        "mw_scan_limit": "Maximálny počet uložených skenov (na predmet) od rôznych hráčov",
+        "quest_color": "Zmeniť farbu úloh, ktoré môžem dokončiť"
     },
     "keyWords": {
         "xmas": [
@@ -327,7 +327,8 @@
         "quest_update": "Aktuálne úlohy boli načítané",
         "later": "Neskôr",
         "reset": "Resetovať",
-        "u_sure": "Naozaj?"
+        "u_sure": "Naozaj?",
+        "processing": "Pracujem.."
     },
     "calc": {
         "regen": "Regenerácia",
@@ -419,5 +420,8 @@
         "bidder_question": "Na koľko kusov dať ponuku?",
         "bidder_bid": "Ponúknuť",
         "bidder_progress_msg": "Ponúkanie %1 na %2"
+    },
+    "trade_helper": {
+        "error_reward": "Bez vybranej odmeny to nejde!"
     }
 }
