@@ -257,13 +257,13 @@
         "pop_char_level": "Zawsze pokazuj wartości bonusów (na poziom) wg. twojego poziomu",
         "inv_cld_reminder": "Przypomnij mi o używaniu przedmiotów z długim czasem odnawiania",
         "inv_cld_reminder_playsound": "Wycisz dźwięk powiadomień o użyciu przedmiotów",
-        "pop_quest_tooltip": "Dodaj wymagania by skończyć zadanie i jego nagrodę do okienka",
         "pop_job_tooltip": "Ulepszone okno pracy",
         "fb_char_icons": "Ikony klasy postaci w przygotowaniach do bitwy o fort",
         "mw_recipes": "Obserwuj możliwe do nauczenia przepisy",
         "mw_buyouts_only": "Tylko \"kup teraz\"",
         "mw_push_notifications": "Włącz powiadomienia push",
-        "mw_scan_limit": "Maksymalna ilość zapisanych skanów(każdego przedmiotu) od innych graczy"
+        "mw_scan_limit": "Maksymalna ilość zapisanych skanów(każdego przedmiotu) od innych graczy",
+        "quest_color": "Change the color of quests that I can complete"
     },
     "keyWords": {
         "xmas": [
@@ -332,7 +332,8 @@
         "quest_update": "Aktualnie załadowane zadania",
         "later": "Później",
         "reset": "Reset",
-        "u_sure": "Jesteś pewien?"
+        "u_sure": "Jesteś pewien?",
+        "processing": "Processing.."
     },
     "calc": {
         "regen": "Regeneracja",
@@ -424,5 +425,8 @@
         "bidder_question": "Na ile sztuk chciałbyś złożyć ofertę?",
         "bidder_bid": "Zacznij licytację",
         "bidder_progress_msg": "Licytowanie %1 na %2"
+    },
+    "trade_helper": {
+        "error_reward": "It is not possible without a selected reward!"
     }
 }
