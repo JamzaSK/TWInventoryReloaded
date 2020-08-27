@@ -257,13 +257,13 @@
         "pop_char_level": "Zobrazit hodnotu bonusu (na úroveň) na úrovni postavy",
         "inv_cld_reminder": "Připomenout mi, že mám použít předměty, které mají dlouhé cooldowny",
         "inv_cld_reminder_playsound": "Ztlumit zvukové upozornění u reminderu",
-        "pop_quest_tooltip": "Zobrazit požadavky na dokončení úkolu a jeho odměnu v pop-upu daného úkolu",
         "pop_job_tooltip": "Vylepšit pop-up u prací",
         "fb_char_icons": "Ikony specifické pro danou třídu postavy v okně přípravy bitvy",
         "mw_recipes": "Sledovat recepty, které se lze naučit",
         "mw_buyouts_only": "Jenom okamžitý nákup",
         "mw_push_notifications": "Povolit \"push\" notifikace",
-        "mw_scan_limit": "Maximální počet uložených skenů (na předmět) od různých hráčů"
+        "mw_scan_limit": "Maximální počet uložených skenů (na předmět) od různých hráčů",
+        "quest_color": "Změnit barvu úkolů, které mohu dokončit"
     },
     "keyWords": {
         "xmas": [
@@ -327,7 +327,8 @@
         "quest_update": "Aktuální úkoly byly načteny",
         "later": "Později",
         "reset": "Resetovat",
-        "u_sure": "Opravdu?"
+        "u_sure": "Opravdu?",
+        "processing": "Pracuji.."
     },
     "calc": {
         "regen": "Regenerace",
@@ -419,5 +420,8 @@
         "bidder_question": "Na kolik kusů dát nabídku?",
         "bidder_bid": "Nabídnout",
         "bidder_progress_msg": "Nabízení %1 na %2"
+    },
+    "trade_helper": {
+        "error_reward": "Bez vybrané odměny to nejde!"
     }
 }
