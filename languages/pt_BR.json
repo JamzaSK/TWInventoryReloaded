@@ -257,13 +257,13 @@
         "pop_char_level": "Sempre mostrar o valor bônus (por nível) em seu nível de personagem",
         "inv_cld_reminder": "Lembrar-me que eu tenho que usar itens que tenham longas recargas",
         "inv_cld_reminder_playsound": "Lembre de silenciar som",
-        "pop_quest_tooltip": "Adicionar requisitos para completar e recompensas na janela de aventura",
         "pop_job_tooltip": "Janela de melhorar trabalho",
         "fb_char_icons": "Ícones de especificação de classe",
         "mw_recipes": "Acompanhar receitas aprendíveis",
         "mw_buyouts_only": "Apenas compras",
         "mw_push_notifications": "Ativar notificações",
-        "mw_scan_limit": "Máximo de buscas salvas (por item) de diferentes jogadores "
+        "mw_scan_limit": "Máximo de buscas salvas (por item) de diferentes jogadores ",
+        "quest_color": "Change the color of quests that I can complete"
     },
     "keyWords": {
         "xmas": [
@@ -327,7 +327,8 @@
         "quest_update": "Aventuras carregas atualmente",
         "later": "Depois",
         "reset": "Redefinir",
-        "u_sure": "Tem certeza?"
+        "u_sure": "Tem certeza?",
+        "processing": "Processing.."
     },
     "calc": {
         "regen": "Regeneração",
@@ -419,5 +420,8 @@
         "bidder_question": "How many pieces do you want to bid on?",
         "bidder_bid": "Start bidding",
         "bidder_progress_msg": "Bidding %1 on %2"
+    },
+    "trade_helper": {
+        "error_reward": "It is not possible without a selected reward!"
     }
 }
