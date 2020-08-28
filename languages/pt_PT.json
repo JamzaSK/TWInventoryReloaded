@@ -263,7 +263,7 @@
         "mw_buyouts_only": "Só compras",
         "mw_push_notifications": "Activar notificações",
         "mw_scan_limit": "Máximo de procuras guardadas (por artigo) de diferentes jogadores",
-        "quest_color": "Change the color of quests that I can complete"
+        "quest_color": "Mudar a cor das missões que posso completar"
     },
     "keyWords": {
         "xmas": [
@@ -328,7 +328,7 @@
         "later": "Mais tarde",
         "reset": "Repôr",
         "u_sure": "Tens a certeza?",
-        "processing": "Processing.."
+        "processing": "Em processamento.."
     },
     "calc": {
         "regen": "Regeneração",
@@ -422,6 +422,6 @@
         "bidder_progress_msg": "A licitar %1 em %2"
     },
     "trade_helper": {
-        "error_reward": "It is not possible without a selected reward!"
+        "error_reward": "Não é possível sem uma recompensa selecionada!"
     }
 }
