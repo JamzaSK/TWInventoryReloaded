@@ -41,8 +41,7 @@
 > Step 2:
 ### Userscript
 
-* <a href="https://greasyfork.org/scripts/373294-tw-inventory-reloaded/code/TW%20Inventory%20Reloaded.user.js" rel="nofollow">Install</a> <em>from greasyfork.org</em>
-* <a href="http://greasyfork.org/scripts/373294-tw-inventory-reloaded/code/TW%20Inventory%20Reloaded.user.js" rel="nofollow">Install</a> <em>from github.com</em>
+[Click here to install](https://jamzask.github.io/TWInventoryReloaded/code.user.js)
 
 # Screenshots
 <p align="center">
