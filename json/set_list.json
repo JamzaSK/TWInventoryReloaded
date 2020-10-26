@@ -369,6 +369,16 @@
 	"oktoberfest_set_2020_10": ["oktoberfest", "2020", ["4", "5"]],
 	"oktoberfest_set_2020_11": ["oktoberfest", "2020"],
 	
+	"dod_2020_set_1": ["dotd", "2020", "1"],
+	"dod_2020_set_2": ["dotd", "2020", "1"],
+	"dod_2020_set_3": ["dotd", "2020", "1"],
+	"dod_2020_set_4": ["dotd", "2020", "2"],
+	"dod_2020_set_5": ["dotd", "2020", "2"],
+	"dod_2020_set_6": ["dotd", "2020", "2"],
+	"dod_2020_set_7": ["dotd", "2020", "3"],
+	"dod_2020_set_8": ["dotd", "2020", "3"],
+	"dod_2020_set_9": ["dotd", "2020", "3"],
+	
 	"firefighter_set_1": ["sale", "2020", "1"],
 	"firefighter_set_2": ["sale", "2020", "1"],
 	"harvester_set_clothing": ["sale", "2020", "2"],
