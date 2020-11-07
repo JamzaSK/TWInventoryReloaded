@@ -1,11 +1,9 @@
 {
-    "script_name": "TW Inventory Reloaded",
     "translate": "Français (fr)",
     "invent": "Inventaire",
     "script_version": "Version",
     "script_revision": "Révision",
     "changes": "Quoi de neuf ?",
-    "translator": "traducteur : Thathanka",
     "language": "Langue",
     "download": "Télécharger",
     "no_ads": "Sans pubs",
@@ -68,7 +66,8 @@
         "search_new": "Search Equipment For",
         "search_title": "Backpack",
         "debuff": "Debuff",
-        "use_effect": "Usage effect"
+        "use_effect": "Usage effect",
+        "fullslot_sets": "All"
     },
     "tooltips": {
         "jobdrop": "Peut être trouvé en travaillant",
@@ -262,8 +261,9 @@
         "mw_recipes": "Watch learnable recipes",
         "mw_buyouts_only": "Buyouts only",
         "mw_push_notifications": "Enable push notifications",
-        "mw_scan_limit": "Maximal number of saved scans (per item) from a different players",
-        "quest_color": "Change the color of quests that I can complete"
+        "mw_scan_limit": "Maximal number of saved scans (per item) from a different player",
+        "quest_color": "Change the color of quests that I can complete",
+        "inv_size": "Smaller inventory"
     },
     "keyWords": {
         "xmas": [
@@ -305,7 +305,6 @@
         "minutes": "Il y a %1 minutes",
         "seconds": "Il y a %1 secondes",
         "valid_defined": "L'item %1 est déjà surveillé",
-        "error_other": "Une erreur s'est produite, ouvrez la console pour plus de détails",
         "distance": "Distance",
         "error_hotel": "Aucune chambre d'hôtel trouvée",
         "error_npc": "Aucun donneur de quête trouvé",
@@ -367,12 +366,6 @@
     },
     "update_changelog": "HERE's Changelog",
     "donate_text_2": "If you like this script and wish it's kept working or wish new features to be added, please consider a %donation%",
-    "event_helper": {
-        "already_sent": "%event_curr sent to %1 of %2 friends",
-        "all_sent": "%event_curr were sent to all friends",
-        "send": "Send",
-        "sent_msg": "Sent to friend %1"
-    },
     "opener": {
         "loot_text": "You got",
         "open_btn": "Open",
@@ -390,7 +383,7 @@
         "set_bonus": "Bonus from sets",
         "compare": "Compare"
     },
-    "script_desc": "Better Inventory and Tools for The West!",
+    "script_description": "Better Inventory and Tools for The West!",
     "fortbattle": {
         "add_name": "Fortbattle Tracker",
         "round": "Round",
@@ -413,15 +406,34 @@
         "avg_dmg": "Average damage per hit",
         "wep_breakdown": "Weapons breakdown",
         "avg_wep_dmg": "Average gun damage",
-        "damage_multiplier": "Damage Multiplier"
+        "damage_multiplier": "Damage Multiplier",
+        "sectors_info": "Show sectors names"
     },
     "bidder": {
         "bidder_text": "%1 pieces for %2 dollars",
-        "bidder_question": "How many pieces do you want to bid on?",
+        "bidder_question": "Type in the amount you want to bid",
         "bidder_bid": "Start bidding",
         "bidder_progress_msg": "Bidding %1 on %2"
     },
-    "trade_helper": {
-        "error_reward": "It is not possible without a selected reward!"
+    "sectors": {
+        "1": "Large upper sector",
+        "2": "Large lower sector",
+        "3": "Large left sector",
+        "4": "Large right sector",
+        "5": "Large middle sector",
+        "6": "Adventurer's tower",
+        "7": "Dueller's tower",
+        "8": "Soldier's tower",
+        "9": "Worker's tower",
+        "10": "Barracks",
+        "11": "Resource stock",
+        "12": "Headquarters",
+        "13": "Wall",
+        "14": "Gate",
+        "15": "Flag",
+        "north": "North Wall",
+        "south": "South Wall",
+        "west": "West Wall",
+        "east": "East Wall"
     }
 }
