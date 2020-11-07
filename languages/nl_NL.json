@@ -1,11 +1,9 @@
 {
-    "script_name": "TW Inventory Reloaded",
     "translate": "Dutch (nl)",
     "invent": "Inventaris",
     "script_version": "Versie",
     "script_revision": "revisie",
     "changes": "Wat is er nieuw?",
-    "translator": "vertaler: Mike, Jesse",
     "language": "Taal",
     "download": "Download",
     "no_ads": "Geen reclame",
@@ -68,7 +66,8 @@
         "search_new": "Search Equipment For",
         "search_title": "Backpack",
         "debuff": "Debuff",
-        "use_effect": "Usage effect"
+        "use_effect": "Usage effect",
+        "fullslot_sets": "All"
     },
     "tooltips": {
         "jobdrop": "Vindkans bij arbeid",
@@ -262,8 +261,9 @@
         "mw_recipes": "Watch learnable recipes",
         "mw_buyouts_only": "Buyouts only",
         "mw_push_notifications": "Enable push notifications",
-        "mw_scan_limit": "Maximal number of saved scans (per item) from a different players",
-        "quest_color": "Change the color of quests that I can complete"
+        "mw_scan_limit": "Maximal number of saved scans (per item) from a different player",
+        "quest_color": "Change the color of quests that I can complete",
+        "inv_size": "Smaller inventory"
     },
     "keyWords": {
         "xmas": [
@@ -303,7 +303,6 @@
         "minutes": "%1 minuten geleden",
         "seconds": "%1 Seconden geleden",
         "valid_defined": "Het geselecteerde item (%1) word al in de gaten gehouden",
-        "error_other": "Er was een probleem. Open alsjeblieft de console voor details",
         "distance": "Afstand",
         "error_hotel": "Geen hotelkamer gevonden",
         "error_npc": "Geen medewerkers gevonden",
@@ -365,12 +364,6 @@
     },
     "update_changelog": "changelog",
     "donate_text_2": "Als het script je bevalt en wil zorgen dat het blijft werken. \nOverweeg dan om een %Donatie% te doen",
-    "event_helper": {
-        "already_sent": "%event_curr gestuur naar %1 van %2 vrienden",
-        "all_sent": "%event_curr is naar al je vrienden gestuurd",
-        "send": "send",
-        "sent_msg": "%1 naar vriend gestuurd"
-    },
     "opener": {
         "loot_text": "je hebt",
         "open_btn": "open",
@@ -388,7 +381,7 @@
         "set_bonus": "Bonus van set",
         "compare": "vergelijk"
     },
-    "script_desc": "Betere inventaris en tools voor The West",
+    "script_description": "Betere inventaris en tools voor The West",
     "fortbattle": {
         "add_name": "Fortbattle Tracker",
         "round": "Ronde",
@@ -411,15 +404,34 @@
         "avg_dmg": "Average damage per hit",
         "wep_breakdown": "Weapons breakdown",
         "avg_wep_dmg": "Average gun damage",
-        "damage_multiplier": "Damage Multiplier"
+        "damage_multiplier": "Damage Multiplier",
+        "sectors_info": "Show sectors names"
     },
     "bidder": {
         "bidder_text": "%1 pieces for %2 dollars",
-        "bidder_question": "How many pieces do you want to bid on?",
+        "bidder_question": "Type in the amount you want to bid",
         "bidder_bid": "Start bidding",
         "bidder_progress_msg": "Bidding %1 on %2"
     },
-    "trade_helper": {
-        "error_reward": "It is not possible without a selected reward!"
+    "sectors": {
+        "1": "Large upper sector",
+        "2": "Large lower sector",
+        "3": "Large left sector",
+        "4": "Large right sector",
+        "5": "Large middle sector",
+        "6": "Adventurer's tower",
+        "7": "Dueller's tower",
+        "8": "Soldier's tower",
+        "9": "Worker's tower",
+        "10": "Barracks",
+        "11": "Resource stock",
+        "12": "Headquarters",
+        "13": "Wall",
+        "14": "Gate",
+        "15": "Flag",
+        "north": "North Wall",
+        "south": "South Wall",
+        "west": "West Wall",
+        "east": "East Wall"
     }
 }
