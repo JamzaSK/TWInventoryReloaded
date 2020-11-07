@@ -1,11 +1,9 @@
 {
-    "script_name": "TW Inventory Reloaded",
     "translate": "Português (pt)",
     "invent": "Inventário",
     "script_version": "Versão",
     "script_revision": "Revisão",
     "changes": "O que há de novo?",
-    "translator": "tradutor: jccwest, kimba, venozmat",
     "language": "Idioma",
     "download": "Transferir agora",
     "no_ads": "Sem anúncios",
@@ -61,14 +59,15 @@
         "custom": "Personalizados",
         "set_window": "Lista de Conjuntos",
         "item_use": "Usar",
-        "bonus_items": "Bónus de Produtos",
+        "bonus_items": "Produtos com bónus",
         "useable_items": "Utilizável",
         "crafting_items": "Produzir",
         "buffs_items": "Incrementos",
         "search_new": "Pesquisar equipamento para",
-        "search_title": "Equipamento",
+        "search_title": "Mochila",
         "debuff": "Decremento",
-        "use_effect": "Efeito de uso"
+        "use_effect": "Efeito de uso",
+        "fullslot_sets": "Todos"
     },
     "tooltips": {
         "jobdrop": "Sai em trabalhos",
@@ -263,7 +262,8 @@
         "mw_buyouts_only": "Só compras",
         "mw_push_notifications": "Activar notificações",
         "mw_scan_limit": "Máximo de procuras guardadas (por artigo) de diferentes jogadores",
-        "quest_color": "Mudar a cor das missões que posso completar"
+        "quest_color": "Mudar a cor das missões que posso completar",
+        "inv_size": "Inventário reduzido"
     },
     "keyWords": {
         "xmas": [
@@ -305,7 +305,6 @@
         "minutes": "%1 minuto(s) atrás",
         "seconds": "%1 segundo(s) atrás",
         "valid_defined": "O artigo escolhido (%1) já está a ser observado",
-        "error_other": "Ocorreu um erro, por favor abra a consola para ver detalhes",
         "distance": "Distância",
         "error_hotel": "Nenhum quarto encontrado",
         "error_npc": "Nenhum empregador disponível",
@@ -367,12 +366,6 @@
     },
     "update_changelog": "AQUI está o registo de mudanças",
     "donate_text_2": "Se gostas deste script e desejas que se mantenha a funcionar ou que novas funções sejam adicionadas, por favor considera um %Donativo%",
-    "event_helper": {
-        "already_sent": "%event_curr enviado(s) a %1 de %2 amigos",
-        "all_sent": "%event_curr foram enviados para todos os amigos",
-        "send": "Enviar",
-        "sent_msg": "Enivar para amigo %1"
-    },
     "opener": {
         "loot_text": "Tu tens",
         "open_btn": "Abrir",
@@ -390,7 +383,7 @@
         "set_bonus": "Bónus dos conjuntos",
         "compare": "Comparar"
     },
-    "script_desc": "Melhor Inventário e Ferramentas para o The West!",
+    "script_description": "Melhor Inventário e Ferramentas para o The West!",
     "fortbattle": {
         "add_name": "Pesquisa de Batalhas",
         "round": "Ronda",
@@ -413,7 +406,8 @@
         "avg_dmg": "Dano médio por acerto",
         "wep_breakdown": "Descrição das armas",
         "avg_wep_dmg": "\nDano médio da arma",
-        "damage_multiplier": "Multiplicador de Dano"
+        "damage_multiplier": "Multiplicador de Dano",
+        "sectors_info": "Mostrar nome dos sectores"
     },
     "bidder": {
         "bidder_text": "%1 peças por %2 dollars",
@@ -421,7 +415,25 @@
         "bidder_bid": "Começar a licitar",
         "bidder_progress_msg": "A licitar %1 em %2"
     },
-    "trade_helper": {
-        "error_reward": "Não é possível sem uma recompensa selecionada!"
+    "sectors": {
+        "1": "Sector superior grande",
+        "2": "Sector inferior grande",
+        "3": "Sector grande esquerdo",
+        "4": "Sector grande direito",
+        "5": "Sector grande central",
+        "6": "Torre dos Aventureiros",
+        "7": "Torre dos Duelistas",
+        "8": "Torre dos Soldados",
+        "9": "Torre dos Trabalhadores",
+        "10": "Caserna",
+        "11": "Armazém de recursos",
+        "12": "Quartel General",
+        "13": "Muro",
+        "14": "Portão",
+        "15": "Bandeira",
+        "north": "North Wall",
+        "south": "South Wall",
+        "west": "West Wall",
+        "east": "East Wall"
     }
 }
