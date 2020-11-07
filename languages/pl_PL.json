@@ -1,11 +1,9 @@
 {
-    "script_name": "TW Inventory Reloaded",
     "translate": "Polish (pl)",
     "invent": "Ekwipunek",
     "script_version": "Wersja",
     "script_revision": "Zmiany",
     "changes": "Co nowego?",
-    "translator": "Przetłumaczył: Wojcieszy, mxj",
     "language": "Język",
     "download": "Pobierz",
     "no_ads": "Bez reklam",
@@ -68,7 +66,8 @@
         "search_new": "Przeszukaj ekwipunek po",
         "search_title": "Ekwipunek",
         "debuff": "Osłabenie",
-        "use_effect": "Efekt użycia"
+        "use_effect": "Efekt użycia",
+        "fullslot_sets": "All"
     },
     "tooltips": {
         "jobdrop": "Znalezione w pracy",
@@ -263,7 +262,8 @@
         "mw_buyouts_only": "Tylko \"kup teraz\"",
         "mw_push_notifications": "Włącz powiadomienia push",
         "mw_scan_limit": "Maksymalna ilość zapisanych skanów(każdego przedmiotu) od innych graczy",
-        "quest_color": "Zmień kolor zadań które mogę wykonać"
+        "quest_color": "Zmień kolor zadań które mogę wykonać",
+        "inv_size": "Smaller inventory"
     },
     "keyWords": {
         "xmas": [
@@ -310,7 +310,6 @@
         "minutes": "%1 minut temu",
         "seconds": "%1 sekund temu",
         "valid_defined": "Przedmiot  %1 jest obecnie obserwowany",
-        "error_other": "Wystąpił błąd, proszę otworzyć konsolę po szczegóły",
         "distance": "Dystans",
         "error_hotel": "Nie znaleziono hotelu",
         "error_npc": "Nie znaleziono NPC",
@@ -372,12 +371,6 @@
     },
     "update_changelog": "Lista zmian",
     "donate_text_2": "Jeżeli lubisz ten skrypt i chcesz aby dalej się rozwijał pomyśl proszę o %donation%",
-    "event_helper": {
-        "already_sent": "%event_curr wysłane do %1 z %2 znajomych\n",
-        "all_sent": "%event_curr wysłane do wszystkich znajomych",
-        "send": "Wyślij",
-        "sent_msg": "Wysłano do %1\n"
-    },
     "opener": {
         "loot_text": "Otrzymałeś",
         "open_btn": "Otwórz",
@@ -395,7 +388,7 @@
         "set_bonus": "Bonus z zestawu",
         "compare": "Porównaj"
     },
-    "script_desc": "Lepsze ekwipunek i narzędzia do The-West!",
+    "script_description": "Lepsze ekwipunek i narzędzia do The-West!",
     "fortbattle": {
         "add_name": "Fortbattle Tracker",
         "round": "Runda",
@@ -418,7 +411,8 @@
         "avg_dmg": "Średnie obrażenia zadane",
         "wep_breakdown": "Podsumowanie broni",
         "avg_wep_dmg": "Średnie obrażenia broni",
-        "damage_multiplier": "Mnożnik obrażeń"
+        "damage_multiplier": "Mnożnik obrażeń",
+        "sectors_info": "Show sectors names"
     },
     "bidder": {
         "bidder_text": "%1 sztuki po %2 dolary",
@@ -426,7 +420,25 @@
         "bidder_bid": "Zacznij licytację",
         "bidder_progress_msg": "Licytowanie %1 na %2"
     },
-    "trade_helper": {
-        "error_reward": "Musisz wybrać nagrodę"
+    "sectors": {
+        "1": "Large upper sector",
+        "2": "Large lower sector",
+        "3": "Large left sector",
+        "4": "Large right sector",
+        "5": "Large middle sector",
+        "6": "Adventurer's tower",
+        "7": "Dueller's tower",
+        "8": "Soldier's tower",
+        "9": "Worker's tower",
+        "10": "Barracks",
+        "11": "Resource stock",
+        "12": "Headquarters",
+        "13": "Wall",
+        "14": "Gate",
+        "15": "Flag",
+        "north": "North Wall",
+        "south": "South Wall",
+        "west": "West Wall",
+        "east": "East Wall"
     }
 }
