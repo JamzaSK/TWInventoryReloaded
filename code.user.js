@@ -70,7 +70,7 @@
         window.TWIR = {
             script_name: "TW Inventory Reloaded",
             version: "2.202",
-            revision: "19",
+            revision: "20",
             author: "Jamza",
             minGame: "2.04",
             maxGame: Game.version.toString(),
@@ -2041,17 +2041,19 @@
                                     return e.includes(t);
                                 })) && (t = n);
                             }
-                            var o = TWIR_lang.sectors[t] || "", A = i.sector_by_cell[t][r];
-                            /*! Walls */
-                            return 13 === t && (e.includes(A[0]) ? o = d("north", 0 === r ? 1 : 0) : e.includes(A[1]) ? o = 0 === r ? d("north", 2) : d("south", 1) : e.includes(A[2]) ? o = d("south", 0 === r ? 1 : 2) : e.includes(A[3]) ? o = 0 === r ? d("south", 2) : d("west", null, true) : e.includes(A[4]) ? o = 0 === r ? TWIR_lang.sectors[t] : d("east", null, true) : e.includes(A[5]) && 0 === r && (o = TWIR_lang.sectors[t])), 
-                            o;
+                            var o = TWIR_lang.sectors[t] || "";
+                            /*! Walls */                            if (13 === t) {
+                                var A = i.sector_by_cell[t][r];
+                                e.includes(A[0]) ? o = d("north", 0 === r ? 1 : 0) : e.includes(A[1]) ? o = 0 === r ? d("north", 2) : d("south", 1) : e.includes(A[2]) ? o = d("south", 0 === r ? 1 : 2) : e.includes(A[3]) ? o = 0 === r ? d("south", 2) : d("west", null, true) : e.includes(A[4]) ? o = 0 === r ? TWIR_lang.sectors[t] : d("east", null, true) : e.includes(A[5]) && 0 === r && (o = TWIR_lang.sectors[t]);
+                            }
+                            return o;
                         }, m = 0; m < s.length; m++) {
                             for (var u, h, C, w = '<div class="twir_fb_sector" ', f = (a.mapInfo.sectors[a.mapInfo.cells.charAt(s[m][0])], 
-                            I(s[m])), b = 0, v = 0, k = [], y = 0; y < s[m].length; y++) u = s[m][y], h = 15 * Math.floor(u / a.mapInfo.width), 
-                            C = u % a.mapInfo.width * 15, 0 == y && (k[0] = h, k[1] = C), h == k[0] && (b += 15), 
-                            C == k[1] && (v += 15);
-                            w += 'style="width: ' + b + "px; height: " + v + "px; top: " + k[0] + "px; left: " + k[1] + 'px;">', 
-                            w += 15 == b && t ? '<span class="twir_sector_name_vertical" style="height: ' + (r > 0 ? 100 : 60) + 'px;">' + f + "</span></div>" : '<div class="twir_fb_sector_name" style="font-size: ' + (t ? 10 : 11) + 'px;">' + (t ? c(f, b) : m + 1) + "</div></div>", 
+                            0), b = 0, v = [], k = 0; k < s[m].length; k++) u = s[m][k], h = 15 * Math.floor(u / a.mapInfo.width), 
+                            C = u % a.mapInfo.width * 15, 0 == k && (v[0] = h, v[1] = C), h == v[0] && (f += 15), 
+                            C == v[1] && (b += 15);
+                            w += 'style="width: ' + f + "px; height: " + b + "px; top: " + v[0] + "px; left: " + v[1] + 'px;">', 
+                            w += 15 == f && t ? '<span class="twir_sector_name_vertical" style="height: ' + (r > 0 ? 100 : 60) + 'px;">' + I(s[m]) + "</span></div>" : '<div class="twir_fb_sector_name" style="font-size: ' + (t ? 10 : 11) + 'px;">' + (t ? c(I(s[m]), f) : m + 1) + "</div></div>", 
                             l += w;
                         }
                         l += "</div>", n.prepend(l);
