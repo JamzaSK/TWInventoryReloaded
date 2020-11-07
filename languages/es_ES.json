@@ -1,11 +1,9 @@
 {
-    "script_name": "TW Inventory Reloaded",
     "translate": "Español (es)",
     "invent": "Inventario",
     "script_version": "Versión",
     "script_revision": "Revisión",
     "changes": "¿Qué hay de nuevo?",
-    "translator": "traductor: pepe100",
     "language": "Idioma",
     "download": "Descargar aquí",
     "no_ads": "¡Sin anuncios!",
@@ -68,7 +66,8 @@
         "search_new": "Buscar equipo para",
         "search_title": "Mochila",
         "debuff": "Quitar Buff",
-        "use_effect": "Efecto de uso"
+        "use_effect": "Efecto de uso",
+        "fullslot_sets": "All"
     },
     "tooltips": {
         "jobdrop": "Obtenibles desde trabajo",
@@ -130,8 +129,8 @@
         "msg_fb_ali": "Equipo aliado",
         "msg_fb_enemy": "Equipo enemigo",
         "msg_fb_all": "Todos jugadores",
-        "msg_town_mem": "Miembros de ciudad",
-        "msg_town_lead": "Líderes de ciudad",
+        "msg_town_mem": "Miembros ciudad",
+        "msg_town_lead": "Líderes ciudad",
         "msg_ali_mem": "Miembros de  alianza",
         "msg_ali_lead": "Líderes de alianza",
         "allitems": "Todos artículos",
@@ -222,7 +221,7 @@
     "feat_strings": {
         "pop_item_id": "Mostrar la Id del artículo",
         "pop_display_event": "Mostrar icono de evento relacionado con este artículo.",
-        "pop_owned_counts": "Mostrar número de artículos que posees",
+        "pop_owned_counts": "Mostrar nº artículos que tienes",
         "pop_job_table": "Mostrar nombre del trabajo donde puede encontrar este producto",
         "pop_crafting_recipe": "Mostrar recursos necesarios para este producto",
         "pop_recipe_table": "Mostrar nombre de la receta",
@@ -246,7 +245,7 @@
         "fb_travel_button": "Agregar un botón de viaje en la ventana de Batallas de Fuerte",
         "fb_online_status": "Mostrar el estado en línea del jugador en la ventana emergente del mapa de batalla del fuerte",
         "fb_ranks": "Mostrar rango del jugador en la ventana emergente del mapa de batalla del fuerte",
-        "fb_ali_name": "Mostrar nombre de la alianza en el perfil de la ciudad",
+        "fb_ali_name": "Mostrar nombre de alianza en vista de ciudad",
         "mw_clear_time": "Automáticamente borra escaneo de datos de más de",
         "mw_collections": "Vigilar artículos necesarios para colecciones",
         "mw_trader": "Recibir notificación cuando un comerciante venda un artículo vigilado",
@@ -255,7 +254,7 @@
         "mw_status": "Mostrar mensaje de progreso escaneo de mercado",
         "inv_menu_size": "Número máximo de filas en un menú de selección.",
         "pop_char_level": "Mostrar siempre el valor de bonificación (por nivel) en tu nivel de personaje",
-        "inv_cld_reminder": "Recuérdame que tengo que usar artículos con largos tiempos de reutilización.",
+        "inv_cld_reminder": "Recordatorio de artículos con largos tiempos de fabricación.",
         "inv_cld_reminder_playsound": "Enmudecer sonido recordatorio",
         "pop_job_tooltip": "Mejorar ventana emergente de trabajo",
         "fb_char_icons": "Iconos específicos de carácter en la ventana de preparación de nbatalla",
@@ -263,7 +262,8 @@
         "mw_buyouts_only": "Solo compras",
         "mw_push_notifications": "Habilitar notificaciones push",
         "mw_scan_limit": "Número máximo de escaneos (por artículo) de jugadores diferentes",
-        "quest_color": "Cambiar color de búsquedas que puedo completar"
+        "quest_color": "Cambiar color de búsquedas que puedo completar",
+        "inv_size": "Smaller inventory"
     },
     "keyWords": {
         "xmas": [
@@ -304,7 +304,6 @@
         "minutes": "hace %1 minutos",
         "seconds": "hace %1 segundos",
         "valid_defined": "Artículo/conjunto %1 ya está vigilado",
-        "error_other": "Ha ocurrido un error, por favor abra la consola para detalles",
         "distance": "Distancia",
         "error_hotel": "No se encontró habitación de hotel",
         "error_npc": "No se encontraron NPC's",
@@ -337,7 +336,7 @@
         "drop": "Tasa salida",
         "attack": "Atacante",
         "defense": "Defensor",
-        "find_eq": "Encontrar equipo",
+        "find_eq": "Busca equipo",
         "fb": "Bonus batalla",
         "js": "Trabajos y habilidades",
         "ob": "Otros bonus",
@@ -366,12 +365,6 @@
     },
     "update_changelog": "Aquí está el Registro de cambios",
     "donate_text_2": "Si le gusta este script y desea que siga funcionando o desea que se agreguen nuevas funciones, por favor considere hacer una %donación%",
-    "event_helper": {
-        "already_sent": "%event_curr enviar a %1 de %2 amigos",
-        "all_sent": "%event_curr fueron enviados",
-        "send": "Enviar",
-        "sent_msg": "Enviado a amigo %1"
-    },
     "opener": {
         "loot_text": "Obtienes",
         "open_btn": "Abrir",
@@ -389,7 +382,7 @@
         "set_bonus": "Bonus de conjunto",
         "compare": "Comparar"
     },
-    "script_desc": "¡Mejor inventario y herramientas para Occidente!",
+    "script_description": "¡Mejor inventario y herramientas para Occidente!",
     "fortbattle": {
         "add_name": "Fortbattle Tracker",
         "round": "Ronda",
@@ -410,9 +403,10 @@
         "hits": "Aciertos",
         "dodges": "Eludidos",
         "avg_dmg": "Daño medio por acierto",
-        "wep_breakdown": "desglose de armas",
+        "wep_breakdown": "Desglose de armas",
         "avg_wep_dmg": "Daño medio armas",
-        "damage_multiplier": "Miltiplicador daño"
+        "damage_multiplier": "Miltiplicador daño",
+        "sectors_info": "Show sectors names"
     },
     "bidder": {
         "bidder_text": "%1 piezas por %2 dólares",
@@ -420,7 +414,25 @@
         "bidder_bid": "Comenzar la puja",
         "bidder_progress_msg": "Puja %1 de %2"
     },
-    "trade_helper": {
-        "error_reward": "¡No es posible sin recompensa seleccionada!"
+    "sectors": {
+        "1": "Large upper sector",
+        "2": "Large lower sector",
+        "3": "Large left sector",
+        "4": "Large right sector",
+        "5": "Large middle sector",
+        "6": "Adventurer's tower",
+        "7": "Dueller's tower",
+        "8": "Soldier's tower",
+        "9": "Worker's tower",
+        "10": "Barracks",
+        "11": "Resource stock",
+        "12": "Headquarters",
+        "13": "Wall",
+        "14": "Gate",
+        "15": "Flag",
+        "north": "North Wall",
+        "south": "South Wall",
+        "west": "West Wall",
+        "east": "East Wall"
     }
 }
