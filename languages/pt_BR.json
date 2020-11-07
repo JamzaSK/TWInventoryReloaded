@@ -1,11 +1,9 @@
 {
-    "script_name": "TW Inventório Repaginado",
     "translate": "Português (pt-br)",
     "invent": "Inventório",
     "script_version": "Versão",
     "script_revision": "Revisão",
     "changes": "O que há de novo?",
-    "translator": "tradutor: Venozmat",
     "language": "Idioma",
     "download": "Download",
     "no_ads": "Sem anúncios",
@@ -68,7 +66,8 @@
         "search_new": "Buscar equipamento para",
         "search_title": "Mochila",
         "debuff": "Decremento",
-        "use_effect": "Efeito de uso"
+        "use_effect": "Efeito de uso",
+        "fullslot_sets": "All"
     },
     "tooltips": {
         "jobdrop": "Vêm dos trabalhos:",
@@ -263,7 +262,8 @@
         "mw_buyouts_only": "Apenas compras",
         "mw_push_notifications": "Ativar notificações",
         "mw_scan_limit": "Máximo de buscas salvas (por item) de diferentes jogadores ",
-        "quest_color": "Change the color of quests that I can complete"
+        "quest_color": "Change the color of quests that I can complete",
+        "inv_size": "Smaller inventory"
     },
     "keyWords": {
         "xmas": [
@@ -305,7 +305,6 @@
         "minutes": "%1 minutos atrás",
         "seconds": "%1 segundos atrás",
         "valid_defined": "O item selecionado (%1) já está sendo acompanhado",
-        "error_other": "Houve um problema, por favor, abre o console para detalhes",
         "distance": "Distância",
         "error_hotel": "Nenhum hotel encontrado",
         "error_npc": "Nenhum empregado encontrado",
@@ -367,12 +366,6 @@
     },
     "update_changelog": "AQUI está o registro de mudanças",
     "donate_text_2": "Se gostar do script e quiser que continue funcionando ou com novas funções, por favor, considere uma %doação%",
-    "event_helper": {
-        "already_sent": "%event_curr enviado para %1 de %2 amigos",
-        "all_sent": "%event_curr foi enviado para todos amigos",
-        "send": "Enviar",
-        "sent_msg": "Enviar para amigo %1"
-    },
     "opener": {
         "loot_text": "Você teve",
         "open_btn": "Abrir",
@@ -390,7 +383,7 @@
         "set_bonus": "Bônus de conjuntos",
         "compare": "Comparar"
     },
-    "script_desc": "Melhor inventário e ferramentas para o The West!",
+    "script_description": "Melhor inventário e ferramentas para o The West!",
     "fortbattle": {
         "add_name": "Rastreador de batalha de forte",
         "round": "Ronda",
@@ -413,15 +406,34 @@
         "avg_dmg": "Dano médio por acerto",
         "wep_breakdown": "Divisão de armas",
         "avg_wep_dmg": "Média de danos da arma",
-        "damage_multiplier": "Damage Multiplier"
+        "damage_multiplier": "Damage Multiplier",
+        "sectors_info": "Show sectors names"
     },
     "bidder": {
         "bidder_text": "%1 pieces for %2 dollars",
-        "bidder_question": "How many pieces do you want to bid on?",
+        "bidder_question": "Type in the amount you want to bid",
         "bidder_bid": "Start bidding",
         "bidder_progress_msg": "Bidding %1 on %2"
     },
-    "trade_helper": {
-        "error_reward": "It is not possible without a selected reward!"
+    "sectors": {
+        "1": "Large upper sector",
+        "2": "Large lower sector",
+        "3": "Large left sector",
+        "4": "Large right sector",
+        "5": "Large middle sector",
+        "6": "Adventurer's tower",
+        "7": "Dueller's tower",
+        "8": "Soldier's tower",
+        "9": "Worker's tower",
+        "10": "Barracks",
+        "11": "Resource stock",
+        "12": "Headquarters",
+        "13": "Wall",
+        "14": "Gate",
+        "15": "Flag",
+        "north": "North Wall",
+        "south": "South Wall",
+        "west": "West Wall",
+        "east": "East Wall"
     }
 }
