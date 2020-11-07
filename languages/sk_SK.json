@@ -407,7 +407,7 @@
         "wep_breakdown": "Rozpis zbraní",
         "avg_wep_dmg": "Priemerné poškodenie zbrane",
         "damage_multiplier": "Násobiteľ poškodenia",
-        "sectors_info": "Show sectors names"
+        "sectors_info": "Zobraziť mapu sektorov"
     },
     "bidder": {
         "bidder_text": "%1 kusov za %2 dolárov",
@@ -416,24 +416,24 @@
         "bidder_progress_msg": "Ponúkanie %1 na %2"
     },
     "sectors": {
-        "1": "Large upper sector",
-        "2": "Large lower sector",
-        "3": "Large left sector",
-        "4": "Large right sector",
-        "5": "Large middle sector",
-        "6": "Adventurer's tower",
-        "7": "Dueller's tower",
-        "8": "Soldier's tower",
-        "9": "Worker's tower",
-        "10": "Barracks",
-        "11": "Resource stock",
-        "12": "Headquarters",
-        "13": "Wall",
-        "14": "Gate",
-        "15": "Flag",
-        "north": "North Wall",
-        "south": "South Wall",
-        "west": "West Wall",
-        "east": "East Wall"
+        "1": "Veľký horný sektor",
+        "2": "Veľký dolný sektor",
+        "3": "Veľký ľavý sektor",
+        "4": "Veľký pravý sektor",
+        "5": "Veľký stredný sektor",
+        "6": "Veža dobrodruhov",
+        "7": "Veža duelantov",
+        "8": "Veža vojakov",
+        "9": "Veža pracovníkov",
+        "10": "Kasárne",
+        "11": "Sklad",
+        "12": "Hlavná budova",
+        "13": "Hradba",
+        "14": "Brána",
+        "15": "Vlajka",
+        "north": "Severná hradba",
+        "south": "Južná hradba",
+        "west": "Západná hradba",
+        "east": "Východná hradba"
     }
 }
