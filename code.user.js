@@ -7974,7 +7974,7 @@
                     $.get(TWIR.base_url + "update.txt", function(t) {
                         for (var i = t.split(", "), a = 0; a < i.length; a++) {
                             var r = i[a].split(": ");
-                            e[r[0]] = r[1];
+                            e[r[0]] = r[1].replace(/\n/g, "");
                         }
                         e.version === TWIR.version && e.revision === TWIR.revision || (new west.gui.Dialog("TWIR " + e.version, '<div style="max-width: 450px;"><div>' + TWIR_lang.update_message + "</div><br/><div>" + ("true" === e.changelog ? '<a target="_blank" href="https://github.com/JamzaSK/TWInventoryReloaded/blob/master/changelog/' + e.version + '.md">' + TWIR_lang.update_changelog + "</a>" : "<b>" + TWIR_lang.changes + "</b></br><i>" + e.changes + "</i>") + "</div></br><div>" + TWIR_lang.donate_text_2.replace(/\%(.*?)\%/, '<a target="_blank" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=CCN4T9NYJGFVS&source=url">$1</a>.') + "</div></div>", west.gui.Dialog.SYS_WARNING).addButton(TWIR_lang.download, function() {
                             window.open(TWIR.base_url + "code.user.js");
