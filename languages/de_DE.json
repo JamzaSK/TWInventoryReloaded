@@ -67,7 +67,7 @@
         "search_title": "Rucksack",
         "debuff": "Debuff",
         "use_effect": "Effekt",
-        "fullslot_sets": "All"
+        "fullslot": "All"
     },
     "tooltips": {
         "jobdrop": "Findbar",
@@ -405,7 +405,7 @@
         "wep_breakdown": "Waffen-Aufstellung",
         "avg_wep_dmg": "Waffen-Durschnittsschaden",
         "damage_multiplier": "Schadensmultiplikator",
-        "sectors_info": "Show sectors names"
+        "sectors_info": "Show sectors map"
     },
     "bidder": {
         "bidder_text": "%1 Stücke für %2 $",
