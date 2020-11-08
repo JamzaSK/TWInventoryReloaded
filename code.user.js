@@ -31,7 +31,7 @@
 // @description:tr The-west için daha iyi envanter ve araçlar!
 
 // @author Jamza (CZ14)
-// @version 2.202
+// @version 2.202.2
 // @license GPL-3.0 http://www.gnu.org/licenses/gpl-3.0.txt
 
 // @include http*://*.the-west.*/game.php*
@@ -69,8 +69,7 @@
         isDefined(window.TWIR) ? new west.gui.Dialog(TWIR.script_name, '<div class="txcenter"><b><br>The UserScript ' + TWIR.script_name + " is installed twice. You will have to uninstall older version for the script to work properly!</br></b></div>", west.gui.Dialog.SYS_WARNING).addButton("OK").show() : (window.TWIR_lang = {}, 
         window.TWIR = {
             script_name: "TW Inventory Reloaded",
-            version: "2.202",
-            revision: "20",
+            version: "2.202.2",
             author: "Jamza",
             minGame: "2.04",
             maxGame: Game.version.toString(),
@@ -372,7 +371,7 @@
                 }
             },
             initScript: function() {
-                window.TWIR_init = setInterval(function() {
+                TWIR.beCompatible(), window.TWIR_init = setInterval(function() {
                     if (TheWestApi && Character && ItemManager.isLoaded() && Bag.loaded && west.storage.ItemSetManager._initialized) {
                         //!Chat.inited
                         clearInterval(window.TWIR_init), delete window.TWIR_init, $.getJSON(TWIR.base_url + "json/set_list.json", function(e) {
@@ -382,7 +381,7 @@
                             TWIR._playable = true, document.removeEventListener("click", e);
                         };
                         document.addEventListener("click", e), TWIR.langs.update(function() {
-                            for (var e in TWIR.registerApi(), TWIR.beCompatible(), TWIR.Features.update(), TWIR.images.getSkillImgs(), 
+                            for (var e in TWIR.registerApi(), TWIR.Features.update(), TWIR.images.getSkillImgs(), 
                             TWIR_update.init(), TWIR) if ("function" == typeof TWIR[e].init && !TWIR.loaded.includes(e)) try {
                                 TWIR.loaded.push(e), TWIR[e].init();
                             } catch (t) {
@@ -402,17 +401,22 @@
                 }), $("div#ui_menubar").find("#TWIR").length || $("div#ui_menubar").append($('<div class="ui_menucontainer" id="TWIR" />').append(e, new Date().isWinterTime() ? '<div style="position: absolute;top: -8px;left: -6px;"><img src="/images/items/head/wear/xmas_hat.png" style="height: 33px;transform: rotate(-15deg);"></div>' : "").append('<div class="menucontainer_bottom" />'));
             },
             beCompatible: function() {
-                /*! TWS */
-                var e = localStorage.tws_settings ? JSON.parse(localStorage.tws_settings) : {};
-                e.enableWir = false, e.enableWirExt = false, localStorage.setItem("tws_settings", JSON.stringify(e)), 
-                /*! LT */
-                window.LT && window.LT.Features && (window.LT.Features.ShortPopups = false);
-                var t = localStorage.TWLT ? JSON.parse(localStorage.TWLT) : {};
-                t.ShortPopups = false, localStorage.setItem("TWLT", JSON.stringify(t)), 
-                /*! Toolkit */
-                window.TWToolkit && window.TWToolkit.preferences && (window.TWToolkit.preferences.ids_popup = false);
-                var i = localStorage.TWToolkit_preferences ? JSON.parse(localStorage.TWToolkit_preferences) : {};
-                i.ids_popup = false, localStorage.setItem("TWToolkit_preferences", JSON.stringify(i));
+                try {
+                    /*! TWS */
+                    var e = localStorage.tws_settings ? JSON.parse(localStorage.tws_settings) : {};
+                    e = $.extend(e, {
+                        enableWir: false,
+                        enableWirExt: false
+                    }), localStorage.setItem("tws_settings", JSON.stringify(e)), 
+                    /*! TWX.ShortPopups */
+                    window.TWX && window.TWX.Features && (window.TWX.Features.ShortPopups = false);
+                    var t = localStorage.TWLT ? JSON.parse(localStorage.TWLT) : {};
+                    t.ShortPopups = false, localStorage.setItem("TWLT", JSON.stringify(t)), 
+                    /*! Toolkit */
+                    window.TWToolkit && window.TWToolkit.preferences && (window.TWToolkit.preferences.ids_popup = false);
+                    var i = localStorage.TWToolkit_preferences ? JSON.parse(localStorage.TWToolkit_preferences) : {};
+                    i.ids_popup = false, localStorage.setItem("TWToolkit_preferences", JSON.stringify(i));
+                } catch (e) {}
             },
             error: function(e, t) {
                 TWIR.errors || (TWIR.errors = []);
@@ -1466,26 +1470,28 @@
                             for (var i = 0; i < t.open.length; i++) {
                                 var a = t.open[i], r = 0, n = $("#open_quest_employerlink_" + a.id);
                                 if (n && n.is(":visible")) {
-                                    for (var o = '<div style="max-width: 300px; min-width: 150px;"><ul class="requirement_container">', A = 0; A < a.requirements.length; A++) a.requirements[A].solved ? r++ : o += e(a.requirements[A]);
+                                    for (var o = '<div style="max-width: 300px; min-width: 150px;"><ul class="requirement_container">', A = 0; A < a.requirements.length; A++) {
+                                        var s = a.requirements[A];
+                                        /*! solved == true || wear_changed + owned item */                                        s.solved || "wear_changed" == s.type && void 0 !== Bag.getItemByItemId(s.id) ? r++ : s.solved || (o += e(s));
+                                    }
                                     o += "</ul></div>", o += '<div style="text-align: center;">' + Quest.getRewards(a.questRewards, a.questRewardsOptions, false) + "</div>";
-                                    var s = n.children("img"), l = s.attr("class").split(" ");
-                                    if ($(o).is(":empty") || s.addMousePopup(o), a.limited && a.limited.length && s.after($('<div class="hourglass_quest" style="display: inline-block;vertical-align: middle;margin-bottom: 3px;margin-right: 2px;"></div>').addMousePopup(a.limited)), 
-                                    TWIR.Features.get("quest_color")) if (n.addClass("twir_quest_entrie"), r === a.requirements.length && a.accepted) 
+                                    var l = n.children("img");
+                                    l.attr("class").split(" ");
+                                    $(o).is(":empty") || l.addMousePopup(o), a.limited && a.limited.length && l.after($('<div class="hourglass_quest" style="display: inline-block;vertical-align: middle;margin-bottom: 3px;margin-right: 2px;"></div>').addMousePopup(a.limited)), 
+                                    TWIR.Features.get("quest_color") && (n.addClass("twir_quest_entrie"), r === a.requirements.length && a.accepted ? 
                                     /*! Solved */
                                     n.css({
                                         color: "#666",
                                         "font-style": "italic"
-                                    }); else if (r === a.requirements.length) {
-                                        /*! Can be solved */
-                                        for (var g = 0; g < l.length; g++) /tw2gui\-icon\-exclamation/.test(l[g]);
-                                        n.css({
-                                            color: "#070"
-                                        });
-                                    } else r / a.requirements.length * 100 >= 66 && 
+                                    }) : r === a.requirements.length || r + 1 === a.requirements.length && a.duel && a.duel.isNPCDuel ? 
+                                    /*! Can be solved - all solved == true || isNPCDuel */
+                                    n.css({
+                                        color: "#070"
+                                    }) : r / a.requirements.length * 100 >= 66 && 
                                     /*! 66% done */
                                     n.css({
                                         color: "#b75c00"
-                                    });
+                                    }));
                                 }
                             }
                         } catch (e) {
@@ -2725,7 +2731,7 @@
                                     if (!a) return e;
                                     var r = ItemManager.get(a, true);
                                     if (!r) return e;
-                                    var n = TWIR.Popups.marketPriceXHTML(r);
+                                    var n = TWIR.Popups.marketWorthXHTML(r);
                                     return '<a href="javascript:void(0)" style="display: inline-block;" class="bbcode itemlink">[' + (r.getItemLevel() ? '<span class="item_level' + (r.isUpgradeable() ? "" : " fake") + '">' + r.getItemLevel() + "</span>" : "") + (n && TWIR.Features.get("mw_bbcode_tooltip") ? '<span title="' + n.escapeHTML() + '" style="display: inline-block;padding: 0 2px 0 0;margin-left: -4px;"><img  style="width:16px;height:16px;display: inline-block;" src="' + TWIR.images.game_currency.dollars + '"/></span>' : "") + '<span title="' + new ItemPopup(r).getXHTML().escapeHTML() + '" data-item-id="' + r.getId() + '">' + r.name.escapeHTML() + "</span>]</a>";
                                 });
                             } catch (e) {
@@ -2768,7 +2774,7 @@
                     ItemPopup.showDivCompare = function() {
                         ItemPopup.twir_showDivCompare.apply(this, arguments);
                         try {
-                            var t = e.item, i = TWIR.Popups.marketPriceXHTML(t);
+                            var t = e.item, i = TWIR.Popups.marketWorthXHTML(t);
                             /*! won't be shown while disabled, playing mpi, market is hidden or compare popup is visible */
                             if (false === e.options.twir_market_price || $("div.mpi-ui").is(":visible") || !$("div.marketplace").is(":visible") || $("#popup_div_compare").is(":visible") || !i) return;
                             $("#popup-container").find(".twir_popup").css("display", "");
@@ -2784,7 +2790,7 @@
                     }, ItemPopup.calcComparePosition = function(t, i) {
                         if (ItemPopup.twir_calcComparePosition.apply(this, arguments), e.item = this.item_obj, 
                         e.options = this.options, false !== this.options.twir_market_price && TWIR.Features.get("mw_enabled")) try {
-                            var a, r, n, o, A, s = TWIR.Popups.marketPriceXHTML(this.item_obj);
+                            var a, r, n, o, A, s = TWIR.Popups.marketWorthXHTML(this.item_obj);
                             if (!s) return;
                             var l = t.width, g = Map.height;
                             a || (a = $("#popup-container").find(".twir_popup")), (A = MousePopup.prototype.wrap(s)) !== r && (a.html(A), 
@@ -2889,26 +2895,21 @@
                     e(), EventHandler.listen([ "task-finish-job", "wear_changed" ], TWIR.Util.delay(function(t) {
                         e();
                     }, Math.floor(1e4 + 5e3 * Math.random())));
-                    /*! Job danger calculation */
-                    var t = function(e) {
-                        var t = JobsModel.Beans[e], i = TWIR.jobsCache[e];
-                        if (t && i) {
-                            var a = t.jobObj.malus + 1, r = t.jobpoints, n = (Math.round(100 * t.jobmotivation), 
-                            i.danger);
-                            return function(e, t, i, a, r, n, o) {
-                                var A = Math.ceil((i + 1) / 5), s = Math.min(Math.floor(t / A), 15), l = .25 * Math.ceil(r / 25);
-                                return t < 5 * A || t <= i ? Math.floor({
-                                    0: 1,
-                                    1: 2,
-                                    2: 3,
-                                    3: 4,
-                                    4: 5,
-                                    5: 6.25
-                                }[o ? 0 : s] * a * l * n) : Math.floor(e(t - i, s) * a * l * n);
-                            }(function(e) {
-                                return Math.pow(e, -.2);
-                            }, r, a, n, 100, 1, true);
-                        }
+                    /*! Job info calculation */
+                    var t = function(e, t, i, a, r) {
+                        return function(e, t, i, a, r, n, o, A, s) {
+                            var l = Math.ceil((r + 1) / 5), g = Math.min(Math.floor(a / l), 15), p = .25 * Math.ceil(o / 25);
+                            return a < 5 * l || a <= r ? Math[e]({
+                                0: 1,
+                                1: 2,
+                                2: 3,
+                                3: 4,
+                                4: 5,
+                                5: 6.25
+                            }[s ? 0 : g] * n * p * A) : Math[t](i(a - r, g) * n * p * A);
+                        }("floor", "floor", function(e) {
+                            return Math.pow(e, -.2);
+                        }, e, t, i, 100, r, true);
                     };
                     /*! Job popup */
                     Map.PopupHandler.twir_getJobPopup = Map.PopupHandler.twir_getJobPopup || Map.PopupHandler.getJobPopup, 
@@ -2918,16 +2919,24 @@
                             if (JobsModel.Beans[e.id] && TWIR.Features.get("pop_job_tooltip")) {
                                 var a = JobsModel.Beans[e.id];
                                 i = i.replace('<div class="strong">' + e.name + "</div>", '$&  <div class="marker_popup_small_text" style="font-weight: bold;">' + (a.basis.short.experience + a.basis.short.bonus_experience) + "&nbsp;xp&nbsp;/" + a.basis.short.duration.getTime2EndToken() + "</strong></div>");
-                                var r = t(e.id);
+                                var r = function(e, i) {
+                                    var a = JobsModel.Beans[e], r = TWIR.jobsCache[e];
+                                    if (!a || !r) return;
+                                    var n = a.jobObj.malus + 1, o = a.jobpoints, A = Math.round(100 * a.jobmotivation);
+                                    switch (i) {
+                                      case "danger":
+                                        return t(o, n, r.danger, A, 1);
+                                    }
+                                }(e.id, "danger");
                                 r && r > 25 && (i = i.replace(/<div\s+class\="marker_popup_small_text">(.*?)(?=<\/div>)/g, '$& <div class="tw_red">' + TWIR_lang.tooltips.job_danger + ':&nbsp;<span style="font-weight: bold;">' + r + "%</span></div>"));
-                                for (var n = {}, o = 0, A = 0, s = 0; s < a.basis.long.yields.length; s++) {
-                                    o = a.basis.long.yields[s].prop || 0, A = a.basis.long.yields[s].probBonus || 0;
-                                    var l = .01 * (o + A);
-                                    n[a.basis.long.yields[s].random ? "random" : a.basis.long.yields[s].itemid] = [ Math.floor(l), Math.ceil(l) ];
+                                for (var n = {}, o = 0, A = 0, s = Character.level >= 20 ? a.basis.long : Character.level >= 10 ? a.basis.middle : a.basis.short, l = 0; l < s.yields.length; l++) {
+                                    o = s.yields[l].prop || 0, A = s.yields[l].probBonus || 0;
+                                    var g = .01 * (o + A);
+                                    n[s.yields[l].random ? "random" : s.yields[l].itemid] = [ Math.floor(g), Math.ceil(g) ];
                                 }
-                                for (var g in i = (i = (i = (i = i.replace(/<div\s+class\="marker_popup_divider"><\/div>/g, "")).replace(/<div\sstyle="font-size:\s{0,1}9px;/, '<div class="marker_popup_divider"></div>$& display: table;width: auto;margin-left: auto;margin-right: auto;')).replace(/(<div>){0,1}(<\/div>){0,1}(<div\sclass="popup_yield")/g, '$3 style="display: table-row;width: auto;clear: both;"')).replace(/popup_yield_image"/g, '$& style="float: left;display: table-cell;"'), 
-                                e.yields) n[g] && (i = i.replace("</div>" + ItemManager.get(g).name + "</div>", '</div><div style="display: table-cell;text-align: center;vertical-align: middle;"><div>' + ItemManager.get(g).name + '</div><div style="font-weight: normal;">' + n[g][0] + "-" + n[g][1] + "&nbsp;" + TWIR_lang.tooltips.items_short + "&nbsp;/" + a.basis.long.duration.getTime2EndToken() + "</div></div></div>"));
-                                n.random && (i = i.replace(/(height="43"\s{0,1}[\/]{0,1}><\/div>)(.*?)<\/div>/, '$1<div style="display: table-cell;text-align: center;vertical-align: middle;"><div>$2</div><div style="font-weight: normal;">' + n.random[0] + "-" + n.random[1] + "&nbsp;" + TWIR_lang.tooltips.items_short + "&nbsp;/" + a.basis.long.duration.getTime2EndToken() + "</div></div></div>"));
+                                for (var p in i = (i = (i = (i = i.replace(/<div\s+class\="marker_popup_divider"><\/div>/g, "")).replace(/<div\sstyle="font-size:\s{0,1}9px;/, '<div class="marker_popup_divider"></div>$& display: table;width: auto;margin-left: auto;margin-right: auto;')).replace(/(<div>){0,1}(<\/div>){0,1}(<div\sclass="popup_yield")/g, '$3 style="display: table-row;width: auto;clear: both;"')).replace(/popup_yield_image"/g, '$& style="float: left;display: table-cell;"'), 
+                                e.yields) n[p] && (i = i.replace("</div>" + ItemManager.get(p).name + "</div>", '</div><div style="display: table-cell;text-align: center;vertical-align: middle;"><div>' + ItemManager.get(p).name + '</div><div style="font-weight: normal;">' + n[p][0] + "-" + n[p][1] + "&nbsp;" + TWIR_lang.tooltips.items_short + "&nbsp;/" + s.duration.getTime2EndToken() + "</div></div></div>"));
+                                n.random && (i = i.replace(/(height="43"\s{0,1}[\/]{0,1}><\/div>)(.*?)<\/div>/, '$1<div style="display: table-cell;text-align: center;vertical-align: middle;"><div>$2</div><div style="font-weight: normal;">' + n.random[0] + "-" + n.random[1] + "&nbsp;" + TWIR_lang.tooltips.items_short + "&nbsp;/" + s.duration.getTime2EndToken() + "</div></div></div>"));
                             }
                         } catch (e) {
                             TWIR.error(e, "Map.PopupHandler.getJobPopup");
@@ -2989,7 +2998,7 @@
                             false === this.item_obj.upgradeable && (e = e.replace(/(<br>)(<p\s+class="inventory_popup_notupgradeable tw_red">[\S\s]*?<\/p>)/gi, "$2")), 
                             false === this.item_obj.sellable && (e = e.replace(/invPopup_notsellable"/g, '$& style="text-align: center;color: #900;font-style: normal!important;font-size: 13px!important;display: block!important;"')), 
                             e = (e = (e = (e = (e = (e = (e = (e = e.replace(/inventory_popup_label tw_green"/g, '$& style="max-width: 220px;display: block;min-width: 170px;white-space: unset!important;padding-top: 4px;margin-left: auto;margin-right: auto;"')).replace(/inventory_popup_label"/g, '$& style="max-width: 220px;display: block;min-width: 170px;white-space: unset!important;padding-top: 4px;margin-left: auto;margin-right: auto;"')).replace(/inventory_popup_bonus_skills"/g, '$& style="max-width: 200px;display: block;min-width: 170px;white-space: unset!important;margin-left: 10px;"')).replace(/(<br>)(<span\s+class="inventory_popup_requirement_text">[\S\s]*?<\/span>)/gi, "$2 <br>")).replace(/<br><p\s+class="inventory_alreadyown">[\S\s]*?<\/p>/gi, "")).replace(/<div\s+class="inventory_popup_prices">[\S\s]*?<\/div>/gi, "$& <br> ")).replace(/<span\s+class="inventory_popup_character_sex">[\S\s]*?<\/span>/gi, "$& <br>")).replace(/<span\s+class="inventory_popup_character_sex text_red">[\S\s]*?<\/span>/gi, "$& <br>");
-                            var m = TWIR.marketPrice.getPrice(this.item_obj.short), u = TWIR.Popups.data.shop_prices, h = TWIR.Popups.data.sales, C = TWIR.Popups.data.crafting, w = m && m.weight >= 1e4 ? TWIR.Util.replSum(m.weight) : m ? m.weight.toFixed(0) : 0, f = m && TWIR.Features.get("pop_market_price") ? '<div style="margin-top: 5px;"><span style><img src="/images/icons/watch.png" height="14"/>&nbsp;&#36;' + w + "</span></div>" : "";
+                            var m = TWIR.MarketWorth.getPrice(this.item_obj.short), u = TWIR.Popups.data.shop_prices, h = TWIR.Popups.data.sales, C = TWIR.Popups.data.crafting, w = m && m.weight >= 1e4 ? TWIR.Util.replSum(m.weight) : m ? m.weight.toFixed(0) : 0, f = m && TWIR.Features.get("pop_market_price") ? '<div style="margin-top: 5px;"><span style><img src="/images/icons/watch.png" height="14"/>&nbsp;&#36;' + w + "</span></div>" : "";
                             if (u[this.item_obj.short] && TWIR.Features.get("pop_ups_price")) {
                                 var b = 1 === this.item_obj.item_level ? 3 : 2 === this.item_obj.item_level ? 9 : 3 === this.item_obj.item_level ? 27 : 4 === this.item_obj.item_level ? 81 : 5 === this.item_obj.item_level ? 243 : 1, v = 3 === u[this.item_obj.short].currency ? '<span style="display: inline-block;position: relative;top: 3px;background: url(' + TWIR.images.game_currency.bonds_nuggets + ') no-repeat;width: 16px;height: 16px;"></span><span>&nbsp;' + (TWIR.Features.get("pop_short_currency") ? TWIR.Util.replSum(u[this.item_obj.short].price_bonds * b, true) : u[this.item_obj.short].price_bonds * b) + "</span>" : 2 === u[this.item_obj.short].currency ? '<span style="display: inline-block;position: relative;top: 3px;background: url(' + TWIR.images.game_currency.nuggets + ') no-repeat;width: 16px;height: 16px;"></span><span>&nbsp;' + (TWIR.Features.get("pop_short_currency") ? TWIR.Util.replSum(u[this.item_obj.short].price_nuggets * b, true) : u[this.item_obj.short].price_nuggets * b) + "</span>" : 1 === u[this.item_obj.short].currency ? '<span style="display: inline-block;position: relative;top: 3px;background: url(' + TWIR.images.game_currency.bonds + ') no-repeat;width: 16px;height: 16px;"></span><span>&nbsp;' + (TWIR.Features.get("pop_short_currency") ? TWIR.Util.replSum(u[this.item_obj.short].price_bonds * b, true) : u[this.item_obj.short].price_bonds * b) + "</span>" : 8 === u[this.item_obj.short].currency ? '<span style="display: inline-block;position: relative;top: 3px;background: url(' + TWIR.images.game_currency.veteran + ') no-repeat;width: 16px;height: 16px;"></span><span>&nbsp;' + (TWIR.Features.get("pop_short_currency") ? TWIR.Util.replSum(u[this.item_obj.short].price_veteran * b, true) : u[this.item_obj.short].price_veteran * b) + "</span>" : 7 === u[this.item_obj.short].currency ? '<span style="display: inline-block;position: relative;top: 3px;background: url(' + TWIR.images.game_currency.bonds_nuggets + ') no-repeat;width: 16px;height: 16px;"></span><span>&nbsp;' + (TWIR.Features.get("pop_short_currency") ? TWIR.Util.replSum(u[this.item_obj.short].price_nuggets * b, true) : u[this.item_obj.short].price_nuggets * b) + '</span><span style="display: inline-block;position: relative;top: 3px;background: url(' + TWIR.images.game_currency.dollars + ') no-repeat;width: 16px;height: 16px;margin-left: 5px;"/><span>&nbsp;&#36;' + TWIR.Util.replSum(u[this.item_obj.short].price_dollar * b) + "</span>" : "", k = u[this.item_obj.short].limited_time ? '<span style="color: #666;">&nbsp;(' + TWIR.Util.msToTime((new Date(1e3 * u[this.item_obj.short].limited_time).getTime() - new Date(1e3 * Game.getServerTime()).getTime()) / 1e3) + ")</span>" : "", y = u[this.item_obj.short].reduced_value ? '<span style="color: #666;">&nbsp;/-' + u[this.item_obj.short].reduced_value + "%</span>" : "";
                                 e = e.replace(/(<div\s+class="inventory_popup_prices">[\S\s]*?)(<\/div>)/gi, "$1" + f + '<div class="twir_other_popup_prices">&nbsp;' + v + y + k + "</div> $2");
@@ -3149,9 +3158,9 @@
                         return e;
                     };
                 },
-                marketPriceXHTML: function(e) {
+                marketWorthXHTML: function(e) {
                     try {
-                        var t = TWIR.marketPrice.getPrice(e);
+                        var t = TWIR.MarketWorth.getPrice(e);
                         if (t && "yield" !== e.type && TWIR.Features.get("mw_item_price_tooltip")) {
                             var i = '<span><img src="' + e.image + '"; height="25"; width="auto"></img></span><span style="color: #8b4513; text-align: center;margin-bottom: 2px;padding-left: 15px;">' + TWIR_lang.tooltips.market_price + ":</span>";
                             0 != t.change && (i += '<span style="color:' + (t.change < 0 ? "#900" : "#070") + '; text-align: center;margin-bottom: 2px;padding-left: 15px;">' + (t.change > 0 ? "+" : "") + t.change + "%</span>"), 
@@ -3187,7 +3196,7 @@
                             return i += '<div style="color: #00153f;text-align: center;font-size: 12px;">' + TWIR_lang.tooltips.last_seen + ":&nbsp;" + TWIR.Util.timeSince(new Date(Date.now() - o)) + "</div>";
                         }
                     } catch (e) {
-                        TWIR.error(e, "marketPriceXHTML");
+                        TWIR.error(e, "marketWorthXHTML");
                     }
                 },
                 bonusXHTML: function(e, t, i) {
@@ -3493,199 +3502,6 @@
                     });
                 }
             },
-            marketPrice: {
-                prices: {
-                    items: {},
-                    products: {}
-                },
-                init: function() {
-                    var e = this;
-                    !function() {
-                        for (var t = TWIR.MarketWatcher.data_Items, i = {}, a = 0; a < t.length; a++) {
-                            var r = ItemManager.getByBaseId(t[a].i), n = void 0 !== Bag.getItemByItemId(r.item_id);
-                            if (!(TWIR.Features.get("mw_buyouts_only") && !t[a].p || t[a].p && t[a].p / t[a].c <= r.price) && (i[r.short] || (i[r.short] = {
-                                offer_max: {
-                                    price: null,
-                                    date: 0
-                                },
-                                offer_min: {
-                                    price: null,
-                                    date: 0
-                                },
-                                seen: 0,
-                                weight_avg: {},
-                                weight: 0,
-                                weight_min: 0,
-                                weight_max: 0,
-                                weight_avg_since: {},
-                                weight_since: 0,
-                                change: 0,
-                                weight_avg_old: {},
-                                weight_old: 0,
-                                offer_count: 0,
-                                sellers: {},
-                                unique: 0,
-                                limit_reached: false,
-                                most_offers: null,
-                                most_offers_count: 0,
-                                owned: false,
-                                item_count: 0
-                            }), i[r.short])) {
-                                var o = null !== t[a].p ? t[a].p : t[a].b, A = parseInt(o / t[a].c), s = function(e, t) {
-                                    for (var a in i[r.short][t]) if (Math.abs(Number(a) - e) < 1e3) return a;
-                                    return false;
-                                }, l = s(A, "weight_avg");
-                                l ? i[r.short].weight_avg[l] += 1 : i[r.short].weight_avg[A] = 1, i[r.short].item_count += t[a].c, 
-                                i[r.short].offer_count += 1, !isDefined(t[a].s) || t[a].s in i[r.short].sellers || (i[r.short].unique += 1), 
-                                i[r.short].sellers[t[a].s] = (i[r.short].sellers[t[a].s] || 0) + 1, i[r.short].sellers[t[a].s] >= TWIR.Features.get("mw_scan_limit") && (i[r.short].limit_reached = true), 
-                                (null === i[r.short].most_offers || i[r.short].sellers[t[a].s] > i[r.short].most_offers_count) && (i[r.short].most_offers = t[a].s, 
-                                i[r.short].most_offers_count = i[r.short].sellers[t[a].s]), i[r.short].owned = n;
-                                if (new Date(1e3 * Game.getServerTime()) - new Date(t[a].d) <= 6048e5) {
-                                    var g = s(A, "weight_avg_since");
-                                    g ? i[r.short].weight_avg_since[g] += 1 : i[r.short].weight_avg_since[A] = 1;
-                                } else {
-                                    var p = s(A, "weight_avg_old");
-                                    p ? i[r.short].weight_avg_old[p] += 1 : i[r.short].weight_avg_old[A] = 1;
-                                }
-                                new Date(t[a].d) > new Date(i[r.short].seen) && (i[r.short].seen = t[a].d), (null === i[r.short].offer_max.price || o / t[a].c > i[r.short].offer_max.price || o / t[a].c == i[r.short].offer_max.price && new Date(t[a].d) > new Date(i[r.short].offer_max.date)) && (i[r.short].offer_max.price = parseInt(o / t[a].c), 
-                                i[r.short].offer_max.date = t[a].d), (null === i[r.short].offer_min.price || o / t[a].c < i[r.short].offer_min.price || o / t[a].c == i[r.short].offer_min.price && new Date(t[a].d) > new Date(i[r.short].offer_min.date)) && (i[r.short].offer_min.price = parseInt(o / t[a].c), 
-                                i[r.short].offer_min.date = t[a].d);
-                            }
-                        }
-                        i = e.calcWeight(i), i = e.calcChange(i), i = e.calcRecommended(i), e.prices.items = i;
-                    }();
-                    !function() {
-                        for (var t = TWIR.MarketWatcher.data_Products, i = {}, a = 0; a < t.length; a++) {
-                            var r = ItemManager.getByBaseId(t[a].i), n = void 0 !== Bag.getItemByItemId(r.item_id);
-                            if (!(TWIR.Features.get("mw_buyouts_only") && !t[a].p || t[a].p && t[a].p / t[a].c <= r.price) && (i[r.short] || (i[r.short] = {
-                                offer_max: {
-                                    price: null,
-                                    name: null,
-                                    date: 0
-                                },
-                                offer_min: {
-                                    price: null,
-                                    name: null,
-                                    date: 0
-                                },
-                                offer_max_x: {
-                                    each: null,
-                                    price: 0,
-                                    count: null,
-                                    date: 0
-                                },
-                                offer_min_x: {
-                                    each: null,
-                                    price: 0,
-                                    count: null,
-                                    date: 0
-                                },
-                                seen: 0,
-                                weight_avg: {},
-                                weight: 0,
-                                weight_min: 0,
-                                weight_max: 0,
-                                weight_avg_since: {},
-                                weight_since: 0,
-                                weight_avg_old: {},
-                                weight_old: 0,
-                                sellers: {},
-                                unique: 0,
-                                limit_reached: false,
-                                most_offers: null,
-                                most_offers_count: 0,
-                                offer_count: 0,
-                                owned: false,
-                                item_count: 0
-                            }), i[r.short])) {
-                                var o = null !== t[a].p ? t[a].p : t[a].b, A = parseInt(o / t[a].c), s = function(e, t) {
-                                    for (var a in i[r.short][t]) if (Math.abs(Number(a) - e) < 100) return a;
-                                    return false;
-                                }, l = s(A, "weight_avg");
-                                l ? i[r.short].weight_avg[l] += 1 : i[r.short].weight_avg[A] = 1, i[r.short].item_count += t[a].c, 
-                                i[r.short].offer_count += 1, !isDefined(t[a].s) || t[a].s in i[r.short].sellers || (i[r.short].unique += 1), 
-                                i[r.short].sellers[t[a].s] = (i[r.short].sellers[t[a].s] || 0) + 1, i[r.short].sellers[t[a].s] >= TWIR.Features.get("mw_scan_limit") && (i[r.short].limit_reached = true), 
-                                (null === i[r.short].most_offers || i[r.short].sellers[t[a].s] > i[r.short].most_offers_count) && (i[r.short].most_offers = t[a].s, 
-                                i[r.short].most_offers_count = i[r.short].sellers[t[a].s]), i[r.short].owned = n;
-                                if (new Date(1e3 * Game.getServerTime()) - new Date(t[a].d) <= 6048e5) {
-                                    var g = s(A, "weight_avg_since");
-                                    g ? i[r.short].weight_avg_since[g] += 1 : i[r.short].weight_avg_since[A] = 1;
-                                } else {
-                                    var p = s(A, "weight_avg_old");
-                                    p ? i[r.short].weight_avg_old[p] += 1 : i[r.short].weight_avg_old[A] = 1;
-                                }
-                                new Date(t[a].d) > new Date(i[r.short].seen) && (i[r.short].seen = t[a].d), (null === i[r.short].offer_max.price || A > i[r.short].offer_max.price || A == i[r.short].offer_max.price && new Date(t[a].d) > new Date(i[r.short].offer_max.date)) && (i[r.short].offer_max.price = A, 
-                                i[r.short].offer_max.date = t[a].d), (null === i[r.short].offer_max_x.each || A > i[r.short].offer_max_x.each && t[a].c <= i[r.short].offer_max_x.count || A == i[r.short].offer_max_x.each && t[a].c <= i[r.short].offer_max_x.count && new Date(t[a].d) > new Date(i[r.short].offer_max_x.date)) && (i[r.short].offer_max_x.each = A, 
-                                i[r.short].offer_max_x.count = t[a].c, i[r.short].offer_max_x.price = o, i[r.short].offer_max_x.date = t[a].d), 
-                                (null === i[r.short].offer_min.price || A < i[r.short].offer_min.price || A == i[r.short].offer_min.price && new Date(t[a].d) > new Date(i[r.short].offer_min.date)) && (i[r.short].offer_min.price = A, 
-                                i[r.short].offer_min.date = t[a].d), (null === i[r.short].offer_min_x.each || A < i[r.short].offer_min_x.each && t[a].c >= i[r.short].offer_min_x.count || A == i[r.short].offer_min_x.each && t[a].c >= i[r.short].offer_min_x.count && new Date(t[a].d) > new Date(i[r.short].offer_min_x.date)) && (i[r.short].offer_min_x.each = A, 
-                                i[r.short].offer_min_x.price = o, i[r.short].offer_min_x.count = t[a].c, i[r.short].offer_min_x.date = t[a].d);
-                            }
-                        }
-                        i = e.calcWeight(i), i = e.calcRecommended(i, true), e.prices.products = i;
-                    }();
-                },
-                getPrice: function(e) {
-                    var t = this.prices["yield" === e.type ? "products" : "items"];
-                    for (var i in t) if (i === e.short) return t[i];
-                },
-                calcWeight: function(e) {
-                    var t = {
-                        weight_avg: "weight",
-                        weight_avg_since: "weight_since",
-                        weight_avg_old: "weight_old"
-                    };
-                    for (var i in t) for (var a in e) {
-                        var r = e[a][i], n = 0, o = 0;
-                        for (var A in r) n += r[A], o += Number(A) * r[A];
-                        e[a][t[i]] = o / n || 0;
-                    }
-                    return e;
-                },
-                calcChange: function(e) {
-                    var t = function(e) {
-                        return "object" != typeof e ? 0 : Object.values(e).reduce(function(e, t) {
-                            return e + t;
-                        }, 0);
-                    };
-                    for (var i in e) {
-                        var a = e[i];
-                        if (!(t(a.weight_avg_old) < 5 || t(a.weight_avg_since) < 3 || a.unique < 3)) {
-                            var r = a.weight_since, n = a.weight_old;
-                            if (0 !== r && 0 !== n) {
-                                var o = r - n, A = o / n * 100;
-                                e[i].change = isNaN(A) ? 0 : A.toFixed(2);
-                            }
-                        }
-                    }
-                    return e;
-                },
-                calcRecommended: function(e, t) {
-                    var i = function(e, i) {
-                        for (var a in i) if (Math.abs(Number(a) - e) < (t ? 100 : 1e3)) return a;
-                        return false;
-                    }, a = function(e) {
-                        var t = 0, i = 0;
-                        for (var a in e) t += e[a], i += Number(a) * e[a];
-                        return i / t || 0;
-                    };
-                    for (var r in e) {
-                        var n = e[r].weight, o = e[r].weight_avg, A = {}, s = {};
-                        for (var l in o) {
-                            if (n <= Number(l)) {
-                                var g = i(Number(l), s);
-                                g ? s[g] += 1 : s[Number(l)] = 1;
-                            }
-                            if (n >= Number(l)) {
-                                var p = i(Number(l), A);
-                                p ? A[p] += 1 : A[Number(l)] = 1;
-                            }
-                        }
-                        e[r].weight_min = a(A), e[r].weight_max = a(s);
-                    }
-                    return e;
-                }
-            },
             ItemList: {
                 items: {},
                 create: function(e, t) {
@@ -3815,170 +3631,6 @@
                     self.items[e].divMain.hide();
                 }
             },
-            MarketFilter: {
-                options: {},
-                init: function() {
-                    var e = this;
-                    MarketWindow.Buy.twir_init = MarketWindow.Buy.twir_init || MarketWindow.Buy.init, 
-                    MarketWindow.Buy.init = function() {
-                        MarketWindow.Buy.twir_init.apply(this, arguments), !$.isEmptyObject(TWIR.MarketWatcher.tmp_data.browse) && TWIR.Features.get("mw_enabled") && ($("div.searchfilter", this.DOM).append($(new west.gui.Iconbutton(TWIR.images.filter_icon, function() {
-                            e.showDialog();
-                        }, null, null, TWIR_lang.market_watcher.filter_auctions + " (TWIR)").getMainDiv()).css({
-                            position: "absolute",
-                            right: "25px",
-                            bottom: "40px"
-                        })), e.updateNavigation());
-                    }, MarketWindow.Buy.twir_updateCategory = MarketWindow.Buy.twir_updateCategory || MarketWindow.Buy.updateCategory, 
-                    MarketWindow.Buy.updateCategory = function(t, i) {
-                        MarketWindow.Buy.twir_updateCategory.apply(this, arguments), e.updateContent(t, i);
-                    };
-                },
-                getCategoryName: function() {
-                    for (var e = TWIR.MarketWatcher.categories, t = 0; t < e.length; t++) {
-                        var i = MarketWindow.Buy["market_" + e[t]];
-                        if (i && i.divMain.eq(0).hasClass("accordion_opened")) return e[t];
-                    }
-                },
-                getAuctionsByCategory: function(e) {
-                    var t = [], i = TWIR.MarketWatcher.tmp_data.browse;
-                    for (var a in i) i[a][0].type === e && (t = t.concat(i[a]));
-                    return t;
-                },
-                checkConditions: function(e) {
-                    var t = this.options, i = function(e, t, i, a) {
-                        for (var r = new RegExp(a ? "Â§" + i.toUpperCase() + "Â§" : i.toUpperCase(), "i"), n = 0; n < e.length; n++) {
-                            var o = e[n][t];
-                            if (o && r.test(o.toUpperCase())) return true;
-                        }
-                        return false;
-                    }, a = function(e, t, i) {
-                        for (var a = 0; a < e.length; a++) {
-                            var r = e[a], n = null != r.max_price ? r.max_price : null != r.curr_bid ? r.curr_bid : r.auction_price;
-                            if (i && n >= t || !i && n <= t) return true;
-                        }
-                        return false;
-                    }, r = function(e, t, i) {
-                        for (var a = TWIR.Usebonuses, r = 0; r < e.length; r++) {
-                            var n = ItemManager.get(e[r].item_id);
-                            if (a.hasUsebonus(n)) for (var o = 0; o < n.usebonus.length; o++) {
-                                var A = a.getValue(n.usebonus[o]);
-                                if ((A[0] === t || "skills" === t && a.isSkill(n.usebonus[o]) || "duels" === t && a.isSkill(n.usebonus[o], true)) && (!i || !A[1] || A[1] > i)) return true;
-                            }
-                        }
-                        return false;
-                    }, n = [ !t.player_name || i(e, "seller_name", t.player_name, t.player_name_exact), !t.town_name || i(e, "seller_town", t.town_name, t.town_name_exact) || i(e, "market_town", t.town_name, t.town_name_exact), !t.price_min || a(e, t.price_min, true), !t.price_max || a(e, t.price_max) ];
-                    for (var o in t) /use_\d+(?!_val)/.test(o) && (r(e, t[o], t[o + "_val"]) || n.push(false));
-                    return !n.includes(false);
-                },
-                updateNavigation: function() {
-                    for (var e = TWIR.MarketWatcher.categories, t = 0; t < e.length; t++) {
-                        var i = MarketWindow.Buy["market_" + e[t]];
-                        if (i) {
-                            var a = this.getAuctionsByCategory(e[t]);
-                            i.divMain.eq(0).removeClass("twir_inactive"), this.checkConditions(a) || i.divMain.eq(0).addClass("twir_inactive");
-                        }
-                    }
-                },
-                updateContent: function(e, t) {
-                    e = e || this.getCategoryName();
-                    var i = MarketWindow.Buy["market_" + e];
-                    if (i) {
-                        for (var a = 0, r = $(i.divMain[1], MarketWindow.DOM), n = r.find("p.accordion_contentRow"), o = 0; o < n.length; o++) {
-                            var A = n.eq(o).data("itemId"), s = ItemManager.get(A), l = TWIR.MarketWatcher.tmp_data.browse[s.short] || [];
-                            n.eq(o).removeClass("twir_hidden"), this.checkConditions(l) || (n.eq(o).addClass("twir_hidden"), 
-                            a++);
-                        }
-                        a && (r.find(".tw2gui_scrollpane_clipper_contentpane").css("top", "0px"), r.find("div.tw2gui_scrollbar_pulley").css("top", "0px"));
-                    }
-                },
-                showDialog: function() {
-                    var e = this;
-                    if (e.GuiDialog && $(e.GuiDialog.getMainDiv()).is(":visible")) return e.GuiDialog.hide();
-                    var t = function(t) {
-                        t && (e.options = {}), e.updateContent(), e.updateNavigation();
-                    };
-                    t(true);
-                    var i = $('<div style="text-align: center; min-width: 300px; max-width: 335px;"/>'), a = $("<tr/>"), r = new west.gui.Textfield().maxlength(24).setWidth(160);
-                    r.getField().on("input paste", function(t) {
-                        e.options.player_name = $(this).val();
-                    }), $("<td/>").append(r.getMainDiv()).appendTo(a), $('<td style="vertical-align: middle; padding-left: 5px;"/>').append(new west.gui.Checkbox(TWIR_lang.organizing.exact, "").setCallback(function() {
-                        e.options.player_name_exact = this.isSelected();
-                    }).getMainDiv()).appendTo(a);
-                    var n = $("<tr/>"), o = new west.gui.Textfield().maxlength(24).setWidth(160);
-                    o.getField().on("input paste", function(t) {
-                        e.options.town_name = $(this).val();
-                    }), $("<td/>").append(o.getMainDiv()).appendTo(n), $('<td style="vertical-align: middle; padding-left: 5px;"/>').append(new west.gui.Checkbox(TWIR_lang.organizing.exact, "").setCallback(function() {
-                        e.options.town_name_exact = this.isSelected();
-                    }).getMainDiv()).appendTo(n);
-                    var A = $("<tr/>"), s = new west.gui.Textfield().onlyNumeric().setPlaceholder("$").maxlength(8).setWidth(75), l = new west.gui.Textfield().onlyNumeric().setPlaceholder("$").maxlength(8).setWidth(75);
-                    s.getField().on("input paste keypress", TWIR.Util.delay(function(t) {
-                        "" != l.getValue() && Number($(this).val()) > Number(l.getValue()) && $(this).val(l.getValue()), 
-                        e.options.price_min = Number($(this).val()) || 0;
-                    }, 500)), l.getField().on("input paste keypress", TWIR.Util.delay(function(t) {
-                        "" != s.getValue() && Number($(this).val()) < Number(s.getValue()) && $(this).val(s.getValue()), 
-                        e.options.price_max = Number($(this).val()) || 0;
-                    }, 500)), $('<td colspan="2"/>').append(s.getMainDiv(), " - ", l.getMainDiv()).appendTo(A);
-                    var g = function() {
-                        for (var e = [], t = TWIR.Usebonuses.bonusKeys4Type.buffs, i = 0; i < t.length; i++) e.push({
-                            t: t[i],
-                            d: TWIR_lang.inventory[t[i]]
-                        });
-                        return e.sort(function(e, t) {
-                            return e.d.localeCompare(t.d);
-                        }), e;
-                    }(), p = e.usage_effect_rows = {};
-                    $('<table style="margin-bottom: 5px;margin-left: auto;margin-right: auto;"/>').append('<tr><td colspan="2" style="padding-top: 5px;"><div style="font-weight: bold;color: #523F30;">@' + TWIR_lang.market_watcher.seller_name + ":</div></td></tr>", a).append('<tr><td colspan="2" style="padding-top: 15px;"><div style="font-weight: bold;color: #523F30;">' + TWIR_lang.market_watcher.town_name + ":</div></td></tr>", n).append('<tr><td colspan="2" style="padding-top: 15px;"><div style="font-weight: bold;color: #523F30;">' + TWIR_lang.market_watcher.cost_range + ":</div></td></tr>", A).append('<tr><td style="padding-top: 25px;"><div style="font-weight: bold;color: #523F30;">' + TWIR_lang.inventory.use_effect + ':</div></td><td style="padding-top: 25px;"><div style="font-weight: bold;color: #523F30;">' + TWIR_lang.organizing.value + ":</div></td></tr>", function t(i) {
-                        if (i > 3) return;
-                        p[i] = {};
-                        var a = $("<tr/>");
-                        p[i].s = new west.gui.Combobox().setWidth(145);
-                        p[i].f = new west.gui.Textfield().onlyNumeric().maxlength(4).setWidth(45).setName("use_" + i + "_val");
-                        p[i].s.addItem(0, TWIR_lang.informative.none);
-                        for (var r = 0; r < g.length; r++) p[i].s.addItem(g[r].t, g[r].d);
-                        p[i].s.addListener(function(t) {
-                            for (var a in p) if (t && p[a].s.getValue() === t && a != i) return p[i].s.select(0);
-                            t ? e.options["use_" + i] = t : (delete e.options["use_" + i], delete e.options["use_" + i + "_val"], 
-                            p[i].f.setValue(""));
-                        });
-                        p[i].f.getField().on("input paste keypress", TWIR.Util.delay(function(t) {
-                            $(this).val().length && 0 != $(this).val() ? e.options[$(this).attr("name")] = parseInt($(this).val()) || 1 : delete e.options[$(this).attr("name")];
-                        }, 500));
-                        $("<td/>").append(p[i].s.getMainDiv()).appendTo(a);
-                        $('<td style="vertical-align: middle; padding-left: 5px;"/>').append(p[i].f.getMainDiv(), i < 3 ? $('<span style="display: inline-block; position: relative; bottom: 1px; margin-left: 5px; cursor: pointer;"/>').append(new west.gui.Icon("plus").getMainDiv()).click(function() {
-                            $(this).closest("tr").after(t(i + 1)), $(this).remove();
-                        }) : "").appendTo(a);
-                        return a;
-                    }(1)).appendTo(i);
-                    var c = e.GuiDialog = new west.gui.Dialog("", i).setDraggable(true).setBlockGame(false).addButton(TWIR_lang.informative.reset, function() {
-                        return function() {
-                            function t(e) {
-                                e instanceof west.gui.Textfield ? e.setValue("") : e instanceof west.gui.Combobox && e.select(e.items[0].value);
-                            }
-                            for (var i in t(r), t(o), t(s), t(l), e.usage_effect_rows) for (var a in e.usage_effect_rows[i]) t(e.usage_effect_rows[i][a]);
-                            e.GuiDialog.getMainDiv().find(".tw2gui_checkbox").removeClass("tw2gui_checkbox_checked").data("enabled", false);
-                        }(), t(true), false;
-                    }).addButton(Inventory.categoryDesc.set, function() {
-                        return t(), false;
-                    }).show();
-                    c.setTitle('<span style="margin-top: 4px; font-size: 15pt;">' + TWIR_lang.market_watcher.filter_auctions + "</span>"), 
-                    c.twir_addCloseButton(function() {
-                        t(true);
-                    }), EventHandler.listen([ "window_closed_" + MarketWindow.window.id, "window_closed_" + Inventory.window.id ], function() {
-                        e.options = {}, c.hide();
-                    });
-                    var d = $(MarketWindow.window.divMain);
-                    c.getMainDiv().css({
-                        "min-width": "unset",
-                        "min-height": "100px",
-                        left: d.position().left + d.width() - 40,
-                        top: d.position().top + 10,
-                        "margin-top": "",
-                        "margin-left": ""
-                    }), c.getMainDiv().find(".tw2gui_dialog_actions").css("text-align", "center"), c.getMainDiv().find("input, select, textarea").keypress(TWIR.Util.delay(function(e) {
-                        13 == e.keyCode && t();
-                    }, 500));
-                }
-            },
             MarketWatcher: {
                 categories: [ "head", "neck", "body", "pants", "belt", "foot", "right_arm", "left_arm", "animal", "yield", "recipe" ],
                 lastAlert: {},
@@ -4071,33 +3723,6 @@
                     i.sort(function(e, t) {
                         return e.type == t.type ? e.name.localeCompare(t.name) : p.indexOf(e.type) - p.indexOf(t.type);
                     }), this.entriesList = i;
-                },
-                progress: {
-                    divMain: $('<div class="notification"><div class="notification_bgr"><div class=\'tw2gui_bg_tl\'/><div class=\'tw2gui_bg_tr\'/><div class=\'tw2gui_bg_bl\'/><div class=\'tw2gui_bg_br\'/></div><div class="tw2gui-iconset tw2gui-icon-abort notification_close" /><div class="notification_container"><div class="notification_header" /><div class="notification_text" /></div></div>'),
-                    show: function(e, t) {
-                        var i = this;
-                        $(".notification_header", i.divMain).text(e), $(".notification_text", i.divMain).text(t);
-                        var a = $(i.divMain);
-                        $("#ui_notifications").append(i.divMain), $(i.divMain).off("click").click(function() {
-                            i.hide();
-                        }).queue(function(e) {
-                            a.height();
-                            a.height(0), a.height(), a.css({
-                                "transition-duration": "600ms",
-                                display: "block",
-                                height: "auto",
-                                opacity: "1"
-                            }), e();
-                        });
-                    },
-                    status: function(e) {
-                        var t = this.divMain;
-                        $(".notification_text", t).text(e);
-                    },
-                    hide: function() {
-                        var e = this.divMain;
-                        $(e).remove();
-                    }
                 },
                 ajaxListener: function() {
                     var e = this, t = function(t, i, a, r) {
@@ -4445,7 +4070,7 @@
                     return i;
                 },
                 isUndervalued: function(e, t, i) {
-                    var a = ItemManager.get(e, true), r = TWIR.marketPrice.getPrice(a), n = t && r ? Math.round(t / r.weight * 100) : 0;
+                    var a = ItemManager.get(e, true), r = TWIR.MarketWorth.getPrice(a), n = t && r ? Math.round(t / r.weight * 100) : 0;
                     return 0 != n && n <= 75 || (!!(t && t <= 3 * a.price) || !!(i && i <= 3 * a.price));
                 },
                 getRecipes: function(e) {
@@ -4523,7 +4148,7 @@
                     var e = this;
                     try {
                         e.lastAlert = $.extend({}, e.tmp_data.watched), TWIR.MarketAlert.hide();
-                        var t = e.tmp_data.watched = {}, i = e.tmp_data.coll = {}, a = e.tmp_data.recipes = {}, r = e.tmp_data.buffs = {}, n = e.tmp_data.browse = {}, o = new Date(1e3 * Game.getServerTime()).getTime(), A = function(e) {
+                        var t, i = e.tmp_data.watched = {}, a = e.tmp_data.coll = {}, r = e.tmp_data.recipes = {}, n = e.tmp_data.buffs = {}, o = e.tmp_data.browse = {}, A = new Date(1e3 * Game.getServerTime()).getTime(), l = function(e) {
                             var t = ItemManager.get(e.item_id), i = {
                                 type: t.type,
                                 set: t.set,
@@ -4545,7 +4170,7 @@
                                 sell_rights: e.sell_rights
                             };
                             return i;
-                        }, l = function(e) {
+                        }, g = function(e) {
                             var t = ItemManager.get(e.item_id), i = new Date(1e3 * Game.getServerTime()).valueOf(), a = {
                                 d: i,
                                 e: e.auction_end_date,
@@ -4558,71 +4183,75 @@
                             };
                             return a;
                         };
-                        TWIR.Features.get("mw_status") && TWIR.Features.get("mw_enabled") && this.progress.show(TWIR_lang.market_watcher.progress_title + "..", "...");
-                        var g = function(e, t) {
+                        TWIR.Features.get("mw_status") && TWIR.Features.get("mw_enabled") && (t = new west.notification.ToastNotification(TWIR_lang.market_watcher.progress_title + "..", "...").show(), 
+                        $(t.divMain).css({
+                            height: "auto",
+                            transition: "none"
+                        }).clearQueue());
+                        var p = function(e, t) {
                             var i = ItemManager.get(e.item_id, true);
                             t[i.short] && !t[i.short].some(function(e) {
                                 return "trader" === e.spec;
                             }) ? t[i.short].unshift(e) : t[i.short] || (t[i.short] = [], t[i.short].push(e));
-                        }, p = function(e, t) {
+                        }, c = function(e, t) {
                             var i = ItemManager.get(e.item_id, true);
                             t[i.short] || (t[i.short] = []), t[i.short].some(function(t) {
                                 return t.offer_id === e.market_offer_id;
                             }) || t[i.short].push(e);
                         };
-                        !function c(d) {
-                            d = d || 1, TWIR.Features.get("mw_enabled") && (e.processing = true, TWIR.Features.get("mw_status") && e.progress.status(s(TWIR_lang.market_watcher.progress_page + " " + d)), 
+                        !function d(I) {
+                            I = I || 1, TWIR.Features.get("mw_enabled") && (e.processing = true, t && t.setText(s(TWIR_lang.market_watcher.progress_page + " " + I)), 
                             Ajax.remoteCall("building_market", "search", {
-                                page: d
-                            }, function(I) {
-                                if (!I.error && "invalid session" !== I.msg) {
-                                    for (var m = new Date(1e3 * Game.getServerTime()).getTime(), u = I.msg.search_result, h = 0; h < u.length; h++) {
-                                        var C = ItemManager.get(u[h].item_id, true), w = l(u[h]);
-                                        if (2 === u[h].sell_rights) if ("yield" !== C.type || null !== C.set || TWIR.Inventory.items_by_category.collectibles.includes(C.item_base_id)) {
-                                            var f = e.data_Items.find(function(e) {
-                                                return e.o === u[h].market_offer_id;
+                                page: I
+                            }, function(m) {
+                                if (!m.error && "invalid session" !== m.msg) {
+                                    for (var u = new Date(1e3 * Game.getServerTime()).getTime(), h = m.msg.search_result, C = 0; C < h.length; C++) {
+                                        var w = ItemManager.get(h[C].item_id, true), f = g(h[C]);
+                                        if (2 === h[C].sell_rights) if ("yield" !== w.type || null !== w.set || TWIR.Inventory.items_by_category.collectibles.includes(w.item_base_id)) {
+                                            var b = e.data_Items.find(function(e) {
+                                                return e.o === h[C].market_offer_id;
                                             });
-                                            f ? (f.d = m, f.b = u[h].current_bid ? u[h].current_bid : u[h].auction_price) : e.data_Items.push(w);
+                                            b ? (b.d = u, b.b = h[C].current_bid ? h[C].current_bid : h[C].auction_price) : e.data_Items.push(f);
                                         } else {
-                                            var b = e.data_Products.find(function(e) {
-                                                return e.o === u[h].market_offer_id;
+                                            var v = e.data_Products.find(function(e) {
+                                                return e.o === h[C].market_offer_id;
                                             });
-                                            b ? (b.d = m, b.b = u[h].current_bid ? u[h].current_bid : u[h].auction_price) : e.data_Products.push(w);
+                                            v ? (v.d = u, v.b = h[C].current_bid ? h[C].current_bid : h[C].auction_price) : e.data_Products.push(f);
                                         }
-                                        var v = A(u[h]);
-                                        p(v, n), TWIR.Features.get("mw_collections") && e.isNeeded4Collection(C.item_id) && false === e.isBought(u[h].item_id) && p(v, i), 
-                                        TWIR.Features.get("mw_recipes") && e.isNeeded4Crafting(C.item_id) && false === e.isBought(u[h].item_id) && p(v, a);
-                                        var k = e.isWatched(u[h].item_id);
-                                        if (k) {
-                                            var y = null != u[h].max_price ? u[h].max_price : null != u[h].curr_bid ? Number(u[h].curr_bid + 10) : Number(u[h].auction_price + 10), x = null != u[h].curr_bid ? u[h].curr_bid : u[h].auction_price, R = u[h].max_price;
-                                            k.auto && 0 != k.auto && !u[h].is_highest_bidder && y <= k.auto && Number(Character.money + Character.deposit) > y ? TWIR.Bidder.bid({
-                                                bid: y,
-                                                offer_id: u[h].market_offer_id
-                                            }) : (k.bid_price && x && (k.above && x >= k.bid_price || !k.above && x <= k.bid_price) || k.item_price && R && (k.above && R >= k.item_price || !k.above && R <= k.item_price) || !k.bid_price && !k.item_price) && (TWIR.Features.get("mw_status") && e.progress.status(s(TWIR_lang.market_watcher.progress_found + ": " + C.name)), 
-                                            e.isWatched(u[h].item_id, true) && (v.spec = "buff", p(v, r)), p(v, t));
+                                        var k = l(h[C]);
+                                        c(k, o), TWIR.Features.get("mw_collections") && e.isNeeded4Collection(w.item_id) && false === e.isBought(h[C].item_id) && c(k, a), 
+                                        TWIR.Features.get("mw_recipes") && e.isNeeded4Crafting(w.item_id) && false === e.isBought(h[C].item_id) && c(k, r);
+                                        var y = e.isWatched(h[C].item_id);
+                                        if (y) {
+                                            var x = null != h[C].max_price ? h[C].max_price : null != h[C].curr_bid ? Number(h[C].curr_bid + 10) : Number(h[C].auction_price + 10), R = null != h[C].curr_bid ? h[C].curr_bid : h[C].auction_price, V = h[C].max_price;
+                                            y.auto && 0 != y.auto && !h[C].is_highest_bidder && x <= y.auto && Number(Character.money + Character.deposit) > x ? TWIR.Bidder.bid({
+                                                bid: x,
+                                                offer_id: h[C].market_offer_id
+                                            }) : (y.bid_price && R && (y.above && R >= y.bid_price || !y.above && R <= y.bid_price) || y.item_price && V && (y.above && V >= y.item_price || !y.above && V <= y.item_price) || !y.bid_price && !y.item_price) && (t && t.setText(s(TWIR_lang.market_watcher.progress_found + ": " + w.name)), 
+                                            e.isWatched(h[C].item_id, true) && (k.spec = "buff", c(k, n)), c(k, i));
                                         }
                                     }
                                     setTimeout(function() {
-                                        if (true === I.msg.next) TWIR.Util.waitFor(function() {
+                                        if (true === m.msg.next) TWIR.Util.waitFor(function() {
                                             return !TWIR.Opener.processing && !TWIR.changing_clothes && !TWIR.Bidder.processing;
                                         }, function() {
-                                            c(++d);
+                                            d(++I);
                                         }); else {
-                                            if (TWIR.Features.get("mw_trader")) for (var t = e.data_trader_items, i = 0; i < t.length; i++) {
-                                                var a = ItemManager.get(t[i].item_id, true), r = e.isWatched(t[i].item_id), n = new Date(1e3 * t[i].auction_end_date).getTime() - new Date(1e3 * Game.getServerTime()).getTime();
-                                                t[i].auction_ends_in = n / 1e3, t[i].posx = Character.position.x, t[i].posy = Character.position.y, 
-                                                e.isNeeded4Collection(a.item_id) && g(t[i], e.tmp_data.coll), e.isNeeded4Crafting(a.item_id) && g(t[i], e.tmp_data.recipes), 
-                                                r && g(t[i], e.tmp_data.watched);
+                                            if (TWIR.Features.get("mw_trader")) for (var i = e.data_trader_items, a = 0; a < i.length; a++) {
+                                                var r = ItemManager.get(i[a].item_id, true), n = e.isWatched(i[a].item_id), o = new Date(1e3 * i[a].auction_end_date).getTime() - new Date(1e3 * Game.getServerTime()).getTime();
+                                                i[a].auction_ends_in = o / 1e3, i[a].posx = Character.position.x, i[a].posy = Character.position.y, 
+                                                e.isNeeded4Collection(r.item_id) && p(i[a], e.tmp_data.coll), e.isNeeded4Crafting(r.item_id) && p(i[a], e.tmp_data.recipes), 
+                                                n && p(i[a], e.tmp_data.watched);
                                             }
                                             if (void 0 !== localStorage) {
                                                 TWIR.Data.add("twir_marketData", e.data_Items), TWIR.Data.add("twir_marketDataJunk", e.data_Products), 
                                                 TWIR.Data.add("twir_tmp_data_watched", e.tmp_data.watched, true), TWIR.Data.add("twir_tmp_data_full", e.tmp_data.browse, true);
-                                                var A = new Date(1e3 * Game.getServerTime()).getTime();
-                                                TWIR.Util.log("TWIR/: Market Scan completed at " + Chat.Formatter.formatTime(new Date(1e3 * Game.getServerTime()).getTime(), false) + " in " + ((A - o) / 1e3).getTime2EndToken() + " (" + d + " pages).", "green"), 
+                                                var s = new Date(1e3 * Game.getServerTime()).getTime();
+                                                TWIR.Util.log("TWIR/: Market Scan completed at " + Chat.Formatter.formatTime(new Date(1e3 * Game.getServerTime()).getTime(), false) + " in " + ((s - A) / 1e3).getTime2EndToken() + " (" + I + " pages).", "green"), 
                                                 sessionStorage && sessionStorage.setItem("twir_timer", new Date(1e3 * Game.getServerTime()).getTime().toString());
                                             } else new UserMessage(TWIR_lang.informative.storage_error + "!", UserMessage.TYPE_ERROR).show();
-                                            TWIR.Features.get("mw_status") && e.progress.hide(), e.processing = false, e.getCollections(), 
-                                            TWIR.MarketAlert.createEntry(), TWIR.marketPrice.init(), e.resetScan(true);
+                                            t && t.hide(), e.processing = false, e.getCollections(), TWIR.MarketAlert.createEntry(), 
+                                            TWIR.MarketWorth.init(), e.resetScan(true);
                                         }
                                     }, Math.floor(3e3 * Math.random() + 3e3));
                                 }
@@ -4674,8 +4303,13 @@
                             t.tab = e;
                             var i = function(e) {
                                 var i = t.tab, a = "";
-                                a = e && e.length ? t.getXHTML(i, e) : t.getXHTML(i), r.getContentPane().empty().append($(a)), 
-                                r.scrollToTop();
+                                (a = e && e.length ? $(t.getXHTML(i, e)) : $(t.getXHTML(i))).find("img[data-item-id]").mouseenter(function(e) {
+                                    var t = $(this);
+                                    t.hasClass("hasMousePopup") || t.addMousePopup(new ItemPopup(ItemManager.get(t.data("itemId"), true), {
+                                        twir_partial_bonus: false,
+                                        twir_market_price: false
+                                    }).popup);
+                                }), r.getContentPane().empty().append(a), r.scrollToTop();
                             };
                             i(), n.getField().on("input paste keypress", TWIR.Util.delay(function(e) {
                                 var t = e.keyCode || e.which;
@@ -4741,15 +4375,13 @@
                                     }
                                     l += "</table>", A.length >= 11 && (l += '<div style="text-align: center;">...</div>');
                                 }
-                                var I = ItemManager.get(A[0].item_id, true), m = TWIR.Popups.marketPriceXHTML(I), u = null !== A[0].max_price ? TWIR_lang.market_watcher.price : TWIR_lang.market_watcher.bid, h = null !== A[0].max_price ? A[0].max_price / A[0].item_count : A[0].auction_price / A[0].item_count, C = A[0].curr_bid && null !== A[0].curr_bid ? A[0].curr_bid / A[0].item_count : null, w = TWIR.marketPrice.getPrice(I), f = A[0].spec && "trader" == A[0].spec ? "blue" : w && h <= w.weight && w.offer_count > 2 ? "#070" : w && w.offer_max.price <= h && w.offer_count > 2 && A[0].seller_name != TWIR.author ? "#900" : "unset", b = Map.calcWayTime(TWIR.Util.lastPos(), {
+                                var I = ItemManager.get(A[0].item_id, true), m = TWIR.Popups.marketWorthXHTML(I), u = null !== A[0].max_price ? TWIR_lang.market_watcher.price : TWIR_lang.market_watcher.bid, h = null !== A[0].max_price ? A[0].max_price / A[0].item_count : A[0].auction_price / A[0].item_count, C = A[0].curr_bid && null !== A[0].curr_bid ? A[0].curr_bid / A[0].item_count : null, w = TWIR.MarketWorth.getPrice(I), f = A[0].spec && "trader" == A[0].spec ? "blue" : w && h <= w.weight && w.offer_count > 2 ? "#070" : w && w.offer_max.price <= h && w.offer_count > 2 && A[0].seller_name != TWIR.author ? "#900" : "unset", b = Map.calcWayTime(TWIR.Util.lastPos(), {
                                     x: A[0].posx,
                                     y: A[0].posy
                                 }), v = "<div>@" + A[0].seller_name + (A[0].market_town ? "&nbsp;(" + A[0].market_town + ")" : "") + "</div><div>" + TWIR_lang.informative.distance + ":&nbsp;" + b.formatDuration() + "</div>", k = o !== r.length - 1 || 9 === o ? "1px solid rgba(140,92,20,0.65)" : "none", y = "trader" !== A[0].spec ? "javascript:void(PlayerProfileWindow.open(" + A[0].seller_id + "))" : "javascript:void(west.window.shop.open(&quot;wear_window&quot;).showCategory(&quot;trader&quot;))", x = A.length > 1 ? '<div style="font-style: italic;margin-left: 10px;color: #666; font-size: 8pt; cursor: pointer;"><a style="color: #523F30!important;font-style: normal;font-weight: normal;" href="' + y + '" title="' + v.escapeHTML() + '">@' + A[0].seller_name.cutIt(14) + '</a>&nbsp;<span title="' + l.escapeHTML() + '">' + s(TWIR_lang.market_watcher.offer_count, A.length - 1) + "</span></div>" : '<div style="color: #666;margin-left: 10px;cursor: pointer; font-size: 8pt;"><a style="color: #523F30!important;font-weight: normal;" href="' + y + '" title="' + v.escapeHTML() + '">@' + A[0].seller_name + "</a></div>", R = "trader" != A[0].spec ? "TWIR.MarketWatcher.searchMarket(" + A[0].item_id + ")" : "west.window.shop.open(&quot;wear_window&quot;).showCategory(&quot;trader&quot;)", V = A[0].spec && "trader" == A[0].spec ? '<img src="' + TWIR.images.trader + '" style="position: absolute; right: 0px; bottom: 0px;"/>' : 1 == A[0].sell_rights ? '<img src="/images/icons/friends.png" style="position: absolute; right: 0px; bottom: 0px;"/>' : 0 == A[0].sell_rights ? '<img src="/images/icons/town_new.png" style="position: absolute; right: 0px; bottom: 0px;"/>' : "", B = A.some(function(e) {
                                     return n.includes(e.offer_id);
                                 }) ? '<img src="/images/map/icons/new.png" style="position:absolute;top: -5px;left: -10px;width: 22px;"/>' : "";
-                                i += '<tr style="border-spacing: 1px !important;background: rgba(220, 165, 118, 0.4);border-radius: 3px;box-shadow: 0 0 1px inset;border-bottom: ' + k + ';"><td style="vertical-align: middle;padding-left: 4px;"><div style="position: relative; height: 29px; width: 35px;"><img data-item-id="' + A[0].item_id + '" style="cursor: pointer;" title="' + new ItemPopup(I, {
-                                    twir_partial_bonus: false
-                                }).getXHTML().escapeHTML() + '" src="' + I.image + '"; height="29"; width="29"></img>' + V + B + "</div></td>", 
+                                i += '<tr style="border-spacing: 1px !important;background: rgba(220, 165, 118, 0.4);border-radius: 3px;box-shadow: 0 0 1px inset;border-bottom: ' + k + ';"><td style="vertical-align: middle;padding-left: 4px;"><div style="position: relative; height: 29px; width: 35px;"><img data-item-id="' + A[0].item_id + '" style="cursor: pointer;" src="' + I.image + '"; height="29"; width="29"></img>' + V + B + "</div></td>", 
                                 i += '<td style="padding: 2px;vertical-align: middle;"><div style="margin-bottom: -2px; cursor: pointer;"><span title="' + I.name + '" data-item-id="' + A[0].item_id + '" style="width: 190px;text-overflow: ellipsis;white-space: nowrap;overflow: hidden;display: inline-block; color: ' + f + ';">' + ("recipe" === I.type ? I.name.replace(/.*?:\s{0,1}/, "") : I.name) + '</span><span style="display: inline-block;overflow: hidden;float: right;">(x' + TWIR.Util.replSum(A[0].item_count) + ")</span></div>" + x + "</td>", 
                                 i += '<td title="' + A[0].auction_end_date.getFormattedTimeString4Timestamp() + '" style="text-align: center;padding: 2px; padding-right: 8px; padding-left: 8px;cursor: pointer;"><div style="font-size: 8pt;">' + TWIR_lang.market_watcher.time_left + '</div><div style="margin-top: 4px;">' + TWIR.Util.msToTime(A[0].auction_ends_in) + "</div></td>", 
                                 i += '<td title="' + (m ? m.escapeHTML() : "") + '" style="text-align: center;padding: 2px;cursor: pointer; padding-left: 8px;"><div style="font-size: 8pt;">' + u + '</div><div style="color: ' + f + '; margin-top: 4px;">$' + TWIR.Util.replSum(h) + "</div></td>", 
@@ -4785,7 +4417,6 @@
                             i.removeEntry(e[t]);
                         }
                     } catch (e) {}
-                    TWIR.MarketWatcher.progress.hide();
                 },
                 notify: function() {
                     if (TWIR._playable && true !== TWIR.Features.get("mw_alert_playsound")) {
@@ -4811,6 +4442,363 @@
                     } else "denied" !== Notification.permission && Notification.requestPermission(function(a) {
                         i.pushNotify(e, t);
                     });
+                }
+            },
+            MarketWorth: {
+                prices: {
+                    items: {},
+                    products: {}
+                },
+                init: function() {
+                    var e = this;
+                    !function() {
+                        for (var t = TWIR.MarketWatcher.data_Items, i = {}, a = 0; a < t.length; a++) {
+                            var r = ItemManager.getByBaseId(t[a].i), n = void 0 !== Bag.getItemByItemId(r.item_id);
+                            if (!(TWIR.Features.get("mw_buyouts_only") && !t[a].p || t[a].p && t[a].p / t[a].c <= r.price) && (i[r.short] || (i[r.short] = {
+                                offer_max: {
+                                    price: null,
+                                    date: 0
+                                },
+                                offer_min: {
+                                    price: null,
+                                    date: 0
+                                },
+                                seen: 0,
+                                weight_avg: {},
+                                weight: 0,
+                                weight_min: 0,
+                                weight_max: 0,
+                                weight_avg_since: {},
+                                weight_since: 0,
+                                change: 0,
+                                weight_avg_old: {},
+                                weight_old: 0,
+                                offer_count: 0,
+                                sellers: {},
+                                unique: 0,
+                                limit_reached: false,
+                                most_offers: null,
+                                most_offers_count: 0,
+                                owned: false,
+                                item_count: 0
+                            }), i[r.short])) {
+                                var o = null !== t[a].p ? t[a].p : t[a].b, A = parseInt(o / t[a].c), s = function(e, t) {
+                                    for (var a in i[r.short][t]) if (Math.abs(Number(a) - e) < 1e3) return a;
+                                    return false;
+                                }, l = s(A, "weight_avg");
+                                l ? i[r.short].weight_avg[l] += 1 : i[r.short].weight_avg[A] = 1, i[r.short].item_count += t[a].c, 
+                                i[r.short].offer_count += 1, !isDefined(t[a].s) || t[a].s in i[r.short].sellers || (i[r.short].unique += 1), 
+                                i[r.short].sellers[t[a].s] = (i[r.short].sellers[t[a].s] || 0) + 1, i[r.short].sellers[t[a].s] >= TWIR.Features.get("mw_scan_limit") && (i[r.short].limit_reached = true), 
+                                (null === i[r.short].most_offers || i[r.short].sellers[t[a].s] > i[r.short].most_offers_count) && (i[r.short].most_offers = t[a].s, 
+                                i[r.short].most_offers_count = i[r.short].sellers[t[a].s]), i[r.short].owned = n;
+                                if (new Date(1e3 * Game.getServerTime()) - new Date(t[a].d) <= 6048e5) {
+                                    var g = s(A, "weight_avg_since");
+                                    g ? i[r.short].weight_avg_since[g] += 1 : i[r.short].weight_avg_since[A] = 1;
+                                } else {
+                                    var p = s(A, "weight_avg_old");
+                                    p ? i[r.short].weight_avg_old[p] += 1 : i[r.short].weight_avg_old[A] = 1;
+                                }
+                                new Date(t[a].d) > new Date(i[r.short].seen) && (i[r.short].seen = t[a].d), (null === i[r.short].offer_max.price || o / t[a].c > i[r.short].offer_max.price || o / t[a].c == i[r.short].offer_max.price && new Date(t[a].d) > new Date(i[r.short].offer_max.date)) && (i[r.short].offer_max.price = parseInt(o / t[a].c), 
+                                i[r.short].offer_max.date = t[a].d), (null === i[r.short].offer_min.price || o / t[a].c < i[r.short].offer_min.price || o / t[a].c == i[r.short].offer_min.price && new Date(t[a].d) > new Date(i[r.short].offer_min.date)) && (i[r.short].offer_min.price = parseInt(o / t[a].c), 
+                                i[r.short].offer_min.date = t[a].d);
+                            }
+                        }
+                        i = e.calcWeight(i), i = e.calcChange(i), i = e.calcRecommended(i), e.prices.items = i;
+                    }();
+                    !function() {
+                        for (var t = TWIR.MarketWatcher.data_Products, i = {}, a = 0; a < t.length; a++) {
+                            var r = ItemManager.getByBaseId(t[a].i), n = void 0 !== Bag.getItemByItemId(r.item_id);
+                            if (!(TWIR.Features.get("mw_buyouts_only") && !t[a].p || t[a].p && t[a].p / t[a].c <= r.price) && (i[r.short] || (i[r.short] = {
+                                offer_max: {
+                                    price: null,
+                                    name: null,
+                                    date: 0
+                                },
+                                offer_min: {
+                                    price: null,
+                                    name: null,
+                                    date: 0
+                                },
+                                offer_max_x: {
+                                    each: null,
+                                    price: 0,
+                                    count: null,
+                                    date: 0
+                                },
+                                offer_min_x: {
+                                    each: null,
+                                    price: 0,
+                                    count: null,
+                                    date: 0
+                                },
+                                seen: 0,
+                                weight_avg: {},
+                                weight: 0,
+                                weight_min: 0,
+                                weight_max: 0,
+                                weight_avg_since: {},
+                                weight_since: 0,
+                                weight_avg_old: {},
+                                weight_old: 0,
+                                sellers: {},
+                                unique: 0,
+                                limit_reached: false,
+                                most_offers: null,
+                                most_offers_count: 0,
+                                offer_count: 0,
+                                owned: false,
+                                item_count: 0
+                            }), i[r.short])) {
+                                var o = null !== t[a].p ? t[a].p : t[a].b, A = parseInt(o / t[a].c), s = function(e, t) {
+                                    for (var a in i[r.short][t]) if (Math.abs(Number(a) - e) < 100) return a;
+                                    return false;
+                                }, l = s(A, "weight_avg");
+                                l ? i[r.short].weight_avg[l] += 1 : i[r.short].weight_avg[A] = 1, i[r.short].item_count += t[a].c, 
+                                i[r.short].offer_count += 1, !isDefined(t[a].s) || t[a].s in i[r.short].sellers || (i[r.short].unique += 1), 
+                                i[r.short].sellers[t[a].s] = (i[r.short].sellers[t[a].s] || 0) + 1, i[r.short].sellers[t[a].s] >= TWIR.Features.get("mw_scan_limit") && (i[r.short].limit_reached = true), 
+                                (null === i[r.short].most_offers || i[r.short].sellers[t[a].s] > i[r.short].most_offers_count) && (i[r.short].most_offers = t[a].s, 
+                                i[r.short].most_offers_count = i[r.short].sellers[t[a].s]), i[r.short].owned = n;
+                                if (new Date(1e3 * Game.getServerTime()) - new Date(t[a].d) <= 6048e5) {
+                                    var g = s(A, "weight_avg_since");
+                                    g ? i[r.short].weight_avg_since[g] += 1 : i[r.short].weight_avg_since[A] = 1;
+                                } else {
+                                    var p = s(A, "weight_avg_old");
+                                    p ? i[r.short].weight_avg_old[p] += 1 : i[r.short].weight_avg_old[A] = 1;
+                                }
+                                new Date(t[a].d) > new Date(i[r.short].seen) && (i[r.short].seen = t[a].d), (null === i[r.short].offer_max.price || A > i[r.short].offer_max.price || A == i[r.short].offer_max.price && new Date(t[a].d) > new Date(i[r.short].offer_max.date)) && (i[r.short].offer_max.price = A, 
+                                i[r.short].offer_max.date = t[a].d), (null === i[r.short].offer_max_x.each || A > i[r.short].offer_max_x.each && t[a].c <= i[r.short].offer_max_x.count || A == i[r.short].offer_max_x.each && t[a].c <= i[r.short].offer_max_x.count && new Date(t[a].d) > new Date(i[r.short].offer_max_x.date)) && (i[r.short].offer_max_x.each = A, 
+                                i[r.short].offer_max_x.count = t[a].c, i[r.short].offer_max_x.price = o, i[r.short].offer_max_x.date = t[a].d), 
+                                (null === i[r.short].offer_min.price || A < i[r.short].offer_min.price || A == i[r.short].offer_min.price && new Date(t[a].d) > new Date(i[r.short].offer_min.date)) && (i[r.short].offer_min.price = A, 
+                                i[r.short].offer_min.date = t[a].d), (null === i[r.short].offer_min_x.each || A < i[r.short].offer_min_x.each && t[a].c >= i[r.short].offer_min_x.count || A == i[r.short].offer_min_x.each && t[a].c >= i[r.short].offer_min_x.count && new Date(t[a].d) > new Date(i[r.short].offer_min_x.date)) && (i[r.short].offer_min_x.each = A, 
+                                i[r.short].offer_min_x.price = o, i[r.short].offer_min_x.count = t[a].c, i[r.short].offer_min_x.date = t[a].d);
+                            }
+                        }
+                        i = e.calcWeight(i), i = e.calcRecommended(i, true), e.prices.products = i;
+                    }();
+                },
+                getPrice: function(e) {
+                    var t = this.prices["yield" === e.type ? "products" : "items"];
+                    for (var i in t) if (i === e.short) return t[i];
+                },
+                calcWeight: function(e) {
+                    var t = {
+                        weight_avg: "weight",
+                        weight_avg_since: "weight_since",
+                        weight_avg_old: "weight_old"
+                    };
+                    for (var i in t) for (var a in e) {
+                        var r = e[a][i], n = 0, o = 0;
+                        for (var A in r) n += r[A], o += Number(A) * r[A];
+                        e[a][t[i]] = o / n || 0;
+                    }
+                    return e;
+                },
+                calcChange: function(e) {
+                    var t = function(e) {
+                        return "object" != typeof e ? 0 : Object.values(e).reduce(function(e, t) {
+                            return e + t;
+                        }, 0);
+                    };
+                    for (var i in e) {
+                        var a = e[i];
+                        if (!(t(a.weight_avg_old) < 5 || t(a.weight_avg_since) < 3 || a.unique < 3)) {
+                            var r = a.weight_since, n = a.weight_old;
+                            if (0 !== r && 0 !== n) {
+                                var o = r - n, A = o / n * 100;
+                                e[i].change = isNaN(A) ? 0 : A.toFixed(2);
+                            }
+                        }
+                    }
+                    return e;
+                },
+                calcRecommended: function(e, t) {
+                    var i = function(e, i) {
+                        for (var a in i) if (Math.abs(Number(a) - e) < (t ? 100 : 1e3)) return a;
+                        return false;
+                    }, a = function(e) {
+                        var t = 0, i = 0;
+                        for (var a in e) t += e[a], i += Number(a) * e[a];
+                        return i / t || 0;
+                    };
+                    for (var r in e) {
+                        var n = e[r].weight, o = e[r].weight_avg, A = {}, s = {};
+                        for (var l in o) {
+                            if (n <= Number(l)) {
+                                var g = i(Number(l), s);
+                                g ? s[g] += 1 : s[Number(l)] = 1;
+                            }
+                            if (n >= Number(l)) {
+                                var p = i(Number(l), A);
+                                p ? A[p] += 1 : A[Number(l)] = 1;
+                            }
+                        }
+                        e[r].weight_min = a(A), e[r].weight_max = a(s);
+                    }
+                    return e;
+                }
+            },
+            MarketFilter: {
+                options: {},
+                init: function() {
+                    var e = this;
+                    MarketWindow.Buy.twir_init = MarketWindow.Buy.twir_init || MarketWindow.Buy.init, 
+                    MarketWindow.Buy.init = function() {
+                        MarketWindow.Buy.twir_init.apply(this, arguments), !$.isEmptyObject(TWIR.MarketWatcher.tmp_data.browse) && TWIR.Features.get("mw_enabled") && ($("div.searchfilter", this.DOM).append($(new west.gui.Iconbutton(TWIR.images.filter_icon, function() {
+                            e.showDialog();
+                        }, null, null, TWIR_lang.market_watcher.filter_auctions + " (TWIR)").getMainDiv()).css({
+                            position: "absolute",
+                            right: "25px",
+                            bottom: "40px"
+                        })), e.tmp_data_auctions = $.extend({}, TWIR.MarketWatcher.tmp_data.browse), e.updateNavigation());
+                    }, MarketWindow.Buy.twir_updateCategory = MarketWindow.Buy.twir_updateCategory || MarketWindow.Buy.updateCategory, 
+                    MarketWindow.Buy.updateCategory = function(t, i) {
+                        MarketWindow.Buy.twir_updateCategory.apply(this, arguments), e.updateContent(t, i);
+                    };
+                },
+                getCategoryName: function() {
+                    for (var e = TWIR.MarketWatcher.categories, t = 0; t < e.length; t++) {
+                        var i = MarketWindow.Buy["market_" + e[t]];
+                        if (i && i.divMain.eq(0).hasClass("accordion_opened")) return e[t];
+                    }
+                },
+                getAuctionsByCategory: function(e) {
+                    var t = [], i = this.tmp_data_auctions;
+                    for (var a in i) i[a][0].type === e && (t = t.concat(i[a]));
+                    return t;
+                },
+                checkConditions: function(e) {
+                    var t = this.options, i = function(e, t, i, a) {
+                        for (var r = new RegExp(a ? "Â§" + i.toUpperCase() + "Â§" : i.toUpperCase(), "i"), n = 0; n < e.length; n++) {
+                            var o = e[n][t];
+                            if (o && r.test(o.toUpperCase())) return true;
+                        }
+                        return false;
+                    }, a = function(e, t, i) {
+                        for (var a = 0; a < e.length; a++) {
+                            var r = e[a], n = null != r.max_price ? r.max_price : null != r.curr_bid ? r.curr_bid : r.auction_price;
+                            if (i && n >= t || !i && n <= t) return true;
+                        }
+                        return false;
+                    }, r = function(e, t, i) {
+                        for (var a = TWIR.Usebonuses, r = 0; r < e.length; r++) {
+                            var n = ItemManager.get(e[r].item_id);
+                            if (a.hasUsebonus(n)) for (var o = 0; o < n.usebonus.length; o++) {
+                                var A = a.getValue(n.usebonus[o]);
+                                if ((A[0] === t || "skills" === t && a.isSkill(n.usebonus[o]) || "duels" === t && a.isSkill(n.usebonus[o], true)) && (!i || !A[1] || A[1] > i)) return true;
+                            }
+                        }
+                        return false;
+                    }, n = [ !t.player_name || i(e, "seller_name", t.player_name, t.player_name_exact), !t.town_name || i(e, "seller_town", t.town_name, t.town_name_exact) || i(e, "market_town", t.town_name, t.town_name_exact), !t.price_min || a(e, t.price_min, true), !t.price_max || a(e, t.price_max) ];
+                    for (var o in t) /use_\d+(?!_val)/.test(o) && (r(e, t[o], t[o + "_val"]) || n.push(false));
+                    return !n.includes(false);
+                },
+                updateNavigation: function() {
+                    for (var e = TWIR.MarketWatcher.categories, t = 0; t < e.length; t++) {
+                        var i = MarketWindow.Buy["market_" + e[t]];
+                        if (i) {
+                            var a = this.getAuctionsByCategory(e[t]);
+                            i.divMain.eq(0).removeClass("twir_inactive"), this.checkConditions(a) || i.divMain.eq(0).addClass("twir_inactive");
+                        }
+                    }
+                },
+                updateContent: function(e, t) {
+                    e = e || this.getCategoryName();
+                    var i = MarketWindow.Buy["market_" + e];
+                    if (i) {
+                        for (var a = 0, r = $(i.divMain[1], MarketWindow.DOM), n = r.find("p.accordion_contentRow"), o = 0; o < n.length; o++) {
+                            var A = n.eq(o).data("itemId"), s = ItemManager.get(A), l = this.tmp_data_auctions[s.short] || [];
+                            n.eq(o).removeClass("twir_hidden"), this.checkConditions(l) || (n.eq(o).addClass("twir_hidden"), 
+                            a++);
+                        }
+                        a && (r.find(".tw2gui_scrollpane_clipper_contentpane").css("top", "0px"), r.find("div.tw2gui_scrollbar_pulley").css("top", "0px"));
+                    }
+                },
+                showDialog: function() {
+                    var e = this;
+                    if (e.GuiDialog && $(e.GuiDialog.getMainDiv()).is(":visible")) return e.GuiDialog.hide();
+                    var t = function(t) {
+                        t && (e.options = {}), e.updateContent(), e.updateNavigation();
+                    };
+                    t(true);
+                    var i = $('<div style="text-align: center; min-width: 300px; max-width: 335px;"/>'), a = $("<tr/>"), r = new west.gui.Textfield().maxlength(24).setWidth(160);
+                    r.getField().on("input paste", function(t) {
+                        e.options.player_name = $(this).val();
+                    }), $("<td/>").append(r.getMainDiv()).appendTo(a), $('<td style="vertical-align: middle; padding-left: 5px;"/>').append(new west.gui.Checkbox(TWIR_lang.organizing.exact, "").setCallback(function() {
+                        e.options.player_name_exact = this.isSelected();
+                    }).getMainDiv()).appendTo(a);
+                    var n = $("<tr/>"), o = new west.gui.Textfield().maxlength(24).setWidth(160);
+                    o.getField().on("input paste", function(t) {
+                        e.options.town_name = $(this).val();
+                    }), $("<td/>").append(o.getMainDiv()).appendTo(n), $('<td style="vertical-align: middle; padding-left: 5px;"/>').append(new west.gui.Checkbox(TWIR_lang.organizing.exact, "").setCallback(function() {
+                        e.options.town_name_exact = this.isSelected();
+                    }).getMainDiv()).appendTo(n);
+                    var A = $("<tr/>"), s = new west.gui.Textfield().onlyNumeric().setPlaceholder("$").maxlength(8).setWidth(75), l = new west.gui.Textfield().onlyNumeric().setPlaceholder("$").maxlength(8).setWidth(75);
+                    s.getField().on("input paste keypress", TWIR.Util.delay(function(t) {
+                        "" != l.getValue() && Number($(this).val()) > Number(l.getValue()) && $(this).val(l.getValue()), 
+                        e.options.price_min = Number($(this).val()) || 0;
+                    }, 500)), l.getField().on("input paste keypress", TWIR.Util.delay(function(t) {
+                        "" != s.getValue() && Number($(this).val()) < Number(s.getValue()) && $(this).val(s.getValue()), 
+                        e.options.price_max = Number($(this).val()) || 0;
+                    }, 500)), $('<td colspan="2"/>').append(s.getMainDiv(), " - ", l.getMainDiv()).appendTo(A);
+                    var g = function() {
+                        for (var e = [], t = TWIR.Usebonuses.bonusKeys4Type.buffs, i = 0; i < t.length; i++) e.push({
+                            t: t[i],
+                            d: TWIR_lang.inventory[t[i]]
+                        });
+                        return e.sort(function(e, t) {
+                            return e.d.localeCompare(t.d);
+                        }), e;
+                    }(), p = e.usage_effect_rows = {};
+                    $('<table style="margin-bottom: 5px;margin-left: auto;margin-right: auto;"/>').append('<tr><td colspan="2" style="padding-top: 5px;"><div style="font-weight: bold;color: #523F30;">@' + TWIR_lang.market_watcher.seller_name + ":</div></td></tr>", a).append('<tr><td colspan="2" style="padding-top: 15px;"><div style="font-weight: bold;color: #523F30;">' + TWIR_lang.market_watcher.town_name + ":</div></td></tr>", n).append('<tr><td colspan="2" style="padding-top: 15px;"><div style="font-weight: bold;color: #523F30;">' + TWIR_lang.market_watcher.cost_range + ":</div></td></tr>", A).append('<tr><td style="padding-top: 25px;"><div style="font-weight: bold;color: #523F30;">' + TWIR_lang.inventory.use_effect + ':</div></td><td style="padding-top: 25px;"><div style="font-weight: bold;color: #523F30;">' + TWIR_lang.organizing.value + ":</div></td></tr>", function t(i) {
+                        if (i > 3) return;
+                        p[i] = {};
+                        var a = $("<tr/>");
+                        p[i].s = new west.gui.Combobox().setWidth(145);
+                        p[i].f = new west.gui.Textfield().onlyNumeric().maxlength(4).setWidth(45).setName("use_" + i + "_val");
+                        p[i].s.addItem(0, TWIR_lang.informative.none);
+                        for (var r = 0; r < g.length; r++) p[i].s.addItem(g[r].t, g[r].d);
+                        p[i].s.addListener(function(t) {
+                            for (var a in p) if (t && p[a].s.getValue() === t && a != i) return p[i].s.select(0);
+                            t ? e.options["use_" + i] = t : (delete e.options["use_" + i], delete e.options["use_" + i + "_val"], 
+                            p[i].f.setValue(""));
+                        });
+                        p[i].f.getField().on("input paste keypress", TWIR.Util.delay(function(t) {
+                            $(this).val().length && 0 != $(this).val() ? e.options[$(this).attr("name")] = parseInt($(this).val()) || 1 : delete e.options[$(this).attr("name")];
+                        }, 500));
+                        $("<td/>").append(p[i].s.getMainDiv()).appendTo(a);
+                        $('<td style="vertical-align: middle; padding-left: 5px;"/>').append(p[i].f.getMainDiv(), i < 3 ? $('<span style="display: inline-block; position: relative; bottom: 1px; margin-left: 5px; cursor: pointer;"/>').append(new west.gui.Icon("plus").getMainDiv()).click(function() {
+                            $(this).closest("tr").after(t(i + 1)), $(this).remove();
+                        }) : "").appendTo(a);
+                        return a;
+                    }(1)).appendTo(i);
+                    var c = e.GuiDialog = new west.gui.Dialog("", i).setDraggable(true).setBlockGame(false).addButton(TWIR_lang.informative.reset, function() {
+                        return function() {
+                            function t(e) {
+                                e instanceof west.gui.Textfield ? e.setValue("") : e instanceof west.gui.Combobox && e.select(e.items[0].value);
+                            }
+                            for (var i in t(r), t(o), t(s), t(l), e.usage_effect_rows) for (var a in e.usage_effect_rows[i]) t(e.usage_effect_rows[i][a]);
+                            e.GuiDialog.getMainDiv().find(".tw2gui_checkbox").removeClass("tw2gui_checkbox_checked").data("enabled", false);
+                        }(), t(true), false;
+                    }).addButton(Inventory.categoryDesc.set, function() {
+                        return t(), false;
+                    }).show();
+                    c.setTitle('<span style="margin-top: 4px; font-size: 15pt;">' + TWIR_lang.market_watcher.filter_auctions + "</span>"), 
+                    c.twir_addCloseButton(function() {
+                        t(true);
+                    }), EventHandler.listen([ "window_closed_" + MarketWindow.window.id, "window_closed_" + Inventory.window.id ], function() {
+                        e.options = {}, c.hide();
+                    });
+                    var d = $(MarketWindow.window.divMain);
+                    c.getMainDiv().css({
+                        "min-width": "unset",
+                        "min-height": "100px",
+                        left: d.position().left + d.width() - 40,
+                        top: d.position().top + 10,
+                        "margin-top": "",
+                        "margin-left": ""
+                    }), c.getMainDiv().find(".tw2gui_dialog_actions").css("text-align", "center"), c.getMainDiv().find("input, select, textarea").keypress(TWIR.Util.delay(function(e) {
+                        13 == e.keyCode && t();
+                    }, 500));
                 }
             },
             MarketMap: {
@@ -5397,7 +5385,7 @@
                         }), t.twir_addDonateButton(), EventHandler.listen("window_closed_TWIR_set_list", function() {
                             return e.GuiDialog && e.GuiDialog.getMainDiv().is(":visible") && e.gui.dialog.hide(), 
                             EventHandler.ONE_TIME_EVENT;
-                        }), t.addTab(TWIR_lang.inventory.fullslot_sets, "twir_set_list_fullslot", function(t) {
+                        }), t.addTab(TWIR_lang.inventory.fullslot, "twir_set_list_fullslot", function(t) {
                             e.initSetList("fullslot");
                         }), t.addTab(TWIR_lang.inventory.clothes, "twir_set_list_clothes", function(t) {
                             e.initSetList("clothes");
@@ -5749,7 +5737,7 @@
                         n("wear_buy_price", $.isNumeric(A.price) ? 1 * A.price : 0), n("wear_sell_price", $.isNumeric(A.sell_price) ? 1 * A.sell_price : 0);
                     }
                     for (var s in t) if (t[s]) {
-                        var l = t[s].obj, g = $.isNumeric(l.price) ? l.price * t[s].count : 0, p = $.isNumeric(l.sell_price) ? l.sell_price * t[s].count : 0, c = TWIR.marketPrice.getPrice(l);
+                        var l = t[s].obj, g = $.isNumeric(l.price) ? l.price * t[s].count : 0, p = $.isNumeric(l.sell_price) ? l.sell_price * t[s].count : 0, c = TWIR.MarketWorth.getPrice(l);
                         switch (c && n("market_price", c.weight * t[s].count), n("inventory_buy_price", $.isNumeric(l.price) ? l.price * t[s].count : 0), 
                         n("inventory_sell_price", $.isNumeric(l.sell_price) ? l.sell_price * t[s].count : 0), 
                         1 != t[s].count || i[l.type] && i[l.type].obj.item_id === l.item_id || (n("unique_buy_price", $.isNumeric(l.price) ? 1 * l.price : 0), 
@@ -6538,7 +6526,7 @@
                     }
                 },
                 orderCategory: function(e, t, i) {
-                    var a, r, n = TWIR.Popups.data.shop_prices, o = TWIR.Popups.data.sales, A = TWIR.marketPrice.getPrice, s = TWIR.Usebonuses;
+                    var a, r, n = TWIR.Popups.data.shop_prices, o = TWIR.Popups.data.sales, A = TWIR.MarketWorth.getPrice, s = TWIR.Usebonuses;
                     for (var l in this.sort_options) (t && t === this.sort_options[l].c || i && i === this.sort_options[l].c) && (a = this.sort_options[l].s, 
                     r = this.sort_options[l].o);
                     a && r || (a = this.sort_options[0].s, r = this.sort_options[0].o);
@@ -7515,7 +7503,7 @@
             /*! Process calculation type */            switch (e) {
               case "best":
                 var a = [];
-                return a = function() {
+                return (a = function() {
                     var e, t = [ "fort_offense", "fort_defense", "fort_damage", "fort_resistance", "fort_hp" ], a = [], l = 0;
                     if ("object" == typeof i.options.skills && $.isEmptyObject(i.options.skills)) return a;
                     for (var g = function(e, t) {
@@ -7612,15 +7600,18 @@
                     for (var m = 0, u = a.length; m < u; m++) {
                         a[m] = i.itemsToSets(a[m]);
                         var h = p(a[m], true);
-                        if (e = Math.round(100 * c(h)) / 100, a[m].tmp = e, e > l && (l = e, a[m]), "string" == typeof i.options.skills && t.includes(i.options.skills)) {
+                        if (e = c(h), a[m].tmp = e, e > l && (l = e, a[m]), "string" == typeof i.options.skills && t.includes(i.options.skills)) {
                             a[m].stats = {};
                             for (var C = 0; C < t.length; C++) a[m].stats[t[C]] = c(h, t[C]);
                         }
                     }
                     return a;
-                }(), i.options.sort && a.sort(function(e, t) {
-                    var a = e.tmp >= 1e4 && t.tmp >= 1e4 ? 1e3 : e.tmp >= 1e3 && t.tmp >= 1e3 ? 100 : 25, r = Math.round(e.tmp / a) * a, n = Math.round(t.tmp / a) * a;
-                    return n - r || t.stats[i.options.sort] - e.stats[i.options.sort];
+                }()).sort(function(e, t) {
+                    if (i.options.sort) {
+                        var a = e.tmp >= 1e4 && t.tmp >= 1e4 ? 1e3 : e.tmp >= 1e3 && t.tmp >= 1e3 ? 100 : 25, r = Math.round(e.tmp / a) * a, n = Math.round(t.tmp / a) * a;
+                        return n - r || t.stats[i.options.sort] - e.stats[i.options.sort];
+                    }
+                    return t.tmp - e.tmp;
                 }), a;
 
               case "formula":
@@ -7976,9 +7967,12 @@
                             var r = i[a].split(": ");
                             e[r[0]] = r[1].replace(/\n/g, "");
                         }
-                        e.version === TWIR.version && e.revision === TWIR.revision || (new west.gui.Dialog("TWIR " + e.version, '<div style="max-width: 450px;"><div>' + TWIR_lang.update_message + "</div><br/><div>" + ("true" === e.changelog ? '<a target="_blank" href="https://github.com/JamzaSK/TWInventoryReloaded/blob/master/changelog/' + e.version + '.md">' + TWIR_lang.update_changelog + "</a>" : "<b>" + TWIR_lang.changes + "</b></br><i>" + e.changes + "</i>") + "</div></br><div>" + TWIR_lang.donate_text_2.replace(/\%(.*?)\%/, '<a target="_blank" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=CCN4T9NYJGFVS&source=url">$1</a>.') + "</div></div>", west.gui.Dialog.SYS_WARNING).addButton(TWIR_lang.download, function() {
-                            window.open(TWIR.base_url + "code.user.js");
-                        }).addButton(TWIR_lang.informative.later, function() {}).show(), clearInterval(e.interval));
+                        if (e.version !== TWIR.version) {
+                            var n = e.version.match(/(\d+[.]\d+)(?:[.]\d+){0,1}/);
+                            new west.gui.Dialog("TWIR " + e.version, '<div style="max-width: 450px;"><div>' + TWIR_lang.update_message + "</div><br/><div>" + ("true" === e.changelog ? '<a target="_blank" href="https://github.com/JamzaSK/TWInventoryReloaded/blob/master/changelog/' + (n && n[1] ? n[1] : e.version) + '.md">' + TWIR_lang.update_changelog + "</a>" : "<b>" + TWIR_lang.changes + "</b></br><i>" + e.changes + "</i>") + "</div></br><div>" + TWIR_lang.donate_text_2.replace(/\%(.*?)\%/, '<a target="_blank" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=CCN4T9NYJGFVS&source=url">$1</a>.') + "</div></div>", west.gui.Dialog.SYS_WARNING).addButton(TWIR_lang.download, function() {
+                                window.open(TWIR.base_url + "code.user.js");
+                            }).addButton(TWIR_lang.informative.later, function() {}).show(), clearInterval(e.interval);
+                        }
                     }, "text");
                 } catch (e) {}
             }
