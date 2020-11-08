@@ -67,7 +67,7 @@
         "search_title": "Batoh",
         "debuff": "Oslabenie",
         "use_effect": "Efekt použitia",
-        "fullslot_sets": "Všetky"
+        "fullslot": "Všetky"
     },
     "tooltips": {
         "jobdrop": "Dá sa nájsť pri práci",
