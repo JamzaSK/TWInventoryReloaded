@@ -67,7 +67,7 @@
         "search_title": "Backpack",
         "debuff": "Debuff",
         "use_effect": "Usage effect",
-        "fullslot_sets": "All"
+        "fullslot": "All"
     },
     "tooltips": {
         "jobdrop": "Από την εργασία",
@@ -405,7 +405,7 @@
         "wep_breakdown": "Weapons breakdown",
         "avg_wep_dmg": "Average gun damage",
         "damage_multiplier": "Damage Multiplier",
-        "sectors_info": "Show sectors names"
+        "sectors_info": "Show sectors map"
     },
     "bidder": {
         "bidder_text": "%1 pieces for %2 dollars",
