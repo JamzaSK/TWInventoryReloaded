@@ -67,7 +67,7 @@
         "search_title": "Mochila",
         "debuff": "Decremento",
         "use_effect": "Efeito de uso",
-        "fullslot_sets": "Todos"
+        "fullslot": "Todos"
     },
     "tooltips": {
         "jobdrop": "Sai em trabalhos",
