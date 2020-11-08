@@ -67,7 +67,7 @@
         "search_title": "Ekwipunek",
         "debuff": "Osłabenie",
         "use_effect": "Efekt użycia",
-        "fullslot_sets": "All"
+        "fullslot": "Wszystko"
     },
     "tooltips": {
         "jobdrop": "Znalezione w pracy",
@@ -263,7 +263,7 @@
         "mw_push_notifications": "Włącz powiadomienia push",
         "mw_scan_limit": "Maksymalna ilość zapisanych skanów(każdego przedmiotu) od innych graczy",
         "quest_color": "Zmień kolor zadań które mogę wykonać",
-        "inv_size": "Smaller inventory"
+        "inv_size": "Mniejszy ekwipunek"
     },
     "keyWords": {
         "xmas": [
@@ -388,7 +388,7 @@
         "set_bonus": "Bonus z zestawu",
         "compare": "Porównaj"
     },
-    "script_description": "Lepsze ekwipunek i narzędzia do The-West!",
+    "script_description": "Lepszy ekwipunek i narzędzia do The-West!",
     "fortbattle": {
         "add_name": "Fortbattle Tracker",
         "round": "Runda",
@@ -412,7 +412,7 @@
         "wep_breakdown": "Podsumowanie broni",
         "avg_wep_dmg": "Średnie obrażenia broni",
         "damage_multiplier": "Mnożnik obrażeń",
-        "sectors_info": "Show sectors names"
+        "sectors_info": "Pokaż sektory mapy"
     },
     "bidder": {
         "bidder_text": "%1 sztuki po %2 dolary",
@@ -421,24 +421,24 @@
         "bidder_progress_msg": "Licytowanie %1 na %2"
     },
     "sectors": {
-        "1": "Large upper sector",
-        "2": "Large lower sector",
-        "3": "Large left sector",
-        "4": "Large right sector",
-        "5": "Large middle sector",
-        "6": "Adventurer's tower",
-        "7": "Dueller's tower",
-        "8": "Soldier's tower",
-        "9": "Worker's tower",
-        "10": "Barracks",
-        "11": "Resource stock",
-        "12": "Headquarters",
-        "13": "Wall",
-        "14": "Gate",
-        "15": "Flag",
-        "north": "North Wall",
-        "south": "South Wall",
-        "west": "West Wall",
-        "east": "East Wall"
+        "1": "Duży sektor górny",
+        "2": "Duży sektor dokny",
+        "3": "Duży sektor lewy",
+        "4": "Duży sektor prawy",
+        "5": "Duży sektor środkowy",
+        "6": "Baszta Poszukiwaczy",
+        "7": "Baszta Zawadiaków",
+        "8": "Baszta Żołnierzy",
+        "9": "Baszta Robotników",
+        "10": "Koszary",
+        "11": "Magazyn",
+        "12": "Budynek główny",
+        "13": "Mur",
+        "14": "Brama",
+        "15": "Flaga",
+        "north": "Górny mur",
+        "south": "Dolny mur",
+        "west": "Lewy mur",
+        "east": "Prawy mur"
     }
 }
