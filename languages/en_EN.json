@@ -67,7 +67,7 @@
         "search_title": "Backpack",
         "debuff": "Debuff",
         "use_effect": "Usage effect",
-        "fullslot_sets": "All"
+        "fullslot": "All"
     },
     "tooltips": {
         "jobdrop": "Droppable from job",
