@@ -264,7 +264,7 @@
         "mw_scan_limit": "Maximálny počet uložených skenov (na predmet) od rôznych hráčov",
         "quest_color": "Zmeniť farbu úloh, ktoré môžem dokončiť",
         "inv_size": "Menší inventár",
-        "inv_max_slots": "Maximum number of inventory slots (per page)"
+        "inv_max_slots": "Maximum number of rows in the inventory %1 note: higher numbers causing lag while scrolling"
     },
     "keyWords": {
         "xmas": [
