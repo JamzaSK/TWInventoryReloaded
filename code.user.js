@@ -3165,9 +3165,7 @@
                                 e = 0 === L ? (e = e.replace(/<ul\s+class="inventory_popup_item_set_names">[\S\s]*?<\/ul>/gi, "")).replace(/<br><div\s+class="item_set_names">[\S\s]*?<\/div>/gi, "") : e.replace(/inventory_popup_item_set_names"/g, '$& style="max-width: 200px;display: block;min-width: 170px;white-space: unset!important;margin-left: 10px;"');
                             }
                             TWIR.Features.get("pop_partial_bonus") && false !== this.options.twir_partial_bonus && null !== this.item_obj.set && 0 === L && false === i && (e += "</td>");
-                        } catch (e) {
-                            TWIR.error(e, "ItemPopup.getXHTML");
-                        }
+                        } catch (e) {}
                         return e;
                     };
                 },
