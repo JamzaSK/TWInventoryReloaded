@@ -431,9 +431,9 @@
         "13": "Muro",
         "14": "Portão",
         "15": "Bandeira",
-        "north": "North Wall",
-        "south": "South Wall",
-        "west": "West Wall",
-        "east": "East Wall"
+        "north": "Muro Norte",
+        "south": "Muro Sul",
+        "west": "Muro Oeste",
+        "east": "Muro Este"
     }
 }
