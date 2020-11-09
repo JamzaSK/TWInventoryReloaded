@@ -264,7 +264,7 @@
         "mw_scan_limit": "Maximum der gespeicherten Scans anderer Spieler",
         "quest_color": "Abschliessbare Quests farbig hervorheben.",
         "inv_size": "Kleineres Inventar",
-        "inv_max_slots": "Maximum number of rows in the inventory %1 note: higher numbers causing lag while scrolling"
+        "inv_max_slots": "Maximale Anzahl an Reihen im Inventar %1 (Höhere Werte können Ruckeln verursachen beim Scrollen)"
     },
     "keyWords": {
         "xmas": [
@@ -364,7 +364,7 @@
         "switch_speed_btn": "Geschwindigkeit-Set"
     },
     "update_changelog": "Changelog",
-    "donate_text_2": "Wenn dir das Script gefällt und es weiterhin verbessert werden soll, denke über eine %donation% nach.",
+    "donate_text_2": "Wenn dir das Script gefällt und es weiterhin verbessert werden soll, überlege dir eine %donation%.",
     "opener": {
         "loot_text": "Du bekommst",
         "open_btn": "Öffnen",
