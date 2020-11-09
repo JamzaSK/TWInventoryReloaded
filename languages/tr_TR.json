@@ -263,7 +263,8 @@
         "mw_push_notifications": "Bildirimleri etkinleştirin",
         "mw_scan_limit": "Farklı bir oynatıcıdan kaydedilen maksimum tarama sayısı (öğe başına)",
         "quest_color": "Tamamlayabileceğim görevlerin rengini değiştir",
-        "inv_size": "Küçük Envanter"
+        "inv_size": "Küçük Envanter",
+        "inv_max_slots": "Maximum number of inventory slots (per page)"
     },
     "keyWords": {
         "xmas": [
