@@ -216,7 +216,7 @@
         "popup_tooltips": "Ponturi",
         "other": "Alte preferințe",
         "enable_addon": "Enable %1 on this world",
-        "sort_inv": "Custom sort"
+        "sort_inv": "Sort Customization"
     },
     "feat_strings": {
         "pop_item_id": "Afișează ID-ul articolului",
@@ -261,9 +261,10 @@
         "mw_recipes": "Watch learnable recipes",
         "mw_buyouts_only": "Buyouts only",
         "mw_push_notifications": "Enable push notifications",
-        "mw_scan_limit": "Maximal number of saved scans (per item) from a different player",
+        "mw_scan_limit": "Maximum number of saved scans (per item) from a different player",
         "quest_color": "Change the color of quests that I can complete",
-        "inv_size": "Smaller inventory"
+        "inv_size": "Smaller inventory",
+        "inv_max_slots": "Maximum number of inventory slots (per page)"
     },
     "keyWords": {
         "xmas": [
