@@ -264,7 +264,7 @@
         "mw_scan_limit": "Farklı bir oynatıcıdan kaydedilen maksimum tarama sayısı (öğe başına)",
         "quest_color": "Tamamlayabileceğim görevlerin rengini değiştir",
         "inv_size": "Küçük Envanter",
-        "inv_max_slots": "Maximum number of inventory slots (per page)"
+        "inv_max_slots": "Maximum number of rows in the inventory %1 note: higher numbers causing lag while scrolling"
     },
     "keyWords": {
         "xmas": [
