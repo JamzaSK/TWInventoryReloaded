@@ -263,7 +263,8 @@
         "mw_push_notifications": "Włącz powiadomienia push",
         "mw_scan_limit": "Maksymalna ilość zapisanych skanów(każdego przedmiotu) od innych graczy",
         "quest_color": "Zmień kolor zadań które mogę wykonać",
-        "inv_size": "Mniejszy ekwipunek"
+        "inv_size": "Mniejszy ekwipunek",
+        "inv_max_slots": "Maximum number of inventory slots (per page)"
     },
     "keyWords": {
         "xmas": [
