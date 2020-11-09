@@ -264,7 +264,7 @@
         "mw_scan_limit": "Máximo de buscas salvas (por item) de diferentes jogadores ",
         "quest_color": "Change the color of quests that I can complete",
         "inv_size": "Smaller inventory",
-        "inv_max_slots": "Maximum number of inventory slots (per page)"
+        "inv_max_slots": "Maximum number of rows in the inventory %1 note: higher numbers causing lag while scrolling"
     },
     "keyWords": {
         "xmas": [
