@@ -252,7 +252,7 @@
         "fb_count": "Show the number of ongoing fort battles",
         "chat_smart": "Smarter chat (URL recognition)",
         "mw_status": "Show Progress Message during market scan",
-        "inv_menu_size": "Maximum number of rows in a select menu",
+        "inv_menu_size": "Maximum number of entries in a select menu",
         "pop_char_level": "Always show bonus value (per level) on your character level",
         "inv_cld_reminder": "Remind me that I have to use items that have a long cooldowns",
         "inv_cld_reminder_playsound": "Mute reminder sound",
@@ -264,7 +264,7 @@
         "mw_scan_limit": "Maximum number of saved scans (per item) from a different player",
         "quest_color": "Change the color of quests that I can complete",
         "inv_size": "Smaller inventory",
-        "inv_max_slots": "Maximum number of inventory slots (per page)"
+        "inv_max_slots": "Maximum number of rows in the inventory %1 note: higher numbers causing lag while scrolling"
     },
     "keyWords": {
         "xmas": [
