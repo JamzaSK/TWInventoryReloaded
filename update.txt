@@ -1,1 +1,1 @@
-version: 2.202.4, revision: 20, changes: 'Bugfix' , changelog: false
+version: 2.202.4, revision: 20, changes: Bugfix, changelog: false
