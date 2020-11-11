@@ -264,7 +264,7 @@
         "mw_scan_limit": "Máximo de procuras guardadas (por artigo) de diferentes jogadores",
         "quest_color": "Mudar a cor das missões que posso completar",
         "inv_size": "Inventário reduzido",
-        "inv_max_slots": "Maximum number of rows in the inventory %1 note: higher numbers causing lag while scrolling"
+        "inv_max_slots": "Quantidade máxima de filas no inventário %1 nota: quantidades elevadas que causam atraso durante o enrolamento"
     },
     "keyWords": {
         "xmas": [
