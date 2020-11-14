@@ -6105,9 +6105,8 @@
                         Inventory.window.setMiniTitle(e[1].cutIt(50)), Inventory.window.setTitle('<span style="margin-top: 4px; font-size: 15pt;">' + e[0].replace("*", "").replace("#", "").cutIt(50) + "</span>"), 
                         TWIR.Util.isJokeTime() && joke_title();
                     };
-                    /*! Change title */
                     /*! April title */                    Inventory.addItems = function(e, t, i, a) {
-                        switch ($("#bag", Inventory.DOM).empty(), t = null == t ? 0 : t - 1, e = e || Inventory.defaultCategory, 
+                        switch ($("#bag", Inventory.DOM).empty(), t = null == t ? 0 : t - 1, e = e || Inventory.defaultCategory, i = i || Inventory.sub_category, 
                         $(Inventory.DOM).removeClass("search_enabled instant_wear_enabled"), "set" !== e && ($(".bag_navigation", Inventory.DOM).addClass("twir_hidden"), 
                         Inventory.searchResult = []), "custom" !== e && "sets" !== e && ($(".bag_navigation", Inventory.DOM).addClass("twir_hidden"), 
                         Inventory.customResult = []), $("#bag", Inventory.DOM).empty(), e) {
