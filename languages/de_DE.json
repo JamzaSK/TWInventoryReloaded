@@ -264,7 +264,8 @@
         "mw_scan_limit": "Maximum der gespeicherten Scans anderer Spieler",
         "quest_color": "Abschliessbare Quests farbig hervorheben.",
         "inv_size": "Kleineres Inventar",
-        "inv_max_slots": "Maximale Anzahl an Reihen im Inventar %1 (Höhere Werte können Ruckeln verursachen beim Scrollen)"
+        "inv_max_slots": "Maximale Anzahl an Reihen im Inventar %1 (Höhere Werte können Ruckeln verursachen beim Scrollen)",
+        "smart_speed_set": "Smarter speed set calculation (without losing HP if possible)"
     },
     "keyWords": {
         "xmas": [
