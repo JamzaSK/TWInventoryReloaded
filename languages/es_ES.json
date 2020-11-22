@@ -264,7 +264,8 @@
         "mw_scan_limit": "Número máximo de escaneos (por artículo) de jugadores diferentes",
         "quest_color": "Cambiar color de búsquedas que puedo completar",
         "inv_size": "Inventario pequeño",
-        "inv_max_slots": "Maximum number of rows in the inventory %1 note: higher numbers causing lag while scrolling"
+        "inv_max_slots": "Maximum number of rows in the inventory %1 note: higher numbers causing lag while scrolling",
+        "smart_speed_set": "Smarter speed set calculation (without losing HP if possible)"
     },
     "keyWords": {
         "xmas": [
