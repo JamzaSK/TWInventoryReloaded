@@ -265,7 +265,7 @@
         "quest_color": "Zmeniť farbu úloh, ktoré môžem dokončiť",
         "inv_size": "Menší inventár",
         "inv_max_slots": "Maximálny počet riadkov v inventári %1 poznámka: vyššie čísla spôsobujú sekanie pri scrollovaní",
-        "smart_speed_set": "Smarter speed set calculation (without losing HP if possible)"
+        "smart_speed_set": "Lepšia kalkulácia speed setu (bez straty HP, ak je to možné)"
     },
     "keyWords": {
         "xmas": [
