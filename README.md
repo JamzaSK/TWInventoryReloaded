@@ -5,7 +5,7 @@
 
 * <img src="https://jamzask.github.io/TWInventoryReloaded/icons/firefox.png"> [Greasemonkey](https://addons.mozilla.org/firefox/addon/greasemonkey/") or [Tampermonkey](https://addons.mozilla.org/firefox/addon/tampermonkey/)
 * <img src="https://jamzask.github.io/TWInventoryReloaded/icons/chrome.png"> [Tampermonkey](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo)
-* <img src="https://jamzask.github.io/TWInventoryReloaded/icons/opera.png" [Tampermonkey](https://addons.opera.com/extensions/details/tampermonkey-beta/)
+* <img src="https://jamzask.github.io/TWInventoryReloaded/icons/opera.png"> [Tampermonkey](https://addons.opera.com/extensions/details/tampermonkey-beta/)
 * <img src="https://jamzask.github.io/TWInventoryReloaded/icons/msedge.png"> [Tampermonkey](https://www.tampermonkey.net/?ext=dhdg&browser=edge)
 
 > Step 2:
