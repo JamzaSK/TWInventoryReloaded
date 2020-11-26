@@ -22,17 +22,17 @@
 
 # Features
 
-**Inventory**\  
+**Inventory** \  
 New Inventory with new features.  
 <img src="https://jamzask.github.io/TWInventoryReloaded/screenshots/Screenshot_1.png" style="max-width: 600px;">
 <img src="https://jamzask.github.io/TWInventoryReloaded/screenshots/Screenshot_2.png" style="max-width: 600px;">
 
-**SetCollector**\
+**SetCollector** \
 <img src="https://jamzask.github.io/TWInventoryReloaded/screenshots/Screenshot_29.png" style="max-width: 600px;">
 <img src="https://jamzask.github.io/TWInventoryReloaded/screenshots/Screenshot_30.png" style="max-width: 600px;">
 <img src="https://jamzask.github.io/TWInventoryReloaded/screenshots/Screenshot_31.png" style="max-width: 600px;">
 
-**Popups**\  
+**Popups** \  
 <img src="https://jamzask.github.io/TWInventoryReloaded/screenshots/Screenshot_20.png" style="max-width: 600px;">
 <img src="https://jamzask.github.io/TWInventoryReloaded/screenshots/Screenshot_22.png" style="max-width: 600px;">
 
