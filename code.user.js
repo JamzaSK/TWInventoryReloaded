@@ -851,7 +851,7 @@
                         v.select(TWIR.Features.get("mw_scan_limit"));
                         var k = TWIR_lang.feat_strings.inv_max_slots.split("%1");
                         /*! Inventory sort */
-                        for (var n in w.setTooltip(k[1] || ""), g.prepend("<span>" + TWIR_lang.feat_strings.inv_menu_size + "</span>", h.getMainDiv().css("margin-left", "10px"), "<br><span>" + k[0] + "</span>", w.getMainDiv()), 
+                        for (var n in w.setTooltip(k[1] || ""), g.prepend("<span>" + TWIR_lang.feat_strings.inv_menu_size + "</span>", h.getMainDiv().css("margin-left", "10px"), "<br><span>" + k[0] + "</span>", w.getMainDiv(), '<br>'), 
                         TWIR.Inventory.sort_options) "0" === n ? p.prepend(e.createSortRow(TWIR.Inventory.sort_options[n], n)) : p.append(e.createSortRow(TWIR.Inventory.sort_options[n], n));
                         i.appendContent('<div style="font-weight: bold;margin-top: 15px;text-shadow: 2px 1px 2px #fae3ad;color: #5e321a;font-size: 16px;margin-bottom: 10px;">' + TWIR_lang.features.inventory_menus + "</div>"), 
                         i.appendContent(g), i.appendContent($('<div style="display: inline-block; font-weight: bold;margin-top: 15px;text-shadow: 2px 1px 2px #fae3ad;color: #5e321a;font-size: 16px;margin-bottom: 10px; cursor: pointer;">' + TWIR_lang.features.sort_inv + "</div>").append('<span style="display: inline-block; position: relative; bottom: 1px; margin-left: 5px;"><img src="' + TWIR.images.arrow + '" width="13" style="margin-left: 2px;"/></span>').click(function() {
