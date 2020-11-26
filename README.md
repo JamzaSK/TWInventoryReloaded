@@ -98,7 +98,7 @@ alliance members, town members, fort battle participants, .. <br />
 Live statistics during Fort battles <br />
 <img src="https://jamzask.github.io/TWInventoryReloaded/screenshots/Screenshot_37.png" style="max-width: 600px;">
 
-**Sector map <br />
+**Sector map** <br />
 <img src="https://jamzask.github.io/TWInventoryReloaded/screenshots/Screenshot_36.png" style="max-width: 600px;">
 
 **ChatEnhancements**  <br />  
