@@ -18,7 +18,7 @@
 
 **Your generous donation will help to continue to develop and improve this userscript!**
 
-<img src="https://jamzask.github.io/TWInventoryReloaded/icons/paypal.png"></a> Paypal: [Donate](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=97jamza%40gmail.com&item_name=TW+Inventory+Reloaded&currency_code=EUR&source=url)
+<img src="https://jamzask.github.io/TWInventoryReloaded/icons/paypal.png"> Paypal: [Donate](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=97jamza%40gmail.com&item_name=TW+Inventory+Reloaded&currency_code=EUR&source=url)
 
 
 # Features
