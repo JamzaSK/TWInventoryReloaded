@@ -69,7 +69,7 @@ Grey = finished, Green = can be finished, Orange = 75% done  <br />
 Current clothes bonus, crafting points, ..  <br />
 <img src="https://jamzask.github.io/TWInventoryReloaded/screenshots/Screenshot_11.png" style="max-width: 600px;">
 
-**Fortbattle chat topic**  <br />
+**Fortbattle chat topic & char class icons**  <br />
 <img src="https://jamzask.github.io/TWInventoryReloaded/screenshots/Screenshot_10.png" style="max-width: 600px;">
 
 **Fortbattle count**  <br />
