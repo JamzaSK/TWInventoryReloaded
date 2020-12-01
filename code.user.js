@@ -1,75 +1,11 @@
-// ==UserScript==
-// @name TW Inventory Reloaded
-// @name:cs TW Inventory Reloaded
-// @name:de TW Inventory Reloaded
-// @name:el TW Inventory Reloaded
-// @name:es TW Inventory Reloaded
-// @name:fr TW Inventory Reloaded
-// @name:hu TW Inventory Reloaded
-// @name:it TW Inventory Reloaded
-// @name:nl TW Inventory Reloaded
-// @name:pl TW Inventory Reloaded
-// @name:pt TW Inventory Reloaded
-// @name:ro TW Inventory Reloaded
-// @name:ru TW Inventory Reloaded
-// @name:sk TW Inventory Reloaded
-// @name:tr TW Inventory Reloaded
-// @description Better Inventory and tools for The West!
-// @description:cs Lepší Inventář a nástroje pro The West!
-// @description:de Verbessertes Inventar und Tools für The West!
-// @description:el Καλύτερα Αποθέματα και διάφορα εργαλεία για το The West!
-// @description:es ¡Mejor inventario y herramientas para Occidente!
-// @description:fr Inventaire amélioré et outils pour The West!
-// @description:hu Jobb felszerelés és eszközök a The West-hez!
-// @description:it Miglior inventario e altre funzionalità per The West!
-// @description:nl Betere inventaris en tools voor The West!
-// @description:pl Lepsze ekwipunek i narzędzia do The-West!
-// @description:pt Melhor Inventário e Ferramentas para o The West!
-// @description:ro Inventar și instrumente mai bune pentru The West!
-// @description:ru Лучший инвентарь и инструменты для The West!
-// @description:sk Lepší Inventár a nástroje pre The West!
-// @description:tr The-west için daha iyi envanter ve araçlar!
-
-// @author Jamza (CZ14)
-// @version 2.202.5
 // @license GPL-3.0 http://www.gnu.org/licenses/gpl-3.0.txt
-
-// @include http*://*.the-west.*/game.php*
-// @include http*://*.the-west.*.*/game.php*
-// @exclude https://classic.the-west.net*
-
-// @icon https://jamzask.github.io/TWInventoryReloaded/icons/image18.png
-// @namespace https://greasyfork.org/cs/users/153384/
-// @grant none
-
-// @updateURL https://jamzask.github.io/TWInventoryReloaded/code.user.js
-// @downloadURL http://greasyfork.org/scripts/373294-tw-inventory-reloaded/code/TW%20Inventory%20Reloaded.user.js
-// @supportURL https://github.com/JamzaSK/TWInventoryReloaded/issues
-// @homepage https://greasyfork.org/scripts/373294-tw-inventory-reloaded
-// @contributionURL https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=97jamza%40gmail.com&item_name=TW+Inventory+Reloaded&currency_code=EUR&source=url
-
-// ==/UserScript==
-
-/*  Copyright (C) 2018-2020  Jamza <97jamza@gmail.com>
-    This program is free software: you can redistribute it and/or modify
-    it under the terms of the GNU General Public License as published by
-    the Free Software Foundation, either version 3 of the License, or
-    (at your option) any later version.
-    This program is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU General Public License for more details.
-    You have received a copy of the GNU General Public License
-    along with this program.
-*/
-
 !function(fn) {
     var script = document.createElement("script");
     script.setAttribute("type", "application/javascript"), script.textContent = "(" + function() {
         isDefined(window.TWIR) ? new west.gui.Dialog("TWIR", '<div class="txcenter"><b><br>The UserScript TW Inventory Reloaded is installed twice. You will have to uninstall older version for the script to work properly!</br></b></div>', west.gui.Dialog.SYS_WARNING).addButton("OK").show() : (window.TWIR_lang = {}, 
         window.TWIR = {
             script_name: "TW Inventory Reloaded",
-            version: "2.202.5",
+            version: "2.202.6",
             author: "Jamza",
             minGame: "2.05",
             maxGame: Game.version.toString(),
@@ -389,7 +325,7 @@
                             } catch (t) {
                                 TWIR.error(t, e);
                             }
-                            TWIR.Util.addCss("div#ui_topbar, #forum, #ui_chat > div, #ui_character_container, .tw2gui_window { user-select: text !important; -webkit-user-select: text!important; -moz-user-select: text!important;}.twir_hidden { display:none !important; }.twir_inactive { filter: grayscale(1)!important; }.twir_loader { display: none;position: absolute;top: 50%;left: 50%;width: 16px;height: 16px;margin: -8px 0 0 -8px;background: url(/images/throbber2.gif) 50% 50% no-repeat; background-size: cover; }.twir_loading { opacity: 0.5; }.twir_loading .twir_loader { display: block; }.twir_flip {transform: rotateX(180deg); }.twir_menulink:hover { background-position: -25px 0px!important;}"), 
+                            TWIR.Util.addCss("div#ui_topbar, #forum, #ui_chat > div, #ui_character_container, .tw2gui_window { user-select: text !important; -webkit-user-select: text!important; -moz-user-select: text!important;}.twir_hidden { display:none !important; }.twir_inactive { filter: grayscale(1)!important; }.twir_loader { display: none;position: absolute;top: 50%;left: 50%;width: 16px;height: 16px;margin: -8px 0 0 -8px;background: url(/images/throbber2.gif) 50% 50% no-repeat; background-size: cover; }.twir_loading { opacity: 0.5; }.twir_loading .twir_loader { display: block; }.twir_flip {transform: rotateX(180deg); }.twir_menulink:hover { background-position: -25px 0px!important;}.twir_highlight_white {filter: drop-shadow(rgb(252, 251, 251) 1px 1px 0px) drop-shadow(rgb(252, 251, 251) -1px 1px 0px) drop-shadow(rgb(252, 251, 251) 1px -1px 0px) drop-shadow(rgb(252, 251, 251) -1px -1px 0px); }.twir_highlight_yellow { filter: drop-shadow(rgb(255, 255, 0) 1px 1px 0px) drop-shadow(rgb(255, 255, 0) -1px 1px 0px) drop-shadow(rgb(255, 255, 0) 1px -1px 0px) drop-shadow(rgb(255, 255, 0) -1px -1px 0px); }"), 
                             TWIR.Util.log("TWIR version " + TWIR.version + " by Jamza SUCCESSFULLY LOADED.", "green");
                         });
                     }
@@ -851,7 +787,7 @@
                         v.select(TWIR.Features.get("mw_scan_limit"));
                         var k = TWIR_lang.feat_strings.inv_max_slots.split("%1");
                         /*! Inventory sort */
-                        for (var n in w.setTooltip(k[1] || ""), g.prepend("<span>" + TWIR_lang.feat_strings.inv_menu_size + "</span>", h.getMainDiv().css("margin-left", "10px"), "<br><span>" + k[0] + "</span>", w.getMainDiv(), '<br>'), 
+                        for (var n in w.setTooltip(k[1] || ""), g.prepend("<span>" + TWIR_lang.feat_strings.inv_menu_size + "</span>", h.getMainDiv().css("margin-left", "10px"), "<br><span>" + k[0] + "</span>", w.getMainDiv(), "<br>"), 
                         TWIR.Inventory.sort_options) "0" === n ? p.prepend(e.createSortRow(TWIR.Inventory.sort_options[n], n)) : p.append(e.createSortRow(TWIR.Inventory.sort_options[n], n));
                         i.appendContent('<div style="font-weight: bold;margin-top: 15px;text-shadow: 2px 1px 2px #fae3ad;color: #5e321a;font-size: 16px;margin-bottom: 10px;">' + TWIR_lang.features.inventory_menus + "</div>"), 
                         i.appendContent(g), i.appendContent($('<div style="display: inline-block; font-weight: bold;margin-top: 15px;text-shadow: 2px 1px 2px #fae3ad;color: #5e321a;font-size: 16px;margin-bottom: 10px; cursor: pointer;">' + TWIR_lang.features.sort_inv + "</div>").append('<span style="display: inline-block; position: relative; bottom: 1px; margin-left: 5px;"><img src="' + TWIR.images.arrow + '" width="13" style="margin-left: 2px;"/></span>').click(function() {
@@ -1156,9 +1092,9 @@
                         if (t && e.lastRes && e.lastRes.includes(t)) for (var i = 0; i < e.lastRes.length; i++) e.lastRes[i] === t[0] && e.lastRes.splice(i, 1);
                     }), EventHandler.listen([ "inventory_loaded", "inventory_changed", "cooldown_changed", "item_lifetime_changed", "item_used" ], function() {
                         e.getList(), e.updateItems();
-                    }), EventHandler.listen("quest_solved", function(t) {
-                        t && t.id && (43342 !== t.id && 2043342 !== t.id || e.initAdvent());
-                    }), TWIR.Util.addCss(".twir_reminder { color: #420;font-weight: bold;background: none; box-shadow: 0px 0px 1px 1px #420; }.twir_reminder .gametip-closebutton  { filter: drop-shadow(rgb(48, 21, 6) 0px 0px 2px); }.twir_reminder div.tw2gui_bg_tl { background-image: url(/images/tw2gui/notification_tooltip.png); background-position: top -6px left -3px; position: absolute; }.twir_reminder div.tw2gui_bg_tr { background-image: url(/images/tw2gui/notification_tooltip.png);background-position: top -6px right -5px;position: absolute; }.twir_reminder div.tw2gui_bg_bl { background-image: url(/images/tw2gui/notification_tooltip.png);background-position: bottom -5px left -3px;position: absolute; }.twir_reminder div.tw2gui_bg_br { background-image: url(/images/tw2gui/notification_tooltip.png);background-position: bottom -5px right -5px;position: absolute; }"));
+                    }), EventHandler.listen("questemployer_changed", TWIR.Util.delay(function(t, i) {
+                        t && "finished" === t && (43342 !== i && 2043342 !== i || e.initAdvent());
+                    }, 5e3)), TWIR.Util.addCss(".twir_reminder { color: #420;font-weight: bold;background: none; box-shadow: 0px 0px 1px 1px #420; }.twir_reminder .gametip-closebutton  { filter: drop-shadow(rgb(48, 21, 6) 0px 0px 2px); }.twir_reminder div.tw2gui_bg_tl { background-image: url(/images/tw2gui/notification_tooltip.png); background-position: top -6px left -3px; position: absolute; }.twir_reminder div.tw2gui_bg_tr { background-image: url(/images/tw2gui/notification_tooltip.png);background-position: top -6px right -5px;position: absolute; }.twir_reminder div.tw2gui_bg_bl { background-image: url(/images/tw2gui/notification_tooltip.png);background-position: bottom -5px left -3px;position: absolute; }.twir_reminder div.tw2gui_bg_br { background-image: url(/images/tw2gui/notification_tooltip.png);background-position: bottom -5px right -5px;position: absolute; }"));
                 },
                 initAdvent: function() {
                     var e = this;
@@ -1479,6 +1415,17 @@
                             QuestEmployerWindow.window.destroy = t;
                         }, Guidepost.show(e.key, e.x, e.y, "employer");
                     };
+                }
+            },
+            HighlightAdventCalendarDoor: {
+                init: function() {
+                    var e = new Date(1e3 * Game.getServerTime()), t = e.getDate(), i = e.getMonth() + 1;
+                    12 !== i || t > 25 || (AdventCalendarWindow.twir_initContent = AdventCalendarWindow.twir_initContent || AdventCalendarWindow.initContent, 
+                    AdventCalendarWindow.initContent = function(e) {
+                        AdventCalendarWindow.twir_initContent.apply(this, arguments);
+                        var i = $("#advent_door_" + t, AdventCalendarWindow.DOM);
+                        i.length && !i.hasClass("opened") && i.addClass("twir_highlight_yellow");
+                    });
                 }
             },
             QuestQuicklink: {
@@ -2536,13 +2483,13 @@
                         n += '<td><div style="font-size: 15px; font-weight: bold; min-width: 25px; color: #0F52BA;">' + (i[0].alive || 0) + "</div></td>", 
                         n += '<td><div title="' + format_number(i[0].health) + "&nbsp;" + TWIR_lang.calc.fort_hp + '" style="min-width: 160px;">' + o + "</div></td>", 
                         n += '<td><div style="width:65px;">' + (0 !== i[0].shotdmg ? '<span title="' + TWIR_lang.fortbattle.damage_inflicted + '"><img src="' + TWIR.images.tracker.dmg_blue + '"/></span><span style="vertical-align: middle;">' + format_number(i[0].shotdmg) + "</span>" : "") + "</div></td>", 
-                        n += '</tr><tr><td></td><td style="width: 255px;">', i[1].chars) "-1" !== g && (n += '<div title="' + format_number(i[1].chars[g].health || 0) + "&nbsp;" + TWIR_lang.calc.fort_hp + '" class="twir_highlighcell twir_highlighcell-1-' + g + '" style="display: inline-block;margin-left: 4px;margin-right: 4px; ' + (i[1].chars[g].alive > 0 ? "cursor: pointer;" : "opacity: 0.6;") + '"><figure><img src="' + t.formatClass(g, !0) + '" width="25" height="auto" /><figcaption>' + (t[e].show_ko ? i[1].chars[g].total : i[1].chars[g].alive) + "</figcaption></figure></div>", 
+                        n += '</tr><tr><td></td><td style="width: 255px;">', i[1].chars) "-1" !== g && (n += '<div title="' + format_number(i[1].chars[g].health || 0) + "&nbsp;" + TWIR_lang.calc.fort_hp + '" class="twir_highlightcell twir_highlightcell-1-' + g + '" style="display: inline-block;margin-left: 4px;margin-right: 4px; ' + (i[1].chars[g].alive > 0 ? "cursor: pointer;" : "opacity: 0.6;") + '"><figure><img src="' + t.formatClass(g, !0) + '" width="25" height="auto" /><figcaption>' + (t[e].show_ko ? i[1].chars[g].total : i[1].chars[g].alive) + "</figcaption></figure></div>", 
                         "3" !== g && (n += "&nbsp;"));
                         for (var p in n += "</td>", n += '<td colspan="3"><div class="twir_tracker_timer" style="font-size: 12px;font-weight: bold; color: #5e321a; padding-top: 7px;"></div></td>', 
-                        n += '<td style="width: 255px;">', i[0].chars) "-1" !== p && (n += '<div title="' + format_number(i[0].chars[p].health || 0) + "&nbsp;" + TWIR_lang.calc.fort_hp + '" class="twir_highlighcell twir_highlighcell-0-' + p + '" style="display: inline-block;margin-left: 4px;margin-right: 4px; ' + (i[0].chars[p].alive > 0 ? "cursor: pointer;" : "opacity: 0.6;") + '"><figure><img src="' + t.formatClass(p, !0) + '" width="25" height="auto" /><figcaption>' + (t[e].show_ko ? i[0].chars[p].total : i[0].chars[p].alive) + "</figcaption></figure></div>", 
+                        n += '<td style="width: 255px;">', i[0].chars) "-1" !== p && (n += '<div title="' + format_number(i[0].chars[p].health || 0) + "&nbsp;" + TWIR_lang.calc.fort_hp + '" class="twir_highlightcell twir_highlightcell-0-' + p + '" style="display: inline-block;margin-left: 4px;margin-right: 4px; ' + (i[0].chars[p].alive > 0 ? "cursor: pointer;" : "opacity: 0.6;") + '"><figure><img src="' + t.formatClass(p, !0) + '" width="25" height="auto" /><figcaption>' + (t[e].show_ko ? i[0].chars[p].total : i[0].chars[p].alive) + "</figcaption></figure></div>", 
                         "3" !== p && (n += "&nbsp;"));
                         return n += "</td><td></td></tr>", n += "</table>", t[e].Div_Topboard.append(n), 
-                        t[e].Div_Topboard.find(".twir_highlighcell").mouseenter(function(i) {
+                        t[e].Div_Topboard.find(".twir_highlightcell").mouseenter(function(i) {
                             t.handleEventAction(i, e);
                         }).mouseleave(function() {
                             t.unhighlightPlayers(e), t.highlightTrackedPlayers(e);
@@ -2648,8 +2595,8 @@
                         }
                         n.unhighlightPlayers(t), n.highlightPlayer(p.characterid, null, t);
                     } else {
-                        if (!A.hasClass("twir_highlighcell")) return;
-                        var I = e.currentTarget.className.match(/twir_highlighcell-(\d+)-(\d+)/);
+                        if (!A.hasClass("twir_highlightcell")) return;
+                        var I = e.currentTarget.className.match(/twir_highlightcell-(\d+)-(\d+)/);
                         if (!I) return;
                         var m = n.getGroupIdx(parseInt(I[1]), parseInt(I[2]), t);
                         n.unhighlightPlayers(t), n.highlightPlayer(m, null, t);
@@ -4923,7 +4870,7 @@
                         }), p = g[~~(g.length * Math.random())] || [], c = ItemManager.get(p ? p.id : 0, !0), d = {};
                         if (d = this.calcCoord4Worldmap([ r.posx, r.posy ])) {
                             var I = l.length === s.length ? TWIR.images.game_currency.dollars : c.image, m = "javascript:void(TWIR.MarketMap.onClick(arguments, " + JSON.stringify(r).escapeHTML() + "))";
-                            i.push($('<img onclick="' + m + '" title="' + n + '" src="' + I + '" style="cursor: pointer; position: absolute;width:' + (l.length === s.length ? "16px" : "22px") + ';height: auto; filter: drop-shadow(1px 1px 0 #fcfbfb) drop-shadow(-1px 1px 0 #fcfbfb) drop-shadow(1px -1px 0 #fcfbfb) drop-shadow(-1px -1px 0 #fcfbfb);" />').css({
+                            i.push($('<img class="twir_highlight_white" onclick="' + m + '" title="' + n + '" src="' + I + '" style="cursor: pointer; position: absolute;width:' + (l.length === s.length ? "16px" : "22px") + '; height: auto;" />').css({
                                 left: d.x + t.left + "px",
                                 top: d.y + t.top + "px"
                             }));
