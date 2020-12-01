@@ -1,4 +1,68 @@
+// ==UserScript==
+// @name TW Inventory Reloaded
+// @name:cs TW Inventory Reloaded
+// @name:de TW Inventory Reloaded
+// @name:el TW Inventory Reloaded
+// @name:es TW Inventory Reloaded
+// @name:fr TW Inventory Reloaded
+// @name:hu TW Inventory Reloaded
+// @name:it TW Inventory Reloaded
+// @name:nl TW Inventory Reloaded
+// @name:pl TW Inventory Reloaded
+// @name:pt TW Inventory Reloaded
+// @name:ro TW Inventory Reloaded
+// @name:ru TW Inventory Reloaded
+// @name:sk TW Inventory Reloaded
+// @name:tr TW Inventory Reloaded
+// @description Better Inventory and tools for The West!
+// @description:cs Lepší Inventář a nástroje pro The West!
+// @description:de Verbessertes Inventar und Tools für The West!
+// @description:el Καλύτερα Αποθέματα και διάφορα εργαλεία για το The West!
+// @description:es ¡Mejor inventario y herramientas para Occidente!
+// @description:fr Inventaire amélioré et outils pour The West!
+// @description:hu Jobb felszerelés és eszközök a The West-hez!
+// @description:it Miglior inventario e altre funzionalità per The West!
+// @description:nl Betere inventaris en tools voor The West!
+// @description:pl Lepsze ekwipunek i narzędzia do The-West!
+// @description:pt Melhor Inventário e Ferramentas para o The West!
+// @description:ro Inventar și instrumente mai bune pentru The West!
+// @description:ru Лучший инвентарь и инструменты для The West!
+// @description:sk Lepší Inventár a nástroje pre The West!
+// @description:tr The-west için daha iyi envanter ve araçlar!
+
+// @author Jamza (CZ14)
+// @version 2.202.6
 // @license GPL-3.0 http://www.gnu.org/licenses/gpl-3.0.txt
+
+// @include http*://*.the-west.*/game.php*
+// @include http*://*.the-west.*.*/game.php*
+// @exclude https://classic.the-west.net*
+
+// @icon https://jamzask.github.io/TWInventoryReloaded/icons/image18.png
+// @namespace https://greasyfork.org/cs/users/153384/
+// @grant none
+
+// @updateURL https://jamzask.github.io/TWInventoryReloaded/code.user.js
+// @downloadURL http://greasyfork.org/scripts/373294-tw-inventory-reloaded/code/TW%20Inventory%20Reloaded.user.js
+// @supportURL https://github.com/JamzaSK/TWInventoryReloaded/issues
+// @homepage https://greasyfork.org/scripts/373294-tw-inventory-reloaded
+// @contributionURL https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=97jamza%40gmail.com&item_name=TW+Inventory+Reloaded&currency_code=EUR&source=url
+
+// ==/UserScript==
+
+/*  Copyright (C) 2018-2020  Jamza <97jamza@gmail.com>
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+    You have received a copy of the GNU General Public License
+    along with this program.
+*/
+
 !function(fn) {
     var script = document.createElement("script");
     script.setAttribute("type", "application/javascript"), script.textContent = "(" + function() {
