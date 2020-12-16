@@ -379,9 +379,14 @@
 	"dod_2020_set_8": ["dotd", "2020", "3"],
 	"dod_2020_set_9": ["dotd", "2020", "3"],
 	
+	"christmas_set_1_2020": ["xmas", "2020", "1"],
+	"christmas_set_2_2020": ["xmas", "2020", "1"],
+	"christmas_set_3_2020": ["xmas", "2020", "1"],
+	
 	"firefighter_set_1": ["sale", "2020", "1"],
 	"firefighter_set_2": ["sale", "2020", "1"],
 	"harvester_set_clothing": ["sale", "2020", "2"],
 	"harvester_set_animal": ["sale", "2020", "2"],
-	"harvester_set_weapon": ["sale", "2020", "2"]
+	"harvester_set_weapon": ["sale", "2020", "2"],
+	"unique_rare_set": ["sale", "2020", "3"]
 }
