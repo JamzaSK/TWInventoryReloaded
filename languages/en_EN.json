@@ -380,9 +380,9 @@
     "combo_comparison": {
         "add_name": "Combo Comparison",
         "hint": "Add / Drop items here to get started!",
-        "full_bonus": "Full bonus",
-        "item_bonus": "Bonus from items",
-        "set_bonus": "Bonus from sets",
+        "full_bonus": "Full stats",
+        "item_bonus": "Bonuses from items",
+        "set_bonus": "Bonuses from sets",
         "compare": "Compare"
     },
     "script_description": "Better Inventory and Tools for The West!",
