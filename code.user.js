@@ -31,7 +31,7 @@
 // @description:tr The-west için daha iyi envanter ve araçlar!
 
 // @author Jamza (CZ14)
-// @version 2.202.7
+// @version 2.202.8
 // @license GPL-3.0 http://www.gnu.org/licenses/gpl-3.0.txt
 
 // @include http*://*.the-west.*/game.php*
@@ -69,7 +69,7 @@
         isDefined(window.TWIR) ? new west.gui.Dialog("TWIR", '<div class="txcenter"><b><br>The UserScript TW Inventory Reloaded is installed twice. You will have to uninstall older version for the script to work properly!</br></b></div>', west.gui.Dialog.SYS_WARNING).addButton("OK").show() : (window.TWIR_lang = {}, 
         window.TWIR = {
             script_name: "TW Inventory Reloaded",
-            version: "2.202.7",
+            version: "2.202.8",
             author: "Jamza",
             minGame: "2.05",
             maxGame: Game.version.toString(),
@@ -5330,13 +5330,13 @@
                             return t.includes(e);
                         }) && 6 === t.length ? "clothes" : i.some(function(e) {
                             return t.includes(e);
-                        }) && t.length >= 6 ? "fullslot" : "other";
+                        }) && t.length >= 6 ? "fullslot" : "other_sets";
                     }, i = this.data_all_sets = {}, a = this.pinned = TWIR.Data.get("twir_pinned_sets") || [], r = 0, n = e.length; r < n; r++) {
                         var o = e[r];
                         if (!o.key.includes("friendship_set")) {
                             var A = new TWIR_Calc().getAvailableItems(o.items, !0), s = new TWIR_Calc("bonus4Items", null, A[0], Character.level), l = TWIR.setsCache[o.key] || [], g = t(o.items);
-                            [ "fireworker_set", "labor_day" ].includes(o.key) && (g = "other"), i[o.key] || (i[o.key] = []), 
-                            i[o.key].push({
+                            [ "fireworker_set", "labor_day", "unique_rare_set" ].includes(o.key) && (g = "other_sets"), 
+                            i[o.key] || (i[o.key] = []), i[o.key].push({
                                 name: o.name,
                                 key: o.key,
                                 best_items: A[0],
@@ -5413,7 +5413,7 @@
                         break;
 
                       case "fullslot":
-                      case "other":
+                      case "other_sets":
                         r.length ? i += '<img src="' + r[0] + '" style="height: 25px; width: auto;position: absolute;left: 0px; bottom: 0px;"/>' : a = !0;
                     }
                     return a && (i += '<img src="/images/items/unknown.png" style="width: 25px;height: auto;position: absolute;left: 0px;top: 0px;"/>'), 
@@ -5462,8 +5462,8 @@
                             e.initSetList("weapons");
                         }), t.addTab(TWIR_lang.inventory.ride, "twir_set_list_ride", function(t) {
                             e.initSetList("ride");
-                        }), t.addTab(TWIR_lang.inventory.other_sets, "twir_set_list_other", function(t) {
-                            e.initSetList("other");
+                        }), t.addTab(TWIR_lang.inventory.other_sets, "twir_set_list_other_sets", function(t) {
+                            e.initSetList("other_sets");
                         });
                         var a = e.GuiTextfield = new west.gui.Textfield().maxlength(24).setWidth(165);
                         a.getField().on("input paste", TWIR.Util.delay(function(t) {
@@ -5637,17 +5637,20 @@
                             });
                         });
                         for (
-                        /*! Bonuses */
-                        var c = $('<table style="background-color: #a6805a;width: 470px;border-collapse: separate !important;border-spacing: 1px !important;border: 1px solid #996b39;border-color: rgba(110,57,0,0.5);margin-left: auto;margin-right: auto; margin-top: 5px;" />'), d = 0; d < i.length; d++) if (!(i[d].best_items.length < parseInt(Object.keys(i[d].bonus_obj)[0]))) {
-                            c.append($('<tr><td colspan="2" style="font-weight: bold;color: #5e321a;text-align: center; cursor: pointer;"><a>' + TWIR_lang.tooltips.partial_items_bonus + ":&nbsp;" + (i.length > 1 ? i[d].name : "") + "</a></td></tr>").click(function() {
+                        /*! Inv search btn */
+                        var c = new west.gui.Iconbutton(new west.gui.Icon("search"), function() {
+                            Inventory.showCustomItems(s), t.GuiWindow.bringToTop();
+                        }), d = $('<table style="background-color: #a6805a;width: 470px;border-collapse: separate !important;border-spacing: 1px !important;border: 1px solid #996b39;border-color: rgba(110,57,0,0.5);margin-left: auto;margin-right: auto; margin-top: 5px;" />'), I = 0
+                        /*! Bonuses */; I < i.length; I++) if (!(i[I].best_items.length < parseInt(Object.keys(i[I].bonus_obj)[0]))) {
+                            d.append($('<tr><td colspan="2" style="font-weight: bold;color: #5e321a;text-align: center; cursor: pointer;"><a>' + TWIR_lang.tooltips.partial_items_bonus + ":&nbsp;" + (i.length > 1 ? i[I].name : "") + "</a></td></tr>").click(function() {
                                 $(this).next("tr").toggleClass("twir_hidden");
                             }));
-                            var I = t._Bonuses[i[d].key] = $('<div style="margin: 7px; height: 100%;"></div>');
-                            c.append($('<tr class="twir_hidden" />').append($('<td style="border: 1px solid #996b39;border-color: rgba(110,57,0,0.5);background-color: #d4ba91 !important;vertical-align: middle;text-align: center; width: 100px;"/>').append(t.makeBonusSelection(i[d])), $('<td style="border: 1px solid #996b39;border-color: rgba(110,57,0,0.5);background-color: #d4ba91 !important;" />').append(I)));
+                            var m = t._Bonuses[i[I].key] = $('<div style="margin: 7px; height: 100%;"></div>');
+                            d.append($('<tr class="twir_hidden" />').append($('<td style="border: 1px solid #996b39;border-color: rgba(110,57,0,0.5);background-color: #d4ba91 !important;vertical-align: middle;text-align: center; width: 100px;"/>').append(t.makeBonusSelection(i[I])), $('<td style="border: 1px solid #996b39;border-color: rgba(110,57,0,0.5);background-color: #d4ba91 !important;" />').append(m)));
                         }
                         a.getContentPane().append($('<div style="height: 153px; text-align: center; margin-top: 15px; padding: 2px;border-spacing: 1px !important;background: rgba(220, 165, 118, 0.4);border-radius: 3px;box-shadow: 0 0 1px inset;"></div>').append(n.getMainDiv())), 
-                        s.length && a.getContentPane().append($('<div style="margin-left: 350px;"></div>').append(p.getMainDiv())), 
-                        a.getContentPane().append('<div style="width: 100%; height: 10px; background: url(/images/window/market/wood_devider.png) center top no-repeat;"/>', c, "<br><br>");
+                        s.length && a.getContentPane().append($('<div style="margin-left: 350px;"></div>').append(p.getMainDiv(), c.getMainDiv())), 
+                        a.getContentPane().append('<div style="width: 100%; height: 10px; background: url(/images/window/market/wood_devider.png) center top no-repeat;"/>', d, "<br><br>");
                     } catch (e) {
                         TWIR.error(e, "SetCollector.initSet");
                     }
@@ -5753,10 +5756,10 @@
                         break;
 
                       case "fullslot":
-                      case "other":
+                      case "other_sets":
                         3 == r.length ? (i += '<img src="' + r[1] + '" style="width: 40px; height: auto;position: absolute;left: -5px; top: 5px;"/>', 
                         i += '<img src="' + r[0] + '" style="width: 30px;height: auto;position: absolute;right: -3px;top: -2px;"/>', 
-                        i += '<img src="' + r[2] + '" style="width: 30px;height: auto;position: absolute;right: -3px;bottom: -2px;"/>') : 1 == r.length ? i += '<img src="' + r[0] + '" style="width: 40px;height: auto;position: absolute;left: 5px;top: 5px;"/>' : a = !0;
+                        i += '<img src="' + r[2] + '" style="width: 30px;height: auto;position: absolute;right: -3px;bottom: -2px;"/>') : r.length ? i += '<img src="' + r[0] + '" style="width: 40px;height: auto;position: absolute;left: 5px;top: 5px;"/>' : a = !0;
                     }
                     return a && (i += '<img src="/images/items/unknown.png" style="width: 45px; height: auto;position: absolute;left: 3px;top: 3px;"/>'), 
                     i += '<span style="display: inline-block; width: 50px; height: 50px;background: url(' + TWIR.images.set_frame + '); background-size: 50px 50px;"></span>', 
@@ -5783,7 +5786,7 @@
                         break;
 
                       case "fullslot":
-                      case "other":
+                      case "other_sets":
                         a.yield && e.length < 6 ? i.push(a.yield.image) : (a.head && i.push(a.head.image), 
                         a.body && i.push(a.body.image), !a.head && a.left_arm && i.push(a.left_arm.image), 
                         a.left_arm && "set_sleeper" === a.left_arm.set ? i.push(a.left_arm.image) : a.animal ? i.push(a.animal.image) : a.yield ? i.push(a.yield.image) : a.right_arm ? i.push(a.right_arm.image) : a.foot && i.push(a.foot.image));
