@@ -205,7 +205,7 @@
                 pop_job_tooltip: !0,
                 mw_clear_time: 15552e6,
                 mw_scan_limit: 50,
-                mw_enabled: !("https://events.the-west.net" === Game.masterURL),
+                mw_enabled: !1,
                 mw_buyouts_only: !1,
                 mw_item_price_tooltip: !0,
                 mw_product_price_tooltip: !0,
