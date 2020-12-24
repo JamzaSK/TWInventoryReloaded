@@ -1,5 +1,6 @@
 // ==UserScript==
 // @name TW Inventory Reloaded
+// @name:br TW Inventory Reloaded
 // @name:cs TW Inventory Reloaded
 // @name:de TW Inventory Reloaded
 // @name:el TW Inventory Reloaded
@@ -15,6 +16,7 @@
 // @name:sk TW Inventory Reloaded
 // @name:tr TW Inventory Reloaded
 // @description Better Inventory and tools for The West!
+// @description:br Melhor Inventário e Ferramentas para o The West!
 // @description:cs Lepší Inventář a nástroje pro The West!
 // @description:de Verbessertes Inventar und Tools für The West!
 // @description:el Καλύτερα Αποθέματα και διάφορα εργαλεία για το The West!
