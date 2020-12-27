@@ -264,8 +264,8 @@
         "mw_scan_limit": "Maksymalna ilość zapisanych skanów(każdego przedmiotu) od innych graczy",
         "quest_color": "Zmień kolor zadań które mogę wykonać",
         "inv_size": "Mniejszy ekwipunek",
-        "inv_max_slots": "Maximum number of rows in the inventory %1 note: higher numbers causing lag while scrolling",
-        "smart_speed_set": "Smarter speed set calculation (without losing HP if possible)"
+        "inv_max_slots": "Maksymalna ilość rzędów w ekwipunku (większa ilość może powodować zacinanie przy przewijaniu)",
+        "smart_speed_set": "Mądrzejsze obliczanie zestawu pod prędkość by nie tracić hp jeśli to możliwe"
     },
     "keyWords": {
         "xmas": [
