@@ -1,1 +1,1 @@
-version: 2.202.8, revision: 20, changes: fix, changelog: false
+version: 2.202.8, revision: 20, changes: , changelog: true
